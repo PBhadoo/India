@@ -1,0 +1,48 @@
+---
+import rubric from '../data/rubric.json';
+import { CRITERIA } from '../lib/types.ts';
+import { fmtSigned, MINUS } from '../lib/format.ts';
+import type { ScorerEntry } from '../lib/types.ts';
+import type { ActionScore } from '../lib/scoring-core.ts';
+interface Props { scorers: ScorerEntry[]; score: ActionScore }
+const { scorers, score } = Astro.props;
+const crit = rubric.criteria as { id: string; name: string; question: string }[];
+const pos = (v: number) => ((v + 5) / 10) * 100;
+const ticks = [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5];
+---
+<div role="group" aria-label="Evidence points by criterion">
+  {CRITERIA.map((c) => {
+    const meta = crit.find((x) => x.id === c)!;
+    const mean = score.means[c];
+    const vals = scorers.map((s) => s[c]);
+    const flagged = score.flags.includes(c);
+    const left = mean < 0 ? pos(mean) : 50;
+    const width = Math.abs(pos(mean) - 50);
+    return (
+      <div class="crit">
+        <div class="name">{meta.name}<span class="q">{meta.question}</span></div>
+        <div>
+          <div class="dbar" aria-hidden="true">
+            <div class="track"></div>
+            {ticks.map((t) => <span class="tick" style={`left:${pos(t)}%`}></span>)}
+            <div class="zero"></div>
+            <div class={`fill ${mean < 0 ? 'neg' : 'pos'}`} style={`left:${left}%;width:${width}%`}></div>
+            {scorers.map((s, i) => <span class={`mk ${i === 0 ? 'a' : 'b'}`} style={`left:${pos(s[c])}%`} title={`Scorer ${s.id}: ${fmtSigned(s[c], 0)}`}></span>)}
+          </div>
+          <div class="dbar-ends" aria-hidden="true"><span>{MINUS}5</span><span>0</span><span>+5</span></div>
+        </div>
+        <div class="vals">
+          <span class="mean">Mean {fmtSigned(mean)}</span>
+          {scorers.map((s) => <span>{s.id} {fmtSigned(s[c], 0)}</span>)}
+          {flagged && <span class="badge badge-warn" title="The two scorers differ by 2 or more points on this criterion">Scorers differ</span>}
+        </div>
+      </div>
+    );
+  })}
+  <p class="key">
+    <span><span class="sq pos"></span>Positive mean</span>
+    <span><span class="sq neg"></span>Negative mean</span>
+    <span><span class="mk a"></span>Scorer {scorers[0]?.id}</span>
+    <span><span class="mk b"></span>Scorer {scorers[1]?.id}</span>
+  </p>
+</div>

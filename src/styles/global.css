@@ -225,6 +225,7 @@ section.block:first-of-type { border-top: 0; }
   .nav a { padding: 0.65rem 0.5rem; }
 }
 @media (min-width: 900px) {
+  .search-link { display: none; }
   .nav { width: auto; order: 0; flex-wrap: wrap; }
   .menu-btn, .js .menu-btn { display: none; }
   .search-form { display: block; }

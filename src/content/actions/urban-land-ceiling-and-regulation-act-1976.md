@@ -39,7 +39,7 @@ sources:
   - { title: "Urban Land (Ceiling and Regulation) Act, 1976", url: "https://en.wikipedia.org/wiki/Urban_Land_(Ceiling_and_Regulation)_Act,_1976", publisher: "Wikipedia", type: reputable-media }
   - { title: "Urban Land Ceiling Act repeal will not affect proceedings if possession had been taken: Supreme Court", url: "https://verdictum.in/court-updates/supreme-court/urban-land-ceiling-act-repeal-act-of-1999-will-not-affect-proceedings-if-possession-of-land-had-been-taken-supreme-court-1341207", publisher: "Verdictum (report on Supreme Court ruling)", type: court }
 scoring:
-  era_baseline: "In the 1970s Indian cities were growing quickly with limited housing supply, and several States had earlier planning laws; land reform for rural holdings had been legislated in the 1950s and 1960s."
+  era_baseline: "Before 1976 town and country planning laws existed in many States (per CCS), but there was no national limit on holdings of vacant urban land."
   lag_years: 10
   shocks: ["1977-end-of-emergency", "1991-liberalisation"]
   confidence: low

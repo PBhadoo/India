@@ -1,6 +1,6 @@
 ---
 title: "Goods and Services Tax (GST) rollout (2017)"
-summary: "GST replaced a range of central and state indirect taxes from 1 July 2017 under a Constitution amendment and a Centre-State GST Council. Collections and taxpayer numbers grew; rate structure and compliance remain debated."
+summary: "GST replaced many central and state indirect taxes from 1 July 2017 under a Constitution amendment and a Centre-State GST Council. Collections and taxpayers grew; rate structure and compliance remain debated."
 category: economy
 subcategories: [budget-taxation]
 date: 2017-07-01

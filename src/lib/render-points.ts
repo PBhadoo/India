@@ -85,7 +85,7 @@ export function heatGridHtml(rows: PartyResult[], ctx: PointsCtx, base = '/'): s
             return `<td class="hm hm-none" data-tip="${esc(label)}: no scored actions"><span class="vh">No scored actions</span></td>`;
           }
           const t = (cell.pointsPerYear - min) / span;
-          const cls = ['hm', t > 0.58 ? 'hm-hi' : 'hm-lo', cell.lowData ? 'hm-low' : ''].filter(Boolean).join(' ');
+          const cls = ['hm', t > 0.64 ? 'hl' : '', t > 0.57 ? 'hd' : '', cell.lowData ? 'hm-low' : ''].filter(Boolean).join(' ');
           const tip = `${label}: ${fmtSigned(cell.pointsPerYear, 2)} points per year, ${cell.scoredActions} scored ${cell.scoredActions === 1 ? 'action' : 'actions'}, range ${fmtSigned(cell.low * cell.weight)} to ${fmtSigned(cell.high * cell.weight)} in total${cell.lowData ? ' (low data)' : ''}`;
           return `<td class="${cls}" style="--t:${t.toFixed(3)}" data-tip="${esc(tip)}">${fmtSigned(cell.pointsPerYear)}${cell.lowData ? '<span class="vh"> low data</span>' : ''}</td>`;
         })

@@ -1,0 +1,261 @@
+{
+  "state": "delhi",
+  "name": "Delhi",
+  "governments": [
+    {
+      "id": "state-delhi-1952-brahm-prakash",
+      "cm": "Brahm Prakash",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1952-03-17",
+      "end": "1955-02-12",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ],
+      "note": "Delhi State (Part C state) with a Legislative Assembly and Chief Minister 1952-56; abolished 1956-11-01. Seat share not verified; INC taken as sole governing party."
+    },
+    {
+      "id": "state-delhi-1955-gurmukh-nihal-singh",
+      "cm": "Gurmukh Nihal Singh",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1955-02-12",
+      "end": "1956-11-01",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ],
+      "note": "Delhi State; office abolished 1 Nov 1956 (no CM until Dec 1993). Seat share not verified."
+    },
+    {
+      "id": "state-delhi-1993-khurana",
+      "cm": "Madan Lal Khurana",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "1993-12-02",
+      "end": "1996-02-26",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1993 election: BJP 49 of 70"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ]
+    },
+    {
+      "id": "state-delhi-1996-sahib-singh-verma",
+      "cm": "Sahib Singh Verma",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "1996-02-26",
+      "end": "1998-10-12",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1993 assembly: BJP 49 of 70"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ]
+    },
+    {
+      "id": "state-delhi-1998-sushma-swaraj",
+      "cm": "Sushma Swaraj",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "1998-10-12",
+      "end": "1998-12-03",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1993 assembly: BJP 49 of 70"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ]
+    },
+    {
+      "id": "state-delhi-1998-dikshit",
+      "cm": "Sheila Dikshit",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1998-12-03",
+      "end": "2013-12-28",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1998 election: INC 52 of 70; majority also in 2003 (47) and 2008 (43) elections - approximate, merged as one INC tenure"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ],
+      "note": "Approximate seat share; merged across three assemblies (1998, 2003, 2008)"
+    },
+    {
+      "id": "state-delhi-2013-kejriwal-1",
+      "cm": "Arvind Kejriwal",
+      "label": "AAP government",
+      "leadParty": "aap",
+      "type": "minority-outside-support",
+      "start": "2013-12-28",
+      "end": "2014-02-14",
+      "partners": [
+        {
+          "party": "aap",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support, 8 seats (general knowledge, unverified in sources opened)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ],
+      "note": "AAP 28 seats of 70 in 2013 (figure from general knowledge); formed government with outside support of INC (8 seats); resigned 14 Feb 2014."
+    },
+    {
+      "id": "state-delhi-2014-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "2014-02-14",
+      "end": "2015-02-14",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ],
+      "note": "Assembly dissolved/kept in suspended animation; dates from the Wikipedia list."
+    },
+    {
+      "id": "state-delhi-2015-kejriwal-2",
+      "cm": "Arvind Kejriwal",
+      "label": "AAP government",
+      "leadParty": "aap",
+      "type": "majority",
+      "start": "2015-02-14",
+      "end": "2024-09-21",
+      "partners": [
+        {
+          "party": "aap",
+          "share": 1,
+          "note": "2015: AAP 67 of 70; 2020: 62 of 70 - approximate, merged"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ],
+      "note": "Approximate seat share"
+    },
+    {
+      "id": "state-delhi-2024-atishi",
+      "cm": "Atishi Marlena",
+      "label": "AAP government",
+      "leadParty": "aap",
+      "type": "majority",
+      "start": "2024-09-21",
+      "end": "2025-02-20",
+      "partners": [
+        {
+          "party": "aap",
+          "share": 1,
+          "note": "2020 assembly: AAP 62 of 70"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ]
+    },
+    {
+      "id": "state-delhi-2025-rekha-gupta",
+      "cm": "Rekha Gupta",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2025-02-20",
+      "end": null,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2025 election: BJP 48 of 70 (figure from general knowledge, not verified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Delhi",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Delhi"
+        }
+      ]
+    }
+  ]
+}

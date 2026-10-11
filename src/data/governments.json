@@ -1,0 +1,865 @@
+{
+  "centre": [
+    {
+      "id": "centre-1947-nehru",
+      "pm": "Jawaharlal Nehru",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1947-08-15",
+      "end": "1964-05-27",
+      "lokSabha": 1,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "Single-party government; share 1.0. Covers the pre-1952 provisional Parliament and the 1st (1952), 2nd (1957) and 3rd (1962) Lok Sabha terms; INC won 364, 371 and 361 seats respectively (figures from general knowledge, not re-verified). lokSabha field = first elected Lok Sabha."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1964-nanda-caretaker",
+      "pm": "Gulzarilal Nanda",
+      "label": "Acting Prime Minister (INC)",
+      "leadParty": "inc",
+      "type": "caretaker",
+      "start": "1964-05-27",
+      "end": "1964-06-09",
+      "lokSabha": 3,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "Acting PM after death in office of the incumbent; INC government continued. Share 1.0."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1964-shastri",
+      "pm": "Lal Bahadur Shastri",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1964-06-09",
+      "end": "1966-01-11",
+      "lokSabha": 3,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "Single-party majority; share 1.0."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1966-nanda-caretaker",
+      "pm": "Gulzarilal Nanda",
+      "label": "Acting Prime Minister (INC)",
+      "leadParty": "inc",
+      "type": "caretaker",
+      "start": "1966-01-11",
+      "end": "1966-01-24",
+      "lokSabha": 3,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "Acting PM after death in office of the incumbent. Share 1.0."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1966-indira-1",
+      "pm": "Indira Gandhi",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1966-01-24",
+      "end": "1977-03-24",
+      "lokSabha": 3,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "Single-party government; share 1.0. Spans the 3rd, 4th (1967) and 5th (1971) Lok Sabha. The INC split in 1969 (INC(O) vs INC(R)); the government led by Indira Gandhi continued with the INC(R) group, which is treated here as the INC lineage (id inc). Between 1969 and 1971 it relied on outside support in the Lok Sabha (not itemised here)."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1977-desai",
+      "pm": "Morarji Desai",
+      "label": "Janata Party government",
+      "leadParty": "janata-party",
+      "type": "majority",
+      "start": "1977-03-24",
+      "end": "1979-07-28",
+      "lokSabha": 6,
+      "partners": [
+        {
+          "party": "janata-party",
+          "share": 1,
+          "note": "Janata Party (formed from INC(O), Jana Sangh, BLD, Socialist Party and others) won an outright majority in the 1977 election; treated as one party, share 1.0. Constituent-group breakdown not computed."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1979-charan-singh",
+      "pm": "Charan Singh",
+      "label": "Janata Party (Secular) government",
+      "leadParty": "jp-s",
+      "type": "minority-outside-support",
+      "start": "1979-07-28",
+      "end": "1980-01-14",
+      "lokSabha": 6,
+      "partners": [
+        {
+          "party": "jp-s",
+          "share": 1,
+          "note": "Minority government formed after the Janata Party split; seat count of the JP(S) group at formation not verified, share 1.0 as sole governing party. It never faced a confidence vote: support was withdrawn before the first session."
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Offered outside support, later withdrawn"
+        },
+        {
+          "party": "inc-u",
+          "note": "Offered outside support (INC(U) group)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1980-indira-2",
+      "pm": "Indira Gandhi",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1980-01-14",
+      "end": "1984-10-31",
+      "lokSabha": 7,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "Single-party majority (INC(I) won 353 seats in 1980; figure from general knowledge). Share 1.0."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1984-rajiv",
+      "pm": "Rajiv Gandhi",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1984-10-31",
+      "end": "1989-12-02",
+      "lokSabha": 8,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "Single-party majority. Took office 31 Oct 1984 in the 7th Lok Sabha; INC won 404+ seats at the Dec 1984 election (8th Lok Sabha). Share 1.0."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        }
+      ]
+    },
+    {
+      "id": "centre-1989-vp-singh",
+      "pm": "V. P. Singh",
+      "label": "National Front government",
+      "leadParty": "jd",
+      "type": "minority-outside-support",
+      "start": "1989-12-02",
+      "end": "1990-11-10",
+      "lokSabha": 9,
+      "partners": [
+        {
+          "party": "jd",
+          "share": 1,
+          "note": "Seats won by Janata Dal at the 1989 election (143). The National Front also included regional parties (e.g. TDP, DMK, AGP) whose seat counts are not itemised here; share therefore = 1.0 of the itemised party."
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "bjp",
+          "note": "Outside support; 85 seats in 1989; withdrawn Oct 1990"
+        },
+        {
+          "party": "cpi-m",
+          "note": "Left Front outside support; CPI(M) won 33 seats"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: 1989 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/1989_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-1990-chandra-shekhar",
+      "pm": "Chandra Shekhar",
+      "label": "SJP(R) government",
+      "leadParty": "sjp",
+      "type": "minority-outside-support",
+      "start": "1990-11-10",
+      "end": "1991-06-21",
+      "lokSabha": 9,
+      "partners": [
+        {
+          "party": "sjp",
+          "share": 1,
+          "note": "Government formed by a breakaway group of Janata Dal MPs; its exact size at formation not verified here. Share 1.0 as sole governing party."
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support; INC had 197 seats in 1989 (the Wikipedia ministry page cites 212 supporting MPs)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: Chandra Shekhar ministry",
+          "url": "https://en.wikipedia.org/wiki/Chandra_Shekhar_ministry"
+        }
+      ]
+    },
+    {
+      "id": "centre-1991-narasimha-rao",
+      "pm": "P. V. Narasimha Rao",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "minority-outside-support",
+      "start": "1991-06-21",
+      "end": "1996-05-16",
+      "lokSabha": 10,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "INC won 244 of the seats (232 in the June 1991 polls plus 12 in the Feb 1992 Punjab polls), short of a majority at formation; later acquired a working majority through by-elections and defections. Share 1.0."
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "jd",
+          "note": "Reported outside/issue-based support"
+        },
+        {
+          "party": "jmm",
+          "note": "Reported outside/issue-based support"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: 1991 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/1991_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-1996-vajpayee-13day",
+      "pm": "Atal Bihari Vajpayee",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "minority-outside-support",
+      "start": "1996-05-16",
+      "end": "1996-06-01",
+      "lokSabha": 11,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "BJP won 161 seats, the largest party but short of a majority; Shiv Sena was the only other party with a minister. Seats of allies not verified; share 1.0. Government resigned before a confidence vote (Wikipedia gives 28 May or 1 June as dissolution; 1 June used as start of the next government)."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: First Vajpayee ministry",
+          "url": "https://en.wikipedia.org/wiki/First_Vajpayee_ministry"
+        },
+        {
+          "title": "Wikipedia: 1996 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/1996_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-1996-deve-gowda",
+      "pm": "H. D. Deve Gowda",
+      "label": "United Front government",
+      "leadParty": "jd",
+      "type": "coalition",
+      "start": "1996-06-01",
+      "end": "1997-04-21",
+      "lokSabha": 11,
+      "partners": [
+        {
+          "party": "jd",
+          "share": 0.3459,
+          "note": "Seat counts (JD 46, TMC(M) 20, DMK 17, SP 17, TDP 16, CPI 12, AGP 5) are from general knowledge of the 1996 result and are NOT verified in the sources opened; shares computed among these seven cabinet parties only (cabinet membership per the Wikipedia ministry page; CPI(M) not on that page)."
+        },
+        {
+          "party": "tmc-m",
+          "share": 0.1504
+        },
+        {
+          "party": "dmk",
+          "share": 0.1278
+        },
+        {
+          "party": "sp",
+          "share": 0.1278
+        },
+        {
+          "party": "tdp",
+          "share": 0.1203
+        },
+        {
+          "party": "cpi",
+          "share": 0.0902
+        },
+        {
+          "party": "agp",
+          "share": 0.0376
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support, 140 seats (verified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: Deve Gowda ministry",
+          "url": "https://en.wikipedia.org/wiki/Deve_Gowda_ministry"
+        },
+        {
+          "title": "Wikipedia: 1996 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/1996_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-1997-gujral",
+      "pm": "I. K. Gujral",
+      "label": "United Front government",
+      "leadParty": "jd",
+      "type": "coalition",
+      "start": "1997-04-21",
+      "end": "1998-03-19",
+      "lokSabha": 11,
+      "partners": [
+        {
+          "party": "jd",
+          "share": 0.3459,
+          "note": "Same United Front composition and basis as the Deve Gowda government (unverified seat counts); shares among cabinet parties only."
+        },
+        {
+          "party": "tmc-m",
+          "share": 0.1504
+        },
+        {
+          "party": "dmk",
+          "share": 0.1278
+        },
+        {
+          "party": "sp",
+          "share": 0.1278
+        },
+        {
+          "party": "tdp",
+          "share": 0.1203
+        },
+        {
+          "party": "cpi",
+          "share": 0.0902
+        },
+        {
+          "party": "agp",
+          "share": 0.0376
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support, 140 seats"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: Deve Gowda ministry",
+          "url": "https://en.wikipedia.org/wiki/Deve_Gowda_ministry"
+        }
+      ]
+    },
+    {
+      "id": "centre-1998-vajpayee",
+      "pm": "Atal Bihari Vajpayee",
+      "label": "NDA government",
+      "leadParty": "bjp",
+      "type": "coalition",
+      "start": "1998-03-19",
+      "end": "2004-05-22",
+      "lokSabha": 12,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.7223,
+          "note": "Basis: 12th Lok Sabha (1998) NDA seats listed on Wikipedia; parties with <3 seats omitted, giving 252 (matches infobox). The 13th Lok Sabha (1999, NDA 299, BJP 182) continued the same government; shares not recomputed. AIADMK withdrew in April 1999 and the government lost a confidence vote; Vajpayee continued as caretaker until Oct 1999."
+        },
+        {
+          "party": "aiadmk",
+          "share": 0.0714
+        },
+        {
+          "party": "samata",
+          "share": 0.0476
+        },
+        {
+          "party": "bjd",
+          "share": 0.0357
+        },
+        {
+          "party": "sad",
+          "share": 0.0317
+        },
+        {
+          "party": "aitc",
+          "share": 0.0278
+        },
+        {
+          "party": "shiv-sena",
+          "share": 0.0238
+        },
+        {
+          "party": "pmk",
+          "share": 0.0159
+        },
+        {
+          "party": "lok-shakti",
+          "share": 0.0119
+        },
+        {
+          "party": "mdmk",
+          "share": 0.0119
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "tdp",
+          "note": "Outside support in the 12th Lok Sabha (12 seats); joined NDA before the 1999 election"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: 1998 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/1998_Indian_general_election"
+        },
+        {
+          "title": "Wikipedia: 1999 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/1999_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-2004-manmohan-1",
+      "pm": "Manmohan Singh",
+      "label": "UPA government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2004-05-22",
+      "end": "2009-05-22",
+      "lokSabha": 14,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.6653,
+          "note": "Basis: 2004 seats won (page lists INC 145, RJD 24, DMK 16, NCP 9, PMK 6, JMM 5, TRS 5, LJP 4, MDMK 4 = 218 matches UPA total). Shares among these nine parties; smaller UPA allies omitted."
+        },
+        {
+          "party": "rjd",
+          "share": 0.1101
+        },
+        {
+          "party": "dmk",
+          "share": 0.0734
+        },
+        {
+          "party": "ncp",
+          "share": 0.0413
+        },
+        {
+          "party": "pmk",
+          "share": 0.0275
+        },
+        {
+          "party": "jmm",
+          "share": 0.0229
+        },
+        {
+          "party": "trs",
+          "share": 0.0229
+        },
+        {
+          "party": "ljp",
+          "share": 0.0183
+        },
+        {
+          "party": "mdmk",
+          "share": 0.0183
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "cpi-m",
+          "note": "Left Front outside support (CPI(M) 43 seats); withdrew July 2008"
+        },
+        {
+          "party": "sp",
+          "note": "36 seats, support from 2008"
+        },
+        {
+          "party": "bsp",
+          "note": "19 seats, outside support at formation (Left, SP, BSP supported)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: 2004 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/2004_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-2009-manmohan-2",
+      "pm": "Manmohan Singh",
+      "label": "UPA government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2009-05-22",
+      "end": "2014-05-26",
+      "lokSabha": 15,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.8016,
+          "note": "Basis: 2009 seats: UPA 262 total, INC 206. Other partners from general knowledge (AITC 19, DMK 18, NCP 9, NC 3, IUML 2 ... ) NOT verified on sources opened; shares among INC, AITC, DMK, NCP, NC, IUML only. AITC left 2012, DMK 2013."
+        },
+        {
+          "party": "aitc",
+          "share": 0.0739
+        },
+        {
+          "party": "dmk",
+          "share": 0.07
+        },
+        {
+          "party": "ncp",
+          "share": 0.035
+        },
+        {
+          "party": "nc",
+          "share": 0.0117
+        },
+        {
+          "party": "iuml",
+          "share": 0.0078
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "sp",
+          "note": "Outside support (not verified: 23 seats)"
+        },
+        {
+          "party": "bsp",
+          "note": "Outside support (not verified: 21 seats)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: Second Manmohan Singh ministry",
+          "url": "https://en.wikipedia.org/wiki/Second_Manmohan_Singh_ministry"
+        },
+        {
+          "title": "Wikipedia: 2009 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/2009_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-2014-modi-1",
+      "pm": "Narendra Modi",
+      "label": "NDA government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2014-05-26",
+      "end": "2019-05-30",
+      "lokSabha": 16,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.8391,
+          "note": "Basis: 2014 NDA seats (336 total, sums exactly). BJP alone held a majority (282/543); the NDA allies are shown for coalition credit."
+        },
+        {
+          "party": "shiv-sena",
+          "share": 0.0536
+        },
+        {
+          "party": "tdp",
+          "share": 0.0476
+        },
+        {
+          "party": "ljp",
+          "share": 0.0179
+        },
+        {
+          "party": "sad",
+          "share": 0.0119
+        },
+        {
+          "party": "rlsp",
+          "share": 0.0089
+        },
+        {
+          "party": "apna-dal",
+          "share": 0.006
+        },
+        {
+          "party": "pmk",
+          "share": 0.003
+        },
+        {
+          "party": "swabhimani",
+          "share": 0.003
+        },
+        {
+          "party": "nrc",
+          "share": 0.003
+        },
+        {
+          "party": "npp",
+          "share": 0.003
+        },
+        {
+          "party": "npf",
+          "share": 0.003
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: 2014 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/2014_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-2019-modi-2",
+      "pm": "Narendra Modi",
+      "label": "NDA government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2019-05-30",
+      "end": "2024-06-09",
+      "lokSabha": 17,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.8758,
+          "note": "Basis: 2019 seats of the six largest NDA parties (BJP 303, SS 18, JD(U) 16, LJP 6, SAD 2, AIADMK 1 = 346 of NDA 353); ~7 seats of smaller allies omitted. BJP alone held a majority."
+        },
+        {
+          "party": "shiv-sena",
+          "share": 0.052
+        },
+        {
+          "party": "jd-u",
+          "share": 0.0462
+        },
+        {
+          "party": "ljp",
+          "share": 0.0173
+        },
+        {
+          "party": "sad",
+          "share": 0.0058
+        },
+        {
+          "party": "aiadmk",
+          "share": 0.0029
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: 2019 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/2019_Indian_general_election"
+        }
+      ]
+    },
+    {
+      "id": "centre-2024-modi-3",
+      "pm": "Narendra Modi",
+      "label": "NDA government",
+      "leadParty": "bjp",
+      "type": "coalition",
+      "start": "2024-06-09",
+      "end": null,
+      "lokSabha": 18,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.8511,
+          "note": "Basis: 2024 seats: NDA 293; shares among the six largest parties (BJP 240, TDP 16, JD(U) 12, SS 7, LJP(RV) 5, JD(S) 2 = 282); 11 seats of smaller allies omitted. BJP is short of the 272 majority alone. As of 2026-10-11 Modi remains PM (Wikipedia page last dated entries July 2026; news 7 Oct 2026); no party exit found."
+        },
+        {
+          "party": "tdp",
+          "share": 0.0567
+        },
+        {
+          "party": "jd-u",
+          "share": 0.0426
+        },
+        {
+          "party": "shiv-sena",
+          "share": 0.0248
+        },
+        {
+          "party": "ljp-rv",
+          "share": 0.0177
+        },
+        {
+          "party": "jd-s",
+          "share": 0.0071
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of prime ministers of India",
+          "url": "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India"
+        },
+        {
+          "title": "Wikipedia: 2024 Indian general election",
+          "url": "https://en.wikipedia.org/wiki/2024_Indian_general_election"
+        },
+        {
+          "title": "Wikipedia: Third Modi ministry",
+          "url": "https://en.wikipedia.org/wiki/Third_Modi_ministry"
+        }
+      ]
+    }
+  ]
+}

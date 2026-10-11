@@ -1,0 +1,338 @@
+[
+  {
+    "id": "aap",
+    "name": "Aam Aadmi Party",
+    "short": "AAP",
+    "founded": 2012
+  },
+  {
+    "id": "agp",
+    "name": "Asom Gana Parishad",
+    "short": "AGP",
+    "founded": 1985
+  },
+  {
+    "id": "aiadmk",
+    "name": "All India Anna Dravida Munnetra Kazhagam",
+    "short": "AIADMK",
+    "founded": 1972
+  },
+  {
+    "id": "aitc",
+    "name": "All India Trinamool Congress",
+    "short": "AITC",
+    "founded": 1998
+  },
+  {
+    "id": "apna-dal",
+    "name": "Apna Dal",
+    "short": "AD",
+    "founded": 1995
+  },
+  {
+    "id": "apna-dal-s",
+    "name": "Apna Dal (Sonelal)",
+    "short": "AD(S)",
+    "founded": 2016
+  },
+  {
+    "id": "bangla-congress",
+    "name": "Bangla Congress",
+    "short": "BC",
+    "founded": 1966
+  },
+  {
+    "id": "bjd",
+    "name": "Biju Janata Dal",
+    "short": "BJD",
+    "founded": 1997
+  },
+  {
+    "id": "bjp",
+    "name": "Bharatiya Janata Party",
+    "short": "BJP",
+    "founded": 1980
+  },
+  {
+    "id": "bkd",
+    "name": "Bharatiya Kranti Dal",
+    "short": "BKD",
+    "founded": 1967
+  },
+  {
+    "id": "bsp",
+    "name": "Bahujan Samaj Party",
+    "short": "BSP",
+    "founded": 1984
+  },
+  {
+    "id": "cpi",
+    "name": "Communist Party of India",
+    "short": "CPI",
+    "founded": 1925
+  },
+  {
+    "id": "cpi-m",
+    "name": "Communist Party of India (Marxist)",
+    "short": "CPI(M)",
+    "founded": 1964
+  },
+  {
+    "id": "dmk",
+    "name": "Dravida Munnetra Kazhagam",
+    "short": "DMK",
+    "founded": 1949
+  },
+  {
+    "id": "fb",
+    "name": "All India Forward Bloc",
+    "short": "AIFB",
+    "founded": 1939
+  },
+  {
+    "id": "ics",
+    "name": "Indian Congress (Socialist)",
+    "short": "ICS",
+    "founded": 1978
+  },
+  {
+    "id": "inc",
+    "name": "Indian National Congress",
+    "short": "INC",
+    "founded": 1885
+  },
+  {
+    "id": "inc-o",
+    "name": "Indian National Congress (Organisation)",
+    "short": "INC(O)",
+    "founded": 1969
+  },
+  {
+    "id": "inc-u",
+    "name": "Indian National Congress (U)",
+    "short": "INC(U)",
+    "founded": 1978
+  },
+  {
+    "id": "iuml",
+    "name": "Indian Union Muslim League",
+    "short": "IUML",
+    "founded": 1948
+  },
+  {
+    "id": "janata-party",
+    "name": "Janata Party",
+    "short": "JP",
+    "founded": 1977
+  },
+  {
+    "id": "jd",
+    "name": "Janata Dal",
+    "short": "JD",
+    "founded": 1988
+  },
+  {
+    "id": "jd-s",
+    "name": "Janata Dal (Secular)",
+    "short": "JD(S)",
+    "founded": 1999
+  },
+  {
+    "id": "jd-u",
+    "name": "Janata Dal (United)",
+    "short": "JD(U)",
+    "founded": 2003
+  },
+  {
+    "id": "jmm",
+    "name": "Jharkhand Mukti Morcha",
+    "short": "JMM",
+    "founded": 1972
+  },
+  {
+    "id": "jp-s",
+    "name": "Janata Party (Secular)",
+    "short": "JP(S)",
+    "founded": 1979
+  },
+  {
+    "id": "kc-m",
+    "name": "Kerala Congress (M)",
+    "short": "KC(M)",
+    "founded": 1979
+  },
+  {
+    "id": "ljp",
+    "name": "Lok Janshakti Party",
+    "short": "LJP",
+    "founded": 2000
+  },
+  {
+    "id": "ljp-rv",
+    "name": "Lok Janshakti Party (Ram Vilas)",
+    "short": "LJP(RV)",
+    "founded": 2021
+  },
+  {
+    "id": "lok-shakti",
+    "name": "Lok Shakti",
+    "short": "LS",
+    "founded": 1997
+  },
+  {
+    "id": "mdmk",
+    "name": "Marumalarchi Dravida Munnetra Kazhagam",
+    "short": "MDMK",
+    "founded": 1994
+  },
+  {
+    "id": "nc",
+    "name": "Jammu & Kashmir National Conference",
+    "short": "JKNC",
+    "founded": 1932
+  },
+  {
+    "id": "ncp",
+    "name": "Nationalist Congress Party",
+    "short": "NCP",
+    "founded": 1999
+  },
+  {
+    "id": "nishad",
+    "name": "Nirbal Indian Shoshit Hamara Aam Dal (NISHAD) Party",
+    "short": "NISHAD",
+    "founded": 2016
+  },
+  {
+    "id": "npf",
+    "name": "Naga People's Front",
+    "short": "NPF",
+    "founded": 2002
+  },
+  {
+    "id": "npp",
+    "name": "National People's Party",
+    "short": "NPP",
+    "founded": 2013
+  },
+  {
+    "id": "nrc",
+    "name": "All India N.R. Congress",
+    "short": "AINRC",
+    "founded": 2011
+  },
+  {
+    "id": "pmk",
+    "name": "Pattali Makkal Katchi",
+    "short": "PMK",
+    "founded": 1989
+  },
+  {
+    "id": "psp",
+    "name": "Praja Socialist Party",
+    "short": "PSP",
+    "founded": 1952
+  },
+  {
+    "id": "rjd",
+    "name": "Rashtriya Janata Dal",
+    "short": "RJD",
+    "founded": 1997
+  },
+  {
+    "id": "rjp",
+    "name": "Rashtriya Janata Party",
+    "short": "RJP",
+    "founded": 1996
+  },
+  {
+    "id": "rld",
+    "name": "Rashtriya Lok Dal",
+    "short": "RLD",
+    "founded": 1996
+  },
+  {
+    "id": "rlsp",
+    "name": "Rashtriya Lok Samta Party",
+    "short": "RLSP",
+    "founded": 2013
+  },
+  {
+    "id": "rsp",
+    "name": "Revolutionary Socialist Party",
+    "short": "RSP",
+    "founded": 1940
+  },
+  {
+    "id": "sad",
+    "name": "Shiromani Akali Dal",
+    "short": "SAD",
+    "founded": 1920
+  },
+  {
+    "id": "samata",
+    "name": "Samata Party",
+    "short": "SAP",
+    "founded": 1994
+  },
+  {
+    "id": "sbsp",
+    "name": "Suheldev Bharatiya Samaj Party",
+    "short": "SBSP",
+    "founded": 2002
+  },
+  {
+    "id": "shiv-sena",
+    "name": "Shiv Sena",
+    "short": "SS",
+    "founded": 1966
+  },
+  {
+    "id": "sjp",
+    "name": "Samajwadi Janata Party (Rashtriya)",
+    "short": "SJP(R)",
+    "founded": 1990
+  },
+  {
+    "id": "sp",
+    "name": "Samajwadi Party",
+    "short": "SP",
+    "founded": 1992
+  },
+  {
+    "id": "ssp",
+    "name": "Samyukta Socialist Party",
+    "short": "SSP",
+    "founded": 1964
+  },
+  {
+    "id": "swabhimani",
+    "name": "Swabhimani Paksha",
+    "short": "SWP",
+    "founded": 2004
+  },
+  {
+    "id": "tdp",
+    "name": "Telugu Desam Party",
+    "short": "TDP",
+    "founded": 1982
+  },
+  {
+    "id": "tmc-m",
+    "name": "Tamil Maanila Congress (Moopanar)",
+    "short": "TMC(M)",
+    "founded": 1996
+  },
+  {
+    "id": "trs",
+    "name": "Telangana Rashtra Samithi",
+    "short": "TRS",
+    "founded": 2001
+  },
+  {
+    "id": "tvk",
+    "name": "Tamilaga Vettri Kazhagam",
+    "short": "TVK",
+    "founded": 2024
+  }
+]

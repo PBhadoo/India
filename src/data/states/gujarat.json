@@ -1,0 +1,664 @@
+{
+  "state": "gujarat",
+  "name": "Gujarat",
+  "governments": [
+    {
+      "id": "state-gujarat-1960-jivraj-mehta",
+      "cm": "Jivraj Mehta",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1960-05-01",
+      "end": "1963-09-19",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Gujarat formed 1960-05-01; INC majority, seat share not verified."
+    },
+    {
+      "id": "state-gujarat-1963-balwantrai-mehta",
+      "cm": "Balwantrai Mehta",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1963-09-19",
+      "end": "1965-09-19",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-gujarat-1965-hitendra-desai",
+      "cm": "Hitendra Desai",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1965-09-19",
+      "end": "1971-05-13",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Page records a move to INC(O) around 12 Nov 1969 after the INC split; INC lineage id used. Seat share not verified."
+    },
+    {
+      "id": "state-gujarat-1971-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1971-05-13",
+      "end": "1972-03-17",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1972-oza",
+      "cm": "Ghanshyam Oza",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1972-03-17",
+      "end": "1973-07-17",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "INC(R) won about 140 of 168 in 1972 (general knowledge, unverified)."
+    },
+    {
+      "id": "state-gujarat-1973-chimanbhai-1",
+      "cm": "Chimanbhai Patel",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1973-07-17",
+      "end": "1974-02-09",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Resigned amid Nav Nirman agitation (general knowledge)."
+    },
+    {
+      "id": "state-gujarat-1974-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1974-02-09",
+      "end": "1975-06-18",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1975-babubhai-1",
+      "cm": "Babubhai Patel",
+      "label": "INC(O) government",
+      "leadParty": "inc-o",
+      "type": "coalition",
+      "start": "1975-06-18",
+      "end": "1976-03-12",
+      "partners": [
+        {
+          "party": "inc-o",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Janata Morcha (INC(O) and others) coalition after the 1975 election; composition not verified."
+    },
+    {
+      "id": "state-gujarat-1976-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1976-03-12",
+      "end": "1976-12-24",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1976-solanki-1",
+      "cm": "Madhav Singh Solanki",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1976-12-24",
+      "end": "1977-04-11",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-gujarat-1977-babubhai-2",
+      "cm": "Babubhai Patel",
+      "label": "JP government",
+      "leadParty": "janata-party",
+      "type": "coalition",
+      "start": "1977-04-11",
+      "end": "1980-02-17",
+      "partners": [
+        {
+          "party": "janata-party",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Janata Party government; composition not verified."
+    },
+    {
+      "id": "state-gujarat-1980-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1980-02-17",
+      "end": "1980-06-07",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1980-solanki-2",
+      "cm": "Madhav Singh Solanki",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1980-06-07",
+      "end": "1985-03-11",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "INC won about 141 of 182 in 1980 (general knowledge, unverified)."
+    },
+    {
+      "id": "state-gujarat-1985-solanki-3",
+      "cm": "Madhav Singh Solanki",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1985-03-11",
+      "end": "1985-07-06",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "The page text omitted the name for this interval (INC); Solanki recorded per general knowledge, not verified on page opened."
+    },
+    {
+      "id": "state-gujarat-1985-amarsinh-chaudhary",
+      "cm": "Amarsinh Chaudhary",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1985-07-06",
+      "end": "1989-12-10",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "INC won about 149 of 182 in 1985 (general knowledge, unverified)."
+    },
+    {
+      "id": "state-gujarat-1989-solanki-4",
+      "cm": "Madhav Singh Solanki",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1989-12-10",
+      "end": "1990-03-04",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-gujarat-1990-chimanbhai-2",
+      "cm": "Chimanbhai Patel",
+      "label": "JD government",
+      "leadParty": "jd",
+      "type": "coalition",
+      "start": "1990-03-04",
+      "end": "1990-10-25",
+      "partners": [
+        {
+          "party": "jd",
+          "share": 0.5109,
+          "note": "1990 election: JD about 70, BJP about 67 of 182 (general knowledge, unverified)"
+        },
+        {
+          "party": "bjp",
+          "share": 0.4891
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1990-chimanbhai-3",
+      "cm": "Chimanbhai Patel",
+      "label": "JD government",
+      "leadParty": "jd",
+      "type": "minority-outside-support",
+      "start": "1990-10-25",
+      "end": "1994-02-17",
+      "partners": [
+        {
+          "party": "jd",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Continued after BJP withdrew, with INC support (general knowledge, unverified)."
+    },
+    {
+      "id": "state-gujarat-1994-chhabildas-mehta",
+      "cm": "Chhabildas Mehta",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1994-02-17",
+      "end": "1995-03-14",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Formed after the death of Chimanbhai Patel; party affiliation per page (INC); seat share not verified."
+    },
+    {
+      "id": "state-gujarat-1995-keshubhai-1",
+      "cm": "Keshubhai Patel",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "1995-03-14",
+      "end": "1995-10-21",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1995: BJP about 121 of 182 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1995-suresh-mehta",
+      "cm": "Suresh Mehta",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "1995-10-21",
+      "end": "1996-09-19",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1995 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1996-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1996-09-19",
+      "end": "1996-10-23",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-1996-vaghela",
+      "cm": "Shankersinh Vaghela",
+      "label": "RJP government",
+      "leadParty": "rjp",
+      "type": "minority-outside-support",
+      "start": "1996-10-23",
+      "end": "1997-10-27",
+      "partners": [
+        {
+          "party": "rjp",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Rashtriya Janata Party formed from BJP rebels; supported from outside by INC (general knowledge, unverified)."
+    },
+    {
+      "id": "state-gujarat-1997-dilip-parikh",
+      "cm": "Dilip Parikh",
+      "label": "RJP government",
+      "leadParty": "rjp",
+      "type": "minority-outside-support",
+      "start": "1997-10-27",
+      "end": "1998-03-04",
+      "partners": [
+        {
+          "party": "rjp",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "As above."
+    },
+    {
+      "id": "state-gujarat-1998-keshubhai-2",
+      "cm": "Keshubhai Patel",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "1998-03-04",
+      "end": "2001-10-07",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1998: BJP about 117 of 182 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-2001-modi",
+      "cm": "Narendra Modi",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2001-10-07",
+      "end": "2014-05-22",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "BJP majorities in 1998 (117), 2002 (127), 2007 (117) and 2012 (115) - approximate, merged"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Approximate seat share"
+    },
+    {
+      "id": "state-gujarat-2014-anandiben",
+      "cm": "Anandiben Patel",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2014-05-22",
+      "end": "2016-08-07",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2012 assembly: BJP about 115 of 182"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-2016-rupani",
+      "cm": "Vijay Rupani",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2016-08-07",
+      "end": "2021-09-13",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2017: BJP 99 of 182 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ]
+    },
+    {
+      "id": "state-gujarat-2021-bhupendra-patel",
+      "cm": "Bhupendra Patel",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2021-09-13",
+      "end": null,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2017 assembly: 99; 2022: 156 - approximate, merged"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Gujarat",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Gujarat"
+        }
+      ],
+      "note": "Approximate seat share"
+    }
+  ]
+}

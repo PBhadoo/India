@@ -1,0 +1,90 @@
+# Single source of truth for categories. Add/rename freely; ids are stable slugs used in URLs and front-matter.
+categories:
+  - id: education
+    name: Education
+    blurb: Schools, universities, exams, curriculum and skilling.
+    subs: [school-education, higher-education, exams-recruitment, language-curriculum, skill-development, scholarships-fees]
+  - id: elections
+    name: Elections & Democracy
+    blurb: How India votes and how parties are funded and regulated.
+    subs: [election-commission, electoral-rolls, evm-vvpat, delimitation, simultaneous-elections, political-funding, anti-defection, women-reservation]
+  - id: police-security
+    name: Police & Internal Security
+    blurb: Policing, central agencies, insurgency and disaster response.
+    subs: [police-reforms, central-agencies, internal-security, cyber-crime, disaster-response, prisons]
+  - id: law-rights
+    name: Law, Judiciary & Rights
+    blurb: Courts, criminal law, civil liberties and citizenship.
+    subs: [criminal-codes, judicial-appointments, court-pendency, civil-liberties, uapa-sedition, personal-laws, citizenship]
+  - id: foreign-policy
+    name: Foreign Policy
+    blurb: India's relations, alliances, trade deals and diaspora.
+    subs: [neighbourhood, us-west, russia, china-border, gulf-middle-east, global-south-multilateral, trade-agreements, diaspora]
+  - id: defence
+    name: Armed Forces & Defence
+    blurb: Military, procurement, border management and strategic forces.
+    subs: [procurement-indigenisation, military-recruitment, border-loc, defence-budget, theatre-commands, nuclear-missile-space, veterans]
+  - id: economy
+    name: Economy & Finance
+    blurb: Budgets, tax, money, banks, jobs and trade.
+    subs: [budget-taxation, monetary-policy, banking, jobs-employment, inflation-prices, trade-tariffs, privatisation-psus, startups-msmes, liberalisation]
+  - id: agriculture
+    name: Agriculture & Rural
+    blurb: Farm policy, prices, subsidies and rural livelihoods.
+    subs: [msp-procurement, farm-laws, subsidies, irrigation, rural-employment, land-reforms, fisheries-dairy]
+  - id: health
+    name: Health
+    blurb: Public health systems, insurance, medicines and nutrition.
+    subs: [public-health-infrastructure, health-insurance, pharma-pricing, pandemic-response, nutrition, mental-health]
+  - id: social-welfare
+    name: Social Welfare & Inclusion
+    blurb: Food security, reservations, cash transfers and protection schemes.
+    subs: [food-security, reservations, women-child, minorities, scheduled-castes-tribes, disability, pensions, direct-benefit-transfer]
+  - id: infrastructure
+    name: Infrastructure & Transport
+    blurb: Roads, rail, air, ports and urban transit.
+    subs: [roads-highways, railways, aviation, ports-shipping, urban-transit, smart-cities]
+  - id: energy-environment
+    name: Energy, Environment & Climate
+    blurb: Power, fuels, climate commitments, pollution and forests.
+    subs: [power-sector, renewables, coal-oil-gas, climate-commitments, pollution, forests-wildlife]
+  - id: technology
+    name: Technology & Digital
+    blurb: Digital public infrastructure, data, telecom and AI.
+    subs: [digital-public-infrastructure, identity-aadhaar, data-protection, internet-shutdowns, semiconductors-manufacturing, ai-regulation, telecom]
+  - id: governance
+    name: Governance & Federalism
+    blurb: Centre-State relations, bureaucracy and transparency.
+    subs: [centre-state-relations, governors, article-370-statehood, civil-services, transparency-rti, anti-corruption]
+  - id: media
+    name: Media & Information
+    blurb: Press, broadcasting, online speech and misinformation.
+    subs: [press-freedom, broadcast-regulation, social-media-rules, misinformation]
+  - id: religion-culture
+    name: Religion, Culture & Society
+    blurb: Religious laws, language, caste data and heritage.
+    subs: [religious-institutions-laws, waqf-endowments, caste-census, language-policy, heritage-culture]
+  - id: labour
+    name: Labour & Employment
+    blurb: Labour law, gig work, unions and migrant workers.
+    subs: [labour-codes, gig-platform-workers, unions-industrial-relations, migrant-workers]
+  - id: housing-urban
+    name: Housing & Urban
+    blurb: Housing schemes, urban planning and real estate regulation.
+    subs: [affordable-housing, urban-planning, slums-rehabilitation, real-estate-regulation]
+  - id: water-land
+    name: Water & Land
+    blurb: River disputes, drinking water and land acquisition.
+    subs: [river-disputes, drinking-water, land-acquisition, groundwater]
+  - id: space-science
+    name: Space, Science & Research
+    blurb: ISRO, research funding and nuclear energy.
+    subs: [space-programme, research-funding, nuclear-energy]
+  - id: sports-youth
+    name: Sports & Youth
+    blurb: Sports policy, athletes and youth programmes.
+    subs: [sports-policy, olympics-events, youth-programmes]
+  - id: states
+    name: State Spotlights
+    blurb: The same questions asked of State governments.
+    subs: [delhi, tamil-nadu, kerala, uttar-pradesh, gujarat, west-bengal, maharashtra, karnataka, telangana-andhra, punjab, bihar, odisha, others]

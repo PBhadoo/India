@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "scale": { "min": -5, "max": 5, "note": "Each criterion is an integer from -5 (clearly harmful on this criterion) to +5 (clearly beneficial). 0 means no net effect or no evidence either way." },
+  "criteria": [
+    { "id": "reach", "name": "Reach", "question": "How many people did the action materially affect?",
+      "anchors": { "-5": "Materially harmed >100 million people", "-3": "Harmed 10-100 million", "-1": "Harmed <1 million", "0": "Negligible or unknown", "1": "Benefited <1 million", "3": "Benefited 10-100 million", "5": "Benefited >100 million" } },
+    { "id": "outcome", "name": "Outcome evidence", "question": "Do official or independent data show the intended result (or its opposite), compared with the era baseline and peers?",
+      "anchors": { "-5": "Strong data show clear harm or reversal of the goal", "-3": "Data lean negative", "0": "Mixed or no usable data", "3": "Data lean positive", "5": "Strong data show the goal was met beyond era baseline and peers" } },
+    { "id": "sustainability", "name": "Cost and sustainability", "question": "Is the fiscal cost proportionate, and is the effect durable?",
+      "anchors": { "-5": "Large unfunded burden or effect quickly reversed", "-3": "Costs outrun benefits", "0": "Neutral or unknown", "3": "Cost-effective and lasting", "5": "Low cost relative to benefit, durable across governments" } },
+    { "id": "process", "name": "Process and rights", "question": "Was it made with debate, consultation and legal soundness, and did it respect rights and court rulings?",
+      "anchors": { "-5": "Bypassed debate or was struck down for rights violations", "-3": "Weak consultation or significant legal challenge", "0": "Standard process or unclear", "3": "Good consultation and legal footing", "5": "Broad consultation, cross-party support, upheld by courts" } },
+    { "id": "delivery", "name": "Delivery", "question": "Was it implemented as announced, on time and at scale?",
+      "anchors": { "-5": "Largely not implemented or abandoned", "-3": "Significant shortfall", "0": "Partial or unclear", "3": "Mostly delivered", "5": "Fully delivered as announced" } }
+  ],
+  "attribution": {
+    "implementer": 1.0,
+    "originator_if_different": 0.25,
+    "rule": "The government in office when the action was implemented earns the full score. A different government that originated or legislated the idea earns 25% of the same score. Coalition governments split credit by each partner's share."
+  },
+  "scoring_process": "Two independent scorers rate each action blind to party. Final criterion score = mean of scorers. A criterion where scorers differ by 2 or more is flagged for review. The range shown on the site uses the lowest and highest scorer totals."
+}

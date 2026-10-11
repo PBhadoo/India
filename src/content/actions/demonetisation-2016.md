@@ -19,7 +19,7 @@ facts:
   - "Monthly digital transaction volume rose from 736.7 million in October 2016 to 2.44 billion in November 2018 [8]."
 why:
   stated:
-    - "The Union stated before the Court that the aims were curbing black money, fake currency and terror financing; the majority found a rational connection to those aims [7]."
+    - "The Supreme Court majority held that the measure had a rational connection to the aims of curbing black money, fake currency and terror financing [7]."
     - "Coverage of the Prime Minister's address reports black money, corruption and counterfeit currency as the stated purposes [1]."
   criticism:
     - "Justice Nagarathna held that Section 26(2) of the RBI Act allows demonetisation of particular series only, that demonetising all notes of a denomination needed a law or ordinance, and that the RBI did not independently apply its mind (the process took about 24 hours) [7]."
@@ -44,7 +44,7 @@ sources:
   - { title: "India recorded 965 Mn digital transactions in October: RBI", url: "https://inc42.com/buzz/digital-transactions-rbi-payments/", publisher: "Inc42", type: reputable-media }
   - { title: "Demonetisation hit growth but may not have been captured in official data, says new study", url: "https://thewire.in/economy/demonetisation-hit-growth-but-may-not-have-been-captured-in-official-data-says-new-study", publisher: "The Wire", type: reputable-media }
 scoring:
-  era_baseline: "In 2015-16 growth was above 7% by official estimates and cash made up most retail payments; earlier demonetisations occurred in 1946 and 1978 for larger notes."
+  era_baseline: "Cash was the dominant retail payment mode; earlier legislated demonetisations of high-value notes occurred in 1946 and 1978."
   lag_years: 2
   shocks: ["2017-gst-rollout", "2018-nbfc-stress", "2020-covid"]
   confidence: medium

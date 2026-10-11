@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import PartyChip from '../../components/PartyChip.astro';
+import ActionCard from '../../components/ActionCard.astro';
+import SourceList from '../../components/SourceList.astro';
+import Timeline from '../../components/Timeline.astro';
+import { getSite, pm, allGovernments, centreGovernments, stateGovernments } from '../../lib/site.ts';
+import { daysInOffice, yearsInOffice } from '../../lib/tenure.ts';
+import { fmtDate, fmtDuration, fmtNum, fmtSigned, GOV_TYPE_LABEL } from '../../lib/format.ts';
+
+export function getStaticPaths() {
+  return allGovernments().map((g) => ({ params: { id: g.id } }));
+}
+const { id } = Astro.params;
+const site = await getSite();
+const g = allGovernments().find((x) => x.id === id)!;
+const siblings = g.level === 'centre' ? centreGovernments() : stateGovernments(g.state!);
+const acts = site.actions.filter((a) => a.data.governmentId === id);
+const originated = site.actions.filter((a) => a.data.originGovernmentId === id && a.data.governmentId !== id);
+const yrs = yearsInOffice(g, site.asOf);
+const sorted = [...siblings].sort((a, b) => a.start.localeCompare(b.start));
+const i = sorted.findIndex((x) => x.id === id);
+const prev = sorted[i - 1], next = sorted[i + 1];
+const pts = site.actions.filter((a) => a.data.governmentId === id && a.score.scored);
+const title = `${(g.leader || g.label)}, ${g.start.slice(0, 4)}`;
+---
+<Base title={title} path={`/governments/${id}/`} description={`${g.label} led by ${(g.leader || g.label)}, ${fmtDate(g.start)} to ${g.end ? fmtDate(g.end) : 'present'}.`}>
+  <PageHead title={(g.leader || g.label)} kicker={g.label} crumbs={[['Home', '/'], ['Governments', '/governments/'], [title]]}>
+    <p class="meta"><PartyChip party={pm(site, g.leadParty)} full /> <span>{GOV_TYPE_LABEL[g.type] ?? g.type}</span> <span>{fmtDate(g.start)} to {g.end ? fmtDate(g.end) : 'present'}</span> <span>{fmtDuration(daysInOffice(g, site.asOf))}</span></p>
+  </PageHead>
+  <div class="wrap">
+    <section class="block" aria-labelledby="h-over">
+      <h2 id="h-over">At a glance</h2>
+      <div class="stats">
+        <div class="stat"><div class="v">{fmtNum(yrs)}</div><div class="l">years in office</div></div>
+        <div class="stat"><div class="v">{g.lokSabha ?? '–'}</div><div class="l">Lok Sabha number</div></div>
+        <div class="stat"><div class="v">{acts.length}</div><div class="l">{acts.length === 1 ? 'action' : 'actions'} recorded under it</div></div>
+        <div class="stat"><div class="v">{pts.length}</div><div class="l">scored</div></div>
+      </div>
+      <Timeline governments={siblings} site={site} compact legend={false} highlight={g.id} id="tl-this" />
+      <p class="small" style="margin-top:.8rem">
+        {prev && <>Previous: <a href={`/governments/${prev.id}/`}>{(prev.leader || prev.label)}</a>. </>}
+        {next && <>Next: <a href={`/governments/${next.id}/`}>{(next.leader || next.label)}</a>.</>}
+      </p>
+    </section>
+
+    <section class="block" aria-labelledby="h-part">
+      <h2 id="h-part">Governing parties</h2>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Partners, scrolls sideways on narrow screens">
+        <table class="data">
+          <caption>Partners and their share of the governing seats<span class="small">Credit for this government's actions, and its years in office, are split by these shares.</span></caption>
+          <thead><tr><th scope="col">Party</th><th scope="col" class="num">Share</th><th scope="col" class="num">Years in power (weighted)</th><th scope="col">Note</th></tr></thead>
+          <tbody>
+            {(g.partners.length ? g.partners : [{ party: g.leadParty, share: 1, note: undefined }]).map((p) => (
+              <tr><th scope="row"><PartyChip party={pm(site, p.party)} />{p.party === g.leadParty && <span class="sub">Lead party</span>}</th><td class="num">{Math.round(p.share * 100)}%</td><td class="num">{fmtNum(yrs * p.share)}</td><td>{p.note ?? ''}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {g.outsideSupport && g.outsideSupport.length > 0 && (
+        <p style="margin-top:1rem"><strong>Outside support (not in government):</strong> {g.outsideSupport.map((o, k) => <>{k > 0 && '; '}<PartyChip party={pm(site, o.party)} />{o.note ? `, ${o.note}` : ''}</>)}</p>
+      )}
+    </section>
+
+    <section class="block" aria-labelledby="h-acts">
+      <h2 id="h-acts">Actions under this government</h2>
+      {acts.length === 0 ? (
+        <div class="empty"><p>No actions from this government are published yet. A short entry list does not mean little happened; it means little is recorded so far.</p></div>
+      ) : (
+        <ul class="alist">{acts.map((a) => <li><ActionCard action={a} site={site} /></li>)}</ul>
+      )}
+      {originated.length > 0 && (
+        <>
+          <h3 style="margin-top:1.6rem">Ideas that began here and were carried out later (25% credit)</h3>
+          <ul class="alist">{originated.map((a) => <li><ActionCard action={a} site={site} /></li>)}</ul>
+        </>
+      )}
+    </section>
+
+    {g.sources && g.sources.length > 0 && (
+      <section class="block" aria-labelledby="h-src">
+        <h2 id="h-src">Sources</h2>
+        <SourceList sources={g.sources} />
+      </section>
+    )}
+  </div>
+</Base>

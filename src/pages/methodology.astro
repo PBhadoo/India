@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import rubric from '../data/rubric.json';
+import { IMPLEMENTER_CREDIT, ORIGINATOR_CREDIT, DISAGREEMENT_THRESHOLD, LOW_DATA_MIN_ACTIONS, PRELIMINARY_MIN_SCORED } from '../lib/scoring-core.ts';
+import { MINUS } from '../lib/format.ts';
+import { categories } from '../lib/taxonomy.ts';
+const crit = rubric.criteria as { id: string; name: string; question: string; anchors: Record<string, string> }[];
+const order = ['-5', '-3', '-1', '0', '1', '3', '5'];
+const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['attribution', 'Who gets the credit'], ['coalition', 'Coalitions'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
+const pct = (n: number) => `${Math.round(n * 100)}%`;
+---
+<Base title="Methodology" path="/methodology/" description="How actions are chosen, scored on a public rubric by two blind scorers, credited to governments and coalition partners, and shown with their uncertainty.">
+  <PageHead title="Methodology" kicker="How the numbers are made" lede="Every figure on this site comes from the steps below. The same rubric, the same credit rules and the same checks apply to every party and every era." crumbs={[['Home', '/'], ['Methodology']]} />
+  <div class="wrap">
+    <ul class="anchors" aria-label="On this page">{toc.map(([id, l]) => <li><a href={`#${id}`}>{l}</a></li>)}</ul>
+    <div class="prose">
+      <section id="rubric" aria-labelledby="h-rubric">
+        <h2 id="h-rubric">The rubric</h2>
+        <p>Each action is scored on five criteria. Each criterion is a whole number from {MINUS}{Math.abs(rubric.scale.min)} to +{rubric.scale.max}. {rubric.scale.note}</p>
+        <p>An action's points are the sum of its five criterion scores, so they range from {MINUS}25 to +25. A negative number means the evidence shows net harm on that criterion. A positive number means net benefit. Zero means no net effect, or no evidence either way.</p>
+      </section>
+    </div>
+    <div class="grid wide" style="margin-block:1.5rem">
+      {crit.map((c) => (
+        <article class="card">
+          <h3>{c.name}</h3>
+          <p>{c.question}</p>
+          <dl class="rubric-anchors">
+            {order.filter((k) => c.anchors[k]).map((k) => <><dt>{k.startsWith('-') ? MINUS + k.slice(1) : (k === '0' ? '0' : '+' + k)}</dt><dd>{c.anchors[k]}</dd></>)}
+          </dl>
+          <p class="small" style="margin-top:.6rem">Scores between the anchors are used when the evidence sits between two descriptions.</p>
+        </article>
+      ))}
+    </div>
+    <div class="prose">
+      <section id="blind" aria-labelledby="h-blind">
+        <h2 id="h-blind">Blind double scoring</h2>
+        <p>{rubric.scoring_process}</p>
+        <p>Before scoring, each action is stripped of party names and of the name of the government. Scorers see the facts, the stated reasons, the criticism, the benefits and concerns, the evidence and the era baseline. They work separately and do not see each other's scores. Both sets of scores, and each scorer's note, are published on the action's page.</p>
+      </section>
+
+      <section id="attribution" aria-labelledby="h-attr">
+        <h2 id="h-attr">Who gets the credit</h2>
+        <p>{rubric.attribution.rule}</p>
+        <ul>
+          <li>The government in office when the action was implemented receives {pct(IMPLEMENTER_CREDIT)} of the action's points.</li>
+          <li>If a different government originated the idea or first legislated it, that government receives {pct(ORIGINATOR_CREDIT)} of the same points. Both can hold credit for the same action.</li>
+          <li>Court rulings, state action and events outside any government's control are recorded as facts and shocks, not as credit.</li>
+        </ul>
+        <p>The same rule is applied whichever party holds office. Positive and negative points are credited in the same way, so a harmful action lowers the credited government's total as much as a beneficial one raises it.</p>
+      </section>
+
+      <section id="coalition" aria-labelledby="h-coal">
+        <h2 id="h-coal">Coalitions</h2>
+        <p>Credit for a coalition government is divided among its partners by each partner's share of the governing coalition's Lok Sabha seats at formation. The same shares are used to divide the years in power. Parties that supported a government from outside, without joining it, receive no credit and no years, and are listed on that government's page.</p>
+        <p>Caretaker governments are included and counted by days in office, like any other.</p>
+      </section>
+
+      <section id="per-year" aria-labelledby="h-ppy">
+        <h2 id="h-ppy">Points per year</h2>
+        <p>A party's total is the sum of its credited points. Its years in power are the sum, over every government it belonged to, of (days in office divided by 365.25) multiplied by its coalition share. <strong>Points per year</strong> is the total divided by years in power. It exists so that a party that governed for forty years is not compared with one that governed for five on raw totals alone.</p>
+        <p><strong>Short tenures.</strong> A party with under 2 years in power can show a very large or very small figure from a single action, because the divisor is tiny. Such parties are listed in a separate group below the main table and are left out of the category grid.</p>
+        <p>This is a summary of the evidence entered so far. It is not a verdict on any party, and the order of the table follows a figure, not a judgement. Parties with short terms or few scored actions produce wide and unstable figures, which is why ranges and “low data” labels are shown with them.</p>
+      </section>
+
+      <section id="baselines" aria-labelledby="h-base">
+        <h2 id="h-base">Era baselines</h2>
+        <p>Scorers judge each action against what was normal at the time, not against today. Each entry states a baseline in one sentence: what growth, peer-country performance or the previous decade looked like. The Outcome criterion asks whether results beat that baseline and peers. Because the economy, the state and the data available differ widely between 1950 and 2020, the baseline is part of every entry.</p>
+      </section>
+
+      <section id="lag" aria-labelledby="h-lag">
+        <h2 id="h-lag">Lag</h2>
+        <p>Some actions show their effects years later. Each entry gives a lag in years before outcomes could reasonably show. Scorers weigh outcome evidence only up to what that lag allows, and recent actions inside their lag period are scored with low confidence. Outcomes that arrive under a later government are not credited to the earlier one beyond the originator rule above.</p>
+      </section>
+
+      <section id="uncertainty" aria-labelledby="h-unc">
+        <h2 id="h-unc">Uncertainty</h2>
+        <ul>
+          <li><strong>Range.</strong> For each action the range runs from the lower to the higher of the two scorers' totals. For a party, the range adds up the lows and the highs of its credited actions. Points per year are shown with the same range divided by years.</li>
+          <li><strong>Disagreement flag.</strong> If the two scorers differ by {DISAGREEMENT_THRESHOLD} or more points on a criterion, that criterion is flagged on the action page and sent for review.</li>
+          <li><strong>Confidence.</strong> Each entry carries a low, medium or high confidence label that reflects the quality and amount of evidence.</li>
+          <li><strong>Preliminary.</strong> While fewer than {PRELIMINARY_MIN_SCORED} Centre actions are scored, the party table carries a Preliminary banner. Early figures can move a lot when one entry is added.</li>
+        </ul>
+        <p>Ranges between parties often overlap. When they do, the data do not separate those parties.</p>
+      </section>
+
+      <section id="coverage" aria-labelledby="h-cov">
+        <h2 id="h-cov">Coverage rule</h2>
+        <p>A party–category cell with fewer than {LOW_DATA_MIN_ACTIONS} scored actions is labelled “low data” and drawn with a hatch in the grid. Category pages show how many entries exist for each party and decade, so gaps in coverage are visible and are not mistaken for gaps in activity. The aim is the same depth for every party and era; where that is not yet true, the page says so.</p>
+      </section>
+
+      <section id="weights" aria-labelledby="h-w">
+        <h2 id="h-w">Your weights</h2>
+        <p>The home page lets you set a weight from 0 to 3 for each of the {categories().length} categories. A weight multiplies that category's points and range before they are added up; years in power do not change. The page recomputes in your browser with the same formulas used at build time, and nothing is stored or sent. You can also limit the table to a period, such as before or after 1991; the period applies to the date of each action and to years in power.</p>
+      </section>
+
+      <section id="limits" aria-labelledby="h-lim">
+        <h2 id="h-lim">Limitations</h2>
+        <ul>
+          <li>Scores are structured judgements. Two other scorers could give different numbers; that is why ranges and disagreement flags are published.</li>
+          <li>Only recorded actions count. A government with more entries has more chances to earn both positive and negative points, so check the action counts.</li>
+          <li>Actions differ greatly in size. A single large reform and a small scheme are both scored out of 25, and the Reach criterion is the main place where size shows.</li>
+          <li>Causation is hard. Outcomes can follow from earlier decisions, from other governments, from states, from courts or from events such as a pandemic. Shocks are noted on each entry.</li>
+          <li>The record is incomplete and growing. Early figures should be read as provisional.</li>
+          <li>The table covers the Union government. State governments are recorded separately and are not in the headline table.</li>
+        </ul>
+      </section>
+
+      <section id="challenge" aria-labelledby="h-ch">
+        <h2 id="h-ch">How to challenge a score</h2>
+        <ol class="steps">
+          <li>Open the action and read the scorers' notes, the sources and the era baseline.</li>
+          <li>Open an issue on the <a href="https://github.com/PBhadoo/India/issues" rel="noopener">repository</a>, or use the “Report an error” link on the action. Name the criterion and say which number you think is wrong.</li>
+          <li>Give a source that supports the change. Primary sources and official data are weighed most heavily; <a href="/corrections/">see the corrections page</a>.</li>
+          <li>Two reviewers who have not seen the earlier scores will look at the evidence. If the score changes, the change and the reason are logged in the repository history and the page shows its new review date.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</Base>

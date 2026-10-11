@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import TenureTable from '../../components/TenureTable.astro';
+import PartyChip from '../../components/PartyChip.astro';
+import { getSite, pm, centreGovernments } from '../../lib/site.ts';
+const site = await getSite();
+const list = Object.values(site.partyMeta).sort((a, b) => (a.slot || 99) - (b.slot || 99) || a.name.localeCompare(b.name));
+---
+<Base title="Parties" path="/parties/" description="Parties that have governed at the Centre: years in power, governments joined and led.">
+  <PageHead title="Parties" kicker="Who governed" lede="Parties are listed in the order they first appear in a Union government. Colours and patterns follow that order and carry no meaning about the party." crumbs={[['Home', '/'], ['Parties']]} />
+  <div class="wrap">
+    <section class="block" aria-labelledby="h-t">
+      <h2 id="h-t">Years in power</h2>
+      <TenureTable governments={centreGovernments()} site={site} />
+    </section>
+    <section class="block" aria-labelledby="h-l">
+      <h2 id="h-l">All parties</h2>
+      {list.length === 0 ? (
+        <div class="empty"><p>No parties have been entered yet.</p></div>
+      ) : (
+        <ul class="grid" style="list-style:none;padding:0">
+          {list.map((p) => {
+            const r = site.scoring.parties.find((x) => x.partyId === p.id);
+            return (
+              <li class="card link" style="margin:0">
+                <h3 style="font-size:1.05rem"><a class="cover" href={`/parties/${p.id}/`}>{p.name}</a></h3>
+                <p style="margin:0"><PartyChip party={p} link={false} /></p>
+                <p class="small" style="margin:.5rem 0 0">{r && r.yearsInPower > 0 ? `${r.yearsInPower.toFixed(1)} years in power, ${r.yearsLed.toFixed(1)} years led` : 'Has not governed at the Centre'}</p>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </section>
+  </div>
+</Base>

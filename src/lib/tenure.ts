@@ -45,6 +45,7 @@ export function partyYears(
   for (const g of governments) {
     const years = yearsInOffice(g, asOf);
     if (years <= 0) continue;
+    if (!g.leadParty && !g.partners.length) continue; // e.g. President's rule: no governing party
     const partners = g.partners.length ? g.partners : [{ party: g.leadParty, share: 1 }];
     for (const p of partners) slot(p.party).weighted += years * p.share;
     slot(g.leadParty).led += years;

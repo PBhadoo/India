@@ -62,6 +62,7 @@ export const GOV_TYPE_LABEL: Record<string, string> = {
   coalition: 'Coalition government',
   'minority-outside-support': 'Minority, outside support',
   caretaker: 'Caretaker',
+  'presidents-rule': "President's rule",
 };
 
 export const STATUS_LABEL: Record<string, string> = {

@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getSite } from '../../lib/site.ts';
+import { categories, subDisplayName } from '../../lib/taxonomy.ts';
+const site = await getSite();
+const cats = categories();
+const counts = new Map<string, number>();
+for (const a of site.actions) counts.set(a.data.category, (counts.get(a.data.category) ?? 0) + 1);
+---
+<Base title="Categories" path="/categories/" description="All topics covered, from the economy to elections and defence, with the number of entries in each.">
+  <PageHead title="Categories" kicker="Browse" lede="Every action is filed under one topic and one or more sub-topics. Entry counts show where the record is thick and where it is thin." crumbs={[['Home', '/'], ['Categories']]} />
+  <div class="wrap">
+    {cats.length === 0 ? (
+      <div class="empty"><p>The topic list has not been published yet.</p></div>
+    ) : (
+      <div class="grid wide">
+        {cats.map((c) => (
+          <article class="card link">
+            <h2 style="font-size:1.2rem;margin-bottom:.3rem"><a class="cover" href={`/categories/${c.id}/`} style="color:var(--ink);text-decoration:none">{c.name}</a></h2>
+            <p class="small">{c.blurb}</p>
+            <p class="count" style="margin:0">{counts.get(c.id) ?? 0} {(counts.get(c.id) ?? 0) === 1 ? 'entry' : 'entries'} &middot; {c.subs.length} sub-topics</p>
+            <p class="small muted" style="margin:.4rem 0 0">{c.subs.slice(0, 4).map((s) => subDisplayName(s)).join(', ')}{c.subs.length > 4 ? ', and more' : ''}</p>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
+</Base>

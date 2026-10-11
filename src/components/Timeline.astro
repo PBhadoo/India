@@ -2,6 +2,7 @@
 import { timelineSegments, toTime } from '../lib/tenure.ts';
 import { fmtDate, fmtDuration, GOV_TYPE_LABEL, shortLeader } from '../lib/format.ts';
 import { layoutLabels } from '../lib/viz.ts';
+import PartyChip from './PartyChip.astro';
 import { pm, type Site } from '../lib/site.ts';
 import type { Government } from '../lib/types.ts';
 
@@ -30,12 +31,14 @@ for (let y = Math.ceil(y0 / step) * step; y <= y1; y += step) {
   const pct = ((Date.UTC(y, 0, 1) - t0) / span) * 100;
   if (pct >= 0 && pct <= 100) ticks.push({ y, pct });
 }
-const labelOf = (s: (typeof segs)[number]) => shortLeader(s.leader);
+const nameOf = (s: (typeof segs)[number]) => byId.get(s.governmentId)?.leader || byId.get(s.governmentId)?.label || '';
+const labelOf = (s: (typeof segs)[number]) => (byId.get(s.governmentId)?.leader ? shortLeader(s.leader) : nameOf(s));
+const ledBy = (s: (typeof segs)[number], p: { name: string }) => (s.leadParty ? `${p.name}-led` : 'No lead party');
 const placements = compact ? [] : layoutLabels(segs.map((s) => ({ id: s.governmentId, startPct: s.startPct, widthPct: s.widthPct, text: labelOf(s), priority: s.days })));
 const placeById = new Map(placements.map((p) => [p.id, p]));
 const LANE = 18;
 const lanes = placements.length ? Math.max(...placements.map((p) => p.lane)) + 1 : 0;
-const used = [...new Set(segs.map((s) => s.leadParty))].map((p) => pm(site, p)).sort((a, b) => (a.slot || 99) - (b.slot || 99));
+const used = [...new Set(segs.map((s) => s.leadParty || ''))].map((p) => pm(site, p)).sort((a, b) => (a.slot || 99) - (b.slot || 99));
 const uid = id ?? 'tl';
 ---
 {segs.length === 0 ? (
@@ -52,14 +55,14 @@ const uid = id ?? 'tl';
             const g = byId.get(s.governmentId)!;
             const p = pm(site, s.leadParty);
             const when = `${fmtDate(s.start)} to ${s.ongoing ? 'present' : fmtDate(s.end)}`;
-            const tip = `${s.leader}\n${p.name}-led, ${GOV_TYPE_LABEL[s.type] ?? s.type}\n${when}\n${fmtDuration(s.days)} (${s.days.toLocaleString('en-IN')} days)`;
+            const tip = `${nameOf(s)}\n${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type] ?? s.type}\n${when}\n${fmtDuration(s.days)} (${s.days.toLocaleString('en-IN')} days)`;
             return (
               <li style={`left:${s.startPct.toFixed(3)}%;width:${s.widthPct.toFixed(3)}%`}>
                 <a
                   class={`seg p${p.slot} pat${p.slot}${s.ongoing ? ' ongoing' : ''}${s.type === 'caretaker' ? ' caretaker' : ''}`}
                   href={`/governments/${s.governmentId}/`}
                   data-tip={tip}
-                  aria-label={`${s.leader}, ${p.name}-led ${GOV_TYPE_LABEL[s.type]?.toLowerCase() ?? s.type}, ${when}, ${fmtDuration(s.days)}`}
+                  aria-label={`${nameOf(s)}, ${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type]?.toLowerCase() ?? s.type}, ${when}, ${fmtDuration(s.days)}`}
                   aria-current={highlight === s.governmentId ? 'true' : undefined}
                   style={highlight && highlight !== s.governmentId ? 'opacity:.45' : undefined}
                 ></a>
@@ -97,9 +100,10 @@ const uid = id ?? 'tl';
     {legend && (
       <ul class="legend" aria-label="Lead party key">
         {used.map((p) => (
-          <li><a class="chip" href={`/parties/${p.id}/`} title={p.name}><span class={`sw p${p.slot} pat${p.slot}`} aria-hidden="true"></span><span>{p.short}</span></a></li>
+          <li><PartyChip party={p} link={p.id !== 'none'} /></li>
         ))}
-        {used.some((p) => p.slot === 0) && <li class="small muted">Grey cross-hatch: parties beyond the eight palette slots</li>}
+        {used.some((p) => p.slot === 0 && p.id !== 'none') && <li class="small muted">Grey cross-hatch: parties beyond the eight palette slots</li>}
+        {used.some((p) => p.id === 'none') && <li class="small muted">PR: President's rule or no lead party</li>}
       </ul>
     )}
   </figure>

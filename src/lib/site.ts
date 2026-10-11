@@ -77,6 +77,7 @@ async function build(): Promise<Site> {
   const stamps = [...actions.map((a) => isoDate(a.data.lastReviewed)), ...developing.map((d) => isoDate(d.data.date))].sort();
   const partyMetaMap: Record<string, PartyMeta> = {};
   const ids = new Set<string>([...plist.map((p) => p.id), ...Object.keys(slots)]);
+  ids.delete('');
   for (const id of ids) {
     const p = plist.find((x) => x.id === id);
     partyMetaMap[id] = { id, name: p?.name ?? id.toUpperCase(), short: p?.short ?? id.toUpperCase(), slot: slots[id] ?? 0 };
@@ -96,7 +97,10 @@ async function build(): Promise<Site> {
 export const cats = categories;
 export { centreGovernments, stateGovernments, listStates, allGovernments, getGovernment };
 
-export function pm(site: Site, id: string): PartyMeta {
+export const NO_PARTY: PartyMeta = { id: 'none', name: "No governing party (President's rule)", short: 'PR', slot: 0 };
+
+export function pm(site: Site, id: string | null | undefined): PartyMeta {
+  if (!id) return NO_PARTY;
   return site.partyMeta[id] ?? { id, name: id.toUpperCase(), short: id.toUpperCase(), slot: 0 };
 }
 
@@ -109,5 +113,5 @@ export function ctxFor(site: Site) {
 
 /** JSON safe to inline in a script tag. */
 export function jsonForScript(v: unknown): string {
-  return JSON.stringify(v).replace(/</g, '\\u003c').replace(/ | /g, '');
+  return JSON.stringify(v).replace(/</g, '\\u003c').replace(new RegExp('[\\u2028\\u2029]', 'g'), '');
 }

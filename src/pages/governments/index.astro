@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import Timeline from '../../components/Timeline.astro';
+import PartyChip from '../../components/PartyChip.astro';
+import { getSite, pm, centreGovernments, stateGovernments, listStates } from '../../lib/site.ts';
+import { daysInOffice } from '../../lib/tenure.ts';
+import { fmtDate, fmtDuration, GOV_TYPE_LABEL } from '../../lib/format.ts';
+import type { Government } from '../../lib/types.ts';
+const site = await getSite();
+const centre = [...centreGovernments()].sort((a, b) => a.start.localeCompare(b.start));
+const states = listStates().filter((s) => stateGovernments(s.id).length);
+const ord = (n: number) => { const v = n % 100; return `${n}${['th', 'st', 'nd', 'rd'][(v - 20) % 10] ?? ['th', 'st', 'nd', 'rd'][v] ?? 'th'}`; };
+---
+<Base title="Governments" path="/governments/" description="Every Union government since independence: prime minister, lead party or coalition, partners, dates, Lok Sabha and sources.">
+  <PageHead title="Governments" kicker="The Centre" lede="Every Union government in order, including short and caretaker ones. Coalition shares are each partner's share of the governing seats at formation." crumbs={[['Home', '/'], ['Governments']]} />
+  <div class="wrap">
+    <section class="block" aria-labelledby="h-tl">
+      <h2 id="h-tl">Timeline</h2>
+      <Timeline governments={centre} site={site} id="tl-all" />
+    </section>
+    <section class="block" aria-labelledby="h-tab">
+      <h2 id="h-tab">All Union governments</h2>
+      {centre.length === 0 ? (
+        <div class="empty"><p>No governments have been entered yet.</p></div>
+      ) : (
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Union governments, scrolls sideways on narrow screens">
+          <table class="data">
+            <caption>Union governments since independence<span class="small">Time in office is counted to today for the current government.</span></caption>
+            <thead>
+              <tr><th scope="col">Prime minister</th><th scope="col">Party or coalition</th><th scope="col">Partners (share of governing seats)</th><th scope="col">Type</th><th scope="col">From</th><th scope="col">To</th><th scope="col" class="num">In office</th><th scope="col" class="num">Lok Sabha</th><th scope="col">Sources</th></tr>
+            </thead>
+            <tbody>
+              {centre.map((g: Government) => (
+                <tr id={g.id}>
+                  <th scope="row"><a href={`/governments/${g.id}/`}>{(g.leader || g.label)}</a></th>
+                  <td><PartyChip party={pm(site, g.leadParty)} /><span class="sub">{g.label}</span></td>
+                  <td>{g.partners.length ? g.partners.map((p) => <span style="display:inline-block;margin:0 .3rem .2rem 0"><PartyChip party={pm(site, p.party)} /> <span class="mono">{Math.round(p.share * 100)}%</span></span>) : '–'}</td>
+                  <td>{GOV_TYPE_LABEL[g.type] ?? g.type}</td>
+                  <td class="nowrap">{fmtDate(g.start)}</td>
+                  <td class="nowrap">{g.end ? fmtDate(g.end) : 'Present'}</td>
+                  <td class="num nowrap">{fmtDuration(daysInOffice(g, site.asOf))}</td>
+                  <td class="num">{g.lokSabha ? ord(g.lokSabha) : '–'}</td>
+                  <td>{g.sources?.length ? g.sources.map((s, i) => <>{i > 0 && ', '}<a href={s.url} rel="noopener">{s.title}</a></>) : '–'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </section>
+    {states.map((s) => (
+      <section class="block" aria-labelledby={`h-${s.id}`}>
+        <h2 id={`h-${s.id}`}>{s.name}</h2>
+        <Timeline governments={stateGovernments(s.id)} site={site} id={`tl-${s.id}`} compact />
+        <ul style="margin-top:1rem">
+          {[...stateGovernments(s.id)].sort((a, b) => a.start.localeCompare(b.start)).map((g) => <li><a href={`/governments/${g.id}/`}>{(g.leader || g.label)}</a>, {fmtDate(g.start)} to {g.end ? fmtDate(g.end) : 'present'}</li>)}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>

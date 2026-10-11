@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getSite } from '../../lib/site.ts';
+import { getCategory } from '../../lib/taxonomy.ts';
+import { fmtDate, isoDate } from '../../lib/format.ts';
+const site = await getSite();
+---
+<Base title="Developing now" path="/developing/" description="Events still unfolding: what is known, what is not yet known, and the sources so far.">
+  <PageHead title="Developing now" kicker="Unsettled" lede="Events that are still unfolding. Each item separates what is established from what is not yet known, and carries no score until the facts settle." crumbs={[['Home', '/'], ['Developing']]} />
+  <div class="wrap">
+    {site.developing.length === 0 ? (
+      <div class="empty"><p>No developing items are published at the moment.</p></div>
+    ) : (
+      <ul class="alist">
+        {site.developing.map((d) => (
+          <li>
+            <article class="acard">
+              <div class="meta"><span class={`badge ${d.data.status === 'developing' ? 'badge-live' : ''}`}>{d.data.status === 'developing' ? 'Unsettled' : 'Settled'}</span><time datetime={isoDate(d.data.date)}>{fmtDate(d.data.date)}</time><span>{getCategory(d.data.category)?.name}</span></div>
+              <h3><a href={`/developing/${d.slug}/`}>{d.data.title}</a></h3>
+              <p>{d.data.summary}</p>
+            </article>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</Base>

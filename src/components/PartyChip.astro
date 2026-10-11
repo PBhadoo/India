@@ -3,6 +3,6 @@ import type { PartyMeta } from '../lib/viz.ts';
 interface Props { party: PartyMeta; link?: boolean; full?: boolean }
 const { party, link = true, full = false } = Astro.props;
 ---
-{link
+{link && party.id !== 'none'
   ? <a class="chip" href={`/parties/${party.id}/`} title={party.name}><span class={`sw p${party.slot} pat${party.slot}`} aria-hidden="true"></span><span>{full ? party.name : party.short}</span></a>
   : <span class="chip" title={party.name}><span class={`sw p${party.slot} pat${party.slot}`} aria-hidden="true"></span><span>{full ? party.name : party.short}</span></span>}

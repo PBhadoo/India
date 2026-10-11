@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+---
+<Base title="Corrections" path="/corrections/" description="How to report a factual error, suggest a better source or challenge a score.">
+  <PageHead title="Corrections" kicker="Get it right" lede="If something here is wrong, missing a source or unfair in how it is described, tell us. Corrections are welcome from people of any political view." crumbs={[['Home', '/'], ['Corrections']]} />
+  <div class="wrap">
+    <div class="prose">
+      <h2>What to send</h2>
+      <ul>
+        <li><strong>A factual error.</strong> Quote the sentence and give the correct fact with a source.</li>
+        <li><strong>A better or missing source.</strong> Primary sources (Gazette, Lok Sabha and Rajya Sabha records, court judgments, Election Commission, CAG, RBI, NSO) are preferred.</li>
+        <li><strong>A one-sided description.</strong> Point to the wording and say what is missing or loaded.</li>
+        <li><strong>A score you dispute.</strong> Name the action, the criterion and the number, and give the evidence. See <a href="/methodology/#challenge">how challenges are handled</a>.</li>
+      </ul>
+      <h2>How to send it</h2>
+      <p>Open an issue on the project's public issue tracker. You need a free GitHub account. Everything is handled in the open so anyone can see what changed and why.</p>
+      <p><a class="btn btn-primary" id="issue-link" href="https://github.com/PBhadoo/India/issues/new" rel="noopener">Open a new issue on GitHub</a></p>
+      <p class="small" id="issue-page" hidden></p>
+      <p>If you cannot use GitHub, you can read all issues at <a href="https://github.com/PBhadoo/India/issues" rel="noopener">github.com/PBhadoo/India/issues</a>.</p>
+      <h2>What happens next</h2>
+      <ol class="steps">
+        <li>A reviewer checks the source you gave against the entry.</li>
+        <li>Factual fixes are made and the entry's “last reviewed” date is updated.</li>
+        <li>Disputed scores go to two reviewers who have not seen the earlier scores.</li>
+        <li>The outcome, including a decision not to change anything, is recorded on the issue with a reason.</li>
+      </ol>
+    </div>
+  </div>
+</Base>
+<script>
+  const q = new URLSearchParams(location.search);
+  const from = q.get('from');
+  const title = q.get('title');
+  if (from && from.startsWith('/')) {
+    const link = document.getElementById('issue-link') as HTMLAnchorElement | null;
+    const note = document.getElementById('issue-page');
+    const url = new URL('https://github.com/PBhadoo/India/issues/new');
+    url.searchParams.set('title', `Correction: ${title || from}`);
+    url.searchParams.set('body', `Page: ${location.origin}${from}\n\nWhat is wrong:\n\nCorrect fact and source (https link):\n`);
+    if (link) link.href = url.toString();
+    if (note) {
+      note.hidden = false;
+      note.textContent = `This issue will be pre-filled for the page ${from}.`;
+    }
+  }
+</script>

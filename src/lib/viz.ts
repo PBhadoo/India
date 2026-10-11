@@ -5,29 +5,27 @@ import { toTime } from './tenure.ts';
 export const PALETTE_SLOTS = 8;
 
 /**
- * Fixed chronological slot per party: the order in which parties first appear in
- * any government (by start date). Slot 0 is the neutral "other" fallback.
+ * Fixed chronological slot per party: the order in which parties first lead, then join,
+ * a government (by start date). Slot 0 is the neutral "other" fallback.
  * New parties only ever append, so existing parties never change colour.
  */
 export function partySlots(governments: Government[], parties: Party[]): Record<string, number> {
   const order: string[] = [];
   const seen = new Set<string>();
-  const add = (id: string) => {
-    if (!seen.has(id)) {
+  const add = (id: string | null | undefined) => {
+    if (id && !seen.has(id)) {
       seen.add(id);
       order.push(id);
     }
   };
-  const centre = governments.filter((g) => g.level === 'centre');
-  const pool = centre.length ? centre : governments;
-  for (const g of [...pool].sort((a, b) => toTime(a.start) - toTime(b.start))) {
-    add(g.leadParty);
-    for (const p of g.partners) add(p.party);
-  }
-  for (const g of [...governments].sort((a, b) => toTime(a.start) - toTime(b.start))) {
-    add(g.leadParty);
-    for (const p of g.partners) add(p.party);
-  }
+  const byStart = (list: Government[]) => [...list].sort((a, b) => toTime(a.start) - toTime(b.start));
+  const centre = byStart(governments.filter((g) => g.level === 'centre'));
+  const states = byStart(governments.filter((g) => g.level !== 'centre'));
+  // Lead parties first (they colour the timeline), then coalition partners, centre before states.
+  for (const g of centre) add(g.leadParty);
+  for (const g of centre) g.partners.forEach((p) => add(p.party));
+  for (const g of states) add(g.leadParty);
+  for (const g of states) g.partners.forEach((p) => add(p.party));
   for (const p of [...parties].sort((a, b) => (a.founded ?? 9999) - (b.founded ?? 9999))) add(p.id);
   const out: Record<string, number> = {};
   order.forEach((id, i) => (out[id] = i < PALETTE_SLOTS ? i + 1 : 0));

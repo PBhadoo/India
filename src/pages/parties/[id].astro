@@ -1,0 +1,106 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import PartyChip from '../../components/PartyChip.astro';
+import ActionCard from '../../components/ActionCard.astro';
+import Timeline from '../../components/Timeline.astro';
+import { getSite, pm, allGovernments, centreGovernments } from '../../lib/site.ts';
+import { categories } from '../../lib/taxonomy.ts';
+import { fmtDate, fmtDuration, fmtNum, fmtSigned } from '../../lib/format.ts';
+import { daysInOffice } from '../../lib/tenure.ts';
+import { LOW_DATA_MIN_ACTIONS } from '../../lib/scoring-core.ts';
+
+export async function getStaticPaths() {
+  const site = await getSite();
+  return Object.keys(site.partyMeta).map((id) => ({ params: { id } }));
+}
+const { id } = Astro.params;
+const site = await getSite();
+const party = pm(site, id!);
+const res = site.scoring.parties.find((r) => r.partyId === id);
+const govs = allGovernments().filter((g) => g.partners.some((p) => p.party === id) || g.leadParty === id).sort((a, b) => a.start.localeCompare(b.start));
+const centre = centreGovernments();
+const cats = categories();
+const credited = site.scoring.credits.filter((c) => c.partyId === id);
+const creditBySlug = new Map<string, { role: string; points: number }>();
+for (const c of credited) creditBySlug.set(c.slug, { role: c.role, points: c.points + (creditBySlug.get(c.slug)?.points ?? 0) });
+const acts = site.actions.filter((a) => creditBySlug.has(a.slug));
+const rows = cats.map((c) => ({ c, cell: res?.categories[c.id] })).filter((r) => r.cell && r.cell.scoredActions > 0);
+---
+<Base title={party.name} path={`/parties/${id}/`} description={`${party.name}: years in power at the Centre, governments joined, and evidence points by category.`}>
+  <PageHead title={party.name} kicker="Party" crumbs={[['Home', '/'], ['Parties', '/parties/'], [party.short]]}>
+    <p class="meta"><PartyChip party={party} link={false} /> {site.partyList.find((p) => p.id === id)?.founded && <span>Founded {site.partyList.find((p) => p.id === id)!.founded}</span>}</p>
+  </PageHead>
+  <div class="wrap">
+    <section class="block" aria-labelledby="h-ten">
+      <h2 id="h-ten">Tenure</h2>
+      {res && res.yearsInPower > 0 ? (
+        <div class="stats">
+          <div class="stat"><div class="v">{fmtNum(res.yearsInPower)}</div><div class="l">years in power (weighted by coalition share)</div></div>
+          <div class="stat"><div class="v">{fmtNum(res.yearsLed)}</div><div class="l">years leading a government</div></div>
+          <div class="stat"><div class="v">{govs.length}</div><div class="l">{govs.length === 1 ? 'government' : 'governments'} joined</div></div>
+          <div class="stat"><div class="v">{res.pointsPerYear == null ? '–' : fmtSigned(res.pointsPerYear)}</div><div class="l">points per year{res.pointsPerYear != null ? ` (range ${fmtSigned(res.lowPerYear)} to ${fmtSigned(res.highPerYear)})` : ''}</div></div>
+        </div>
+      ) : (
+        <div class="empty"><p>No years in power at the Centre are recorded for this party.</p></div>
+      )}
+      {govs.some((g) => g.level === 'centre') && <Timeline governments={centre} site={site} compact legend={false} highlight={undefined} id="tl-party" />}
+    </section>
+
+    <section class="block" aria-labelledby="h-govs">
+      <h2 id="h-govs">Governments</h2>
+      {govs.length === 0 ? <div class="empty"><p>None recorded.</p></div> : (
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Governments, scrolls sideways on narrow screens">
+          <table class="data">
+            <caption>Governments this party was part of</caption>
+            <thead><tr><th scope="col">Leader</th><th scope="col">Government</th><th scope="col" class="num">Share</th><th scope="col">From</th><th scope="col">To</th><th scope="col" class="num">In office</th></tr></thead>
+            <tbody>
+              {govs.map((g) => (
+                <tr>
+                  <th scope="row"><a href={`/governments/${g.id}/`}>{(g.leader || g.label)}</a>{g.level === 'state' && <span class="sub">{g.state}</span>}</th>
+                  <td>{g.label}{g.leadParty === id && <span class="sub">Led by this party</span>}</td>
+                  <td class="num">{Math.round((g.partners.find((p) => p.party === id)?.share ?? (g.leadParty === id ? 1 : 0)) * 100)}%</td>
+                  <td class="nowrap">{fmtDate(g.start)}</td><td class="nowrap">{g.end ? fmtDate(g.end) : 'Present'}</td>
+                  <td class="num nowrap">{fmtDuration(daysInOffice(g, site.asOf))}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </section>
+
+    <section class="block" aria-labelledby="h-cat">
+      <h2 id="h-cat">Evidence points by category</h2>
+      {rows.length === 0 ? (
+        <div class="empty"><p>No scored actions are credited to this party yet.</p></div>
+      ) : (
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Points by category, scrolls sideways on narrow screens">
+          <table class="data">
+            <caption>Credited points by category<span class="small">Categories in taxonomy order, not sorted by value.</span></caption>
+            <thead><tr><th scope="col">Category</th><th scope="col" class="num">Points per year</th><th scope="col" class="num">Total points</th><th scope="col" class="num">Range (total)</th><th scope="col" class="num">Actions scored</th></tr></thead>
+            <tbody>
+              {rows.map(({ c, cell }) => (
+                <tr>
+                  <th scope="row"><a href={`/categories/${c.id}/`}>{c.name}</a></th>
+                  <td class="num">{fmtSigned(cell!.pointsPerYear, 2)}</td>
+                  <td class="num">{fmtSigned(cell!.points)}</td>
+                  <td class="num">{fmtSigned(cell!.low)} to {fmtSigned(cell!.high)}</td>
+                  <td class="num">{cell!.scoredActions} {cell!.lowData && <span class="badge badge-low">Low data</span>}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      <p class="small" style="margin-top:.6rem">Low data means fewer than {LOW_DATA_MIN_ACTIONS} scored actions in that category.</p>
+    </section>
+
+    <section class="block" aria-labelledby="h-acts">
+      <h2 id="h-acts">Actions credited to this party</h2>
+      {acts.length === 0 ? <div class="empty"><p>No actions are credited yet.</p></div> : (
+        <ul class="alist">{acts.map((a) => <li><ActionCard action={a} site={site} /><p class="small" style="margin:.3rem 0 0 .2rem">{creditBySlug.get(a.slug)!.role === 'originator' ? 'Credited as originator of the idea (25%).' : 'Credited as implementer.'} Share to this party: {fmtSigned(creditBySlug.get(a.slug)!.points)} points.</p></li>)}</ul>
+      )}
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,122 @@
+---
+import { PRELIMINARY_MIN_SCORED, LOW_DATA_MIN_ACTIONS } from '../lib/scoring-core.ts';
+import { sortParties, pointsRowsHtml, heatGridHtml, heatRange, noDataHtml } from '../lib/render-points.ts';
+import { categories } from '../lib/taxonomy.ts';
+import { ctxFor, jsonForScript, type Site } from '../lib/site.ts';
+import { fmtSigned, yearOf } from '../lib/format.ts';
+
+interface Props { site: Site }
+const { site } = Astro.props;
+const sc = site.scoring;
+const ctx = ctxFor(site);
+const cats = categories();
+const rows = sortParties(sc.parties, ctx, 'ppy', -1);
+const hr = heatRange(rows, ctx);
+const centre = (await import('../lib/governments.ts')).centreGovernments();
+const yearMin = centre.length ? Math.min(...centre.map((g) => yearOf(g.start))) : 1947;
+const yearMax = yearOf(site.asOf);
+const slugYear = new Map(site.actions.map((a) => [a.slug, a.year]));
+const flagged = new Set(sc.flagged.map((f) => f.slug));
+const payload = {
+  ctx,
+  asOf: site.asOf,
+  yearMin,
+  yearMax,
+  lowDataMin: LOW_DATA_MIN_ACTIONS,
+  credits: sc.credits.map((c) => ({ slug: c.slug, category: c.category, partyId: c.partyId, governmentId: c.governmentId, role: c.role, points: +c.points.toFixed(4), low: +c.low.toFixed(4), high: +c.high.toFixed(4), year: slugYear.get(c.slug), flagged: flagged.has(c.slug) })),
+  governments: centre.map((g) => ({ id: g.id, leadParty: g.leadParty, start: g.start, end: g.end, partners: g.partners })),
+  categoryIds: cats.map((c) => c.id),
+};
+const heads: [string, string, string?][] = [
+  ['party', 'Party'],
+  ['ppy', 'Points per year', 'num'],
+  ['total', 'Total points', 'num'],
+  ['years', 'Years in power', 'num'],
+  ['range', 'Range (total, low to high)', 'num'],
+  ['actions', 'Actions scored', 'num'],
+];
+---
+<div id="points-explorer" data-min-year={yearMin} data-max-year={yearMax}>
+  {sc.preliminary && (
+    <div class="banner" role="note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg>
+      <p><strong>Preliminary.</strong> {sc.scoredActionCount} of {sc.totalActionCount} Centre actions are scored so far, and the site treats results as preliminary below {PRELIMINARY_MIN_SCORED} scored actions. Figures will move as entries are added. Read every number together with its range.</p>
+    </div>
+  )}
+  <div class="note">
+    <p><strong>How to read this.</strong> Two scorers, blind to party, give each action up to 25 points for benefit or harm across five criteria (range {fmtSigned(-25, 0)} to +25). An action's points go to the governments responsible, and to their coalition partners by seat share. “Points per year” divides a party's total by its years in power. The figure summarises the evidence entered so far; it is not a verdict, and a party with little scored evidence is marked “Low data”. <a href="/methodology/">Read the method</a>.</p>
+  </div>
+
+  {rows.length === 0 ? (
+    <div class="empty" style="margin-top:1rem"><p>The Evidence points table appears once governments and scored actions are published.</p></div>
+  ) : (
+    <>
+      <div class="controls" style="margin-top:1.2rem">
+        <label class="field">Period
+          <select id="era" aria-describedby="era-help">
+            <option value="all">All years ({yearMin} to {yearMax})</option>
+            <option value="pre">Before 1991</option>
+            <option value="post">1991 onward</option>
+            <option value="custom">Custom range</option>
+          </select>
+        </label>
+        <label class="field" data-custom hidden>From year<input id="era-from" type="number" inputmode="numeric" min={yearMin} max={yearMax} value={yearMin} /></label>
+        <label class="field" data-custom hidden>To year<input id="era-to" type="number" inputmode="numeric" min={yearMin} max={yearMax} value={yearMax} /></label>
+        <button type="button" class="btn" id="reset-all" hidden>Reset period and weights</button>
+      </div>
+      <p class="small" id="era-help">The period limits both the actions counted (by date) and the years in power.</p>
+
+      <details class="panel" id="weights-panel" style="margin-bottom:1rem">
+        <summary>Show my weights</summary>
+        <div class="panel-body">
+          <p class="small">Decide how much each topic should count. 1 is the default, 0 leaves a topic out, 3 counts it three times. Totals, ranges and the grid below update at once. Nothing is saved or sent anywhere.</p>
+          <ul class="sliders">
+            {cats.map((c) => (
+              <li>
+                <label for={`w-${c.id}`}>{c.name}</label>
+                <output for={`w-${c.id}`} id={`wo-${c.id}`}>1</output>
+                <input type="range" id={`w-${c.id}`} data-cat={c.id} min="0" max="3" step="1" value="1" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
+
+      <p class="vh" id="pts-live" role="status" aria-live="polite"></p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Evidence points by party, scrolls sideways on narrow screens">
+        <table class="data" id="pts-table">
+          <caption>
+            Evidence points by party
+            <span class="small">Sorted by points per year, highest figure first. The order reflects a figure, not a verdict, and ranges overlap. Dot: points per year; line: low to high.</span>
+          </caption>
+          <thead>
+            <tr>
+              {heads.map(([key, label, cls]) => (
+                <th scope="col" class={cls} data-key={key === 'range' ? undefined : key} aria-sort={key === 'ppy' ? 'descending' : key === 'range' ? undefined : 'none'}>{label}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody set:html={pointsRowsHtml(rows, ctx)}></tbody>
+        </table>
+      </div>
+      <p class="collapse-row" id="pts-short-wrap" hidden><button type="button" class="btn" id="pts-short-toggle" aria-expanded="false"></button></p>
+      <p class="note" id="pts-nodata" style="margin-top:1rem" set:html={noDataHtml(rows, ctx)} hidden={!noDataHtml(rows, ctx)}></p>
+      <p class="small" style="margin-top:.6rem"><span class="badge badge-low">Low data</span> means some category has fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the party, so its figures rest on very little evidence.</p>
+
+      <h3 style="margin-top:2rem" id="heat-title">Points per year by category</h3>
+      <p class="small">Each cell is one party's points per year in one category, shaded from lowest to highest across the grid. Numbers are always shown; hatched cells have fewer than {LOW_DATA_MIN_ACTIONS} scored actions, dashed cells have none. Only parties with at least 2 years in power and a scored action are shown as columns.</p>
+      <div class="table-wrap heat" tabindex="0" role="region" aria-label="Category heat grid, scrolls sideways on narrow screens">
+        <table id="heat-table" aria-labelledby="heat-title" set:html={heatGridHtml(rows, ctx)}></table>
+      </div>
+      <p class="legend-scale">
+        <span>Lower</span><span class="ramp" aria-hidden="true"></span><span>Higher</span>
+        <span class="mono" id="heat-range">{hr ? `${fmtSigned(hr[0])} to ${fmtSigned(hr[1])} points per year` : ''}</span>
+        <span><span class="hatch" aria-hidden="true"></span>Low data</span>
+      </p>
+      <script type="application/json" id="points-data" set:html={jsonForScript(payload)}></script>
+    </>
+  )}
+</div>
+<script>
+  import '../scripts/points.ts';
+</script>

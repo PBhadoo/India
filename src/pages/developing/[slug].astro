@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import SourceList from '../../components/SourceList.astro';
+import { render } from 'astro:content';
+import { getSite } from '../../lib/site.ts';
+import { getCategory } from '../../lib/taxonomy.ts';
+import { fmtDate, isoDate } from '../../lib/format.ts';
+export async function getStaticPaths() {
+  const site = await getSite();
+  return site.developing.map((d) => ({ params: { slug: d.slug }, props: { slug: d.slug } }));
+}
+const { slug } = Astro.props;
+const site = await getSite();
+const d = site.developing.find((x) => x.slug === slug)!;
+const { Content } = await render(d.entry);
+const related = d.data.relatedAction ? site.actions.find((a) => a.slug === d.data.relatedAction) : undefined;
+const cat = getCategory(d.data.category);
+const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: d.data.title, description: d.data.summary, datePublished: isoDate(d.data.date), inLanguage: 'en' };
+---
+<Base title={d.data.title} path={`/developing/${slug}/`} description={d.data.summary} ogType="article" jsonLd={jsonLd}>
+  <PageHead title={d.data.title} kicker={d.data.status === 'developing' ? 'Developing, unsettled' : 'Settled'} lede={d.data.summary} crumbs={[['Home', '/'], ['Developing', '/developing/'], [d.data.title]]}>
+    <p class="meta"><span class={`badge ${d.data.status === 'developing' ? 'badge-live' : ''}`}>{d.data.status === 'developing' ? 'Unsettled' : 'Settled'}</span><time datetime={isoDate(d.data.date)}>{fmtDate(d.data.date)}</time>{cat && <a href={`/categories/${cat.id}/`}>{cat.name}</a>}</p>
+  </PageHead>
+  <div class="wrap">
+    {d.data.status === 'developing' && <div class="banner" role="note"><p><strong>Unsettled.</strong> This item is still unfolding and is not scored. Details may change as facts are confirmed.</p></div>}
+    <section class="block" aria-labelledby="h-known">
+      <div class="two-col">
+        <div class="col-box"><h2 id="h-known" style="font-size:1.2rem;margin-bottom:.6rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)">Known so far</h2>{d.data.knownFacts.length ? <ul>{d.data.knownFacts.map((f: string) => <li>{f}</li>)}</ul> : <p class="small">Nothing is established yet.</p>}</div>
+        <div class="col-box"><h2 style="font-size:1.2rem;margin-bottom:.6rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)">Not yet known</h2>{d.data.unknowns.length ? <ul>{d.data.unknowns.map((f: string) => <li>{f}</li>)}</ul> : <p class="small">No open questions are recorded.</p>}</div>
+      </div>
+    </section>
+    <div class="prose-body"><Content /></div>
+    {related && <p style="margin-top:1.5rem">Related action: <a href={`/actions/${related.slug}/`}>{related.data.title}</a></p>}
+    <section class="block" aria-labelledby="h-src"><h2 id="h-src">Sources</h2><SourceList sources={d.data.sources} /><p class="small" style="margin-top:1rem"><a href={`/corrections/?from=${encodeURIComponent(`/developing/${slug}/`)}&title=${encodeURIComponent(d.data.title)}`}>Report an error</a></p></section>
+  </div>
+</Base>

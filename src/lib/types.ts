@@ -1,4 +1,4 @@
-export type GovernmentType = 'majority' | 'coalition' | 'minority-outside-support' | 'caretaker';
+export type GovernmentType = 'majority' | 'coalition' | 'minority-outside-support' | 'caretaker' | 'presidents-rule';
 export type Level = 'centre' | 'state';
 
 export interface Partner {

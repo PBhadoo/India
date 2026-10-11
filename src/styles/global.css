@@ -37,11 +37,11 @@
 
   /* validated categorical palette, fixed chronological slots (see dataviz notes in README of this file) */
   --p0: #8a93a3;
-  --p1: #2a78d6; --p2: #eb6834; --p3: #1baf7a; --p4: #eda100;
-  --p5: #e87ba4; --p6: #008300; --p7: #6250d6; --p8: #e34948;
+  --p1: #1baf7a; --p2: #eda100; --p3: #e87ba4; --p4: #008300;
+  --p5: #6250d6; --p6: #e34948; --p7: #2a78d6; --p8: #eb6834;
   --pi0: rgba(17, 22, 34, 0.55);
-  --pi1: rgba(255, 255, 255, 0.8); --pi2: rgba(17, 22, 34, 0.6); --pi3: rgba(17, 22, 34, 0.6); --pi4: rgba(17, 22, 34, 0.6);
-  --pi5: rgba(17, 22, 34, 0.6); --pi6: rgba(255, 255, 255, 0.8); --pi7: rgba(255, 255, 255, 0.8); --pi8: rgba(255, 255, 255, 0.8);
+  --pi1: rgba(17, 22, 34, 0.6); --pi2: rgba(17, 22, 34, 0.6); --pi3: rgba(17, 22, 34, 0.6); --pi4: rgba(255, 255, 255, 0.8);
+  --pi5: rgba(255, 255, 255, 0.8); --pi6: rgba(255, 255, 255, 0.8); --pi7: rgba(255, 255, 255, 0.8); --pi8: rgba(17, 22, 34, 0.6);
 
   --heat-lo: #eef0fb;
   --heat-hi: #1e2a78;
@@ -79,11 +79,11 @@
     --warn-ink: #f0d58c;
     --warn-rule: #8a6d1f;
     --p0: #7d8697;
-    --p1: #3987e5; --p2: #d95926; --p3: #199e70; --p4: #c98500;
-    --p5: #d55181; --p6: #008300; --p7: #9085e9; --p8: #e66767;
+    --p1: #199e70; --p2: #c98500; --p3: #d55181; --p4: #008300;
+    --p5: #9085e9; --p6: #e66767; --p7: #3987e5; --p8: #d95926;
     --pi0: rgba(8, 11, 18, 0.6);
-    --pi1: rgba(8, 11, 18, 0.62); --pi2: rgba(8, 11, 18, 0.62); --pi3: rgba(8, 11, 18, 0.62); --pi4: rgba(8, 11, 18, 0.62);
-    --pi5: rgba(8, 11, 18, 0.62); --pi6: rgba(255, 255, 255, 0.8); --pi7: rgba(8, 11, 18, 0.62); --pi8: rgba(8, 11, 18, 0.62);
+    --pi1: rgba(8, 11, 18, 0.62); --pi2: rgba(8, 11, 18, 0.62); --pi3: rgba(8, 11, 18, 0.62); --pi4: rgba(255, 255, 255, 0.8);
+    --pi5: rgba(8, 11, 18, 0.62); --pi6: rgba(8, 11, 18, 0.62); --pi7: rgba(8, 11, 18, 0.62); --pi8: rgba(8, 11, 18, 0.62);
     --heat-lo: #1b2236;
     --heat-hi: #a4b0ff;
     --heat-ink: #ffffff;
@@ -114,11 +114,11 @@
   --warn-ink: #f0d58c;
   --warn-rule: #8a6d1f;
   --p0: #7d8697;
-  --p1: #3987e5; --p2: #d95926; --p3: #199e70; --p4: #c98500;
-  --p5: #d55181; --p6: #008300; --p7: #9085e9; --p8: #e66767;
+  --p1: #199e70; --p2: #c98500; --p3: #d55181; --p4: #008300;
+  --p5: #9085e9; --p6: #e66767; --p7: #3987e5; --p8: #d95926;
   --pi0: rgba(8, 11, 18, 0.6);
-  --pi1: rgba(8, 11, 18, 0.62); --pi2: rgba(8, 11, 18, 0.62); --pi3: rgba(8, 11, 18, 0.62); --pi4: rgba(8, 11, 18, 0.62);
-  --pi5: rgba(8, 11, 18, 0.62); --pi6: rgba(255, 255, 255, 0.8); --pi7: rgba(8, 11, 18, 0.62); --pi8: rgba(8, 11, 18, 0.62);
+  --pi1: rgba(8, 11, 18, 0.62); --pi2: rgba(8, 11, 18, 0.62); --pi3: rgba(8, 11, 18, 0.62); --pi4: rgba(255, 255, 255, 0.8);
+  --pi5: rgba(8, 11, 18, 0.62); --pi6: rgba(8, 11, 18, 0.62); --pi7: rgba(8, 11, 18, 0.62); --pi8: rgba(8, 11, 18, 0.62);
   --heat-lo: #1b2236;
   --heat-hi: #a4b0ff;
   --heat-ink: #ffffff;
@@ -195,12 +195,12 @@ section.block:first-of-type { border-top: 0; }
 /* ------------------------------------------------------------------ header */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 50; }
 .site-header .wrap { display: flex; align-items: center; gap: 0.5rem 1.25rem; flex-wrap: wrap; padding-block: 0.6rem; }
-.brand { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; margin-right: auto; }
+.brand { white-space: nowrap; display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; margin-right: auto; }
 .brand svg { width: 1.7rem; height: 1.7rem; flex: none; }
 .brand:hover { color: var(--accent); }
 .nav { display: flex; flex-wrap: wrap; gap: 0.15rem 0.1rem; list-style: none; padding: 0; margin: 0; width: 100%; order: 3; }
 .nav li { margin: 0; }
-.nav a { display: block; padding: 0.45rem 0.7rem; border-radius: 6px; color: var(--ink-2); text-decoration: none; font-size: 0.97rem; font-weight: 550; }
+.nav a { display: block; white-space: nowrap; padding: 0.45rem 0.7rem; border-radius: 6px; color: var(--ink-2); text-decoration: none; font-size: 0.97rem; font-weight: 550; }
 .nav a:hover { background: var(--surface-2); color: var(--ink); }
 .nav a[aria-current='page'] { color: var(--accent); background: var(--accent-wash); }
 .tools { display: flex; align-items: center; gap: 0.5rem; }
@@ -249,7 +249,7 @@ section.block:first-of-type { border-top: 0; }
 
 /* ------------------------------------------------------------------- hero */
 .hero { padding-block: clamp(2rem, 1rem + 5vw, 4.5rem) clamp(1.5rem, 1rem + 2vw, 2.5rem); }
-.hero h1 { max-width: 20ch; margin-bottom: 0.4em; }
+.hero h1 { max-width: 24ch; margin-bottom: 0.4em; }
 .hero .headline { font-family: var(--font-display); font-size: clamp(1.15rem, 1rem + 0.8vw, 1.55rem); font-weight: 600; color: var(--accent); margin: 0 0 0.8rem; max-width: 36rem; line-height: 1.25; }
 .page-head { padding-block: clamp(1.5rem, 1rem + 2vw, 2.75rem) 1rem; }
 .page-head h1 { font-size: clamp(1.8rem, 1.2rem + 2.2vw, 2.7rem); margin-bottom: 0.3em; }
@@ -354,6 +354,11 @@ td.nowrap, th.nowrap { white-space: nowrap; }
   table.data.stackable td.num { text-align: left; }
 }
 
+table.data tr.grp th { background: var(--surface-2); font-size: 0.85rem; font-weight: 500; color: var(--ink-2); padding: 0.55rem 0.9rem; }
+.js #pts-table:not([data-short-open]) tr.short-row { display: none; }
+td.nodata-row { text-align: left !important; color: var(--ink-2); padding: 1.2rem 1rem !important; white-space: normal; }
+#pts-nodata .chip { margin: 0 0.1rem 0.25rem 0.4rem; }
+.collapse-row { text-align: center; padding: 0.7rem; }
 /* ------------------------------------------------------------ heat grid */
 .heat table { border-collapse: separate; border-spacing: 2px; font-size: 0.86rem; font-variant-numeric: tabular-nums; min-width: 100%; }
 .heat th, .heat td { padding: 0.35rem 0.5rem; }

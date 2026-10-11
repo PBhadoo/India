@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+---
+<Base title="About" path="/about/" description="What India Explained is, what it is for, and how it stays neutral.">
+  <PageHead title="About" kicker="This site" lede="India Explained is a public record of who governed India, for how long, and what the evidence shows about what they did." crumbs={[['Home', '/'], ['About']]} />
+  <div class="wrap">
+    <div class="prose">
+      <h2>What it is</h2>
+      <p>A reference for citizens. Every government since independence is listed with its leader, parties, dates and sources. Every recorded action follows one template: facts, stated reasons, criticism, benefits, concerns and sources. Actions are then scored on a published rubric.</p>
+      <h2>What it is not</h2>
+      <p>It does not tell you how to vote, and it does not say that any party is better or worse than another. It does not rank parties as winners. The Evidence points table is a way of putting numbers next to evidence so that you can see how much evidence there is and how far scorers agree.</p>
+      <h2>How it stays neutral</h2>
+      <ul>
+        <li>The same template and the same depth for every party and era.</li>
+        <li>Facts are kept apart from interpretation. Stated reasons and criticism are shown side by side.</li>
+        <li>Two scorers rate each action without knowing which party acted.</li>
+        <li>Every claim has a source, and sources are listed with their publisher and type.</li>
+        <li>Wording is checked for loaded terms. Anyone can open an issue to challenge wording or a score.</li>
+        <li>No advertising, no tracking, no cookies and no third-party requests.</li>
+      </ul>
+      <h2>Who it is for</h2>
+      <p>Readers who want the record without commentary: students, journalists, voters and researchers. Read the <a href="/methodology/">methodology</a> before quoting a figure.</p>
+      <h2>Languages</h2>
+      <p>The site is in English. It is built to support a Hindi edition later, with fonts and text direction ready for Devanagari.</p>
+      <h2>Open source</h2>
+      <p>The data and code are in a <a href="https://github.com/PBhadoo/India" rel="noopener">public repository</a>. To report a problem see <a href="/corrections/">Corrections</a>.</p>
+    </div>
+  </div>
+</Base>

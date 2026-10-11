@@ -1,0 +1,71 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHead from '../../../components/PageHead.astro';
+import ActionCard from '../../../components/ActionCard.astro';
+import PartyChip from '../../../components/PartyChip.astro';
+import Balance from '../../../components/Balance.astro';
+import { getSite, pm } from '../../../lib/site.ts';
+import { categories, getCategory, getSub } from '../../../lib/taxonomy.ts';
+import { fmtDate, yearOf } from '../../../lib/format.ts';
+import { toTime } from '../../../lib/tenure.ts';
+
+export function getStaticPaths() {
+  return categories().flatMap((c) => c.subs.map((s) => ({ params: { id: c.id, sub: s } })));
+}
+const { id, sub } = Astro.params;
+const cat = getCategory(id!)!;
+const subInfo = getSub(id!, sub!)!;
+const site = await getSite();
+const acts = site.actions.filter((a) => a.data.category === id && a.data.subcategories.includes(sub!));
+
+// group by government, in chronological order of the government
+const groups = new Map<string, typeof acts>();
+for (const a of acts) groups.set(a.data.governmentId, [...(groups.get(a.data.governmentId) ?? []), a]);
+const ordered = [...groups.entries()]
+  .map(([gid, list]) => ({ gid, gov: list[0].gov, list: [...list].sort((x, y) => +new Date(x.data.date) - +new Date(y.data.date)) }))
+  .sort((a, b) => toTime(a.gov?.start ?? '9999-01-01') - toTime(b.gov?.start ?? '9999-01-01'));
+
+const governed = site.scoring.parties.filter((p) => p.yearsInPower > 0);
+const byParty = governed.map((p) => ({ label: pm(site, p.partyId).short, n: acts.filter((a) => a.gov?.partners.some((x) => x.party === p.partyId)).length, slot: pm(site, p.partyId).slot, href: `/parties/${p.partyId}/` }));
+const dmin = acts.length ? Math.floor(Math.min(...site.actions.map((a) => a.year)) / 10) * 10 : 0;
+const dmax = acts.length ? Math.floor(new Date().getUTCFullYear() / 10) * 10 : 0;
+const byDecade: { label: string; n: number }[] = [];
+if (acts.length) for (let d = dmin; d <= dmax; d += 10) byDecade.push({ label: `${d}s`, n: acts.filter((a) => Math.floor(a.year / 10) * 10 === d).length });
+const gaps = byParty.filter((x) => x.n === 0).length;
+---
+<Base title={`${subInfo.name}, ${cat.name}`} path={`/categories/${id}/${sub}/`} description={`${subInfo.name} within ${cat.name}: actions in time order, grouped by government, with a coverage balance.`}>
+  <PageHead title={subInfo.name} kicker={cat.name} crumbs={[['Home', '/'], ['Categories', '/categories/'], [cat.name, `/categories/${id}/`], [subInfo.name]]} />
+  <div class="wrap">
+    <section class="block" aria-labelledby="h-bal">
+      <h2 id="h-bal">Coverage balance</h2>
+      <p class="prose small">How many entries exist for each party's governments and each decade. This shows where the record is thin, so a quiet period reads as a gap in coverage, not as inactivity.</p>
+      {acts.length === 0 ? (
+        <div class="empty"><p>No actions are published under this sub-category yet.</p></div>
+      ) : (
+        <div class="cmp-split">
+          <div><h3>By party in government</h3><Balance items={byParty} label="Entries per party" />{gaps > 0 && <p class="small" style="margin-top:.6rem">{gaps} of {byParty.length} parties have no entry here yet.</p>}</div>
+          <div><h3>By decade</h3><Balance items={byDecade} label="Entries per decade" /></div>
+        </div>
+      )}
+    </section>
+
+    <section class="block" aria-labelledby="h-time">
+      <h2 id="h-time">Actions in time order, by government</h2>
+      {ordered.length === 0 ? (
+        <div class="empty"><p>No actions yet.</p></div>
+      ) : (
+        <ol class="tlist">
+          {ordered.map(({ gov, list, gid }) => (
+            <li>
+              <p class="gov-head">
+                {gov ? <><a href={`/governments/${gid}/`}>{(gov.leader || gov.label)}</a>, {fmtDate(gov.start)} to {gov.end ? fmtDate(gov.end) : 'present'}</> : gid}
+              </p>
+              <p style="margin:0 0 .5rem">{gov && <PartyChip party={pm(site, gov.leadParty)} />} <span class="small">{gov?.label}</span></p>
+              <ul class="alist">{list.map((a) => <li><ActionCard action={a} site={site} showCategory={false} /></li>)}</ul>
+            </li>
+          ))}
+        </ol>
+      )}
+    </section>
+  </div>
+</Base>

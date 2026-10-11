@@ -17,7 +17,7 @@ const pct = (n: number) => `${Math.round(n * 100)}%`;
     <div class="prose">
       <section id="rubric" aria-labelledby="h-rubric">
         <h2 id="h-rubric">The rubric</h2>
-        <p>Each action is scored on five criteria. Each criterion is a whole number from {MINUS}{Math.abs(rubric.scale.min)} to +{rubric.scale.max}. {rubric.scale.note}</p>
+        <p>Each action is scored on five criteria, from {MINUS}{Math.abs(rubric.scale.min)} to +{rubric.scale.max} each. {rubric.scale.note}</p>
         <p>An action's points are the sum of its five criterion scores, so they range from {MINUS}25 to +25. A negative number means the evidence shows net harm on that criterion. A positive number means net benefit. Zero means no net effect, or no evidence either way.</p>
       </section>
     </div>

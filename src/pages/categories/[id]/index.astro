@@ -4,10 +4,11 @@ import PageHead from '../../../components/PageHead.astro';
 import ActionCard from '../../../components/ActionCard.astro';
 import PartyChip from '../../../components/PartyChip.astro';
 import Balance from '../../../components/Balance.astro';
-import { getSite, pm } from '../../../lib/site.ts';
+import { getSite, pm, leadPartiesFor } from '../../../lib/site.ts';
 import { categories, getCategory, subsOf } from '../../../lib/taxonomy.ts';
 import { fmtNum, fmtSigned } from '../../../lib/format.ts';
 import { LOW_DATA_MIN_ACTIONS } from '../../../lib/scoring-core.ts';
+import { MIN_YEARS_FOR_RATE } from '../../../lib/render-points.ts';
 
 export function getStaticPaths() {
   return categories().map((c) => ({ params: { id: c.id } }));
@@ -19,9 +20,10 @@ const acts = site.actions.filter((a) => a.data.category === id);
 const subs = subsOf(id!).map((s) => ({ ...s, n: acts.filter((a) => a.data.subcategories.includes(s.id)).length }));
 const cells = site.scoring.parties
   .map((p) => ({ p, cell: p.categories[id!] }))
-  .filter((x) => x.cell && x.p.yearsInPower > 0)
+  .filter((x) => x.cell && x.cell.scoredActions > 0)
+  .filter((x) => x.p.yearsInPower >= MIN_YEARS_FOR_RATE)
   .sort((a, b) => (b.cell.pointsPerYear ?? -Infinity) - (a.cell.pointsPerYear ?? -Infinity));
-const byParty = site.scoring.parties.filter((p) => p.yearsInPower > 0).map((p) => ({ label: pm(site, p.partyId).short, n: acts.filter((a) => a.gov?.partners.some((x) => x.party === p.partyId)).length, slot: pm(site, p.partyId).slot, href: `/parties/${p.partyId}/` }));
+const byParty = leadPartiesFor(site, acts).map((pid) => ({ label: pm(site, pid).short, n: acts.filter((a) => a.partyId === pid).length, slot: pm(site, pid).slot, href: `/parties/${pid}/` }));
 ---
 <Base title={cat.name} path={`/categories/${id}/`} description={`${cat.name}: ${cat.blurb}`}>
   <PageHead title={cat.name} kicker="Category" lede={cat.blurb} crumbs={[['Home', '/'], ['Categories', '/categories/'], [cat.name]]} />
@@ -61,11 +63,12 @@ const byParty = site.scoring.parties.filter((p) => p.yearsInPower > 0).map((p) =
               </tbody>
             </table>
           </div>
-          <p class="small" style="margin-top:.6rem">Low data: fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the party in this category.</p>
+          <p class="small" style="margin-top:.6rem">Parties with under {MIN_YEARS_FOR_RATE} years in power are left out because a per-year figure over so short a time swings widely; their entries are listed below. </p>
+          <p class="small">Low data: fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the party in this category.</p>
         </>
       )}
       <h3 style="margin-top:1.8rem">Coverage by party</h3>
-      <p class="small">Entries in this category that a party's governments were responsible for. Zero is shown so gaps are visible.</p>
+      <p class="small">Entries in this category by the party that led the government responsible. Zero is shown so gaps are visible.</p>
       <Balance items={byParty} label="Entries per party" />
     </section>
 

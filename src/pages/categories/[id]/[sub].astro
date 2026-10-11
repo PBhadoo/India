@@ -4,7 +4,7 @@ import PageHead from '../../../components/PageHead.astro';
 import ActionCard from '../../../components/ActionCard.astro';
 import PartyChip from '../../../components/PartyChip.astro';
 import Balance from '../../../components/Balance.astro';
-import { getSite, pm } from '../../../lib/site.ts';
+import { getSite, pm, leadPartiesFor } from '../../../lib/site.ts';
 import { categories, getCategory, getSub } from '../../../lib/taxonomy.ts';
 import { fmtDate, yearOf } from '../../../lib/format.ts';
 import { toTime } from '../../../lib/tenure.ts';
@@ -25,8 +25,7 @@ const ordered = [...groups.entries()]
   .map(([gid, list]) => ({ gid, gov: list[0].gov, list: [...list].sort((x, y) => +new Date(x.data.date) - +new Date(y.data.date)) }))
   .sort((a, b) => toTime(a.gov?.start ?? '9999-01-01') - toTime(b.gov?.start ?? '9999-01-01'));
 
-const governed = site.scoring.parties.filter((p) => p.yearsInPower > 0);
-const byParty = governed.map((p) => ({ label: pm(site, p.partyId).short, n: acts.filter((a) => a.gov?.partners.some((x) => x.party === p.partyId)).length, slot: pm(site, p.partyId).slot, href: `/parties/${p.partyId}/` }));
+const byParty = leadPartiesFor(site, acts).map((pid) => ({ label: pm(site, pid).short, n: acts.filter((a) => a.partyId === pid).length, slot: pm(site, pid).slot, href: `/parties/${pid}/` }));
 const dmin = acts.length ? Math.floor(Math.min(...site.actions.map((a) => a.year)) / 10) * 10 : 0;
 const dmax = acts.length ? Math.floor(new Date().getUTCFullYear() / 10) * 10 : 0;
 const byDecade: { label: string; n: number }[] = [];
@@ -43,7 +42,7 @@ const gaps = byParty.filter((x) => x.n === 0).length;
         <div class="empty"><p>No actions are published under this sub-category yet.</p></div>
       ) : (
         <div class="cmp-split">
-          <div><h3>By party in government</h3><Balance items={byParty} label="Entries per party" />{gaps > 0 && <p class="small" style="margin-top:.6rem">{gaps} of {byParty.length} parties have no entry here yet.</p>}</div>
+          <div><h3>By lead party of the government</h3><Balance items={byParty} label="Entries per party" />{gaps > 0 && <p class="small" style="margin-top:.6rem">{gaps} of {byParty.length} parties have no entry here yet.</p>}</div>
           <div><h3>By decade</h3><Balance items={byDecade} label="Entries per decade" /></div>
         </div>
       )}

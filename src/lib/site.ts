@@ -115,3 +115,11 @@ export function ctxFor(site: Site) {
 export function jsonForScript(v: unknown): string {
   return JSON.stringify(v).replace(/</g, '\\u003c').replace(new RegExp('[\\u2028\\u2029]', 'g'), '');
 }
+
+/** Parties that led a Union government, plus any party leading a government that owns one of the given actions. */
+export function leadPartiesFor(site: Site, acts: ActionRow[]): string[] {
+  const ids = new Set<string>();
+  for (const g of centreGovernments()) if (g.leadParty) ids.add(g.leadParty);
+  for (const a of acts) if (a.partyId) ids.add(a.partyId);
+  return [...ids].sort((a, b) => (site.slots[a] || 99) - (site.slots[b] || 99));
+}

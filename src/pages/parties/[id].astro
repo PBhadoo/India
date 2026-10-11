@@ -4,7 +4,7 @@ import PageHead from '../../components/PageHead.astro';
 import PartyChip from '../../components/PartyChip.astro';
 import ActionCard from '../../components/ActionCard.astro';
 import Timeline from '../../components/Timeline.astro';
-import { getSite, pm, allGovernments, centreGovernments } from '../../lib/site.ts';
+import { getSite, pm, allGovernments, centreGovernments, listStates } from '../../lib/site.ts';
 import { categories } from '../../lib/taxonomy.ts';
 import { fmtDate, fmtDuration, fmtNum, fmtSigned } from '../../lib/format.ts';
 import { daysInOffice } from '../../lib/tenure.ts';
@@ -20,6 +20,8 @@ const party = pm(site, id!);
 const res = site.scoring.parties.find((r) => r.partyId === id);
 const govs = allGovernments().filter((g) => g.partners.some((p) => p.party === id) || g.leadParty === id).sort((a, b) => a.start.localeCompare(b.start));
 const centre = centreGovernments();
+const stateName = Object.fromEntries(listStates().map((x) => [x.id, x.name]));
+const centreJoined = govs.filter((g) => g.level === 'centre').length;
 const cats = categories();
 const credited = site.scoring.credits.filter((c) => c.partyId === id);
 const creditBySlug = new Map<string, { role: string; points: number }>();
@@ -38,7 +40,7 @@ const rows = cats.map((c) => ({ c, cell: res?.categories[c.id] })).filter((r) =>
         <div class="stats">
           <div class="stat"><div class="v">{fmtNum(res.yearsInPower)}</div><div class="l">years in power (weighted by coalition share)</div></div>
           <div class="stat"><div class="v">{fmtNum(res.yearsLed)}</div><div class="l">years leading a government</div></div>
-          <div class="stat"><div class="v">{govs.length}</div><div class="l">{govs.length === 1 ? 'government' : 'governments'} joined</div></div>
+          <div class="stat"><div class="v">{centreJoined}</div><div class="l">Union {centreJoined === 1 ? 'government' : 'governments'} joined</div></div>
           <div class="stat"><div class="v">{res.pointsPerYear == null ? '–' : fmtSigned(res.pointsPerYear)}</div><div class="l">points per year{res.pointsPerYear != null ? ` (range ${fmtSigned(res.lowPerYear)} to ${fmtSigned(res.highPerYear)})` : ''}</div></div>
         </div>
       ) : (
@@ -52,12 +54,13 @@ const rows = cats.map((c) => ({ c, cell: res?.categories[c.id] })).filter((r) =>
       {govs.length === 0 ? <div class="empty"><p>None recorded.</p></div> : (
         <div class="table-wrap" tabindex="0" role="region" aria-label="Governments, scrolls sideways on narrow screens">
           <table class="data">
-            <caption>Governments this party was part of</caption>
-            <thead><tr><th scope="col">Leader</th><th scope="col">Government</th><th scope="col" class="num">Share</th><th scope="col">From</th><th scope="col">To</th><th scope="col" class="num">In office</th></tr></thead>
+            <caption>Governments this party was part of<span class="small">Union and state governments, in date order. Years in power and points per year count Union governments only.</span></caption>
+            <thead><tr><th scope="col">Leader</th><th scope="col">Level</th><th scope="col">Government</th><th scope="col" class="num">Share</th><th scope="col">From</th><th scope="col">To</th><th scope="col" class="num">In office</th></tr></thead>
             <tbody>
               {govs.map((g) => (
                 <tr>
-                  <th scope="row"><a href={`/governments/${g.id}/`}>{(g.leader || g.label)}</a>{g.level === 'state' && <span class="sub">{g.state}</span>}</th>
+                  <th scope="row"><a href={`/governments/${g.id}/`}>{(g.leader || g.label)}</a></th>
+                  <td>{g.level === 'state' ? (stateName[g.state!] ?? g.state) : 'Union'}</td>
                   <td>{g.label}{g.leadParty === id && <span class="sub">Led by this party</span>}</td>
                   <td class="num">{Math.round((g.partners.find((p) => p.party === id)?.share ?? (g.leadParty === id ? 1 : 0)) * 100)}%</td>
                   <td class="nowrap">{fmtDate(g.start)}</td><td class="nowrap">{g.end ? fmtDate(g.end) : 'Present'}</td>

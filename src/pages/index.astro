@@ -1,0 +1,24 @@
+---
+import { categories, subsOf } from '../lib/taxonomy.ts';
+const cats = categories();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>India Explained</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main data-pagefind-body>
+      <h1>India Explained</h1>
+      <p>Placeholder index. The UI will replace this page.</p>
+      <ul>
+        {cats.map((c) => (
+          <li><strong>{c.name}</strong>: {c.blurb} ({subsOf(c.id).length} sub-categories)</li>
+        ))}
+      </ul>
+    </main>
+  </body>
+</html>

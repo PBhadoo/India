@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://india-explained.pages.dev/sitemap.xml

@@ -111,7 +111,7 @@ const current = (href: string) => (href === '/' ? path === '/' : path.startsWith
               thin or contested, it says so.
             </p>
             <p class="small">
-              {site.lastUpdated ? <>Data last updated <time datetime={site.lastUpdated}>{fmtDate(site.lastUpdated)}</time>.</> : <>No entries have been published yet.</>}
+              {site.lastUpdated ? <>Data last updated <time datetime={site.lastUpdated}>{fmtDate(site.lastUpdated)}</time>.</> : <>No entries have been published yet.</>}{' '}
               Content was built on <time datetime={site.asOf}>{fmtDate(site.asOf)}</time>.
             </p>
           </div>

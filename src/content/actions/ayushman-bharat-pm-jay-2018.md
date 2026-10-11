@@ -1,6 +1,6 @@
 ---
 title: Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY)
-summary: Publicly funded hospital insurance scheme launched on 23 September 2018 for eligible poorer families, extended in October 2024 to all citizens aged 70 and above; 10.98 crore hospital admissions recorded by December 2025.
+summary: Publicly funded hospital insurance scheme launched on 23 September 2018 for eligible families, extended in October 2024 to all citizens aged 70 and above; 10.98 crore hospital admissions recorded by December 2025.
 category: health
 subcategories:
 - health-insurance

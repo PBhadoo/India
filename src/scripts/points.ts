@@ -36,7 +36,7 @@ if (dataEl) {
     }
   };
 
-  function update() {
+  function update(silent = false) {
     const p = period();
     const weights: Record<string, number> = {};
     let changed = 0;
@@ -87,7 +87,7 @@ if (dataEl) {
         .filter((c) => c.year == null || ((p.from == null || c.year >= p.from) && (p.to == null || c.year <= p.to)))
         .map((c) => c.slug),
     );
-    live.textContent = `Table updated for ${p.label}. ${changed ? `${changed} ${changed === 1 ? 'category weight' : 'category weights'} changed. ` : ''}${slugs.size} scored ${slugs.size === 1 ? 'action' : 'actions'} counted.`;
+    if (!silent) live.textContent = `Table updated for ${p.label}. ${changed ? `${changed} ${changed === 1 ? 'category weight' : 'category weights'} changed. ` : ''}${slugs.size} scored ${slugs.size === 1 ? 'action' : 'actions'} counted.`;
     reset.hidden = era.value === 'all' && changed === 0;
     heads.forEach((th) => th.setAttribute('aria-sort', th.dataset.key === sortKey ? (dir === 1 ? 'ascending' : 'descending') : 'none'));
   }
@@ -111,13 +111,13 @@ if (dataEl) {
     else table.setAttribute('data-short-open', '');
     update();
   });
-  sliders.forEach((s) => s.addEventListener('input', update));
+  sliders.forEach((s) => s.addEventListener('input', () => update()));
   era.addEventListener('change', () => {
     customFields.forEach((f) => (f.hidden = era.value !== 'custom'));
     update();
   });
-  from.addEventListener('input', update);
-  to.addEventListener('input', update);
+  from.addEventListener('input', () => update());
+  to.addEventListener('input', () => update());
   reset.addEventListener('click', () => {
     era.value = 'all';
     from.value = String(data.yearMin);
@@ -126,4 +126,5 @@ if (dataEl) {
     sliders.forEach((s) => (s.value = '1'));
     update();
   });
+  update(true);
 }

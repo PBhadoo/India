@@ -16,7 +16,7 @@ interface Props {
 const { title, description = 'A neutral, source-backed record of who governed India, for how long, and what the evidence shows about their actions.', path = Astro.url.pathname, index = true, jsonLd, ogType = 'website' } = Astro.props;
 const site = await getSite();
 const siteName = 'India Explained';
-const canonical = new URL(path, Astro.site ?? 'https://india-explained.pages.dev').href;
+const canonical = new URL(path, Astro.site ?? 'https://indiareview.pages.dev').href;
 const fullTitle = path === '/' ? `${siteName}: who governed, for how long, and what the record shows` : `${title} | ${siteName}`;
 const nav = [
   ['/', 'Home'],

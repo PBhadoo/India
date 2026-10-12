@@ -55,5 +55,9 @@ node scripts/stale-report.mjs                       # entries >90 days old, thin
 Headers are set in `public/_headers`. Optional CLI deploy (after `npm run build`):
 
 ```sh
-npx wrangler pages deploy dist --project-name india-explained
+npx wrangler pages deploy dist --project-name indiareview
 ```
+
+## Automatic deploys (GitHub Actions)
+
+`.github/workflows/deploy.yml` builds and deploys to the Cloudflare Pages project `indiareview` on every push to `main`. It reads these repository secrets: `CF_API_TOKEN` (required, Cloudflare API token with Pages edit permission) and `CF_ACCOUNT_ID` (your Cloudflare account ID, required when the token can see more than one account).

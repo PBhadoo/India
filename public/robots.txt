@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://india-explained.pages.dev/sitemap.xml
+Sitemap: https://indiareview.pages.dev/sitemap-index.xml

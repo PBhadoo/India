@@ -154,14 +154,12 @@ const jsonLd = {
             </tbody>
           </table>
         </div>
-        <details class="panel legend-types" style="margin-top:1rem">
-          <summary>What the claim types mean</summary>
-          <div class="panel-body">
-            <dl class="dl">
-              {CLAIM_TYPE_ORDER.map((t) => <><dt><ClaimBadge type={t} /></dt><dd>{CLAIM_TYPE_INFO[t].definition}</dd></>)}
-            </dl>
-          </div>
-        </details>
+        <div class="legend-types">
+          <h3>What the claim types mean</h3>
+          <dl class="dl">
+            {CLAIM_TYPE_ORDER.map((t) => <><dt><ClaimBadge type={t} /></dt><dd>{CLAIM_TYPE_INFO[t].definition}</dd></>)}
+          </dl>
+        </div>
       </section>
     )}
 

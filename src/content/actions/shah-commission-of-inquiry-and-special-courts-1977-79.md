@@ -20,7 +20,7 @@ facts:
 why:
   stated:
     - "The Special Courts Bill's preamble described the Emergency period as one of criminal abuse of power by persons holding high public or political office [2][3]."
-    - "The Commission was set up to inquire into excesses committed during the Emergency, as the Janata government had promised [1]."
+    - "The Commission was set up to inquire into excesses committed during the Emergency [1]."
   criticism:
     - "Critics said the Commission confused investigation with inquiry and issued notices requiring sworn testimony without specifying the case to be answered; Indira Gandhi called it biased [1]."
 benefits:

@@ -1,5 +1,5 @@
 ---
-import { PRELIMINARY_MIN_SCORED, LOW_DATA_MIN_ACTIONS } from '../lib/scoring-core.ts';
+import { PRELIMINARY_MIN_SCORED, LOW_DATA_MIN_ACTIONS, PRIOR_YEARS } from '../lib/scoring-core.ts';
 import { sortParties, pointsRowsHtml, heatGridHtml, heatRange, noDataHtml } from '../lib/render-points.ts';
 import { categories } from '../lib/taxonomy.ts';
 import { ctxFor, jsonForScript, type Site } from '../lib/site.ts';
@@ -10,7 +10,7 @@ const { site } = Astro.props;
 const sc = site.scoring;
 const ctx = ctxFor(site);
 const cats = categories();
-const rows = sortParties(sc.parties, ctx, 'ppy', -1);
+const rows = sortParties(sc.parties, ctx, 'avg', -1);
 const hr = heatRange(rows, ctx);
 const centre = (await import('../lib/governments.ts')).centreGovernments();
 const yearMin = centre.length ? Math.min(...centre.map((g) => yearOf(g.start))) : 1947;
@@ -27,13 +27,13 @@ const payload = {
   governments: centre.map((g) => ({ id: g.id, leadParty: g.leadParty, start: g.start, end: g.end, partners: g.partners })),
   categoryIds: cats.map((c) => c.id),
 };
-const heads: [string, string, string?][] = [
+const shrunkTip = `Depends on how many entries are included; shrunk toward zero for short tenures (points divided by years in power plus ${PRIOR_YEARS}).`;
+const heads: [string, string, string?, string?][] = [
   ['party', 'Party'],
-  ['ppy', 'Points per year', 'num'],
+  ['avg', 'Average points per action', 'num', 'Mean credited points per scored action, with the range from the two scorers and the number of scored actions.'],
+  ['shrunk', 'Points per year (shrunk)', 'num', shrunkTip],
   ['total', 'Total points', 'num'],
   ['years', 'Years in power', 'num'],
-  ['range', 'Range (total, low to high)', 'num'],
-  ['actions', 'Actions scored', 'num'],
 ];
 ---
 <div id="points-explorer" data-min-year={yearMin} data-max-year={yearMax}>
@@ -44,7 +44,7 @@ const heads: [string, string, string?][] = [
     </div>
   )}
   <div class="note">
-    <p><strong>How to read this.</strong> Two scorers, blind to party, give each action up to 25 points for benefit or harm across five criteria (range {fmtSigned(-25, 0)} to +25). An action's points go to the governments responsible, and to their coalition partners by seat share. “Points per year” divides a party's total by its years in power. The figure summarises the evidence entered so far; it is not a verdict on any party. The scorers are AI models that did not know which party acted but did read the facts. The entries are a selection of actions, and a party with more entries in an era can show a higher or lower figure for that reason alone. A party with little scored evidence is marked “Low data”. Union governments only; state actions are not included. <a href="/methodology/">Read the method</a>.</p>
+    <p><strong>How to read this.</strong> Two scorers, blind to party, give each action up to 25 points for benefit or harm across five criteria (range {fmtSigned(-25, 0)} to +25). An action's points go to the governments responsible, and to their coalition partners by seat share. The headline figure is the <strong>average points per action</strong>: a party's total divided by the number of its actions scored, shown with its range and that number. “Points per year (shrunk)” divides the total by years in power plus {PRIOR_YEARS}; it depends on how many entries are included, so it is shown second. The figures summarise the evidence entered so far; it is not a verdict on any party. The scorers are AI models that did not know which party acted but did read the facts. The entries are a selection of actions, and a party with more entries in an era can show a higher or lower figure for that reason alone. A party with little scored evidence is marked “Low data”. Union governments only; state actions are not included. <a href="/methodology/">Read the method</a>.</p>
   </div>
 
   {rows.length === 0 ? (
@@ -82,31 +82,39 @@ const heads: [string, string, string?][] = [
         </div>
       </details>
 
+      <div class="metric-row">
+        <span class="small" id="metric-label">Headline and sort</span>
+        <div class="seg-toggle" role="group" aria-labelledby="metric-label" id="metric-toggle" hidden>
+          <button type="button" aria-pressed="true" data-metric="avg">Average per action</button>
+          <button type="button" aria-pressed="false" data-metric="shrunk">Per year (shrunk)</button>
+        </div>
+      </div>
       <p class="vh" id="pts-live" role="status" aria-live="polite"></p>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Evidence points by party, scrolls sideways on narrow screens">
         <table class="data" id="pts-table">
           <caption>
             Evidence points by party
-            <span class="small">Sorted by points per year, highest figure first. The order reflects a figure, not a verdict, and ranges overlap. Dot: points per year; line: low to high.</span>
+            <span class="small" id="pts-caption">Sorted by average points per action, highest figure first. The order reflects a figure, not a verdict, and ranges overlap. Dot: the headline figure; line: low to high from the two scorers.</span>
           </caption>
           <thead>
             <tr>
-              {heads.map(([key, label, cls]) => (
-                <th scope="col" class={cls} data-key={key === 'range' ? undefined : key} aria-sort={key === 'ppy' ? 'descending' : key === 'range' ? undefined : 'none'}>{label}</th>
+              {heads.map(([key, label, cls, tip]) => (
+                <th scope="col" class={cls} title={tip} data-key={key} aria-sort={key === 'avg' ? 'descending' : 'none'}>{label}</th>
               ))}
             </tr>
           </thead>
           <tbody set:html={pointsRowsHtml(rows, ctx)}></tbody>
         </table>
       </div>
+      <p class="small" style="margin-top:.6rem"><strong>Points per year (shrunk)</strong> depends on how many entries are included; shrunk toward zero for short tenures: points ÷ (years in power + {PRIOR_YEARS}). Neither figure is a verdict.</p>
       <p class="collapse-row" id="pts-short-wrap" hidden><button type="button" class="btn" id="pts-short-toggle" aria-expanded="false"></button></p>
       <p class="note" id="pts-nodata" style="margin-top:1rem" set:html={noDataHtml(rows, ctx)} hidden={!noDataHtml(rows, ctx)}></p>
       <p class="small" style="margin-top:.6rem"><span class="badge badge-low">Low data</span> means some category has fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the party, so its figures rest on very little evidence.</p>
 
       <h3 style="margin-top:2rem" id="heat-title">Points per year by category</h3>
-      <p class="small">Each cell is one party's points per year in one category, shaded from lowest to highest across the grid. Shading shows the relative size of a figure, not quality. Numbers are always shown; hatched cells have fewer than {LOW_DATA_MIN_ACTIONS} scored actions, dashed cells have none. Only parties with at least 2 years in power and a scored action are shown as columns.</p>
+      <p class="small">Each cell is one party's raw points per year in one category (no shrinkage), so it depends on how many entries are included for that cell. Cells are shaded from lowest to highest across the grid. Columns are ordered by years in power. Shading shows the relative size of a figure, not quality. Numbers are always shown; hatched cells have fewer than {LOW_DATA_MIN_ACTIONS} scored actions, dashed cells have none. Only parties with at least 2 years in power and a scored action are shown as columns.</p>
       <div class="table-wrap heat" tabindex="0" role="region" aria-label="Category heat grid, scrolls sideways on narrow screens">
-        <table id="heat-table" aria-labelledby="heat-title" set:html={heatGridHtml(rows, ctx)}></table>
+        <table id="heat-table" aria-labelledby="heat-title" set:html={heatGridHtml(sortParties(rows, ctx, 'years', -1), ctx)}></table>
       </div>
       <p class="legend-scale">
         <span>Lower</span><span class="ramp" aria-hidden="true"></span><span>Higher</span>

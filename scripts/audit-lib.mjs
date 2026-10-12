@@ -55,3 +55,30 @@ export function partiesOf(gov) {
   if (!gov) return [];
   return [...new Set((gov.partners ?? []).filter((p) => p.share > 0).map((p) => p.party))];
 }
+
+/**
+ * Lists text fields that are not strings (for example a YAML bullet with an unquoted
+ * "word: text" that parses as an object). Returns paths such as "facts[2]".
+ */
+export function nonStringTextFields(d) {
+  const bad = [];
+  const chk = (path, v) => { if (typeof v !== 'string') bad.push(path); };
+  const list = (path, arr) => {
+    if (arr === undefined || arr === null) return;
+    if (!Array.isArray(arr)) { bad.push(path); return; }
+    arr.forEach((v, i) => chk(`${path}[${i}]`, v));
+  };
+  list('facts', d?.facts);
+  list('why.stated', d?.why?.stated);
+  list('why.criticism', d?.why?.criticism);
+  list('notes', d?.notes);
+  for (const k of ['benefits', 'concerns']) {
+    if (!Array.isArray(d?.[k])) continue;
+    d[k].forEach((p, i) => {
+      if (p === null || typeof p !== 'object') return; // shape errors are reported elsewhere
+      chk(`${k}[${i}].point`, p.point);
+      if (p.evidence !== undefined) chk(`${k}[${i}].evidence`, p.evidence);
+    });
+  }
+  return bad;
+}

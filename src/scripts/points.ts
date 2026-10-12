@@ -1,7 +1,7 @@
 // Live recompute for the Evidence points table: weights, period filter, sorting.
 // Uses the same pure functions as the build (src/lib/scoring-core.ts).
 import { computePoints } from '../lib/scoring-core.ts';
-import { heatGridHtml, heatRange, noDataHtml, pointsRowsHtml, sortParties, type PointsCtx, type SortKey } from '../lib/render-points.ts';
+import { heatGridHtml, heatRange, noDataHtml, pointsRowsHtml, sortParties, type Metric, type PointsCtx, type SortKey } from '../lib/render-points.ts';
 import { fmtSigned } from '../lib/format.ts';
 
 const dataEl = document.getElementById('points-data');
@@ -20,7 +20,11 @@ if (dataEl) {
   const customFields = document.querySelectorAll<HTMLElement>('[data-custom]');
   const sliders = Array.from(document.querySelectorAll<HTMLInputElement>('input[type=range][data-cat]'));
   const heads = Array.from(document.querySelectorAll<HTMLTableCellElement>('#pts-table th[data-key]'));
-  let sortKey: SortKey = 'ppy';
+  const metricBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('#metric-toggle button[data-metric]'));
+  const metricToggle = $('metric-toggle');
+  const caption = $('pts-caption');
+  let metric: Metric = 'avg';
+  let sortKey: SortKey = 'avg';
   let dir: 1 | -1 = -1;
 
   const period = (): { from?: number; to?: number; label: string } => {
@@ -61,7 +65,7 @@ if (dataEl) {
       sortKey,
       dir,
     );
-    tbody.innerHTML = pointsRowsHtml(rows, ctx);
+    tbody.innerHTML = pointsRowsHtml(rows, ctx, '/', metric);
     const nShort = tbody.querySelectorAll('tr.short-row').length;
     const wrap = $('pts-short-wrap');
     const tgl = $<HTMLButtonElement>('pts-short-toggle');
@@ -77,8 +81,8 @@ if (dataEl) {
       nd.innerHTML = h;
       nd.hidden = !h;
     }
-    // Heat grid follows the headline ordering (points per year) so columns stay predictable.
-    heat.innerHTML = heatGridHtml(sortParties(rows, ctx, 'ppy', -1), ctx);
+    // Heat grid columns are ordered by years in power, independent of the headline metric.
+    heat.innerHTML = heatGridHtml(sortParties(rows, ctx, 'years', -1), ctx);
     const hr = heatRange(rows, ctx);
     const hrEl = $('heat-range');
     if (hrEl) hrEl.textContent = hr ? `${fmtSigned(hr[0])} to ${fmtSigned(hr[1])} points per year` : '';
@@ -89,6 +93,11 @@ if (dataEl) {
     );
     if (!silent) live.textContent = `Table updated for ${p.label}. ${changed ? `${changed} ${changed === 1 ? 'category weight' : 'category weights'} changed. ` : ''}${slugs.size} scored ${slugs.size === 1 ? 'action' : 'actions'} counted.`;
     reset.hidden = era.value === 'all' && changed === 0;
+    metricBtns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.metric === metric)));
+    if (caption) {
+      const names: Record<string, string> = { avg: 'average points per action', shrunk: 'points per year (shrunk)', total: 'total points', years: 'years in power', party: 'party name' };
+      caption.textContent = `Sorted by ${names[sortKey] ?? sortKey}, ${dir === -1 ? 'highest' : 'lowest'} first. The order reflects a figure, not a verdict, and ranges overlap. Dot: ${metric === 'avg' ? 'average points per action' : 'points per year (shrunk)'}; line: low to high from the two scorers.`;
+    }
     heads.forEach((th) => th.setAttribute('aria-sort', th.dataset.key === sortKey ? (dir === 1 ? 'ascending' : 'descending') : 'none'));
   }
 
@@ -103,9 +112,19 @@ if (dataEl) {
       const key = th.dataset.key as SortKey;
       if (key === sortKey) dir = (dir === 1 ? -1 : 1);
       else { sortKey = key; dir = key === 'party' ? 1 : -1; }
+      if (key === 'avg' || key === 'shrunk') metric = key;
       update();
     });
   });
+  if (metricToggle) {
+    metricToggle.hidden = false;
+    metricBtns.forEach((b) => b.addEventListener('click', () => {
+      metric = b.dataset.metric as Metric;
+      sortKey = metric;
+      dir = -1;
+      update();
+    }));
+  }
   $('pts-short-toggle')?.addEventListener('click', () => {
     if (table.hasAttribute('data-short-open')) table.removeAttribute('data-short-open');
     else table.setAttribute('data-short-open', '');

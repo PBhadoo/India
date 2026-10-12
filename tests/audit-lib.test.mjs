@@ -33,3 +33,19 @@ test('asymmetry and partiesOf', () => {
   assert.equal(r.avgEvidencePerBullet, 1);
   assert.deepEqual(partiesOf({ partners: [{ party: 'a', share: 0.7 }, { party: 'b', share: 0 }] }), ['a']);
 });
+
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { loadEntry } from '../scripts/lib.mjs';
+import { nonStringTextFields } from '../scripts/audit-lib.mjs';
+
+test('nonStringTextFields catches YAML unquoted-colon objects (fixture)', () => {
+  const file = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures', 'colon-entry.md');
+  const e = loadEntry(file);
+  assert.deepEqual(nonStringTextFields(e.data), ['facts[1]', 'why.criticism[0]', 'notes[0]']);
+});
+
+test('nonStringTextFields accepts clean entries', () => {
+  assert.deepEqual(nonStringTextFields({ facts: ['a'], why: { stated: ['b'], criticism: [] }, benefits: [{ point: 'p', evidence: 'e' }], concerns: [], notes: ['n'] }), []);
+  assert.deepEqual(nonStringTextFields({ benefits: [{ point: { a: 1 }, evidence: 3 }] }), ['benefits[0].point', 'benefits[0].evidence']);
+});

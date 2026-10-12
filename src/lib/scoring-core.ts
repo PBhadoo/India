@@ -9,6 +9,11 @@ export const DISAGREEMENT_THRESHOLD = 2;
 export const LOW_DATA_MIN_ACTIONS = 2;
 /** Fewer scored actions than this overall marks results "preliminary". */
 export const PRELIMINARY_MIN_SCORED = 30;
+/**
+ * Prior tenure, in years, added to the divisor of the shrunk per-year figure:
+ * shrunkPerYear = points / (yearsInPower + PRIOR_YEARS). A short tenure is pulled toward zero.
+ */
+export const PRIOR_YEARS = 5;
 
 export interface ActionScore {
   scored: boolean;
@@ -123,6 +128,19 @@ export interface PartyResult {
   lowPerYear: number | null;
   highPerYear: number | null;
   scoredActions: number;
+  /**
+   * Mean weighted points per scored action: points / avgActions, with low and high from the
+   * scorer totals. avgActions counts distinct scored actions in categories whose weight is above 0.
+   * null (never NaN) when avgActions is 0.
+   */
+  avgPerAction: number | null;
+  avgLow: number | null;
+  avgHigh: number | null;
+  avgActions: number;
+  /** points / (yearsInPower + PRIOR_YEARS), with the same range. null when no scored actions. */
+  shrunkPerYear: number | null;
+  shrunkLow: number | null;
+  shrunkHigh: number | null;
   categories: Record<string, CategoryCell>;
   /** Any listed category cell with data below the threshold. */
   hasLowData: boolean;
@@ -178,6 +196,7 @@ export function aggregateParties(
     const yrs = years[partyId]?.weighted ?? 0;
     const cells: Record<string, CategoryCell> = {};
     let points = 0, low = 0, high = 0;
+    const weightedSlugs = new Set<string>();
     for (const cat of catIds) {
       const cs = mine.filter((c) => c.category === cat);
       const w = opts.weights?.[cat] ?? 1;
@@ -191,7 +210,10 @@ export function aggregateParties(
         pointsPerYear: yrs > 0 ? (p * w) / yrs : null,
       };
       points += p * w; low += lo * w; high += hi * w;
+      if (w > 0) for (const c of cs) weightedSlugs.add(c.slug);
     }
+    const nAvg = weightedSlugs.size;
+    const shrinkDiv = yrs + PRIOR_YEARS;
     const slugs = [...new Set(mine.map((c) => c.slug))];
     parties.push({
       partyId, points, low, high,
@@ -201,6 +223,13 @@ export function aggregateParties(
       lowPerYear: yrs > 0 ? low / yrs : null,
       highPerYear: yrs > 0 ? high / yrs : null,
       scoredActions: slugs.length,
+      avgPerAction: nAvg > 0 ? points / nAvg : null,
+      avgLow: nAvg > 0 ? low / nAvg : null,
+      avgHigh: nAvg > 0 ? high / nAvg : null,
+      avgActions: nAvg,
+      shrunkPerYear: nAvg > 0 ? points / shrinkDiv : null,
+      shrunkLow: nAvg > 0 ? low / shrinkDiv : null,
+      shrunkHigh: nAvg > 0 ? high / shrinkDiv : null,
       categories: cells,
       hasLowData: Object.values(cells).some((c) => c.lowData),
       flaggedActions: slugs.filter((s) => flaggedSlugs.has(s)),

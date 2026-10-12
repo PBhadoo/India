@@ -65,6 +65,10 @@ Exactly as in [`CONTRACT.md`](CONTRACT.md). New actions start with `scoring.scor
 
 `{ "<slug>": { "reach": 3, "outcome": 1, "sustainability": 0, "process": 2, "delivery": 1, "note": "one sentence" } }`, integers -5 to 5, per `src/data/rubric.json`. One file per scorer.
 
+### Planned rubric revision (v1.1)
+
+Rubric v1.1 should make Delivery conditional: delivery of a measure whose outcome score is strongly negative must not add positive points (a harmful measure carried out as announced is not credited for being carried out). `src/data/rubric.json` is not changed until that revision is agreed. Any rubric change, v1.1 included, triggers re-scoring of all entries by two fresh blind scorers; scores from the old rubric are never mixed with scores from the new one. See `NEUTRALITY-REVIEW.md` (M2, M3).
+
 ## Conventions
 
 - Branches: `weekly/YYYY-MM-DD`, `refresh/YYYY-MM`. PR title `Weekly YYYY-MM-DD: <n> new, <m> developing`. Use `.github/pull_request_template.md`.

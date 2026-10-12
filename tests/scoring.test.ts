@@ -92,3 +92,64 @@ test('empty inputs do not crash', () => {
   assert.equal(isLowData(1), true);
   assert.equal(isLowData(2), false);
 });
+
+// ---- Per-action average and shrunk per-year figures ----
+import { PRIOR_YEARS, aggregateParties } from '../src/lib/scoring.ts';
+
+test('avgPerAction: mean with scorer range and count', () => {
+  const actions = [
+    action('a1'),
+    action('a2', { scorers: [sc('A', [2, 2, 0, 0, 0]), sc('B', [4, 2, 0, 0, 0])] }), // mean 5, range 4..6
+  ];
+  const r = computeScoring(actions, govs, { asOf: '2004-01-01' });
+  const bbb = r.parties.find((p) => p.partyId === 'bbb')!;
+  assert.equal(bbb.avgActions, 2);
+  near(bbb.avgPerAction!, (8 + 5) / 2);
+  near(bbb.avgLow!, (6 + 4) / 2);
+  near(bbb.avgHigh!, (10 + 6) / 2);
+});
+
+test('avgPerAction respects category weights (weight 0 drops the action from the count)', () => {
+  const actions = [action('a1'), action('a2', { category: 'health', scorers: [sc('A', [1, 1, 0, 0, 0]), sc('B', [1, 1, 0, 0, 0])] })];
+  const off = computeScoring(actions, govs, { asOf: '2004-01-01', weights: makeWeights(['economy', 'health'], { health: 0 }) });
+  const b0 = off.parties.find((p) => p.partyId === 'bbb')!;
+  assert.equal(b0.avgActions, 1);
+  near(b0.avgPerAction!, 8);
+  const dbl = computeScoring(actions, govs, { asOf: '2004-01-01', weights: makeWeights(['economy', 'health'], { health: 2 }) });
+  near(dbl.parties.find((p) => p.partyId === 'bbb')!.avgPerAction!, (8 + 2 * 2) / 2);
+});
+
+test('shrunkPerYear = points / (years + PRIOR_YEARS), with range and weights', () => {
+  assert.equal(PRIOR_YEARS, 5);
+  const r = computeScoring([action('a1')], govs, { asOf: '2004-01-01' });
+  const b = r.parties.find((p) => p.partyId === 'bbb')!;
+  near(b.shrunkPerYear!, 8 / (b.yearsInPower + PRIOR_YEARS));
+  near(b.shrunkLow!, 6 / (b.yearsInPower + PRIOR_YEARS));
+  near(b.shrunkHigh!, 10 / (b.yearsInPower + PRIOR_YEARS));
+  const w = computeScoring([action('a1')], govs, { asOf: '2004-01-01', weights: { economy: 2 } });
+  near(w.parties.find((p) => p.partyId === 'bbb')!.shrunkPerYear!, 16 / (b.yearsInPower + PRIOR_YEARS));
+});
+
+test('tiny-tenure party: shrunk figure stays small while raw per-year explodes', () => {
+  const tiny: Government = { id: 't1', leadParty: 'ccc', start: '2003-01-01', end: '2003-01-08', partners: [{ party: 'ccc', share: 1 }], level: 'centre' } as any;
+  const r = computeScoring([action('t', { governmentId: 't1' })], [...govs, tiny], { asOf: '2004-01-01' });
+  const c = r.parties.find((p) => p.partyId === 'ccc')!;
+  assert.ok(c.yearsInPower < 0.05);
+  assert.ok(c.pointsPerYear! > 300);
+  assert.ok(c.shrunkPerYear! < 1.7);
+  near(c.avgPerAction!, 8);
+});
+
+test('party with 0 scored actions has no per-action or shrunk figure (not NaN)', () => {
+  const r = computeScoring([action('u', { scorers: [] })], govs, { asOf: '2004-01-01' });
+  for (const p of r.parties) {
+    assert.equal(p.avgPerAction, null);
+    assert.equal(p.avgLow, null);
+    assert.equal(p.avgHigh, null);
+    assert.equal(p.shrunkPerYear, null);
+    assert.equal(p.avgActions, 0);
+  }
+  const empty = aggregateParties([], { zzz: { weighted: 1, led: 1 } });
+  assert.equal(empty[0].avgPerAction, null);
+  assert.equal(empty[0].shrunkPerYear, null);
+});

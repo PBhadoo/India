@@ -4,6 +4,7 @@ import {
   ACTIONS_DIR, DEVELOPING_DIR, CRITERIA, listMd, loadEntry, loadTaxonomy, loadGovernments,
   loadLoadedWords, isoDate, daysSince,
 } from './lib.mjs';
+import { nonStringTextFields, hasPrimarySource } from './audit-lib.mjs';
 
 const STATUSES = ['proposed', 'passed', 'implemented', 'stalled', 'repealed', 'struck-down'];
 const SOURCE_TYPES = ['primary', 'official-data', 'court', 'reputable-media', 'academic'];
@@ -117,6 +118,10 @@ function validateAction(e) {
   if (isArr(d.benefits) && d.benefits.length === 0) warn(e, 'no benefits listed (balance check)');
   if (isArr(d.concerns) && d.concerns.length === 0) warn(e, 'no concerns listed (balance check)');
   checkSources(e, d.sources, 2);
+  for (const path of nonStringTextFields(d)) err(e, `${path} is not a string (an unquoted "word: text" in YAML reads as an object; quote the line)`);
+  if (d.scoring?.confidence && d.scoring.confidence !== 'low' && isArr(d.sources) && !hasPrimarySource(d.sources)) {
+    warn(e, `confidence is ${d.scoring.confidence} but no primary, official-data or court source is listed`);
+  }
 
   const sc = d.scoring;
   if (!sc || typeof sc !== 'object') err(e, 'scoring block missing');
@@ -149,7 +154,9 @@ function validateDeveloping(e, actionSlugs) {
   if (isStr(d.status) && !['developing', 'settled'].includes(d.status)) err(e, 'status must be developing|settled');
   checkCategory(e, d);
   if (!isArr(d.knownFacts)) err(e, 'knownFacts must be a list');
+  else d.knownFacts.forEach((v, i) => { if (typeof v !== 'string') err(e, `knownFacts[${i}] is not a string (quote lines containing a colon)`); });
   if (!isArr(d.unknowns)) err(e, 'unknowns must be a list');
+  else d.unknowns.forEach((v, i) => { if (typeof v !== 'string') err(e, `unknowns[${i}] is not a string (quote lines containing a colon)`); });
   checkSources(e, d.sources, 1);
   if (d.relatedAction && !actionSlugs.has(d.relatedAction)) err(e, `relatedAction "${d.relatedAction}" is not an action slug`);
   lint(e, [d.title, d.summary, ...(d.knownFacts ?? []), ...(d.unknowns ?? []), e.content]);

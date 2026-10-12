@@ -201,7 +201,8 @@ export function checkDossier(entry, ctx) {
     const ds = t.date instanceof Date ? toIso(t.date) : typeof t.date === 'string' ? t.date : '';
     if (!ds) err(`timeline[${i}].date missing`);
     else {
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(ds)) warn(`timeline[${i}].date "${ds}" is not a full YYYY-MM-DD date`);
+      // A year or a month (YYYY, YYYY-MM) is allowed when the exact day is not documented.
+      if (!/^\d{4}(-\d{2}(-\d{2})?)?$/.test(ds)) warn(`timeline[${i}].date "${ds}" is not YYYY, YYYY-MM or YYYY-MM-DD`);
       if (prev && ds < prev) warn(`timeline[${i}] (${ds}) is earlier than the item before it (${prev}); keep the list chronological`);
       prev = ds;
     }

@@ -78,3 +78,12 @@ test('dossierNonStringFields finds object-valued text', () => {
   assert.deepEqual(dossierNonStringFields({ summary: 's', claims: [{ claim: { a: 1 }, madeBy: 'x' }], notShown: ['ok', { a: 1 }] }), ['claims[0].claim', 'notShown[1]']);
   assert.deepEqual(dossierNonStringFields({ title: 't', timeline: [{ event: 'e', actor: 'a' }] }), []);
 });
+
+test('partial timeline dates (YYYY, YYYY-MM) are accepted; free text is warned', () => {
+  const e = load('dossier-ongoing-example-roll-revision.md');
+  e.data.timeline[0].date = '2026';
+  e.data.timeline[1].date = '2026-05';
+  assert.ok(!has(checkDossier(e, ctx()).warnings, /not YYYY/));
+  e.data.timeline[1].date = 'May-ish';
+  assert.ok(has(checkDossier(e, ctx()).warnings, /not YYYY, YYYY-MM or YYYY-MM-DD/));
+});

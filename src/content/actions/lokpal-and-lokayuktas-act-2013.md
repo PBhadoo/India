@@ -46,7 +46,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: -1, sustainability: 0, process: 4, delivery: -1, note: "Passed with broad cross-party selection safeguards, but the first Lokpal took office five years later and few complaints reach investigation or prosecution sanction." }
+    - { id: B, reach: 1, outcome: -1, sustainability: 0, process: 3, delivery: -2, note: "Broad parliamentary process, but operation began five years after enactment and few complaints reach investigation or prosecution sanction." }
 ---
 
 ## In depth

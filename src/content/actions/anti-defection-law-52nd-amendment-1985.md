@@ -62,7 +62,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 0, sustainability: 2, process: 3, delivery: 1, note: "Upheld by the Supreme Court with limited review, but reported delays by presiding officers and no outcome data on defection rates give mixed evidence." }
+    - { id: B, reach: 2, outcome: 2, sustainability: 3, process: 3, delivery: 2, note: "Upheld by the Supreme Court with limited judicial review and still in force, though Speakers' delays in deciding petitions are reported." }
 ---
 
 ## In depth

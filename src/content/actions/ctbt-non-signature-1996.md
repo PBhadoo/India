@@ -44,7 +44,9 @@ scoring:
   lag_years: 2
   shocks: [pokhran-ii-1998]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: -1, sustainability: 0, process: 0, delivery: 3, note: "India was isolated in the UN vote and later sanctioned, while retaining testing options; net benefit is unclear." }
+    - { id: B, reach: 0, outcome: 0, sustainability: 0, process: 0, delivery: 0, note: "Preserved testing options but left India isolated in the vote, with no outcome evidence either way." }
 ---
 
 ## In depth

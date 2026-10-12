@@ -54,7 +54,9 @@ scoring:
   - 1990-92 litigation and agitations
   - 1993 first implementation after the judgment
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 3, sustainability: 4, process: 2, delivery: 3, note: "Supreme Court upheld it with creamy-layer and 50% limits, and OBC representation in central posts rose from 16.6% to 20.5%, though still below quota." }
+    - { id: B, reach: 3, outcome: 2, sustainability: 3, process: 1, delivery: 3, note: "OBC representation in central posts rose from 16.6% to 20.5% and the Supreme Court upheld the quota with a creamy-layer limit after unrest." }
 ---
 
 ## In depth

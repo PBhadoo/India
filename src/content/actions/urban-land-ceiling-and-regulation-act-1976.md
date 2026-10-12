@@ -43,7 +43,9 @@ scoring:
   lag_years: 10
   shocks: ["1977-end-of-emergency", "1991-liberalisation"]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: -1, outcome: -3, sustainability: -3, process: -1, delivery: -3, note: "Only about 19,000 ha of 220,000 ha estimated excess was taken, much stayed vacant, and the repeal Bill cited higher prices and stalled housing." }
+    - { id: B, reach: -2, outcome: -3, sustainability: -3, process: 0, delivery: -3, note: "Only about 19,000 of an estimated 220,000 ha excess land was taken into possession and the repeal bill cited higher land prices and slower housing." }
 ---
 
 ## In depth

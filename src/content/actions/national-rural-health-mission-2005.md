@@ -64,7 +64,9 @@ scoring:
   shocks:
   - covid-2020 (for NFHS-5 period)
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 3, sustainability: 1, process: 0, delivery: 2, note: "Institutional deliveries rose from 39% to 89%, but CAG found large facility and specialist shortfalls and rising unspent balances." }
+    - { id: B, reach: 4, outcome: 3, sustainability: 1, process: 1, delivery: 1, note: "Institutional deliveries rose from 39% to 89% over fifteen years, but audits found large facility and specialist shortfalls and growing unspent balances." }
 ---
 
 ## In depth

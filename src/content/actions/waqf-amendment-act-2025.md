@@ -47,7 +47,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 0, process: -1, delivery: 1, note: "Passed after committee review, but the Supreme Court stayed several provisions on a prima facie basis and the constitutional challenge is pending." }
+    - { id: B, reach: 0, outcome: 0, sustainability: 0, process: -1, delivery: 0, note: "Contested provisions partly stayed by the Supreme Court and the JPC held no clause-by-clause discussion; outcomes are too early to assess." }
 ---
 
 ## In depth

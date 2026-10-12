@@ -43,7 +43,9 @@ scoring:
   lag_years: 5
   shocks: ["1957-external-payments-pressure", "1962-china-war-and-1965-drought (affect the Third Plan comparison)"]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 1, process: 0, delivery: 2, note: "Three steel plants were built and growth of 4.27% exceeded the First Plan, though it missed the 4.5% target amid foreign-exchange and price pressures." }
+    - { id: B, reach: 3, outcome: 2, sustainability: -1, process: 1, delivery: 2, note: "Growth of about 4.27% beat the First Plan and built steel plants, but fell short of target amid foreign-exchange pressure." }
 ---
 
 ## In depth

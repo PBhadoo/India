@@ -58,7 +58,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 2, sustainability: 2, process: -1, delivery: 3, note: "Dedicated agency and special courts with reported high conviction rate, but only about a quarter of cases decided, federalism concerns, and passage within days of introduction." }
+    - { id: B, reach: 1, outcome: 2, sustainability: 2, process: 0, delivery: 2, note: "Reported 95% conviction in decided cases and dedicated courts, but only about a quarter of cases are decided and federalism concerns were raised." }
 ---
 
 ## In depth

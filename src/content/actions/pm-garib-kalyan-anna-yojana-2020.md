@@ -62,7 +62,9 @@ scoring:
   shocks:
   - covid-2020
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 2, sustainability: -1, process: 0, delivery: 4, note: "Rapid free grain reached about 81 crore people, but the estimated Rs 11.8 lakh crore multi-year cost and 2011-based coverage data raise sustainability questions." }
+    - { id: B, reach: 5, outcome: 2, sustainability: -2, process: 0, delivery: 4, note: "Free grain reached about 81 crore people quickly in a shock, at a very large multi-year fiscal cost of Rs 11.8 lakh crore." }
 ---
 
 ## In depth

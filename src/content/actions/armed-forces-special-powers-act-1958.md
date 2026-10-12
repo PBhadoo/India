@@ -54,7 +54,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: -1, outcome: -1, sustainability: -1, process: -1, delivery: 3, note: "Reddy Committee recommended repeal, insurgency persisted for decades, and the Court ended blanket immunity, though the Act was upheld and narrowed through notification." }
+    - { id: B, reach: -2, outcome: -1, sustainability: 1, process: 0, delivery: 2, note: "A review committee recommended repeal as oppressive while the armed forces cite operational need, and courts added safeguards ending blanket immunity." }
 ---
 
 ## In depth

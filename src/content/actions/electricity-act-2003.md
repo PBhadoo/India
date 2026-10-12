@@ -45,7 +45,9 @@ scoring:
   lag_years: 5
   shocks: [global-financial-crisis-2008, covid-2020]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 1, sustainability: 0, process: 2, delivery: 1, note: "Regulatory institutions were created in every state, but discoms remain loss-making with repeated bailouts and limited open access, so measured outcomes are modest." }
+    - { id: B, reach: 4, outcome: 1, sustainability: 0, process: 3, delivery: 1, note: "Mandatory regulators and delicensing were set up, but discoms still needed repeated bailouts and open access stayed limited." }
 ---
 
 ## In depth

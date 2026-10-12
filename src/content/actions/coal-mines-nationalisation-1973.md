@@ -46,7 +46,9 @@ scoring:
   lag_years: 5
   shocks: [oil-shock-1973, emergency-1975-77]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 3, sustainability: 1, process: 0, delivery: 3, note: "Coal India output rose from 79 to 781 million tonnes and domestic supply meets most demand, though demand growth, imports and later block-allocation illegality qualify this." }
+    - { id: B, reach: 3, outcome: 2, sustainability: 0, process: 1, delivery: 3, note: "Coal India output rose from 79 to 781 million tonnes, though later block allocations were ruled illegal and the nationalisation Acts were repealed in 2018." }
 ---
 
 ## In depth

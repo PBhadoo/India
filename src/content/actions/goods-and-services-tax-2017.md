@@ -48,7 +48,9 @@ scoring:
   lag_years: 4
   shocks: ["2016-demonetisation", "2020-covid"]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 2, sustainability: 2, process: 3, delivery: 3, note: "Taxpayer base and collections grew under a Centre-State Council backed by a constitutional amendment, though CAG found system gaps and rate complexity persists." }
+    - { id: B, reach: 5, outcome: 2, sustainability: 3, process: 4, delivery: 2, note: "A constitutional amendment and Council gave a cooperative framework and collections grew, while CAG found invoice-matching gaps and rates stayed complex." }
 ---
 
 ## In depth

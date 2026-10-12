@@ -62,7 +62,9 @@ scoring:
   - 1972-75 wholesale trade takeover and reversal
   - 1973-74 international price crisis
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 2, sustainability: 0, process: 0, delivery: 4, note: "Procurement and distribution grew from 4 to 60 million tonnes and 10 to 43 million tonnes, though direct benefit reaches few farmers and stocks carry fiscal cost." }
+    - { id: B, reach: 4, outcome: 2, sustainability: 0, process: 0, delivery: 3, note: "Built procurement and price support at scale, though direct benefit reaches a small share of farmers and stock costs are large." }
 ---
 
 ## In depth

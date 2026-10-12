@@ -42,7 +42,9 @@ scoring:
   lag_years: 5
   shocks: [covid-2020]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 1, process: 1, delivery: 2, note: "113 authorisations and about 440 startups registered, but private orbital launches are not yet shown at scale, so outcomes remain unclear." }
+    - { id: B, reach: 1, outcome: 1, sustainability: 2, process: 1, delivery: 1, note: "113 authorisations granted but private launches are still only planned, so outcomes after five years remain modest." }
 ---
 
 ## In depth

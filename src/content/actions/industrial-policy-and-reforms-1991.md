@@ -46,7 +46,9 @@ scoring:
   lag_years: 5
   shocks: ["1991-balance-of-payments-crisis", "1997-asian-financial-crisis"]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 4, sustainability: 3, process: 0, delivery: 3, note: "Reserves rose from 5.8 to 19.3 billion dollars by 1994 and licensing was largely abolished, though reforms later proceeded unevenly and distributional effects are disputed." }
+    - { id: B, reach: 5, outcome: 4, sustainability: 4, process: 0, delivery: 3, note: "Licensing was largely abolished and reserves rose from 5.8 to 19.3 billion dollars in three years, though distributional effects are disputed and later reform was uneven." }
 ---
 
 ## In depth

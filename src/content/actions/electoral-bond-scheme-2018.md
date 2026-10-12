@@ -65,7 +65,9 @@ scoring:
   lag_years: 2
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: -3, sustainability: -3, process: -4, delivery: 3, note: "Supreme Court struck down the scheme for violating voters' right to information and Article 14, and disclosed data showed concentrated large-denomination funding." }
+    - { id: B, reach: 0, outcome: -3, sustainability: -4, process: -5, delivery: 2, note: "Struck down by the Supreme Court in 2024 for violating voters' right to information, with funds concentrated in large denominations." }
 ---
 
 ## In depth

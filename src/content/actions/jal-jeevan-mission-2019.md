@@ -44,7 +44,9 @@ scoring:
   lag_years: 3
   shocks: [covid-2020, supply-chain-and-cost-inflation]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 3, sustainability: 1, process: 0, delivery: 2, note: "Tap coverage rose from 17% to about 80% of rural households, but ground checks found 26% of surveyed villages non-functional, the 2024 target was missed and irregularities drew penalties." }
+    - { id: B, reach: 5, outcome: 3, sustainability: 1, process: 0, delivery: 2, note: "Tap coverage rose from 17% to about 80% of rural households, but the 2024 target was missed and audits found many non-functional schemes." }
 ---
 
 ## In depth

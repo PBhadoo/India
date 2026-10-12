@@ -43,7 +43,9 @@ scoring:
   lag_years: 5
   shocks: ["2008-global-financial-crisis", "2020-covid"]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: -1, sustainability: -1, process: 1, delivery: -2, note: "Beneficiary data are not centrally maintained and coverage gaps persist, with later e-Shram registration only administratively linked to the Act." }
+    - { id: B, reach: 1, outcome: -1, sustainability: 0, process: 1, delivery: -2, note: "Beneficiary data are not centrally maintained and coverage gaps persisted, while the e-Shram registry is only administratively linked to the Act." }
 ---
 
 ## In depth

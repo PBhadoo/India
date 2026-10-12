@@ -47,7 +47,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 0, process: -1, delivery: 2, note: "Intended to freeze disputes, but its validity is pending before the Supreme Court and fresh litigation prompted an interim order, so outcome evidence is unclear." }
+    - { id: B, reach: 0, outcome: 0, sustainability: 0, process: 1, delivery: 1, note: "Passed with debate and walkout, its validity is pending before the Supreme Court and outcome data on litigation reduction are absent." }
 ---
 
 ## In depth

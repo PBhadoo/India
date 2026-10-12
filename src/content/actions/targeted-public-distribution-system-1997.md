@@ -66,7 +66,9 @@ scoring:
   - 2002-03 dip in foodgrain output (ES statistical table)
   - 2013 NFSA reform
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: -1, sustainability: -1, process: 0, delivery: 1, note: "A 2005 evaluation found about 58% of subsidised grain did not reach BPL families, with leakage estimates still above 40% in 2011-12." }
+    - { id: B, reach: 4, outcome: -1, sustainability: -1, process: 0, delivery: -1, note: "About 58% of subsidised grain missed BPL households in 2005, though leakage estimates later fell as states reformed delivery." }
 ---
 
 ## In depth

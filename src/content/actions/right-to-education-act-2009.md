@@ -71,7 +71,9 @@ scoring:
   shocks:
     - covid-2020
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 2, sustainability: 2, process: 3, delivery: 2, note: "Enrolment was already above 95% before the Act and learning levels remain low, while the private-school quota was upheld but only about 29% of seats were filled." }
+    - { id: B, reach: 4, outcome: 1, sustainability: 2, process: 3, delivery: 1, note: "Enrolment was already above 95% before the Act and learning levels stayed low, while the quota was upheld by the court but unevenly implemented." }
 ---
 
 ## In depth

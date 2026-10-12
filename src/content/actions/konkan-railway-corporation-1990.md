@@ -44,7 +44,9 @@ scoring:
   lag_years: 8
   shocks: [monsoon-landslides, balance-of-payments-crisis-1991]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 2, sustainability: 2, process: 1, delivery: 3, note: "A 739 km coastal line was built and became profitable by 2009-10, but construction deaths, derailments and early revenue shortfalls qualify the gain." }
+    - { id: B, reach: 2, outcome: 2, sustainability: 1, process: 0, delivery: 2, note: "A 739 km coastal line was built and now earns profit, after debt-heavy early years, construction deaths and later derailments." }
 ---
 
 ## In depth

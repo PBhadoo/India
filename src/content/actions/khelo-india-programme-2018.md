@@ -42,7 +42,9 @@ scoring:
   lag_years: 6
   shocks: [covid-2020]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 0, sustainability: 0, process: 0, delivery: 2, note: "Funding has grown and Khelo India athletes feature in the Olympic pool, but no independent evaluation exists and Paris 2024 medal ranking was lower than Tokyo." }
+    - { id: B, reach: 2, outcome: 0, sustainability: 1, process: 0, delivery: 1, note: "Funding grew across cycles but no independent evaluation exists and Paris 2024 results were not better than Tokyo ranking suggests." }
 ---
 
 ## In depth

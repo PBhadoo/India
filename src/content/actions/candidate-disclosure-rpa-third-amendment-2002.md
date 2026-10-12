@@ -57,7 +57,9 @@ scoring:
   lag_years: 1
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: -1, sustainability: -2, process: -3, delivery: 0, note: "Section 33B overrode court-ordered disclosure and was struck down in 2003, leaving only a partial statutory disclosure regime." }
+    - { id: B, reach: 3, outcome: 0, sustainability: 0, process: -3, delivery: -1, note: "Section 33B, overriding court-ordered disclosure, was struck down by the Supreme Court in 2003 as violating voters' right to information." }
 ---
 
 ## In depth

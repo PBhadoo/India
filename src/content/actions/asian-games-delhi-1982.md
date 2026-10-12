@@ -43,7 +43,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 2, sustainability: 1, process: -1, delivery: 4, note: "Games delivered venues, colour television and a better medal tally, while the Supreme Court found minimum-wage violations on construction sites." }
+    - { id: B, reach: 1, outcome: 1, sustainability: 0, process: -2, delivery: 3, note: "Venues and colour television were delivered, but the Supreme Court found construction workers paid below minimum wage amounting to forced labour." }
 ---
 
 ## In depth

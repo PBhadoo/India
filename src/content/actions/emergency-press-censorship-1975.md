@@ -46,7 +46,9 @@ scoring:
   lag_years: 1
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: -4, outcome: -3, sustainability: 0, process: -5, delivery: 3, note: "Shah Commission found censorship used to suppress unfavourable news with no statutory basis for key measures, harming press freedom nationwide, though reversed within weeks of revocation." }
+    - { id: B, reach: -5, outcome: -4, sustainability: -1, process: -5, delivery: 3, note: "Pre-publication censorship without statutory basis suppressed news across the press, as found by the Shah Commission, though it ended with the Emergency." }
 ---
 
 ## In depth

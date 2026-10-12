@@ -60,7 +60,9 @@ scoring:
   shocks:
   - covid-2020
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 1, sustainability: 1, process: 1, delivery: 2, note: "Large administrative counts of cards and admissions, but audit findings on claims controls and no evidence of reduced out-of-pocket spending keep outcome modest." }
+    - { id: B, reach: 5, outcome: 1, sustainability: 0, process: 0, delivery: 1, note: "Large admission counts but CAG found data and claim control failures and survey coverage remained partial, so outcome evidence is limited." }
 ---
 
 ## In depth

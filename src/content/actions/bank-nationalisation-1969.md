@@ -49,7 +49,9 @@ scoring:
   lag_years: 10
   shocks: ["1980-second-nationalisation", "1991-balance-of-payments-crisis"]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 1, process: -1, delivery: 3, note: "Rural branches rose from 1,833 to 35,206 and agricultural credit share grew, though benefits skewed to better-off borrowers and the first Act was struck down." }
+    - { id: B, reach: 4, outcome: 3, sustainability: 1, process: -2, delivery: 4, note: "Rural branches rose from 1,833 to 35,206 and rural credit share grew, but the first Act was struck down and gains skewed to better-off borrowers." }
 ---
 
 ## In depth

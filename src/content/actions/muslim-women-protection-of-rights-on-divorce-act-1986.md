@@ -45,7 +45,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: -1, sustainability: 0, process: -3, delivery: 2, note: "Act narrowed post-Shah Bano maintenance rights, was criticised by women's groups, and needed judicial reading-in in 2001 and a further ruling in 2024 on parallel remedies." }
+    - { id: B, reach: -1, outcome: -2, sustainability: -1, process: -2, delivery: 0, note: "The Act narrowed maintenance rights recognised by the Supreme Court in 1985 and needed judicial reading-down in 2001 and 2024 to settle remedies." }
 ---
 
 ## In depth

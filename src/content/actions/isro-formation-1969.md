@@ -42,7 +42,9 @@ scoring:
   lag_years: 6
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 3, sustainability: 4, process: 0, delivery: 3, note: "Dedicated institution has persisted across decades with growing capability and technology transfers, though evidence is mostly institutional rather than outcome metrics." }
+    - { id: B, reach: 3, outcome: 3, sustainability: 4, process: 1, delivery: 3, note: "A durable dedicated institution built domestic space capability across decades, though evidence given is mostly institutional rather than outcome data." }
 ---
 
 ## In depth

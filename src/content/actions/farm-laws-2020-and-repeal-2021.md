@@ -60,7 +60,9 @@ scoring:
   - farmers' protests 2020-21
   - Supreme Court stay January 2021
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: -4, process: -3, delivery: -4, note: "Laws were stayed within months and repealed in 2021 after sustained protest, so no outcome data exist and the effect was quickly reversed." }
+    - { id: B, reach: 0, outcome: 0, sustainability: -4, process: -4, delivery: -4, note: "Laws were passed via ordinance, stayed by the Supreme Court and repealed within a year, so no outcome data exist." }
 ---
 
 ## In depth

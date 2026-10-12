@@ -47,7 +47,9 @@ scoring:
   lag_years: 5
   shocks: [covid-2020]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 1, process: -1, delivery: 2, note: "Militancy incidents fell, but attribution is contested, statehood remains unrestored, communications restrictions were challenged, and the Court upheld the abrogation." }
+    - { id: B, reach: 1, outcome: 1, sustainability: 0, process: -1, delivery: 0, note: "Violence figures fell but attribution is contested, statehood is unrestored, and the Supreme Court upheld the step while communication restrictions were challenged." }
 ---
 
 ## In depth

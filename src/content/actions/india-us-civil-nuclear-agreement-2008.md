@@ -44,7 +44,9 @@ scoring:
   lag_years: 8
   shocks: [fukushima-2011, nuclear-liability-act-2010]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 1, sustainability: 1, process: 0, delivery: 2, note: "Ended exclusion from civil nuclear trade, but reactor orders were slow, nuclear share stays near 3% of generation, and the deal was domestically contested." }
+    - { id: B, reach: 1, outcome: 1, sustainability: 1, process: 0, delivery: 0, note: "Ended nuclear trade isolation, but nuclear remains about 3% of generation and liability issues slowed reactor orders amid domestic political controversy." }
 ---
 
 ## In depth

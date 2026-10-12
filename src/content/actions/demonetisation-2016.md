@@ -48,7 +48,9 @@ scoring:
   lag_years: 2
   shocks: ["2017-gst-rollout", "2018-nbfc-stress", "2020-covid"]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: -4, outcome: -3, sustainability: -3, process: -1, delivery: 2, note: "About 99% of notes returned, printing costs rose and studies show short-run contraction; stated aims lack clear evidence despite the Court upholding the action 4:1." }
+    - { id: B, reach: -3, outcome: -3, sustainability: -3, process: -1, delivery: 0, note: "Nearly all withdrawn notes returned and research found a short-run employment and credit contraction, while the Supreme Court upheld the decision 4:1." }
 ---
 
 ## In depth

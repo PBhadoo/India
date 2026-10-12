@@ -42,7 +42,9 @@ scoring:
   lag_years: 5
   shocks: [2g-licence-cancellation-2012, jio-entry-2016, covid-2020]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 3, sustainability: 3, process: 1, delivery: 4, note: "Teledensity reached 93% with over 1.3 billion subscribers and falling data prices, though competition and technology also contributed and key disputes were settled by courts." }
+    - { id: B, reach: 4, outcome: 3, sustainability: 3, process: 1, delivery: 3, note: "Teledensity reached 93% with falling data prices over the regulator's existence, though attribution is shared with competition and technology and litigation recurred." }
 ---
 
 ## In depth

@@ -55,7 +55,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 3, sustainability: 4, process: 3, delivery: 4, note: "Narrowed Emergency grounds and set detention safeguards that endured, though removal of property from fundamental rights and dropped clauses temper the net effect." }
+    - { id: B, reach: 3, outcome: 3, sustainability: 4, process: 3, delivery: 4, note: "Narrowed Emergency grounds and limited preventive detention, durable since enactment, though property ceased to be a fundamental right and parts of the Bill failed in the Rajya Sabha." }
 ---
 
 ## In depth

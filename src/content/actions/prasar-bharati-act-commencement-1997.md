@@ -46,7 +46,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 0, sustainability: 0, process: 1, delivery: -1, note: "Statutory corporation was created but only seven years after enactment, with continued executive influence over appointments, directions and funding." }
+    - { id: B, reach: 2, outcome: 0, sustainability: 1, process: 2, delivery: -1, note: "Statutory corporation created after a seven-year delay, with residual executive influence over directions and funding." }
 ---
 
 ## In depth

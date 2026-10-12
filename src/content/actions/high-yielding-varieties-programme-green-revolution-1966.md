@@ -55,7 +55,9 @@ scoring:
   - 1965-66 fall in wheat output
   - 1972-74 dip in foodgrain output and the 1973-74 international price crisis
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 4, sustainability: 1, process: 0, delivery: 4, note: "Foodgrain output rose from 108 to 176 million tonnes and net imports fell to nil by 1972, though groundwater and slowing productivity raise durability concerns." }
+    - { id: B, reach: 5, outcome: 4, sustainability: 1, process: 0, delivery: 4, note: "Foodgrain output rose from 108 to 176 million tonnes and net imports ended by 1972, though groundwater and productivity problems emerged in adopting regions." }
 ---
 
 ## In depth

@@ -42,7 +42,9 @@ scoring:
   lag_years: 5
   shocks: [ordinance-lapse-2015, state-level-amendments]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 0, sustainability: 0, process: 3, delivery: 1, note: "Introduced consent and impact-assessment safeguards after extensive legislative process, but a 2025 committee found weak implementation and the 2015 amendment attempt lapsed." }
+    - { id: B, reach: 3, outcome: 0, sustainability: 1, process: 2, delivery: -1, note: "Added consent, impact assessment and resettlement safeguards, but a 2025 committee found consent often a formality and compensation undervalued." }
 ---
 
 ## In depth

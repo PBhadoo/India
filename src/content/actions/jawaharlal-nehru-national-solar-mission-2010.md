@@ -42,7 +42,9 @@ scoring:
   lag_years: 5
   shocks: [global-solar-module-price-decline, covid-2020]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 4, sustainability: 3, process: 1, delivery: 3, note: "Solar capacity rose from 2.6 GW in 2014 to over 105 GW in 2025 with tariffs falling below coal, though the target slipped and costs also fell globally." }
+    - { id: B, reach: 3, outcome: 4, sustainability: 3, process: 0, delivery: 3, note: "Solar capacity rose from negligible to over 100 GW with auction tariffs below coal, though the 2022 target was reached late." }
 ---
 
 ## In depth

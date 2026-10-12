@@ -66,7 +66,9 @@ scoring:
   - covid-2020 (demand surge)
   - 2025-26 repeal and replacement
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 3, sustainability: 1, process: 2, delivery: 2, note: "A randomised evaluation found gains in earnings and poverty, but only about 10% of households completed 100 days and budgets fell short of demand." }
+    - { id: B, reach: 5, outcome: 3, sustainability: 1, process: 2, delivery: 2, note: "Reached about 755 lakh households with measured income gains, but only about 10% completed 100 days and the Act was replaced in 2026." }
 ---
 
 ## In depth

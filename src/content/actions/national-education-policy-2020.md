@@ -68,7 +68,9 @@ scoring:
   shocks:
     - covid-2020
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 0, sustainability: 0, process: 1, delivery: 1, note: "Enrolment growth predates the policy and cannot be attributed to it; the single regulator is not enacted and some states dispute implementation and funding." }
+    - { id: B, reach: 2, outcome: 0, sustainability: 0, process: 1, delivery: 0, note: "Enrolment trends predate the policy, spending lags aspiration and several States dispute implementation, so net evidence is too early to call." }
 ---
 
 ## In depth

@@ -45,7 +45,9 @@ scoring:
   lag_years: 8
   shocks: [covid-2020-recruitment-pause]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 0, process: 1, delivery: 2, note: "Savings and effects remain unestablished with only years elapsed; the Delhi High Court upheld it, but retention limits and recruitment revisions leave outcomes unclear." }
+    - { id: B, reach: 1, outcome: 0, sustainability: 1, process: 1, delivery: 1, note: "Upheld by the Delhi High Court after stated consultation, but pension savings and operational effects are unproven and most recruits exit after four years." }
 ---
 
 ## In depth

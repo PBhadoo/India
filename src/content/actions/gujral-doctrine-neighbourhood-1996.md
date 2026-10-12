@@ -43,7 +43,9 @@ scoring:
   lag_years: 3
   shocks: [kargil-1999]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 0, sustainability: 0, process: 0, delivery: 1, note: "A set of principles with no measured outcomes beyond contemporaneous treaties; critics call it cosmetic and it excluded Pakistan and China." }
+    - { id: B, reach: 1, outcome: 0, sustainability: 0, process: 0, delivery: 0, note: "Treaties with Nepal and Bangladesh coincided with the doctrine, but it excluded Pakistan and China and its causal effect is unclear." }
 ---
 
 ## In depth

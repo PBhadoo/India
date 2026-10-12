@@ -47,7 +47,9 @@ scoring:
   lag_years: 3
   shocks: [covid-2020]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: -1, process: -2, delivery: 2, note: "Created grievance and compliance structures but a 2023 amendment was struck down by the Bombay High Court and PRS questioned delegated powers and traceability." }
+    - { id: B, reach: 0, outcome: -1, sustainability: -1, process: -2, delivery: 0, note: "PRS questioned the Rules' delegated powers and traceability proportionality, and the 2023 fact-check amendment was struck down by the Bombay High Court." }
 ---
 
 ## In depth

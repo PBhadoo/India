@@ -44,7 +44,9 @@ scoring:
   lag_years: 3
   shocks: [puttaswamy-privacy-judgment-2017, covid-2020]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 2, sustainability: 2, process: 0, delivery: 4, note: "Near-universal enrolment and large transaction volumes, offset by Money Bill objections, partial court limits on mandatory linking and exclusion and security concerns." }
+    - { id: B, reach: 5, outcome: 2, sustainability: 2, process: -1, delivery: 4, note: "Near-universal coverage and large authentication volumes, but passed as a Money Bill, partly struck down in 2018 and linked to exclusion and data-security concerns." }
 ---
 
 ## In depth

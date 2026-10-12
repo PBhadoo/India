@@ -47,7 +47,9 @@ scoring:
   lag_years: 4
   shocks: ["2020-covid"]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 0, process: -1, delivery: 1, note: "Notified only in late 2025 with most state rules pending and unions opposed, so no usable outcome data exist." }
+    - { id: B, reach: 3, outcome: 0, sustainability: 0, process: -1, delivery: 0, note: "Extends social security to gig workers but raises retrenchment thresholds, with unions opposed and most State rules still pending, so effects are unmeasured." }
 ---
 
 ## In depth

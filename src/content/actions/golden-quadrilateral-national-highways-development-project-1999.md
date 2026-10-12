@@ -43,7 +43,9 @@ scoring:
   lag_years: 5
   shocks: [land-acquisition-delays, global-financial-crisis-2008]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 3, sustainability: 3, process: 0, delivery: 2, note: "Studies show more manufacturing entry and productivity near the corridor, but CAG found major schedule delays and the corridor finished years late." }
+    - { id: B, reach: 4, outcome: 3, sustainability: 2, process: 0, delivery: 2, note: "Districts near the corridor saw more plant entry and productivity, though completion ran years behind schedule with CAG-estimated losses." }
 ---
 
 ## In depth

@@ -52,7 +52,9 @@ scoring:
   - covid-2020
   - delta wave 2021
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 0, sustainability: -1, process: -2, delivery: 3, note: "Official counterfactual claims averted cases but lacks independent replication, while migrant displacement required court directions and output fell sharply." }
+    - { id: B, reach: 2, outcome: 1, sustainability: -1, process: -2, delivery: 1, note: "Government estimates credit the lockdown with averted cases, but abrupt migrant displacement needed court-directed relief and GDP fell sharply." }
 ---
 
 ## In depth

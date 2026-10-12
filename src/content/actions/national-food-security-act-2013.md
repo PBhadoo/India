@@ -69,7 +69,9 @@ scoring:
   shocks:
   - covid-2020 (PMGKAY additional grain)
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 4, sustainability: 1, process: 3, delivery: 4, note: "Legal entitlement covering about 80 crore people, with measured PDS leakage falling from 41.7% to 8.8%, though fiscal burden and outdated coverage data persist." }
+    - { id: B, reach: 5, outcome: 3, sustainability: 1, process: 1, delivery: 3, note: "Legal entitlement covering about 80 crore people with measured leakage falling from 41.7% to 8.8%, at a large and growing fiscal cost." }
 ---
 
 ## In depth

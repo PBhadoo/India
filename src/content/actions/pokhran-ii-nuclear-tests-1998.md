@@ -43,7 +43,9 @@ scoring:
   lag_years: 3
   shocks: [kargil-1999, sanctions-1998]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 0, sustainability: 1, process: -1, delivery: 3, note: "Sanctions were short-lived and largely lifted within months, but Pakistan tested within weeks and strategic net benefit cannot be measured from the evidence." }
+    - { id: B, reach: 2, outcome: 2, sustainability: 2, process: -1, delivery: 3, note: "Declared capability and doctrine with limited, temporary sanctions, but the decision followed little public debate and prompted Pakistan's tests." }
 ---
 
 ## In depth

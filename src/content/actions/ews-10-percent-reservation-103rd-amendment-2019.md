@@ -54,7 +54,9 @@ scoring:
   - covid-2020 (recruitment and admissions)
   - litigation 2019-2022
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 0, sustainability: 0, process: 2, delivery: 1, note: "Upheld 3:2 by the Supreme Court, but no national data on admissions or appointments under the quota were located, so outcomes cannot be judged." }
+    - { id: B, reach: 3, outcome: 0, sustainability: 1, process: 2, delivery: 1, note: "Upheld 3:2 by the Supreme Court and enabling a 10% quota, but no beneficiary data were located and the minority found discrimination." }
 ---
 
 ## In depth

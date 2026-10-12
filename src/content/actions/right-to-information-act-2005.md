@@ -48,7 +48,9 @@ scoring:
   lag_years: 5
   shocks: [covid-2020]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 3, sustainability: 2, process: 3, delivery: 2, note: "Enforceable right used by lakhs of applicants each year, but commission backlogs exceeding four lakh pending cases and independence disputes weaken delivery." }
+    - { id: B, reach: 4, outcome: 3, sustainability: 3, process: 3, delivery: 2, note: "Lakhs of requests annually and judicial affirmation show real use, offset by large commission backlogs and independence disputes." }
 ---
 
 ## In depth

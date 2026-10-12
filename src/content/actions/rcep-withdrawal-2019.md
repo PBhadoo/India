@@ -41,7 +41,9 @@ scoring:
   lag_years: 5
   shocks: [covid-2020, galwan-2020]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: -1, sustainability: 0, process: 0, delivery: 3, note: "Modelling projected losses from staying out while trade deficit with China did not fall; evidence is thin and the option to join remains open." }
+    - { id: B, reach: 0, outcome: -1, sustainability: 0, process: 0, delivery: 0, note: "Modelling projects some losses from staying out while the China trade deficit concern was not resolved, so evidence is mixed and thin." }
 ---
 
 ## In depth

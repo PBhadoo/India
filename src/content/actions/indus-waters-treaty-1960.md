@@ -43,7 +43,9 @@ scoring:
   lag_years: 5
   shocks: [indo-pak-war-1965, indo-pak-war-1971, kargil-1999, pahalgam-attack-2025]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 1, process: 2, delivery: 3, note: "Treaty gave a stable allocation for decades and workable dispute routes, though India placed it in abeyance in 2025 and arbitration is contested." }
+    - { id: B, reach: 3, outcome: 1, sustainability: 2, process: 1, delivery: 1, note: "The treaty gave a lasting allocation framework and dispute routes, but allocation by volume favours the other side and it has been in abeyance since April 2025." }
 ---
 
 ## In depth

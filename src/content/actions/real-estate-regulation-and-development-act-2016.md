@@ -46,7 +46,9 @@ scoring:
   lag_years: 4
   shocks: ["2016-demonetisation", "2017-gst-rollout", "2020-covid"]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 2, process: 3, delivery: 3, note: "Over 1.5 lakh projects registered and 1.47 lakh complaints disposed, with core features upheld by the Supreme Court, though implementation is uneven across States." }
+    - { id: B, reach: 3, outcome: 2, sustainability: 3, process: 2, delivery: 2, note: "Over 1.5 lakh projects registered and core provisions upheld by the Supreme Court, though implementation is uneven across States." }
 ---
 
 ## In depth

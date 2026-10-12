@@ -65,7 +65,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 1, process: -1, delivery: 4, note: "Too recent for outcome data; committee review occurred but critics cite longer police custody, retained marital rape exception and vague Section 152." }
+    - { id: B, reach: 1, outcome: 0, sustainability: 0, process: 0, delivery: 2, note: "Removes sedition and adds community service, but critics note vague new offences and longer police custody; no outcome data yet." }
 ---
 
 ## In depth

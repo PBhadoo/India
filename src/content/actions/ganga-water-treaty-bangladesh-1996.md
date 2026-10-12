@@ -42,7 +42,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 0, sustainability: 1, process: 1, delivery: 1, note: "Formula-based framework replaced lapsed ad hoc arrangements, yet Bangladesh reportedly missed its guaranteed share in critical dry periods about 65% of the time." }
+    - { id: B, reach: 2, outcome: 0, sustainability: 1, process: 0, delivery: -1, note: "Replaced ad hoc arrangements with a formula, but Bangladesh reportedly missed its guaranteed share in critical periods about 65% of the time." }
 ---
 
 ## In depth

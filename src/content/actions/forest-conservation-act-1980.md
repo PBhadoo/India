@@ -44,7 +44,9 @@ scoring:
   lag_years: 10
   shocks: [godavarman-ruling-1996, economic-liberalisation-1991]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 2, sustainability: 2, process: 1, delivery: 2, note: "Diversion rates fell relative to the pre-Act period and total cover rose, but dense forest declined and diversions continue at scale." }
+    - { id: B, reach: 2, outcome: 1, sustainability: 2, process: 1, delivery: 1, note: "Diversion rates fell versus earlier decades and total cover rose, but dense forest declined and large diversions continued." }
 ---
 
 ## In depth

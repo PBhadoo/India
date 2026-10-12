@@ -97,3 +97,62 @@ relatedAction: optional action slug
 - Party totals are the sum of credits. Years in power: sum over governments of `(days in office / 365.25) x partner.share` for each party, with a separate whole-years count where the party led. Points per year = points / years in power, computed with a category weight vector (default all 1).
 - Flag a criterion for review when the two scorers differ by 2 or more.
 - A party-category cell with fewer than 2 scored actions is labelled "low data".
+
+---
+
+# Addendum v2: Dossiers, institution actions, new categories
+
+## Claim types (use these exact labels everywhere)
+- `finding`: a court, regulator or statutory body's recorded finding or order (cite the order/judgment).
+- `official-statement`: what a government, ministry, constitutional body or company officially said or filed.
+- `allegation`: a claim by a party, petitioner, journalist, NGO or analyst that has not been established by a finding. Always state its current status and the named party's response.
+- `data`: a measured figure from an official or audited source, with period and unit.
+- `event`: a dated, uncontested occurrence (a notification issued, a bill passed, an arrest made).
+
+## Dossiers: `src/content/dossiers/<slug>.md` (not scored, no party points)
+```yaml
+title: Special Intensive Revision of electoral rolls
+summary: One neutral sentence, max 240 chars.
+category: elections                 # taxonomy id
+subcategories: [electoral-rolls]
+kind: topic | institution | organisation | party | company-group
+asOf: 2026-10-12                    # date the facts were last checked
+status: ongoing | settled
+lastReviewed: 2026-10-12
+timeline:                           # chronological, each item sourced
+  - { date: 2025-06-24, event: "...", actor: "Election Commission of India", type: event, source: 1 }
+claims:                             # contested or notable assertions
+  - claim: "..."
+    type: allegation | finding | official-statement | data
+    madeBy: "who said it (named)"
+    status: "e.g. pending before Supreme Court / upheld / dismissed / denied / unverified"
+    response: "the named party's stated response, if any"   # required for allegations about a named person or company
+    source: 3
+positions:                          # who says what, in their own words (paraphrase with attribution)
+  - { holder: "Election Commission of India", position: "...", source: 2 }
+tables:                             # measured data
+  - title: "..."
+    caption: "what it measures, period, unit"
+    columns: [Year, Registered, Convicted]
+    rows: [[2019, 1, 2]]
+    source: 4
+notShown:                           # what the facts here do NOT establish (required, at least 2 items)
+  - "..."
+sources:                            # same shape as actions; index = position in this list, starting at 1
+  - { title: ..., url: https://..., publisher: ..., type: primary | official-data | court | reputable-media | academic }
+```
+Markdown body (optional, 150-400 words): a neutral explainer. At least 5 sources, at least 2 primary/official-data/court. Cite `[n]` source indices.
+
+Rules for dossiers:
+- No verdicts ("biased", "captured", "corrupt", "controls") and no motive attribution. Report findings, figures, statements and statuses; end with `notShown`.
+- Every allegation names who made it, its legal status, and the response of any named person, company or body.
+- Named private people and companies: use only court/regulator/government/company-filing facts or reputable journalism, labelled as such; give their stated response.
+- Counterfactual questions ("what if X were removed") are answered only with documented exposure data and documented precedents, never predictions.
+- Parties in power are named by government id and date, not by adjectives. Parity: the same questions are asked of every government and party.
+
+## Action entries by independent institutions
+Add `credit: none` to the front-matter of an Action whose decision-maker is an independent institution (Election Commission, a court, a regulator) rather than a party government. It is still scored on the rubric and shown, but earns or loses no party points. Default is `credit: party`. Optional `institution: "Election Commission of India"`. `governmentId` is still required (the government in office at the time) for context.
+
+## New categories (added to taxonomy.yaml)
+- `business-power`: Business & Public Power (subs: big-business-groups, regulators-markets, competition-concentration, business-political-funding, state-contracts-privatisation)
+- `parties-movements`: Parties, Movements & Civil Society (subs: new-parties, ngos-civil-society, protests-movements, arrests-prosecutions)

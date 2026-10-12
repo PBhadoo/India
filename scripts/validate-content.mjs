@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Validates every action and developing entry. Exits non-zero on errors; warnings never fail.
+// Validates every action, developing item and dossier. Exits non-zero on errors; warnings never fail.
 import {
-  ACTIONS_DIR, DEVELOPING_DIR, CRITERIA, listMd, loadEntry, loadTaxonomy, loadGovernments,
+  ACTIONS_DIR, DEVELOPING_DIR, DOSSIERS_DIR, CRITERIA, listMd, loadEntry, loadTaxonomy, loadGovernments,
   loadLoadedWords, isoDate, daysSince,
 } from './lib.mjs';
-import { nonStringTextFields, hasPrimarySource } from './audit-lib.mjs';
+import { nonStringTextFields, hasPrimarySource, checkDossier } from './audit-lib.mjs';
 
 const STATUSES = ['proposed', 'passed', 'implemented', 'stalled', 'repealed', 'struck-down'];
 const SOURCE_TYPES = ['primary', 'official-data', 'court', 'reputable-media', 'academic'];
@@ -93,6 +93,10 @@ function validateAction(e) {
   if (d.level === 'state' && !isStr(d.state)) err(e, 'state is required when level is state');
   if (isStr(d.status) && !STATUSES.includes(d.status)) err(e, `status must be one of ${STATUSES.join('|')}`);
   if (typeof d.developing !== 'boolean') err(e, 'developing must be true/false');
+  if (d.credit !== undefined && !['party', 'none'].includes(d.credit)) err(e, 'credit must be party|none');
+  if (d.institution !== undefined && !isStr(d.institution)) err(e, 'institution must be a non-empty string');
+  if (d.credit === 'none' && !isStr(d.institution)) warn(e, 'credit is none but no institution is named');
+  if (d.institution !== undefined && d.credit !== 'none') warn(e, 'institution is set but credit is not none');
 
   const cat = checkCategory(e, d);
   if (!isArr(d.subcategories) || d.subcategories.length === 0) err(e, 'subcategories must be a non-empty list');
@@ -162,13 +166,22 @@ function validateDeveloping(e, actionSlugs) {
   lint(e, [d.title, d.summary, ...(d.knownFacts ?? []), ...(d.unknowns ?? []), e.content]);
 }
 
+function validateDossier(e) {
+  trackSlug(e, 'dossier');
+  const r = checkDossier(e, { categories, words });
+  r.errors.forEach((m) => err(e, m));
+  r.warnings.forEach((m) => warn(e, m));
+}
+
 const actions = listMd(ACTIONS_DIR).map(loadEntry);
 const developing = listMd(DEVELOPING_DIR).map(loadEntry);
 actions.forEach(validateAction);
 const actionSlugs = new Set(actions.map((a) => a.slug));
 developing.forEach((e) => validateDeveloping(e, actionSlugs));
+const dossiers = listMd(DOSSIERS_DIR).map(loadEntry);
+dossiers.forEach((e) => validateDossier(e));
 
 for (const w of warnings) console.warn(`WARN  ${w}`);
 for (const x of errors) console.error(`ERROR ${x}`);
-console.log(`\nChecked ${actions.length} actions, ${developing.length} developing items: ${errors.length} errors, ${warnings.length} warnings.`);
+console.log(`\nChecked ${actions.length} actions, ${developing.length} developing items, ${dossiers.length} dossiers: ${errors.length} errors, ${warnings.length} warnings.`);
 process.exit(errors.length ? 1 : 0);

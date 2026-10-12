@@ -1,0 +1,13 @@
+---
+import { srcList } from '../lib/dossiers.ts';
+interface Props { refs: unknown; sources: { title: string; url: string; publisher?: string }[]; prefix?: string }
+const { refs, sources, prefix = 'Source' } = Astro.props;
+const list = srcList(refs).filter((n) => sources[n - 1]);
+---
+{list.length > 0 && (
+  <span class="srcrefs">
+    {list.map((n) => (
+      <a class="srcref" href={sources[n - 1].url} rel="noopener" title={`${sources[n - 1].title}${sources[n - 1].publisher ? ', ' + sources[n - 1].publisher : ''}`}>{prefix} [{n}]<span class="vh">: {sources[n - 1].title}</span></a>
+    ))}
+  </span>
+)}

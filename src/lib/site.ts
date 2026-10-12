@@ -14,7 +14,12 @@ export interface ActionRow {
   year: number;
   gov?: Government;
   originGov?: Government;
+  /** Lead party of the responsible government; '' when the action carries no party credit. */
   partyId: string;
+  /** True when decided by an independent institution (credit: none). */
+  noCredit: boolean;
+  /** Lead party of the government in office, for context only (also set when noCredit). */
+  contextPartyId: string;
   /** Pre-rendered markdown body is read via astro:content render() on the detail page only. */
   entry: any;
 }
@@ -67,7 +72,9 @@ async function build(): Promise<Site> {
         year: yearOf(e.data.date),
         gov,
         originGov: e.data.originGovernmentId ? getGovernment(e.data.originGovernmentId) : undefined,
-        partyId: gov?.leadParty ?? '',
+        partyId: e.data.credit === 'none' ? '' : (gov?.leadParty ?? ''),
+        noCredit: e.data.credit === 'none',
+        contextPartyId: gov?.leadParty ?? '',
         score: undefined as unknown as ActionScore,
       } satisfies ActionRow;
     })

@@ -1,11 +1,11 @@
 ---
 import { SOURCE_TYPE_LABEL } from '../lib/format.ts';
-interface Props { sources: { title: string; url: string; publisher?: string; type?: string }[] }
-const { sources } = Astro.props;
+interface Props { sources: { title: string; url: string; publisher?: string; type?: string }[]; idPrefix?: string }
+const { sources, idPrefix } = Astro.props;
 ---
 <ol class="src-list">
-  {sources.map((s) => (
-    <li>
+  {sources.map((s, i) => (
+    <li id={idPrefix ? `${idPrefix}${i + 1}` : undefined}>
       <div>
         <a href={s.url} rel="noopener">{s.title}</a>
         <div class="pub">

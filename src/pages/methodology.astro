@@ -5,13 +5,18 @@ import rubric from '../data/rubric.json';
 import { IMPLEMENTER_CREDIT, ORIGINATOR_CREDIT, DISAGREEMENT_THRESHOLD, LOW_DATA_MIN_ACTIONS, PRELIMINARY_MIN_SCORED, PRIOR_YEARS } from '../lib/scoring-core.ts';
 import { MINUS } from '../lib/format.ts';
 import { categories } from '../lib/taxonomy.ts';
-import { getSite } from '../lib/site.ts';
+import { getSite, centreGovernments } from '../lib/site.ts';
 import { fmtSigned, fmtNum } from '../lib/format.ts';
+import { CLAIM_TYPE_INFO, CLAIM_TYPE_ORDER } from '../lib/dossiers.ts';
+import ClaimBadge from '../components/ClaimBadge.astro';
 const crit = rubric.criteria as { id: string; name: string; question: string; anchors: Record<string, string> }[];
 const order = ['-5', '-3', '-1', '0', '1', '3', '5'];
-const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['sources', 'Sources and data quality'], ['attribution', 'Who gets the credit'], ['coalition', 'Coalitions'], ['headline', 'Why the headline figure changed'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
+const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['sources', 'Sources and data quality'], ['attribution', 'Who gets the credit'], ['institutions', 'Independent institutions'], ['dossiers', 'Dossiers and claim types'], ['coalition', 'Coalitions'], ['headline', 'Why the headline figure changed'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
 const pct = (n: number) => `${Math.round(n * 100)}%`;
 const site = await getSite();
+const thinLeaders = new Set(centreGovernments().map((g) => g.leadParty)).size;
+const thinParties = [...new Set(centreGovernments().map((g) => g.leadParty))].filter((pid) => site.actions.filter((a) => !a.noCredit && a.gov?.leadParty === pid).length < 3).length;
+const noCreditCount = site.actions.filter((a) => a.noCredit).length;
 const byId = new Map(site.scoring.parties.map((p) => [p.partyId, p]));
 const ex = ['inc', 'bjp'].map((id) => byId.get(id)).filter((p): p is NonNullable<typeof p> => !!p && p.scoredActions > 0 && p.yearsInPower > 0 && p.avgPerAction != null);
 const nm = (id: string) => ({ inc: 'INC', bjp: 'BJP' } as Record<string, string>)[id] ?? id.toUpperCase();
@@ -64,6 +69,38 @@ const nm = (id: string) => ({ inc: 'INC', bjp: 'BJP' } as Record<string, string>
           <li>Court rulings, state action and events outside any government's control are recorded as facts and shocks, not as credit.</li>
         </ul>
         <p>The same rule is applied whichever party holds office. Positive and negative points are credited in the same way, so a harmful action lowers the credited government's total as much as a beneficial one raises it.</p>
+      </section>
+
+      <section id="institutions" aria-labelledby="h-inst">
+        <h2 id="h-inst">Independent institutions</h2>
+        <p>Some decisions are made by an independent institution, such as a court, a regulator or the Election Commission, and not by a party government. These entries carry <code>credit: none</code> and the badge <span class="badge badge-inst">Independent institution: no party credit</span>.</p>
+        <ul>
+          <li>They are still described with the same template and scored on the same rubric, and they appear in action listings, category pages and the coverage counts.</li>
+          <li>They earn or lose no party points: they are left out of every party total, years-in-power figure, heat grid and weight calculation. The same goes for any originating government.</li>
+          <li>Counts of scored actions are shown in two groups: scored actions with party credit, and scored actions by independent institutions. The government in office at the time is still named on the entry, for context only.</li>
+          <li>The Election Commission, a court or a regulator can be the subject of a dossier. A dossier is never scored.</li>
+        </ul>
+        {noCreditCount > 0 && <p class="small">There are currently {noCreditCount} such {noCreditCount === 1 ? 'entry' : 'entries'}.</p>}
+      </section>
+
+      <section id="dossiers" aria-labelledby="h-dossiers">
+        <h2 id="h-dossiers">Dossiers and claim types</h2>
+        <p>A <a href="/dossiers/">dossier</a> is a fact file on an institution, organisation, party, company group or live topic. It has a dated timeline, a claims table, the positions of each holder, measured data, a list of what the facts do not show, and numbered sources. Dossiers are not scored and earn no party points. Each shows the date its facts were last checked and says that later developments may exist.</p>
+        <h3>The five claim types</h3>
+        <p>Every timeline item and every row of a claims table is labelled with one of these types. The label is shown in words, with a symbol and a border pattern, so it never depends on colour.</p>
+        <dl class="dl claim-defs">
+          {CLAIM_TYPE_ORDER.map((t) => <><dt><ClaimBadge type={t} /></dt><dd>{CLAIM_TYPE_INFO[t].definition}</dd></>)}
+        </dl>
+        <h3>Rules for dossiers</h3>
+        <ul>
+          <li><strong>No verdicts and no motives.</strong> Dossiers report findings, figures, statements and statuses. They do not use words such as "biased", "captured", "corrupt" or "controls", and they do not say why anyone acted. Wording is linted like every other entry.</li>
+          <li><strong>Allegations carry a status and a response.</strong> Each names who made it, its current legal or procedural status (for example pending, dismissed, upheld or unverified), and the stated response of any named person, company or body. If no response has been published, the row says so.</li>
+          <li><strong>Named private people and companies</strong> appear only through court, regulator, government or company-filing facts, or reputable journalism, labelled as such, with their stated response.</li>
+          <li><strong>Counterfactual questions</strong> (for example "what if this body were removed") are answered only with documented exposure data and documented precedents, never with predictions.</li>
+          <li><strong>Parity.</strong> Parties in power are named by government and date, not by adjectives, and the same questions are asked of every government and party.</li>
+          <li><strong>Sources.</strong> At least five, of which at least two are primary, official-data or court sources. Facts are dated "as of" a day, and an ongoing dossier is flagged for re-checking after 45 days.</li>
+          <li><strong>What these facts do not show.</strong> Every dossier ends its facts with a short list of what they do not establish.</li>
+        </ul>
       </section>
 
       <section id="coalition" aria-labelledby="h-coal">
@@ -142,7 +179,7 @@ const nm = (id: string) => ({ inc: 'INC', bjp: 'BJP' } as Record<string, string>
           <li><strong>Delivery can add points for carrying out a harmful measure.</strong> Delivery asks whether an action was carried out as announced. It does not depend on whether the action was good, so it can be positive for an action whose outcome is scored as harmful: three entries have a Delivery score of +2.5 or more and a negative total. This is a limit of the rubric. A revised rubric, in which Delivery is conditional on the outcome, is planned. Changing the rubric means every entry has to be scored again, so existing scores are left as they are until then.</li>
           <li><strong>Recent actions and missing evidence.</strong> Evidence takes years to appear, and a criterion with no evidence is scored near zero. Actions from 2014 onward average about 3 points each, against about 10 for 1950 to 1969 and 2004 to 2013, partly for this reason. A recent government can score lower than an older one because the sources cannot yet judge its actions, not because the actions were worse.</li>
           <li><strong>Blinding is partial.</strong> The scorers do not know the party or the government, but they read the facts, which can reveal the era, a minister or a government. Both scorers are AI sessions and may share biases, so their agreement is not independent confirmation. Seven entries have scorer totals four or more points apart.</li>
-          <li><strong>Entries are a selection, not a full record.</strong> The maintainers choose which actions to include. The number of entries per year differs by an order of magnitude between governments, 22 parties that have led a government have fewer than three entries, and no test checks that the selection is balanced by importance. This is why the headline is now an average per action rather than a rate per year.</li>
+          <li><strong>Entries are a selection, not a full record.</strong> The maintainers choose which actions to include. The number of entries per year differs by an order of magnitude between governments, {thinParties} of the {thinLeaders} parties that have led a Union government have fewer than three entries, and no test checks that the selection is balanced by importance. This is why the headline is now an average per action rather than a rate per year.</li>
           <li>Scores are structured judgements. Two other scorers could give different numbers; that is why ranges and disagreement flags are published.</li>
           <li>Actions differ greatly in size. A single large reform and a small scheme are both scored out of 25, and the Reach criterion is the main place where size shows.</li>
           <li>Causation is hard. Outcomes can follow from earlier decisions, from other governments, from states, from courts or from events such as a pandemic. Shocks are noted on each entry.</li>

@@ -15,7 +15,7 @@ claims:
     source: 1
   - claim: "Unsupported accusation."
     type: allegation
-  - claim: Colon: unquoted
+  - claim: { Colon: unquoted }
     type: finding
     source: 2
 positions: []

@@ -4,6 +4,7 @@ import Timeline from '../components/Timeline.astro';
 import TenureTable from '../components/TenureTable.astro';
 import PointsExplorer from '../components/PointsExplorer.astro';
 import ActionCard from '../components/ActionCard.astro';
+import DossierCard from '../components/DossierCard.astro';
 import { getSite, centreGovernments, stateGovernments, listStates } from '../lib/site.ts';
 import { categories } from '../lib/taxonomy.ts';
 import { fmtDate, yearOf, isoDate } from '../lib/format.ts';
@@ -17,7 +18,9 @@ for (const a of site.actions) counts.set(a.data.category, (counts.get(a.data.cat
 const dev = site.developing.slice(0, 3);
 const latest = [...site.actions].sort((a, b) => +new Date(b.data.lastReviewed) - +new Date(a.data.lastReviewed) || a.slug.localeCompare(b.slug)).slice(0, 6);
 const first = centre.length ? Math.min(...centre.map((g) => yearOf(g.start))) : null;
-const scored = site.actions.filter((a) => a.score.scored).length;
+const scored = site.actions.filter((a) => a.score.scored && !a.noCredit).length;
+const scoredNone = site.actions.filter((a) => a.score.scored && a.noCredit).length;
+const latestDossiers = site.dossiers.slice(0, 3);
 ---
 <Base title="Home" path="/">
   <div class="wrap hero">
@@ -28,8 +31,10 @@ const scored = site.actions.filter((a) => a.score.scored).length;
       <div class="stat" role="listitem"><div class="v">{centre.length}</div><div class="l">Union governments{first ? `, ${first} to today` : ''}</div></div>
       <div class="stat" role="listitem"><div class="v">{site.actions.length}</div><div class="l">{site.actions.length === 1 ? 'action' : 'actions'} recorded</div></div>
       <div class="stat" role="listitem"><div class="v">{scored}</div><div class="l">scored by two party-blind AI scorers</div></div>
+      <div class="stat" role="listitem"><div class="v">{site.dossiers.length}</div><div class="l">{site.dossiers.length === 1 ? 'dossier' : 'dossiers'}, not scored</div></div>
       <div class="stat" role="listitem"><div class="v">{site.developing.length}</div><div class="l">developing {site.developing.length === 1 ? 'item' : 'items'}</div></div>
     </div>
+    {scoredNone > 0 && <p class="small">{scoredNone} more scored {scoredNone === 1 ? 'action was' : 'actions were'} decided by independent institutions. {scoredNone === 1 ? 'It is' : 'They are'} listed with the actions but earn no party credit and are left out of every party total.</p>}
     <p class="small">{site.lastUpdated ? <>Data last updated {fmtDate(site.lastUpdated)}.</> : <>No entries have been published yet.</>}</p>
   </div>
 
@@ -69,23 +74,42 @@ const scored = site.actions.filter((a) => a.score.scored).length;
     </section>
 
     <section class="block" id="developing" aria-labelledby="h-dev">
-      <div class="block-head">
-        <h2 id="h-dev">Developing now</h2>
-        <a class="more" href="/developing/">All developing items</a>
-      </div>
-      {dev.length === 0 ? (
-        <div class="empty"><p>No developing items are published at the moment. Items appear here while facts are still being established.</p></div>
-      ) : (
-        <div class="grid wide">
-          {dev.map((d) => (
-            <article class="card link">
-              <div class="meta"><span class={`badge ${d.data.status === 'developing' ? 'badge-live' : ''}`}>{d.data.status === 'developing' ? 'Unsettled' : 'Settled'}</span><time datetime={isoDate(d.data.date)}>{fmtDate(d.data.date)}</time></div>
-              <h3><a class="cover" href={`/developing/${d.slug}/`}>{d.data.title}</a></h3>
-              <p class="small">{d.data.summary}</p>
-            </article>
-          ))}
+      <div class="strips">
+        <div class="strip" id="developing-strip">
+          <div class="block-head">
+            <h2 id="h-dev">Developing now</h2>
+            <a class="more" href="/developing/">All developing items</a>
+          </div>
+          {dev.length === 0 ? (
+            <div class="empty"><p>No developing items are published at the moment. Items appear here while facts are still being established.</p></div>
+          ) : (
+            <ul class="alist">
+              {dev.map((d) => (
+                <li>
+                  <article class="acard">
+                    <div class="meta"><span class={`badge ${d.data.status === 'developing' ? 'badge-live' : ''}`}>{d.data.status === 'developing' ? 'Unsettled' : 'Settled'}</span><time datetime={isoDate(d.data.date)}>{fmtDate(d.data.date)}</time></div>
+                    <h3><a href={`/developing/${d.slug}/`}>{d.data.title}</a></h3>
+                    <p class="small">{d.data.summary}</p>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-      )}
+        <div class="strip" id="dossiers-strip">
+          <div class="block-head">
+            <h2 id="h-dos">Latest dossiers</h2>
+            <a class="more" href="/dossiers/">All dossiers</a>
+          </div>
+          {latestDossiers.length === 0 ? (
+            <div class="empty"><p>No dossiers are published yet. A dossier is an unscored fact file on an institution, organisation or live topic.</p></div>
+          ) : (
+            <ul class="alist">
+              {latestDossiers.map((d) => <li><DossierCard dossier={d} /></li>)}
+            </ul>
+          )}
+        </div>
+      </div>
     </section>
 
     <section class="block" id="categories" aria-labelledby="h-cats">

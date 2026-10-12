@@ -1,0 +1,8 @@
+---
+interface Props { institution?: string; long?: boolean }
+const { institution, long = false } = Astro.props;
+---
+<span class="badge badge-inst" title={institution ? `Decided by ${institution}. Scored and shown, but earns or loses no party points.` : 'Decided by an independent institution. Scored and shown, but earns or loses no party points.'}>
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 3l6 3.5M3.5 7v5M6.5 7v5M9.5 7v5M12.5 7v5M2 13h12" /></svg>
+  Independent institution: no party credit
+</span>

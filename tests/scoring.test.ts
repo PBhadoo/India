@@ -153,3 +153,26 @@ test('party with 0 scored actions has no per-action or shrunk figure (not NaN)',
   assert.equal(empty[0].avgPerAction, null);
   assert.equal(empty[0].shrunkPerYear, null);
 });
+
+test("credit 'none' keeps the action score but gives no party credit", () => {
+  const s = scoreAction(scorers);
+  const inst = action('inst', { credit: 'none' });
+  assert.deepEqual(creditAction(inst, s, byId), []);
+  assert.equal(creditAction(action('party', { credit: 'party' }), s, byId).length > 0, true);
+  assert.equal(creditAction(action('dflt'), s, byId).length > 0, true);
+  // origin credit is skipped too
+  assert.deepEqual(creditAction(action('inst2', { credit: 'none', originGovernmentId: 'c1' }), s, byId), []);
+});
+
+test("computeScoring counts 'none' actions separately and excludes them from party totals", () => {
+  const base = computeScoring([action('p1')], govs, { level: 'all', asOf: '2020-01-01' });
+  const withNone = computeScoring([action('p1'), action('n1', { credit: 'none' }), action('n2', { credit: 'none', scorers: [] })], govs, { level: 'all', asOf: '2020-01-01' });
+  assert.equal(withNone.scoredActionCount, 1);
+  assert.equal(withNone.noCreditScoredCount, 1);
+  assert.equal(withNone.totalActionCount, 3);
+  assert.equal(withNone.actionScores['n1'].scored, true);
+  near(withNone.actionScores['n1'].points, 8);
+  assert.equal(withNone.credits.some((c) => c.slug === 'n1'), false);
+  assert.deepEqual(withNone.parties.map((p) => [p.partyId, p.points, p.scoredActions]), base.parties.map((p) => [p.partyId, p.points, p.scoredActions]));
+  assert.equal(base.noCreditScoredCount, 0);
+});

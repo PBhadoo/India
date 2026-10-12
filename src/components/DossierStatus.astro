@@ -1,0 +1,14 @@
+---
+import { DOSSIER_STATUS_LABEL } from '../lib/dossiers.ts';
+interface Props { status: string }
+const { status } = Astro.props;
+const settled = status === 'settled';
+---
+<span class={`pill pill-dossier-${settled ? 'settled' : 'ongoing'}`}>
+  {settled ? (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7" /></svg>
+  ) : (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5v3h-3" /></svg>
+  )}
+  {DOSSIER_STATUS_LABEL[status] ?? status}
+</span>

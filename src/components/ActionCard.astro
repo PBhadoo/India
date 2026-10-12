@@ -1,6 +1,7 @@
 ---
 import PartyChip from './PartyChip.astro';
 import StatusPill from './StatusPill.astro';
+import NoCreditBadge from './NoCreditBadge.astro';
 import { fmtDate, fmtSigned } from '../lib/format.ts';
 import { getCategory } from '../lib/taxonomy.ts';
 import { pm, type ActionRow, type Site } from '../lib/site.ts';
@@ -12,6 +13,7 @@ const cat = getCategory(a.data.category);
   <div class="meta">
     <StatusPill status={a.data.status} />
     {a.partyId && <PartyChip party={pm(site, a.partyId)} />}
+    {a.noCredit && <NoCreditBadge institution={a.data.institution} />}
     <time datetime={a.data.date.toISOString().slice(0, 10)}>{fmtDate(a.data.date)}</time>
     {showCategory && cat && <span>{cat.name}</span>}
     {a.data.level === 'state' && <span class="badge">State</span>}

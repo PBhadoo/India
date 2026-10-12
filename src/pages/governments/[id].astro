@@ -22,7 +22,8 @@ const yrs = yearsInOffice(g, site.asOf);
 const sorted = [...siblings].sort((a, b) => a.start.localeCompare(b.start));
 const i = sorted.findIndex((x) => x.id === id);
 const prev = sorted[i - 1], next = sorted[i + 1];
-const pts = site.actions.filter((a) => a.data.governmentId === id && a.score.scored);
+const pts = site.actions.filter((a) => a.data.governmentId === id && a.score.scored && !a.noCredit);
+const noCreditHere = acts.filter((a) => a.noCredit).length;
 const title = `${(g.leader || g.label)}, ${g.start.slice(0, 4)}`;
 ---
 <Base title={title} path={`/governments/${id}/`} description={`${g.label} led by ${(g.leader || g.label)}, ${fmtDate(g.start)} to ${g.end ? fmtDate(g.end) : 'present'}.`}>
@@ -36,7 +37,8 @@ const title = `${(g.leader || g.label)}, ${g.start.slice(0, 4)}`;
         <div class="stat"><div class="v">{fmtNum(yrs)}</div><div class="l">years in office</div></div>
         <div class="stat"><div class="v">{g.lokSabha ?? '–'}</div><div class="l">Lok Sabha number</div></div>
         <div class="stat"><div class="v">{acts.length}</div><div class="l">{acts.length === 1 ? 'action' : 'actions'} recorded under it</div></div>
-        <div class="stat"><div class="v">{pts.length}</div><div class="l">scored</div></div>
+        <div class="stat"><div class="v">{pts.length}</div><div class="l">scored with party credit</div></div>
+        {noCreditHere > 0 && <div class="stat"><div class="v">{noCreditHere}</div><div class="l">by independent institutions, listed but earning no party credit</div></div>}
       </div>
       <Timeline governments={siblings} site={site} compact legend={false} highlight={g.id} id="tl-this" />
       <p class="small" style="margin-top:.8rem">

@@ -34,7 +34,7 @@ concerns:
   - point: "Parallel remedies created litigation over which law applies."
     evidence: "Samad (2024) had to decide that Section 125 remains available despite the 1986 Act [6]."
 sources:
-  - { title: "Mohd. Ahmed Khan v. Shah Bano Begum and Ors., 1985 AIR 945 (case summary)", url: "https://bnblegal.com/landmark/mohd-ahmed-khan-v-s-shah-bano-begum-ors/", publisher: "BNB Legal", type: court }
+  - { title: "Mohd. Ahmed Khan v. Shah Bano Begum and Ors., 1985 AIR 945 (case summary)", url: "https://bnblegal.com/landmark/mohd-ahmed-khan-v-s-shah-bano-begum-ors/", publisher: "BNB Legal", type: reputable-media }
   - { title: "The Muslim Women (Protection of Rights on Divorce) Act, 1986", url: "https://indiacode.nic.in/handle/123456789/1873", publisher: "India Code, Ministry of Law and Justice", type: primary }
   - { title: "Muslim Women (Protection of Rights on Divorce) Act, 1986", url: "https://iasgyan.in/daily-current-affairs/muslim-women-protection-of-rights-on-divorce-act-1986", publisher: "IAS Gyan", type: reputable-media }
   - { title: "Danial Latifi v. Union of India (2001) 7 SCC 740", url: "https://digiscr.sci.gov.in/admin/judgement_file/judgement_pdf/2001/Supp.%20(3)/Part%20I/S_2001_419-454_1702447570.pdf", publisher: "Supreme Court of India (Digital SCR)", type: court }

@@ -35,7 +35,7 @@ sources:
   - { title: "History, Telecom Regulatory Authority of India", url: "https://www.trai.gov.in/about-us/history", publisher: Telecom Regulatory Authority of India, type: primary }
   - { title: "The Indian Telecom Services Yearly Performance Indicators 2025-26 (Press Release No. 127/2026)", url: "https://trai.gov.in/sites/default/files/2026-10/PR_No127of2026.pdf", publisher: Telecom Regulatory Authority of India, type: official-data }
   - { title: "India's top court gives telcos ten years to clear AGR dues", url: "https://www.lightreading.com/services/indias-top-court-gives-telcos-ten-years-to-clear-agr-dues/d/d-id/763574", publisher: Light Reading, type: reputable-media }
-  - { title: "Reserve Price For 2G Spectrum Licences (Supreme Court Observer)", url: "https://www.scobserver.in/supreme-court-observer-law-reports-scolr/union-of-india-v-sistema-shyam-teleservices-reservation-price-for-grant-of-2g-licences/", publisher: Supreme Court Observer, type: court }
+  - { title: "Reserve Price For 2G Spectrum Licences (Supreme Court Observer)", url: "https://www.scobserver.in/supreme-court-observer-law-reports-scolr/union-of-india-v-sistema-shyam-teleservices-reservation-price-for-grant-of-2g-licences/", publisher: Supreme Court Observer, type: reputable-media }
   - { title: "The Telecom Regulatory Authority of India Act, 1997 (India Code)", url: "https://www.indiacode.nic.in/bitstream/123456789/1929/1/a199724.pdf", publisher: India Code, Ministry of Law and Justice, type: primary }
 scoring:
   era_baseline: "In 1997 telecom tariffs were set by the Central Government and the sector was moving from a government-owned monopoly towards a multi-operator market, according to TRAI."

@@ -38,7 +38,7 @@ sources:
 - title: The National Food Security Bill, 2011 (bill track)
   url: https://prsindia.org/billtrack/the-national-food-security-bill-2011
   publisher: PRS Legislative Research
-  type: official-data
+  type: reputable-media
 - title: 'National Food Security Act portal: Act, coverage and entitlements'
   url: https://nfsa.gov.in/portal/nfsa-act
   publisher: Department of Food and Public Distribution, Government of India

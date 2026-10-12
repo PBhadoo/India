@@ -44,7 +44,7 @@ sources:
   - title: The National Investigation Agency (Amendment) Bill, 2019
     url: https://prsindia.org/billtrack/the-national-investigation-agency-amendment-bill-2019
     publisher: PRS Legislative Research
-    type: official-data
+    type: reputable-media
   - title: 'Inside the NIA''s "Perfect" Conviction Record: How Coercive Detentions Are Driving Guilty Pleas'
     url: https://m.thewire.in/article/rights/nia-convictions-guilty-pleas
     publisher: The Wire

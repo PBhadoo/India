@@ -41,7 +41,7 @@ sources:
   - { title: "Decoding Indira Gandhi's Bank Nationalisation of 1969", url: "https://www.thequint.com/amp/story/news/india/indira-gandhi-bank-nationalisation-1969-morarji-congress", publisher: "The Quint", type: reputable-media }
   - { title: "70 policies: Nationalisation of banks, 1969", url: "https://www.orfonline.org/expert-speak/43032-70-policies-nationalisation-of-banks-1969", publisher: "Observer Research Foundation", type: reputable-media }
   - { title: "Progress of commercial banking (table)", url: "https://website.rbi.org.in/documents/87730/30842423/12407.pdf", publisher: "Reserve Bank of India", type: official-data }
-  - { title: "R.C. Cooper v. Union of India (1970) - case summary", url: "https://lawfullegal.in/rustom-cavasjee-cooper-v-union-of-india1970/", publisher: "Lawful Legal (summary of Supreme Court judgment)", type: court }
+  - { title: "R.C. Cooper v. Union of India (1970) - case summary", url: "https://lawfullegal.in/rustom-cavasjee-cooper-v-union-of-india1970/", publisher: "Lawful Legal (summary of Supreme Court judgment)", type: reputable-media }
   - { title: "Did Nationalisation Achieve its Objectives?", url: "https://www.cenfa.org/?p=29279", publisher: "Centre for Financial Accountability (opinion by T. Franco)", type: reputable-media }
   - { title: "Bank GNPAs slumped to a multi-decade low in March: RBI report", url: "https://www.outlookmoney.com/banking/bank-gnpas-slumped-to-a-multi-decade-low-in-march-rbi-report", publisher: "Outlook Money", type: reputable-media }
 scoring:

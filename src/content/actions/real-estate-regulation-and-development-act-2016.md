@@ -37,7 +37,7 @@ concerns:
 sources:
   - { title: "The Real Estate (Regulation and Development) Bill, 2013 (bill track and comments)", url: "https://prsindia.org/billtrack/the-real-estate-regulation-and-development-bill-2013", publisher: "PRS Legislative Research", type: academic }
   - { title: "Real Estate (Regulation and Development) Act, 2016", url: "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016", publisher: "Wikipedia", type: reputable-media }
-  - { title: "Newtech Promoters and Developers v. State of U.P. - note on judgment", url: "https://ksandk.com/newsletter/newtech-promoters-and-developers-vs-state-of-u-p/", publisher: "K&S Partners (summary of Supreme Court judgment)", type: court }
+  - { title: "Newtech Promoters and Developers v. State of U.P. - note on judgment", url: "https://ksandk.com/newsletter/newtech-promoters-and-developers-vs-state-of-u-p/", publisher: "K&S Partners (summary of Supreme Court judgment)", type: reputable-media }
   - { title: "Supreme Court upholds retrospective applicability of RERA Act on the real estate projects", url: "https://theindianlawyer.in/supreme-court-upholds-retrospective-applicability-of-rera-act-on-the-real-estate-projects/", publisher: "The Indian Lawyer", type: reputable-media }
   - { title: "Minutes of the 5th Central Advisory Council meeting under RERA", url: "https://mohua.gov.in/upload/whatsnew/690051fd238fbMinutes-of-5th-CAC-Meeting-English.pdf", publisher: "Ministry of Housing and Urban Affairs", type: official-data }
   - { title: "Five years of RERA: What does the data show?", url: "https://citizenmatters.in/rera-real-estate-regulation-mohua-data/", publisher: "Citizen Matters (analysis of MoHUA data)", type: reputable-media }

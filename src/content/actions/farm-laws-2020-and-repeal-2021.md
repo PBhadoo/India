@@ -39,15 +39,15 @@ sources:
 - title: 'Legislative Brief: Agriculture Ordinances, 2020'
   url: https://prsindia.org/files/bills_acts/bills_parliament/2020/Legislative%20Brief%20-%20Agriculture%20Ordinances,%202020_1.pdf
   publisher: PRS Legislative Research
-  type: official-data
+  type: reputable-media
 - title: The Farm Laws Repeal Bill, 2021 (bill track)
   url: https://prsindia.org/billtrack/the-farm-laws-repeal-bill-2021
   publisher: PRS Legislative Research
-  type: official-data
+  type: reputable-media
 - title: 'Court cannot be said to be completely powerless to grant stay of any executive action under a statutory enactment: Supreme Court stays implementation of farm laws'
   url: https://www.scconline.com/blog/post/2021/01/12/court-cannot-be-said-to-be-completely-powerless-to-grant-stay-of-any-executive-action-under-a-statutory-enactment-supreme-court-stays-implementation-of-farm-laws/
   publisher: SCC Online
-  type: court
+  type: reputable-media
 - title: Supreme Court-appointed panel was against repealing three farm laws
   url: https://www.businesstoday.in/latest/trends/story/supreme-court-appointed-panel-was-against-repealing-three-farm-laws-326722-2022-03-21
   publisher: Business Today

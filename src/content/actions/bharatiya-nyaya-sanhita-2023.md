@@ -47,7 +47,7 @@ sources:
   - title: 'The Bharatiya Nyaya (Second) Sanhita, 2023: Bill summary and analysis'
     url: https://prsindia.org/billtrack/the-bharatiya-nyaya-second-sanhita-2023
     publisher: PRS Legislative Research
-    type: official-data
+    type: reputable-media
   - title: 'Explained: New crimes under the Bharatiya Nyay Sanhita, and some grey areas'
     url: https://indianexpress.com/article/explained/explained-law/indias-new-criminal-laws-9425076/
     publisher: The Indian Express

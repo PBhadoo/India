@@ -37,7 +37,7 @@ sources:
 - title: CAG audit report on Reproductive and Child Health under the National Rural Health Mission (summary, July 2017)
   url: https://prsindia.org/policy/report-summaries/reproductive-and-child-health-under-national-rural-health-mission
   publisher: PRS Legislative Research (summarising CAG Report No. 25 of 2017)
-  type: official-data
+  type: reputable-media
 - title: 'First Common Review Mission, National Rural Health Mission: Main Report (2007)'
   url: https://www.nhsrcindia.org/sites/default/files/2021-03/1st%20CRM%20Main%20Report%202007.pdf
   publisher: National Health Systems Resource Centre, Ministry of Health and Family Welfare

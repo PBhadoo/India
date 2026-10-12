@@ -37,10 +37,10 @@ concerns:
     evidence: "Official table totals 169 disposals while a secondary summary gives 161; another source cited only 24 'substantive' disposals, not verified [4]."
 sources:
   - { title: "The Lokpal and Lokayuktas Act, 2013 (text)", url: "https://PRSINDIA.org/files/bills_acts/acts_parliament/2013/the-lokpal-and-lokayuktas-act,-2013.pdf", publisher: "PRS Legislative Research (Gazette text)", type: primary }
-  - { title: "The Lokpal and Lokayuktas Bill, 2011 (bill track)", url: "https://www.prsindia.org/billtrack/the-lokpal-and-lokayuktas-bill-2011", publisher: "PRS Legislative Research", type: primary }
+  - { title: "The Lokpal and Lokayuktas Bill, 2011 (bill track)", url: "https://www.prsindia.org/billtrack/the-lokpal-and-lokayuktas-bill-2011", publisher: "PRS Legislative Research", type: reputable-media }
   - { title: "Justice Pinaki Chandra Ghose sworn in as India's first Lokpal", url: "https://www.theweek.in/news/india/2019/03/23/justice-pinaki-chandra-ghose-sworn-in-as-india-s-first-lokpal.html", publisher: "The Week", type: reputable-media }
   - { title: "Lokpal of India: complaint status sheet, April 2024", url: "https://lokpal.gov.in/pdfs/cs_042324.pdf", publisher: "Lokpal of India", type: official-data }
-  - { title: "PRS Parliament Diary: Winter Session, 17 December 2013", url: "https://prsindia.org/media/media-updates/prs-parliament-diary-winter-session-of-parliament-december-17-2013", publisher: "PRS Legislative Research", type: primary }
+  - { title: "PRS Parliament Diary: Winter Session, 17 December 2013", url: "https://prsindia.org/media/media-updates/prs-parliament-diary-winter-session-of-parliament-december-17-2013", publisher: "PRS Legislative Research", type: reputable-media }
 scoring:
   era_baseline: "Before 2014 India had no national ombudsman for corruption; the Prevention of Corruption Act, 1988 and CBI/CVC mechanisms operated without a Lokpal."
   lag_years: 5

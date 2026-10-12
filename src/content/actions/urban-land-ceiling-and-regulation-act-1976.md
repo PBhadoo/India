@@ -37,7 +37,7 @@ sources:
   - { title: "Urban Land (Ceiling and Regulation) Repeal Act, 1999", url: "https://www.indiacode.nic.in/bitstream/123456789/18941/1/A1999-15.pdf", publisher: "India Code, Government of India", type: primary }
   - { title: "Urban Land Ceiling Act, 1976: A Critical Analysis of Impact on Housing (CCS Working Paper 170)", url: "https://old.ccs.in/internship_papers/2006/Urban%20Land%20Ceiling%20Act%20-%20Nipun.pdf", publisher: "Centre for Civil Society", type: academic }
   - { title: "Urban Land (Ceiling and Regulation) Act, 1976", url: "https://en.wikipedia.org/wiki/Urban_Land_(Ceiling_and_Regulation)_Act,_1976", publisher: "Wikipedia", type: reputable-media }
-  - { title: "Urban Land Ceiling Act repeal will not affect proceedings if possession had been taken: Supreme Court", url: "https://verdictum.in/court-updates/supreme-court/urban-land-ceiling-act-repeal-act-of-1999-will-not-affect-proceedings-if-possession-of-land-had-been-taken-supreme-court-1341207", publisher: "Verdictum (report on Supreme Court ruling)", type: court }
+  - { title: "Urban Land Ceiling Act repeal will not affect proceedings if possession had been taken: Supreme Court", url: "https://verdictum.in/court-updates/supreme-court/urban-land-ceiling-act-repeal-act-of-1999-will-not-affect-proceedings-if-possession-of-land-had-been-taken-supreme-court-1341207", publisher: "Verdictum (report on Supreme Court ruling)", type: reputable-media }
 scoring:
   era_baseline: "Before 1976 town and country planning laws existed in many States (per CCS), but there was no national limit on holdings of vacant urban land."
   lag_years: 10

@@ -36,12 +36,12 @@ concerns:
   - point: "Treatment of long-standing waqf properties without deeds."
     evidence: "Omission of waqf by user was not stayed; the Union said it applies prospectively; the final constitutional challenge remains pending [2][3][2]."
 sources:
-  - { title: "The Waqf (Amendment) Bill, 2024 (bill track)", url: "https://prsindia.org/billtrack/the-waqf-amendment-bill-2024", publisher: "PRS Legislative Research", type: primary }
-  - { title: "Waqf Amendment Act 2025: Supreme Court stays 5-year Islam practice condition and provision allowing Collector to decide disputes", url: "https://www.livelaw.in/amp/top-stories/waqf-amendment-act-2025-supreme-court-stays-5-year-islam-practice-condition-provision-allowing-collector-to-decide-disputes-303903", publisher: "LiveLaw", type: court }
+  - { title: "The Waqf (Amendment) Bill, 2024 (bill track)", url: "https://prsindia.org/billtrack/the-waqf-amendment-bill-2024", publisher: "PRS Legislative Research", type: reputable-media }
+  - { title: "Waqf Amendment Act 2025: Supreme Court stays 5-year Islam practice condition and provision allowing Collector to decide disputes", url: "https://www.livelaw.in/amp/top-stories/waqf-amendment-act-2025-supreme-court-stays-5-year-islam-practice-condition-provision-allowing-collector-to-decide-disputes-303903", publisher: "LiveLaw", type: reputable-media }
   - { title: "Lok Sabha passes Waqf (Amendment) Bill 2025 after 14 hours of debate", url: "https://www.livelaw.in/amp/top-stories/lok-sabha-passes-waqf-amendment-bill-2025-after-12-hours-of-debate-288273", publisher: "LiveLaw", type: reputable-media }
   - { title: "Waqf (Amendment) Bill 2025 passed in Rajya Sabha with 128-95 majority", url: "https://www.businesstoday.in/amp/india/story/waqf-amendment-bill-2025-passed-in-rajya-sabha-with-128-95-majority-headed-for-presidential-assent-details-here-470629-2025-04-04", publisher: "Business Today", type: reputable-media }
   - { title: "After passage in Lok Sabha, Rijiju tables Waqf Bill in Rajya Sabha", url: "https://www.tribuneindia.com/news/india/after-passage-in-lok-sabha-rijiju-tables-waqf-bill-in-rajya-sabha", publisher: "The Tribune", type: reputable-media }
-  - { title: "Constitutionality of the Waqf (Amendment) Act, 2025: Interim Judgement Matrix", url: "https://www.scobserver.in/?p=17196", publisher: "Supreme Court Observer", type: court }
+  - { title: "Constitutionality of the Waqf (Amendment) Act, 2025: Interim Judgement Matrix", url: "https://www.scobserver.in/?p=17196", publisher: "Supreme Court Observer", type: reputable-media }
 scoring:
   era_baseline: "The Waqf Act, 1995 (amended 2013) governed Boards and Tribunals; the Sachar Committee (2006) had flagged poor records and encroachment."
   lag_years: 3

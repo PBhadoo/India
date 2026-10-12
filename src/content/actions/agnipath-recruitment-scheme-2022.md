@@ -34,11 +34,11 @@ concerns:
   - point: Operational and training effects of shorter service are not yet established, and recruitment targets have been revisited.
     evidence: "Parliamentary committee in December 2023 recommended stepping up Agniveer recruitment [4]. No independent evaluation was located in this review."
 sources:
-  - { title: "Agnipath Scheme: key terms (PIB release reproduced by IIPA digest)", url: "https://www.iipa.org.in/cms/public/uploads/527591668417375.pdf", publisher: Indian Institute of Public Administration, type: official-data }
+  - { title: "Agnipath Scheme: key terms (PIB release reproduced by IIPA digest)", url: "https://www.iipa.org.in/cms/public/uploads/527591668417375.pdf", publisher: Indian Institute of Public Administration, type: reputable-media }
   - { title: "'Agnipath' scheme: Govt unveils radical changes in recruitment of soldiers", url: "https://bsppd.business-standard.com/amp/article/current-affairs/agnipath-scheme-govt-unveils-radical-changes-in-recruitment-of-soldiers-122061401146_1.html", publisher: Business Standard, type: reputable-media }
   - { title: "Delhi High Court upholds Centre's Agnipath scheme (report of 27 February 2023 judgment)", url: "https://www.deccanherald.com/india/delhi-high-court-upholds-centres-agnipath-scheme-for-recruitment-in-armed-forces-1195452.html", publisher: Deccan Herald, type: reputable-media }
   - { title: "Parliamentary panel recommends intensification in recruitment of Agniveers", url: "https://www.etvbharat.com/english/bharat/par-panel-recommends-intensification-in-recruitment-of-agniveers/na20231220213621696696640", publisher: ETV Bharat, type: reputable-media }
-  - { title: "Demand for Grants 2023-24 analysis: Defence", url: "https://prsindia.org/budgets/parliament/demand-for-grants-2023-24-analysis-defence", publisher: PRS Legislative Research, type: official-data }
+  - { title: "Demand for Grants 2023-24 analysis: Defence", url: "https://prsindia.org/budgets/parliament/demand-for-grants-2023-24-analysis-defence", publisher: PRS Legislative Research, type: reputable-media }
   - { title: "Agniveer scheme brought after lot of thought: Rajnath Singh to Rahul", url: "https://www.siasat.com/agniveer-scheme-brought-after-lot-of-thought-rajnath-singh-to-rahul-3054416/", publisher: Siasat, type: reputable-media }
 scoring:
   era_baseline: "Before 2022 the services recruited soldiers for long careers with pensions; defence pension spending was about a quarter of the defence budget."

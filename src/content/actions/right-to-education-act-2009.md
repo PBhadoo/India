@@ -48,7 +48,7 @@ sources:
   - title: 'Summary: Society for Unaided Private Schools of Rajasthan v. Union of India (Supreme Court, 2012)'
     url: https://d7.right-to-education.org/sites/right-to-education.org/files/resource-attachments/India%20Supreme%20Court%2C%20Society%20for%20Unaided%20Private%20Schools%20v%20India%2C%202012.pdf
     publisher: Right to Education Project
-    type: court
+    type: reputable-media
   - title: ASER 2018 press release (13th Annual Status of Education Report, Rural)
     url: https://img.asercentre.org/docs/ASER%202018/Release%20Material/aser2018pressreleaseenglish.pdf
     publisher: ASER Centre / Pratham

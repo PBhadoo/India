@@ -36,8 +36,8 @@ concerns:
   - point: "Contested legal process: the Court held the President could act without the state government's concurrence, while the reorganisation into Union Territories was left undecided."
     evidence: "11 December 2023 judgment as reported: Article 370(3) holding upheld; validity of reorganising the state into the Union Territory of Jammu and Kashmir not adjudicated [2]."
 sources:
-  - { title: "The Jammu and Kashmir Reorganisation Bill, 2019 (bill track)", url: "https://prsindia.org/billtrack/the-jammu-and-kashmir-reorganisation-bill-2019", publisher: "PRS Legislative Research", type: primary }
-  - { title: "Article 370: Decoding the Supreme Court Verdict (13 Dec 2023)", url: "https://www.drishtiias.com/daily-updates/daily-news-editorials/article-370-decoding-the-supreme-court-verdict/print_manually", publisher: "Drishti IAS", type: court }
+  - { title: "The Jammu and Kashmir Reorganisation Bill, 2019 (bill track)", url: "https://prsindia.org/billtrack/the-jammu-and-kashmir-reorganisation-bill-2019", publisher: "PRS Legislative Research", type: reputable-media }
+  - { title: "Article 370: Decoding the Supreme Court Verdict (13 Dec 2023)", url: "https://www.drishtiias.com/daily-updates/daily-news-editorials/article-370-decoding-the-supreme-court-verdict/print_manually", publisher: "Drishti IAS", type: reputable-media }
   - { title: "Shah proposes in RS to revoke Article 370 in J&K", url: "https://www.thequint.com/news/hot-news/shah-proposes-in-rs-to-revoke-article-370-in-j-k", publisher: "The Quint", type: reputable-media }
   - { title: "Terror incidents in J&K declining since 2018, lowest in 2023, Parliament told", url: "https://www.deccanherald.com/india/jammu-and-kashmir/terror-incidents-in-jk-declining-since-2018-lowest-in-2023-parliament-told-2799645", publisher: "Deccan Herald", type: reputable-media }
   - { title: "SC to hear petitions on statehood today (10 October 2025)", url: "https://kashmirreader.com/2025/10/10/sc-to-hear-petitions-on-statehood-today/", publisher: "Kashmir Reader", type: reputable-media }

@@ -38,11 +38,11 @@ sources:
 - title: 'Standing Committee Report Summary: Critical Evaluation of MGNREGA (Feb 2022)'
   url: https://prsindia.org/policy/report-summaries/critical-evaluation-of-mgnrega
   publisher: PRS Legislative Research
-  type: official-data
+  type: reputable-media
 - title: 'Standing Committee Report Summary: Rural Employment through MGNREGA - wage rates and other matters (Feb 2024)'
   url: https://prsindia.org/policy/report-summaries/rural-employment-through-mgnrega-an-insight-into-wage-rates-and-other-matters-relating-thereto
   publisher: PRS Legislative Research
-  type: official-data
+  type: reputable-media
 - title: Economic Survey 2025-26 (agriculture, food management, health and rural development chapters)
   url: https://www.indiabudget.gov.in/economicsurvey/doc/echapter.pdf
   publisher: Ministry of Finance, Government of India

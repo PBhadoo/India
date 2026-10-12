@@ -38,7 +38,7 @@ concerns:
 sources:
   - { title: "Know the Electricity Act 2003", url: "https://energy.prayaspune.org/images/pdf/eact_prayas_eng_book_068a01.pdf", publisher: Prayas (Energy Group), type: academic }
   - { title: "Electricity Act, 2003", url: "https://en.wikipedia.org/wiki/Electricity_Act,_2003", publisher: Wikipedia, type: reputable-media }
-  - { title: "Discussion Paper: Power distribution sector", url: "https://prsindia.org/billtrack/prs-products/discussion-paper-power-distribution-sector", publisher: PRS Legislative Research, type: primary }
+  - { title: "Discussion Paper: Power distribution sector", url: "https://prsindia.org/billtrack/prs-products/discussion-paper-power-distribution-sector", publisher: PRS Legislative Research, type: reputable-media }
   - { title: "Electricity sector in India", url: "https://en.wikipedia.org/wiki/Electricity_sector_in_India", publisher: Wikipedia (citing CEA and PFC), type: reputable-media }
 scoring:
   era_baseline: "By 2002-03 state electricity boards were financially stressed (a central bailout package was agreed in 2002), and a decade of independent power producer policy had added only about 3% of national generation."

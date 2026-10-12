@@ -39,7 +39,7 @@ concerns:
     evidence: "December 2024 interim order halting registration of new suits and effective orders in pending suits [2]."
 sources:
   - { title: "Is the Places of Worship (Special Provisions) Act, 1991 constitutional?", url: "https://www.barandbench.com/columns/is-the-places-of-worship-special-provisions-act-1991-constitutional", publisher: "Bar and Bench (advocate's column)", type: academic }
-  - { title: "Supreme Court bars registration of new suits against places of worship (order of 12 December 2024)", url: "https://www.livelaw.in/amp/top-stories/supreme-court-bars-registration-of-new-suits-against-places-of-worship-stops-courts-from-passing-effectivefinalsurvey-orders-in-pending-suits-278147", publisher: "LiveLaw", type: court }
+  - { title: "Supreme Court bars registration of new suits against places of worship (order of 12 December 2024)", url: "https://www.livelaw.in/amp/top-stories/supreme-court-bars-registration-of-new-suits-against-places-of-worship-stops-courts-from-passing-effectivefinalsurvey-orders-in-pending-suits-278147", publisher: "LiveLaw", type: reputable-media }
   - { title: "Places of Worship Act 1991 overview (introduction, debate and passage)", url: "https://blog.ipleaders.in/place-of-worship-act-1991/", publisher: "iPleaders", type: reputable-media }
   - { title: "Explainer: Ashwini Kumar Upadhyay v. Union of India, a challenge to the Places of Worship Act, 1991", url: "https://lawandotherthings.com/explainer-ashwini-kumar-upadhyay-v-union-of-india-a-challenge-to-the-places-of-worship-act-1991/", publisher: "Law and Other Things", type: reputable-media }
 scoring:

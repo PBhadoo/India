@@ -36,7 +36,7 @@ concerns:
     evidence: "Left parties' statement on the Hyde Act and FMCT direction [2]; critics cited in [1] on the testing clause."
 sources:
   - { title: "India-United States Civil Nuclear Agreement (secondary summary with dates and vote counts)", url: "https://en.wikipedia.org/wiki/India%E2%80%93United_States_Civil_Nuclear_Agreement", publisher: Wikipedia, type: reputable-media }
-  - { title: "Left Parties Statement on the Indo-US bilateral nuclear cooperation agreement", url: "https://cpim.org/indo-us-bilateral-nuclear-cooperation-agreement/", publisher: CPI(M), type: primary }
+  - { title: "Left Parties Statement on the Indo-US bilateral nuclear cooperation agreement", url: "https://cpim.org/indo-us-bilateral-nuclear-cooperation-agreement/", publisher: CPI(M), type: reputable-media }
   - { title: "Parliament question: Electricity generation capacity through nuclear energy (PIB, December 2025)", url: "https://www.globalsecurity.org/wmd/library/news/india/2025/india-251210-india-pib03.htm", publisher: PIB via GlobalSecurity, type: official-data }
   - { title: "Bush, Singh Advance Nuclear Deal", url: "https://www.armscontrol.org/node/2011", publisher: Arms Control Association, type: reputable-media }
 scoring:

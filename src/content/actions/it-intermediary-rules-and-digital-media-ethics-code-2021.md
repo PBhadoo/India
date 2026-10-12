@@ -37,9 +37,9 @@ concerns:
   - point: "Executive role in determining 'false' content about itself."
     evidence: "Bombay High Court, 20 September 2024: 2023 amendment to Rule 3(1)(b)(v) struck down by 2 judges to 1 [3][5]."
 sources:
-  - { title: "The Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021", url: "https://www.prsindia.org/billtrack/the-information-technology-intermediary-guidelines-and-digital-media-ethics-code-rules-2021", publisher: "PRS Legislative Research", type: primary }
+  - { title: "The Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021", url: "https://www.prsindia.org/billtrack/the-information-technology-intermediary-guidelines-and-digital-media-ethics-code-rules-2021", publisher: "PRS Legislative Research", type: reputable-media }
   - { title: "IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 (text)", url: "https://www.thc.nic.in/Central%20Governmental%20Rules/IT(Intermediary%20Guidelines%20and%20Digital%20Media%20Ethics%20Code)%20Rules,%202021.pdf", publisher: "Tripura High Court / Government of India rules compilation", type: primary }
-  - { title: "Kunal Kamra v. Union of India", url: "https://globalfreedomofexpression.columbia.edu/cases/kunal-kamra-v-union-of-india/", publisher: "Columbia Global Freedom of Expression", type: court }
+  - { title: "Kunal Kamra v. Union of India", url: "https://globalfreedomofexpression.columbia.edu/cases/kunal-kamra-v-union-of-india/", publisher: "Columbia Global Freedom of Expression", type: reputable-media }
   - { title: "Government sets 50 lakh users threshold to define significant social media intermediary", url: "https://www.money9.com/news/exclusive/government-sets-50-lakh-users-threshold-to-define-significant-social-media-intermediary-11925.html", publisher: "Money9", type: reputable-media }
   - { title: "Bombay High Court strikes down IT Rules amendment 2023 on fact check units", url: "https://www.barandbench.com/news/bombay-high-court-strikes-down-it-rules-amendment-2023-fact-check-units", publisher: "Bar and Bench", type: reputable-media }
 scoring:

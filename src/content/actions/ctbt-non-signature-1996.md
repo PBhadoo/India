@@ -36,7 +36,7 @@ sources:
   - { title: "CTBT: Statement by India at the Conference on Disarmament, 8 August 1996", url: "https://www.globalsecurity.org/wmd/library/news/india/1996/ctbt_cd_august_8_96.htm", publisher: Government of India statement via GlobalSecurity, type: primary }
   - { title: "CTBT: Statement by India at the Conference on Disarmament, 20 August 1996", url: "https://www.globalsecurity.org/wmd/library/news/india/1996/ctbt_cd_august_20_96.htm", publisher: Government of India statement via GlobalSecurity, type: primary }
   - { title: "CTBT: Statement at the UN General Assembly, 10 September 1996", url: "https://www.globalsecurity.org/wmd/library/news/india/1996/ctbt_UN_september_10_96.htm", publisher: Government of India statement via GlobalSecurity, type: primary }
-  - { title: "Press release on CTBT Article XIV and entry into force", url: "https://cpim.org/?p=1194", publisher: CPI(M), type: primary }
+  - { title: "Press release on CTBT Article XIV and entry into force", url: "https://cpim.org/?p=1194", publisher: CPI(M), type: reputable-media }
   - { title: "Statement on Nuclear Tests in Pokhran, Lok Sabha, 27 May 1998", url: "https://eparlib.nic.in/bitstream/123456789/800809/1/pms_12_02_27-05-1998.pdf", publisher: Lok Sabha, type: primary }
   - { title: "Bush Waives Nuclear-Related Sanctions on India, Pakistan", url: "https://www.armscontrol.org/act/2001-10/press-releases/bush-waives-nuclear-related-sanctions-india-pakistan", publisher: Arms Control Association, type: reputable-media }
 scoring:

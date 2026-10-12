@@ -599,6 +599,7 @@ table.claims .not-est { display: block; font-family: var(--font-mono); font-size
 @media (max-width: 599px) {
   table.claims { min-width: 0; }
   table.claims.stackable tr { padding: 0.8rem 0; }
+  table.claims.stackable caption { display: block; width: 100%; }
   table.claims.stackable th.claim-text { max-width: none; min-width: 0; }
   table.claims.stackable tr.claim-allegation > :first-child, table.claims.stackable tr.claim-finding > :first-child { border-left: 0; }
   table.claims.stackable tr.claim-allegation { border-left: 5px dashed var(--warn-rule); }

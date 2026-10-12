@@ -88,7 +88,7 @@ const jsonLd = {
     <div class={`banner asof-banner${stale ? ' stale' : ''}`} role="note">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
       <p>
-        <strong>Facts as of <time datetime={isoDate(d.asOf)}>{fmtDate(d.asOf)}</time>.</strong>
+        <strong>Facts as of <time datetime={isoDate(d.asOf)}>{fmtDate(d.asOf)}</time>.</strong>{' '}
         Check sources for later developments.
         {ongoing ? ' This matter is ongoing, so statuses below may have changed.' : ' This matter is marked settled; later filings or orders may still exist.'}
         {stale && <> It was last checked {age} days ago.</>}

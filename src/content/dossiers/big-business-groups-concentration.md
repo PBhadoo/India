@@ -8,10 +8,10 @@ asOf: 2026-10-12
 status: ongoing
 lastReviewed: 2026-10-12
 timeline:
-  - { date: 1965, event: "The Monopolies Inquiry Commission, headed by Justice K. C. Dasgupta, reports; R. K. Hazari's figures on 1951-58 concentration among 13 business groups had been supplied to the Mahalanobis Committee that preceded it.", actor: "Monopolies Inquiry Commission", type: event, source: 6 }
-  - { date: 1966, event: "R. K. Hazari publishes The Structure of the Corporate Private Sector, treating the family-controlled business group as the unit of analysis.", actor: "R. K. Hazari", type: event, source: 6 }
-  - { date: 1969, event: "The Monopolies and Restrictive Trade Practices Act, 1969 (Act 54 of 1969) is enacted.", actor: "Parliament of India", type: event, source: 11 }
-  - { date: 1991, event: "After the July 1991 new economic policy, Chapter III of the MRTP Act (restrictions on expansion, mergers and amalgamations) is made inoperative.", actor: "Government of India (centre-1991-narasimha-rao)", type: event, source: 11 }
+  - { date: "1965", event: "The Monopolies Inquiry Commission, headed by Justice K. C. Dasgupta, reports; R. K. Hazari's figures on 1951-58 concentration among 13 business groups had been supplied to the Mahalanobis Committee that preceded it.", actor: "Monopolies Inquiry Commission", type: event, source: 6 }
+  - { date: "1966", event: "R. K. Hazari publishes The Structure of the Corporate Private Sector, treating the family-controlled business group as the unit of analysis.", actor: "R. K. Hazari", type: event, source: 6 }
+  - { date: "1969", event: "The Monopolies and Restrictive Trade Practices Act, 1969 (Act 54 of 1969) is enacted.", actor: "Parliament of India", type: event, source: 11 }
+  - { date: "1991", event: "After the July 1991 new economic policy, Chapter III of the MRTP Act (restrictions on expansion, mergers and amalgamations) is made inoperative.", actor: "Government of India (centre-1991-narasimha-rao)", type: event, source: 11 }
   - { date: 2009-09-01, event: "The MRTP Act is repealed and replaced by the Competition Act, 2002 under an MCA notification dated 28 August 2009.", actor: "Ministry of Corporate Affairs", type: event, source: 11 }
   - { date: 2023-02-03, event: "SBI's chairman states the bank's exposure to the Adani group at about Rs 27,000 crore, 0.88% of its loan book, as of 31 December 2022.", actor: "State Bank of India", type: official-statement, source: 8 }
   - { date: 2023-03-30, event: "Viral Acharya publishes a Brookings paper on the share of the five largest groups in non-financial assets and sales.", actor: "Viral Acharya", type: event, source: 1 }

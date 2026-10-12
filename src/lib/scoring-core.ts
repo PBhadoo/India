@@ -69,6 +69,8 @@ export function creditAction(
   getGov: (id: string) => Government | undefined,
 ): Credit[] {
   if (!score.scored) return [];
+  // Independent institutions (courts, regulators, the Election Commission) earn or lose no party points.
+  if (action.credit === 'none') return [];
   const out: Credit[] = [];
   const give = (govId: string | undefined, role: Credit['role'], factor: number) => {
     const g = govId ? getGov(govId) : undefined;
@@ -150,7 +152,11 @@ export interface PartyResult {
 
 export interface ScoringResult {
   parties: PartyResult[];
+  /** Scored actions that carry party credit (credit 'party'). */
   scoredActionCount: number;
+  /** Scored actions with credit 'none': shown, never added to a party total. */
+  noCreditScoredCount: number;
+  /** Actions in scope, whether scored or not and whatever their credit. */
   totalActionCount: number;
   preliminary: boolean;
   flagged: { slug: string; criteria: CriterionId[] }[];
@@ -300,11 +306,13 @@ export function computeScoring(
   const flagged: ScoringResult['flagged'] = [];
   const credits: Credit[] = [];
   let scoredCount = 0;
+  let noCreditCount = 0;
   for (const a of acts) {
     const s = scoreAction(a.scorers);
     actionScores[a.slug] = s;
     if (!s.scored) continue;
-    scoredCount++;
+    if (a.credit === 'none') noCreditCount++;
+    else scoredCount++;
     if (s.flags.length) flagged.push({ slug: a.slug, criteria: s.flags });
     credits.push(...creditAction(a, s, getGov));
   }
@@ -320,6 +328,7 @@ export function computeScoring(
     parties,
     credits,
     scoredActionCount: scoredCount,
+    noCreditScoredCount: noCreditCount,
     totalActionCount: acts.length,
     preliminary: scoredCount < (opts.preliminaryMin ?? PRELIMINARY_MIN_SCORED),
     flagged,

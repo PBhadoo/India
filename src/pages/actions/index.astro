@@ -8,7 +8,7 @@ import { STATUS_LABEL } from '../../lib/format.ts';
 import { toTime } from '../../lib/tenure.ts';
 const site = await getSite();
 const cats = categories();
-const partyOpts = Object.values(site.partyMeta).filter((p) => site.actions.some((a) => a.gov?.partners.some((x) => x.party === p.id) || a.partyId === p.id)).sort((a, b) => (a.slot || 99) - (b.slot || 99));
+const partyOpts = Object.values(site.partyMeta).filter((p) => site.actions.some((a) => !a.noCredit && (a.gov?.partners.some((x) => x.party === p.id) || a.partyId === p.id))).sort((a, b) => (a.slot || 99) - (b.slot || 99));
 const govIds = [...new Set(site.actions.map((a) => a.data.governmentId))].map((id) => site.actions.find((a) => a.data.governmentId === id)!.gov).filter(Boolean).sort((a, b) => toTime(a!.start) - toTime(b!.start));
 const decades = [...new Set(site.actions.map((a) => Math.floor(a.year / 10) * 10))].sort((a, b) => a - b);
 const statuses = [...new Set(site.actions.map((a) => a.data.status))];
@@ -41,7 +41,7 @@ const levels = [...new Set(site.actions.map((a) => a.data.level))];
               data-title={a.data.title.toLowerCase()}
               data-text={`${a.data.title} ${a.data.summary}`.toLowerCase()}
               data-category={a.data.category}
-              data-parties={(a.gov?.partners.map((p) => p.party) ?? [a.partyId]).join(' ')}
+              data-parties={a.noCredit ? '' : (a.gov?.partners.map((p) => p.party) ?? [a.partyId]).join(' ')}
               data-gov={a.data.governmentId}
               data-era={String(Math.floor(a.year / 10) * 10)}
               data-status={a.data.status}

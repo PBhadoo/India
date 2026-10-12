@@ -88,3 +88,11 @@ categories:
     name: State Spotlights
     blurb: The same questions asked of State governments.
     subs: [delhi, tamil-nadu, kerala, uttar-pradesh, gujarat, west-bengal, maharashtra, karnataka, telangana-andhra, punjab, bihar, odisha, others]
+  - id: business-power
+    name: Business & Public Power
+    blurb: Large business groups, regulators, contracts and political funding.
+    subs: [big-business-groups, regulators-markets, competition-concentration, business-political-funding, state-contracts-privatisation]
+  - id: parties-movements
+    name: Parties, Movements & Civil Society
+    blurb: New parties, NGOs, protests and prosecutions of activists.
+    subs: [new-parties, ngos-civil-society, protests-movements, arrests-prosecutions]

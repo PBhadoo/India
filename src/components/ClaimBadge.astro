@@ -1,0 +1,19 @@
+---
+import { CLAIM_TYPE_INFO, isClaimType } from '../lib/dossiers.ts';
+interface Props { type: string }
+const { type } = Astro.props;
+const known = isClaimType(type);
+const info = known ? CLAIM_TYPE_INFO[type] : { label: String(type), short: '' };
+// Each type has its own icon, border style and background pattern, so the type never depends on colour alone.
+const icons: Record<string, string> = {
+  finding: '<path d="M8 1.8 13.2 4v3.7c0 3-2.1 5.2-5.2 6.5C4.9 12.9 2.8 10.7 2.8 7.7V4L8 1.8Z" /><path d="m5.6 8 1.7 1.7L10.5 6.2" />',
+  'official-statement': '<path d="M2.5 3.5h11v7h-5l-3 2.5v-2.5h-3z" /><path d="M5 6h6M5 8h4" />',
+  allegation: '<path d="M8 2 14.5 13.5h-13L8 2Z" /><path d="M8 6.5v3.2M8 11.6v.4" />',
+  data: '<path d="M2.5 13.5h11M4.5 13V8.5M8 13V4.5M11.5 13V7" />',
+  event: '<rect x="2.5" y="3.5" width="11" height="10" rx="1.5" /><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3" /><circle cx="8" cy="10" r="1" fill="currentColor" />',
+};
+---
+<span class={`ctype ctype-${known ? type : 'event'}`} title={info.short || undefined}>
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icons[type] ?? icons.event} />
+  {info.label}
+</span>

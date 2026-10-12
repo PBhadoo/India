@@ -28,7 +28,7 @@ const governed = site.scoring.parties.filter((p) => p.yearsInPower > 0).sort((a,
             <div class="grid wide">
               {governed.map((p) => {
                 const cell = p.categories[c.id];
-                const acts = site.actions.filter((a) => a.data.category === c.id && a.gov?.partners.some((x) => x.party === p.partyId));
+                const acts = site.actions.filter((a) => !a.noCredit && a.data.category === c.id && a.gov?.partners.some((x) => x.party === p.partyId));
                 const m = pm(site, p.partyId);
                 const has = cell && cell.scoredActions > 0;
                 const brief = p.yearsInPower < MIN_YEARS_FOR_RATE;

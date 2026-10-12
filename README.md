@@ -4,7 +4,7 @@ A neutral, source-backed tracker of Indian politics and policy. Every government
 
 - Data contract: [`docs/CONTRACT.md`](docs/CONTRACT.md)
 - Scoring rubric: `src/data/rubric.json`
-- Categories: `src/data/taxonomy.yaml`
+- Categories: `src/data/taxonomy.yaml` (sub-category display names in `src/data/sub-names.json`; the grid and heat map follow whatever the taxonomy lists)
 
 ## Run it
 
@@ -16,16 +16,23 @@ npm run dev        # local dev server
 npm run build      # astro build, then pagefind indexes dist/
 npm run preview    # serve dist/
 npm run validate   # lint all content (schema, ids, sources, neutrality)
-npm test           # unit tests for tenure and scoring maths
+npm test           # unit tests: tenure, scoring (incl. credit: none), dossier validator and helpers
+npm run audit      # neutrality and coverage report (dossiers, credit: none)
 ```
 
 ## Layout
 
-- `src/content/actions/*.md`, `src/content/developing/*.md`: content collections (schemas in `src/content.config.ts`)
+- `src/content/actions/*.md`, `src/content/developing/*.md`, `src/content/dossiers/*.md`: content collections (schemas in `src/content.config.ts`)
 - `src/data/`: taxonomy, rubric, governments, parties, states
-- `src/lib/`: typed data and scoring logic (`taxonomy`, `governments`, `tenure`, `scoring`, `collections`)
+- `src/lib/`: typed data and scoring logic (`taxonomy`, `governments`, `tenure`, `scoring`, `collections`, `dossiers`)
 - `scripts/`: content tooling
 - `tests/`: `node --test` suites and fixtures
+
+## Adding a dossier
+
+Dossiers are unscored fact files (see "Addendum v2" in the contract). Create `src/content/dossiers/<kebab-slug>.md` with the front-matter from the contract: a dated timeline, claims typed `finding | official-statement | allegation | data | event` (allegations need `madeBy`, `status` and, where a named party exists, `response`), positions, tables, at least two `notShown` items and at least five sources, two of them primary, official-data or court. Quote any line that contains a colon. `npm run validate` checks all of this and warns when an ongoing dossier's `asOf` is more than 45 days old. `npm run audit` reports dossier coverage by category.
+
+An action decided by an independent institution (a court, regulator or the Election Commission) takes `credit: none` and, optionally, `institution: "..."`. It is scored and listed but earns no party points.
 
 ## Adding an action
 

@@ -2,13 +2,14 @@
 // Neutrality audit over all actions. Always exits 0. `--md` also writes docs/NEUTRALITY-REPORT.md.
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, ACTIONS_DIR, listMd, loadEntry, loadTaxonomy, loadGovernments, loadLoadedWords, readJson, isoDate, LOW_DATA_MIN_ACTIONS } from './lib.mjs';
+import { ROOT, ACTIONS_DIR, DOSSIERS_DIR, listMd, loadEntry, loadTaxonomy, loadGovernments, loadLoadedWords, readJson, isoDate, daysSince, LOW_DATA_MIN_ACTIONS } from './lib.mjs';
 import {
-  countBy, eraOf, hasPrimarySource, loadedHits, scorerDisagreements, asymmetry, partiesOf, mean, round,
+  countBy, DOSSIER_STALE_DAYS, eraOf, hasPrimarySource, loadedHits, scorerDisagreements, asymmetry, partiesOf, mean, round,
 } from './audit-lib.mjs';
 
 const MIN_PER_PARTY = 3;
 const entries = listMd(ACTIONS_DIR).map(loadEntry).filter((e) => !e.error).map((e) => ({ slug: e.slug, ...e.data, date: isoDate(e.data.date), body: e.content }));
+const dossiers = listMd(DOSSIERS_DIR).map(loadEntry).filter((e) => !e.error).map((e) => ({ slug: e.slug, ...e.data }));
 const govs = loadGovernments();
 const parties = readJson(path.join(ROOT, 'src', 'data', 'parties.json'), []);
 const partyName = new Map(parties.map((p) => [p.id, p.short ?? p.id]));
@@ -27,12 +28,18 @@ const table = (head, rows) => {
 const pct = (n, total) => (total ? `${round((100 * n) / total, 1)}%` : '0%');
 const total = entries.length;
 
-const lead = (e) => govs.get(e.governmentId)?.leadParty;
-const credited = (e) => partiesOf(govs.get(e.governmentId));
+// credit: none actions earn no party credit, so they are left out of the party breakdowns below.
+const lead = (e) => (e.credit === 'none' ? undefined : govs.get(e.governmentId)?.leadParty);
+const credited = (e) => (e.credit === 'none' ? [] : partiesOf(govs.get(e.governmentId)));
 
 out('# Neutrality report');
 out();
 out(`Generated ${new Date().toISOString().slice(0, 10)} from ${total} actions. Counts show coverage, not merit; an imbalance prompts a look at what is missing, not a conclusion.`);
+out();
+
+const noCredit = entries.filter((e) => e.credit === 'none');
+out(`Actions with \`credit: none\` (independent institution, scored but earning no party points): ${noCredit.length} of ${total}.`);
+out(noCredit.length ? noCredit.map((e) => `- ${e.slug}${e.institution ? ` (${e.institution})` : ''}`).join('\n') : 'None.');
 out();
 
 out('## Entries by lead party of the implementing government');
@@ -116,6 +123,25 @@ for (const e of entries) {
 out(`Scored entries: ${scored} of ${total}.`);
 out();
 out(dis.length ? dis.join('\n') : 'None.');
+out();
+
+out('## Dossier coverage');
+out(`Dossiers: ${dossiers.length}. Dossiers are unscored and carry no party points.`);
+out();
+const dCat = countBy(dossiers, (e) => e.category);
+table(['Category', 'Dossiers', 'Actions'], cats.map((c) => [c.id, dCat.get(c.id) ?? 0, byCat.get(c.id) ?? 0]));
+const noDossier = cats.filter((c) => !dCat.has(c.id));
+out(`Categories with no dossier (${noDossier.length} of ${cats.length}): ${noDossier.length ? noDossier.map((c) => c.id).join(', ') : 'none'}.`);
+out();
+const dSub = countBy(dossiers, (e) => [].concat(e.subcategories ?? []));
+const allSubs = cats.flatMap((c) => c.subs.map((s) => `${c.id}/${s}`));
+const coveredSubs = allSubs.filter((k) => dSub.has(k.split('/')[1]));
+out(`Sub-categories with at least one dossier: ${coveredSubs.length} of ${allSubs.length}.`);
+out();
+table(['Kind', 'Dossiers'], [...countBy(dossiers, (e) => e.kind)].map(([k, v]) => [k, v]));
+table(['Status', 'Dossiers'], [...countBy(dossiers, (e) => e.status)].map(([k, v]) => [k, v]));
+const staleD = dossiers.filter((e) => e.status === 'ongoing' && isoDate(e.asOf) && daysSince(isoDate(e.asOf)) > DOSSIER_STALE_DAYS);
+out(`Ongoing dossiers with asOf older than ${DOSSIER_STALE_DAYS} days (${staleD.length}): ${staleD.length ? staleD.map((e) => e.slug).join(', ') : 'none'}.`);
 out();
 
 const report = lines.join('\n');

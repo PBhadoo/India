@@ -4,6 +4,8 @@ import PageHead from '../../../components/PageHead.astro';
 import ActionCard from '../../../components/ActionCard.astro';
 import PartyChip from '../../../components/PartyChip.astro';
 import Balance from '../../../components/Balance.astro';
+import DossierCard from '../../../components/DossierCard.astro';
+import { dossiersInCategory } from '../../../lib/dossiers.ts';
 import { getSite, pm, leadPartiesFor } from '../../../lib/site.ts';
 import { categories, getCategory, subsOf } from '../../../lib/taxonomy.ts';
 import { fmtNum, fmtSigned } from '../../../lib/format.ts';
@@ -23,6 +25,8 @@ const cells = site.scoring.parties
   .filter((x) => x.cell && x.cell.scoredActions > 0)
   .filter((x) => x.p.yearsInPower >= MIN_YEARS_FOR_RATE)
   .sort((a, b) => (b.cell.pointsPerYear ?? -Infinity) - (a.cell.pointsPerYear ?? -Infinity));
+const dossiers = dossiersInCategory(site.dossiers, id!);
+const noCreditN = acts.filter((a) => a.noCredit).length;
 const byParty = leadPartiesFor(site, acts).map((pid) => ({ label: pm(site, pid).short, n: acts.filter((a) => a.partyId === pid).length, slot: pm(site, pid).slot, href: `/parties/${pid}/` }));
 ---
 <Base title={cat.name} path={`/categories/${id}/`} description={`${cat.name}: ${cat.blurb}`}>
@@ -70,6 +74,19 @@ const byParty = leadPartiesFor(site, acts).map((pid) => ({ label: pm(site, pid).
       <h3 style="margin-top:1.8rem">Coverage by party</h3>
       <p class="small">Entries in this category by the party that led the government responsible. Zero is shown so gaps are visible.</p>
       <Balance items={byParty} label="Entries per party" />
+      {noCreditN > 0 && <p class="small" style="margin-top:.6rem">{noCreditN} {noCreditN === 1 ? 'entry in this category was' : 'entries in this category were'} decided by an independent institution and {noCreditN === 1 ? 'is' : 'are'} not counted for any party.</p>}
+    </section>
+
+    <section class="block" aria-labelledby="h-dos" id="dossiers">
+      <div class="block-head">
+        <h2 id="h-dos">Dossiers</h2>
+        <a class="more" href={`/dossiers/?category=${id}`}>Open in the dossier index</a>
+      </div>
+      {dossiers.length === 0 ? (
+        <div class="empty"><p>No dossiers are published in this category yet. Dossiers are unscored fact files; they carry no party points.</p></div>
+      ) : (
+        <ul class="alist">{dossiers.map((d) => <li><DossierCard dossier={d} showCategory={false} /></li>)}</ul>
+      )}
     </section>
 
     <section class="block" aria-labelledby="h-acts">

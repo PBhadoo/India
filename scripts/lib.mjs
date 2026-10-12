@@ -9,6 +9,7 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const DATA = path.join(ROOT, 'src', 'data');
 export const ACTIONS_DIR = path.join(ROOT, 'src', 'content', 'actions');
 export const DEVELOPING_DIR = path.join(ROOT, 'src', 'content', 'developing');
+export const DOSSIERS_DIR = path.join(ROOT, 'src', 'content', 'dossiers');
 
 export const LOW_DATA_MIN_ACTIONS = 2; // keep in sync with src/lib/scoring.ts
 export const CRITERIA = ['reach', 'outcome', 'sustainability', 'process', 'delivery'];

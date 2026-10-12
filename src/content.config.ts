@@ -40,6 +40,9 @@ const actions = defineCollection({
     originGovernmentId: z.string().optional(),
     status: z.enum(['proposed', 'passed', 'implemented', 'stalled', 'repealed', 'struck-down']),
     developing: z.boolean().default(false),
+    /** 'none' = decided by an independent institution: scored and shown, but earns no party credit. */
+    credit: z.enum(['party', 'none']).default('party'),
+    institution: z.string().optional(),
     lastReviewed: z.coerce.date(),
     facts: z.array(z.string()).min(1),
     why: z.object({
@@ -77,4 +80,66 @@ const developing = defineCollection({
   }),
 });
 
-export const collections = { actions, developing };
+export const CLAIM_TYPES = ['finding', 'official-statement', 'allegation', 'data', 'event'] as const;
+export const DOSSIER_KINDS = ['topic', 'institution', 'organisation', 'party', 'company-group'] as const;
+
+// Dossiers are unscored reference files (Addendum v2). The schema is deliberately tolerant of optional
+// fields; scripts/validate-content.mjs enforces the editorial rules (source counts, allegation fields...).
+const looseDate = z.union([z.date(), z.string().min(1)]);
+const srcRef = z.union([z.number().int().min(1), z.array(z.number().int().min(1))]);
+const cell = z.union([z.string(), z.number(), z.boolean(), z.null()]);
+
+const dossiers = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/dossiers' }),
+  schema: z.object({
+    title: z.string().min(1),
+    summary: z.string().min(1).max(240),
+    category: z.string(),
+    subcategories: z.array(z.string()).default([]),
+    kind: z.enum(DOSSIER_KINDS),
+    asOf: z.coerce.date(),
+    status: z.enum(['ongoing', 'settled']),
+    lastReviewed: z.coerce.date(),
+    timeline: z
+      .array(
+        z.object({
+          date: looseDate,
+          event: z.string().min(1),
+          actor: z.string().optional(),
+          type: z.enum(CLAIM_TYPES).optional(),
+          source: srcRef.optional(),
+        }),
+      )
+      .default([]),
+    claims: z
+      .array(
+        z.object({
+          claim: z.string().min(1),
+          type: z.enum(CLAIM_TYPES),
+          madeBy: z.string().optional(),
+          status: z.string().optional(),
+          response: z.string().optional(),
+          source: srcRef.optional(),
+        }),
+      )
+      .default([]),
+    positions: z
+      .array(z.object({ holder: z.string().min(1), position: z.string().min(1), source: srcRef.optional() }))
+      .default([]),
+    tables: z
+      .array(
+        z.object({
+          title: z.string().min(1),
+          caption: z.string().optional(),
+          columns: z.array(z.union([z.string(), z.number()])).min(1),
+          rows: z.array(z.array(cell)).default([]),
+          source: srcRef.optional(),
+        }),
+      )
+      .default([]),
+    notShown: z.array(z.string()).default([]),
+    sources: z.array(source).min(1),
+  }),
+});
+
+export const collections = { actions, developing, dossiers };

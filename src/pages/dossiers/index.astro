@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import DossierCard from '../../components/DossierCard.astro';
+import { getSite } from '../../lib/site.ts';
+import { categories } from '../../lib/taxonomy.ts';
+import { KIND_LABEL, DOSSIER_STATUS_LABEL } from '../../lib/dossiers.ts';
+import { isoDate } from '../../lib/format.ts';
+const site = await getSite();
+const cats = categories().filter((c) => site.dossiers.some((d) => d.data.category === c.id));
+const kinds = [...new Set(site.dossiers.map((d) => d.data.kind as string))];
+const statuses = ['ongoing', 'settled'].filter((s) => site.dossiers.some((d) => d.data.status === s));
+const catName = new Map(categories().map((c) => [c.id, c.name]));
+---
+<Base title="Dossiers" path="/dossiers/" description="Fact files on institutions, organisations and live topics: a dated timeline, claims with their status and response, positions, data and sources. Not scored; no party points.">
+  <PageHead title="Dossiers" kicker="Fact files" lede="Each dossier collects the dated facts on one institution, organisation or topic, as of the date shown (many sources were seen only in search summaries; see each source label): what is on record, what is claimed and by whom, and what the facts do not show. Dossiers are not scored and carry no party points." crumbs={[['Home', '/'], ['Dossiers']]} />
+  <div class="wrap">
+    {site.dossiers.length === 0 ? (
+      <div class="empty"><p>No dossiers are published yet. Dossiers appear here once their facts and sources have been checked. In the meantime, see the <a href="/developing/">developing items</a> or <a href="/actions/">all actions</a>.</p></div>
+    ) : (
+      <>
+        <form class="filters" id="filters" role="search" aria-label="Filter dossiers" onsubmit="return false">
+          <div class="controls">
+            <label class="field">Search text<input type="search" id="f-q" placeholder="Title or summary" autocomplete="off" /></label>
+            <label class="field">Category<select id="f-category"><option value="">All categories</option>{cats.map((c) => <option value={c.id}>{c.name}</option>)}</select></label>
+            <label class="field">Kind<select id="f-kind"><option value="">All kinds</option>{kinds.map((k) => <option value={k}>{KIND_LABEL[k] ?? k}</option>)}</select></label>
+            <label class="field">Status<select id="f-status"><option value="">Ongoing and settled</option>{statuses.map((s) => <option value={s}>{DOSSIER_STATUS_LABEL[s]}</option>)}</select></label>
+            <button type="reset" class="btn" id="f-reset">Clear filters</button>
+          </div>
+        </form>
+        <p class="result-count" role="status" aria-live="polite" id="f-count">{site.dossiers.length} {site.dossiers.length === 1 ? 'dossier' : 'dossiers'}</p>
+        <ul class="alist" id="dlist">
+          {site.dossiers.map((d) => (
+            <li
+              data-text={`${d.data.title} ${d.data.summary} ${catName.get(d.data.category) ?? ''}`.toLowerCase()}
+              data-category={d.data.category}
+              data-kind={d.data.kind}
+              data-status={d.data.status}
+              data-asof={isoDate(d.data.asOf)}
+              data-title={d.data.title.toLowerCase()}
+            >
+              <DossierCard dossier={d} />
+            </li>
+          ))}
+        </ul>
+        <div class="empty" id="f-none" hidden><p>No dossiers match these filters. Clear a filter to widen the list.</p></div>
+      </>
+    )}
+  </div>
+</Base>
+<script>
+  const list = document.getElementById('dlist');
+  if (list) {
+    const items = Array.from(list.children) as HTMLElement[];
+    const el = (id: string) => document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null;
+    const get = (id: string) => el(id)?.value ?? '';
+    // Preselect from ?category=, ?kind=, ?status=, ?q= (used by links from category pages and search).
+    try {
+      const sp = new URLSearchParams(location.search);
+      for (const [param, id] of [['category', 'f-category'], ['kind', 'f-kind'], ['status', 'f-status'], ['q', 'f-q']] as const) {
+        const v = sp.get(param);
+        const node = el(id);
+        if (v && node) node.value = v;
+      }
+    } catch {}
+    const apply = () => {
+      const q = get('f-q').trim().toLowerCase();
+      const cat = get('f-category'), kind = get('f-kind'), status = get('f-status');
+      let n = 0;
+      items.forEach((li) => {
+        const d = li.dataset;
+        const ok =
+          (!q || q.split(/\s+/).every((w) => d.text!.includes(w))) &&
+          (!cat || d.category === cat) &&
+          (!kind || d.kind === kind) &&
+          (!status || d.status === status);
+        li.hidden = !ok;
+        if (ok) n++;
+      });
+      document.getElementById('f-count')!.textContent = `${n} ${n === 1 ? 'dossier' : 'dossiers'}${n === items.length ? '' : ` of ${items.length}`}`;
+      document.getElementById('f-none')!.hidden = n !== 0;
+    };
+    const form = document.getElementById('filters')!;
+    form.addEventListener('input', apply);
+    form.addEventListener('change', apply);
+    form.addEventListener('reset', () => setTimeout(apply));
+    apply();
+  }
+</script>

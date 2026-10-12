@@ -67,5 +67,7 @@ export interface ScorableAction {
   level: Level;
   governmentId: string;
   originGovernmentId?: string;
+  /** 'none': independent institution; scored but earns no party credit. Default 'party'. */
+  credit?: 'party' | 'none';
   scorers: ScorerEntry[];
 }

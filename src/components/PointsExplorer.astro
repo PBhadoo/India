@@ -40,7 +40,7 @@ const heads: [string, string, string?, string?][] = [
   {sc.preliminary && (
     <div class="banner" role="note">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg>
-      <p><strong>Preliminary.</strong> {sc.scoredActionCount} of {sc.totalActionCount} Centre actions are scored so far, and the site treats results as preliminary below {PRELIMINARY_MIN_SCORED} scored actions. Figures will move as entries are added. Read every number together with its range.</p>
+      <p><strong>Preliminary.</strong> {sc.scoredActionCount} of {sc.totalActionCount - sc.noCreditScoredCount} Centre actions with party credit are scored so far{sc.noCreditScoredCount > 0 ? `; ${sc.noCreditScoredCount} more, decided by independent institutions, are scored but earn no party credit and are not counted here` : ''}, and the site treats results as preliminary below {PRELIMINARY_MIN_SCORED} scored actions. Figures will move as entries are added. Read every number together with its range.</p>
     </div>
   )}
   <div class="note">

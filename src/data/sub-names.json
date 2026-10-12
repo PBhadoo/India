@@ -99,5 +99,14 @@
   "uttar-pradesh": "Uttar Pradesh",
   "west-bengal": "West Bengal",
   "telangana-andhra": "Telangana & Andhra Pradesh",
-  "others": "Other states"
+  "others": "Other states",
+  "big-business-groups": "Big business groups",
+  "regulators-markets": "Regulators & markets",
+  "competition-concentration": "Competition & concentration",
+  "business-political-funding": "Business & political funding",
+  "state-contracts-privatisation": "State contracts & privatisation",
+  "new-parties": "New parties",
+  "ngos-civil-society": "NGOs & civil society",
+  "protests-movements": "Protests & movements",
+  "arrests-prosecutions": "Arrests & prosecutions"
 }

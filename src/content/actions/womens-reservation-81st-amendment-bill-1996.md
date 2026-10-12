@@ -42,7 +42,9 @@ scoring:
   lag_years: 27
   shocks: [lok-sabha-dissolutions]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: 0, process: 1, delivery: -2, note: "The bill lapsed without enactment, though the joint committee's report fed later bills." }
+    - { id: B, reach: 0, outcome: 0, sustainability: 0, process: 1, delivery: -4, note: "Bill lapsed without enactment, so no direct effect; committee report was later reused but delivery in 1996 failed." }
 ---
 
 ## In depth

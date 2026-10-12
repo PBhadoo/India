@@ -41,7 +41,9 @@ scoring:
   lag_years: 5
   shocks: [securities-scam-1992]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 3, process: 2, delivery: 2, note: "Gave the securities regulator statutory powers and an appellate route, but enforcement in major cases has been questioned." }
+    - { id: B, reach: 3, outcome: 2, sustainability: 3, process: 2, delivery: 3, note: "Statutory regulator with appellate route and market reforms durable for decades, with enforcement criticisms in major cases." }
 ---
 
 ## In depth

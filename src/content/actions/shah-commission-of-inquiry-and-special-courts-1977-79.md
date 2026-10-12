@@ -42,7 +42,9 @@ scoring:
   lag_years: 2
   shocks: [government-collapse-1979]
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 0, sustainability: -1, process: -1, delivery: -2, note: "Produced a public record of Emergency excesses, but the special courts were held not legally constituted and no trials resulted." }
+    - { id: B, reach: 1, outcome: -1, sustainability: -2, process: -1, delivery: -2, note: "Produced a public record but no trials followed and special courts were held not legally constituted." }
 ---
 
 ## In depth

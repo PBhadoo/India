@@ -43,7 +43,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 2, sustainability: 2, process: 1, delivery: 2, note: "Near-universal enrolment and falling primary dropout, but learning outcomes were unsatisfactory and the 2010 target was missed." }
+    - { id: B, reach: 5, outcome: 2, sustainability: 2, process: 1, delivery: 3, note: "Near-universal enrolment and falling dropout, but learning outcomes unsatisfactory and targets missed." }
 ---
 
 ## In depth

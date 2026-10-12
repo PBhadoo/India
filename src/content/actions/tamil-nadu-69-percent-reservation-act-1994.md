@@ -53,7 +53,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 0, sustainability: 0, process: -2, delivery: 3, note: "Quota above the 50% ceiling retained through the Ninth Schedule, but validity is contested and no outcome data were found." }
+    - { id: B, reach: 3, outcome: 0, sustainability: 0, process: -2, delivery: 3, note: "Retained 69% quota exceeding the 50% ceiling; legal challenges pending and no outcome data found." }
 ---
 
 ## In depth

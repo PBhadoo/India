@@ -51,7 +51,9 @@ scoring:
   lag_years: 2
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 1, sustainability: -2, process: 0, delivery: 3, note: "Over 210 crore free rides delivered quickly, but cost exceeded projection and the auditor linked guarantees to a higher revenue deficit." }
+    - { id: B, reach: 3, outcome: 1, sustainability: -2, process: 0, delivery: 3, note: "Large-scale free travel launched quickly, but costs above projection and CAG links guarantees to higher deficit." }
 ---
 
 ## In depth

@@ -41,7 +41,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 2, sustainability: 3, process: 3, delivery: 1, note: "Constitutionally mandated elections and reservations cover hundreds of millions, but devolution of functions is uneven (12 of 24 states had District Planning Committees)." }
+    - { id: B, reach: 5, outcome: 1, sustainability: 3, process: 3, delivery: 1, note: "Constitutionally mandated elections and reservations for millions, but devolution of functions left uneven across states." }
 ---
 
 ## In depth

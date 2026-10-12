@@ -40,7 +40,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 3, sustainability: 3, process: 2, delivery: 3, note: "A statutory IIT network with degree powers now numbers 23 institutes, though emigration of graduates reduces domestic returns." }
+    - { id: B, reach: 2, outcome: 2, sustainability: 3, process: 1, delivery: 3, note: "Durable statutory IIT network that grew to 23 institutes, offset partly by emigration of graduates." }
 ---
 
 ## In depth

@@ -43,7 +43,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 2, process: 2, delivery: 3, note: "Indigenous rural digital exchanges and a licensed vendor base were delivered, but the file gives no tele-density figures to show scale of effect." }
+    - { id: B, reach: 3, outcome: 2, sustainability: 2, process: 1, delivery: 3, note: "Indigenous digital exchanges and licensed manufacturing built domestically, though tele-density effect not quantified in sources." }
 ---
 
 ## In depth

@@ -50,7 +50,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 2, process: 1, delivery: 3, note: "Statewide noon meals became a template for other states, and field studies report positive enrolment effects, though evidence is mostly survey-based." }
+    - { id: B, reach: 3, outcome: 2, sustainability: 2, process: 0, delivery: 3, note: "Statewide school meal scheme with survey evidence of positive enrolment effects and later national adoption, though rigorous Tamil Nadu data are limited." }
 ---
 
 ## In depth

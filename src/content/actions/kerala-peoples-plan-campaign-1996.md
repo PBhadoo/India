@@ -53,7 +53,9 @@ scoring:
   lag_years: 4
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 1, sustainability: 1, process: 3, delivery: 2, note: "35-40% of plan outlay devolved with participatory process, but evaluation evidence is campaign-linked and not independent." }
+    - { id: B, reach: 3, outcome: 1, sustainability: 1, process: 2, delivery: 2, note: "Devolved 35-40% of plan to local bodies with broad participation, but evaluation is campaign-linked and not independent." }
 ---
 
 ## In depth

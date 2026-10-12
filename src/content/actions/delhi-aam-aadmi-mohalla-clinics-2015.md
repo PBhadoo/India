@@ -57,7 +57,9 @@ scoring:
   shocks:
   - covid-2020
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 0, sustainability: -1, process: -1, delivery: -1, note: "523 clinics against a plan of 1,000, with closures, facility gaps and audit-reported deficient planning, though free primary care did reach poorer areas." }
+    - { id: B, reach: 2, outcome: 0, sustainability: -1, process: 0, delivery: -1, note: "523 clinics against 1,000 planned, with CAG-reported staffing and facility gaps; free primary care reached many poor residents." }
 ---
 
 ## In depth

@@ -62,7 +62,9 @@ scoring:
   shocks:
   - drought-1972
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 2, outcome: 0, sustainability: 1, process: 1, delivery: 0, note: "A statutory fund and profession tax backed the scheme, but outcome findings were not retrieved and audit shortfalls and declining participation are unverified." }
+    - { id: B, reach: 3, outcome: 0, sustainability: 1, process: 1, delivery: 1, note: "Dedicated fund and statute but evidence thin: unverified audit shortfalls and declining participation." }
 ---
 
 ## In depth

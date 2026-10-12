@@ -55,7 +55,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 0, sustainability: -2, process: 0, delivery: 2, note: "Rs 36,359 crore relief to farmers with bank loans, but fiscal burden on an indebted state, credit-discipline concerns and uneven benefits." }
+    - { id: B, reach: 3, outcome: 0, sustainability: -2, process: 0, delivery: 1, note: "Rs 36,359 crore relief to many farmers but debt-heavy state, central bank warning and no outcome data keep net low." }
 ---
 
 ## In depth

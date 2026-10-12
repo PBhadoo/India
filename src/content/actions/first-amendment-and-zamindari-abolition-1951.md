@@ -42,7 +42,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 1, sustainability: 1, process: -1, delivery: 2, note: "Protected zamindari abolition laws, but speech and trade restrictions were added and land reform outcomes were uneven." }
+    - { id: B, reach: 4, outcome: 1, sustainability: 1, process: -1, delivery: 2, note: "Shielded zamindari abolition from challenge but curbed speech and trade rights; land reform outcomes uneven." }
 ---
 
 ## In depth

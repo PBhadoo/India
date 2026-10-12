@@ -41,7 +41,9 @@ scoring:
   lag_years: 1
   shocks: [gulf-war-1990, balance-of-payments-crisis-1991]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 2, sustainability: 1, process: 0, delivery: 3, note: "Raised US$605 million to meet external payments, with the April sale repurchased within the year; dates and attribution are uncertain." }
+    - { id: B, reach: 1, outcome: 1, sustainability: 1, process: -1, delivery: 3, note: "Raised about US$600 million to avoid default and part was repurchased, but sources conflict on details and it drew public outrage." }
 ---
 
 ## In depth

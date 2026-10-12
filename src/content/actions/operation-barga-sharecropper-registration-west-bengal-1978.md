@@ -57,7 +57,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 2, sustainability: 1, process: 1, delivery: 3, note: "About 1.5 million sharecroppers were recorded and 85.6% kept their land, though input cost-sharing largely ended and productivity attribution is disputed." }
+    - { id: B, reach: 3, outcome: 2, sustainability: 2, process: 1, delivery: 3, note: "Over 1.1 million sharecroppers recorded post-1978 with tenure retention of 85.6%, though cost-sharing ended and some insecurity." }
 ---
 
 ## In depth

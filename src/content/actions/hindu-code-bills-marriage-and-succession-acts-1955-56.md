@@ -44,7 +44,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 2, sustainability: 3, process: 1, delivery: 2, note: "Codified marriage, divorce and women's absolute property for Hindus, but daughters' coparcenary rights waited until 2005 and other communities were not covered." }
+    - { id: B, reach: 5, outcome: 2, sustainability: 3, process: 2, delivery: 3, note: "Codified marriage, divorce and women's property rights for Hindus, though daughters' equal rights came only in 2005." }
 ---
 
 ## In depth

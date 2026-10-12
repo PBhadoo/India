@@ -54,7 +54,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 3, sustainability: 0, process: 0, delivery: 2, note: "Reported losses fell from about 45-60% to single digits, offset by large regulatory assets and prolonged tariff litigation." }
+    - { id: B, reach: 3, outcome: 3, sustainability: -1, process: 0, delivery: 3, note: "Losses fell from roughly 45-60% to single digits, offset by large regulatory assets and prolonged tariff litigation." }
 ---
 
 ## In depth

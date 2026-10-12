@@ -52,7 +52,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 1, sustainability: 1, process: 1, delivery: 3, note: "Roughly 95% of villages covered and health-centre power improved, but a quasi-experimental study found no significant overall consumption effect." }
+    - { id: B, reach: 3, outcome: 1, sustainability: 2, process: 0, delivery: 4, note: "About 95% of villages covered by 2006 with health-centre power gains, but no overall consumption increase found." }
 ---
 
 ## In depth

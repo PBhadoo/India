@@ -42,7 +42,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 3, outcome: 1, sustainability: 2, process: 2, delivery: 3, note: "Created a regulator and admitted private insurers (about 52 companies), but the file gives no penetration or coverage outcome data." }
+    - { id: B, reach: 3, outcome: 1, sustainability: 2, process: 1, delivery: 3, note: "Regulator created and private insurers admitted, but coverage outcomes are not established in the sources." }
 ---
 
 ## In depth

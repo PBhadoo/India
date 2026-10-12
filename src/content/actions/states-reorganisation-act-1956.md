@@ -42,7 +42,9 @@ scoring:
   lag_years: 5
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 5, outcome: 2, sustainability: 3, process: 2, delivery: 3, note: "Redrew boundaries largely along linguistic lines for the whole country, though further boundary demands followed in later decades." }
+    - { id: B, reach: 5, outcome: 2, sustainability: 3, process: 2, delivery: 4, note: "Boundaries redrawn for the whole country on linguistic lines and still in force, though later reorganisations continued." }
 ---
 
 ## In depth

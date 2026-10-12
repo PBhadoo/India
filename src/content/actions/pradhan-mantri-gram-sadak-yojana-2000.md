@@ -42,7 +42,9 @@ scoring:
   lag_years: 10
   shocks: []
   confidence: medium
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 2, sustainability: 2, process: 1, delivery: 3, note: "Government figures show 99.7% of sanctioned phase I habitations built, but targets slipped and measured agricultural income effects were small." }
+    - { id: B, reach: 4, outcome: 2, sustainability: 3, process: 1, delivery: 3, note: "99.7% of sanctioned phase I habitations built, though slower than original timetable and limited income effects found." }
 ---
 
 ## In depth

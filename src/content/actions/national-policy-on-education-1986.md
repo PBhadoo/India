@@ -42,7 +42,9 @@ scoring:
   lag_years: 6
   shocks: [balance-of-payments-crisis-1991]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 4, outcome: 1, sustainability: 0, process: 1, delivery: 1, note: "Equity-focused policy launched Operation Blackboard and Navodaya Vidyalayas, but the 6% of GDP aim and outcomes are unverified." }
+    - { id: B, reach: 4, outcome: 0, sustainability: 0, process: 1, delivery: 0, note: "Broad equity framework and programmes launched, but outcomes and spending target attainment not verified." }
 ---
 
 ## In depth

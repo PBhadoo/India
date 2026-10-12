@@ -46,7 +46,7 @@ scoring:
   era_baseline: "The Waqf Act, 1995 (amended 2013) governed Boards and Tribunals; the Sachar Committee (2006) had flagged poor records and encroachment."
   lag_years: 3
   shocks: []
-  confidence: medium
+  confidence: low
   scorers:
     - { id: A, reach: 0, outcome: 0, sustainability: 0, process: -1, delivery: 1, note: "Passed after committee review, but the Supreme Court stayed several provisions on a prima facie basis and the constitutional challenge is pending." }
     - { id: B, reach: 0, outcome: 0, sustainability: 0, process: -1, delivery: 0, note: "Contested provisions partly stayed by the Supreme Court and the JPC held no clause-by-clause discussion; outcomes are too early to assess." }
@@ -59,3 +59,5 @@ The Act amends the 1995 law on the administration of waqf, which are endowments 
 The Union government and supporters say the changes improve transparency and revenue use and do not interfere with religion; opponents and petitioners say they reduce the autonomy of the community and alter long-standing property status. The Supreme Court's interim order took a middle course on the contested points: it stayed the five-year practice condition and parts of the Section 3C mechanism, capped non-Muslim members, and left registration and the end of waqf by user in place, noting its view was prima facie and the validity of the Act remains open for final hearing.
 
 Figures about waqf property counts come from PRS (September 2024) and a ministerial statement in the Rajya Sabha; they differ in basis and date. Developments after the September 2025 order, including any final judgment, were not verified.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

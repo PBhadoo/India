@@ -41,7 +41,7 @@ scoring:
   era_baseline: "Land acquisition was governed by the Land Acquisition Act, 1894, which did not require owner consent or a social impact assessment, and acquisition for public purposes was a state power exercised under that law."
   lag_years: 5
   shocks: [ordinance-lapse-2015, state-level-amendments]
-  confidence: medium
+  confidence: low
   scorers:
     - { id: A, reach: 2, outcome: 0, sustainability: 0, process: 3, delivery: 1, note: "Introduced consent and impact-assessment safeguards after extensive legislative process, but a 2025 committee found weak implementation and the 2015 amendment attempt lapsed." }
     - { id: B, reach: 3, outcome: 0, sustainability: 1, process: 2, delivery: -1, note: "Added consent, impact assessment and resettlement safeguards, but a 2025 committee found consent often a formality and compensation undervalued." }
@@ -54,3 +54,5 @@ The 2013 Act replaced a colonial-era statute with one built around consent, asse
 Supporters regard it as a rights-based framework for people affected by acquisition. Critics, including industry bodies and some economists, argued the consent requirement and compensation rules would slow land assembly for housing and infrastructure. In 2014-15 the government proposed exempting five categories of project from consent and impact assessment through an ordinance and a Bill; the Bill passed the Lok Sabha but lapsed after a joint committee failed to reach consensus.
 
 A December 2025 report of the Standing Committee on Rural Development found, in relation to the Act's implementation, that consent processes were often formalities and compensation and rehabilitation had gaps, particularly in scheduled areas. The evidence available for this entry covers the design of the Act and committee findings; it does not include a systematic count of acquisitions delayed or completed under the Act, and compensation multiples are not stated because the source for them describes the earlier Bill.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

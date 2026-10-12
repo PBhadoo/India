@@ -47,7 +47,7 @@ scoring:
   era_baseline: "Cash was the dominant retail payment mode; earlier legislated demonetisations of high-value notes occurred in 1946 and 1978."
   lag_years: 2
   shocks: ["2017-gst-rollout", "2018-nbfc-stress", "2020-covid"]
-  confidence: medium
+  confidence: low
   scorers:
     - { id: A, reach: -4, outcome: -3, sustainability: -3, process: -1, delivery: 2, note: "About 99% of notes returned, printing costs rose and studies show short-run contraction; stated aims lack clear evidence despite the Court upholding the action 4:1." }
     - { id: B, reach: -3, outcome: -3, sustainability: -3, process: -1, delivery: 0, note: "Nearly all withdrawn notes returned and research found a short-run employment and credit contraction, while the Supreme Court upheld the decision 4:1." }
@@ -60,3 +60,5 @@ The measure withdrew the two highest-value notes with a few hours' notice and re
 Economic effects are measured differently. Headline GDP data showed a small dip, while a district-level study found short-term contractions in activity and credit that headline series may not fully capture. Digital payments grew quickly afterwards, though other policies and private platforms also contributed. On the legal question, the Supreme Court majority upheld the scheme on proportionality and consultation grounds, and the dissent held that the statutory route was not followed.
 
 Sources for the Prime Minister's address and some RBI figures are secondary reports; the primary RBI reports and the judgment text were not opened for this entry.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

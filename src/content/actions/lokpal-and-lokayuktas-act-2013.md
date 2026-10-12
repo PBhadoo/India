@@ -57,4 +57,6 @@ The Act followed several earlier unpassed Lokpal bills and a 2011 to 2013 parlia
 
 Supporters point to the existence of an independent complaint channel with jurisdiction over high office. Observers also note that operational output is modest: the official 2023-24 sheet shows 169 disposals, most dismissed on jurisdiction or merit, and a handful of prosecution sanctions. Whether that reflects the quality of complaints, the Act's jurisdictional limits or institutional capacity is disputed and not settled by the data reviewed here.
 
+PRS describes the Bill's procedure as follows: the Inquiry Wing is to examine a complaint within 60 days of reference, an investigation is to be completed within six months, and trials before Special Courts are to be completed within two years. The Bill also removed the requirement of prior sanction to begin an investigation or prosecution, and it applies to States only where they consent to set up Lokayuktas [2]. The Rajya Sabha Select Committee, chaired by Satyavrat Chaturvedi, was constituted in May 2012 [2].
+
 The cumulative complaint totals since 2019 and the state-level Lokayukta position were not retrieved for this entry.

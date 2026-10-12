@@ -20,6 +20,7 @@ facts:
 why:
   stated:
     - "The Act's stated purpose is to provide for social security and welfare of unorganised workers through schemes recommended by a national board and State boards [1]."
+    - "PRS describes the Bill as an enabling framework for welfare schemes for unorganised workers: the central government may set up schemes for life and disability cover, health, maternity and old-age protection, State governments may set up schemes for provident fund, housing, children's education and skill upgradation, and every worker is to be registered by the district administration and issued a portable smart card [6]."
   criticism:
     - "A commentary argues that earlier initiatives under social security legislation produced few outcomes for workers and that legislation passed by Parliament has not been fully enforced; it also notes employers with fewer than ten workers are not required to provide ESIC or PF [4]."
 benefits:
@@ -38,6 +39,7 @@ sources:
   - { title: "Rajya Sabha reply on social security for unorganised workers, 5 December 2024", url: "https://rsdebate.nic.in/bitstream/123456789/754768/1/PQ_266_05122024_U1204_p257_p259.pdf", publisher: "Rajya Sabha, Ministry of Labour and Employment", type: primary }
   - { title: "Social security in unorganised sector with e-Shram", url: "https://ksandk.com/newsletter/social-security-in-unorganized-sector/", publisher: "K&S Partners", type: reputable-media }
   - { title: "Periodic Labour Force Survey (PLFS) Annual Report: July 2023-June 2024", url: "https://ruralindiaonline.org/en/library/resource/periodic-labour-force-survey-plfs-annual-report-july-2023-june-2024/", publisher: "MoSPI report (hosted by People's Archive of Rural India)", type: official-data }
+  - { title: "The Unorganised Sector Workers' Social Security Bill, 2007 (bill track)", url: "https://prsindia.org/billtrack/the-unorganised-sector-workers-social-security-bill-2007", publisher: "PRS Legislative Research", type: reputable-media }
 scoring:
   era_baseline: "Before 2008 unorganised workers were registered under scattered welfare boards or not at all, with no general national framework."
   lag_years: 5

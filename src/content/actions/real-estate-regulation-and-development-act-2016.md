@@ -21,6 +21,7 @@ facts:
 why:
   stated:
     - "The Act's stated aims are to regulate and promote the real estate sector, protect consumers and provide speedy dispute redressal through a regulator and appellate tribunal [2]."
+    - "The Act's long title states the further aims of ensuring the sale of plots, apartments or buildings in an efficient and transparent manner and of establishing an adjudicating mechanism for speedy dispute redressal and an Appellate Tribunal; PRS describes the 2013 Bill as regulating transactions between buyers and promoters, with project details uploaded on registration and 70% of buyers' money held in a separate project account [1][2]."
   criticism:
     - "PRS noted that land is a State subject and Parliament's competence could be questioned (the Bill could be justified as regulation of contracts and property transfer on the Concurrent List) [1]."
     - "PRS noted that a requirement to keep 70% of buyers' money in a separate project account may leave funds unused where costs are lower, which could require other financing and raise project costs [1]."

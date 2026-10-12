@@ -43,7 +43,7 @@ scoring:
   era_baseline: "Before the Act, forest diversion for non-forest uses was decided by state governments, and about 4.1 million hectares were diverted between 1951-52 and 1975-76 without mitigation measures."
   lag_years: 10
   shocks: [godavarman-ruling-1996, economic-liberalisation-1991]
-  confidence: medium
+  confidence: low
   scorers:
     - { id: A, reach: 2, outcome: 2, sustainability: 2, process: 1, delivery: 2, note: "Diversion rates fell relative to the pre-Act period and total cover rose, but dense forest declined and diversions continue at scale." }
     - { id: B, reach: 2, outcome: 1, sustainability: 2, process: 1, delivery: 1, note: "Diversion rates fell versus earlier decades and total cover rose, but dense forest declined and large diversions continued." }
@@ -56,3 +56,5 @@ The 1980 Act shifted the final decision on diverting forest land to non-forest u
 The Act's reach was extended by the Supreme Court's 1996 Godavarman order, which applied it to all land that is forest in the dictionary sense, whatever its classification. The 2023 amendment redefined the land covered and exempted some categories, such as strategic linear projects near borders; petitioners argued this narrows the 1996 definition, and the Court's interim order of February 2024 told states to keep applying the 1996 definition for now.
 
 Outcome data are open to differing readings. Total forest cover has risen since 2001, and recorded annual diversions are lower than in the quarter-century before the Act. Dense forest has declined, diversions for mining, roads and irrigation continue, and compensatory afforestation has been criticised on quality and data grounds. The figures cited come from different series (forest survey, ministry replies and a data-journalism compilation) and are not directly comparable, and the 1980 enactment date is given as the date of the ordinance in the source cited.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

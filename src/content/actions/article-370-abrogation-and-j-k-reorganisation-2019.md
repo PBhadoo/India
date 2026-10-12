@@ -46,7 +46,7 @@ scoring:
   era_baseline: "Until 2019 Jammu and Kashmir operated under Article 370 and the 1954 Presidential order, with a constitutional status different from other states; the state also recorded high militancy-related fatalities in 2018."
   lag_years: 5
   shocks: [covid-2020]
-  confidence: medium
+  confidence: low
   scorers:
     - { id: A, reach: 0, outcome: 0, sustainability: 1, process: -1, delivery: 2, note: "Militancy incidents fell, but attribution is contested, statehood remains unrestored, communications restrictions were challenged, and the Court upheld the abrogation." }
     - { id: B, reach: 1, outcome: 1, sustainability: 0, process: -1, delivery: 0, note: "Violence figures fell but attribution is contested, statehood is unrestored, and the Supreme Court upheld the step while communication restrictions were challenged." }
@@ -61,3 +61,5 @@ The Supreme Court's December 2023 judgment held the first step valid and upheld 
 Supporters, including the Union government, say the change completed constitutional integration and improved security and development. Critics, including opposition parties and petitioners, say the manner of the change bypassed the state's elected institutions and that statehood has been delayed. Security statistics are frequently cited by both sides; the figures above come from a single parliamentary reply, cover different administrative units in 2018 and 2023, and do not by themselves establish cause.
 
 The outcome of the 2024 Assembly elections and events after October 2025 were not verified for this entry.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

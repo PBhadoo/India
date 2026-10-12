@@ -59,3 +59,5 @@ The Act applies a cut-off date of 15 August 1947 to every place of worship other
 On the legal question, the Supreme Court has not issued a final ruling on the Act's validity in the sources reviewed. In M. Siddiq (2019) the Court described the Act in terms of secularism, but whether those observations bind a later challenge is disputed: one reading treats them as an answer to the present petitions, another as obiter. In December 2024 the Court interim-restricted new suits and effective orders in pending suits while it considers the batch.
 
 Dates of passage and the Act's text were not checked against the Gazette or India Code; confidence is low.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

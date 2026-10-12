@@ -44,7 +44,7 @@ scoring:
   era_baseline: "By 2002-03 state electricity boards were financially stressed (a central bailout package was agreed in 2002), and a decade of independent power producer policy had added only about 3% of national generation."
   lag_years: 5
   shocks: [global-financial-crisis-2008, covid-2020]
-  confidence: medium
+  confidence: low
   scorers:
     - { id: A, reach: 3, outcome: 1, sustainability: 0, process: 2, delivery: 1, note: "Regulatory institutions were created in every state, but discoms remain loss-making with repeated bailouts and limited open access, so measured outcomes are modest." }
     - { id: B, reach: 4, outcome: 1, sustainability: 0, process: 3, delivery: 1, note: "Mandatory regulators and delicensing were set up, but discoms still needed repeated bailouts and open access stayed limited." }
@@ -57,3 +57,5 @@ The Electricity Act, 2003 consolidated three earlier laws into one statute. Its 
 Supporters of the framework point to the creation of independent regulators, to private participation in generation and transmission, and to the loss reductions achieved by some utilities. Critics, including parties that opposed the Bill in 2003, argued that competition and unbundling would not fit Indian conditions and could leave public utilities serving only small and rural consumers. Later data show continuing distribution-company losses, state-owned utilities still supplying most electricity, and limited use of open access.
 
 Attribution is difficult. Reforms such as Delhi's 2002 privatisation, regulator creation under the 1998 Act, central bailout schemes (UDAY in 2015, and others) and large-scale generation additions all overlap in time with the Act. The figures above should be read as context for the sector rather than as isolated effects of the statute. The Act's commencement date is given differently in the sources cited.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

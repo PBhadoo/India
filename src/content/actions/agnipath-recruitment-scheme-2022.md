@@ -59,3 +59,5 @@ The government stated the aims were a younger force and lower long-term pension 
 Critics argue that short service without pension or gratuity affects morale and the training and cohesion of units, and that most recruits will face a mid-career transition. The Delhi High Court dismissed challenges in February 2023, finding no ground to interfere with a policy decision. A Supreme Court ruling on the scheme was not found in this review.
 
 Official intake and retention figures for later years were not retrieved; they can be found in Lok Sabha and Rajya Sabha replies and should be added before scoring.
+
+Source note: no primary document (statute text, Gazette notification, court judgment or official dataset) is listed for this entry; its sources are bill summaries, legal-news reports, encyclopaedic or commentary pieces. Confidence is therefore set to low until the primary text is checked.

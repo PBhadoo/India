@@ -1,0 +1,762 @@
+{
+  "state": "maharashtra",
+  "name": "Maharashtra",
+  "governments": [
+    {
+      "id": "state-maharashtra-1960-yb-chavan",
+      "cm": "Yashwantrao Chavan",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1960-05-01",
+      "end": "1962-11-20",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Maharashtra formed 1960-05-01; Bombay State governments before that omitted. Seat share not verified."
+    },
+    {
+      "id": "state-maharashtra-1962-kannamwar",
+      "cm": "Marotrao Kannamwar",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1962-11-20",
+      "end": "1963-11-25",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Died in office. Seat share not verified."
+    },
+    {
+      "id": "state-maharashtra-1963-sawant",
+      "cm": "P. K. Sawant",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1963-11-25",
+      "end": "1963-12-05",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Interim CM for ten days; seat share not verified."
+    },
+    {
+      "id": "state-maharashtra-1963-vasantrao-naik",
+      "cm": "Vasantrao Naik",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1963-12-05",
+      "end": "1975-02-21",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Continuous across 1967 and 1972 assemblies; INC majorities; seat share not verified."
+    },
+    {
+      "id": "state-maharashtra-1975-sb-chavan-1",
+      "cm": "Shankarrao Chavan",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1975-02-21",
+      "end": "1977-05-17",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-maharashtra-1977-vasantdada-patil-1",
+      "cm": "Vasantdada Patil",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1977-05-17",
+      "end": "1978-03-05",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Seat share not verified; page shows INC(U)/INC."
+    },
+    {
+      "id": "state-maharashtra-1978-vasantdada-patil-2",
+      "cm": "Vasantdada Patil",
+      "label": "INC(U) government",
+      "leadParty": "inc-u",
+      "type": "coalition",
+      "start": "1978-03-05",
+      "end": "1978-07-18",
+      "partners": [
+        {
+          "party": "inc-u",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "INC(U) with INC(I) coalition after the 1978 election (general knowledge); composition not verified."
+    },
+    {
+      "id": "state-maharashtra-1978-pawar-1",
+      "cm": "Sharad Pawar",
+      "label": "ICS government",
+      "leadParty": "ics",
+      "type": "coalition",
+      "start": "1978-07-18",
+      "end": "1980-02-17",
+      "partners": [
+        {
+          "party": "ics",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Progressive Democratic Front with Janata Party and others (general knowledge); composition not verified."
+    },
+    {
+      "id": "state-maharashtra-1980-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1980-02-17",
+      "end": "1980-06-09",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1980-antulay",
+      "cm": "A. R. Antulay",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1980-06-09",
+      "end": "1982-01-21",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1980 election: INC about 186 of 288 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1982-bhosale",
+      "cm": "Babasaheb Bhosale",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1982-01-21",
+      "end": "1983-02-02",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1980 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1983-vasantdada-patil-3",
+      "cm": "Vasantdada Patil",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1983-02-02",
+      "end": "1985-06-03",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1980 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1985-nilangekar",
+      "cm": "Shivajirao Patil Nilangekar",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1985-06-03",
+      "end": "1986-03-12",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1985 election: INC about 161 of 288 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1986-sb-chavan-2",
+      "cm": "Shankarrao Chavan",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1986-03-12",
+      "end": "1988-06-26",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1985 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1988-pawar-2",
+      "cm": "Sharad Pawar",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1988-06-26",
+      "end": "1991-06-25",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1985 assembly: 161; 1990: about 141 of 288 with independents - approximate, merged"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ],
+      "note": "Approximate seat share"
+    },
+    {
+      "id": "state-maharashtra-1991-sudhakarrao-naik",
+      "cm": "Sudhakarrao Naik",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1991-06-25",
+      "end": "1993-03-06",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1990 assembly: INC about 141 of 288, working majority with independents (unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1993-pawar-3",
+      "cm": "Sharad Pawar",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1993-03-06",
+      "end": "1995-03-14",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1990 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1995-manohar-joshi",
+      "cm": "Manohar Joshi",
+      "label": "SS government",
+      "leadParty": "shiv-sena",
+      "type": "coalition",
+      "start": "1995-03-14",
+      "end": "1999-02-01",
+      "partners": [
+        {
+          "party": "shiv-sena",
+          "share": 0.529,
+          "note": "1995 election: Shiv Sena about 73, BJP about 65 of 288 (general knowledge, unverified)"
+        },
+        {
+          "party": "bjp",
+          "share": 0.471
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1999-narayan-rane",
+      "cm": "Narayan Rane",
+      "label": "SS government",
+      "leadParty": "shiv-sena",
+      "type": "coalition",
+      "start": "1999-02-01",
+      "end": "1999-10-18",
+      "partners": [
+        {
+          "party": "shiv-sena",
+          "share": 0.529,
+          "note": "1995 assembly"
+        },
+        {
+          "party": "bjp",
+          "share": 0.471
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-1999-deshmukh-1",
+      "cm": "Vilasrao Deshmukh",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1999-10-18",
+      "end": "2003-01-18",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.5639,
+          "note": "1999 election: INC about 75, NCP about 58 of 288 (general knowledge, unverified)"
+        },
+        {
+          "party": "ncp",
+          "share": 0.4361
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2003-shinde",
+      "cm": "Sushilkumar Shinde",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2003-01-18",
+      "end": "2004-11-01",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.5639,
+          "note": "1999 assembly"
+        },
+        {
+          "party": "ncp",
+          "share": 0.4361
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2004-deshmukh-2",
+      "cm": "Vilasrao Deshmukh",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2004-11-01",
+      "end": "2008-12-08",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.4929,
+          "note": "2004 election: INC about 69, NCP about 71 of 288 (general knowledge, unverified)"
+        },
+        {
+          "party": "ncp",
+          "share": 0.5071
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2008-ashok-chavan",
+      "cm": "Ashok Chavan",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2008-12-08",
+      "end": "2010-11-11",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.4929,
+          "note": "2004 assembly (2009 election fell within the term: INC about 82, NCP about 62)"
+        },
+        {
+          "party": "ncp",
+          "share": 0.5071
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2010-prithviraj-chavan",
+      "cm": "Prithviraj Chavan",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2010-11-11",
+      "end": "2014-09-28",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.5694,
+          "note": "2009 election: INC about 82, NCP about 62 of 288 (general knowledge, unverified)"
+        },
+        {
+          "party": "ncp",
+          "share": 0.4306
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2014-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "2014-09-28",
+      "end": "2014-10-31",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2014-fadnavis-1",
+      "cm": "Devendra Fadnavis",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "coalition",
+      "start": "2014-10-31",
+      "end": "2019-11-12",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.6595,
+          "note": "2014 election: BJP about 122, Shiv Sena about 63 of 288 (general knowledge, unverified); the government began as a BJP minority with NCP outside support and Shiv Sena joined in Dec 2014"
+        },
+        {
+          "party": "shiv-sena",
+          "share": 0.3405
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2019-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "2019-11-12",
+      "end": "2019-11-23",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2019-fadnavis-2",
+      "cm": "Devendra Fadnavis",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "minority-outside-support",
+      "start": "2019-11-23",
+      "end": "2019-11-28",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        },
+        {
+          "title": "Wikipedia: 2024 Maharashtra Legislative Assembly election",
+          "url": "https://en.wikipedia.org/wiki/2024_Maharashtra_Legislative_Assembly_election"
+        }
+      ],
+      "note": "Sworn in with a claimed NCP (Ajit Pawar) support; resigned before a floor test. BJP won 105 seats in 2019 (verified on Wikipedia 2024 page)."
+    },
+    {
+      "id": "state-maharashtra-2019-uddhav-thackeray",
+      "cm": "Uddhav Thackeray",
+      "label": "SS government",
+      "leadParty": "shiv-sena",
+      "type": "coalition",
+      "start": "2019-11-28",
+      "end": "2022-06-30",
+      "partners": [
+        {
+          "party": "shiv-sena",
+          "share": 0.3637,
+          "note": "2019: Shiv Sena 56, NCP 54, INC 44 of 288 (general knowledge, unverified); BJP 105, INC 44 verified"
+        },
+        {
+          "party": "ncp",
+          "share": 0.3506
+        },
+        {
+          "party": "inc",
+          "share": 0.2857
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2022-shinde",
+      "cm": "Eknath Shinde",
+      "label": "SS government",
+      "leadParty": "shiv-sena",
+      "type": "coalition",
+      "start": "2022-06-30",
+      "end": "2024-12-05",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.7241,
+          "note": "Approximate: BJP 105 + Shiv Sena rebel faction about 40 of the 2019 assembly (unverified); NCP faction led by Ajit Pawar joined in July 2023 and is not itemised"
+        },
+        {
+          "party": "shiv-sena",
+          "share": 0.2759
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        }
+      ]
+    },
+    {
+      "id": "state-maharashtra-2024-fadnavis-3",
+      "cm": "Devendra Fadnavis",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "coalition",
+      "start": "2024-12-05",
+      "end": null,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.5739,
+          "note": "2024 election (verified): BJP 132, Shiv Sena 57, NCP 41; Mahayuti total listed as 230 (lead text says 235)"
+        },
+        {
+          "party": "shiv-sena",
+          "share": 0.2478
+        },
+        {
+          "party": "ncp",
+          "share": 0.1783
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Maharashtra",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Maharashtra"
+        },
+        {
+          "title": "Wikipedia: 2024 Maharashtra Legislative Assembly election",
+          "url": "https://en.wikipedia.org/wiki/2024_Maharashtra_Legislative_Assembly_election"
+        }
+      ]
+    }
+  ]
+}

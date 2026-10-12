@@ -1,0 +1,681 @@
+{
+  "state": "tamil-nadu",
+  "name": "Tamil Nadu",
+  "governments": [
+    {
+      "id": "state-tamil-nadu-1950-kumaraswamy-raja",
+      "cm": "P. S. Kumaraswamy Raja",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1950-01-26",
+      "end": "1952-04-10",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Madras State; pre-assembly (Legislative Council era). Premiers of Madras Presidency 1947-50 are not on the page opened and are omitted/unverified."
+    },
+    {
+      "id": "state-tamil-nadu-1952-rajaji",
+      "cm": "C. Rajagopalachari",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "minority-outside-support",
+      "start": "1952-04-10",
+      "end": "1954-04-13",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "INC won about 152 of 375 seats in 1952 (general knowledge, unverified); formed government with support of other groups/independents (not itemised)."
+    },
+    {
+      "id": "state-tamil-nadu-1954-kamaraj",
+      "cm": "K. Kamaraj",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1954-04-13",
+      "end": "1963-10-02",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "INC majorities in 1957 and 1962 elections; seat share not verified; merged across three terms."
+    },
+    {
+      "id": "state-tamil-nadu-1963-bhaktavatsalam",
+      "cm": "M. Bhaktavatsalam",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1963-10-02",
+      "end": "1967-03-06",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "3rd assembly (1962) INC majority; seat share not verified."
+    },
+    {
+      "id": "state-tamil-nadu-1967-annadurai",
+      "cm": "C. N. Annadurai",
+      "label": "DMK government",
+      "leadParty": "dmk",
+      "type": "majority",
+      "start": "1967-03-06",
+      "end": "1969-02-03",
+      "partners": [
+        {
+          "party": "dmk",
+          "share": 1,
+          "note": "1967: DMK 138 of 234 (general knowledge; not verified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Madras State renamed Tamil Nadu on 1969-01-14; CM died in office 1969-02-03."
+    },
+    {
+      "id": "state-tamil-nadu-1969-nedunchezhiyan-acting",
+      "cm": "V. R. Nedunchezhiyan",
+      "label": "DMK government",
+      "leadParty": "dmk",
+      "type": "caretaker",
+      "start": "1969-02-03",
+      "end": "1969-02-10",
+      "partners": [
+        {
+          "party": "dmk",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Acting CM after the CM's death; the page labels party inconsistently (DMK/AIADMK); DMK used."
+    },
+    {
+      "id": "state-tamil-nadu-1969-karunanidhi-1",
+      "cm": "M. Karunanidhi",
+      "label": "DMK government",
+      "leadParty": "dmk",
+      "type": "majority",
+      "start": "1969-02-10",
+      "end": "1976-01-31",
+      "partners": [
+        {
+          "party": "dmk",
+          "share": 1,
+          "note": "1967 assembly: DMK 138 of 234; 1971: about 184 - approximate, merged"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Approximate seat share"
+    },
+    {
+      "id": "state-tamil-nadu-1976-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1976-01-31",
+      "end": "1977-06-30",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-1977-mgr-1",
+      "cm": "M. G. Ramachandran",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "1977-06-30",
+      "end": "1980-02-17",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "1977: AIADMK 130 of 234 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-1980-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1980-02-17",
+      "end": "1980-06-09",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Page gives 17 Feb in the table but 7 Feb in a note; 17 Feb used."
+    },
+    {
+      "id": "state-tamil-nadu-1980-mgr-2",
+      "cm": "M. G. Ramachandran",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "1980-06-09",
+      "end": "1987-12-24",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "1980: about 129 of 234; 1984: about 132 - approximate, merged"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Approximate seat share; died in office 24 Dec 1987"
+    },
+    {
+      "id": "state-tamil-nadu-1987-nedunchezhiyan-acting",
+      "cm": "V. R. Nedunchezhiyan",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "caretaker",
+      "start": "1987-12-24",
+      "end": "1988-01-07",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Acting CM after MGR's death."
+    },
+    {
+      "id": "state-tamil-nadu-1988-janaki",
+      "cm": "V. N. Janaki Ramachandran",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "minority-outside-support",
+      "start": "1988-01-07",
+      "end": "1988-01-30",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Short-lived government amid AIADMK split; floor-test composition and any outside support not verified."
+    },
+    {
+      "id": "state-tamil-nadu-1988-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1988-01-30",
+      "end": "1989-01-27",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-1989-karunanidhi-3",
+      "cm": "M. Karunanidhi",
+      "label": "DMK government",
+      "leadParty": "dmk",
+      "type": "majority",
+      "start": "1989-01-27",
+      "end": "1991-01-30",
+      "partners": [
+        {
+          "party": "dmk",
+          "share": 1,
+          "note": "1989: about 150 of 234 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-1991-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1991-01-30",
+      "end": "1991-06-24",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-1991-jayalalithaa-1",
+      "cm": "J. Jayalalithaa",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "1991-06-24",
+      "end": "1996-05-13",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "1991: AIADMK 164 of 234 (general knowledge, unverified); INC was an ally of AIADMK in the election"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-1996-karunanidhi-4",
+      "cm": "M. Karunanidhi",
+      "label": "DMK government",
+      "leadParty": "dmk",
+      "type": "majority",
+      "start": "1996-05-13",
+      "end": "2001-05-14",
+      "partners": [
+        {
+          "party": "dmk",
+          "share": 1,
+          "note": "1996: DMK 173 of 234 (general knowledge, unverified); allied with TMC(M) (39)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2001-jayalalithaa-2",
+      "cm": "J. Jayalalithaa",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2001-05-14",
+      "end": "2001-09-21",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2001: AIADMK 132 of 234 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Resigned following a Supreme Court ruling (not verified on page opened)"
+    },
+    {
+      "id": "state-tamil-nadu-2001-panneerselvam-1",
+      "cm": "O. Panneerselvam",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2001-09-21",
+      "end": "2002-03-02",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2001 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2002-jayalalithaa-3",
+      "cm": "J. Jayalalithaa",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2002-03-02",
+      "end": "2006-05-13",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2001 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2006-karunanidhi-5",
+      "cm": "M. Karunanidhi",
+      "label": "DMK government",
+      "leadParty": "dmk",
+      "type": "minority-outside-support",
+      "start": "2006-05-13",
+      "end": "2011-05-16",
+      "partners": [
+        {
+          "party": "dmk",
+          "share": 1,
+          "note": "2006: DMK about 96 of 234 (general knowledge); INC (34) joined the cabinet later in the term (not verified)"
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Support from outside at formation, later joined (unverified)"
+        },
+        {
+          "party": "pmk",
+          "note": "Outside support (unverified)"
+        },
+        {
+          "party": "cpi-m",
+          "note": "Outside support (unverified)"
+        },
+        {
+          "party": "cpi",
+          "note": "Outside support (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2011-jayalalithaa-4",
+      "cm": "J. Jayalalithaa",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2011-05-16",
+      "end": "2014-09-28",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2011: AIADMK 150 of 234 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Left office after conviction in a disproportionate-assets case (not verified on page opened)"
+    },
+    {
+      "id": "state-tamil-nadu-2014-panneerselvam-2",
+      "cm": "O. Panneerselvam",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2014-09-28",
+      "end": "2015-05-23",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2011 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2015-jayalalithaa-5",
+      "cm": "J. Jayalalithaa",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2015-05-23",
+      "end": "2016-12-06",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2011 assembly: 150; 2016: about 135 of 234 - approximate, merged"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ],
+      "note": "Approximate seat share; died in office 5 Dec 2016"
+    },
+    {
+      "id": "state-tamil-nadu-2016-panneerselvam-3",
+      "cm": "O. Panneerselvam",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2016-12-06",
+      "end": "2017-02-16",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2016 assembly: about 135 of 234"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2017-palaniswami",
+      "cm": "Edappadi K. Palaniswami",
+      "label": "AIADMK government",
+      "leadParty": "aiadmk",
+      "type": "majority",
+      "start": "2017-02-16",
+      "end": "2021-05-07",
+      "partners": [
+        {
+          "party": "aiadmk",
+          "share": 1,
+          "note": "2016 assembly: about 135 of 234; AIADMK split in 2017 and reunited - approximate"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2021-stalin",
+      "cm": "M. K. Stalin",
+      "label": "DMK government",
+      "leadParty": "dmk",
+      "type": "majority",
+      "start": "2021-05-07",
+      "end": "2026-05-10",
+      "partners": [
+        {
+          "party": "dmk",
+          "share": 1,
+          "note": "2021: DMK 133 of 234 (general knowledge, unverified); INC and others were allies outside the cabinet"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        }
+      ]
+    },
+    {
+      "id": "state-tamil-nadu-2026-vijay",
+      "cm": "C. Joseph Vijay",
+      "label": "TVK government",
+      "leadParty": "tvk",
+      "type": "coalition",
+      "start": "2026-05-10",
+      "end": null,
+      "partners": [
+        {
+          "party": "tvk",
+          "share": 0.9558,
+          "note": "2026 election: TVK 108 of 234 (verified); INC (5 seats) left the DMK-led SPA and joined the government. Four other SPA parties support from outside (names not given in source, so not listed)."
+        },
+        {
+          "party": "inc",
+          "share": 0.0442
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Tamil Nadu",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Tamil_Nadu"
+        },
+        {
+          "title": "Wikipedia: 2026 Tamil Nadu Legislative Assembly election",
+          "url": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+        }
+      ]
+    }
+  ]
+}

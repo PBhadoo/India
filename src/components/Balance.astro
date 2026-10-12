@@ -1,0 +1,15 @@
+---
+interface Item { label: string; n: number; slot?: number; href?: string }
+interface Props { items: Item[]; max?: number; label: string }
+const { items, label } = Astro.props;
+const max = Math.max(1, ...items.map((i) => i.n));
+---
+<ul class="balance" aria-label={label}>
+  {items.map((i) => (
+    <li>
+      <span>{i.href ? <a href={i.href}>{i.label}</a> : i.label}</span>
+      <span class="bal-bar" aria-hidden="true"><i class={i.slot != null ? `p${i.slot} pat${i.slot}` : ''} style={`width:${(i.n / max) * 100}%;${i.slot == null ? 'background:var(--ink-2)' : ''}${i.n === 0 ? ';min-width:0;width:0' : ''}`}></i></span>
+      <span class="bal-n">{i.n}</span>
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import ActionCard from '../../components/ActionCard.astro';
+import { getSite, pm } from '../../lib/site.ts';
+import { categories } from '../../lib/taxonomy.ts';
+import { STATUS_LABEL } from '../../lib/format.ts';
+import { toTime } from '../../lib/tenure.ts';
+const site = await getSite();
+const cats = categories();
+const partyOpts = Object.values(site.partyMeta).filter((p) => site.actions.some((a) => a.gov?.partners.some((x) => x.party === p.id) || a.partyId === p.id)).sort((a, b) => (a.slot || 99) - (b.slot || 99));
+const govIds = [...new Set(site.actions.map((a) => a.data.governmentId))].map((id) => site.actions.find((a) => a.data.governmentId === id)!.gov).filter(Boolean).sort((a, b) => toTime(a!.start) - toTime(b!.start));
+const decades = [...new Set(site.actions.map((a) => Math.floor(a.year / 10) * 10))].sort((a, b) => a - b);
+const statuses = [...new Set(site.actions.map((a) => a.data.status))];
+const levels = [...new Set(site.actions.map((a) => a.data.level))];
+---
+<Base title="All actions" path="/actions/" description="Every recorded government action, filterable by category, party, government, era, status and level.">
+  <PageHead title="All actions" kicker="The record" lede="Filter by topic, party, government, period, status or level. Filters work in this page only; nothing is sent anywhere." crumbs={[['Home', '/'], ['Actions']]} />
+  <div class="wrap">
+    {site.actions.length === 0 ? (
+      <div class="empty"><p>No actions are published yet.</p></div>
+    ) : (
+      <>
+        <form class="filters" id="filters" role="search" aria-label="Filter actions" onsubmit="return false">
+          <div class="controls">
+            <label class="field">Search text<input type="search" id="f-q" placeholder="Title or summary" autocomplete="off" /></label>
+            <label class="field">Category<select id="f-category"><option value="">All categories</option>{cats.map((c) => <option value={c.id}>{c.name}</option>)}</select></label>
+            <label class="field">Party<select id="f-party"><option value="">All parties</option>{partyOpts.map((p) => <option value={p.id}>{p.short}</option>)}</select></label>
+            <label class="field">Government<select id="f-gov"><option value="">All governments</option>{govIds.map((g) => <option value={g!.id}>{(g!.leader || g!.label)} ({g!.start.slice(0, 4)})</option>)}</select></label>
+            <label class="field">Era<select id="f-era"><option value="">All eras</option>{decades.map((d) => <option value={String(d)}>{d}s</option>)}</select></label>
+            <label class="field">Status<select id="f-status"><option value="">Any status</option>{statuses.map((s) => <option value={s}>{STATUS_LABEL[s] ?? s}</option>)}</select></label>
+            {levels.length > 1 && <label class="field">Level<select id="f-level"><option value="">Centre and state</option>{levels.map((l) => <option value={l}>{l === 'centre' ? 'Centre' : 'State'}</option>)}</select></label>}
+            <label class="field">Sort by<select id="f-sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="rev">Recently reviewed</option><option value="title">Title A to Z</option></select></label>
+            <button type="reset" class="btn" id="f-reset">Clear filters</button>
+          </div>
+        </form>
+        <p class="result-count" role="status" aria-live="polite" id="f-count">{site.actions.length} {site.actions.length === 1 ? 'action' : 'actions'}</p>
+        <ul class="alist" id="alist">
+          {site.actions.map((a) => (
+            <li
+              data-title={a.data.title.toLowerCase()}
+              data-text={`${a.data.title} ${a.data.summary}`.toLowerCase()}
+              data-category={a.data.category}
+              data-parties={(a.gov?.partners.map((p) => p.party) ?? [a.partyId]).join(' ')}
+              data-gov={a.data.governmentId}
+              data-era={String(Math.floor(a.year / 10) * 10)}
+              data-status={a.data.status}
+              data-level={a.data.level}
+              data-date={a.data.date.toISOString().slice(0, 10)}
+              data-rev={a.data.lastReviewed.toISOString().slice(0, 10)}
+            >
+              <ActionCard action={a} site={site} />
+            </li>
+          ))}
+        </ul>
+        <div class="empty" id="f-none" hidden><p>No actions match these filters. Clear a filter to widen the list.</p></div>
+      </>
+    )}
+  </div>
+</Base>
+<script>
+  const list = document.getElementById('alist');
+  if (list) {
+    const items = Array.from(list.children) as HTMLElement[];
+    const get = (id: string) => (document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null)?.value ?? '';
+    const apply = () => {
+      const q = get('f-q').trim().toLowerCase();
+      const f = { category: get('f-category'), gov: get('f-gov'), era: get('f-era'), status: get('f-status'), level: get('f-level') };
+      const party = get('f-party');
+      let n = 0;
+      items.forEach((li) => {
+        const d = li.dataset;
+        const ok =
+          (!q || q.split(/\s+/).every((w) => d.text!.includes(w))) &&
+          (!f.category || d.category === f.category) &&
+          (!party || d.parties!.split(' ').includes(party)) &&
+          (!f.gov || d.gov === f.gov) &&
+          (!f.era || d.era === f.era) &&
+          (!f.status || d.status === f.status) &&
+          (!f.level || d.level === f.level);
+        li.hidden = !ok;
+        if (ok) n++;
+      });
+      const sort = get('f-sort');
+      const key = (li: HTMLElement) => (sort === 'title' ? li.dataset.title! : sort === 'rev' ? li.dataset.rev! : li.dataset.date!);
+      items.sort((a, b) => {
+        const x = key(a), y = key(b);
+        const c = x < y ? -1 : x > y ? 1 : 0;
+        return sort === 'title' || sort === 'old' ? c : -c;
+      });
+      items.forEach((li) => list.appendChild(li));
+      document.getElementById('f-count')!.textContent = `${n} ${n === 1 ? 'action' : 'actions'}${n === items.length ? '' : ` of ${items.length}`}`;
+      document.getElementById('f-none')!.hidden = n !== 0;
+    };
+    const form = document.getElementById('filters')!;
+    form.addEventListener('input', apply);
+    form.addEventListener('change', apply);
+    form.addEventListener('reset', () => setTimeout(apply));
+    apply();
+  }
+</script>

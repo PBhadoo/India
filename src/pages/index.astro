@@ -1,0 +1,134 @@
+---
+import Base from '../layouts/Base.astro';
+import Timeline from '../components/Timeline.astro';
+import TenureTable from '../components/TenureTable.astro';
+import PointsExplorer from '../components/PointsExplorer.astro';
+import ActionCard from '../components/ActionCard.astro';
+import { getSite, centreGovernments, stateGovernments, listStates } from '../lib/site.ts';
+import { categories } from '../lib/taxonomy.ts';
+import { fmtDate, yearOf, isoDate } from '../lib/format.ts';
+
+const site = await getSite();
+const centre = centreGovernments();
+const states = listStates().filter((s) => stateGovernments(s.id).length > 0);
+const cats = categories();
+const counts = new Map<string, number>();
+for (const a of site.actions) counts.set(a.data.category, (counts.get(a.data.category) ?? 0) + 1);
+const dev = site.developing.slice(0, 3);
+const latest = [...site.actions].sort((a, b) => +new Date(b.data.lastReviewed) - +new Date(a.data.lastReviewed) || a.slug.localeCompare(b.slug)).slice(0, 6);
+const first = centre.length ? Math.min(...centre.map((g) => yearOf(g.start))) : null;
+const scored = site.actions.filter((a) => a.score.scored).length;
+---
+<Base title="Home" path="/">
+  <div class="wrap hero">
+    <p class="kicker">India Explained</p>
+    <h1>Who governed, for how long, and what the record shows</h1>
+    <p class="lede">A neutral ledger of Indian governments and their actions. Every entry uses the same template, every claim has a source, and every score is shown with its range. Scores are AI-assisted judgements and carry uncertainty; see the methodology.</p>
+    <div class="stats" role="list" aria-label="Site at a glance">
+      <div class="stat" role="listitem"><div class="v">{centre.length}</div><div class="l">Union governments{first ? `, ${first} to today` : ''}</div></div>
+      <div class="stat" role="listitem"><div class="v">{site.actions.length}</div><div class="l">{site.actions.length === 1 ? 'action' : 'actions'} recorded</div></div>
+      <div class="stat" role="listitem"><div class="v">{scored}</div><div class="l">scored by two party-blind AI scorers</div></div>
+      <div class="stat" role="listitem"><div class="v">{site.developing.length}</div><div class="l">developing {site.developing.length === 1 ? 'item' : 'items'}</div></div>
+    </div>
+    <p class="small">{site.lastUpdated ? <>Data last updated {fmtDate(site.lastUpdated)}.</> : <>No entries have been published yet.</>}</p>
+  </div>
+
+  <div class="wrap">
+    <section class="block" id="timeline" aria-labelledby="h-timeline">
+      <div class="block-head">
+        <h2 id="h-timeline">Who governed</h2>
+        {states.length > 0 && (
+          <div class="seg-toggle" role="group" aria-label="Level of government" id="level-toggle" hidden>
+            <button type="button" aria-pressed="true" data-view="centre">Centre</button>
+            <button type="button" aria-pressed="false" data-view="states">States</button>
+          </div>
+        )}
+        <a class="more" href="/governments/">All governments</a>
+      </div>
+      <div data-view-pane="centre">
+        <Timeline governments={centre} site={site} heading="Union governments since independence" id="tl-centre" />
+      </div>
+      {states.length > 0 && (
+        <div data-view-pane="states" class="stack" id="states-pane">
+          {states.map((s) => (
+            <Timeline governments={stateGovernments(s.id)} site={site} heading={s.name} compact legend={false} id={`tl-${s.id}`} />
+          ))}
+        </div>
+      )}
+
+      <h3 style="margin-top:2.2rem">How long each party has been in power</h3>
+      <TenureTable governments={centre} site={site} />
+    </section>
+
+    <section class="block" id="points" aria-labelledby="h-points">
+      <div class="block-head">
+        <h2 id="h-points">Evidence points</h2>
+        <a class="more" href="/methodology/">How points are made</a>
+      </div>
+      <PointsExplorer site={site} />
+    </section>
+
+    <section class="block" id="developing" aria-labelledby="h-dev">
+      <div class="block-head">
+        <h2 id="h-dev">Developing now</h2>
+        <a class="more" href="/developing/">All developing items</a>
+      </div>
+      {dev.length === 0 ? (
+        <div class="empty"><p>No developing items are published at the moment. Items appear here while facts are still being established.</p></div>
+      ) : (
+        <div class="grid wide">
+          {dev.map((d) => (
+            <article class="card link">
+              <div class="meta"><span class={`badge ${d.data.status === 'developing' ? 'badge-live' : ''}`}>{d.data.status === 'developing' ? 'Unsettled' : 'Settled'}</span><time datetime={isoDate(d.data.date)}>{fmtDate(d.data.date)}</time></div>
+              <h3><a class="cover" href={`/developing/${d.slug}/`}>{d.data.title}</a></h3>
+              <p class="small">{d.data.summary}</p>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <section class="block" id="categories" aria-labelledby="h-cats">
+      <div class="block-head">
+        <h2 id="h-cats">Browse by topic</h2>
+        <a class="more" href="/categories/">All topics</a>
+      </div>
+      <div class="grid">
+        {cats.map((c) => (
+          <article class="card link">
+            <h3><a class="cover" href={`/categories/${c.id}/`}>{c.name}</a></h3>
+            <p class="small" style="margin-bottom:.5rem">{c.blurb}</p>
+            <span class="count">{counts.get(c.id) ?? 0} {(counts.get(c.id) ?? 0) === 1 ? 'entry' : 'entries'}</span>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="block" id="latest" aria-labelledby="h-latest">
+      <div class="block-head">
+        <h2 id="h-latest">Recently reviewed actions</h2>
+        <a class="more" href="/actions/">All actions</a>
+      </div>
+      {latest.length === 0 ? (
+        <div class="empty"><p>No actions are published yet. Each entry will list facts, stated reasons, criticism, benefits, concerns and sources.</p></div>
+      ) : (
+        <ul class="alist">
+          {latest.map((a) => <li><ActionCard action={a} site={site} /></li>)}
+        </ul>
+      )}
+    </section>
+  </div>
+</Base>
+<script>
+  const toggle = document.getElementById('level-toggle');
+  const panes = document.querySelectorAll<HTMLElement>('[data-view-pane]');
+  if (toggle) {
+    toggle.hidden = false;
+    const set = (v: string) => {
+      panes.forEach((p) => (p.hidden = p.dataset.viewPane !== v));
+      toggle.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    };
+    toggle.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => set(b.dataset.view!)));
+    set('centre');
+  }
+</script>

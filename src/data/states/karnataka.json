@@ -1,0 +1,892 @@
+{
+  "state": "karnataka",
+  "name": "Karnataka",
+  "governments": [
+    {
+      "id": "state-karnataka-1947-chengalaraya-reddy",
+      "cm": "K. Chengalaraya Reddy",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1947-10-25",
+      "end": "1952-03-30",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Mysore State (Prime Minister, then Chief Minister from 1950-01-26). Seat share not verified."
+    },
+    {
+      "id": "state-karnataka-1952-hanumanthaiah",
+      "cm": "Kengal Hanumanthaiah",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1952-03-30",
+      "end": "1956-08-19",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "The page lists no party for this holder; INC per general knowledge (not verified). Mysore State."
+    },
+    {
+      "id": "state-karnataka-1956-manjappa",
+      "cm": "Kadidal Manjappa",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1956-08-19",
+      "end": "1956-10-31",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "The page lists no party for this holder; INC per general knowledge (not verified). Mysore State until reorganisation."
+    },
+    {
+      "id": "state-karnataka-1956-nijalingappa-1",
+      "cm": "S. Nijalingappa",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1956-10-31",
+      "end": "1958-05-16",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Enlarged Mysore State (renamed Karnataka in 1973). Seat share not verified."
+    },
+    {
+      "id": "state-karnataka-1958-jatti",
+      "cm": "B. D. Jatti",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1958-05-16",
+      "end": "1962-03-14",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-karnataka-1962-kanthi",
+      "cm": "S. R. Kanthi",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1962-03-14",
+      "end": "1962-06-21",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-karnataka-1962-nijalingappa-2",
+      "cm": "S. Nijalingappa",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1962-06-21",
+      "end": "1968-05-29",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-karnataka-1968-veerendra-patil-1",
+      "cm": "Veerendra Patil",
+      "label": "INC(O) government",
+      "leadParty": "inc-o",
+      "type": "majority",
+      "start": "1968-05-29",
+      "end": "1971-03-18",
+      "partners": [
+        {
+          "party": "inc-o",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Page lists INC(O); the INC split came in 1969, so he led INC until then. Seat share not verified."
+    },
+    {
+      "id": "state-karnataka-1971-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1971-03-18",
+      "end": "1972-03-20",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1972-devaraj-urs-1",
+      "cm": "D. Devaraj Urs",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1972-03-20",
+      "end": "1977-12-31",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1972: INC(R) about 165 of 216 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Page labels INC(R), later INC(I); INC lineage id used."
+    },
+    {
+      "id": "state-karnataka-1977-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1977-12-31",
+      "end": "1978-02-28",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1978-devaraj-urs-2",
+      "cm": "D. Devaraj Urs",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1978-02-28",
+      "end": "1980-01-12",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1978: INC(I) about 149 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1980-gundu-rao",
+      "cm": "R. Gundu Rao",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1980-01-12",
+      "end": "1983-01-10",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1978 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1983-hegde-1",
+      "cm": "Ramakrishna Hegde",
+      "label": "JP government",
+      "leadParty": "janata-party",
+      "type": "minority-outside-support",
+      "start": "1983-01-10",
+      "end": "1985-03-08",
+      "partners": [
+        {
+          "party": "janata-party",
+          "share": 1,
+          "note": "1983: JP about 95 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "bjp",
+          "note": "Outside support (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1985-hegde-2",
+      "cm": "Ramakrishna Hegde",
+      "label": "JP government",
+      "leadParty": "janata-party",
+      "type": "majority",
+      "start": "1985-03-08",
+      "end": "1988-08-13",
+      "partners": [
+        {
+          "party": "janata-party",
+          "share": 1,
+          "note": "1985: JP about 139 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1988-bommai",
+      "cm": "S. R. Bommai",
+      "label": "JP government",
+      "leadParty": "janata-party",
+      "type": "majority",
+      "start": "1988-08-13",
+      "end": "1989-04-21",
+      "partners": [
+        {
+          "party": "janata-party",
+          "share": 1,
+          "note": "1985 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Page lists JP; the party became part of JD in 1988."
+    },
+    {
+      "id": "state-karnataka-1989-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1989-04-21",
+      "end": "1989-11-30",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1989-veerendra-patil-2",
+      "cm": "Veerendra Patil",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1989-11-30",
+      "end": "1990-10-10",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1989: INC about 178 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1990-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1990-10-10",
+      "end": "1990-10-17",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1990-bangarappa",
+      "cm": "S. Bangarappa",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1990-10-17",
+      "end": "1992-11-19",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1989 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1992-moily",
+      "cm": "Veerappa Moily",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1992-11-19",
+      "end": "1994-12-11",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1989 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1994-deve-gowda",
+      "cm": "H. D. Deve Gowda",
+      "label": "JD government",
+      "leadParty": "jd",
+      "type": "majority",
+      "start": "1994-12-11",
+      "end": "1996-05-31",
+      "partners": [
+        {
+          "party": "jd",
+          "share": 1,
+          "note": "1994: JD about 115 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1996-jh-patel",
+      "cm": "J. H. Patel",
+      "label": "JD government",
+      "leadParty": "jd",
+      "type": "majority",
+      "start": "1996-05-31",
+      "end": "1999-10-11",
+      "partners": [
+        {
+          "party": "jd",
+          "share": 1,
+          "note": "1994 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-1999-sm-krishna",
+      "cm": "S. M. Krishna",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1999-10-11",
+      "end": "2004-05-28",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1999: INC about 132 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2004-dharam-singh",
+      "cm": "Dharam Singh",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2004-05-28",
+      "end": "2006-02-03",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.5285,
+          "note": "2004: INC about 65, JD(S) about 58 of 224 (general knowledge, unverified)"
+        },
+        {
+          "party": "jd-s",
+          "share": 0.4715
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2006-kumaraswamy-1",
+      "cm": "H. D. Kumaraswamy",
+      "label": "JD(S) government",
+      "leadParty": "jd-s",
+      "type": "coalition",
+      "start": "2006-02-03",
+      "end": "2007-10-08",
+      "partners": [
+        {
+          "party": "jd-s",
+          "share": 0.4234,
+          "note": "2004 assembly: JD(S) about 58, BJP about 79 (the JD(S) split in 2006; approximate)"
+        },
+        {
+          "party": "bjp",
+          "share": 0.5766
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2007-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "2007-10-08",
+      "end": "2007-11-12",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2007-yediyurappa-1",
+      "cm": "B. S. Yediyurappa",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "minority-outside-support",
+      "start": "2007-11-12",
+      "end": "2007-11-19",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Resigned after a week when JD(S) support was not forthcoming (general knowledge)."
+    },
+    {
+      "id": "state-karnataka-2007-pr-2",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "2007-11-19",
+      "end": "2008-05-30",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2008-yediyurappa-2",
+      "cm": "B. S. Yediyurappa",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "minority-outside-support",
+      "start": "2008-05-30",
+      "end": "2011-08-05",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2008: BJP about 110 of 224, short of 113; supported by independents (unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2011-sadananda-gowda",
+      "cm": "D. V. Sadananda Gowda",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "minority-outside-support",
+      "start": "2011-08-05",
+      "end": "2012-07-12",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2008 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2012-shettar",
+      "cm": "Jagadish Shettar",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "minority-outside-support",
+      "start": "2012-07-12",
+      "end": "2013-05-13",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2008 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2013-siddaramaiah-1",
+      "cm": "Siddaramaiah",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "2013-05-13",
+      "end": "2018-05-17",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "2013: INC 122 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2018-yediyurappa-3",
+      "cm": "B. S. Yediyurappa",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "minority-outside-support",
+      "start": "2018-05-17",
+      "end": "2018-05-23",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2018: BJP 104 of 224"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Resigned before a floor test."
+    },
+    {
+      "id": "state-karnataka-2018-kumaraswamy-2",
+      "cm": "H. D. Kumaraswamy",
+      "label": "JD(S) government",
+      "leadParty": "jd-s",
+      "type": "coalition",
+      "start": "2018-05-23",
+      "end": "2019-07-26",
+      "partners": [
+        {
+          "party": "jd-s",
+          "share": 0.3162,
+          "note": "2018: JD(S) 37, INC 80 of 224 (general knowledge, unverified)"
+        },
+        {
+          "party": "inc",
+          "share": 0.6838
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2019-yediyurappa-4",
+      "cm": "B. S. Yediyurappa",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2019-07-26",
+      "end": "2021-07-28",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2018: BJP 104; working majority from 2019 after defections and by-elections"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2021-bommai",
+      "cm": "Basavaraj Bommai",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2021-07-28",
+      "end": "2023-05-20",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2018 assembly, plus defections; approximate"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ],
+      "note": "Approximate seat share"
+    },
+    {
+      "id": "state-karnataka-2023-siddaramaiah-2",
+      "cm": "Siddaramaiah",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "2023-05-20",
+      "end": "2026-06-03",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "2023: INC 135 of 224 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        }
+      ]
+    },
+    {
+      "id": "state-karnataka-2026-dk-shivakumar",
+      "cm": "D. K. Shivakumar",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "2026-06-03",
+      "end": null,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "2023 assembly; Shivakumar succeeded Siddaramaiah within the same INC government (reason not stated in source)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Karnataka",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Karnataka"
+        },
+        {
+          "title": "Wikipedia: D. K. Shivakumar",
+          "url": "https://en.wikipedia.org/wiki/D._K._Shivakumar"
+        }
+      ]
+    }
+  ]
+}

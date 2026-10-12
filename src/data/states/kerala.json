@@ -1,0 +1,781 @@
+{
+  "state": "kerala",
+  "name": "Kerala",
+  "governments": [
+    {
+      "id": "state-kerala-1956-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1956-11-01",
+      "end": "1957-04-05",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "Kerala formed 1956-11-01. Predecessor Travancore-Cochin governments (to 1956) not included."
+    },
+    {
+      "id": "state-kerala-1957-ems-1",
+      "cm": "E. M. S. Namboodiripad",
+      "label": "CPI government",
+      "leadParty": "cpi",
+      "type": "minority-outside-support",
+      "start": "1957-04-05",
+      "end": "1959-07-31",
+      "partners": [
+        {
+          "party": "cpi",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "CPI won 60 of 126 seats in 1957 and governed with the support of independents (general knowledge; not verified on page opened)."
+    },
+    {
+      "id": "state-kerala-1959-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1959-07-31",
+      "end": "1960-02-22",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1960-thanu-pillai",
+      "cm": "Pattom A. Thanu Pillai",
+      "label": "PSP government",
+      "leadParty": "psp",
+      "type": "coalition",
+      "start": "1960-02-22",
+      "end": "1962-09-26",
+      "partners": [
+        {
+          "party": "psp",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "PSP-led coalition with INC and Muslim League; seat shares not computed (composition from general knowledge)."
+    },
+    {
+      "id": "state-kerala-1962-sankar",
+      "cm": "R. Sankar",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1962-09-26",
+      "end": "1964-09-10",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "Coalition composition and seat shares not verified; lead party share 1.0."
+    },
+    {
+      "id": "state-kerala-1964-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1964-09-10",
+      "end": "1965-03-25",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1965-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1965-03-25",
+      "end": "1967-03-06",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "Page lists a second President's Rule entry from 25 Mar 1965 after the 1965 election produced no government."
+    },
+    {
+      "id": "state-kerala-1967-ems-2",
+      "cm": "E. M. S. Namboodiripad",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "coalition",
+      "start": "1967-03-06",
+      "end": "1969-11-01",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 0.4728,
+          "note": "1967 United Front seats (approximate, general knowledge): CPI(M) 52, CPI 19, SSP 19, IUML 14, RSP 6, others"
+        },
+        {
+          "party": "cpi",
+          "share": 0.1727
+        },
+        {
+          "party": "ssp",
+          "share": 0.1727
+        },
+        {
+          "party": "iuml",
+          "share": 0.1273
+        },
+        {
+          "party": "rsp",
+          "share": 0.0545
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "Approximate seat share"
+    },
+    {
+      "id": "state-kerala-1969-achutha-menon-1",
+      "cm": "C. Achutha Menon",
+      "label": "CPI government",
+      "leadParty": "cpi",
+      "type": "coalition",
+      "start": "1969-11-01",
+      "end": "1970-08-04",
+      "partners": [
+        {
+          "party": "cpi",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "CPI-led coalition after CPI(M) left the United Front; composition not verified."
+    },
+    {
+      "id": "state-kerala-1970-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1970-08-04",
+      "end": "1970-10-04",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1970-achutha-menon-2",
+      "cm": "C. Achutha Menon",
+      "label": "CPI government",
+      "leadParty": "cpi",
+      "type": "coalition",
+      "start": "1970-10-04",
+      "end": "1977-03-25",
+      "partners": [
+        {
+          "party": "cpi",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "CPI-led front with INC and others; composition not verified; share not computed."
+    },
+    {
+      "id": "state-kerala-1977-karunakaran-1",
+      "cm": "K. Karunakaran",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1977-03-25",
+      "end": "1977-04-27",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "INC-led UDF; composition not verified."
+    },
+    {
+      "id": "state-kerala-1977-antony-1",
+      "cm": "A. K. Antony",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1977-04-27",
+      "end": "1978-10-29",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "INC-led UDF; composition not verified."
+    },
+    {
+      "id": "state-kerala-1978-pk-vasudevan-nair",
+      "cm": "P. K. Vasudevan Nair",
+      "label": "CPI government",
+      "leadParty": "cpi",
+      "type": "coalition",
+      "start": "1978-10-29",
+      "end": "1979-10-12",
+      "partners": [
+        {
+          "party": "cpi",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "CPI-led coalition; composition not verified."
+    },
+    {
+      "id": "state-kerala-1979-mohammed-koya",
+      "cm": "C. H. Mohammed Koya",
+      "label": "IUML government",
+      "leadParty": "iuml",
+      "type": "coalition",
+      "start": "1979-10-12",
+      "end": "1979-12-05",
+      "partners": [
+        {
+          "party": "iuml",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "Muslim League chief minister in a short-lived coalition; composition not verified."
+    },
+    {
+      "id": "state-kerala-1979-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1979-12-05",
+      "end": "1980-01-25",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1980-nayanar-1",
+      "cm": "E. K. Nayanar",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "coalition",
+      "start": "1980-01-25",
+      "end": "1981-10-21",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "LDF-led by CPI(M); composition not verified."
+    },
+    {
+      "id": "state-kerala-1981-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1981-10-21",
+      "end": "1981-12-28",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1981-karunakaran-2",
+      "cm": "K. Karunakaran",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1981-12-28",
+      "end": "1982-03-17",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "INC-led UDF; composition not verified."
+    },
+    {
+      "id": "state-kerala-1982-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1982-03-17",
+      "end": "1982-05-24",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1982-karunakaran-3",
+      "cm": "K. Karunakaran",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1982-05-24",
+      "end": "1987-03-26",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "UDF won the 1982 election; composition not verified."
+    },
+    {
+      "id": "state-kerala-1987-nayanar-2",
+      "cm": "E. K. Nayanar",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "coalition",
+      "start": "1987-03-26",
+      "end": "1991-06-24",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ],
+      "note": "LDF won the 1987 election; composition not verified."
+    },
+    {
+      "id": "state-kerala-1991-karunakaran-4",
+      "cm": "K. Karunakaran",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1991-06-24",
+      "end": "1995-03-22",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.6628,
+          "note": "Approximate seat share (1991 UDF: INC 57, IUML 19, KC(M) 10; general knowledge, unverified)"
+        },
+        {
+          "party": "iuml",
+          "share": 0.2209
+        },
+        {
+          "party": "kc-m",
+          "share": 0.1163
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1995-antony-2",
+      "cm": "A. K. Antony",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "1995-03-22",
+      "end": "1996-05-20",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.6628,
+          "note": "Approximate seat share; 1991 assembly"
+        },
+        {
+          "party": "iuml",
+          "share": 0.2209
+        },
+        {
+          "party": "kc-m",
+          "share": 0.1163
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-1996-nayanar-3",
+      "cm": "E. K. Nayanar",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "coalition",
+      "start": "1996-05-20",
+      "end": "2001-05-17",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 0.678,
+          "note": "Approximate seat share (1996 LDF: CPI(M) 40, CPI 19; general knowledge, unverified)"
+        },
+        {
+          "party": "cpi",
+          "share": 0.322
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-2001-antony-3",
+      "cm": "A. K. Antony",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2001-05-17",
+      "end": "2004-08-31",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.7127,
+          "note": "Approximate seat share (2001 UDF: INC 62, IUML 16, KC(M) 9; general knowledge, unverified)"
+        },
+        {
+          "party": "iuml",
+          "share": 0.1839
+        },
+        {
+          "party": "kc-m",
+          "share": 0.1034
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-2004-chandy-1",
+      "cm": "Oommen Chandy",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2004-08-31",
+      "end": "2006-05-18",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.7127,
+          "note": "Approximate seat share; 2001 assembly"
+        },
+        {
+          "party": "iuml",
+          "share": 0.1839
+        },
+        {
+          "party": "kc-m",
+          "share": 0.1034
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-2006-vs-achuthanandan",
+      "cm": "V. S. Achuthanandan",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "coalition",
+      "start": "2006-05-18",
+      "end": "2011-05-18",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 0.7821,
+          "note": "Approximate seat share (2006 LDF: CPI(M) 61, CPI 17; general knowledge, unverified)"
+        },
+        {
+          "party": "cpi",
+          "share": 0.2179
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-2011-chandy-2",
+      "cm": "Oommen Chandy",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2011-05-18",
+      "end": "2016-05-25",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 0.5672,
+          "note": "Approximate seat share (2011 UDF: INC 38, IUML 20, KC(M) 9; general knowledge, unverified)"
+        },
+        {
+          "party": "iuml",
+          "share": 0.2985
+        },
+        {
+          "party": "kc-m",
+          "share": 0.1343
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-2016-pinarayi-1",
+      "cm": "Pinarayi Vijayan",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "coalition",
+      "start": "2016-05-25",
+      "end": "2021-05-20",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 0.7532,
+          "note": "Approximate seat share (2016 LDF: CPI(M) 58, CPI 19; general knowledge, unverified)"
+        },
+        {
+          "party": "cpi",
+          "share": 0.2468
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-2021-pinarayi-2",
+      "cm": "Pinarayi Vijayan",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "coalition",
+      "start": "2021-05-20",
+      "end": "2026-05-18",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 0.7381,
+          "note": "Approximate seat share (2021 LDF: CPI(M) 62, CPI 17, KC(M) 5; general knowledge, unverified)"
+        },
+        {
+          "party": "cpi",
+          "share": 0.2024
+        },
+        {
+          "party": "kc-m",
+          "share": 0.0595
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        }
+      ]
+    },
+    {
+      "id": "state-kerala-2026-satheesan",
+      "cm": "V. D. Satheesan",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "coalition",
+      "start": "2026-05-18",
+      "end": null,
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "2026: UDF 102 of 140 (verified), INC 63. The remaining 39 UDF seats are not broken down on the page opened (IUML, KC, RSP, KC(J), CMP are in the cabinet), so INC is shown at 1.0 as the only itemised party; this understates allies."
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Kerala",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Kerala"
+        },
+        {
+          "title": "Wikipedia: 2026 Kerala Legislative Assembly election",
+          "url": "https://en.wikipedia.org/wiki/2026_Kerala_Legislative_Assembly_election"
+        },
+        {
+          "title": "Wikipedia: Satheesan ministry",
+          "url": "https://en.wikipedia.org/wiki/Satheesan_ministry"
+        }
+      ]
+    }
+  ]
+}

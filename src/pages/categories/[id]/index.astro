@@ -1,0 +1,84 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHead from '../../../components/PageHead.astro';
+import ActionCard from '../../../components/ActionCard.astro';
+import PartyChip from '../../../components/PartyChip.astro';
+import Balance from '../../../components/Balance.astro';
+import { getSite, pm, leadPartiesFor } from '../../../lib/site.ts';
+import { categories, getCategory, subsOf } from '../../../lib/taxonomy.ts';
+import { fmtNum, fmtSigned } from '../../../lib/format.ts';
+import { LOW_DATA_MIN_ACTIONS } from '../../../lib/scoring-core.ts';
+import { MIN_YEARS_FOR_RATE } from '../../../lib/render-points.ts';
+
+export function getStaticPaths() {
+  return categories().map((c) => ({ params: { id: c.id } }));
+}
+const { id } = Astro.params;
+const cat = getCategory(id!)!;
+const site = await getSite();
+const acts = site.actions.filter((a) => a.data.category === id);
+const subs = subsOf(id!).map((s) => ({ ...s, n: acts.filter((a) => a.data.subcategories.includes(s.id)).length }));
+const cells = site.scoring.parties
+  .map((p) => ({ p, cell: p.categories[id!] }))
+  .filter((x) => x.cell && x.cell.scoredActions > 0)
+  .filter((x) => x.p.yearsInPower >= MIN_YEARS_FOR_RATE)
+  .sort((a, b) => (b.cell.pointsPerYear ?? -Infinity) - (a.cell.pointsPerYear ?? -Infinity));
+const byParty = leadPartiesFor(site, acts).map((pid) => ({ label: pm(site, pid).short, n: acts.filter((a) => a.partyId === pid).length, slot: pm(site, pid).slot, href: `/parties/${pid}/` }));
+---
+<Base title={cat.name} path={`/categories/${id}/`} description={`${cat.name}: ${cat.blurb}`}>
+  <PageHead title={cat.name} kicker="Category" lede={cat.blurb} crumbs={[['Home', '/'], ['Categories', '/categories/'], [cat.name]]} />
+  <div class="wrap">
+    <section class="block" aria-labelledby="h-subs">
+      <h2 id="h-subs">Sub-categories</h2>
+      <ul class="grid" style="list-style:none;padding:0">
+        {subs.map((s) => (
+          <li class="card link" style="margin:0">
+            <h3 style="font-size:1.05rem"><a class="cover" href={`/categories/${id}/${s.id}/`}>{s.name}</a></h3>
+            <span class="count">{s.n} {s.n === 1 ? 'entry' : 'entries'}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="h-party">
+      <h2 id="h-party">Evidence points in this category, by party</h2>
+      {cells.length === 0 ? (
+        <div class="empty"><p>No party has scored actions in this category yet.</p></div>
+      ) : (
+        <>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Party breakdown, scrolls sideways on narrow screens">
+            <table class="data">
+              <caption>{cat.name}: points by party<span class="small">Sorted by points per year in this category. Order is not a verdict; look at the ranges and the number of actions behind each figure.</span></caption>
+              <thead><tr><th scope="col">Party</th><th scope="col" class="num">Points per year</th><th scope="col" class="num">Total points</th><th scope="col" class="num">Range (total)</th><th scope="col" class="num">Actions scored</th></tr></thead>
+              <tbody>
+                {cells.map(({ p, cell }) => (
+                  <tr>
+                    <th scope="row"><PartyChip party={pm(site, p.partyId)} /></th>
+                    <td class="num strong"><span class="fig">{cell.pointsPerYear == null || cell.scoredActions === 0 ? '–' : fmtSigned(cell.pointsPerYear, 2)}</span></td>
+                    <td class="num">{cell.scoredActions ? fmtSigned(cell.points) : '–'}</td>
+                    <td class="num">{cell.scoredActions ? `${fmtSigned(cell.low)} to ${fmtSigned(cell.high)}` : '–'}</td>
+                    <td class="num">{cell.scoredActions} {cell.lowData && <span class="badge badge-low">Low data</span>}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="small" style="margin-top:.6rem">Parties with under {MIN_YEARS_FOR_RATE} years in power are left out because a per-year figure over so short a time swings widely; their entries are listed below. </p>
+          <p class="small">Low data: fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the party in this category.</p>
+        </>
+      )}
+      <h3 style="margin-top:1.8rem">Coverage by party</h3>
+      <p class="small">Entries in this category by the party that led the government responsible. Zero is shown so gaps are visible.</p>
+      <Balance items={byParty} label="Entries per party" />
+    </section>
+
+    <section class="block" aria-labelledby="h-acts">
+      <h2 id="h-acts">Actions in {cat.name}</h2>
+      {acts.length === 0 ? (
+        <div class="empty"><p>No actions have been published in this category yet.</p></div>
+      ) : (
+        <ul class="alist">{acts.map((a) => <li><ActionCard action={a} site={site} showCategory={false} /></li>)}</ul>
+      )}
+    </section>
+  </div>
+</Base>

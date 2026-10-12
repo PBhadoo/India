@@ -1,0 +1,374 @@
+{
+  "state": "west-bengal",
+  "name": "West Bengal",
+  "governments": [
+    {
+      "id": "state-west-bengal-1947-pc-ghosh-1",
+      "cm": "Prafulla Chandra Ghosh",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1947-08-15",
+      "end": "1948-01-23",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "Premier of West Bengal pre-1950; INC; seat share not verified."
+    },
+    {
+      "id": "state-west-bengal-1948-bc-roy",
+      "cm": "Bidhan Chandra Roy",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1948-01-23",
+      "end": "1962-07-02",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "Premier then Chief Minister (from 1950-01-26); merged across assemblies 1952, 1957, 1962; INC majorities; seat share not verified. Died in office."
+    },
+    {
+      "id": "state-west-bengal-1962-pc-sen",
+      "cm": "Prafulla Chandra Sen",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1962-07-02",
+      "end": "1967-03-01",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "Seat share not verified."
+    },
+    {
+      "id": "state-west-bengal-1967-ajoy-mukherjee-1",
+      "cm": "Ajoy Mukherjee",
+      "label": "BC government",
+      "leadParty": "bangla-congress",
+      "type": "coalition",
+      "start": "1967-03-01",
+      "end": "1967-11-21",
+      "partners": [
+        {
+          "party": "bangla-congress",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "First United Front ministry including CPI(M); composition and seats not verified."
+    },
+    {
+      "id": "state-west-bengal-1967-pc-ghosh-2",
+      "cm": "Prafulla Chandra Ghosh",
+      "label": "Government",
+      "leadParty": null,
+      "type": "minority-outside-support",
+      "start": "1967-11-21",
+      "end": "1968-02-20",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "Led a breakaway group (Progressive Democratic Alliance) after the United Front government was dismissed; page lists \"Independent\". INC support is from general knowledge and not verified. Partners not itemised."
+    },
+    {
+      "id": "state-west-bengal-1968-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1968-02-20",
+      "end": "1969-02-25",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ]
+    },
+    {
+      "id": "state-west-bengal-1969-ajoy-mukherjee-2",
+      "cm": "Ajoy Mukherjee",
+      "label": "BC government",
+      "leadParty": "bangla-congress",
+      "type": "coalition",
+      "start": "1969-02-25",
+      "end": "1970-07-30",
+      "partners": [
+        {
+          "party": "bangla-congress",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "Second United Front ministry; composition and seats not verified."
+    },
+    {
+      "id": "state-west-bengal-1970-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1970-07-30",
+      "end": "1971-04-02",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ]
+    },
+    {
+      "id": "state-west-bengal-1971-ajoy-mukherjee-3",
+      "cm": "Ajoy Mukherjee",
+      "label": "BC government",
+      "leadParty": "bangla-congress",
+      "type": "coalition",
+      "start": "1971-04-02",
+      "end": "1971-06-29",
+      "partners": [
+        {
+          "party": "bangla-congress",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "Short-lived coalition; page also lists INC for this term; composition not verified."
+    },
+    {
+      "id": "state-west-bengal-1971-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1971-06-29",
+      "end": "1972-03-20",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ]
+    },
+    {
+      "id": "state-west-bengal-1972-siddhartha-ray",
+      "cm": "Siddhartha Shankar Ray",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1972-03-20",
+      "end": "1977-04-30",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1972: INC about 216 of 294 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ]
+    },
+    {
+      "id": "state-west-bengal-1977-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1977-04-30",
+      "end": "1977-06-21",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ]
+    },
+    {
+      "id": "state-west-bengal-1977-jyoti-basu",
+      "cm": "Jyoti Basu",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "majority",
+      "start": "1977-06-21",
+      "end": "2000-11-06",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 0.7911,
+          "note": "Approximate seat share; 1977 Left Front seats (general knowledge, unverified): CPI(M) 178, FB 25, RSP 20, CPI 2; Left Front re-elected in 1982, 1987, 1991, 1996 - merged"
+        },
+        {
+          "party": "fb",
+          "share": 0.1111
+        },
+        {
+          "party": "rsp",
+          "share": 0.0889
+        },
+        {
+          "party": "cpi",
+          "share": 0.0089
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ]
+    },
+    {
+      "id": "state-west-bengal-2000-buddhadeb",
+      "cm": "Buddhadeb Bhattacharya",
+      "label": "CPI(M) government",
+      "leadParty": "cpi-m",
+      "type": "majority",
+      "start": "2000-11-06",
+      "end": "2011-05-20",
+      "partners": [
+        {
+          "party": "cpi-m",
+          "share": 0.7448,
+          "note": "Approximate seat share; 2001 Left Front seats (general knowledge, unverified): CPI(M) 143, FB 25, RSP 17, CPI 7; re-elected 2006 - merged"
+        },
+        {
+          "party": "fb",
+          "share": 0.1302
+        },
+        {
+          "party": "rsp",
+          "share": 0.0885
+        },
+        {
+          "party": "cpi",
+          "share": 0.0365
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ]
+    },
+    {
+      "id": "state-west-bengal-2011-mamata",
+      "cm": "Mamata Banerjee",
+      "label": "AITC government",
+      "leadParty": "aitc",
+      "type": "majority",
+      "start": "2011-05-20",
+      "end": "2026-05-07",
+      "partners": [
+        {
+          "party": "aitc",
+          "share": 1,
+          "note": "2011: AITC 184 of 294 (INC 42 allied and in government 2011-12); 2016: 211; 2021: 215 - approximate, merged; INC share not itemised"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        }
+      ],
+      "note": "Approximate seat share. A two-day vacancy (2026-05-07 to 2026-05-09; Governor's rule per the page, no President's Rule) follows and is not a record here."
+    },
+    {
+      "id": "state-west-bengal-2026-suvendu",
+      "cm": "Suvendu Adhikari",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2026-05-09",
+      "end": null,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "2026 election: BJP 208 of 294 (verified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of West Bengal",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_West_Bengal"
+        },
+        {
+          "title": "Wikipedia: 2026 West Bengal Legislative Assembly election",
+          "url": "https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election"
+        }
+      ]
+    }
+  ]
+}

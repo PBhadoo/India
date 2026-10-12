@@ -1,0 +1,995 @@
+{
+  "state": "uttar-pradesh",
+  "name": "Uttar Pradesh",
+  "governments": [
+    {
+      "id": "state-uttar-pradesh-1950-pant",
+      "cm": "Govind Ballabh Pant",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1950-01-26",
+      "end": "1954-12-28",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "Page lists from 1950-01-26; pre-1950 premier term not on page and omitted. INC majority; seat share not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1954-sampurnanand",
+      "cm": "Sampurnanand",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1954-12-28",
+      "end": "1960-12-07",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC majority; seat share not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1960-cb-gupta-1",
+      "cm": "Chandra Bhanu Gupta",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1960-12-07",
+      "end": "1963-10-02",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC majority; seat share not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1963-kripalani",
+      "cm": "Sucheta Kripalani",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1963-10-02",
+      "end": "1967-03-14",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC majority; seat share not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1967-cb-gupta-2",
+      "cm": "Chandra Bhanu Gupta",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "minority-outside-support",
+      "start": "1967-03-14",
+      "end": "1967-04-03",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC won about 199 of 425 seats in 1967 (general knowledge); short-lived government."
+    },
+    {
+      "id": "state-uttar-pradesh-1967-charan-singh-1",
+      "cm": "Charan Singh",
+      "label": "BKD government",
+      "leadParty": "bkd",
+      "type": "coalition",
+      "start": "1967-04-03",
+      "end": "1968-02-25",
+      "partners": [
+        {
+          "party": "bkd",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "Samyukta Vidhayak Dal coalition after defections from INC; partner composition and seats not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1968-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1968-02-25",
+      "end": "1969-02-26",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1969-cb-gupta-3",
+      "cm": "Chandra Bhanu Gupta",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "minority-outside-support",
+      "start": "1969-02-26",
+      "end": "1970-02-18",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC won about 211 of 425 in the 1969 mid-term election (general knowledge); working majority via others not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1970-charan-singh-2",
+      "cm": "Charan Singh",
+      "label": "BKD government",
+      "leadParty": "bkd",
+      "type": "minority-outside-support",
+      "start": "1970-02-18",
+      "end": "1970-10-01",
+      "partners": [
+        {
+          "party": "bkd",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "INC(R) support, unverified"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "Formed with support of the Indira-led INC(R) group (general knowledge, unverified)."
+    },
+    {
+      "id": "state-uttar-pradesh-1970-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1970-10-01",
+      "end": "1970-10-18",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1970-tn-singh",
+      "cm": "Tribhuvan Narain Singh",
+      "label": "INC(O) government",
+      "leadParty": "inc-o",
+      "type": "coalition",
+      "start": "1970-10-18",
+      "end": "1971-04-04",
+      "partners": [
+        {
+          "party": "inc-o",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC(O)-led coalition with Jana Sangh, SSP and others (general knowledge); composition not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1971-tripathi",
+      "cm": "Kamalapati Tripathi",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1971-04-04",
+      "end": "1973-06-13",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC majority after INC(R) became the main INC; seat share not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1973-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1973-06-13",
+      "end": "1973-11-08",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1973-bahuguna",
+      "cm": "Hemwati Nandan Bahuguna",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1973-11-08",
+      "end": "1975-11-30",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC majority; seat share not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1975-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1975-11-30",
+      "end": "1976-01-21",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1976-nd-tiwari-1",
+      "cm": "Narayan Datt Tiwari",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1976-01-21",
+      "end": "1977-04-30",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "INC majority; seat share not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1977-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1977-04-30",
+      "end": "1977-06-23",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1977-ram-naresh-yadav",
+      "cm": "Ram Naresh Yadav",
+      "label": "JP government",
+      "leadParty": "janata-party",
+      "type": "majority",
+      "start": "1977-06-23",
+      "end": "1979-02-28",
+      "partners": [
+        {
+          "party": "janata-party",
+          "share": 1,
+          "note": "1977 election: Janata Party about 352 of 425 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1979-banarasi-das",
+      "cm": "Banarasi Das",
+      "label": "JP government",
+      "leadParty": "janata-party",
+      "type": "majority",
+      "start": "1979-02-28",
+      "end": "1980-02-17",
+      "partners": [
+        {
+          "party": "janata-party",
+          "share": 1,
+          "note": "1977 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1980-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1980-02-17",
+      "end": "1980-06-09",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1980-vp-singh",
+      "cm": "Vishwanath Pratap Singh",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1980-06-09",
+      "end": "1982-07-19",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1980 election: INC about 309 of 425 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1982-sripati-mishra",
+      "cm": "Sripati Mishra",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1982-07-19",
+      "end": "1984-08-03",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1980 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1984-nd-tiwari-2",
+      "cm": "Narayan Datt Tiwari",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1984-08-03",
+      "end": "1985-03-10",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1980 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "The page shows no CM from 1985-03-11 to 1985-09-24 (gap left as is; widely recorded as continuing Tiwari government but not verified here)."
+    },
+    {
+      "id": "state-uttar-pradesh-1985-vir-bahadur-singh",
+      "cm": "Vir Bahadur Singh",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1985-09-24",
+      "end": "1988-06-25",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1985 election: INC about 269 of 425 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1988-nd-tiwari-3",
+      "cm": "Narayan Datt Tiwari",
+      "label": "INC government",
+      "leadParty": "inc",
+      "type": "majority",
+      "start": "1988-06-25",
+      "end": "1989-12-05",
+      "partners": [
+        {
+          "party": "inc",
+          "share": 1,
+          "note": "1985 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1989-mulayam-1",
+      "cm": "Mulayam Singh Yadav",
+      "label": "JD government",
+      "leadParty": "jd",
+      "type": "minority-outside-support",
+      "start": "1989-12-05",
+      "end": "1991-06-24",
+      "partners": [
+        {
+          "party": "jd",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "bjp",
+          "note": "Outside support until late 1990 (unverified)"
+        },
+        {
+          "party": "inc",
+          "note": "Outside support after late 1990 (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "JD won about 208 of 425 in 1989 (general knowledge); BJP outside support until Oct 1990, then support from INC for a JD(S) group - not verified."
+    },
+    {
+      "id": "state-uttar-pradesh-1991-kalyan-1",
+      "cm": "Kalyan Singh",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "1991-06-24",
+      "end": "1992-12-06",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1991 election: BJP about 221 of 425 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1992-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1992-12-06",
+      "end": "1993-12-04",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1993-mulayam-2",
+      "cm": "Mulayam Singh Yadav",
+      "label": "SP government",
+      "leadParty": "sp",
+      "type": "minority-outside-support",
+      "start": "1993-12-04",
+      "end": "1995-06-03",
+      "partners": [
+        {
+          "party": "sp",
+          "share": 1,
+          "note": "1993: SP about 109, BSP about 67 of 422 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "bsp",
+          "note": "Alliance partner supporting from outside; withdrew June 1995 (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1995-mayawati-1",
+      "cm": "Mayawati",
+      "label": "BSP government",
+      "leadParty": "bsp",
+      "type": "minority-outside-support",
+      "start": "1995-06-03",
+      "end": "1995-10-18",
+      "partners": [
+        {
+          "party": "bsp",
+          "share": 1
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "bjp",
+          "note": "Outside support (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "BSP minority government supported from outside by BJP (general knowledge, unverified)."
+    },
+    {
+      "id": "state-uttar-pradesh-1995-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1995-10-18",
+      "end": "1996-10-17",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1996-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "1996-10-17",
+      "end": "1997-03-21",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "The Wikipedia list shows no CM for this interval (a gap). Recorded as President's Rule continuing after the hung 1996 assembly, based on general knowledge, NOT verified on the pages opened."
+    },
+    {
+      "id": "state-uttar-pradesh-1997-mayawati-2",
+      "cm": "Mayawati",
+      "label": "BSP government",
+      "leadParty": "bsp",
+      "type": "coalition",
+      "start": "1997-03-21",
+      "end": "1997-09-21",
+      "partners": [
+        {
+          "party": "bsp",
+          "share": 0.278,
+          "note": "1996 election: BSP about 67, BJP about 174 of 425 (general knowledge, unverified); 6-month rotation agreement with BJP"
+        },
+        {
+          "party": "bjp",
+          "share": 0.722
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1997-kalyan-2",
+      "cm": "Kalyan Singh",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "coalition",
+      "start": "1997-09-21",
+      "end": "1999-11-12",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1996 election: BJP about 174 of 425; supported by defectors/others - not itemised"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-1999-ram-prakash-gupta",
+      "cm": "Ram Prakash Gupta",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "coalition",
+      "start": "1999-11-12",
+      "end": "2000-10-28",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1996 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-2000-rajnath-singh",
+      "cm": "Rajnath Singh",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "coalition",
+      "start": "2000-10-28",
+      "end": "2002-03-08",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 1,
+          "note": "1996 assembly"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-2002-pr",
+      "cm": null,
+      "label": "President's Rule",
+      "leadParty": null,
+      "type": "presidents-rule",
+      "start": "2002-03-08",
+      "end": "2002-05-03",
+      "partners": [],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-2002-mayawati-3",
+      "cm": "Mayawati",
+      "label": "BSP government",
+      "leadParty": "bsp",
+      "type": "coalition",
+      "start": "2002-05-03",
+      "end": "2003-08-29",
+      "partners": [
+        {
+          "party": "bsp",
+          "share": 0.5269,
+          "note": "2002 election: BSP about 98, BJP about 88 of 403 (general knowledge, unverified)"
+        },
+        {
+          "party": "bjp",
+          "share": 0.4731
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-2003-mulayam-3",
+      "cm": "Mulayam Singh Yadav",
+      "label": "SP government",
+      "leadParty": "sp",
+      "type": "minority-outside-support",
+      "start": "2003-08-29",
+      "end": "2007-05-13",
+      "partners": [
+        {
+          "party": "sp",
+          "share": 1,
+          "note": "2002 election: SP about 143 of 403 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [
+        {
+          "party": "inc",
+          "note": "Outside support (unverified)"
+        },
+        {
+          "party": "rld",
+          "note": "Outside support (unverified)"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ],
+      "note": "Formed after BSP defections and with support of others."
+    },
+    {
+      "id": "state-uttar-pradesh-2007-mayawati-4",
+      "cm": "Mayawati",
+      "label": "BSP government",
+      "leadParty": "bsp",
+      "type": "majority",
+      "start": "2007-05-13",
+      "end": "2012-03-15",
+      "partners": [
+        {
+          "party": "bsp",
+          "share": 1,
+          "note": "2007: BSP 206 of 403 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-2012-akhilesh",
+      "cm": "Akhilesh Yadav",
+      "label": "SP government",
+      "leadParty": "sp",
+      "type": "majority",
+      "start": "2012-03-15",
+      "end": "2017-03-19",
+      "partners": [
+        {
+          "party": "sp",
+          "share": 1,
+          "note": "2012: SP 224 of 403 (general knowledge, unverified)"
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-2017-yogi-1",
+      "cm": "Yogi Adityanath",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2017-03-19",
+      "end": "2022-03-25",
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.96,
+          "note": "2017: BJP 312, AD(S) 9, SBSP 4 (general knowledge, unverified)"
+        },
+        {
+          "party": "apna-dal-s",
+          "share": 0.0277
+        },
+        {
+          "party": "sbsp",
+          "share": 0.0123
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    },
+    {
+      "id": "state-uttar-pradesh-2022-yogi-2",
+      "cm": "Yogi Adityanath",
+      "label": "BJP government",
+      "leadParty": "bjp",
+      "type": "majority",
+      "start": "2022-03-25",
+      "end": null,
+      "partners": [
+        {
+          "party": "bjp",
+          "share": 0.934,
+          "note": "2022: BJP 255, AD(S) 12, NISHAD Party 6 (general knowledge, unverified)"
+        },
+        {
+          "party": "apna-dal-s",
+          "share": 0.044
+        },
+        {
+          "party": "nishad",
+          "share": 0.022
+        }
+      ],
+      "outsideSupport": [],
+      "sources": [
+        {
+          "title": "Wikipedia: List of chief ministers of Uttar Pradesh",
+          "url": "https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh"
+        }
+      ]
+    }
+  ]
+}

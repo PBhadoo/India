@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import PartyChip from '../components/PartyChip.astro';
+import { getSite, pm } from '../lib/site.ts';
+import { categories } from '../lib/taxonomy.ts';
+import { fmtNum, fmtSigned } from '../lib/format.ts';
+import { LOW_DATA_MIN_ACTIONS } from '../lib/scoring-core.ts';
+import { MIN_YEARS_FOR_RATE } from '../lib/render-points.ts';
+const site = await getSite();
+const cats = categories();
+const governed = site.scoring.parties.filter((p) => p.yearsInPower > 0).sort((a, b) => (pm(site, a.partyId).slot || 99) - (pm(site, b.partyId).slot || 99));
+---
+<Base title="Compare parties by category" path="/compare/" description="Pick a category and see every party's evidence points, range and actions side by side, in the same format.">
+  <PageHead title="Compare by category" kicker="Side by side" lede="Choose a category to see each party that has governed, in the same format and the same order. Columns follow the order parties first held office." crumbs={[['Home', '/'], ['Compare']]} />
+  <div class="wrap">
+    <div class="filters cmp-controls" id="cmp-controls" hidden>
+      <div class="controls"><label class="field">Category<select id="cmp-select">{cats.map((c) => <option value={c.id}>{c.name}</option>)}</select></label></div>
+    </div>
+    {governed.length === 0 ? (
+      <div class="empty"><p>The comparison appears once governments and scored actions are published.</p></div>
+    ) : (
+      <div class="stack" style="margin-top:1.5rem">
+        {cats.map((c) => (
+          <section class="block" data-cat={c.id} id={`cmp-${c.id}`} aria-labelledby={`h-${c.id}`} style="padding-top:1.5rem">
+            <h2 id={`h-${c.id}`}>{c.name}</h2>
+            <p class="small">{c.blurb}</p>
+            <div class="grid wide">
+              {governed.map((p) => {
+                const cell = p.categories[c.id];
+                const acts = site.actions.filter((a) => a.data.category === c.id && a.gov?.partners.some((x) => x.party === p.partyId));
+                const m = pm(site, p.partyId);
+                const has = cell && cell.scoredActions > 0;
+                const brief = p.yearsInPower < MIN_YEARS_FOR_RATE;
+                return (
+                  <article class="card">
+                    <h3 style="font-size:1rem"><PartyChip party={m} full /></h3>
+                    {brief ? (
+                      <p class="small" style="margin:.6rem 0 .2rem">Under {MIN_YEARS_FOR_RATE} years in power ({fmtNum(p.yearsInPower)}), so no per-year figure is shown; a short tenure makes the figure swing widely. <span class="badge badge-low">Short tenure</span></p>
+                    ) : (
+                      <p style="margin:.6rem 0 .2rem"><span class="fig mono" style="font-size:1.5rem;font-family:var(--font-display);font-weight:650">{has ? fmtSigned(cell.pointsPerYear, 2) : '–'}</span> <span class="small">points per year</span></p>
+                    )}
+                    <p class="small mono" style="margin:0">{has ? `Total ${fmtSigned(cell.points)}, range ${fmtSigned(cell.low)} to ${fmtSigned(cell.high)}` : 'No scored actions'}</p>
+                    <p class="small" style="margin:.3rem 0 .5rem">{cell?.scoredActions ?? 0} scored of {acts.length} recorded over {fmtNum(p.yearsInPower)} years {(!has || cell.lowData) && <span class="badge badge-low">Low data</span>}</p>
+                    {acts.length > 0 && <ul class="small" style="padding-left:1.1rem;margin:0">{acts.slice(0, 4).map((a) => <li><a href={`/actions/${a.slug}/`}>{a.data.title}</a></li>)}{acts.length > 4 && <li><a href={`/categories/${c.id}/`}>and {acts.length - 4} more</a></li>}</ul>}
+                  </article>
+                );
+              })}
+            </div>
+            <p class="small" style="margin-top:.8rem">Low data: fewer than {LOW_DATA_MIN_ACTIONS} scored actions. <a href={`/categories/${c.id}/`}>Open {c.name}</a></p>
+          </section>
+        ))}
+      </div>
+    )}
+  </div>
+</Base>
+<script>
+  const ctl = document.getElementById('cmp-controls');
+  const sel = document.getElementById('cmp-select') as HTMLSelectElement | null;
+  const secs = Array.from(document.querySelectorAll<HTMLElement>('section[data-cat]'));
+  if (ctl && sel && secs.length) {
+    ctl.hidden = false;
+    const show = () => secs.forEach((s) => (s.hidden = s.dataset.cat !== sel.value));
+    sel.addEventListener('change', show);
+    show();
+  }
+</script>

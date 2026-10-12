@@ -1,0 +1,40 @@
+name: Suggest an action
+description: Suggest a government action, law, scheme or decision for the tracker.
+labels: ["suggestion"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: An id from src/data/taxonomy.yaml, e.g. economy, health, elections.
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Level
+      options: [Centre, State]
+    validations:
+      required: true
+  - type: input
+    id: state
+    attributes:
+      label: State (if level is State)
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: At least two links, ideally one primary source (Gazette, court order, official data).
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Approximate date and who was in government. Please describe, not argue.

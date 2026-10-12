@@ -1,0 +1,36 @@
+name: Correction
+description: Report a factual error, a missing source, or a wording problem on a page.
+labels: ["correction"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://.../actions/goods-and-services-tax-2017/
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: Quote the sentence and say what is incorrect, missing or misleading.
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Evidence link
+      description: A primary source (Gazette, court judgment, official data) is best.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: favours
+    attributes:
+      label: Which side does the correction favour? (optional)
+      description: Helps us check that corrections are handled evenly. It does not affect whether we accept it.
+      options:
+        - Not applicable / prefer not to say
+        - Corrects text that favoured a party or government
+        - Corrects text that disfavoured a party or government
+        - Neither

@@ -1,0 +1,159 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import StatusPill from '../../components/StatusPill.astro';
+import PartyChip from '../../components/PartyChip.astro';
+import CriterionBars from '../../components/CriterionBars.astro';
+import SourceList from '../../components/SourceList.astro';
+import ActionCard from '../../components/ActionCard.astro';
+import { render } from 'astro:content';
+import { getSite, pm } from '../../lib/site.ts';
+import { getCategory, subDisplayName } from '../../lib/taxonomy.ts';
+import { fmtDate, fmtSigned, CONFIDENCE_LABEL, isoDate, GOV_TYPE_LABEL } from '../../lib/format.ts';
+
+export async function getStaticPaths() {
+  const site = await getSite();
+  return site.actions.map((a) => ({ params: { slug: a.slug }, props: { slug: a.slug } }));
+}
+const { slug } = Astro.props;
+const site = await getSite();
+const a = site.actions.find((x) => x.slug === slug)!;
+const d = a.data;
+const { Content } = await render(a.entry);
+const cat = getCategory(d.category);
+const gov = a.gov;
+const related = site.actions
+  .filter((x) => x.slug !== slug && x.data.category === d.category)
+  .map((x) => ({ x, shared: x.data.subcategories.filter((s: string) => d.subcategories.includes(s)).length }))
+  .sort((p, q) => q.shared - p.shared || Math.abs(p.x.year - a.year) - Math.abs(q.x.year - a.year))
+  .slice(0, 4)
+  .map((r) => r.x);
+const sc = d.scoring;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.summary,
+  datePublished: isoDate(d.date),
+  dateModified: isoDate(d.lastReviewed),
+  inLanguage: 'en',
+  mainEntityOfPage: new URL(`/actions/${slug}/`, Astro.site).href,
+  publisher: { '@type': 'Organization', name: 'India Explained' },
+  citation: d.sources.map((s: any) => s.url),
+};
+const sections = [['facts', 'Facts'], ['why', 'Why'], ['effects', 'Benefits and concerns'], ['score', 'Evidence points'], ['sources', 'Sources']];
+---
+<Base title={d.title} path={`/actions/${slug}/`} description={d.summary} ogType="article" jsonLd={jsonLd}>
+  <div class="wrap page-head" data-pagefind-meta={`category:${cat?.name ?? d.category}`}>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li><li><a href="/actions/">Actions</a></li>
+        {cat && <li><a href={`/categories/${cat.id}/`}>{cat.name}</a></li>}
+        <li><span aria-current="page">{d.title}</span></li>
+      </ol>
+    </nav>
+    <div class="meta" style="font-size:.95rem">
+      <StatusPill status={d.status} />
+      {gov && <PartyChip party={pm(site, a.partyId)} />}
+      {gov && <a href={`/governments/${gov.id}/`}>{(gov.leader || gov.label)}{gov.type !== 'majority' ? `, ${(GOV_TYPE_LABEL[gov.type] ?? '').toLowerCase()}` : ''}</a>}
+      <time datetime={isoDate(d.date)}>{fmtDate(d.date)}</time>
+      {d.level === 'state' && <span class="badge">State{d.state ? `: ${d.state}` : ''}</span>}
+      {d.developing && <a class="badge badge-live" href="/developing/">Unsettled</a>}
+    </div>
+    <h1>{d.title}</h1>
+    <p class="lede">{d.summary}</p>
+    <p class="small">
+      {d.subcategories.map((s: string, i: number) => <>{i > 0 && ', '}<a href={`/categories/${d.category}/${s}/`}>{subDisplayName(s)}</a></>)}
+      {a.originGov && <> &middot; Idea originated under <a href={`/governments/${a.originGov.id}/`}>{(a.originGov.leader || a.originGov.label)}</a> ({a.originGov.start.slice(0, 4)})</>}
+    </p>
+    <ul class="anchors" aria-label="On this page">
+      {sections.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+    </ul>
+  </div>
+
+  <div class="wrap">
+    <section class="block" id="facts" aria-labelledby="h-facts">
+      <h2 id="h-facts">Facts</h2>
+      <ul class="facts prose">{d.facts.map((f: string) => <li>{f}</li>)}</ul>
+    </section>
+
+    <section class="block" id="why" aria-labelledby="h-why">
+      <h2 id="h-why">Why</h2>
+      <div class="cmp-split">
+        <div class="col-box">
+          <h3>Reasons given by those who did it</h3>
+          {d.why.stated.length ? <ul>{d.why.stated.map((s: string) => <li>{s}</li>)}</ul> : <p class="small">No stated reasons are recorded.</p>}
+        </div>
+        <div class="col-box">
+          <h3>Criticism of that reasoning</h3>
+          {d.why.criticism?.length ? <ul>{d.why.criticism.map((s: string) => <li>{s}</li>)}</ul> : <p class="small">No criticism of the stated reasons is recorded yet.</p>}
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="effects" aria-labelledby="h-eff">
+      <h2 id="h-eff">Benefits and concerns</h2>
+      <div class="two-col">
+        <div class="col-box">
+          <h3>Benefits ({d.benefits.length})</h3>
+          {d.benefits.length ? (
+            <ul>{d.benefits.map((b: any) => <li>{b.point}{b.evidence && <span class="ev">{b.evidence}</span>}</li>)}</ul>
+          ) : <p class="small">None recorded.</p>}
+        </div>
+        <div class="col-box">
+          <h3>Concerns ({d.concerns.length})</h3>
+          {d.concerns.length ? (
+            <ul>{d.concerns.map((b: any) => <li>{b.point}{b.evidence && <span class="ev">{b.evidence}</span>}</li>)}</ul>
+          ) : <p class="small">None recorded.</p>}
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="score" aria-labelledby="h-score">
+      <h2 id="h-score">Evidence points</h2>
+      {a.score.scored ? (
+        <>
+          <div class="stats">
+            <div class="stat"><div class="v">{fmtSigned(a.score.points)}</div><div class="l">points, mean of two scorers (scale {'−'}25 to +25)</div></div>
+            <div class="stat"><div class="v">{fmtSigned(a.score.low, 0)} to {fmtSigned(a.score.high, 0)}</div><div class="l">range between the two scorers' totals</div></div>
+            <div class="stat"><div class="v" style="font-size:1.3rem;padding-top:.35rem">{CONFIDENCE_LABEL[sc.confidence]}</div><div class="l">{a.score.flags.length ? `${a.score.flags.length} criteri${a.score.flags.length === 1 ? 'on' : 'a'} where scorers differ` : 'scorers agree within 1 point on every criterion'}</div></div>
+          </div>
+          <CriterionBars scorers={sc.scorers} score={a.score} />
+          <div class="cmp-split" style="margin-top:1.2rem">
+            {sc.scorers.map((s: any) => s.note && <div class="note"><p><strong>Scorer {s.id}.</strong> {s.note}</p></div>)}
+          </div>
+        </>
+      ) : (
+        <div class="empty"><p>This action has not been scored yet. Scoring needs two independent scorers working without knowing which party acted.</p></div>
+      )}
+      <h3 style="margin-top:1.8rem">Context used when scoring</h3>
+      <dl class="dl">
+        <dt>Era baseline</dt><dd>{sc.era_baseline}</dd>
+        <dt>Lag before outcomes show</dt><dd>{sc.lag_years} {sc.lag_years === 1 ? 'year' : 'years'}</dd>
+        {sc.shocks?.length > 0 && <><dt>Shocks considered</dt><dd>{sc.shocks.join(', ')}</dd></>}
+        <dt>Uncertainty</dt><dd>{CONFIDENCE_LABEL[sc.confidence]}. {a.score.scored ? `Scorer totals are ${a.score.scorerTotals.map((t: number) => fmtSigned(t, 0)).join(' and ')}.` : ''} <a href="/methodology/#uncertainty">How uncertainty is shown</a>.</dd>
+      </dl>
+    </section>
+
+    <div class="prose-body">
+      <Content />
+    </div>
+
+    <section class="block" id="sources" aria-labelledby="h-src">
+      <h2 id="h-src">Sources</h2>
+      <SourceList sources={d.sources} />
+      <p class="small" style="margin-top:1rem">
+        Last reviewed <time datetime={isoDate(d.lastReviewed)}>{fmtDate(d.lastReviewed)}</time>.
+        <a href={`/corrections/?from=${encodeURIComponent(`/actions/${slug}/`)}&title=${encodeURIComponent(d.title)}`}>Report an error</a> or
+        <a href="/methodology/#challenge">challenge a score</a>.
+      </p>
+    </section>
+
+    {related.length > 0 && (
+      <section class="block" aria-labelledby="h-rel">
+        <h2 id="h-rel">Related actions</h2>
+        <ul class="alist">{related.map((r) => <li><ActionCard action={r} site={site} /></li>)}</ul>
+      </section>
+    )}
+  </div>
+</Base>

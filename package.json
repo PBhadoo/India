@@ -1,0 +1,31 @@
+{
+  "name": "india-explained",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "validate": "node scripts/validate-content.mjs",
+    "audit": "node scripts/neutrality-audit.mjs",
+    "test": "node --test tests/*.test.ts tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/source-sans-3": "^5.3.1",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/noto-sans-devanagari": "^5.3.0",
+    "astro": "^7.3.8",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^5.4.3",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^26.6.5",
+    "pagefind": "^1.5.2"
+  }
+}

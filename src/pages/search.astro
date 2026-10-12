@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+---
+<Base title="Search" path="/search/" description="Search all actions, governments, parties and developing items." index={false}>
+  <PageHead title="Search" kicker="Find a topic, person or policy" crumbs={[['Home', '/'], ['Search']]} />
+  <div class="wrap">
+    <div class="pf-wrap" id="search"></div>
+    <noscript><p class="note">Search needs JavaScript. You can browse by <a href="/categories/">category</a> or see <a href="/actions/">all actions</a> instead.</p></noscript>
+    <p class="small" id="search-note" hidden>Search is built when the site is built. In a local development server it is not available; run a full build and preview.</p>
+  </div>
+</Base>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', function () {
+    var el = document.getElementById('search');
+    if (window.PagefindUI) {
+      var ui = new PagefindUI({ element: '#search', showSubResults: false, showImages: false, resetStyles: false, translations: { placeholder: 'Search actions, governments, parties' } });
+      var q = new URLSearchParams(location.search).get('q');
+      if (q) ui.triggerSearch(q);
+      else el.querySelector('input') && el.querySelector('input').focus({ preventScroll: true });
+    } else {
+      document.getElementById('search-note').hidden = false;
+    }
+  });
+</script>

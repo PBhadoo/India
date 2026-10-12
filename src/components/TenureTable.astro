@@ -1,0 +1,51 @@
+---
+import { partyYears, yearsInOffice } from '../lib/tenure.ts';
+import { fmtNum } from '../lib/format.ts';
+import { pm, type Site } from '../lib/site.ts';
+import PartyChip from './PartyChip.astro';
+import type { Government } from '../lib/types.ts';
+interface Props { governments: Government[]; site: Site; collapse?: number }
+const { governments, site, collapse = 10 } = Astro.props;
+const py = partyYears(governments, site.asOf);
+const total = governments.reduce((n, g) => n + yearsInOffice(g, site.asOf), 0);
+const rows = Object.entries(py)
+  .map(([id, v]) => ({ id, weighted: v.weighted, yLed: v.led, n: governments.filter((g) => g.partners.some((p) => p.party === id) || g.leadParty === id).length, led: governments.filter((g) => g.leadParty === id).length }))
+  .sort((a, b) => b.weighted - a.weighted);
+---
+{rows.length === 0 ? (
+  <div class="empty"><p>Tenure figures appear once governments are entered.</p></div>
+) : (
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Years in power by party, scrolls sideways on narrow screens">
+    <table class="data" data-sortable data-collapse={collapse}>
+      <caption>
+        Years in power by party
+        <span class="small">Each government's days in office are shared among coalition partners by their share of the governing seats. “Years led” counts whole governments led by the party, without sharing.</span>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col" data-sort-type="text">Party</th>
+          <th scope="col" class="num" data-sort-type="num" aria-sort="descending">Years in power (weighted)</th>
+          <th scope="col" class="num" data-sort-type="num">Years led</th>
+          <th scope="col" class="num" data-sort-type="num">Governments joined</th>
+          <th scope="col" class="num" data-sort-type="num">Governments led</th>
+          <th scope="col" class="num" data-sort-type="num">Share of years in office</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <th scope="row" data-sort={pm(site, r.id).short}><PartyChip party={pm(site, r.id)} /><span class="sub">{pm(site, r.id).name}</span></th>
+            <td class="num strong" data-sort={r.weighted}>{fmtNum(r.weighted)}</td>
+            <td class="num" data-sort={r.yLed}>{fmtNum(r.yLed)}</td>
+            <td class="num" data-sort={r.n}>{r.n}</td>
+            <td class="num" data-sort={r.led}>{r.led}</td>
+            <td class="num" data-sort={total ? r.weighted / total : 0}>{total ? `${((r.weighted / total) * 100).toFixed(1)}%` : '–'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}
+<script>
+  import '../scripts/sortable.ts';
+</script>

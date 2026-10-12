@@ -1,0 +1,17 @@
+---
+import { STATUS_LABEL } from '../lib/format.ts';
+interface Props { status: string }
+const { status } = Astro.props;
+const icons: Record<string, string> = {
+  implemented: '<path d="m3.5 8.5 3 3 6-7" />',
+  passed: '<path d="M3 8h10M9 4l4 4-4 4" />',
+  proposed: '<circle cx="8" cy="8" r="4.5" stroke-dasharray="2 2.2" />',
+  stalled: '<path d="M5.5 3.5v9M10.5 3.5v9" />',
+  repealed: '<path d="M3 8h10" />',
+  'struck-down': '<path d="m4 4 8 8M12 4l-8 8" />',
+};
+---
+<span class={`pill pill-${status}`}>
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icons[status] ?? icons.proposed} />
+  {STATUS_LABEL[status] ?? status}
+</span>

@@ -1,0 +1,111 @@
+---
+import { timelineSegments, toTime } from '../lib/tenure.ts';
+import { fmtDate, fmtDuration, GOV_TYPE_LABEL, shortLeader } from '../lib/format.ts';
+import { layoutLabels } from '../lib/viz.ts';
+import PartyChip from './PartyChip.astro';
+import { pm, type Site } from '../lib/site.ts';
+import type { Government } from '../lib/types.ts';
+
+interface Props {
+  governments: Government[];
+  site: Site;
+  /** Hide direct labels (compact mini-timelines). */
+  compact?: boolean;
+  heading?: string;
+  headingLevel?: 2 | 3;
+  range?: { start?: string; end?: string };
+  legend?: boolean;
+  highlight?: string;
+  id?: string;
+}
+const { governments, site, compact = false, heading, range, legend = true, highlight, id } = Astro.props;
+const segs = timelineSegments(governments, site.asOf, range);
+const byId = new Map(governments.map((g) => [g.id, g]));
+const t0 = segs.length ? toTime(range?.start ?? segs[0].start) : 0;
+const t1 = toTime(range?.end ?? site.asOf);
+const span = Math.max(1, t1 - t0);
+const y0 = new Date(t0).getUTCFullYear(), y1 = new Date(t1).getUTCFullYear();
+const step = y1 - y0 > 60 ? 10 : y1 - y0 > 25 ? 5 : 1;
+const ticks: { y: number; pct: number }[] = [];
+for (let y = Math.ceil(y0 / step) * step; y <= y1; y += step) {
+  const pct = ((Date.UTC(y, 0, 1) - t0) / span) * 100;
+  if (pct >= 0 && pct <= 100) ticks.push({ y, pct });
+}
+const nameOf = (s: (typeof segs)[number]) => byId.get(s.governmentId)?.leader || byId.get(s.governmentId)?.label || '';
+const labelOf = (s: (typeof segs)[number]) => (byId.get(s.governmentId)?.leader ? shortLeader(s.leader) : nameOf(s));
+const ledBy = (s: (typeof segs)[number], p: { name: string }) => (s.leadParty ? `${p.name}-led` : 'No lead party');
+const placements = compact ? [] : layoutLabels(segs.map((s) => ({ id: s.governmentId, startPct: s.startPct, widthPct: s.widthPct, text: labelOf(s), priority: s.days })));
+const placeById = new Map(placements.map((p) => [p.id, p]));
+const LANE = 18;
+const lanes = placements.length ? Math.max(...placements.map((p) => p.lane)) + 1 : 0;
+const used = [...new Set(segs.map((s) => s.leadParty || ''))].map((p) => pm(site, p)).sort((a, b) => (a.slot || 99) - (b.slot || 99));
+const uid = id ?? 'tl';
+---
+{segs.length === 0 ? (
+  <div class="empty"><p>No governments have been entered for this timeline yet.</p></div>
+) : (
+  <figure class="tl-card" style="margin:0" aria-labelledby={`${uid}-cap`}>
+    <figcaption id={`${uid}-cap`} class={heading ? 'tl-hint' : 'vh'} style={heading ? 'font-weight:650;color:var(--ink);font-size:.95rem;margin-bottom:.5rem' : undefined}>
+      {heading ?? 'Timeline of governments'}
+    </figcaption>
+    <div class="tl-scroll" tabindex="0" role="region" aria-label={`${heading ?? 'Timeline'}, scrolls sideways on narrow screens`}>
+      <div class="tl-inner">
+        <ol class="tl-bar" style={compact ? 'height:2.2rem' : undefined}>
+          {segs.map((s) => {
+            const g = byId.get(s.governmentId)!;
+            const p = pm(site, s.leadParty);
+            const when = `${fmtDate(s.start)} to ${s.ongoing ? 'present' : fmtDate(s.end)}`;
+            const tip = `${nameOf(s)}\n${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type] ?? s.type}\n${when}\n${fmtDuration(s.days)} (${s.days.toLocaleString('en-IN')} days)`;
+            return (
+              <li style={`left:${s.startPct.toFixed(3)}%;width:${s.widthPct.toFixed(3)}%`}>
+                <a
+                  class={`seg p${p.slot} pat${p.slot}${s.ongoing ? ' ongoing' : ''}${s.type === 'caretaker' ? ' caretaker' : ''}`}
+                  href={`/governments/${s.governmentId}/`}
+                  data-tip={tip}
+                  aria-label={`${nameOf(s)}, ${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type]?.toLowerCase() ?? s.type}, ${when}, ${fmtDuration(s.days)}`}
+                  aria-current={highlight === s.governmentId ? 'true' : undefined}
+                  style={highlight && highlight !== s.governmentId ? 'opacity:.45' : undefined}
+                ></a>
+              </li>
+            );
+          })}
+        </ol>
+        <div class="tl-axis" aria-hidden="true">
+          {ticks.map((t) => <span style={`left:${t.pct.toFixed(2)}%`}>{t.y}</span>)}
+        </div>
+        {!compact && lanes > 0 && (
+          <div class="tl-labels" style={`height:${lanes * LANE + 4}px`}>
+            {segs.map((s) => {
+              const pl = placeById.get(s.governmentId);
+              if (!pl) return null;
+              const p = pm(site, s.leadParty);
+              const right = pl.align === 'right';
+              return (
+                <a
+                  class="tl-label"
+                  href={`/governments/${s.governmentId}/`}
+                  tabindex="-1"
+                  aria-hidden="true"
+                  style={`top:${pl.lane * LANE}px;${right ? `right:${(100 - s.startPct).toFixed(3)}%;border-left:0;border-right:1px solid var(--rule-strong);padding:0 .3rem 0 0` : `left:${s.startPct.toFixed(3)}%`}`}
+                >
+                  <span class={`sw p${p.slot} pat${p.slot}`}></span>{labelOf(s)}
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+    <p class="tl-scrollhint">Scroll sideways to see all years.</p>
+    {!compact && <p class="tl-hint">Each block is one government, coloured and patterned by its lead party or coalition. Hover, focus or open a block for leader, dates and length. Labels are left out where there is no room; every government is in the table below.</p>}
+    {legend && (
+      <ul class="legend" aria-label="Lead party key">
+        {used.map((p) => (
+          <li><PartyChip party={p} link={p.id !== 'none'} /></li>
+        ))}
+        {used.some((p) => p.slot === 0 && p.id !== 'none') && <li class="small muted">Grey cross-hatch: parties beyond the eight palette slots</li>}
+        {used.some((p) => p.id === 'none') && <li class="small muted">PR: President's rule or no lead party</li>}
+      </ul>
+    )}
+  </figure>
+)}

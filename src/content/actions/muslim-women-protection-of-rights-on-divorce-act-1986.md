@@ -1,6 +1,6 @@
 ---
 title: "Muslim Women (Protection of Rights on Divorce) Act, 1986"
-summary: "Enacted after the Shah Bano judgment, the Act set post-divorce maintenance for Muslim women under a separate regime; the Supreme Court upheld it in 2001 while reading in a wider duty."
+summary: "Enacted after the Shah Bano judgment, the Act set post-divorce maintenance for Muslim women under a separate statute; the Supreme Court upheld it in 2001 while reading in a wider duty."
 category: religion-culture
 subcategories: [religious-institutions-laws]
 date: 1986-05-19

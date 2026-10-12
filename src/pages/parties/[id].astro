@@ -9,6 +9,7 @@ import { categories } from '../../lib/taxonomy.ts';
 import { fmtDate, fmtDuration, fmtNum, fmtSigned } from '../../lib/format.ts';
 import { daysInOffice } from '../../lib/tenure.ts';
 import { LOW_DATA_MIN_ACTIONS } from '../../lib/scoring-core.ts';
+import { MIN_YEARS_FOR_RATE } from '../../lib/render-points.ts';
 
 export async function getStaticPaths() {
   const site = await getSite();
@@ -46,6 +47,10 @@ const rows = cats.map((c) => ({ c, cell: res?.categories[c.id] })).filter((r) =>
       ) : (
         <div class="empty"><p>No years in power at the Centre are recorded for this party.</p></div>
       )}
+      {res && res.yearsInPower > 0 && res.yearsInPower < MIN_YEARS_FOR_RATE && (
+        <p class="note" style="margin-top:1rem"><strong>Short tenure.</strong> This party has under {MIN_YEARS_FOR_RATE} years in power at the Centre, so its points-per-year figure rests on a very small divisor and swings widely. Read the totals and the actions below instead.</p>
+      )}
+      <p class="small" style="margin-top:.8rem">Inside a coalition, credit and years are both split by seat share, so a small partner's per-year figure largely mirrors that of the governments it joined. Union governments only; state actions are not included. Figures are AI-assisted evidence points, not a verdict. <a href="/methodology/">How points are made</a>.</p>
       {govs.some((g) => g.level === 'centre') && <Timeline governments={centre} site={site} compact legend={false} highlight={undefined} id="tl-party" />}
     </section>
 

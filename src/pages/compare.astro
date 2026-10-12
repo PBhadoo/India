@@ -6,6 +6,7 @@ import { getSite, pm } from '../lib/site.ts';
 import { categories } from '../lib/taxonomy.ts';
 import { fmtNum, fmtSigned } from '../lib/format.ts';
 import { LOW_DATA_MIN_ACTIONS } from '../lib/scoring-core.ts';
+import { MIN_YEARS_FOR_RATE } from '../lib/render-points.ts';
 const site = await getSite();
 const cats = categories();
 const governed = site.scoring.parties.filter((p) => p.yearsInPower > 0).sort((a, b) => (pm(site, a.partyId).slot || 99) - (pm(site, b.partyId).slot || 99));
@@ -30,10 +31,15 @@ const governed = site.scoring.parties.filter((p) => p.yearsInPower > 0).sort((a,
                 const acts = site.actions.filter((a) => a.data.category === c.id && a.gov?.partners.some((x) => x.party === p.partyId));
                 const m = pm(site, p.partyId);
                 const has = cell && cell.scoredActions > 0;
+                const brief = p.yearsInPower < MIN_YEARS_FOR_RATE;
                 return (
                   <article class="card">
                     <h3 style="font-size:1rem"><PartyChip party={m} full /></h3>
-                    <p style="margin:.6rem 0 .2rem"><span class="fig mono" style="font-size:1.5rem;font-family:var(--font-display);font-weight:650">{has ? fmtSigned(cell.pointsPerYear, 2) : '–'}</span> <span class="small">points per year</span></p>
+                    {brief ? (
+                      <p class="small" style="margin:.6rem 0 .2rem">Under {MIN_YEARS_FOR_RATE} years in power ({fmtNum(p.yearsInPower)}), so no per-year figure is shown; a short tenure makes the figure swing widely. <span class="badge badge-low">Short tenure</span></p>
+                    ) : (
+                      <p style="margin:.6rem 0 .2rem"><span class="fig mono" style="font-size:1.5rem;font-family:var(--font-display);font-weight:650">{has ? fmtSigned(cell.pointsPerYear, 2) : '–'}</span> <span class="small">points per year</span></p>
+                    )}
                     <p class="small mono" style="margin:0">{has ? `Total ${fmtSigned(cell.points)}, range ${fmtSigned(cell.low)} to ${fmtSigned(cell.high)}` : 'No scored actions'}</p>
                     <p class="small" style="margin:.3rem 0 .5rem">{cell?.scoredActions ?? 0} scored of {acts.length} recorded over {fmtNum(p.yearsInPower)} years {(!has || cell.lowData) && <span class="badge badge-low">Low data</span>}</p>
                     {acts.length > 0 && <ul class="small" style="padding-left:1.1rem;margin:0">{acts.slice(0, 4).map((a) => <li><a href={`/actions/${a.slug}/`}>{a.data.title}</a></li>)}{acts.length > 4 && <li><a href={`/categories/${c.id}/`}>and {acts.length - 4} more</a></li>}</ul>}

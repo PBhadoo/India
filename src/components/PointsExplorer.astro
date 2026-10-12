@@ -44,7 +44,7 @@ const heads: [string, string, string?][] = [
     </div>
   )}
   <div class="note">
-    <p><strong>How to read this.</strong> Two scorers, blind to party, give each action up to 25 points for benefit or harm across five criteria (range {fmtSigned(-25, 0)} to +25). An action's points go to the governments responsible, and to their coalition partners by seat share. “Points per year” divides a party's total by its years in power. The figure summarises the evidence entered so far; it is not a verdict, and a party with little scored evidence is marked “Low data”. <a href="/methodology/">Read the method</a>.</p>
+    <p><strong>How to read this.</strong> Two scorers, blind to party, give each action up to 25 points for benefit or harm across five criteria (range {fmtSigned(-25, 0)} to +25). An action's points go to the governments responsible, and to their coalition partners by seat share. “Points per year” divides a party's total by its years in power. The figure summarises the evidence entered so far; it is not a verdict on any party. The scorers are AI models that did not know which party acted but did read the facts. The entries are a selection of actions, and a party with more entries in an era can show a higher or lower figure for that reason alone. A party with little scored evidence is marked “Low data”. Union governments only; state actions are not included. <a href="/methodology/">Read the method</a>.</p>
   </div>
 
   {rows.length === 0 ? (
@@ -104,7 +104,7 @@ const heads: [string, string, string?][] = [
       <p class="small" style="margin-top:.6rem"><span class="badge badge-low">Low data</span> means some category has fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the party, so its figures rest on very little evidence.</p>
 
       <h3 style="margin-top:2rem" id="heat-title">Points per year by category</h3>
-      <p class="small">Each cell is one party's points per year in one category, shaded from lowest to highest across the grid. Numbers are always shown; hatched cells have fewer than {LOW_DATA_MIN_ACTIONS} scored actions, dashed cells have none. Only parties with at least 2 years in power and a scored action are shown as columns.</p>
+      <p class="small">Each cell is one party's points per year in one category, shaded from lowest to highest across the grid. Shading shows the relative size of a figure, not quality. Numbers are always shown; hatched cells have fewer than {LOW_DATA_MIN_ACTIONS} scored actions, dashed cells have none. Only parties with at least 2 years in power and a scored action are shown as columns.</p>
       <div class="table-wrap heat" tabindex="0" role="region" aria-label="Category heat grid, scrolls sideways on narrow screens">
         <table id="heat-table" aria-labelledby="heat-title" set:html={heatGridHtml(rows, ctx)}></table>
       </div>

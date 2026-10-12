@@ -16,6 +16,7 @@ unknowns:
   - "The full eligibility criteria; the sources consulted refer only to 'eligible women'."
   - "Cumulative disbursement to date: later press reports give differing totals that could not be reconciled with official data."
   - "Whether any payment will be made for periods before 1 July 2026."
+  - "The positions of opposition parties and of independent fiscal analysts; the sources consulted report only the state government's announcements."
 sources:
   - { title: "Punjab govt credits first instalment under women's cash assistance scheme", url: "https://test.uniindia.com/punjab-govt-credits-first-instalment-under-women-s-cash-assistance-scheme/north/news/3895654.html", publisher: UNI (United News of India), type: reputable-media }
   - { title: "Punjab Releases First DBT Instalment under Mukh Mantri Mawan Dheeyan Satkar Yojana (15 Jul 2026)", url: "https://www.drishtiias.com/state-pcs-current-affairs/punjab-releases-first-dbt-instalment-under-mukh-mantri-mawan-dheeyan-satkar-yojana", publisher: Drishti IAS, type: reputable-media }

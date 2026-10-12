@@ -29,7 +29,7 @@ benefits:
   - point: Created standing dispute-resolution routes that were used for technical disagreements.
     evidence: "Baglihar was resolved by a neutral expert and Kishanganga by a Court of Arbitration [4]."
 concerns:
-  - point: The allocation by volume favours Pakistan, and India has built limited western-river capacity within its permitted uses.
+  - point: Pakistan is reported to receive about 80% of the system's waters by volume, which Indian commentators criticise, and India has built limited western-river capacity within its permitted uses.
     evidence: "Pakistan is reported to receive about 80% of the system's waters by volume. India irrigated about 0.792 million acres from the western rivers against a permitted 1.34 million acres and had built no storage there (as reported by Deccan Herald) [2]."
   - point: The treaty's dispute procedures have become contested, and the treaty has been in abeyance since April 2025, which adds uncertainty for both countries.
     evidence: "India rejects the Court of Arbitration awards of May and August 2026 as made by an illegally constituted body; Pakistan has sought to follow treaty procedures [3][4]."

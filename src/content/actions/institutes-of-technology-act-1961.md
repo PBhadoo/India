@@ -29,7 +29,7 @@ benefits:
 concerns:
   - point: Emigration of graduates may reduce domestic returns on public spending.
     evidence: "Nearly 25,000 IIT graduates settled in the US since 1953; 36% of top 1,000 JEE scorers emigrated [1]."
-  - point: IITs receive far more government funding per institute than most engineering colleges, which raises questions of equity.
+  - point: IITs receive more government funding per institute than most engineering colleges, a difference that some commentators raise as an equity concern.
     evidence: "Funding comparison in [1]; the sources reviewed do not give per-student figures."
 sources:
   - { title: "Indian Institutes of Technology", url: "https://en.wikipedia.org/wiki/Indian_Institutes_of_Technology", publisher: Wikipedia, type: reputable-media }

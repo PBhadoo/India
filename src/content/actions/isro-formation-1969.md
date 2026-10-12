@@ -21,7 +21,7 @@ why:
     - "Sarabhai and the government stated the aim was to use space technology for national development, in areas such as communications and resource monitoring [1]."
     - "The 1972 restructuring gave the programme its own commission and department, reporting to the Prime Minister [2]."
   criticism:
-    - "Critics have argued over the decades that a state-led, department-run model limited private participation, a point the 2020 space reforms were stated to address [4]."
+    - "The government presented its 2020 space reforms as widening private participation that the earlier state-led, department-run model had limited [4]."
 benefits:
   - point: Created a dedicated institution with continuity of leadership and funding across governments.
     evidence: "INCOSPAR (1962), ISRO (1969), Department of Space (1972) and a Space Commission [1][2]."
@@ -30,7 +30,7 @@ benefits:
 concerns:
   - point: Programme outcomes depend on annual budget allocations, which can be revised during the year.
     evidence: "2025-26 allocation revised to about Rs 12,449 crore from Rs 12,515 crore; Space Technology reduced by about Rs 628 crore [3]."
-  - point: The government-led structure limited private-sector access to space infrastructure for decades.
+  - point: Private-sector access to ISRO facilities was limited until the 2020 reforms, which the government stated were meant to widen it.
     evidence: "The 2020 reforms created IN-SPACe to give private firms access to ISRO facilities, as stated by the government [4]."
 sources:
   - { title: "ISRO publication on the history of the Indian space programme", url: "https://new1.isro.gov.in/media_isro/pdf/ResourcesPdf/SpaceIndia/publication(6).pdf", publisher: Indian Space Research Organisation, type: primary }

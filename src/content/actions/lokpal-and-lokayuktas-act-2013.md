@@ -22,7 +22,7 @@ why:
     - "The Act provides for a Lokpal for the Union and Lokayuktas for States to inquire into allegations of corruption against certain public functionaries [1]."
     - "As described for the Bill as passed, Parliament built in institutional safeguards: a selection committee including the Leader of Opposition and the judiciary, a search committee of at least seven members, and 50% judicial membership [2]."
   criticism:
-    - "The Prime Minister's coverage is conditional (in camera, two-thirds approval and subject exclusions), which some observers consider a limit on its reach; PRS records the conditions without taking a position [2]."
+    - "The Prime Minister's coverage is conditional (in camera, two-thirds approval and subject exclusions); PRS records these conditions without taking a position, and the sources reviewed name no critic of this point [2]."
 benefits:
   - point: "A statutory anti-corruption body with jurisdiction over ministers and the Prime Minister (with safeguards) and its own inquiry and prosecution wings."
     evidence: "Act and PRS bill summary describe the Inquiry Wing, Prosecution Wing and Special Courts [1][2]."
@@ -55,7 +55,7 @@ scoring:
 
 The Act followed several earlier unpassed Lokpal bills and a 2011 to 2013 parliamentary process. Its design combines a multi-member body with a selection committee that includes members from the government, the opposition and the judiciary.
 
-Supporters point to the existence of an independent complaint channel with jurisdiction over high office. Observers also note that operational output is modest: the official 2023-24 sheet shows 169 disposals, most dismissed on jurisdiction or merit, and a handful of prosecution sanctions. Whether that reflects the quality of complaints, the Act's jurisdictional limits or institutional capacity is disputed and not settled by the data reviewed here.
+Supporters point to the existence of an independent complaint channel with jurisdiction over high office. The official 2023-24 sheet shows 169 disposals, most dismissed on jurisdiction or merit, and a handful of prosecution sanctions. Whether that reflects the quality of complaints, the Act's jurisdictional limits or institutional capacity is disputed and not settled by the data reviewed here.
 
 PRS describes the Bill's procedure as follows: the Inquiry Wing is to examine a complaint within 60 days of reference, an investigation is to be completed within six months, and trials before Special Courts are to be completed within two years. The Bill also removed the requirement of prior sanction to begin an investigation or prosecution, and it applies to States only where they consent to set up Lokayuktas [2]. The Rajya Sabha Select Committee, chaired by Satyavrat Chaturvedi, was constituted in May 2012 [2].
 

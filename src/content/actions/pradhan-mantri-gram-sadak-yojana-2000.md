@@ -22,11 +22,11 @@ why:
     - "The scheme's objective is all-weather road connectivity for unconnected rural habitations [1][2]."
     - "Population thresholds were set to prioritise larger habitations first and smaller hill and tribal habitations at lower thresholds [1]."
   criticism:
-    - "Original completion targets of 2003 and 2007 were later than the dates by which connectivity was reached, and the Wikipedia page is marked as needing more citations [1]."
+    - "Original completion targets of 2003 and 2007 were later than the dates by which connectivity was reached [1]."
 benefits:
   - point: Connected nearly all sanctioned phase I habitations, per government figures.
     evidence: "99.7% of 1,63,339 sanctioned habitations constructed as of 31 July 2025 [2]."
-  - point: Helped rural workers move out of agriculture.
+  - point: A 2020 study found new roads helped rural workers move out of agriculture.
     evidence: "Asher and Novosad (2020) as cited in [1]."
 concerns:
   - point: Limited measured effect on agricultural income and assets.

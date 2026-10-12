@@ -28,7 +28,7 @@ benefits:
   - point: Sustained and growing funding commitment across governments' budget cycles.
     evidence: "Rs 1,756 crore (2017-20), Rs 3,790.50 crore (2021 approval), Rs 29,054 crore (2026-31) [1][3]."
 concerns:
-  - point: Elite medal outcomes at the Olympics did not improve in the most recent Games.
+  - point: India's Olympic medal ranking was lower at Paris 2024 than at Tokyo 2020; the sources do not link this to the scheme either way.
     evidence: "Six medals and 71st place at Paris 2024 versus 48th at Tokyo 2020; the source does not say how many medals came from Khelo India athletes [4]."
   - point: Attribution and cost-effectiveness are unclear without an independent evaluation.
     evidence: "No audit or evaluation report was found; the funding rise across cycles is not matched by published outcome measures in the sources reviewed."

@@ -23,11 +23,11 @@ const scored = site.actions.filter((a) => a.score.scored).length;
   <div class="wrap hero">
     <p class="kicker">India Explained</p>
     <h1>Who governed, for how long, and what the record shows</h1>
-    <p class="lede">A neutral ledger of Indian governments and their actions. Every entry uses the same template, every claim has a source, and every score is shown with its range.</p>
+    <p class="lede">A neutral ledger of Indian governments and their actions. Every entry uses the same template, every claim has a source, and every score is shown with its range. Scores are AI-assisted judgements and carry uncertainty; see the methodology.</p>
     <div class="stats" role="list" aria-label="Site at a glance">
       <div class="stat" role="listitem"><div class="v">{centre.length}</div><div class="l">Union governments{first ? `, ${first} to today` : ''}</div></div>
       <div class="stat" role="listitem"><div class="v">{site.actions.length}</div><div class="l">{site.actions.length === 1 ? 'action' : 'actions'} recorded</div></div>
-      <div class="stat" role="listitem"><div class="v">{scored}</div><div class="l">scored by two blind scorers</div></div>
+      <div class="stat" role="listitem"><div class="v">{scored}</div><div class="l">scored by two party-blind AI scorers</div></div>
       <div class="stat" role="listitem"><div class="v">{site.developing.length}</div><div class="l">developing {site.developing.length === 1 ? 'item' : 'items'}</div></div>
     </div>
     <p class="small">{site.lastUpdated ? <>Data last updated {fmtDate(site.lastUpdated)}.</> : <>No entries have been published yet.</>}</p>

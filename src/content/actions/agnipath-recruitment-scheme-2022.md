@@ -24,7 +24,7 @@ why:
     - "Critics, including defence analyst Ajai Shukla, noted most recruits would leave after four years without a pension [5]."
     - "Opposition members, including Rahul Gandhi, challenged the scheme in the Lok Sabha in 2024 [6]."
 benefits:
-  - point: Lowers the average age of the armed forces' lower ranks.
+  - point: Intended to lower the average age of the armed forces' lower ranks.
     evidence: "Stated objective of the scheme; eligibility age 17.5-21 [2][5]."
   - point: May reduce long-term pension expenditure, which was a large share of defence spending.
     evidence: "Pension was budgeted at about Rs 1.19 lakh crore in 2022-23, about a quarter of the Rs 5.75 lakh crore defence budget; actual pension spending was Rs 1,53,407 crore, including arrears under One Rank One Pension [5]. Savings from Agniveers would arise only after the first batches exit."

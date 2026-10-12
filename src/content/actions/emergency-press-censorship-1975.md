@@ -27,7 +27,7 @@ why:
 benefits:
   - point: "Claimed benefit: restricting reports the government considered likely to aggravate disorder during the Emergency."
     evidence: "This was the government's position as reflected in the proclamation's internal-disturbance ground [1]. No independent outcome measure supporting the claim was located in the sources reviewed."
-  - point: "The regime was time-limited and reversible through ordinary politics: censorship ended with the revocation of the Emergency and the 1976 Act was repealed within weeks."
+  - point: "The censorship arrangements were time-limited: censorship ended with the revocation of the Emergency and the 1976 Act was repealed within weeks."
     evidence: "Emergency revoked 22 March 1977; repeal bill taken up in the Rajya Sabha on 9 April 1977 [2][3]."
 concerns:
   - point: "Pre-publication control of news and selective advertising pressure."

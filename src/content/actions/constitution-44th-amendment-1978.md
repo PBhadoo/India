@@ -1,6 +1,6 @@
 ---
 title: Constitution (44th Amendment) Act, 1978
-summary: 'Amendment restoring checks changed during the Emergency: narrower Emergency grounds, fixed limits on preventive detention, and removal of property from the fundamental rights.'
+summary: 'Amendment reversing several Emergency-era changes: narrower Emergency grounds, fixed limits on preventive detention, and removal of property from the fundamental rights.'
 category: law-rights
 subcategories:
   - civil-liberties

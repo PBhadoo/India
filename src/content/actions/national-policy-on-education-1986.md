@@ -31,7 +31,7 @@ benefits:
 concerns:
   - point: The 6% of GDP spending aim is stated as an anticipation, and the sources reviewed do not show whether it was met.
     evidence: "Policy target noted in [1]; no outturn figures were verified."
-  - point: The policy needed revision within six years, with a new Programme of Action in 1992.
+  - point: The policy was modified within six years, with a new Programme of Action in 1992.
     evidence: "Modification in May 1992 and revised Programme of Action in August 1992 [2][3]. Interpretation: revision can reflect normal review as well as gaps."
 sources:
   - { title: "National Policy on Education", url: "https://en.wikipedia.org/wiki/National_Policy_on_Education", publisher: Wikipedia, type: reputable-media }

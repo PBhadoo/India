@@ -24,9 +24,9 @@ why:
   criticism:
     - "A 2010 academic paper said the programme brought children to school but failed to retain them [4]."
 benefits:
-  - point: Contributed to near-universal enrolment at elementary level.
+  - point: Elementary enrolment is reported as near universal over the programme period.
     evidence: "2016 parliamentary committee finding that enrolment is near universal [2]."
-  - point: Provided the programmatic vehicle for the RTE Act and falling primary dropout.
+  - point: Served as the vehicle for the RTE Act; primary dropout fell over the same period.
     evidence: "Designated vehicle for RTE; dropout down from 9.11% to 4.13% (2009-10 to 2015-16) [1][2]."
 concerns:
   - point: Learning outcomes remained unsatisfactory despite higher enrolment.

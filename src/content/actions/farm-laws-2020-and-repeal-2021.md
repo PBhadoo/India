@@ -26,7 +26,7 @@ why:
   - PRS noted that deregulation alone may not attract more buyers, citing Bihar, which repealed its APMC Act in 2006 and later saw market infrastructure erode and higher transaction charges for farmers [1].
   - Farmer unions protested the laws from late 2020; at the time of withdrawal the Prime Minister said the Government had not been able to convince the protesting farmers, as reported by Business Today [4].
 benefits:
-- point: 'Addressed a documented access gap: most farmers sell outside government procurement and many cannot reach APMC yards.'
+- point: 'Targeted a documented access gap: most farmers sell outside government procurement and many cannot reach APMC yards.'
   evidence: 'PRS, citing the Standing Committee on Agriculture: small and marginal farmers (86% of landholdings) face long distances and limited marketable surplus; average APMC area 496 sq. km vs 80 sq. km recommended [1]. This supports the problem the laws targeted; it is not evidence of the laws'' effects, which were never measured.'
 - point: Introduced written price terms and a dispute process for contract farming.
   evidence: Agreements had to state a price (or a guaranteed price with a reference for any additional amount), disputes went to a conciliation board within 30 days, then the Sub-Divisional Magistrate and an Appellate Authority, and no recovery action could be taken against agricultural land [1].

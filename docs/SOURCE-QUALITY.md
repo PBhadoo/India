@@ -63,3 +63,32 @@ Entries with no primary source were set to confidence low and carry a "Source no
 | waqf-amendment-act-2025 | low | 0 / 6 | no primary/official/court source; confidence low; body admits unverified or unopened sources |
 
 Entries not listed have at least half of their sources primary, are not low confidence and carry no unverified-source note. This is a screen, not an audit: a primary source may still be opened only through a summary.
+
+## Addendum (neutrality review, 2026-10-12): entries missing from the table above
+
+The table above was not regenerated after the later entries were added. Applying the same screen (confidence low, fewer than half of sources primary, no primary source, or a body note about unopened documents) to all 86 entries adds the following. Several are state-level entries. Two of them (gujarat-jyotigram-yojana-2003 and operation-barga-sharecropper-registration-west-bengal-1978) have no primary source but carry confidence medium, which contradicts the rule stated at the top of this file; they were not changed in the review because confidence sits in the scoring block.
+
+| Entry | Confidence | Primary / total |
+|---|---|---|
+| c-dot-establishment-1984 | low | 2 / 4 |
+| delhi-aam-aadmi-mohalla-clinics-2015 | medium | 1 / 3 (body: pages not opened) |
+| delhi-electricity-distribution-privatisation-2002 | low | 1 / 3 |
+| first-amendment-and-zamindari-abolition-1951 | low | 1 / 3 |
+| gold-sale-and-pledge-for-foreign-exchange-1991 | low | 2 / 3 |
+| golden-quadrilateral-national-highways-development-project-1999 | medium | 2 / 4 |
+| gujarat-jyotigram-yojana-2003 | medium | 0 / 3 |
+| hindu-code-bills-marriage-and-succession-acts-1955-56 | medium | 2 / 5 |
+| irda-act-1999-insurance-sector-opening | low | 2 / 4 |
+| jal-jeevan-mission-2019 | medium | 2 / 4 |
+| karnataka-shakti-free-bus-travel-for-women-2023 | medium | 1 / 3 |
+| kerala-peoples-plan-campaign-1996 | low | 1 / 3 |
+| national-policy-on-education-1986 | low | 1 / 3 |
+| operation-barga-sharecropper-registration-west-bengal-1978 | medium | 0 / 3 |
+| pradhan-mantri-gram-sadak-yojana-2000 | medium | 2 / 3 (body: audit summary not opened) |
+| sebi-act-1992 | low | 2 / 3 |
+| second-five-year-plan-heavy-industry-1956 | medium | 3 / 4 (body: evaluation documents not opened) |
+| tamil-nadu-69-percent-reservation-act-1994 | low | 1 / 3 |
+| tamil-nadu-noon-meal-scheme-1982 | low | 1 / 3 |
+| uttar-pradesh-farm-loan-waiver-2017 | low | 0 / 3 |
+| maharashtra-employment-guarantee-scheme-1972 | low | 5 / 6 (typed primary, but the body says the statutes and evaluation were seen only in search summaries) |
+| sarva-shiksha-abhiyan-2001 | low | 3 / 4 (body says sources not fully opened) |

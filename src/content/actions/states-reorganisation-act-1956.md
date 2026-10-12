@@ -31,7 +31,7 @@ benefits:
 concerns:
   - point: Boundary demands continued after 1956, with further reorganisations in 1966, 2000, 2014 and 2019.
     evidence: "List of later Acts in [1]. Interpretation: whether these reflect unfinished business of 1956 or separate demands is debated and not settled by the sources."
-  - point: The change followed agitation, including a fatal hunger strike in 1952, rather than a settled prior principle.
+  - point: The reorganisation followed agitation, including a fatal hunger strike in 1952, after the 1948 Dhar Commission had rejected language as a criterion.
     evidence: "Potti Sreeramulu's death and the 1948 Dhar rejection of language as a criterion [1]."
 sources:
   - { title: "States Reorganisation Act, 1956", url: "https://en.wikipedia.org/wiki/States_Reorganisation_Act,_1956", publisher: Wikipedia, type: reputable-media }

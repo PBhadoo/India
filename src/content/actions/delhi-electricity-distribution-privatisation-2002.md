@@ -1,6 +1,6 @@
 ---
 title: Delhi electricity distribution privatisation (2002)
-summary: From 1 July 2002 Delhi distribution passed to private operators holding 51% in three discoms after the DVB was unbundled. Losses fell from about 45-60% to single digits; tariff disputes continue.
+summary: From 1 July 2002 Delhi distribution passed to private operators holding 51% in three discoms. Reported losses fell from about 45-60% to roughly 6.5-13% depending on source; tariff disputes continue.
 category: states
 subcategories:
 - delhi
@@ -12,7 +12,7 @@ status: implemented
 developing: false
 lastReviewed: 2026-10-11
 facts:
-- The state-owned Delhi Vidyut Board was unbundled in 2002 into generation, transmission and distribution companies; distribution was split into three discoms: BSES Rajdhani (BRPL), BSES Yamuna (BYPL) and Tata Power Delhi Distribution (TPDDL, earlier North Delhi Power) [1][2]. A search-result summary dates the transfer of management to the private operators to 1 July 2002 and describes a holding company, one generation company, one transmission company and three discoms.
+- 'The state-owned Delhi Vidyut Board was unbundled in 2002 into generation, transmission and distribution companies; distribution was split into three discoms: BSES Rajdhani (BRPL), BSES Yamuna (BYPL) and Tata Power Delhi Distribution (TPDDL, earlier North Delhi Power) [1][2]. A search-result summary dates the transfer of management to the private operators to 1 July 2002 and describes a holding company, one generation company, one transmission company and three discoms.'
 - Each discom was privatised through bidding; the private bidder holds 51% and the Government of NCT of Delhi 49% [1][2].
 - Aggregate technical and commercial (AT&C) losses at privatisation are reported at roughly 45% to 60% [1], over 55% on average and up to 80% in some pockets per a former BSES chairman [2]; a search-result summary of discom figures gives 51.5% to 63.1% by area.
 - Present loss levels are reported below 6.5% (CSEP, February 2025) [1] and about 7% (Power Line, 2021) [2]; the Delhi power department is quoted in search results as saying about 13% against about 55% in 2002 (page not opened). The sources give different years and definitions.

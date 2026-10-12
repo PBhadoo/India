@@ -1,6 +1,6 @@
 ---
 title: "Nationalisation of 14 major commercial banks (1969)"
-summary: "In July 1969 the government took over 14 large private banks. Bank branches and rural deposits expanded sharply over two decades; the Supreme Court first invalidated the Act on compensation grounds."
+summary: "In July 1969 the government took over 14 large private banks. Bank branches and rural deposits rose between 1969 and 1991; the Supreme Court first invalidated the Act on compensation grounds."
 category: economy
 subcategories: [banking]
 date: 1969-07-19

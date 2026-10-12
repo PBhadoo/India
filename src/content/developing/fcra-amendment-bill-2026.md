@@ -18,9 +18,10 @@ unknowns:
   - "Whether the Joint Parliamentary Committee will recommend amendments, and what they would be."
   - "The date on which the Winter Session 2026 will begin, and so the exact committee deadline."
   - "Whether the Bill will be passed in its present form, amended, or not taken up."
+  - "The government's own stated rationale for the Bill; the sources consulted report the Minister's remarks on process but not a statement of objects."
   - "How many registered organisations would be affected by the asset-vesting provisions; no official estimate was found."
 sources:
-  - { title: "Bill Summary: The Foreign Contribution (Regulation) Amendment Bill, 2026", url: "https://prsindia.org/files/bills_acts/bills_parliament/2026/Summary-Foreign_Contribution_Bill_2026.pdf", publisher: PRS Legislative Research, type: primary }
+  - { title: "Bill Summary: The Foreign Contribution (Regulation) Amendment Bill, 2026", url: "https://prsindia.org/files/bills_acts/bills_parliament/2026/Summary-Foreign_Contribution_Bill_2026.pdf", publisher: PRS Legislative Research, type: reputable-media }
   - { title: "FCRA Bill sent to 31-member Joint Parliamentary Committee for detailed scrutiny", url: "https://www.businesstoday.in/india/story/fcra-bill-sent-to-31-member-joint-parliamentary-committee-for-detailed-scrutiny-548783-2026-08-12", publisher: Business Today, type: reputable-media }
 ---
 

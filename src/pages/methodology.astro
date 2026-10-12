@@ -7,7 +7,7 @@ import { MINUS } from '../lib/format.ts';
 import { categories } from '../lib/taxonomy.ts';
 const crit = rubric.criteria as { id: string; name: string; question: string; anchors: Record<string, string> }[];
 const order = ['-5', '-3', '-1', '0', '1', '3', '5'];
-const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['attribution', 'Who gets the credit'], ['coalition', 'Coalitions'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
+const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['sources', 'Sources and data quality'], ['attribution', 'Who gets the credit'], ['coalition', 'Coalitions'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
 const pct = (n: number) => `${Math.round(n * 100)}%`;
 ---
 <Base title="Methodology" path="/methodology/" description="How actions are chosen, scored on a public rubric by two blind scorers, credited to governments and coalition partners, and shown with their uncertainty.">
@@ -38,6 +38,14 @@ const pct = (n: number) => `${Math.round(n * 100)}%`;
         <h2 id="h-blind">Blind double scoring</h2>
         <p>{rubric.scoring_process}</p>
         <p>Before scoring, each action is stripped of party names and of the name of the government. Scorers see the facts, the stated reasons, the criticism, the benefits and concerns, the evidence and the era baseline. They work separately and do not see each other's scores. Both sets of scores, and each scorer's note, are published on the action's page.</p>
+        <p><strong>Scores are AI-assisted.</strong> Entries are drafted by AI models and both sets of scores are produced by separate AI scorer sessions working from the public rubric. A person reviews each batch of changes before it is published, but the numbers are not the product of a panel of human experts.</p>
+        <p><strong>Blind to party, not blind to content.</strong> The scorers are not told which party or government acted, but they do read the facts text, and that text can reveal the era, a minister's name or a government indirectly. Blinding therefore reduces party bias; it does not remove it. A separate neutrality review checks the wording of every entry for parity between parties, and its findings are in the repository.</p>
+      </section>
+
+      <section id="sources" aria-labelledby="h-src">
+        <h2 id="h-src">Sources and data quality</h2>
+        <p>Every entry lists its sources with the publisher and a type: primary, official data, court, reputable media or academic. Source quality varies. Some entries rest mainly on official documents and court judgments; others rest on secondary summaries, encyclopaedia pages and press reports because the primary text was not opened. Entries with no primary source, or with notes about unopened documents, carry a low confidence label. The <a href="https://github.com/PBhadoo/India/blob/main/docs/SOURCE-QUALITY.md" rel="noopener">source-quality list</a> shows which entries to verify first.</p>
+        <p>Government start and end dates were checked against Wikipedia lists of office-holders; a pass against primary sources (Gazette, Election Commission) is still pending. Seat-share figures, which set how credit and years are split inside coalitions, are approximate for several governments: some small-party seat counts come from general knowledge or partial tables and are flagged as unverified. See the <a href="https://github.com/PBhadoo/India/blob/main/docs/DATA-NOTES.md" rel="noopener">data notes</a>. Shares for the parties in a coalition should not be read as exact.</p>
       </section>
 
       <section id="attribution" aria-labelledby="h-attr">
@@ -46,6 +54,7 @@ const pct = (n: number) => `${Math.round(n * 100)}%`;
         <ul>
           <li>The government in office when the action was implemented receives {pct(IMPLEMENTER_CREDIT)} of the action's points.</li>
           <li>If a different government originated the idea or first legislated it, that government receives {pct(ORIGINATOR_CREDIT)} of the same points. Both can hold credit for the same action.</li>
+          <li>If the originating and the implementing governments are led by the same party, that party receives both shares, 125% of the action's points in total.</li>
           <li>Court rulings, state action and events outside any government's control are recorded as facts and shocks, not as credit.</li>
         </ul>
         <p>The same rule is applied whichever party holds office. Positive and negative points are credited in the same way, so a harmful action lowers the credited government's total as much as a beneficial one raises it.</p>
@@ -61,7 +70,7 @@ const pct = (n: number) => `${Math.round(n * 100)}%`;
         <h2 id="h-ppy">Points per year</h2>
         <p>A party's total is the sum of its credited points. Its years in power are the sum, over every government it belonged to, of (days in office divided by 365.25) multiplied by its coalition share. <strong>Points per year</strong> is the total divided by years in power. It exists so that a party that governed for forty years is not compared with one that governed for five on raw totals alone.</p>
         <p><strong>Short tenures.</strong> A party with under 2 years in power can show a very large or very small figure from a single action, because the divisor is tiny. Such parties are listed in a separate group below the main table and are left out of the category grid.</p>
-        <p>This is a summary of the evidence entered so far. It is not a verdict on any party, and the order of the table follows a figure, not a judgement. Parties with short terms or few scored actions produce wide and unstable figures, which is why ranges and “low data” labels are shown with them.</p>
+        <p>This is a summary of the evidence entered so far. It is not a verdict on any party, and the order of the table follows a figure, not a judgement. Parties with short terms or few scored actions produce wide and unstable figures, which is why ranges and “low data” labels are shown with them. A party's total also depends on how many of its actions have been entered, which is a selection and not a census, so a higher figure can reflect denser coverage of a period as well as stronger results.</p>
       </section>
 
       <section id="baselines" aria-labelledby="h-base">
@@ -71,7 +80,7 @@ const pct = (n: number) => `${Math.round(n * 100)}%`;
 
       <section id="lag" aria-labelledby="h-lag">
         <h2 id="h-lag">Lag</h2>
-        <p>Some actions show their effects years later. Each entry gives a lag in years before outcomes could reasonably show. Scorers weigh outcome evidence only up to what that lag allows, and recent actions inside their lag period are scored with low confidence. Outcomes that arrive under a later government are not credited to the earlier one beyond the originator rule above.</p>
+        <p>Some actions show their effects years later. Each entry gives a lag in years before outcomes could reasonably show. Scorers weigh outcome evidence only up to what that lag allows, and recent actions inside their lag period are scored with low confidence. Outcomes are attributed to the government that implemented the action, even when they appear years later under a different government; the lag is stated so that readers can judge how much of an outcome the implementing government could have affected. Only the originator rule above gives credit to any other government.</p>
       </section>
 
       <section id="uncertainty" aria-labelledby="h-unc">
@@ -99,11 +108,13 @@ const pct = (n: number) => `${Math.round(n * 100)}%`;
         <h2 id="h-lim">Limitations</h2>
         <ul>
           <li>Scores are structured judgements. Two other scorers could give different numbers; that is why ranges and disagreement flags are published.</li>
-          <li>Only recorded actions count. A government with more entries has more chances to earn both positive and negative points, so check the action counts.</li>
+          <li>Only recorded actions count. A government with more entries has more chances to earn both positive and negative points, so check the action counts. Entries are chosen by whether a development is policy-relevant, but the choice is made by the maintainers and can be challenged.</li>
+          <li>The criteria do not weigh equally in practice. Reach and Delivery supply most of the points entered so far. Delivery asks whether an action was carried out as announced, so it can be positive for an action whose effects are judged harmful. Read the five criterion bars on each action, not only the total.</li>
+          <li>Recent actions have less outcome evidence, and missing evidence is scored near zero, so a recent government can score lower than an older one for that reason alone.</li>
           <li>Actions differ greatly in size. A single large reform and a small scheme are both scored out of 25, and the Reach criterion is the main place where size shows.</li>
           <li>Causation is hard. Outcomes can follow from earlier decisions, from other governments, from states, from courts or from events such as a pandemic. Shocks are noted on each entry.</li>
           <li>The record is incomplete and growing. Early figures should be read as provisional.</li>
-          <li>The table covers the Union government. State governments are recorded separately and are not in the headline table.</li>
+          <li>The table covers the Union government. State governments are recorded and scored separately with the same rubric; their actions are not added to any party's totals or years in power, so a party's figure says nothing about its record in the states.</li>
         </ul>
       </section>
 

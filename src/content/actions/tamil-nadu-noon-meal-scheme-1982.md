@@ -13,10 +13,10 @@ developing: false
 lastReviewed: 2026-10-11
 facts:
 - Chief Minister M. G. Ramachandran introduced the scheme on 1 July 1982 at Pappakurichi village, Tiruchi district; it covered rural areas from 1 July 1982 and urban areas from 15 September 1982 [1].
-- School meals in Tamil Nadu pre-date 1982: a meal in Madras city corporation schools began in the 1920s, and K. Kamaraj, Chief Minister in the 1960s, extended it more widely; the 1982 step made it universal for primary-class children in government schools [2][3].
+- 'School meals in Tamil Nadu pre-date 1982: a meal in Madras city corporation schools began in the 1920s, and K. Kamaraj, Chief Minister in the 1960s, extended it more widely; the 1982 step made it universal for primary-class children in government schools [2][3].'
 - The Wikipedia summary states the 1982 upgrade responded to a concern that about 68 lakh children were malnourished [3].
 - The district government page lists the objectives as nutrition for economically disadvantaged children, combating malnutrition, and encouraging enrolment and reducing dropouts; funding is from both State and Central governments [1].
-- The administering department changed over time: Education (1982-1990), Rural Development (1990-1992 and 1997-2006), Social Welfare (1992-1997 and, from 2006-07, for rural and urban areas) [1].
+- 'The administering department changed over time: Education (1982-1990), Rural Development (1990-1992 and 1997-2006), Social Welfare (1992-1997 and, from 2006-07, for rural and urban areas) [1].'
 - The Government of India introduced a nationwide mid-day meal scheme in 1995 following a Supreme Court judgement, and a Supreme Court direction of 28 November 2001 extended cooked meals to all parts of India [2].
 why:
   stated:

@@ -27,7 +27,7 @@ why:
     - "Central trade unions stated that the Codes negate the right to strike, make union registration problematic and give employers easier layoff powers; they objected to the 100-to-300 threshold change [4]."
 benefits:
   - point: "Statutory social security cover for gig and platform workers and fixed-term employees."
-    evidence: "SS Code provisions for gig and platform workers; gratuity after one year for fixed-term employees [2][3]. PLFS 2023-24 found 53.4% of regular wage and salaried workers were not eligible for any social security benefit, so the coverage gap addressed is large [6]."
+    evidence: "SS Code provisions for gig and platform workers; gratuity after one year for fixed-term employees [2][3]. PLFS 2023-24 found 53.4% of regular wage and salaried workers were not eligible for any social security benefit, which is the base the Codes apply to [6]."
   - point: "Consolidation and common definitions may reduce compliance complexity and litigation."
     evidence: "29 laws into four codes with a uniform wage definition [1][2]; EY notes the aim of clarity and consistency, with some ambiguities remaining [2]."
 concerns:

@@ -15,7 +15,7 @@ facts:
 - Chief Minister Yogi Adityanath's cabinet announced the waiver about two days before the RBI Governor's press briefing of 6 April 2017 [2]; 4 April 2017 is used here as an approximate decision date. The government took office on 19 March 2017.
 - The waiver covers crop loans up to Rs 1 lakh per farmer from any bank, including cooperative banks, taken against paddy, wheat, fertilisers and insecticides before 31 March 2016; consumption loans are excluded [1].
 - The total is reported as Rs 36,359 crore, comprising Rs 30,729 crore for bank loans and Rs 5,630 crore for writing off non-performing assets (one source gives Rs 30,279 crore for the former) [3].
-- Beneficiary counts differ across reports: about 86 lakh farmers (YourStory), about 1.5 crore small and marginal farmers (ORF [1], Tribune) and about 2.15 crore (The Quint [2], India TV) [1][2]; the state has about 2.3 crore farmers in total [3]. The count was not verified from an official order.
+- 'Beneficiary counts differ across reports: about 86 lakh farmers (YourStory), about 1.5 crore small and marginal farmers (ORF [1], Tribune) and about 2.15 crore (The Quint [2], India TV) [1][2]; the state has about 2.3 crore farmers in total [3]. The count was not verified from an official order.'
 - The state planned to fund the waiver through bonds ('Kisan Rahat' bonds) to keep the deficit within the 3% of GDP limit, with an ORF author estimating annual interest of about Rs 2,727 crore at 6.5-7.5% [1][3].
 - On 6 April 2017 RBI Governor Urjit Patel said loan waivers undermine an "honest credit culture", add to inflation risk, remove repayment incentives for future borrowers and can raise government bond yields [2].
 why:

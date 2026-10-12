@@ -1,6 +1,6 @@
 ---
 title: High-Yielding Varieties Programme (Green Revolution)
-summary: Central programme from 1966-67 that distributed imported high-yielding wheat seed and paired it with fertiliser, irrigation and assured procurement; foodgrain output rose and net imports fell by the early 1970s.
+summary: Programme from 1966-67 distributing imported high-yielding wheat seed with fertiliser, irrigation and assured procurement; foodgrain output rose and net imports fell by the early 1970s, alongside other changes.
 category: agriculture
 subcategories:
 - irrigation

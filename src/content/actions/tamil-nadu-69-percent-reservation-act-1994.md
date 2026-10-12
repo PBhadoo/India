@@ -13,11 +13,11 @@ status: implemented
 developing: false
 lastReviewed: 2026-10-11
 facts:
-- Tamil Nadu's reservation rose in steps: 49% in 1971, 68% in 1980 (backward classes quota raised to 50% under the AIADMK government of M. G. Ramachandran), a 20% Most Backward Classes sub-quota in 1989 under M. Karunanidhi, and 69% in 1990 when a separate 1% for Scheduled Tribes was added [2][3].
+- 'Tamil Nadu''s reservation rose in steps: 49% in 1971, 68% in 1980 (backward classes quota raised to 50% under the AIADMK government of M. G. Ramachandran), a 20% Most Backward Classes sub-quota in 1989 under M. Karunanidhi, and 69% in 1990 when a separate 1% for Scheduled Tribes was added [2][3].'
 - On 16 November 1992 a nine-judge Supreme Court bench decided Indra Sawhney v. Union of India (AIR 1993 SC 477); the summaries at [2][3] say it held total reservations under Article 16(4) should not exceed 50%. The court record opened for [1] showed earlier cases (Balaji 1963, Devadasan 1964) applying a similar principle.
 - The Madras High Court allowed the existing policy for 1993-94 but required a 50% cap from 1994-95, and the Supreme Court's interim order reiterated a 50% cap for educational admissions [3].
 - In November 1993 the Tamil Nadu Assembly unanimously passed a resolution asking the Union to amend the Constitution; the state then passed the Backward Classes, SC and ST reservation Bill, which became Act 45 of 1994 with Presidential assent and was placed in the Ninth Schedule [2][3]. The exact assent date was not verified; 1 January 1994 is used as an approximate date.
-- Current breakup: Backward Classes 26.5%, BC Muslims 3.5%, Most Backward Classes/Denotified Communities 20%, Scheduled Castes 18%, Scheduled Tribes 1% [2].
+- 'Current breakup: Backward Classes 26.5%, BC Muslims 3.5%, Most Backward Classes/Denotified Communities 20%, Scheduled Castes 18%, Scheduled Tribes 1% [2].'
 - A 2021 report states that challenges to the Ninth Schedule inclusion (citing Article 14) are pending and the Supreme Court will take them up after a Constitution Bench ruling on the Indra Sawhney-related questions [3]. Current status was not checked.
 why:
   stated:

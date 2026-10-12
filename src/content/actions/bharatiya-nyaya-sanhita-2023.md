@@ -16,7 +16,7 @@ facts:
   - The Lok Sabha passed it on 20 December 2023 and the Rajya Sabha on 21 December 2023; the President's assent was dated 25 December 2023 (Act No. 45 of 2023) [1][5].
   - The BNS and the companion Bharatiya Nagarik Suraksha Sanhita and Bharatiya Sakshya Adhiniyam came into effect on 1 July 2024 [3].
   - The BNS has 358 sections in 20 chapters; it adds 20 offences, drops 19 IPC provisions, raises imprisonment for 33 offences and fines for 83, introduces mandatory minimum punishment for 23 and community service for six [5].
-  - It removes sedition as an offence and adds Section 152, "Act endangering sovereignty, unity and integrity of India"; it adds organised crime, terrorism, and murder or grievous hurt by a group on grounds of race, caste or community [1][2][3][5].
+  - It does not carry over the IPC sedition provision (Section 124A) and adds Section 152, "Act endangering sovereignty, unity and integrity of India"; it adds organised crime, terrorism, and murder or grievous hurt by a group on grounds of race, caste or community [1][2][3][5].
   - It retains the marital rape exception and omits IPC Section 377 [2].
   - Under the companion procedure code, the permitted period of police custody can extend up to 90 days, against a 15-day limit under Section 167(2) of the CrPC [3].
 why:

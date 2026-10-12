@@ -6,6 +6,11 @@ export async function getActionEntries() {
   return getCollection('actions');
 }
 
+export async function getDossierEntries() {
+  const { getCollection } = await import('astro:content');
+  return getCollection('dossiers');
+}
+
 export async function getDevelopingEntries() {
   const { getCollection } = await import('astro:content');
   return getCollection('developing');
@@ -21,6 +26,7 @@ export function toScorable(entry: { id: string; data: any }): ScorableAction {
     level: d.level,
     governmentId: d.governmentId,
     originGovernmentId: d.originGovernmentId,
+    credit: d.credit === 'none' ? 'none' : 'party',
     scorers: d.scoring?.scorers ?? [],
   };
 }

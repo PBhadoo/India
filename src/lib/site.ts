@@ -1,4 +1,4 @@
-import { getActionEntries, getDevelopingEntries, toScorable } from './collections.ts';
+import { getActionEntries, getDevelopingEntries, getDossierEntries, toScorable } from './collections.ts';
 import { allGovernments, centreGovernments, getGovernment, listStates, parties as allParties, stateGovernments } from './governments.ts';
 import { categories, categoryIds } from './taxonomy.ts';
 import { computeScoring, type ActionScore, type ScoringResult } from './scoring-core.ts';
@@ -25,8 +25,15 @@ export interface DevRow {
   entry: any;
 }
 
+export interface DossierRow {
+  slug: string;
+  data: any;
+  entry: any;
+}
+
 export interface Site {
   actions: ActionRow[];
+  dossiers: DossierRow[];
   developing: DevRow[];
   scoring: ScoringResult;
   slots: Record<string, number>;
@@ -45,6 +52,7 @@ export function getSite(): Promise<Site> {
 async function build(): Promise<Site> {
   const entries = (await getActionEntries().catch(() => [])) as any[];
   const dev = (await getDevelopingEntries().catch(() => [])) as any[];
+  const dos = (await getDossierEntries().catch(() => [])) as any[];
   const govs = allGovernments();
   const plist = allParties();
   const slots = partySlots(govs, plist);
@@ -74,7 +82,11 @@ async function build(): Promise<Site> {
     .map((e) => ({ slug: e.id, data: e.data, entry: e }))
     .sort((a, b) => +new Date(b.data.date) - +new Date(a.data.date));
 
-  const stamps = [...actions.map((a) => isoDate(a.data.lastReviewed)), ...developing.map((d) => isoDate(d.data.date))].sort();
+  const dossiers: DossierRow[] = dos
+    .map((e) => ({ slug: e.id, data: e.data, entry: e }))
+    .sort((a, b) => +new Date(b.data.asOf) - +new Date(a.data.asOf) || a.slug.localeCompare(b.slug));
+
+  const stamps = [...actions.map((a) => isoDate(a.data.lastReviewed)), ...developing.map((d) => isoDate(d.data.date)), ...dossiers.map((d) => isoDate(d.data.asOf))].sort();
   const partyMetaMap: Record<string, PartyMeta> = {};
   const ids = new Set<string>([...plist.map((p) => p.id), ...Object.keys(slots)]);
   ids.delete('');
@@ -85,6 +97,7 @@ async function build(): Promise<Site> {
   return {
     actions,
     developing,
+    dossiers,
     scoring,
     slots,
     partyList: plist,

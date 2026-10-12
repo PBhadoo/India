@@ -77,7 +77,9 @@ scoring:
   lag_years: 3
   shocks: []
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 0, outcome: 0, sustainability: -1, process: -2, delivery: 2, note: "Statute implemented from January 2024 but its independence effect is undecided, validity is pending in court, and the Court noted procedural concerns in first appointments." }
+    - { id: B, reach: 1, outcome: 0, sustainability: 0, process: -1, delivery: 2, note: "The Act gave a statutory basis and tenure protections, but the government-weighted committee and a pending Supreme Court challenge keep net process and outcome near neutral." }
 ---
 
 ## In depth

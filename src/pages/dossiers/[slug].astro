@@ -27,6 +27,7 @@ const ongoing = d.status === 'ongoing';
 const age = daysBetween(d.asOf, new Date(site.asOf + 'T00:00:00Z'));
 const stale = ongoing && age > 45;
 
+const unopened = sources.filter((s) => /not opened|search[- ]results?|search[- ]result|headline only|summary|did not load|fetch (failed|returned)|403/i.test(s.title)).length;
 const timeline = d.timeline as any[];
 const claims = d.claims as any[];
 const positions = d.positions as any[];
@@ -90,11 +91,12 @@ const jsonLd = {
       <p>
         <strong>Facts as of <time datetime={isoDate(d.asOf)}>{fmtDate(d.asOf)}</time>.</strong>{' '}
         Check sources for later developments.
+        {unopened > 0 ? ` ${unopened} of ${sources.length} sources are labelled as seen only in search results or summaries and not opened in full; see each source label, and read statuses taken from them as "as reported".` : ' See each source label for how it was read.'}
         {ongoing ? ' This matter is ongoing, so statuses below may have changed.' : ' This matter is marked settled; later filings or orders may still exist.'}
         {stale && <> It was last checked {age} days ago.</>}
       </p>
     </div>
-    <p class="note nopoints">A dossier is a fact file. It is not scored and earns or loses no party points. <a href="/methodology/#dossiers">How dossiers are written</a>.</p>
+    <p class="note nopoints">A dossier is a fact file. It records what is on record and who said what; it does not give a verdict. It is not scored and earns or loses no party points. <a href="/methodology/#dossiers">How dossiers are written</a>.</p>
 
     <div class="head-tools">
       <ul class="anchors" aria-label="On this page">

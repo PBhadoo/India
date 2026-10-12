@@ -16,7 +16,7 @@ timeline:
   - { date: 2023-02-03, event: "SBI's chairman states the bank's exposure to the Adani group at about Rs 27,000 crore, 0.88% of its loan book, as of 31 December 2022.", actor: "State Bank of India", type: official-statement, source: 8 }
   - { date: 2023-03-30, event: "Viral Acharya publishes a Brookings paper on the share of the five largest groups in non-financial assets and sales.", actor: "Viral Acharya", type: event, source: 1 }
   - { date: 2024-08-28, event: "The Competition Commission of India approves the Reliance (Viacom18) and Disney Star combination subject to voluntary modifications; the modifications were not disclosed in the coverage seen.", actor: "Competition Commission of India", type: finding, source: 12 }
-  - { date: 2025-09-18, event: "SEBI dismisses the Hindenburg Research allegations against Gautam Adani and Adani group companies, holding they were not established; Reuters reported other SEBI cases remain pending.", actor: "SEBI", type: finding, source: 9 }
+  - { date: 2025-09-18, event: "SEBI, in final orders on show cause notices, finds the allegations in them against Gautam Adani and Adani group companies not established; Reuters reported other SEBI cases remain pending (order not opened here; see the Adani Group dossier for the order opened).", actor: "SEBI", type: finding, source: 9 }
   - { date: 2026-06-22, event: "TRAI releases its performance indicator report for January-March 2026.", actor: "TRAI", type: event, source: 3 }
 claims:
   - claim: "The five largest groups (Reliance, Tata, Aditya Birla, Adani, Bharti) increased their share of non-financial-sector assets from about 10% in 1991 to nearly 18% in 2021, while groups ranked 6 to 10 fell from about 18% in 1992 to under 9%."
@@ -47,17 +47,12 @@ claims:
     madeBy: "SBI chairman Dinesh Khara (3 February 2023); other banks' figures as reported"
     status: "Bank statement; an opposition claim of 27% of the SBI loan book was reported to be wrong"
     source: 8
-  - claim: "The top income and wealth shares are at historical highs: top 1% income share 22.6% and wealth share 40.1% in 2022-23."
-    type: data
-    madeBy: "Bharti, Chancel, Piketty and Somanchi (World Inequality Lab, 2024)"
-    status: "Estimates the authors say are likely lower bounds because of data quality; they measure individuals, not business groups"
-    source: 10
 positions:
   - { holder: "Viral Acharya (economist, former RBI Deputy Governor)", position: "Concentration among the Big 5 rose from 1991 to 2021, driven by acquisition within sectors where they were present from 2015; he ties it to national-champion policies and argues for breaking them up and lowering tariffs.", source: 1 }
   - { holder: "Madan Sabnavis (Bank of Baroda chief economist)", position: "Says there is not enough evidence to support the thesis that the Big 5 should be broken up.", source: 7 }
   - { holder: "Rahul Gandhi (INC)", position: "Says he is anti-monopoly, not anti-business, and that the government should not back one business at the expense of others.", source: 13 }
   - { holder: "Bharatiya Janata Party", position: "Called Mr Gandhi's claims baseless and said his criticism of named business houses shows he is anti-business.", source: 13 }
-  - { holder: "Union government (centre-2014-modi-1)", position: "No formal government statement on group concentration was located in this research.", source: 13 }
+  - { holder: "Union government (centre-2024-modi-3)", position: "No formal government statement on group concentration was located in this research.", source: 13 }
   - { holder: "Competition Commission of India", position: "Approved the Reliance-Disney combination with voluntary modifications, with the stated rationale not available in the coverage seen.", source: 12 }
 tables:
   - title: "Largest groups: reported size measures"
@@ -65,7 +60,7 @@ tables:
     columns: ["Group", "Market cap (Rs lakh crore)", "Revenue", "Employees", "Note"]
     rows:
       - ["Tata", "27.85 (31 Mar 2025, Tata Sons MD&A as reported); another report cites 24.39 for FY26 (unverified)", "Rs 15.34 lakh crore aggregate (FY25)", "over 1 million (FY25 group profile as reported)", "Market cap figures conflict across sources"]
-      - ["Reliance", "23.44 (late Dec 2025, CNBC-TV18 via Storyboard18)", "Rs 10.71 lakh crore consolidated RIL (FY25)", "419,911 (FY26, from a job-aggregator page; unverified)", "Revenue is that of Reliance Industries consolidated"]
+      - ["Reliance", "23.44 (late Dec 2025, CNBC-TV18 via Storyboard18)", "Rs 10.71 lakh crore consolidated RIL (FY25)", "419,911 (FY26, from a job-aggregator page; unverified; the Reliance Group dossier gives 4,03,303 for end FY2024-25 from a different source and year)", "Revenue is that of Reliance Industries consolidated"]
       - ["Bharti", "14.6 (late Dec 2025)", "not retrieved", "not retrieved", "Market cap rose by 3.5 in 2025"]
       - ["Adani", "14.0 (late Dec 2025)", "not retrieved", "not retrieved", "Market cap rose by about 1.1 in 2025"]
       - ["Bajaj", "not stated (rose by 2.6 in 2025)", "not retrieved", "not retrieved", "-"]
@@ -127,6 +122,8 @@ tables:
 notShown:
   - "Size, market share and index weight do not show influence over government or regulatory decisions, prices or outcomes; no figure here measures lobbying, access or decision-making, and markup findings in the cited paper are statistical associations by one author, not regulator findings."
   - "The tables mix market capitalisation, revenue, assets and capacity, taken from different dates and sources; group totals for listed and unlisted companies are not on one basis, and many group-level revenue, employment, capex and tax figures were not obtained."
+  - "Figures that differ between dossiers are for different dates or measures and are not reconciled: Adani market capitalisation is 14.0 lakh crore at late December 2025 here and close to 20 lakh crore at late May 2026 in the Adani Group dossier; Reliance market capitalisation is 23.44 lakh crore at late December 2025 here and 20.14 lakh crore at March 2024 in the Reliance Group dossier; the Reliance employee figure is 419,911 (FY26, unverified) here and 4,03,303 (FY2024-25) there."
+  - "The only lender-exposure table is for the Adani group, because it is the only one for which bank statements were found; no equivalent table exists for another group, so the table is not a comparison."
   - "No official data on any group's share of corporate tax, capex or national employment was located, so those shares are not stated; ratios to GDP use revenue, not value added."
   - "The Competition Commission's reasons for the Reliance-Disney approval and the full list of its orders on named groups were not obtained, and the cement, port and airport shares rest partly on company statements."
 sources:
@@ -134,12 +131,12 @@ sources:
   - { title: "Nifty 50 Index Constituents as on 19.08.2026 (opened; reproduction of NSE index weights)", url: "https://www.taurusmutualfund.com/sites/default/files/2026-08/nifty-index-constituent-as-on-19_08_2026.pdf", publisher: Taurus Mutual Fund (NSE Indices data), type: official-data }
   - { title: "TRAI Press Release No. 76 of 2026, Telecom Services Performance Indicator Report Jan-Mar 2026 (opened)", url: "https://www.trai.gov.in/sites/default/files/2026-06/PR_No.76of2026.pdf", publisher: Telecom Regulatory Authority of India, type: official-data }
   - { title: "Reliance leads India's wealth creation in 2025; Tata Group emerges as outlier (opened)", url: "https://www.storyboard18.com/how-it-works/reliance-leads-indias-wealth-creation-in-2025-tata-group-emerges-as-outlier-86410.htm", publisher: Storyboard18 (citing CNBC-TV18), type: reputable-media }
-  - { title: "PPAC installed refinery capacity (seen in search results, not opened)", url: "https://ppac.gov.in/infrastructure/installed-refinery-capacity", publisher: Petroleum Planning and Analysis Cell, type: official-data }
+  - { title: "PPAC installed refinery capacity (seen in search results, not opened)", url: "https://ppac.gov.in/infrastructure/installed-refinery-capacity", publisher: Petroleum Planning and Analysis Cell, type: reputable-media }
   - { title: "R. K. Hazari, The Structure of the Corporate Private Sector (book page, opened; no figures on page)", url: "https://www.hemindrahazari.com/1966/10/19/the-corporate-private-sector-concentration-ownership-and-control/", publisher: hemindrahazari.com, type: academic }
   - { title: "Break up Big 5, reduce tariffs: what Viral Acharya said in new paper (seen in search results, not opened)", url: "https://thewire.in/business/break-up-big-5-reduce-tariffs-bring-ibc-back-on-track-what-all-viral-acharya-said-in-new-paper", publisher: The Wire, type: reputable-media }
   - { title: "Adani-Hindenburg row: SBI's total exposure to Adani group is 0.9% of overall loan book, says chairman (seen in search results, not opened)", url: "https://businesstoday.in/latest/corporate/story/adani-hindenburg-row-sbis-total-exposure-to-adani-group-is-09-of-overall-loan-book-says-chairman-368869-2023-02-03", publisher: Business Today, type: reputable-media }
   - { title: "Sebi gives Adani group clean chit, dismisses Hindenburg allegations (seen in search results, not opened)", url: "https://www.business-standard.com/amp/markets/news/sebi-clears-adani-group-dismisses-hindenburg-allegations-125091801259_1.html", publisher: Business Standard, type: reputable-media }
-  - { title: "Provisional Estimates of Annual GDP for 2024-25, press release 30 May 2025 (seen in search results, not opened)", url: "https://www.mospi.gov.in/sites/default/files/press_release/NAD_PR_30may2025.pdf", publisher: Ministry of Statistics and Programme Implementation, type: official-data }
+  - { title: "Provisional Estimates of Annual GDP for 2024-25, press release 30 May 2025 (seen in search results, not opened)", url: "https://www.mospi.gov.in/sites/default/files/press_release/NAD_PR_30may2025.pdf", publisher: Ministry of Statistics and Programme Implementation, type: reputable-media }
   - { title: "MRTP Act repealed and replaced by the Competition Act, 2002 w.e.f. 1 September 2009 (seen in search results, not opened)", url: "https://taxguru.in/?p=12019", publisher: TaxGuru, type: reputable-media }
   - { title: "CCI approves Disney Star and Viacom18 merger (seen in search results, not opened)", url: "https://www.storyboard18.com/television/cci-approves-disney-star-and-viacom18-merger-40805.htm", publisher: Storyboard18, type: reputable-media }
   - { title: "I'm not anti-business, I'm anti-monopoly, says Rahul Gandhi (seen in search results, not opened)", url: "https://scroll.in/latest/1075372/im-not-anti-business-im-anti-monopoly-says-rahul-gandhi", publisher: Scroll.in, type: reputable-media }
@@ -155,4 +152,4 @@ The 1950s and 1960s are the reference point for older measures: Hazari's study t
 
 ## Do these groups run India?
 
-Facts cited for the proposition that large groups hold a dominant position: rising Big-5 asset share since 1991, Top-5 sales shares of over 84% in telecom and 90% of refining assets [1], and leading shares in ports, airports and refining. Facts against: the largest listed group weights are 10.5% or less of the Nifty 50 [2]; group revenues are 3% to 5% of nominal GDP [10]; Big 6-10 shares fell [1]; and no official total for group employment, tax or capex shares was obtained, so those are not stated. Named economists, parties and the government take differing positions, listed under positions. The numbers here do not establish who influences decisions.
+Facts cited for the proposition that large groups hold a dominant position: rising Big-5 asset share since 1991, Top-5 sales shares of over 84% in telecom and over 65% in retail trade [1], and leading shares in ports, airports and refining. Facts against: the largest listed group weights are 10.5% or less of the Nifty 50 [2]; group revenues are 3% to 5% of nominal GDP [10]; Big 6-10 shares fell [1]; and no official total for group employment, tax or capex shares was obtained, so those are not stated. Named economists, parties and the government take differing positions, listed under positions. The numbers here do not establish who influences decisions.

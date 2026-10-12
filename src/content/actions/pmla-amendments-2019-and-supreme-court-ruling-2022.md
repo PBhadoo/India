@@ -34,7 +34,7 @@ benefits:
 concerns:
   - point: "Low count of convictions relative to cases registered, and long pendency, on the official figures."
     evidence: "23 convictions against 5,422 cases to March 2022 [4]; 120 against 6,312 cases in the December 2025 reply [8]. The ED cites 93.6% of 47 decided cases [9]; the two measures are different."
-  - point: "Stringent bail conditions and the reverse burden of proof limit accused persons' rights; the Court has since read bail into s.45 after long delay and required written grounds of arrest."
+  - point: "Petitioners argue that the stringent bail conditions and the reverse burden of proof limit accused persons' rights (the Court upheld the 2018 form of s.45 in 2022); the Court has since read bail into s.45 after long delay and required written grounds of arrest."
     evidence: "Sisodia bail order, 9 August 2024 [7]; Pankaj Bansal, 3 October 2023 [6]."
   - point: "No official data on the party or state of persons investigated; the government says ED does not maintain it."
     evidence: "Rajya Sabha reply, 6 August 2024, state-wise data is not maintained [11]."
@@ -42,20 +42,22 @@ sources:
   - { title: "Vijay Madanlal Choudhary v. Union of India, 27 July 2022 (opened; paragraph 187 read)", url: "https://indiankanoon.org/doc/14485072/", publisher: Supreme Court of India via Indian Kanoon, type: court }
   - { title: "Review of SC's Vijay Madanlal judgment, Day 1 (31 July 2025)", url: "https://www.scobserver.in/reports/review-of-scs-vijay-madanlal-judgement-day-1-bench-determines-scope-of-issues-in-the-review-petition/", publisher: Supreme Court Observer, type: reputable-media }
   - { title: "Prevention of Money Laundering Act, 2002", url: "https://en.wikipedia.org/wiki/Prevention_of_Money_Laundering_Act,_2002", publisher: Wikipedia, type: reputable-media }
-  - { title: "ED files 6,312 cases while conviction in 120 cases in nearly 12 years (Lok Sabha reply, Dec 2025); and ED recorded 5,422 PMLA cases (Lok Sabha reply 25 July 2022)", url: "https://www.theweek.in/wire-updates/business/2025/12/01/dcm109-lsq-ed-cases.html", publisher: The Week / PTI, type: official-data }
+  - { title: "ED files 6,312 cases while conviction in 120 cases in nearly 12 years (Lok Sabha reply, Dec 2025); and ED recorded 5,422 PMLA cases (Lok Sabha reply 25 July 2022)", url: "https://www.theweek.in/wire-updates/business/2025/12/01/dcm109-lsq-ed-cases.html", publisher: The Week / PTI, type: reputable-media }
   - { title: "Note on Money Bills (Supreme Court Observer, 23 Jan 2022; seen in search results, not opened)", url: "https://www.scobserver.in/wp-content/uploads/2021/10/2.-Note-Money-Bills-23.01.2022.pdf", publisher: Supreme Court Observer, type: reputable-media }
-  - { title: "Pankaj Bansal v. Union of India, 3 October 2023 (seen in search results, not opened)", url: "https://indiankanoon.org/doc/189692408/", publisher: Supreme Court of India via Indian Kanoon, type: court }
+  - { title: "Pankaj Bansal v. Union of India, 3 October 2023 (opened via Indian Kanoon; para 35 read)", url: "https://indiankanoon.org/doc/189692408/", publisher: Supreme Court of India via Indian Kanoon, type: court }
   - { title: "Delhi excise policy: Supreme Court grants bail to Manish Sisodia (seen in search results, not opened)", url: "https://www.scconline.com/blog/post/2024/08/09/supreme-court-grants-bail-manish-sisodia-in-delhi-excise-liquor-policy-scam/", publisher: SCC Online, type: reputable-media }
-  - { title: "ED lodged cases and convictions: Lok Sabha reply of 25 July 2022", url: "https://www.theweek.in/wire-updates/business/2022/07/25/del111-lsq-ed-ld-cases.html", publisher: The Week / PTI, type: official-data }
+  - { title: "ED lodged cases and convictions: Lok Sabha reply of 25 July 2022", url: "https://www.theweek.in/wire-updates/business/2022/07/25/del111-lsq-ed-ld-cases.html", publisher: The Week / PTI, type: reputable-media }
   - { title: "PMLA action picked momentum after 2014; conviction rate over 93 pc: ED Director (1 May 2025)", url: "https://www.theweek.in/wire-updates/national/2025/05/01/del53-ed-day-director.html", publisher: The Week / PTI, type: reputable-media }
   - { title: "Focus on quality prosecution and evidence, SC tells ED", url: "https://m.thewire.in/article/law/focus-on-quality-prosecution-and-evidence-sc-tells-ed-on-low-conviction-rate-in-pmla-cases", publisher: The Wire, type: reputable-media }
-  - { title: "ED lodged 132 money laundering cases against politicians since 2019 (Rajya Sabha reply, 6 Aug 2024)", url: "https://m.thewire.in/article/government/ed-lodged-132-money-laundering-cases-against-politicians-since-2019-conviction-in-only-1-instance", publisher: The Wire, type: official-data }
+  - { title: "ED lodged 132 money laundering cases against politicians since 2019 (Rajya Sabha reply, 6 Aug 2024)", url: "https://m.thewire.in/article/government/ed-lodged-132-money-laundering-cases-against-politicians-since-2019-conviction-in-only-1-instance", publisher: The Wire, type: reputable-media }
 scoring:
   era_baseline: "Before 2014 the ED registered fewer than 200 PMLA cases a year, and the 2002 Act's first conviction came years after commencement (ED Director's statement, 2025); the 2022 reply showed 23 convictions in 17 years."
   lag_years: 5
   shocks: [covid-2020]
   confidence: low
-  scorers: []
+  scorers:
+    - { id: A, reach: 1, outcome: 0, sustainability: 0, process: -1, delivery: 2, note: "Case registrations and attachments rose, but convictions stayed very low relative to cases, bail and burden-of-proof concerns persist, and review is pending, so outcome data are mixed." }
+    - { id: B, reach: 0, outcome: 0, sustainability: 1, process: -1, delivery: 2, note: "Case registrations and attachments rose, but conviction counts stay low and the Court has accepted review on two aspects, leaving outcome evidence mixed." }
 ---
 
 ## In depth

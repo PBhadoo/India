@@ -1,69 +1,72 @@
 # Neutrality report
 
-Generated 2026-10-12 from 86 actions. Counts show coverage, not merit; an imbalance prompts a look at what is missing, not a conclusion.
+Generated 2026-10-12 from 89 actions. Counts show coverage, not merit; an imbalance prompts a look at what is missing, not a conclusion.
+
+Actions with `credit: none` (independent institution, scored but earning no party points): 1 of 89.
+- special-intensive-revision-electoral-rolls-2025 (Election Commission of India)
 
 ## Entries by lead party of the implementing government
 | Lead party | Entries | Share |
 |---|---|---|
-| INC | 38 | 44.2% |
-| BJP | 30 | 34.9% |
-| JD | 10 | 11.6% |
-| AIADMK | 2 | 2.3% |
-| CPI(M) | 2 | 2.3% |
-| JP | 2 | 2.3% |
-| AAP | 1 | 1.2% |
-| SJP(R) | 1 | 1.2% |
+| INC | 38 | 42.7% |
+| BJP | 32 | 36% |
+| JD | 10 | 11.2% |
+| AIADMK | 2 | 2.2% |
+| CPI(M) | 2 | 2.2% |
+| JP | 2 | 2.2% |
+| AAP | 1 | 1.1% |
+| SJP(R) | 1 | 1.1% |
 
 ## Entries by any party in the implementing coalition
 | Party | Entries | Share |
 |---|---|---|
-| INC | 38 | 44.2% |
-| BJP | 30 | 34.9% |
-| SS | 28 | 32.6% |
-| SAD | 25 | 29.1% |
-| LJP | 24 | 27.9% |
-| PMK | 21 | 24.4% |
-| AIADMK | 19 | 22.1% |
-| DMK | 19 | 22.1% |
-| TDP | 19 | 22.1% |
-| JD(U) | 13 | 15.1% |
-| MDMK | 13 | 15.1% |
-| AITC | 12 | 14% |
-| NCP | 11 | 12.8% |
-| CPI | 10 | 11.6% |
-| JD | 10 | 11.6% |
-| AGP | 8 | 9.3% |
-| AD | 8 | 9.3% |
-| NPF | 8 | 9.3% |
-| NPP | 8 | 9.3% |
-| AINRC | 8 | 9.3% |
-| RLSP | 8 | 9.3% |
-| SP | 8 | 9.3% |
-| SWP | 8 | 9.3% |
-| TMC(M) | 8 | 9.3% |
-| BJD | 7 | 8.1% |
-| LS | 7 | 8.1% |
-| SAP | 7 | 8.1% |
-| JMM | 6 | 7% |
-| RJD | 6 | 7% |
-| TRS | 6 | 7% |
-| IUML | 5 | 5.8% |
-| JKNC | 5 | 5.8% |
-| JD(S) | 3 | 3.5% |
-| LJP(RV) | 3 | 3.5% |
-| CPI(M) | 2 | 2.3% |
-| JP | 2 | 2.3% |
-| AAP | 1 | 1.2% |
-| AD(S) | 1 | 1.2% |
-| AIFB | 1 | 1.2% |
-| RSP | 1 | 1.2% |
-| SBSP | 1 | 1.2% |
-| SJP(R) | 1 | 1.2% |
+| INC | 38 | 42.7% |
+| BJP | 32 | 36% |
+| SS | 30 | 33.7% |
+| SAD | 27 | 30.3% |
+| LJP | 26 | 29.2% |
+| AIADMK | 21 | 23.6% |
+| PMK | 21 | 23.6% |
+| DMK | 19 | 21.3% |
+| TDP | 19 | 21.3% |
+| JD(U) | 15 | 16.9% |
+| MDMK | 13 | 14.6% |
+| AITC | 12 | 13.5% |
+| NCP | 11 | 12.4% |
+| CPI | 10 | 11.2% |
+| JD | 10 | 11.2% |
+| AGP | 8 | 9% |
+| AD | 8 | 9% |
+| NPF | 8 | 9% |
+| NPP | 8 | 9% |
+| AINRC | 8 | 9% |
+| RLSP | 8 | 9% |
+| SP | 8 | 9% |
+| SWP | 8 | 9% |
+| TMC(M) | 8 | 9% |
+| BJD | 7 | 7.9% |
+| LS | 7 | 7.9% |
+| SAP | 7 | 7.9% |
+| JMM | 6 | 6.7% |
+| RJD | 6 | 6.7% |
+| TRS | 6 | 6.7% |
+| IUML | 5 | 5.6% |
+| JKNC | 5 | 5.6% |
+| JD(S) | 3 | 3.4% |
+| LJP(RV) | 3 | 3.4% |
+| CPI(M) | 2 | 2.2% |
+| JP | 2 | 2.2% |
+| AAP | 1 | 1.1% |
+| AD(S) | 1 | 1.1% |
+| AIFB | 1 | 1.1% |
+| RSP | 1 | 1.1% |
+| SBSP | 1 | 1.1% |
+| SJP(R) | 1 | 1.1% |
 
 ## Entries by government
 | Government | Label | Entries |
 |---|---|---|
-| centre-2019-modi-2 | NDA government | 10 |
+| centre-2019-modi-2 | NDA government | 12 |
 | centre-2014-modi-1 | NDA government | 8 |
 | centre-1947-nehru | INC government | 7 |
 | centre-1998-vajpayee | NDA government | 7 |
@@ -73,7 +76,7 @@ Generated 2026-10-12 from 86 actions. Counts show coverage, not merit; an imbala
 | centre-2009-manmohan-2 | UPA government | 5 |
 | centre-1984-rajiv | INC government | 4 |
 | centre-1991-narasimha-rao | INC government | 4 |
-| centre-2024-modi-3 | NDA government | 3 |
+| centre-2024-modi-3 | NDA government | 4 |
 | centre-1977-desai | Janata Party government | 2 |
 | centre-1980-indira-2 | INC government | 2 |
 | centre-1989-vp-singh | National Front government | 2 |
@@ -100,13 +103,13 @@ Generated 2026-10-12 from 86 actions. Counts show coverage, not merit; an imbala
 | 1980s | 7 |
 | 1990s | 20 |
 | 2000s | 12 |
-| 2010s | 18 |
-| 2020s | 11 |
+| 2010s | 19 |
+| 2020s | 13 |
 
 ## Entries by level
 | Level | Entries |
 |---|---|
-| centre | 76 |
+| centre | 79 |
 | state | 10 |
 
 ## Entries by category
@@ -114,13 +117,13 @@ Generated 2026-10-12 from 86 actions. Counts show coverage, not merit; an imbala
 |---|---|
 | states | 10 |
 | economy | 9 |
+| elections | 6 |
 | foreign-policy | 6 |
 | education | 5 |
+| law-rights | 5 |
 | agriculture | 5 |
 | social-welfare | 5 |
 | governance | 5 |
-| elections | 4 |
-| law-rights | 4 |
 | energy-environment | 4 |
 | health | 3 |
 | infrastructure | 3 |
@@ -134,9 +137,12 @@ Generated 2026-10-12 from 86 actions. Counts show coverage, not merit; an imbala
 | water-land | 2 |
 | space-science | 2 |
 | sports-youth | 2 |
+| business-power | 0 |
+| parties-movements | 0 |
 
-## Categories with fewer than 2 entries (0)
-None.
+## Categories with fewer than 2 entries (2)
+- business-power (0)
+- parties-movements (0)
 
 ## Parties that have led a government but have fewer than 3 entries (22)
 - JP (2)
@@ -177,12 +183,12 @@ None.
 - waqf-amendment-act-2025 (BJP)
 
 ## Sources
-Average sources per entry: 4.44
+Average sources per entry: 4.71
 
 | Lead party | Avg sources | Share with a primary-grade source |
 |---|---|---|
 | INC | 4.53 | 92.1% |
-| BJP | 4.67 | 73.3% |
+| BJP | 4.94 | 75% |
 | JD | 4.6 | 100% |
 | AIADMK | 3 | 100% |
 | CPI(M) | 3 | 50% |
@@ -199,7 +205,7 @@ Evidence per bullet is the average number of distinct [n] citations in each bene
 | Lead party | n | Avg benefits | Avg concerns | Avg citations/bullet | Bullets with evidence |
 |---|---|---|---|---|---|
 | INC | 38 | 2.03 | 2.18 | 1.47 | 100% |
-| BJP | 30 | 2.03 | 2.23 | 1.45 | 100% |
+| BJP | 32 | 2.06 | 2.28 | 1.48 | 100% |
 | JD | 10 | 2 | 2 | 1.43 | 100% |
 | AIADMK | 2 | 2 | 2 | 1.63 | 100% |
 | CPI(M) | 2 | 2.5 | 3 | 1.36 | 100% |
@@ -207,10 +213,10 @@ Evidence per bullet is the average number of distinct [n] citations in each bene
 | AAP | 1 | 2 | 3 | 1.4 | 100% |
 | SJP(R) | 1 | 2 | 2 | 1.25 | 100% |
 
-All entries: 2.05 benefits vs 2.2 concerns on average; 1.44 citations per bullet.
+All entries: 2.06 benefits vs 2.21 concerns on average; 1.46 citations per bullet.
 
 ## Scorer disagreements (>= 2 points on a criterion)
-Scored entries: 86 of 86.
+Scored entries: 89 of 89.
 
 - anti-defection-law-52nd-amendment-1985: outcome (A 0, B 2)
 - armed-forces-special-powers-act-1958: sustainability (A -1, B 1)
@@ -234,4 +240,51 @@ Scored entries: 86 of 86.
 - second-five-year-plan-heavy-industry-1956: sustainability (A 1, B -1)
 - targeted-public-distribution-system-1997: delivery (A 1, B -1)
 - womens-reservation-81st-amendment-bill-1996: delivery (A -2, B -4)
+
+## Dossier coverage
+Dossiers: 11. Dossiers are unscored and carry no party points.
+
+| Category | Dossiers | Actions |
+|---|---|---|
+| education | 0 | 5 |
+| elections | 2 | 6 |
+| police-security | 2 | 2 |
+| law-rights | 0 | 5 |
+| foreign-policy | 0 | 6 |
+| defence | 0 | 2 |
+| economy | 0 | 9 |
+| agriculture | 0 | 5 |
+| health | 0 | 3 |
+| social-welfare | 0 | 5 |
+| infrastructure | 0 | 3 |
+| energy-environment | 0 | 4 |
+| technology | 0 | 3 |
+| governance | 0 | 5 |
+| media | 0 | 3 |
+| religion-culture | 0 | 3 |
+| labour | 0 | 2 |
+| housing-urban | 0 | 2 |
+| water-land | 0 | 2 |
+| space-science | 0 | 2 |
+| sports-youth | 0 | 2 |
+| states | 0 | 10 |
+| business-power | 6 | 0 |
+| parties-movements | 1 | 0 |
+
+Categories with no dossier (20 of 24): education, law-rights, foreign-policy, defence, economy, agriculture, health, social-welfare, infrastructure, energy-environment, technology, governance, media, religion-culture, labour, housing-urban, water-land, space-science, sports-youth, states.
+
+Sub-categories with at least one dossier: 10 of 146.
+
+| Kind | Dossiers |
+|---|---|
+| topic | 5 |
+| institution | 3 |
+| company-group | 2 |
+| party | 1 |
+
+| Status | Dossiers |
+|---|---|
+| ongoing | 11 |
+
+Ongoing dossiers with asOf older than 45 days (0): none.
 

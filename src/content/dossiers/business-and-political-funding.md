@@ -37,13 +37,13 @@ claims:
     source: 11
   - claim: "Future Gaming bought Rs 100 crore of bonds seven days after an Enforcement Directorate raid; other large buyers such as Megha Engineering and Vedanta also faced probes during the period."
     type: allegation
-    madeBy: "Critics cited in the Wikipedia article on electoral bonds (not named there)"
-    status: "Timing as reported; no court or agency finding of a link located"
+    madeBy: "Unnamed critics, as cited in the Wikipedia article on electoral bonds; the purchase and raid dates are reported facts, the inference of a link is the critics' claim"
+    status: "Timing as reported; no court or agency finding of a link located. A purchase that follows a raid does not by itself show that one caused the other"
     response: "Responses of Future Gaming, Megha Engineering and Vedanta were not located in this research."
     source: 1
   - claim: "Qwik Supply Chain, a large bond buyer, is a Reliance subsidiary."
     type: allegation
-    madeBy: "Reported accusation (as summarised on Wikipedia)"
+    madeBy: "Media reports (as summarised on Wikipedia)"
     status: "Unverified here"
     response: "Reliance denied it, according to the same page."
     source: 1

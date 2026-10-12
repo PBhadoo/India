@@ -13,7 +13,7 @@ const statuses = ['ongoing', 'settled'].filter((s) => site.dossiers.some((d) => 
 const catName = new Map(categories().map((c) => [c.id, c.name]));
 ---
 <Base title="Dossiers" path="/dossiers/" description="Fact files on institutions, organisations and live topics: a dated timeline, claims with their status and response, positions, data and sources. Not scored; no party points.">
-  <PageHead title="Dossiers" kicker="Fact files" lede="Each dossier collects the dated facts on one institution, organisation or topic: what is on record, what is claimed and by whom, and what the facts do not show. Dossiers are not scored and carry no party points." crumbs={[['Home', '/'], ['Dossiers']]} />
+  <PageHead title="Dossiers" kicker="Fact files" lede="Each dossier collects the dated facts on one institution, organisation or topic, as of the date shown (many sources were seen only in search summaries; see each source label): what is on record, what is claimed and by whom, and what the facts do not show. Dossiers are not scored and carry no party points." crumbs={[['Home', '/'], ['Dossiers']]} />
   <div class="wrap">
     {site.dossiers.length === 0 ? (
       <div class="empty"><p>No dossiers are published yet. Dossiers appear here once their facts and sources have been checked. In the meantime, see the <a href="/developing/">developing items</a> or <a href="/actions/">all actions</a>.</p></div>

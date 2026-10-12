@@ -13,22 +13,22 @@ timeline:
   - { date: 2018-01-02, event: "The Electoral Bond Scheme, 2018 is notified in the Gazette by the Department of Economic Affairs.", actor: "Department of Economic Affairs", type: event, source: 1 }
   - { date: 2024-02-15, event: "A five-judge Constitution Bench headed by CJI D. Y. Chandrachud decides Association for Democratic Reforms v. Union of India (2024 INSC 113) and holds the scheme and related amendments unconstitutional.", actor: "Supreme Court of India", type: finding, source: 2 }
   - { date: 2024-03-14, event: "The Election Commission publishes the SBI data on bonds bought and encashed; party-wise encashment totals are reported from it.", actor: "Election Commission of India", type: event, source: 6 }
-  - { date: 2024-08-02, event: "The Supreme Court dismisses petitions seeking a court-monitored SIT into alleged quid pro quo through the bonds, calling the request premature because ordinary criminal remedies had not been invoked.", actor: "Supreme Court of India", type: finding, source: 4 }
+  - { date: 2024-08-02, event: "The Supreme Court dismisses petitions seeking a court-monitored SIT into alleged quid pro quo through the bonds, calling the request premature because ordinary criminal remedies had not been invoked.", actor: "Supreme Court of India", type: finding, source: 12 }
   - { date: 2024-09-28, event: "A Bengaluru special court ordered, on a private complaint, that an FIR be registered on alleged extortion linked to the bonds; the FIR was registered and the Karnataka High Court stayed the probe on 30 September 2024.", actor: "Special Court for People's Representatives, Bengaluru; Karnataka High Court", type: event, source: 10 }
   - { date: 2024-12-03, event: "The Karnataka High Court quashes that FIR as against BJP leader Nalin Kumar Kateel; reports differ on whether the order covers other accused.", actor: "Karnataka High Court", type: finding, source: 11 }
 claims:
   - claim: "The electoral bond scheme, the removal of the proviso limiting company donations under Section 182 of the Companies Act, and related amendments to the Representation of the People Act and Income Tax Act were unconstitutional; anonymity violated voters' right to information under Article 19(1)(a), and unlimited company donations were arbitrary under Article 14."
     type: finding
     madeBy: "Supreme Court Constitution Bench (CJI D. Y. Chandrachud), 15 February 2024"
-    status: "Decided; secondary summaries used here, full text not opened"
+    status: "Decided on 15 February 2024 (conclusions at para 216, directions at para 219 of the official judgment, opened)"
     response: "Government and party reactions are in the positions section."
     source: 2
   - claim: "Companies bought electoral bonds in exchange for favours such as contracts, licences, relief from agency investigations or policy changes (quid pro quo); petitioners named IFB Agro, Megha Engineering and Future Gaming in court and said some pharmaceutical donors had investigations dropped."
     type: allegation
     madeBy: "Common Cause and Centre for Public Interest Litigation (counsel Prashant Bhushan); other petitioners Khem Singh Bhatti, Sudip Narayan Tamankar, Jai Prakash Sharma"
-    status: "Petitions dismissed on 2 August 2024 as premature; the Court called the premises assumptions at that stage and did not rule on the facts"
+    status: "Four petitions dismissed on 2 August 2024: the Court called the SIT request premature (normal remedies not yet invoked), described the premises as assumptions that would need a roving enquiry, and did not rule on the facts (order paras 12-21, opened)"
     response: "The cited report records no response from the government, agencies or named companies; none was located in this research."
-    source: 4
+    source: [4, 12]
   - claim: "Finance Minister Nirmala Sitharaman, BJP leaders and Enforcement Directorate officials committed extortion through the bonds, benefiting by over Rs 8,000 crore."
     type: allegation
     madeBy: "Adarsh R. Iyer, Janaadhikaara Sangharsha Parishath (private complaint)"
@@ -151,7 +151,7 @@ notShown:
   - "Year-by-year party corporate-donation series for 2004 to 2024, the positions of most recipient parties other than BJP, INC and CPI(M), the exact earlier legal history, and the status of the Bengaluru FIR after December 2024 were not established."
 sources:
   - { title: "Electoral bonds (Wikipedia, opened)", url: "https://en.wikipedia.org/wiki/Electoral_bonds", publisher: Wikipedia, type: reputable-media }
-  - { title: "Association for Democratic Reforms v. Union of India, 2024 INSC 113, official SCR report (seen in search results, not opened)", url: "https://digiscr.sci.gov.in/admin/judgement_file/judgement_pdf/2024/volume 2/Part II/2024_2_420-616_1709281182.pdf", publisher: Supreme Court of India, type: court }
+  - { title: "Association for Democratic Reforms v. Union of India, 2024 INSC 113, judgment of 15 February 2024 (official PDF, opened)", url: "https://api.sci.gov.in/supremecourt/2017/27935/27935_2017_1_1501_50573_Judgement_15-Feb-2024.pdf", publisher: Supreme Court of India, type: court }
   - { title: "Electoral bonds data: Who got how much? List of top buyers and beneficiaries (opened)", url: "https://www.wionews.com/india-news/electoral-bonds-data-list-of-top-buyers-and-top-beneficiaries-of-now-banned-funding-tool-700280/amp", publisher: WION, type: reputable-media }
   - { title: "Supreme Court dismisses pleas for SIT investigation into electoral bonds quid pro quo (opened)", url: "https://www.livelaw.in/amp/top-stories/supreme-court-dismisses-pleas-for-sit-investigation-into-electoral-bonds-quid-pro-quo-says-ordinary-remedies-not-invoked-265451", publisher: LiveLaw, type: reputable-media }
   - { title: "Electoral Bonds: How much did political parties make? (opened)", url: "https://www.thenewsminute.com/news/sc-strikes-down-electoral-bonds-how-much-did-each-party-get", publisher: The News Minute, type: reputable-media }
@@ -161,6 +161,7 @@ sources:
   - { title: "Congress slams PM Modi over his remarks on electoral bonds issue (seen in search results, not opened)", url: "https://thesouthfirst.com/pti/congress-slams-pm-modi-over-his-remarks-on-electoral-bonds-issue/", publisher: The South First (PTI), type: reputable-media }
   - { title: "Electoral bonds: Bengaluru special court orders FIR against Nirmala Sitharaman for extortion (seen in search results, not opened)", url: "https://www.theweek.in/news/india/2024/09/28/electoral-bonds-bengaluru-special-court-orders-fir-against-nirmala-sitharaman-for-extortion.amp.html", publisher: The Week, type: reputable-media }
   - { title: "Karnataka High Court quashes electoral bonds extortion FIR against BJP leader Nalin Kumar Kateel (seen in search results, not opened)", url: "https://scroll.in/latest/1076381/karnataka-high-court-quashes-electoral-bonds-extortion-fir-against-bjp-leader-nalin-kumar-kateel", publisher: Scroll.in, type: reputable-media }
+  - { title: "Common Cause v. Union of India (W.P.(C) 266/2024 and connected petitions), order of 2 August 2024 (official PDF, opened)", url: "https://api.sci.gov.in/supremecourt/2024/17622/17622_2024_1_30_54391_Order_02-Aug-2024.pdf", publisher: Supreme Court of India, type: court }
 ---
 
 ## In depth
@@ -169,4 +170,4 @@ Company donations to parties have been governed by Section 182 of the Companies 
 
 On 15 February 2024 a five-judge Supreme Court bench held the scheme, the Section 182 change and related amendments unconstitutional, and directed SBI to give the Election Commission the purchase and encashment details [1][2]. The data, published in March 2024, listed purchasers and encashing parties separately, so a purchase cannot be matched to a recipient [3]. Encashments of Rs 12,769 crore were reported, with BJP, AITC and INC the three largest recipients [6]. Electoral trusts, which remain a legal channel, passed on about Rs 1,218 crore in FY 2023-24 [8].
 
-Allegations of quid pro quo were put to the Supreme Court, which dismissed the petitions on 2 August 2024 as premature without ruling on the facts [4]. A separate private complaint in Bengaluru led to an FIR that the Karnataka High Court stayed and, in December 2024, quashed against one accused [10][11]. Parties differ: the Congress calls the scheme a channel for bribes, while the Prime Minister has said no system is perfect [9]. This page reports figures and statuses; it draws no conclusion about motives or effects.
+Allegations of quid pro quo were put to the Supreme Court, which dismissed the petitions on 2 August 2024 as premature without ruling on the facts [4][12]. A separate private complaint in Bengaluru led to an FIR that the Karnataka High Court stayed and, in December 2024, quashed against one accused [10][11]. Parties differ: the Congress calls the scheme a channel for bribes, while the Prime Minister has said no system is perfect [9]. This page reports figures and statuses; it draws no conclusion about motives or effects.

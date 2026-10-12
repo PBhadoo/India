@@ -15,9 +15,9 @@ import PageHead from '../components/PageHead.astro';
       </ul>
       <h2>How to send it</h2>
       <p>Open an issue on the project's public issue tracker. You need a free GitHub account. Everything is handled in the open so anyone can see what changed and why.</p>
-      <p><a class="btn btn-primary" id="issue-link" href="https://github.com/PBhadoo/India/issues/new" rel="noopener">Open a new issue on GitHub</a></p>
+      <p><a class="btn btn-primary" id="issue-link" href="https://github.com/PBhadoo/indiareview.pages.dev/issues/new" rel="noopener">Open a new issue on GitHub</a></p>
       <p class="small" id="issue-page" hidden></p>
-      <p>If you cannot use GitHub, you can read all issues at <a href="https://github.com/PBhadoo/India/issues" rel="noopener">github.com/PBhadoo/India/issues</a>.</p>
+      <p>If you cannot use GitHub, you can read all issues at <a href="https://github.com/PBhadoo/indiareview.pages.dev/issues" rel="noopener">github.com/PBhadoo/indiareview.pages.dev/issues</a>.</p>
       <h2>What happens next</h2>
       <ol class="steps">
         <li>A reviewer checks the source you gave against the entry.</li>
@@ -35,7 +35,7 @@ import PageHead from '../components/PageHead.astro';
   if (from && from.startsWith('/')) {
     const link = document.getElementById('issue-link') as HTMLAnchorElement | null;
     const note = document.getElementById('issue-page');
-    const url = new URL('https://github.com/PBhadoo/India/issues/new');
+    const url = new URL('https://github.com/PBhadoo/indiareview.pages.dev/issues/new');
     url.searchParams.set('title', `Correction: ${title || from}`);
     url.searchParams.set('body', `Page: ${location.origin}${from}\n\nWhat is wrong:\n\nCorrect fact and source (https link):\n`);
     if (link) link.href = url.toString();

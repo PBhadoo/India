@@ -14,8 +14,8 @@ timeline:
   - { date: 2026-05-23, event: "Backup X account @Cockroachisback is taken down and the website cockroachjantaparty.org is blocked by MeitY (the website was back up by 26 May). Dipke says the group's Instagram accounts were hacked.", actor: "MeitY; Abhijeet Dipke", type: event, source: 2 }
   - { date: 2026-05-25, event: "Dipke files a petition in the Delhi High Court challenging the Section 69A blocking order. A separate Supreme Court PIL seeking a CBI probe into commercial use of CJP-linked courtroom clips is also filed.", actor: "Abhijeet Dipke; other petitioner", type: event, source: 2 }
   - { date: 2026-05-26, event: "Press reports that Panipat lawyer Sudhir Jakhar has applied to the Election Commission under Section 29A of the Representation of the People Act to register the name 'Cockroach Janta Party' in his own name.", actor: "Sudhir Jakhar", type: event, source: 8 }
-  - { date: 2026-05-29, event: "At an interim hearing the Delhi High Court declines immediate restoration of the X account and says it will first hear the Union Government.", actor: "Delhi High Court", type: event, source: 1 }
-  - { date: 2026-07-07, event: "Delhi High Court (Justice Swarana Kanta Sharma) allows Dipke's writ petition and directs the Union Government to revoke the 21 May blocking order and restore public access to the account in India.", actor: "Delhi High Court", type: event, source: 1 }
+  - { date: 2026-05-29, event: "At the first hearing (Justice Purushaindra Kumar Kaurav) the Delhi High Court directs the Union to file a counter-affidavit within four weeks, directs the MeitY Review Committee under Rule 14 of the 2009 Blocking Rules to examine the petitioner's objections and place its decision on record, and lists the matter for 7 July 2026; the order as read contains no interim restoration.", actor: "Delhi High Court", type: event, source: [1, 11] }
+  - { date: 2026-07-07, event: "Delhi High Court (Justice Swarana Kanta Sharma), W.P.(C) 7768/2026, allows Dipke's writ petition: the blocking order referred to in the 21 May 2026 email is to be revoked and pending applications are disposed of. Legal-news reports describe this as restoration of the account in India.", actor: "Delhi High Court", type: finding, source: [1, 10] }
   - { date: 2026-07-20, event: "Thousands attempt a march to Parliament on the first day of the monsoon session; Delhi Police use tear gas and batons after protesters try to breach barricades. Police say the march was not authorised.", actor: "Delhi Police; CJP supporters", type: event, source: 6 }
   - { date: 2026-10-10, event: "Dipke and two other CJP leaders are detained on landing in Delhi, as the movement plans a Jantar Mantar rally demanding the resignation of Chief Election Commissioner Gyanesh Kumar. Hundreds more protesters are detained in Delhi that day and the next.", actor: "Delhi Police", type: event, source: 7 }
   - { date: 2026-10-11, event: "A court orders the release of Dipke and the two other leaders. The CJP describes the condition as an undertaking to maintain public peace.", actor: "Court (not named in the source)", type: event, source: 7 }
@@ -23,15 +23,15 @@ claims:
   - claim: "The CJP's X account @CJP_2029 was blocked because it allegedly tried to mislead students and parents about the cancellation of the NEET 2026 examination, and had become a channel for young people's grievances."
     type: official-statement
     madeBy: "Solicitor General Tushar Mehta, for the Union Government, in the Delhi High Court (as reported)"
-    status: "The Delhi High Court held on 7 July 2026 that, the NEET examinations being over, the government's main concern 'does not survive', and ordered the blocking order revoked."
-    response: "Dipke, the petitioner, sought quashing of the order and disclosure of the order and supporting material. The report does not set out his arguments."
-    source: 1
+    status: "The Delhi High Court held on 7 July 2026 that, 'since the NEET Examinations are already over', the respondent's primary concern 'does not survive', and ordered the blocking order revoked."
+    response: "Dipke, the petitioner, sought quashing of the order, restoration of the account, and production of the blocking order and supporting records; at the 29 May hearing his counsel argued the order was passed without hearing him or supplying the material relied on."
+    source: [10, 11]
   - claim: "The Delhi High Court revoked the 21 May 2026 blocking order and directed restoration of access to the account in India."
     type: finding
     madeBy: "Delhi High Court (Justice Swarana Kanta Sharma), Abhijeet Dipke v. Union of India, hearing of 7 July 2026"
-    status: "Writ petition allowed; pending applications disposed of. A search found no report of an appeal. The order text itself was not retrieved."
-    response: "The Centre reportedly told the court it had no objection to unblocking once the NEET examinations concluded (as reported in a secondary legal-news account)."
-    source: 1
+    status: "Writ petition allowed on 7 July 2026; pending applications disposed of (order text opened). A search found no report of an appeal. The order text records revocation of the blocking order; restoration of access is reported by legal-news outlets."
+    response: "The Centre reportedly told the court it had no objection to unblocking once the NEET examinations concluded (as reported in a secondary legal-news account; the order text read records only the Solicitor General's NEET submission)."
+    source: [1, 10]
   - claim: "Dipke alleged that the original and backup X accounts were taken down and the group's Instagram accounts were hacked, and said he received death threats."
     type: allegation
     madeBy: "Abhijeet Dipke (posts of 22-23 May 2026)"
@@ -75,11 +75,11 @@ positions:
   - { holder: "CJP (June-July 2026, as reported)", position: "Demands the resignation of Education Minister Dharmendra Pradhan, exam reforms, and compensation for families of students who died by suicide after paper leaks.", source: 6 }
   - { holder: "Delhi Police", position: "Said the 20 July march was not authorised and that restrictions were needed to maintain order around Parliament during the monsoon session.", source: 6 }
   - { holder: "Union ministers (July 2026, as reported by AP)", position: "Education Minister Dharmendra Pradhan accused protesters of acting against the nation; other ministers said there was no need for talks while acknowledging students' concerns.", source: 6 }
-  - { holder: "Shashi Tharoor (Congress)", position: "Called the X restriction 'disastrous' and 'deeply unwise': 'Democracies need outlets for dissent, humor, satire, and even frustration.'", source: 4 }
+  - { holder: "Shashi Tharoor (Congress)", position: "Criticised the X restriction as a mistake, saying: 'Democracies need outlets for dissent, humor, satire, and even frustration.'", source: 4 }
   - { holder: "Mahua Moitra and Kirti Azad (Trinamool Congress)", position: "Signed up to the group (Al Jazeera).", source: 3 }
   - { holder: "Sudhir Jakhar (lawyer, Panipat)", position: "Says Dipke declined to come to India to form a ground-level party, and that he applied to register the name to prevent others misusing it. His stated objectives differ from the original demands.", source: 8 }
 notShown:
-  - "No primary document was retrieved: the Delhi High Court order of 7 July 2026, the MeitY blocking order (confidential under Rule 16 of the IT Blocking Rules), any FIR or police statement, and the Election Commission registers were not read. The court and police facts here come from news and legal-news reports."
+  - "The Delhi High Court orders of 29 May and 7 July 2026 were read (sources 10 and 11) but not the court's own website copy; the MeitY blocking order (confidential under Rule 16 of the IT Blocking Rules), any FIR or police statement, and the Election Commission registers were not read. The 10-11 October detention facts and the 20 July march come from news reports."
   - "Legal basis and terms of the 10-11 October 2026 detentions and release are not established by a source opened: Wikipedia names BNSS sections 126 and 170 and a Rs 50,000 bond, while Reuters says only an undertaking to maintain public peace; the CNN report cited in search results was not accessible."
   - "Whether the group is registered with the Election Commission: reporting says it is not, and a Section 29A application by a third party was reported in May 2026; no ECI record or ruling on it was found. The ECI website could not be fetched."
   - "No FIR, charge or conviction against Dipke or other named leaders was found in sources opened. Reports of other cases (a Supreme Court PIL and an Allahabad High Court PIL, both said by Wikipedia to have been dismissed; a PIL on police force listed for 11 September; probes by West Bengal and Punjab police into alleged plots) were not verified against primary or news sources."
@@ -96,13 +96,15 @@ sources:
   - { title: "India sees new protests after 'Cockroach' leaders are released (Reuters, 11 October 2026)", url: "https://www.nbcnews.com/world/asia/india-protests-cockroach-leaders-released-modi-elections-rcna602742", publisher: "Reuters via NBC News", type: reputable-media }
   - { title: "Trouble in Cockroach paradise: CJP heading for a split as lawyer moves EC to register CJP", url: "https://www.theweek.in/news/india/2026/05/26/trouble-in-cockroach-paradise-cockroach-janta-party-heading-for-a-split-as-lawyer-moves-ec-to-register-cjp.html", publisher: "The Week", type: reputable-media }
   - { title: "Cockroach Janta Party", url: "https://en.wikipedia.org/wiki/Cockroach_Janta_Party", publisher: "Wikipedia (secondary; carries a maintenance banner on unverified material)", type: reputable-media }
+  - { title: "Abhijeet Dipke v. Union of India and Anr., W.P.(C) 7768/2026, Delhi High Court order of 7 July 2026 (text opened via Indian Kanoon)", url: "https://indiankanoon.org/doc/199310884/", publisher: "High Court of Delhi (copy on Indian Kanoon)", type: court }
+  - { title: "Abhijeet Dipke v. Union of India and Anr., W.P.(C) 7768/2026, Delhi High Court order of 29 May 2026 (text opened via Indian Kanoon)", url: "https://indiankanoon.org/doc/124035803/", publisher: "High Court of Delhi (copy on Indian Kanoon)", type: court }
 ---
 
 The Cockroach Janta Party (CJP) began on 16 May 2026, a day after Chief Justice of India Surya Kant said in a Supreme Court hearing that some youngsters were "like cockroaches" without employment [3]. The Chief Justice later said he meant people with fake degrees [1][3]. Abhijeet Dipke, a political communications strategist, launched the group online as satire; its name echoes that of the Bharatiya Janata Party [4][9].
 
 It describes itself as a youth front and is reported not to be registered with the Election Commission of India [9]. A Panipat lawyer reportedly applied in May 2026 to register the name separately under Section 29A of the Representation of the People Act [8].
 
-On 21 May 2026 the Ministry of Electronics and Information Technology directed X to withhold the group's account under Section 69A of the IT Act, 2000; the order is confidential and no public reasons were issued [2]. The Union Government told the Delhi High Court the account had allegedly sought to mislead students about NEET 2026 [1]. On 7 July 2026 the court revoked the order, observing that the main concern no longer survived [1].
+On 21 May 2026 the Ministry of Electronics and Information Technology directed X to withhold the group's account under Section 69A of the IT Act, 2000; the order is confidential and no public reasons were issued [2]. The Union Government told the Delhi High Court the account had allegedly sought to mislead students about NEET 2026 [1]. On 7 July 2026 the court revoked the order, observing that the main concern no longer survived [1][10][10].
 
 Between June and July 2026 the group led protests over examination paper leaks, including a march to Parliament on 20 July that police said was unauthorised and dispersed with tear gas and batons [6]. On 10 October 2026 Dipke and two other leaders were detained on arrival in Delhi ahead of a rally seeking the Chief Election Commissioner's resignation, and a court ordered their release the next day [7]. Details of the legal provisions used differ between sources (see notShown).
 

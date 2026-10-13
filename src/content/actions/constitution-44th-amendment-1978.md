@@ -50,6 +50,15 @@ sources:
     url: https://en.wikipedia.org/wiki/Shah_Commission
     publisher: Wikipedia
     type: reputable-media
+  - { title: "Improving Preventive Detention Laws (John Sebastian and Faiza Rahman, 17 May 2023)", url: "https://theindiaforum.in/law/improving-preventive-detention-laws", publisher: "The India Forum", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Fundamental rights, including those of life and liberty, are capable of being taken away by a transient majority, so safeguards against recurrence are necessary; an Emergency proclamation virtually has the effect of amending the Constitution.", madeBy: "Statement of Objects and Reasons, Constitution (44th Amendment) Bill (Janata Party government; Law Minister Shanti Bhushan)", source: 1 }
+    - { point: "The Maintenance of Internal Security Act and the Defence of India Rules were not followed but abused to damage political opponents, which the amendment's limits on Emergency and detention powers respond to.", madeBy: "Shah Commission of Inquiry (appointed May 1977)", source: 3 }
+  change:
+    - { point: "The preventive detention changes to Article 22 (Section 3 of the Act) have never been brought into force, and the executive should notify them.", madeBy: "John Sebastian and Faiza Rahman, The India Forum, 17 May 2023", source: 4 }
+    - { point: "The Union government should notify a date for the preventive detention provisions, citing abuse of preventive detention laws.", madeBy: "Open letter by 100 former civil servants to the Law Minister (2021), as cited by The India Forum", source: 4 }
 scoring:
   era_baseline: The 1975-77 Emergency had suspended civil liberties and the 42nd Amendment of 1976 had altered the Constitution; Janata Party won the March 1977 election on a promise to restore pre-Emergency safeguards.
   lag_years: 5

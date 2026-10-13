@@ -40,6 +40,16 @@ sources:
   - { title: "Danial Latifi v. Union of India (2001) 7 SCC 740", url: "https://digiscr.sci.gov.in/admin/judgement_file/judgement_pdf/2001/Supp.%20(3)/Part%20I/S_2001_419-454_1702447570.pdf", publisher: "Supreme Court of India (Digital SCR)", type: court }
   - { title: "Arif Mohammad Khan", url: "https://en.wikipedia.org/wiki/Arif_Mohammad_Khan", publisher: "Wikipedia", type: reputable-media }
   - { title: "Divorced Muslim woman can seek maintenance under Section 125 CrPC: Supreme Court", url: "https://www.scconline.com/blog/post/2024/07/10/divorced-muslim-woman-can-seek-maintenance-under-section-125-crpc-supreme-court/", publisher: "SCC Online", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act, as read by the Supreme Court, secures provision for the wife's future needs and not only iddat-period maintenance, and does not violate Articles 14 and 21.", madeBy: "Supreme Court of India, five-judge Bench, Danial Latifi v. Union of India (28 September 2001)", source: 4 }
+    - { point: "The Shah Bano judgment encroached on Muslim personal law, and the Act should restore the settlement-and-provision model aligned with community personal law.", madeBy: "All India Muslim Personal Law Board and other Muslim groups, as described in a secondary source", source: 3 }
+    - { point: "The Act's text frames it as protecting the rights of divorced Muslim women, with post-iddat support routed to relatives and the State Wakf Board.", madeBy: "Parliament, Muslim Women (Protection of Rights on Divorce) Act, 1986 (Rajiv Gandhi government)", source: 2 }
+  change:
+    - { point: "The Act limited the husband's liability to the iddat period on its face, narrowing the maintenance allowed under Section 125 CrPC in Shah Bano; the 2001 ruling read its words broadly.", madeBy: "Supreme Court of India, Mohd. Ahmed Khan v. Shah Bano Begum (23 April 1985) and Danial Latifi (2001)", source: 1 }
+    - { point: "A divorced Muslim woman can seek maintenance under Section 125 CrPC, which the 1986 Act does not displace.", madeBy: "Supreme Court of India (Justices B. V. Nagarathna and A. G. Masih), Mohd. Abdul Samad v. State of Telangana, 10 July 2024", source: 6 }
+    - { point: "The Act restricted divorced Muslim women's maintenance rights relative to Section 125 and conceded to conservative opinion at the cost of gender justice.", madeBy: "Women's groups and commentators, as reported", source: 3 }
 scoring:
   era_baseline: "In 1985-86 Section 125 CrPC provided religion-neutral maintenance for wives, but personal laws governed marriage and divorce for each community, and codification of a uniform civil code under Article 44 had not been attempted."
   lag_years: 5

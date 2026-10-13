@@ -1,0 +1,31 @@
+---
+import SrcRef from './SrcRef.astro';
+interface Props { positions: { holder: string; position: string; source?: unknown }[]; sources: any[]; debate?: boolean }
+const { positions, sources, debate = false } = Astro.props;
+---
+<section class="block" id="positions" aria-labelledby="h-pos">
+  <h2 id="h-pos">Positions</h2>
+  {debate ? (
+    <>
+      <p class="note debate-note" role="note"><strong>This page lays out the cases made. It does not recommend an option.</strong></p>
+      <p class="small">Each card is one option: who holds it and the strongest documented case for it, paraphrased with attribution. The options are in the order given in the source file, not ranked, and every card has the same size and the same fields. There are {positions.length} {positions.length === 1 ? 'option' : 'options'}.</p>
+    </>
+  ) : (
+    <p class="small">Who says what, paraphrased with attribution. Every holder gets a card of the same size and the same fields.</p>
+  )}
+  <ul class="pos-grid">
+    {positions.map((p, i) => (
+      <li class="card pos">
+        {debate && <p class="pos-opt">Option {i + 1} of {positions.length}</p>}
+        <h3>{p.holder}</h3>
+        <p>{p.position}</p>
+        <SrcRef refs={p.source as any} sources={sources} />
+      </li>
+    ))}
+  </ul>
+</section>
+<style is:global>
+  .pos-opt { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 0.25rem !important; }
+  .debate-note { margin-block: 0.6rem; }
+  .pos-grid > li.card { display: flex; flex-direction: column; }
+</style>

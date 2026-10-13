@@ -87,7 +87,7 @@ export function nonStringTextFields(d) {
 // Dossier checks (Addendum v2). Pure: takes a loaded entry and a context, returns messages.
 // ---------------------------------------------------------------------------------------------
 export const CLAIM_TYPES = ['finding', 'official-statement', 'allegation', 'data', 'event'];
-export const DOSSIER_KINDS = ['topic', 'institution', 'organisation', 'party', 'company-group'];
+export const DOSSIER_KINDS = ['topic', 'institution', 'organisation', 'party', 'company-group', 'debate'];
 export const DOSSIER_STATUSES = ['ongoing', 'settled'];
 export const SOURCE_TYPES = ['primary', 'official-data', 'court', 'reputable-media', 'academic'];
 export const DOSSIER_STALE_DAYS = 45;
@@ -272,5 +272,166 @@ export function checkDossier(entry, ctx) {
     ...ns].filter((t) => typeof t === 'string' && t);
   for (const t of texts) for (const w of loadedHits(t, ctx.words ?? [])) warn(`loaded word "${w}" in: "${t.slice(0, 70)}"`);
 
+  return { errors, warnings };
+}
+
+// ---------------------------------------------------------------------------------------------
+// Indicators and promises (Addendum v3). Pure: take parsed JSON, return { errors, warnings }.
+// ---------------------------------------------------------------------------------------------
+export const PROMISE_PARTIES = ['inc', 'bjp'];
+export const PROMISE_ELECTIONS = [1998, 1999, 2004, 2009, 2014, 2019, 2024];
+export const PROMISE_STATUSES = ['delivered', 'partly-delivered', 'not-delivered', 'abandoned', 'ongoing', 'unclear'];
+export const PROMISES_PER_PARTY_ELECTION = 8;
+export const INDICATOR_BLOCS = ['INC', 'BJP', 'Other'];
+export const INDICATOR_MIN_VALUES = 3;
+const GLOBAL_CONTEXT_RE = /oil|2008|financial crisis|covid|pandemic|global|world|monsoon|drought|commodity|revis|base year|rebas/i;
+const isHttps = (v) => typeof v === 'string' && /^https:\/\/[^\s/]+/i.test(v);
+const isIsoDay = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !isNaN(new Date(v + 'T00:00:00Z'));
+const KEBAB = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+function checkSourceObj(s, where, err) {
+  if (!s || typeof s !== 'object') return err(`${where} missing`);
+  if (!isStr(s.title)) err(`${where}.title missing`);
+  if (!isStr(s.url)) err(`${where}.url missing`);
+  else if (!isHttps(s.url)) err(`${where}.url must be https (${s.url})`);
+  if (s.publisher !== undefined && !isStr(s.publisher)) err(`${where}.publisher must be a non-empty string`);
+  if (s.type !== undefined && !SOURCE_TYPES.includes(s.type)) err(`${where}.type must be one of ${SOURCE_TYPES.join('|')}`);
+}
+
+/** Checks the parsed src/data/indicators.json. ctx: { words: string[] }. */
+export function checkIndicators(doc, ctx = {}) {
+  const errors = [];
+  const warnings = [];
+  const err = (m) => errors.push(m);
+  const warn = (m) => warnings.push(m);
+  if (!doc || typeof doc !== 'object' || Array.isArray(doc)) {
+    err('must be an object with "periods" and "indicators"');
+    return { errors, warnings };
+  }
+  if (!Array.isArray(doc.periods)) err('periods must be a list');
+  if (!Array.isArray(doc.indicators)) err('indicators must be a list');
+  const periods = Array.isArray(doc.periods) ? doc.periods : [];
+  const indicators = Array.isArray(doc.indicators) ? doc.indicators : [];
+  const periodIds = new Set();
+  periods.forEach((p, i) => {
+    if (!p || typeof p !== 'object') return err(`periods[${i}] must be an object`);
+    if (!isStr(p.id) || !KEBAB.test(p.id)) err(`periods[${i}].id must be lowercase kebab-case`);
+    else if (periodIds.has(p.id)) err(`periods[${i}].id "${p.id}" is duplicated`);
+    else periodIds.add(p.id);
+    if (!isStr(p.label)) err(`periods[${i}].label missing`);
+    if (!INDICATOR_BLOCS.includes(p.bloc)) err(`periods[${i}].bloc must be one of ${INDICATOR_BLOCS.join('|')}`);
+    if (!isIsoDay(p.start)) err(`periods[${i}].start must be YYYY-MM-DD`);
+    if (p.end !== null && p.end !== undefined && !isIsoDay(p.end)) err(`periods[${i}].end must be YYYY-MM-DD or null`);
+    else if (isIsoDay(p.start) && isIsoDay(p.end) && p.end <= p.start) err(`periods[${i}] ends before it starts`);
+  });
+  const ids = new Set();
+  const used = new Set();
+  indicators.forEach((ind, i) => {
+    if (!ind || typeof ind !== 'object') return err(`indicators[${i}] must be an object`);
+    const tag = `indicators[${i}]${isStr(ind.id) ? ` (${ind.id})` : ''}`;
+    if (!isStr(ind.id) || !KEBAB.test(ind.id)) err(`${tag}.id must be lowercase kebab-case`);
+    else if (ids.has(ind.id)) err(`${tag}.id is duplicated`);
+    else ids.add(ind.id);
+    for (const f of ['name', 'unit', 'domain', 'basis']) if (!isStr(ind[f])) err(`${tag}.${f} missing`);
+    checkSourceObj(ind.source, `${tag}.source`, err);
+    if (!Array.isArray(ind.caveats) || ind.caveats.length === 0) err(`${tag}.caveats must be a non-empty list`);
+    else {
+      ind.caveats.forEach((c, j) => { if (!isStr(c)) err(`${tag}.caveats[${j}] must be a non-empty string`); });
+      if (!ind.caveats.some((c) => typeof c === 'string' && GLOBAL_CONTEXT_RE.test(c))) {
+        warn(`${tag} has no global-context caveat (oil shocks, 2008, COVID, data revisions)`);
+      }
+    }
+    const vals = Array.isArray(ind.values) ? ind.values : [];
+    if (!Array.isArray(ind.values)) err(`${tag}.values must be a list`);
+    else if (vals.length < INDICATOR_MIN_VALUES) err(`${tag} needs at least ${INDICATOR_MIN_VALUES} period values (has ${vals.length})`);
+    const seen = new Set();
+    const blocs = new Set();
+    vals.forEach((v, j) => {
+      if (!v || typeof v !== 'object') return err(`${tag}.values[${j}] must be an object`);
+      if (!periodIds.has(v.period)) err(`${tag}.values[${j}].period "${v.period}" is not in periods`);
+      else {
+        if (seen.has(v.period)) err(`${tag}.values[${j}].period "${v.period}" appears twice`);
+        seen.add(v.period);
+        used.add(v.period);
+        blocs.add(periods.find((p) => p.id === v.period)?.bloc);
+      }
+      if (typeof v.value !== 'number' || !Number.isFinite(v.value)) err(`${tag}.values[${j}].value must be a number`);
+      if (v.note !== undefined && !isStr(v.note)) err(`${tag}.values[${j}].note must be a non-empty string`);
+    });
+    if (vals.length >= INDICATOR_MIN_VALUES && !(blocs.has('INC') && blocs.has('BJP'))) {
+      warn(`${tag} has values for only one of the INC-led and BJP-led groups, so it cannot be compared across them`);
+    }
+    for (const t of [ind.name, ind.basis, ...(Array.isArray(ind.caveats) ? ind.caveats : []), ...vals.map((v) => v?.note)]) {
+      if (typeof t === 'string') for (const w of loadedHits(t, ctx.words ?? [])) warn(`${tag}: loaded word "${w}" in: "${t.slice(0, 70)}"`);
+    }
+  });
+  for (const p of periodIds) if (indicators.length && !used.has(p)) warn(`period "${p}" has no indicator values`);
+  return { errors, warnings };
+}
+
+/** Number of indicators with a value, per period id. Returns [{ id, label, bloc, n, of }]. */
+export function indicatorCoverage(doc) {
+  const periods = Array.isArray(doc?.periods) ? doc.periods : [];
+  const indicators = Array.isArray(doc?.indicators) ? doc.indicators : [];
+  return periods.map((p) => ({
+    id: p.id, label: p.label, bloc: p.bloc, of: indicators.length,
+    n: indicators.filter((i) => (i.values ?? []).some((v) => v.period === p.id && typeof v.value === 'number')).length,
+  }));
+}
+
+/** Counts of promises per election and party: Map election -> { inc: n, bjp: n }. */
+export function promiseMatrix(list) {
+  const m = new Map();
+  for (const p of Array.isArray(list) ? list : []) {
+    if (!p || !PROMISE_PARTIES.includes(p.party)) continue;
+    const row = m.get(p.election) ?? Object.fromEntries(PROMISE_PARTIES.map((x) => [x, 0]));
+    row[p.party]++;
+    m.set(p.election, row);
+  }
+  return new Map([...m].sort((a, b) => a[0] - b[0]));
+}
+
+/** Checks the parsed src/data/promises.json. ctx: { words: string[] }. */
+export function checkPromises(list, ctx = {}) {
+  const errors = [];
+  const warnings = [];
+  const err = (m) => errors.push(m);
+  const warn = (m) => warnings.push(m);
+  if (!Array.isArray(list)) {
+    err('must be a list of promises');
+    return { errors, warnings };
+  }
+  const ids = new Set();
+  list.forEach((p, i) => {
+    if (!p || typeof p !== 'object') return err(`[${i}] must be an object`);
+    const tag = `[${i}]${isStr(p.id) ? ` (${p.id})` : ''}`;
+    if (!isStr(p.id)) err(`${tag}.id missing`);
+    else if (ids.has(p.id)) err(`${tag}.id is duplicated`);
+    else ids.add(p.id);
+    if (!PROMISE_PARTIES.includes(p.party)) err(`${tag}.party must be one of ${PROMISE_PARTIES.join('|')}`);
+    if (!PROMISE_ELECTIONS.includes(p.election)) err(`${tag}.election must be one of ${PROMISE_ELECTIONS.join(', ')}`);
+    if (isStr(p.id) && PROMISE_PARTIES.includes(p.party) && !p.id.startsWith(`${p.party}-${p.election}-`)) {
+      warn(`${tag}.id should start with "${p.party}-${p.election}-"`);
+    }
+    for (const f of ['text', 'domain', 'evidence']) if (!isStr(p[f])) err(`${tag}.${f} missing`);
+    if (!PROMISE_STATUSES.includes(p.status)) err(`${tag}.status must be one of ${PROMISE_STATUSES.join('|')}`);
+    if (!p.evidenceSource || typeof p.evidenceSource !== 'object') err(`${tag}.evidenceSource missing`);
+    else {
+      checkSourceObj(p.evidenceSource, `${tag}.evidenceSource`, err);
+      if (!isStr(p.evidenceSource.publisher)) err(`${tag}.evidenceSource.publisher missing`);
+      if (!SOURCE_TYPES.includes(p.evidenceSource.type)) err(`${tag}.evidenceSource.type must be one of ${SOURCE_TYPES.join('|')}`);
+    }
+    checkSourceObj(p.manifestoSource, `${tag}.manifestoSource`, err);
+    if (!isIsoDay(p.asOf)) err(`${tag}.asOf must be YYYY-MM-DD`);
+    if (isStr(p.text) && p.text.length > 280) warn(`${tag}.text is ${p.text.length} chars; keep it a short paraphrase`);
+    for (const t of [p.text, p.evidence]) {
+      if (typeof t === 'string') for (const w of loadedHits(t, ctx.words ?? [])) warn(`${tag}: loaded word "${w}" in: "${t.slice(0, 70)}"`);
+    }
+  });
+  for (const [election, row] of promiseMatrix(list)) {
+    const counts = PROMISE_PARTIES.map((x) => row[x]);
+    if (new Set(counts).size > 1) warn(`${election}: unequal promise counts (${PROMISE_PARTIES.map((x) => `${x} ${row[x]}`).join(', ')}); both parties get the same number`);
+    else if (counts[0] !== PROMISES_PER_PARTY_ELECTION) warn(`${election}: ${counts[0]} promises per party (expected ${PROMISES_PER_PARTY_ELECTION})`);
+  }
   return { errors, warnings };
 }

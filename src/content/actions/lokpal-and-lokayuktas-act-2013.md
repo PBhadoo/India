@@ -41,6 +41,16 @@ sources:
   - { title: "Justice Pinaki Chandra Ghose sworn in as India's first Lokpal", url: "https://www.theweek.in/news/india/2019/03/23/justice-pinaki-chandra-ghose-sworn-in-as-india-s-first-lokpal.html", publisher: "The Week", type: reputable-media }
   - { title: "Lokpal of India: complaint status sheet, April 2024", url: "https://lokpal.gov.in/pdfs/cs_042324.pdf", publisher: "Lokpal of India", type: official-data }
   - { title: "PRS Parliament Diary: Winter Session, 17 December 2013", url: "https://prsindia.org/media/media-updates/prs-parliament-diary-winter-session-of-parliament-december-17-2013", publisher: "PRS Legislative Research", type: reputable-media }
+  - { title: "Why did Central Government appoint Lokpal? Because Supreme Court was breathing down its neck", url: "https://www.barandbench.com/columns/lokpal-central-government-supreme-court", publisher: "Bar and Bench", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act builds in institutional safeguards: a selection committee including the Leader of Opposition and the judiciary, a search committee of at least seven members, and 50% judicial membership; the Prime Minister is within jurisdiction, with safeguards.", madeBy: "PRS Legislative Research (bill summary as passed)", source: 2 }
+    - { point: "The Lokpal runs a complaints process with published statistics, with 169 complaints disposed in 2023-24 including 3 sanctions for prosecution.", madeBy: "Lokpal of India, complaint status sheet, April 2024", source: 4 }
+    - { point: "The Act is a workable piece of legislation that can be enforced as it stands.", madeBy: "Supreme Court of India (Justices Ranjan Gogoi and Navin Sinha), Common Cause v. Union of India, 27 April 2017", source: 6 }
+  change:
+    - { point: "The Centre should not delay appointments over the absence of a Leader of Opposition; the Court repeatedly pressed the Centre in 2018-19 to constitute the search and selection committees, and the first chairperson was sworn in on 23 March 2019.", madeBy: "Supreme Court of India, 2017-2019, as reported by Bar and Bench", source: 6 }
+    - { point: "The selection process should be transparent, with shortlisted names published (the Court did not accept the request).", madeBy: "Prashant Bhushan (advocate), Supreme Court, March 2019", source: 6 }
 scoring:
   era_baseline: "Before 2014 India had no national ombudsman for corruption; the Prevention of Corruption Act, 1988 and CBI/CVC mechanisms operated without a Lokpal."
   lag_years: 5

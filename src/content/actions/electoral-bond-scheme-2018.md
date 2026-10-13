@@ -60,6 +60,18 @@ sources:
     url: https://en.wikipedia.org/wiki/Association_for_Democratic_Reforms_v._Union_of_India
     publisher: Wikipedia
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The earlier framework was mostly cash-based and 'incentivized infusion of black money'; the scheme moved donations to a regulated digital framework and confidentiality encouraged donors to give 'clean money'.", madeBy: "Solicitor General (for the Union government), Supreme Court, 2023-24", source: 1 }
+    - { point: "The scheme 'envisages total clean money and substantial transparency coming into the system of political funding'.", madeBy: "Finance Minister Arun Jaitley (BJP), January 2018", source: 3 }
+    - { point: "The one per cent eligibility threshold bars 'ghost' parties, KYC limits purchases to verified persons and the 15-day validity prevents use as a parallel currency.", madeBy: "Union of India, submission before the Supreme Court", source: 1 }
+  change:
+    - { point: "The scheme violated voters' right to information under Article 19(1)(a), and unlimited corporate contributions were arbitrary and violated Article 14.", madeBy: "Supreme Court Constitution Bench headed by CJI D. Y. Chandrachud, 15 February 2024", source: 1 }
+    - { point: "Cash donations remained permitted, objections from the RBI and the Election Commission were ignored, and non-disclosure promotes quid pro quo arrangements; over 94% of bonds were bought in Rs one crore denominations.", madeBy: "Petitioners (Association for Democratic Reforms and others), Supreme Court", source: 1 }
+    - { point: "Disclosure was ordered only in 2024, with SBI directed to give the Election Commission details of bonds purchased since the interim order of 12 April 2019.", madeBy: "Supreme Court of India, 15 February 2024", source: 1 }
+  repeal:
+    - { point: "The scheme and related amendments should be struck down; the Court struck them down in February 2024.", madeBy: "Petitioners (Association for Democratic Reforms and others), W.P.(C) 880 of 2017", source: 5 }
 scoring:
   era_baseline: Before 2017, anonymous cash donations up to Rs 20,000 per donor were permitted without disclosure; party funding rules were under repeated review by the Election Commission.
   lag_years: 2

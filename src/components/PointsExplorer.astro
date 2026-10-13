@@ -1,6 +1,6 @@
 ---
 import { PRELIMINARY_MIN_SCORED, LOW_DATA_MIN_ACTIONS, PRIOR_YEARS } from '../lib/scoring-core.ts';
-import { sortParties, pointsRowsHtml, heatGridHtml, heatRange, noDataHtml } from '../lib/render-points.ts';
+import { sortParties, blocRowsHtml, blocHeatHtml, blocHeatRange, type BlocCtx } from '../lib/render-points.ts';
 import { categories } from '../lib/taxonomy.ts';
 import { ctxFor, jsonForScript, type Site } from '../lib/site.ts';
 import { fmtSigned, yearOf } from '../lib/format.ts';
@@ -11,7 +11,10 @@ const sc = site.scoring;
 const ctx = ctxFor(site);
 const cats = categories();
 const rows = sortParties(sc.parties, ctx, 'avg', -1);
-const hr = heatRange(rows, ctx);
+const bctx: BlocCtx = { governments: {} };
+for (const g of (await import('../lib/governments.ts')).centreGovernments()) bctx.governments[g.id] = { leader: g.leader || g.label, start: g.start, end: g.end, lead: g.leadParty };
+const blocs = sc.blocs;
+const hr = blocHeatRange(blocs, ctx);
 const centre = (await import('../lib/governments.ts')).centreGovernments();
 const yearMin = centre.length ? Math.min(...centre.map((g) => yearOf(g.start))) : 1947;
 const yearMax = yearOf(site.asOf);
@@ -23,13 +26,15 @@ const payload = {
   yearMin,
   yearMax,
   lowDataMin: LOW_DATA_MIN_ACTIONS,
+  priorYears: PRIOR_YEARS,
   credits: sc.credits.map((c) => ({ slug: c.slug, category: c.category, partyId: c.partyId, governmentId: c.governmentId, role: c.role, points: +c.points.toFixed(4), low: +c.low.toFixed(4), high: +c.high.toFixed(4), year: slugYear.get(c.slug), flagged: flagged.has(c.slug) })),
   governments: centre.map((g) => ({ id: g.id, leadParty: g.leadParty, start: g.start, end: g.end, partners: g.partners })),
+  blocCtx: bctx,
   categoryIds: cats.map((c) => c.id),
 };
 const shrunkTip = `Depends on how many entries are included; shrunk toward zero for short tenures (points divided by years in power plus ${PRIOR_YEARS}).`;
 const heads: [string, string, string?, string?][] = [
-  ['party', 'Party'],
+  ['party', 'Bloc'],
   ['avg', 'Average points per action', 'num', 'Mean credited points per scored action, with the range from the two scorers and the number of scored actions.'],
   ['shrunk', 'Points per year (shrunk)', 'num', shrunkTip],
   ['total', 'Total points', 'num'],
@@ -44,10 +49,10 @@ const heads: [string, string, string?, string?][] = [
     </div>
   )}
   <div class="note">
-    <p><strong>How to read this.</strong> Two scorers, blind to party, give each action up to 25 points for benefit or harm across five criteria (range {fmtSigned(-25, 0)} to +25). An action's points go to the governments responsible, and to their coalition partners by seat share. The headline figure is the <strong>average points per action</strong>: a party's total divided by the number of its actions scored, shown with its range and that number. “Points per year (shrunk)” divides the total by years in power plus {PRIOR_YEARS}; it depends on how many entries are included, so it is shown second. The figures summarise the evidence entered so far; they are not a verdict on any party. The scorers are AI models that did not know which party acted but did read the facts. The entries are a selection of actions, and a party with more entries in an era can show a higher or lower figure for that reason alone. A party with little scored evidence is marked “Low data”. Union governments only; state actions are not included. <a href="/methodology/">Read the method</a>.</p>
+    <p><strong>How to read this.</strong> Two scorers, blind to party, give each action up to 25 points for benefit or harm across five criteria (range {fmtSigned(-25, 0)} to +25). An action's points go to the governments responsible, and to their coalition partners by seat share. The table opens on <strong>blocs</strong>: a government belongs to the bloc of its lead party, and its coalition partners' credit and years are counted inside that bloc (UPA is INC-led, NDA is BJP-led). Governments led by any other party sit in a collapsed “Other governments” group, and all their years are kept. Switch to <strong>Parties</strong> to see the partner-by-partner split. The headline figure is the <strong>average points per action</strong>: a bloc's (or party's) total divided by the number of its actions scored, shown with its range and that number. “Points per year (shrunk)” divides the total by years in power plus {PRIOR_YEARS}; it depends on how many entries are included, so it is shown second. The figures summarise the evidence entered so far; they are not a verdict on any bloc or party. The scorers are AI models that did not know which party acted but did read the facts. The entries are a selection of actions, and a bloc with more entries in an era can show a higher or lower figure for that reason alone. A bloc or party with little scored evidence is marked “Low data”. For the actions behind the figures, open <a href="/compare/blocs/">INC-led and BJP-led, side by side</a>. Union governments only; state actions are not included. <a href="/methodology/">Read the method</a>.</p>
   </div>
 
-  {rows.length === 0 ? (
+  {rows.length === 0 && blocs.every((b) => b.scoredActions === 0) ? (
     <div class="empty" style="margin-top:1rem"><p>The Evidence points table appears once governments and scored actions are published.</p></div>
   ) : (
     <>
@@ -83,18 +88,25 @@ const heads: [string, string, string?, string?][] = [
       </details>
 
       <div class="metric-row">
-        <span class="small" id="metric-label">Headline and sort</span>
+        <span class="small" id="view-label">Group by</span>
+        <div class="seg-toggle" role="group" aria-labelledby="view-label" id="view-toggle" hidden>
+          <button type="button" aria-pressed="true" data-view="blocs">Blocs</button>
+          <button type="button" aria-pressed="false" data-view="parties">Parties</button>
+        </div>
+      </div>
+      <div class="metric-row">
+        <span class="small" id="metric-label">Headline figure</span>
         <div class="seg-toggle" role="group" aria-labelledby="metric-label" id="metric-toggle" hidden>
           <button type="button" aria-pressed="true" data-metric="avg">Average per action</button>
           <button type="button" aria-pressed="false" data-metric="shrunk">Per year (shrunk)</button>
         </div>
       </div>
       <p class="vh" id="pts-live" role="status" aria-live="polite"></p>
-      <div class="table-wrap" tabindex="0" role="region" aria-label="Evidence points by party, scrolls sideways on narrow screens">
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Evidence points by bloc or party, scrolls sideways on narrow screens">
         <table class="data" id="pts-table">
           <caption>
-            Evidence points by party
-            <span class="small" id="pts-caption">Sorted by average points per action, highest figure first. The order reflects a figure, not a verdict, and ranges overlap. Dot: the headline figure; line: low to high from the two scorers.</span>
+            <span id="pts-title">Evidence points by bloc</span>
+            <span class="small" id="pts-caption">INC-led and BJP-led are always listed in this fixed order; the order is not a ranking. Dot: the headline figure; line: low to high from the two scorers. Ranges overlap.</span>
           </caption>
           <thead>
             <tr>
@@ -103,22 +115,22 @@ const heads: [string, string, string?, string?][] = [
               ))}
             </tr>
           </thead>
-          <tbody set:html={pointsRowsHtml(rows, ctx)}></tbody>
+          <tbody set:html={blocRowsHtml(blocs, ctx, bctx)}></tbody>
         </table>
       </div>
-      <p class="small" style="margin-top:.6rem"><strong>Points per year (shrunk)</strong> depends on how many entries are included; shrunk toward zero for short tenures: points ÷ (years in power + {PRIOR_YEARS}). Neither figure is a verdict.</p>
+      <p class="small" style="margin-top:.6rem" id="pts-foot"><strong>Points per year (shrunk)</strong> depends on how many entries are included; shrunk toward zero for short tenures: points ÷ (years in power + {PRIOR_YEARS}). Neither figure is a verdict. <a href="/compare/blocs/">See the actions behind these figures, bloc by bloc</a>.</p>
       <p class="collapse-row" id="pts-short-wrap" hidden><button type="button" class="btn" id="pts-short-toggle" aria-expanded="false"></button></p>
-      <p class="note" id="pts-nodata" style="margin-top:1rem" set:html={noDataHtml(rows, ctx)} hidden={!noDataHtml(rows, ctx)}></p>
-      <p class="small" style="margin-top:.6rem"><span class="badge badge-low">Low data</span> means some category has fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the party, so its figures rest on very little evidence.</p>
+      <p class="note" id="pts-nodata" style="margin-top:1rem" hidden></p>
+      <p class="small" style="margin-top:.6rem"><span class="badge badge-low">Low data</span> means some category has fewer than {LOW_DATA_MIN_ACTIONS} scored actions credited to the bloc or party, so its figures rest on very little evidence.</p>
 
-      <h3 style="margin-top:2rem" id="heat-title">Points per year by category</h3>
-      <p class="small">Each cell is one party's raw points per year in one category (no shrinkage), so it depends on how many entries are included for that cell. Cells are shaded from lowest to highest across the grid. Columns are ordered by years in power. Shading shows the relative size of a figure, not quality. Numbers are always shown; hatched cells have fewer than {LOW_DATA_MIN_ACTIONS} scored actions, dashed cells have none. Only parties with at least 2 years in power and a scored action are shown as columns.</p>
+      <h3 style="margin-top:2rem" id="heat-title">Points per year (shrunk) by category</h3>
+      <p class="small" id="heat-desc">Each cell is one bloc's points in one category divided by (the bloc's years in power + {PRIOR_YEARS}), so it depends on how many entries are included for that cell. Cells are shaded from lowest to highest across the grid; shading shows the relative size of a figure, not quality. Numbers are always shown; hatched cells have fewer than {LOW_DATA_MIN_ACTIONS} scored actions, dashed cells have none. Other governments are left out of the grid; their rows are in the table above.</p>
       <div class="table-wrap heat" tabindex="0" role="region" aria-label="Category heat grid, scrolls sideways on narrow screens">
-        <table id="heat-table" aria-labelledby="heat-title" set:html={heatGridHtml(sortParties(rows, ctx, 'years', -1), ctx)}></table>
+        <table id="heat-table" aria-labelledby="heat-title" set:html={blocHeatHtml(blocs, ctx)}></table>
       </div>
       <p class="legend-scale">
         <span>Lower</span><span class="ramp" aria-hidden="true"></span><span>Higher</span>
-        <span class="mono" id="heat-range">{hr ? `${fmtSigned(hr[0])} to ${fmtSigned(hr[1])} points per year` : ''}</span>
+        <span class="mono" id="heat-range">{hr ? `${fmtSigned(hr[0], 2)} to ${fmtSigned(hr[1], 2)} points per year` : ''}</span>
         <span><span class="hatch" aria-hidden="true"></span>Low data</span>
       </p>
       <script type="application/json" id="points-data" set:html={jsonForScript(payload)}></script>

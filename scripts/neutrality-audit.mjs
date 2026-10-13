@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, ACTIONS_DIR, DOSSIERS_DIR, listMd, loadEntry, loadTaxonomy, loadGovernments, loadLoadedWords, readJson, isoDate, daysSince, LOW_DATA_MIN_ACTIONS } from './lib.mjs';
 import {
+  promiseMatrix, indicatorCoverage, PROMISE_PARTIES, PROMISE_STATUSES, PROMISES_PER_PARTY_ELECTION,
   countBy, DOSSIER_STALE_DAYS, eraOf, hasPrimarySource, loadedHits, scorerDisagreements, asymmetry, partiesOf, mean, round,
 } from './audit-lib.mjs';
 
@@ -142,6 +143,25 @@ table(['Kind', 'Dossiers'], [...countBy(dossiers, (e) => e.kind)].map(([k, v]) =
 table(['Status', 'Dossiers'], [...countBy(dossiers, (e) => e.status)].map(([k, v]) => [k, v]));
 const staleD = dossiers.filter((e) => e.status === 'ongoing' && isoDate(e.asOf) && daysSince(isoDate(e.asOf)) > DOSSIER_STALE_DAYS);
 out(`Ongoing dossiers with asOf older than ${DOSSIER_STALE_DAYS} days (${staleD.length}): ${staleD.length ? staleD.map((e) => e.slug).join(', ') : 'none'}.`);
+out();
+
+out('## Promises and indicators (Addendum v3)');
+const readOpt = (f) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'src', 'data', f), 'utf8')); } catch { return null; } };
+const promisesDoc = readOpt('promises.json');
+const indicatorsDoc = readOpt('indicators.json');
+if (!Array.isArray(promisesDoc)) out('promises.json: not present.');
+else {
+  out(`Promises: ${promisesDoc.length}. Each party should have ${PROMISES_PER_PARTY_ELECTION} per election.`);
+  out();
+  table(['Election', ...PROMISE_PARTIES.map((p) => `${pn(p)} promises`), 'Equal?'], [...promiseMatrix(promisesDoc)].map(([e, row]) => [e, ...PROMISE_PARTIES.map((p) => row[p]), PROMISE_PARTIES.every((p) => row[p] === PROMISES_PER_PARTY_ELECTION) ? 'yes' : 'NO']));
+  table(['Status', ...PROMISE_PARTIES.map((p) => pn(p))], PROMISE_STATUSES.map((st) => [st, ...PROMISE_PARTIES.map((p) => promisesDoc.filter((x) => x.party === p && x.status === st).length)]));
+}
+if (!indicatorsDoc || !Array.isArray(indicatorsDoc.indicators)) out('indicators.json: not present.');
+else {
+  out(`Indicators: ${indicatorsDoc.indicators.length}. Coverage per period (indicators with a value):`);
+  out();
+  table(['Period', 'Group', 'Indicators with a value'], indicatorCoverage(indicatorsDoc).map((c) => [c.label, c.bloc, `${c.n} of ${c.of}`]));
+}
 out();
 
 const report = lines.join('\n');

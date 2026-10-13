@@ -26,7 +26,7 @@ const latestDossiers = site.dossiers.slice(0, 3);
   <div class="wrap hero">
     <p class="kicker">India Explained</p>
     <h1>Who governed, for how long, and what the record shows</h1>
-    <p class="lede">A neutral ledger of Indian governments and their actions. Every entry uses the same template, every claim has a source, and every score is shown with its range. Scores are AI-assisted judgements and carry uncertainty; see the methodology.</p>
+    <p class="lede">A neutral ledger of Indian governments and their actions. Every entry uses the same template, every claim has a source, and every score is shown with its range. Scores are AI-assisted judgements and carry uncertainty; see the methodology. Governments are grouped into the INC-led and BJP-led blocs, with other governments shown apart, and the two blocs can be read <a href="/compare/blocs/">side by side</a>.</p>
     <div class="stats" role="list" aria-label="Site at a glance">
       <div class="stat" role="listitem"><div class="v">{centre.length}</div><div class="l">Union governments{first ? `, ${first} to today` : ''}</div></div>
       <div class="stat" role="listitem"><div class="v">{site.actions.length}</div><div class="l">{site.actions.length === 1 ? 'action' : 'actions'} recorded</div></div>
@@ -51,7 +51,7 @@ const latestDossiers = site.dossiers.slice(0, 3);
         <a class="more" href="/governments/">All governments</a>
       </div>
       <div data-view-pane="centre">
-        <Timeline governments={centre} site={site} heading="Union governments since independence" id="tl-centre" />
+        <Timeline governments={centre} site={site} heading="Union governments since independence, by bloc" id="tl-centre" by="bloc" />
       </div>
       {states.length > 0 && (
         <div data-view-pane="states" class="stack" id="states-pane">
@@ -61,14 +61,14 @@ const latestDossiers = site.dossiers.slice(0, 3);
         </div>
       )}
 
-      <h3 style="margin-top:2.2rem">How long each party has been in power</h3>
+      <h3 style="margin-top:2.2rem">How long each bloc has been in power</h3>
       <TenureTable governments={centre} site={site} />
     </section>
 
     <section class="block" id="points" aria-labelledby="h-points">
       <div class="block-head">
         <h2 id="h-points">Evidence points</h2>
-        <a class="more" href="/methodology/">How points are made</a>
+        <span class="more"><a href="/compare/blocs/">INC-led and BJP-led, side by side</a> &middot; <a href="/methodology/">How points are made</a></span>
       </div>
       <PointsExplorer site={site} />
     </section>
@@ -109,6 +109,26 @@ const latestDossiers = site.dossiers.slice(0, 3);
             </ul>
           )}
         </div>
+      </div>
+    </section>
+
+    <section class="block" id="records" aria-labelledby="h-records">
+      <div class="block-head">
+        <h2 id="h-records">Outcomes, promises and open questions</h2>
+      </div>
+      <div class="grid">
+        <article class="card link">
+          <h3><a class="cover" href="/indicators/">Indicators by period</a></h3>
+          <p class="small" style="margin-bottom:0">Official measures such as growth, inflation and schooling for each period in office, with sources and caveats. Not a ranking.</p>
+        </article>
+        <article class="card link">
+          <h3><a class="cover" href="/promises/">Manifesto promise tracker</a></h3>
+          <p class="small" style="margin-bottom:0">Headline promises of the INC and the BJP at each election since 1998, with the same status rules and the same number for each.</p>
+        </article>
+        <article class="card link">
+          <h3><a class="cover" href="/debates/">Open questions and debates</a></h3>
+          <p class="small" style="margin-bottom:0">Live reform questions with the strongest documented case for each option and who holds it. No option is recommended.</p>
+        </article>
       </div>
     </section>
 

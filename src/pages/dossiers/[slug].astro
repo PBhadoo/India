@@ -5,6 +5,7 @@ import DossierStatus from '../../components/DossierStatus.astro';
 import DossierCard from '../../components/DossierCard.astro';
 import SourceList from '../../components/SourceList.astro';
 import SrcRef from '../../components/SrcRef.astro';
+import PositionsBlock from '../../components/PositionsBlock.astro';
 import ActionCard from '../../components/ActionCard.astro';
 import { render } from 'astro:content';
 import { getSite } from '../../lib/site.ts';
@@ -24,6 +25,7 @@ const { Content } = await render(row.entry);
 const cat = getCategory(d.category);
 const sources = d.sources as { title: string; url: string; publisher?: string; type?: string }[];
 const ongoing = d.status === 'ongoing';
+const isDebate = d.kind === 'debate';
 const age = daysBetween(d.asOf, new Date(site.asOf + 'T00:00:00Z'));
 const stale = ongoing && age > 45;
 
@@ -43,9 +45,10 @@ const relatedActions = site.actions
 const relatedDossiers = dossiersInCategory(site.dossiers, d.category, d.subcategories ?? []).filter((x) => x.slug !== slug).slice(0, 4);
 
 const sections = [
+  isDebate && positions.length ? ['positions', 'Positions'] : null,
   timeline.length ? ['timeline', 'Timeline'] : null,
   claims.length ? ['claims', 'Claims'] : null,
-  positions.length ? ['positions', 'Positions'] : null,
+  !isDebate && positions.length ? ['positions', 'Positions'] : null,
   tables.length ? ['data', 'Data tables'] : null,
   ['not-shown', 'What these facts do not show'],
   ['sources', 'Sources'],
@@ -72,7 +75,7 @@ const jsonLd = {
   <div class="wrap page-head dossier-head" data-pagefind-meta={`category:${cat?.name ?? d.category}`}>
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
-        <li><a href="/">Home</a></li><li><a href="/dossiers/">Dossiers</a></li>
+        <li><a href="/">Home</a></li><li>{isDebate ? <a href="/debates/">Debates</a> : <a href="/dossiers/">Dossiers</a>}</li>
         {cat && <li><a href={`/categories/${cat.id}/`}>{cat.name}</a></li>}
         <li><span aria-current="page">{d.title}</span></li>
       </ol>
@@ -108,6 +111,8 @@ const jsonLd = {
 
   <div class="wrap dossier-body">
     <div class="prose-body explainer"><Content /></div>
+
+    {isDebate && positions.length > 0 && <PositionsBlock positions={positions} sources={sources} debate />}
 
     {timeline.length > 0 && (
       <section class="block" id="timeline" aria-labelledby="h-tl">
@@ -165,21 +170,7 @@ const jsonLd = {
       </section>
     )}
 
-    {positions.length > 0 && (
-      <section class="block" id="positions" aria-labelledby="h-pos">
-        <h2 id="h-pos">Positions</h2>
-        <p class="small">Who says what, paraphrased with attribution. Every holder gets a card of the same size and the same fields.</p>
-        <ul class="pos-grid">
-          {positions.map((p) => (
-            <li class="card pos">
-              <h3>{p.holder}</h3>
-              <p>{p.position}</p>
-              <SrcRef refs={p.source} sources={sources} />
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
+    {!isDebate && positions.length > 0 && <PositionsBlock positions={positions} sources={sources} />}
 
     {tables.length > 0 && (
       <section class="block" id="data" aria-labelledby="h-data">

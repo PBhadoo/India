@@ -1,0 +1,104 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import IndicatorChart from '../components/IndicatorChart.astro';
+import BlocLegend from '../components/BlocLegend.astro';
+import { loadIndicators, indicatorDomains, titleCase, BLOC_LABEL, BLOC_KEY } from '../lib/datasets.ts';
+import { getCategory } from '../lib/taxonomy.ts';
+import { fmtDate } from '../lib/format.ts';
+
+const { data, present, issues } = loadIndicators();
+for (const m of issues) console.warn(`indicators.json: ${m}`);
+const sortedPeriods = [...data.periods].sort((a, b) => a.start.localeCompare(b.start));
+const usable = data.indicators.filter((i) => i.values.length > 0);
+const domains = indicatorDomains(usable);
+const domainName = (d: string) => getCategory(d)?.name ?? titleCase(d);
+const empty = usable.length === 0;
+const NOTE = 'Differences between periods do not show which government caused them; global conditions, earlier policies and data revisions all matter.';
+---
+<Base title="Indicators by period" path="/indicators/" description="Official indicators such as growth, inflation, jobs, deficits, health and schooling, shown for each government period with sources and caveats. A description of periods, not a ranking of governments.">
+  <PageHead title="Indicators by period" kicker="Measured outcomes" lede="The same official measure, shown for each period in office, grouped by who led the Union government. Each chart has a table view, its source and the caveats that limit what it can show." crumbs={[['Home', '/'], ['Indicators']]} />
+  <div class="wrap">
+    <p class="note" role="note"><strong>{NOTE}</strong> Periods differ in length and start from different conditions. There is no total, rank or score on this page. <a href="/methodology/#indicators">How indicators are chosen and read</a>.</p>
+
+    {empty ? (
+      <div class="empty" style="margin-top:1.2rem">
+        <p><strong>No indicator data is published yet.</strong></p>
+        <p>Indicators appear here once each series has an official source, a stated basis and its caveats, and a value for at least three periods. Meanwhile, see <a href="/governments/">who governed and for how long</a> and <a href="/methodology/#indicators">how indicators will be read</a>.</p>
+      </div>
+    ) : (
+      <>
+        <div class="filters" style="margin-top:1.2rem">
+          <div class="controls">
+            <label class="field">Domain<select id="f-domain"><option value="">All domains</option>{domains.map((d) => <option value={d}>{domainName(d)}</option>)}</select></label>
+            <button type="button" class="btn" id="f-reset" hidden>Show all domains</button>
+          </div>
+          <BlocLegend label="Bar colour and pattern by who led the Union government in the period" />
+          <p class="small" style="margin:0">Bar colour and pattern show who led the Union government in each period: INC-led, BJP-led, or Other (governments led by other parties, shown in neutral grey). Every bar also has its value printed beside it.</p>
+        </div>
+        <p class="result-count" role="status" aria-live="polite" id="f-count">{usable.length} {usable.length === 1 ? 'indicator' : 'indicators'}</p>
+
+        {domains.map((d) => (
+          <section class="block dom" id={`domain-${d}`} data-domain-section={d} aria-labelledby={`h-d-${d}`}>
+            <h2 id={`h-d-${d}`}>{domainName(d)}</h2>
+            <div class="ind-grid">
+              {usable.filter((i) => i.domain === d).map((i) => <IndicatorChart indicator={i} periods={sortedPeriods} />)}
+            </div>
+          </section>
+        ))}
+
+        <section class="block" id="periods" aria-labelledby="h-periods">
+          <h2 id="h-periods">The periods used</h2>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Periods, scrolls sideways on narrow screens">
+            <table class="data stackable">
+              <caption>Periods compared<span class="small">Dates are the start and end of each period in office. Periods differ in length.</span></caption>
+              <thead><tr><th scope="col">Period</th><th scope="col">Group</th><th scope="col">From</th><th scope="col">To</th></tr></thead>
+              <tbody>
+                {sortedPeriods.map((p) => (
+                  <tr>
+                    <th scope="row">{p.label}</th>
+                    <td data-label="Group">{BLOC_LABEL[BLOC_KEY[p.bloc]]}</td>
+                    <td data-label="From">{fmtDate(p.start)}</td>
+                    <td data-label="To">{p.end ? fmtDate(p.end) : 'In office'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </>
+    )}
+  </div>
+</Base>
+<style is:global>
+  .ind-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr)); align-items: start; }
+  .dom[hidden] { display: none; }
+</style>
+<script>
+  const sel = document.getElementById('f-domain') as HTMLSelectElement | null;
+  if (sel) {
+    const secs = Array.from(document.querySelectorAll<HTMLElement>('[data-domain-section]'));
+    const count = document.getElementById('f-count')!;
+    const reset = document.getElementById('f-reset') as HTMLButtonElement;
+    const total = document.querySelectorAll('.ind').length;
+    const apply = () => {
+      const v = sel.value;
+      let n = 0;
+      secs.forEach((s) => {
+        const ok = !v || s.dataset.domainSection === v;
+        s.hidden = !ok;
+        if (ok) n += s.querySelectorAll('.ind').length;
+      });
+      count.textContent = `${n} ${n === 1 ? 'indicator' : 'indicators'}${n === total ? '' : ` of ${total}`}`;
+      reset.hidden = !v;
+      try { const u = new URL(location.href); v ? u.searchParams.set('domain', v) : u.searchParams.delete('domain'); history.replaceState(null, '', u); } catch {}
+    };
+    try {
+      const v = new URLSearchParams(location.search).get('domain');
+      if (v && Array.from(sel.options).some((o) => o.value === v)) sel.value = v;
+    } catch {}
+    sel.addEventListener('change', apply);
+    reset.addEventListener('click', () => { sel.value = ''; apply(); });
+    apply();
+  }
+</script>

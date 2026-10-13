@@ -4,6 +4,7 @@ import { fmtNum } from '../lib/format.ts';
 import { pm, type Site } from '../lib/site.ts';
 import PartyChip from './PartyChip.astro';
 import type { Government } from '../lib/types.ts';
+import { blocOf, BLOC_IDS, BLOC_LABEL, BLOC_NOTE, HEADLINE_BLOCS } from '../lib/scoring-core.ts';
 interface Props { governments: Government[]; site: Site; collapse?: number }
 const { governments, site, collapse = 10 } = Astro.props;
 const py = partyYears(governments, site.asOf);
@@ -11,10 +12,59 @@ const total = governments.reduce((n, g) => n + yearsInOffice(g, site.asOf), 0);
 const rows = Object.entries(py)
   .map(([id, v]) => ({ id, weighted: v.weighted, yLed: v.led, n: governments.filter((g) => g.partners.some((p) => p.party === id) || g.leadParty === id).length, led: governments.filter((g) => g.leadParty === id).length }))
   .sort((a, b) => b.weighted - a.weighted);
+const blocRows = BLOC_IDS.map((id) => {
+  const gs = governments.filter((g) => blocOf(g) === id && yearsInOffice(g, site.asOf) > 0);
+  const years = gs.reduce((n, g) => n + yearsInOffice(g, site.asOf), 0);
+  return { id, gs, years };
+});
+const span = (g: Government) => `${g.start.slice(0, 4)} to ${g.end ? g.end.slice(0, 4) : 'present'}`;
 ---
 {rows.length === 0 ? (
   <div class="empty"><p>Tenure figures appear once governments are entered.</p></div>
 ) : (
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Years in power by bloc, scrolls sideways on narrow screens">
+    <table class="data" id="bloc-tenure">
+      <caption>
+        Years in power by bloc
+        <span class="small">A government belongs to the bloc of its lead party, and its coalition partners are counted inside it. Other governments are collapsed here but every year is kept in the total ({fmtNum(total)} years across all governments).</span>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Bloc</th>
+          <th scope="col" class="num">Years in power</th>
+          <th scope="col" class="num">Governments</th>
+          <th scope="col" class="num">Share of years in office</th>
+        </tr>
+      </thead>
+      <tbody>
+        {blocRows.filter((r) => HEADLINE_BLOCS.includes(r.id)).map((r) => (
+          <tr>
+            <th scope="row"><span class="chip bloc-chip" title={BLOC_NOTE[r.id]}><span class={`sw b-${r.id} pat-b-${r.id}`} aria-hidden="true"></span><span>{BLOC_LABEL[r.id]}</span></span><span class="sub">{BLOC_NOTE[r.id]}</span></th>
+            <td class="num strong"><span class="fig">{fmtNum(r.years)}</span></td>
+            <td class="num">{r.gs.length}</td>
+            <td class="num">{total ? `${((r.years / total) * 100).toFixed(1)}%` : '–'}</td>
+          </tr>
+        ))}
+        {blocRows.filter((r) => r.id === 'other' && r.gs.length > 0).map((r) => (
+          <>
+            <tr class="grp other-grp" data-other><th scope="colgroup" colspan="4">Other governments, led by other parties and listed apart</th></tr>
+            <tr data-other>
+              <th scope="row"><span class="chip bloc-chip" title={BLOC_NOTE.other}><span class="sw b-other pat-b-other" aria-hidden="true"></span><span>{BLOC_LABEL.other}</span></span>
+                <ul class="gov-list">{r.gs.map((g) => <li><a href={`/governments/${g.id}/`}>{g.leader || g.label}</a> <span class="mono">{span(g)}</span></li>)}</ul></th>
+              <td class="num strong"><span class="fig">{fmtNum(r.years)}</span></td>
+              <td class="num">{r.gs.length}</td>
+              <td class="num">{total ? `${((r.years / total) * 100).toFixed(1)}%` : '–'}</td>
+            </tr>
+          </>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="collapse-row" id="other-tenure-wrap" hidden><button type="button" class="btn" id="other-tenure-toggle" aria-expanded="false" aria-controls="bloc-tenure"></button></p>
+
+  <details class="panel" style="margin-top:1rem">
+    <summary>Years in power party by party, with coalition shares</summary>
+    <div class="panel-body">
   <div class="table-wrap" tabindex="0" role="region" aria-label="Years in power by party, scrolls sideways on narrow screens">
     <table class="data" data-sortable data-collapse={collapse}>
       <caption>
@@ -45,7 +95,26 @@ const rows = Object.entries(py)
       </tbody>
     </table>
   </div>
+    </div>
+  </details>
 )}
 <script>
   import '../scripts/sortable.ts';
+  const tbl = document.getElementById('bloc-tenure');
+  const btn = document.getElementById('other-tenure-toggle') as HTMLButtonElement | null;
+  const wrap = document.getElementById('other-tenure-wrap');
+  if (tbl && btn && wrap) {
+    const rows = Array.from(tbl.querySelectorAll<HTMLElement>('tr[data-other]'));
+    if (rows.length) {
+      let open = false;
+      const apply = () => {
+        rows.forEach((r) => (r.hidden = !open));
+        btn.textContent = open ? 'Hide Other governments' : 'Show Other governments and the governments in them';
+        btn.setAttribute('aria-expanded', String(open));
+      };
+      btn.addEventListener('click', () => { open = !open; apply(); });
+      wrap.hidden = false;
+      apply();
+    }
+  }
 </script>

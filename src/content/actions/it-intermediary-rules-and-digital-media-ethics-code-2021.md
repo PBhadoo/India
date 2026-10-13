@@ -42,6 +42,18 @@ sources:
   - { title: "Kunal Kamra v. Union of India", url: "https://globalfreedomofexpression.columbia.edu/cases/kunal-kamra-v-union-of-india/", publisher: "Columbia Global Freedom of Expression", type: reputable-media }
   - { title: "Government sets 50 lakh users threshold to define significant social media intermediary", url: "https://www.money9.com/news/exclusive/government-sets-50-lakh-users-threshold-to-define-significant-social-media-intermediary-11925.html", publisher: "Money9", type: reputable-media }
   - { title: "Bombay High Court strikes down IT Rules amendment 2023 on fact check units", url: "https://www.barandbench.com/news/bombay-high-court-strikes-down-it-rules-amendment-2023-fact-check-units", publisher: "Bar and Bench", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The 2023 fact-check rule is necessary to counter misinformation about central government business, is proportionate, leaves platforms able to issue disclaimers, and misinformation is not protected speech.", madeBy: "Union government, Bombay High Court (Kunal Kamra v. Union of India)", source: 3 }
+    - { point: "The fact-check rule is a proportionate restriction within Article 19(2).", madeBy: "Justice Gokhale, Bombay High Court (dissent), 31 January 2024", source: 5 }
+    - { point: "Platforms should be accountable under law for misuse of social media and fake news, citing a July 2018 Rajya Sabha calling-attention motion.", madeBy: "Ministry of Electronics and IT, press release of 25 February 2021, as reported", source: 4 }
+  change:
+    - { point: "The Rules may exceed the delegated powers of the IT Act, some content grounds are vague, and publisher oversight sits with a Ministry rather than an independent body like the Press Council of India.", madeBy: "PRS Legislative Research", source: 1 }
+    - { point: "Traceability may require messaging services to hold more data on all users, and its proportionality under the Supreme Court's privacy standard is questionable.", madeBy: "PRS Legislative Research", source: 1 }
+    - { point: "The fact-check rule makes the executive the judge in its own cause and violates Articles 14, 19(1)(a) and 19(1)(g).", madeBy: "Justices Patel and Chandurkar, Bombay High Court, 31 January and 20 September 2024", source: 5 }
+  repeal:
+    - { point: "The 2023 amendment to Rule 3(1)(b)(v) should be struck down; the Bombay High Court did so by 2 judges to 1.", madeBy: "Petitioners including Kunal Kamra, Bombay High Court", source: 3 }
 scoring:
   era_baseline: "Before 2021 intermediaries were governed by the 2011 intermediary guidelines under Section 79 of the IT Act, with no statutory code for online news publishers."
   lag_years: 3

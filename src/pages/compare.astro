@@ -14,7 +14,8 @@ const governed = site.scoring.parties.filter((p) => p.yearsInPower > 0).sort((a,
 <Base title="Compare parties by category" path="/compare/" description="Pick a category and see every party's evidence points, range and actions side by side, in the same format.">
   <PageHead title="Compare by category" kicker="Side by side" lede="Choose a category to see each party that has governed, in the same format and the same order. Columns follow the order parties first held office." crumbs={[['Home', '/'], ['Compare']]} />
   <div class="wrap">
-    <div class="filters cmp-controls" id="cmp-controls" hidden>
+    <p class="note"><strong>Two blocs, side by side.</strong> <a href="/compare/blocs/">INC-led and BJP-led, side by side</a> groups every Union government by its lead party and lists each bloc's actions for a chosen category and period, in two equal columns.</p>
+    <div class="filters cmp-controls" id="cmp-controls" hidden style="margin-top:1rem">
       <div class="controls"><label class="field">Category<select id="cmp-select">{cats.map((c) => <option value={c.id}>{c.name}</option>)}</select></label></div>
     </div>
     {governed.length === 0 ? (

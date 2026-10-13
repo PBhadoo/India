@@ -1,0 +1,43 @@
+---
+import PromiseStatus from './PromiseStatus.astro';
+import { PROMISE_STATUSES, PROMISE_STATUS_LABEL, type StatusCounts } from '../lib/datasets.ts';
+interface Props { partyName: string; partyShort: string; rows: [number, StatusCounts][] }
+const { partyName, partyShort, rows } = Astro.props;
+---
+<section class="psum" aria-labelledby={`ps-${partyShort}`}>
+  <h3 id={`ps-${partyShort}`}>{partyName} <span class="muted">({partyShort})</span></h3>
+  <ol class="psum-rows">
+    {rows.map(([year, c]) => (
+      <li class="psum-row">
+        <div class="psum-head"><strong>{year}</strong> <span class="muted">{c.total} {c.total === 1 ? 'promise' : 'promises'}</span></div>
+        {c.total === 0 ? (
+          <p class="psum-none">No promises recorded yet.</p>
+        ) : (
+          <>
+            <div class="stack-bar" role="img" aria-label={`${year}, ${PROMISE_STATUSES.filter((s) => c.byStatus[s]).map((s) => `${c.byStatus[s]} ${PROMISE_STATUS_LABEL[s].toLowerCase()}`).join(', ')}`}>
+              {PROMISE_STATUSES.filter((s) => c.byStatus[s] > 0).map((s) => <span class={`st-sw st-${s} seg`} style={`flex:${c.byStatus[s]} 1 0`}></span>)}
+            </div>
+            <ul class="psum-counts">
+              {PROMISE_STATUSES.filter((s) => c.byStatus[s] > 0).map((s) => (
+                <li><PromiseStatus status={s} swatchOnly /> {PROMISE_STATUS_LABEL[s]} <strong>{c.byStatus[s]}</strong></li>
+              ))}
+            </ul>
+          </>
+        )}
+      </li>
+    ))}
+  </ol>
+</section>
+<style is:global>
+  .psum { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.1rem 1.2rem; min-width: 0; }
+  .psum h3 { margin: 0 0 0.8rem; font-size: 1.2rem; }
+  .psum-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.85rem; }
+  .psum-row { margin: 0; }
+  .psum-head { display: flex; gap: 0.6rem; align-items: baseline; font-size: 0.95rem; margin-bottom: 0.25rem; }
+  .stack-bar { display: flex; gap: 2px; height: 1.35rem; }
+  .stack-bar .seg { width: auto; height: 100%; border-radius: 3px; min-width: 6px; }
+  .psum-counts { list-style: none; display: flex; flex-wrap: wrap; gap: 0.15rem 0.9rem; margin: 0.35rem 0 0; padding: 0; font-size: 0.86rem; color: var(--ink-2); }
+  .psum-counts li { display: inline-flex; align-items: center; gap: 0.35rem; margin: 0; }
+  .psum-counts strong { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .psum-none { margin: 0; font-size: 0.88rem; color: var(--muted); font-style: italic; border: 1px dashed var(--rule-strong); border-radius: 4px; padding: 0.3rem 0.6rem; }
+</style>

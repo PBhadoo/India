@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import DebateCard from '../../components/DebateCard.astro';
+import { getSite } from '../../lib/site.ts';
+import { categories } from '../../lib/taxonomy.ts';
+const site = await getSite();
+const debates = site.dossiers.filter((d) => d.data.kind === 'debate');
+const cats = categories().filter((c) => debates.some((d) => d.data.category === c.id));
+const catName = new Map(categories().map((c) => [c.id, c.name]));
+---
+<Base title="Open questions and debates" path="/debates/" description="Live reform debates where each option is laid out with the strongest documented case for it and who holds it. No option is recommended.">
+  <PageHead title="Open questions and debates" kicker="Reform debates" lede="Questions on which informed people disagree. Each page sets out the options, the strongest documented case for each and who holds it, the contested facts, and what the evidence cannot settle." crumbs={[['Home', '/'], ['Debates']]} />
+  <div class="wrap">
+    <p class="note" role="note"><strong>These pages lay out the cases made. They do not recommend an option.</strong> Every option gets a card of the same size and the same fields. <a href="/methodology/#debates">How debates are written</a>.</p>
+    {debates.length === 0 ? (
+      <div class="empty" style="margin-top:1.2rem"><p><strong>No debates are published yet.</strong></p><p>A debate page appears here once every option has a documented case, a named holder and a source. Meanwhile, see the <a href="/dossiers/">dossiers</a> and <a href="/developing/">developing items</a>.</p></div>
+    ) : (
+      <>
+        <form class="filters" id="filters" role="search" aria-label="Filter debates" onsubmit="return false" style="margin-top:1.2rem">
+          <div class="controls">
+            <label class="field">Search text<input type="search" id="f-q" placeholder="Topic or summary" autocomplete="off" /></label>
+            <label class="field">Category<select id="f-category"><option value="">All categories</option>{cats.map((c) => <option value={c.id}>{c.name}</option>)}</select></label>
+            <button type="reset" class="btn" id="f-reset">Clear filters</button>
+          </div>
+        </form>
+        <p class="result-count" role="status" aria-live="polite" id="f-count">{debates.length} {debates.length === 1 ? 'debate' : 'debates'}</p>
+        <ul class="alist" id="dlist">
+          {debates.map((d) => (
+            <li data-text={`${d.data.title} ${d.data.summary} ${catName.get(d.data.category) ?? ''}`.toLowerCase()} data-category={d.data.category}>
+              <DebateCard dossier={d} />
+            </li>
+          ))}
+        </ul>
+        <div class="empty" id="f-none" hidden><p>No debates match these filters. Clear a filter to widen the list.</p></div>
+      </>
+    )}
+  </div>
+</Base>
+<script>
+  const list = document.getElementById('dlist');
+  if (list) {
+    const items = Array.from(list.children) as HTMLElement[];
+    const get = (id: string) => (document.getElementById(id) as HTMLInputElement | null)?.value ?? '';
+    const apply = () => {
+      const q = get('f-q').trim().toLowerCase(), cat = get('f-category');
+      let n = 0;
+      items.forEach((li) => {
+        const ok = (!q || q.split(/\s+/).every((w) => li.dataset.text!.includes(w))) && (!cat || li.dataset.category === cat);
+        li.hidden = !ok;
+        if (ok) n++;
+      });
+      document.getElementById('f-count')!.textContent = `${n} ${n === 1 ? 'debate' : 'debates'}${n === items.length ? '' : ` of ${items.length}`}`;
+      document.getElementById('f-none')!.hidden = n !== 0;
+    };
+    const form = document.getElementById('filters')!;
+    form.addEventListener('input', apply);
+    form.addEventListener('change', apply);
+    form.addEventListener('reset', () => setTimeout(apply));
+    apply();
+  }
+</script>

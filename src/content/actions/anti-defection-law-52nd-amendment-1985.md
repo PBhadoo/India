@@ -57,6 +57,15 @@ sources:
     url: https://nyaaya.org/blog/aaya-ram-gaya-ram-when-politicians-change-political-allegiances/
     publisher: Nyaaya
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Supreme Court upheld the constitutional validity of the Tenth Schedule and kept the presiding officer's decisions open to limited judicial review.", madeBy: "Supreme Court of India, Kihoto Hollohan v. Zachillhu (1992)", source: 4 }
+    - { point: "The Statement of Objects and Reasons described defection as a matter of national concern that, if not combated, was likely to undermine the foundations of democracy.", madeBy: "Statement of Objects and Reasons, Constitution (Fifty-second Amendment) Bill, 1985 (Rajiv Gandhi government)", source: 1 }
+  change:
+    - { point: "Speakers, who usually belong to ruling parties, have at times delayed deciding disqualification petitions until assembly terms end.", madeBy: "Supreme Court Observer (legal reporting body)", source: 3 }
+    - { point: "The Supreme Court held that a Speaker deciding disqualification petitions must do so within a reasonable period, generally three months.", madeBy: "Supreme Court of India, Keisham Meghachandra Singh v. Speaker, Manipur Legislative Assembly (2020)", source: 3 }
+    - { point: "Disqualification for voting or abstaining against a party direction curbs an elected member's right to dissent and freedom of conscience (the Court upheld the provision).", madeBy: "Petitioners in Kihoto Hollohan v. Zachillhu", source: 4 }
 scoring:
   era_baseline: Defections by legislators were a recognised problem from the late 1960s onward, with no anti-defection rule in the Constitution before 1985.
   lag_years: 5

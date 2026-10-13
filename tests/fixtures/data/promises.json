@@ -1,0 +1,2242 @@
+[
+  {
+    "id": "inc-1998-001",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on defence in the 1998 manifesto.",
+    "domain": "defence",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 6 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-001",
+      "url": "https://example.org/fixture/evidence/inc-1998-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1998-002",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on economy in the 1998 manifesto.",
+    "domain": "economy",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 9 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-002",
+      "url": "https://example.org/fixture/evidence/inc-1998-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1998-003",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on health in the 1998 manifesto.",
+    "domain": "health",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 12 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-003",
+      "url": "https://example.org/fixture/evidence/inc-1998-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1998-004",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on education in the 1998 manifesto.",
+    "domain": "education",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 15 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-004",
+      "url": "https://example.org/fixture/evidence/inc-1998-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1998-005",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on agriculture in the 1998 manifesto.",
+    "domain": "agriculture",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 18 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-005",
+      "url": "https://example.org/fixture/evidence/inc-1998-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1998-006",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on social-welfare in the 1998 manifesto.",
+    "domain": "social-welfare",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 21 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-006",
+      "url": "https://example.org/fixture/evidence/inc-1998-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1998-007",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on infrastructure in the 1998 manifesto.",
+    "domain": "infrastructure",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 24 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-007",
+      "url": "https://example.org/fixture/evidence/inc-1998-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1998-008",
+    "party": "inc",
+    "election": 1998,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on governance in the 1998 manifesto.",
+    "domain": "governance",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 27 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1998-008",
+      "url": "https://example.org/fixture/evidence/inc-1998-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1998",
+      "url": "https://example.org/fixture/manifesto/inc-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-001",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on defence in the 1998 manifesto.",
+    "domain": "defence",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 6 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-001",
+      "url": "https://example.org/fixture/evidence/bjp-1998-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-002",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on economy in the 1998 manifesto.",
+    "domain": "economy",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 9 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-002",
+      "url": "https://example.org/fixture/evidence/bjp-1998-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-003",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on health in the 1998 manifesto.",
+    "domain": "health",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 12 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-003",
+      "url": "https://example.org/fixture/evidence/bjp-1998-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-004",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on education in the 1998 manifesto.",
+    "domain": "education",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 15 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-004",
+      "url": "https://example.org/fixture/evidence/bjp-1998-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-005",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on agriculture in the 1998 manifesto.",
+    "domain": "agriculture",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 18 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-005",
+      "url": "https://example.org/fixture/evidence/bjp-1998-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-006",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on social-welfare in the 1998 manifesto.",
+    "domain": "social-welfare",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 21 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-006",
+      "url": "https://example.org/fixture/evidence/bjp-1998-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-007",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on infrastructure in the 1998 manifesto.",
+    "domain": "infrastructure",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 24 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-007",
+      "url": "https://example.org/fixture/evidence/bjp-1998-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1998-008",
+    "party": "bjp",
+    "election": 1998,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on governance in the 1998 manifesto.",
+    "domain": "governance",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 27 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1998-008",
+      "url": "https://example.org/fixture/evidence/bjp-1998-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1998",
+      "url": "https://example.org/fixture/manifesto/bjp-1998"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-001",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on economy in the 1999 manifesto.",
+    "domain": "economy",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 7 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-001",
+      "url": "https://example.org/fixture/evidence/inc-1999-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-002",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on health in the 1999 manifesto.",
+    "domain": "health",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 10 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-002",
+      "url": "https://example.org/fixture/evidence/inc-1999-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-003",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on education in the 1999 manifesto.",
+    "domain": "education",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 13 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-003",
+      "url": "https://example.org/fixture/evidence/inc-1999-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-004",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on agriculture in the 1999 manifesto.",
+    "domain": "agriculture",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 16 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-004",
+      "url": "https://example.org/fixture/evidence/inc-1999-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-005",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on social-welfare in the 1999 manifesto.",
+    "domain": "social-welfare",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 19 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-005",
+      "url": "https://example.org/fixture/evidence/inc-1999-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-006",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on infrastructure in the 1999 manifesto.",
+    "domain": "infrastructure",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 22 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-006",
+      "url": "https://example.org/fixture/evidence/inc-1999-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-007",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on governance in the 1999 manifesto.",
+    "domain": "governance",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 25 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-007",
+      "url": "https://example.org/fixture/evidence/inc-1999-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-1999-008",
+    "party": "inc",
+    "election": 1999,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on defence in the 1999 manifesto.",
+    "domain": "defence",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 28 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-1999-008",
+      "url": "https://example.org/fixture/evidence/inc-1999-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 1999",
+      "url": "https://example.org/fixture/manifesto/inc-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-001",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on economy in the 1999 manifesto.",
+    "domain": "economy",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 7 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-001",
+      "url": "https://example.org/fixture/evidence/bjp-1999-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-002",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on health in the 1999 manifesto.",
+    "domain": "health",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 10 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-002",
+      "url": "https://example.org/fixture/evidence/bjp-1999-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-003",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on education in the 1999 manifesto.",
+    "domain": "education",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 13 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-003",
+      "url": "https://example.org/fixture/evidence/bjp-1999-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-004",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on agriculture in the 1999 manifesto.",
+    "domain": "agriculture",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 16 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-004",
+      "url": "https://example.org/fixture/evidence/bjp-1999-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-005",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on social-welfare in the 1999 manifesto.",
+    "domain": "social-welfare",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 19 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-005",
+      "url": "https://example.org/fixture/evidence/bjp-1999-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-006",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on infrastructure in the 1999 manifesto.",
+    "domain": "infrastructure",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 22 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-006",
+      "url": "https://example.org/fixture/evidence/bjp-1999-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-007",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on governance in the 1999 manifesto.",
+    "domain": "governance",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 25 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-007",
+      "url": "https://example.org/fixture/evidence/bjp-1999-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-1999-008",
+    "party": "bjp",
+    "election": 1999,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on defence in the 1999 manifesto.",
+    "domain": "defence",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 28 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-1999-008",
+      "url": "https://example.org/fixture/evidence/bjp-1999-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 1999",
+      "url": "https://example.org/fixture/manifesto/bjp-1999"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-001",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on infrastructure in the 2004 manifesto.",
+    "domain": "infrastructure",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 5 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-001",
+      "url": "https://example.org/fixture/evidence/inc-2004-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-002",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on governance in the 2004 manifesto.",
+    "domain": "governance",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 8 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-002",
+      "url": "https://example.org/fixture/evidence/inc-2004-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-003",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on defence in the 2004 manifesto.",
+    "domain": "defence",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 11 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-003",
+      "url": "https://example.org/fixture/evidence/inc-2004-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-004",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on economy in the 2004 manifesto.",
+    "domain": "economy",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 14 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-004",
+      "url": "https://example.org/fixture/evidence/inc-2004-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-005",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on health in the 2004 manifesto.",
+    "domain": "health",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 17 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-005",
+      "url": "https://example.org/fixture/evidence/inc-2004-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-006",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on education in the 2004 manifesto.",
+    "domain": "education",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 20 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-006",
+      "url": "https://example.org/fixture/evidence/inc-2004-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-007",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on agriculture in the 2004 manifesto.",
+    "domain": "agriculture",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 23 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-007",
+      "url": "https://example.org/fixture/evidence/inc-2004-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2004-008",
+    "party": "inc",
+    "election": 2004,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on social-welfare in the 2004 manifesto.",
+    "domain": "social-welfare",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 26 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2004-008",
+      "url": "https://example.org/fixture/evidence/inc-2004-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2004",
+      "url": "https://example.org/fixture/manifesto/inc-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-001",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on infrastructure in the 2004 manifesto.",
+    "domain": "infrastructure",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 5 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-001",
+      "url": "https://example.org/fixture/evidence/bjp-2004-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-002",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on governance in the 2004 manifesto.",
+    "domain": "governance",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 8 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-002",
+      "url": "https://example.org/fixture/evidence/bjp-2004-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-003",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on defence in the 2004 manifesto.",
+    "domain": "defence",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 11 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-003",
+      "url": "https://example.org/fixture/evidence/bjp-2004-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-004",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on economy in the 2004 manifesto.",
+    "domain": "economy",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 14 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-004",
+      "url": "https://example.org/fixture/evidence/bjp-2004-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-005",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on health in the 2004 manifesto.",
+    "domain": "health",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 17 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-005",
+      "url": "https://example.org/fixture/evidence/bjp-2004-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-006",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on education in the 2004 manifesto.",
+    "domain": "education",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 20 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-006",
+      "url": "https://example.org/fixture/evidence/bjp-2004-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-007",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on agriculture in the 2004 manifesto.",
+    "domain": "agriculture",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 23 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-007",
+      "url": "https://example.org/fixture/evidence/bjp-2004-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2004-008",
+    "party": "bjp",
+    "election": 2004,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on social-welfare in the 2004 manifesto.",
+    "domain": "social-welfare",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 26 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2004-008",
+      "url": "https://example.org/fixture/evidence/bjp-2004-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2004",
+      "url": "https://example.org/fixture/manifesto/bjp-2004"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-001",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on education in the 2009 manifesto.",
+    "domain": "education",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 3 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-001",
+      "url": "https://example.org/fixture/evidence/inc-2009-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-002",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on agriculture in the 2009 manifesto.",
+    "domain": "agriculture",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 6 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-002",
+      "url": "https://example.org/fixture/evidence/inc-2009-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-003",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on social-welfare in the 2009 manifesto.",
+    "domain": "social-welfare",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 9 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-003",
+      "url": "https://example.org/fixture/evidence/inc-2009-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-004",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on infrastructure in the 2009 manifesto.",
+    "domain": "infrastructure",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 12 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-004",
+      "url": "https://example.org/fixture/evidence/inc-2009-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-005",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on governance in the 2009 manifesto.",
+    "domain": "governance",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 15 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-005",
+      "url": "https://example.org/fixture/evidence/inc-2009-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-006",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on defence in the 2009 manifesto.",
+    "domain": "defence",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 18 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-006",
+      "url": "https://example.org/fixture/evidence/inc-2009-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-007",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on economy in the 2009 manifesto.",
+    "domain": "economy",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 21 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-007",
+      "url": "https://example.org/fixture/evidence/inc-2009-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2009-008",
+    "party": "inc",
+    "election": 2009,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on health in the 2009 manifesto.",
+    "domain": "health",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 24 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2009-008",
+      "url": "https://example.org/fixture/evidence/inc-2009-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2009",
+      "url": "https://example.org/fixture/manifesto/inc-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-001",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on education in the 2009 manifesto.",
+    "domain": "education",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 3 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-001",
+      "url": "https://example.org/fixture/evidence/bjp-2009-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-002",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on agriculture in the 2009 manifesto.",
+    "domain": "agriculture",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 6 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-002",
+      "url": "https://example.org/fixture/evidence/bjp-2009-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-003",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on social-welfare in the 2009 manifesto.",
+    "domain": "social-welfare",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 9 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-003",
+      "url": "https://example.org/fixture/evidence/bjp-2009-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-004",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on infrastructure in the 2009 manifesto.",
+    "domain": "infrastructure",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 12 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-004",
+      "url": "https://example.org/fixture/evidence/bjp-2009-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-005",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on governance in the 2009 manifesto.",
+    "domain": "governance",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 15 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-005",
+      "url": "https://example.org/fixture/evidence/bjp-2009-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-006",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on defence in the 2009 manifesto.",
+    "domain": "defence",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 18 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-006",
+      "url": "https://example.org/fixture/evidence/bjp-2009-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-007",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on economy in the 2009 manifesto.",
+    "domain": "economy",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 21 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-007",
+      "url": "https://example.org/fixture/evidence/bjp-2009-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2009-008",
+    "party": "bjp",
+    "election": 2009,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on health in the 2009 manifesto.",
+    "domain": "health",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 24 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2009-008",
+      "url": "https://example.org/fixture/evidence/bjp-2009-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2009",
+      "url": "https://example.org/fixture/manifesto/bjp-2009"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-001",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on defence in the 2014 manifesto.",
+    "domain": "defence",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 8 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-001",
+      "url": "https://example.org/fixture/evidence/inc-2014-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-002",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on economy in the 2014 manifesto.",
+    "domain": "economy",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 11 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-002",
+      "url": "https://example.org/fixture/evidence/inc-2014-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-003",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on health in the 2014 manifesto.",
+    "domain": "health",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 14 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-003",
+      "url": "https://example.org/fixture/evidence/inc-2014-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-004",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on education in the 2014 manifesto.",
+    "domain": "education",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 17 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-004",
+      "url": "https://example.org/fixture/evidence/inc-2014-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-005",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on agriculture in the 2014 manifesto.",
+    "domain": "agriculture",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 20 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-005",
+      "url": "https://example.org/fixture/evidence/inc-2014-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-006",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on social-welfare in the 2014 manifesto.",
+    "domain": "social-welfare",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 23 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-006",
+      "url": "https://example.org/fixture/evidence/inc-2014-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-007",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on infrastructure in the 2014 manifesto.",
+    "domain": "infrastructure",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 26 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-007",
+      "url": "https://example.org/fixture/evidence/inc-2014-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2014-008",
+    "party": "inc",
+    "election": 2014,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on governance in the 2014 manifesto.",
+    "domain": "governance",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 29 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2014-008",
+      "url": "https://example.org/fixture/evidence/inc-2014-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2014",
+      "url": "https://example.org/fixture/manifesto/inc-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-001",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on defence in the 2014 manifesto.",
+    "domain": "defence",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 8 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-001",
+      "url": "https://example.org/fixture/evidence/bjp-2014-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-002",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on economy in the 2014 manifesto.",
+    "domain": "economy",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 11 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-002",
+      "url": "https://example.org/fixture/evidence/bjp-2014-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-003",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on health in the 2014 manifesto.",
+    "domain": "health",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 14 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-003",
+      "url": "https://example.org/fixture/evidence/bjp-2014-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-004",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on education in the 2014 manifesto.",
+    "domain": "education",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 17 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-004",
+      "url": "https://example.org/fixture/evidence/bjp-2014-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-005",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on agriculture in the 2014 manifesto.",
+    "domain": "agriculture",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 20 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-005",
+      "url": "https://example.org/fixture/evidence/bjp-2014-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-006",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on social-welfare in the 2014 manifesto.",
+    "domain": "social-welfare",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 23 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-006",
+      "url": "https://example.org/fixture/evidence/bjp-2014-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-007",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on infrastructure in the 2014 manifesto.",
+    "domain": "infrastructure",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 26 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-007",
+      "url": "https://example.org/fixture/evidence/bjp-2014-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2014-008",
+    "party": "bjp",
+    "election": 2014,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on governance in the 2014 manifesto.",
+    "domain": "governance",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 29 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2014-008",
+      "url": "https://example.org/fixture/evidence/bjp-2014-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2014",
+      "url": "https://example.org/fixture/manifesto/bjp-2014"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-001",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on social-welfare in the 2019 manifesto.",
+    "domain": "social-welfare",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 6 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-001",
+      "url": "https://example.org/fixture/evidence/inc-2019-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-002",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on infrastructure in the 2019 manifesto.",
+    "domain": "infrastructure",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 9 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-002",
+      "url": "https://example.org/fixture/evidence/inc-2019-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-003",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on governance in the 2019 manifesto.",
+    "domain": "governance",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 12 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-003",
+      "url": "https://example.org/fixture/evidence/inc-2019-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-004",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on defence in the 2019 manifesto.",
+    "domain": "defence",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 15 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-004",
+      "url": "https://example.org/fixture/evidence/inc-2019-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-005",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on economy in the 2019 manifesto.",
+    "domain": "economy",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 18 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-005",
+      "url": "https://example.org/fixture/evidence/inc-2019-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-006",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on health in the 2019 manifesto.",
+    "domain": "health",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 21 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-006",
+      "url": "https://example.org/fixture/evidence/inc-2019-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-007",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on education in the 2019 manifesto.",
+    "domain": "education",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 24 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-007",
+      "url": "https://example.org/fixture/evidence/inc-2019-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2019-008",
+    "party": "inc",
+    "election": 2019,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on agriculture in the 2019 manifesto.",
+    "domain": "agriculture",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 27 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2019-008",
+      "url": "https://example.org/fixture/evidence/inc-2019-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2019",
+      "url": "https://example.org/fixture/manifesto/inc-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-001",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on social-welfare in the 2019 manifesto.",
+    "domain": "social-welfare",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 6 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-001",
+      "url": "https://example.org/fixture/evidence/bjp-2019-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-002",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on infrastructure in the 2019 manifesto.",
+    "domain": "infrastructure",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 9 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-002",
+      "url": "https://example.org/fixture/evidence/bjp-2019-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-003",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on governance in the 2019 manifesto.",
+    "domain": "governance",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 12 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-003",
+      "url": "https://example.org/fixture/evidence/bjp-2019-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-004",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on defence in the 2019 manifesto.",
+    "domain": "defence",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 15 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-004",
+      "url": "https://example.org/fixture/evidence/bjp-2019-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-005",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on economy in the 2019 manifesto.",
+    "domain": "economy",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 18 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-005",
+      "url": "https://example.org/fixture/evidence/bjp-2019-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-006",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on health in the 2019 manifesto.",
+    "domain": "health",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 21 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-006",
+      "url": "https://example.org/fixture/evidence/bjp-2019-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-007",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on education in the 2019 manifesto.",
+    "domain": "education",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 24 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-007",
+      "url": "https://example.org/fixture/evidence/bjp-2019-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2019-008",
+    "party": "bjp",
+    "election": 2019,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on agriculture in the 2019 manifesto.",
+    "domain": "agriculture",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 27 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2019-008",
+      "url": "https://example.org/fixture/evidence/bjp-2019-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2019",
+      "url": "https://example.org/fixture/manifesto/bjp-2019"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-001",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on health in the 2024 manifesto.",
+    "domain": "health",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 4 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-001",
+      "url": "https://example.org/fixture/evidence/inc-2024-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-002",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on education in the 2024 manifesto.",
+    "domain": "education",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 7 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-002",
+      "url": "https://example.org/fixture/evidence/inc-2024-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-003",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on agriculture in the 2024 manifesto.",
+    "domain": "agriculture",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 10 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-003",
+      "url": "https://example.org/fixture/evidence/inc-2024-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-004",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on social-welfare in the 2024 manifesto.",
+    "domain": "social-welfare",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 13 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-004",
+      "url": "https://example.org/fixture/evidence/inc-2024-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-005",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on infrastructure in the 2024 manifesto.",
+    "domain": "infrastructure",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 16 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-005",
+      "url": "https://example.org/fixture/evidence/inc-2024-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-006",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on governance in the 2024 manifesto.",
+    "domain": "governance",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 19 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-006",
+      "url": "https://example.org/fixture/evidence/inc-2024-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-007",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on defence in the 2024 manifesto.",
+    "domain": "defence",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 22 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-007",
+      "url": "https://example.org/fixture/evidence/inc-2024-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "inc-2024-008",
+    "party": "inc",
+    "election": 2024,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on economy in the 2024 manifesto.",
+    "domain": "economy",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 25 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence inc-2024-008",
+      "url": "https://example.org/fixture/evidence/inc-2024-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto INC 2024",
+      "url": "https://example.org/fixture/manifesto/inc-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-001",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 1: a short paraphrase of a pledge on health in the 2024 manifesto.",
+    "domain": "health",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 1, with a figure of 4 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-001",
+      "url": "https://example.org/fixture/evidence/bjp-2024-001",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-002",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 2: a short paraphrase of a pledge on education in the 2024 manifesto.",
+    "domain": "education",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 2, with a figure of 7 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-002",
+      "url": "https://example.org/fixture/evidence/bjp-2024-002",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-003",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 3: a short paraphrase of a pledge on agriculture in the 2024 manifesto.",
+    "domain": "agriculture",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 3, with a figure of 10 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-003",
+      "url": "https://example.org/fixture/evidence/bjp-2024-003",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-004",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 4: a short paraphrase of a pledge on social-welfare in the 2024 manifesto.",
+    "domain": "social-welfare",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 4, with a figure of 13 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-004",
+      "url": "https://example.org/fixture/evidence/bjp-2024-004",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-005",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 5: a short paraphrase of a pledge on infrastructure in the 2024 manifesto.",
+    "domain": "infrastructure",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 5, with a figure of 16 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-005",
+      "url": "https://example.org/fixture/evidence/bjp-2024-005",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-006",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 6: a short paraphrase of a pledge on governance in the 2024 manifesto.",
+    "domain": "governance",
+    "status": "partly-delivered",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 6, with a figure of 19 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-006",
+      "url": "https://example.org/fixture/evidence/bjp-2024-006",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-007",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 7: a short paraphrase of a pledge on defence in the 2024 manifesto.",
+    "domain": "defence",
+    "status": "abandoned",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 7, with a figure of 22 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-007",
+      "url": "https://example.org/fixture/evidence/bjp-2024-007",
+      "publisher": "Example Ministry",
+      "type": "official-data"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  },
+  {
+    "id": "bjp-2024-008",
+    "party": "bjp",
+    "election": 2024,
+    "text": "Fixture promise 8: a short paraphrase of a pledge on economy in the 2024 manifesto.",
+    "domain": "economy",
+    "status": "unclear",
+    "evidence": "Fixture evidence: the record shows an outcome for pledge 8, with a figure of 25 units in the cited release.",
+    "evidenceSource": {
+      "title": "Fixture evidence bjp-2024-008",
+      "url": "https://example.org/fixture/evidence/bjp-2024-008",
+      "publisher": "Example Ministry",
+      "type": "reputable-media"
+    },
+    "manifestoSource": {
+      "title": "Fixture manifesto BJP 2024",
+      "url": "https://example.org/fixture/manifesto/bjp-2024"
+    },
+    "asOf": "2026-10-13"
+  }
+]

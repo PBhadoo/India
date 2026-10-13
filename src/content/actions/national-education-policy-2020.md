@@ -62,6 +62,18 @@ sources:
     url: https://www.impriindia.com/insights/policy-update/viksit-bharat-shiksha/
     publisher: IMPRI (Impact and Policy Research Institute)
     type: academic
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The policy aims to pave the way for transformational reforms, bring 2 crore out-of-school children back through open schooling, and bring the 3-6 age group under the school curriculum.", madeBy: "Union Cabinet release, 29 July 2020 (Modi government)", source: 1 }
+    - { point: "Higher-education GER rose from 28.4 in 2021-22 to 29.5 in 2022-23 and 30 in 2023-24 (the data do not isolate an effect of the policy).", madeBy: "All India Survey on Higher Education, Ministry of Education", source: 3 }
+    - { point: "The policy provides flexible three- or four-year undergraduate programmes with multiple exit options and an Academic Bank of Credits, and states that 'no language will be imposed'.", madeBy: "Union Cabinet release, 29 July 2020", source: 1 }
+  change:
+    - { point: "Actual spending was Rs 32,296.54 crore against Rs 62,660 crore budgeted (51.5%) for five centrally sponsored school schemes in 2025-26, against the policy aspiration of 6% of GDP.", madeBy: "Parliamentary panel, as reported by SPRF", source: 4 }
+    - { point: "Implementation and funding should be reconsidered: Tamil Nadu, Kerala and West Bengal were denied Samagra Shiksha funds after declining to sign an NEP MoU; Tamil Nadu states Rs 2,400 crore was withheld after it did not join PM-SHRI.", madeBy: "Tamil Nadu government, as reported by SPRF", source: 4 }
+    - { point: "Concentrated powers in a single higher-education regulator could weaken institutional autonomy.", madeBy: "IMPRI (Impact and Policy Research Institute), analysis of the 2025 Bill", source: 5 }
+  repeal:
+    - { point: "Education should move to the State List and the policy's three-language approach is not adopted; Tamil Nadu cites linguistic autonomy and centralisation and opposes implementation.", madeBy: "Tamil Nadu government (State Education Policy), as reported by SPRF", source: 4 }
 scoring:
   era_baseline: Higher-education GER had risen from 23.7 in 2014-15 to 28.4 in 2021-22 (AISHE) before and around the policy; the prior national policy dated from 1986.
   lag_years: 6

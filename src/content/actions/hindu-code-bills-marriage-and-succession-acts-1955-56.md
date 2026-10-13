@@ -39,6 +39,15 @@ sources:
   - { title: "Hindu Succession Act, 1956", url: "https://en.wikipedia.org/wiki/Hindu_Succession_Act,_1956", publisher: Wikipedia, type: reputable-media }
   - { title: "Vineeta Sharma vs Rakesh Sharma, 11 August 2020", url: "https://indiankanoon.org/doc/67965481/", publisher: Supreme Court of India via Indian Kanoon, type: court }
   - { title: "Hindu Marriage Act, 1955", url: "https://en.wikipedia.org/wiki/Hindu_Marriage_Act,_1955", publisher: Wikipedia, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Hindu law should be codified, with a Code that allowed divorce and gave daughters inheritance shares.", madeBy: "B. R. Ambedkar's drafting committee (draft Hindu Code Bill)", source: 1 }
+    - { point: "Congress promised to pass the Hindu Code if it won the 1951-52 election.", madeBy: "Prime Minister Jawaharlal Nehru, 1951-52 campaign", source: 1 }
+    - { point: "The Succession Act amends, codifies and secularizes intestate succession among Hindus and makes a Hindu woman's property her absolute property.", madeBy: "Parliament, Hindu Succession Act, 1956, as summarised", source: 3 }
+  change:
+    - { point: "Daughters were not given equal coparcenary rights until 2005; daughters are coparceners by birth whether born before or after the amendment.", madeBy: "Supreme Court of India, Vineeta Sharma v. Rakesh Sharma (11 August 2020)", source: 4 }
+    - { point: "The reform covered Hindus only, leaving Muslim, Christian and Parsi personal laws unchanged; personal laws conflict with women's rights as individual citizens.", madeBy: "Nivedita Menon (scholar), as cited", source: 1 }
 scoring:
   era_baseline: "In the early 1950s Hindu marriage and inheritance followed uncodified texts and customs, and an earlier draft code had been defeated in the Constituent Assembly period."
   lag_years: 10

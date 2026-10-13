@@ -36,6 +36,15 @@ sources:
   - { title: "Seventy-fourth Amendment of the Constitution of India", url: "https://en.wikipedia.org/wiki/Seventy-fourth_Amendment_of_the_Constitution_of_India", publisher: Wikipedia, type: reputable-media }
   - { title: "Main Activities/Initiatives of Ministry of Panchayati Raj in 2009", url: "https://www.pib.gov.in/newsite/erelcontent.aspx?relid=56418", publisher: Press Information Bureau, type: official-data }
   - { title: "Bhattiprolu Gram Panchayat and Others vs The District Collector, 7 January 2016", url: "https://indiankanoon.org/doc/174542789/", publisher: Indian Kanoon (High Court), type: court }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The 73rd Amendment gave constitutional status to Panchayati Raj institutions as a framework for rural local self-government, with five-year terms, State Election Commissions and reservation for women, SC and ST members.", madeBy: "Parliament, Constitution (73rd Amendment) Act, 1992 (Rao government), as summarised", source: 1 }
+    - { point: "The 74th Amendment was built on the premise that all power in a democracy rightfully belongs to the people, and made urban local bodies the lowest unit of governance, with ward committees and planning committees.", madeBy: "Parliament, Constitution (74th Amendment) Act, 1992 (Rao government), as summarised", source: 2 }
+    - { point: "Courts read the Eleventh Schedule with Article 243G as enabling states to devolve functions by legislation, which preserves state-level design of local government.", madeBy: "High Court, Bhattiprolu Gram Panchayat v. District Collector (7 January 2016)", source: 4 }
+  change:
+    - { point: "Devolution of functions, funds and staff depends on state legislation, and implementation varies; the Eleventh Schedule is enabling, not a guarantee of exclusive functions.", madeBy: "High Court, Bhattiprolu Gram Panchayat v. District Collector (7 January 2016)", source: 4 }
+    - { point: "Only 12 of the 24 applicable States had constituted District Planning Committees until about four years before 2009.", madeBy: "Ministry of Panchayati Raj, note of 2009", source: 3 }
 scoring:
   era_baseline: "Before 1993 local bodies were created under state laws, and the Constitution did not require them to be elected or funded in a set way."
   lag_years: 10

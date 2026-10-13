@@ -1,0 +1,20 @@
+---
+import DossierStatus from './DossierStatus.astro';
+import { fmtDate, isoDate } from '../lib/format.ts';
+import { getCategory } from '../lib/taxonomy.ts';
+import type { DossierRow } from '../lib/site.ts';
+interface Props { dossier: DossierRow; showCategory?: boolean }
+const { dossier: d, showCategory = true } = Astro.props;
+const cat = getCategory(d.data.category);
+const n = (d.data.positions ?? []).length;
+---
+<article class="acard dcard debate-card">
+  <div class="meta">
+    <span class="badge badge-kind">Debate</span>
+    <DossierStatus status={d.data.status} />
+    {showCategory && cat && <span>{cat.name}</span>}
+  </div>
+  <h3><a href={`/dossiers/${d.slug}/`}>{d.data.title}</a></h3>
+  <p>{d.data.summary}</p>
+  <p class="small asof"><strong>{n} {n === 1 ? 'position' : 'positions'}</strong> laid out. Facts as of <time datetime={isoDate(d.data.asOf)}>{fmtDate(d.data.asOf)}</time></p>
+</article>

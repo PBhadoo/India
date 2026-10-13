@@ -42,6 +42,19 @@ sources:
   - { title: "Supreme Court bars registration of new suits against places of worship (order of 12 December 2024)", url: "https://www.livelaw.in/amp/top-stories/supreme-court-bars-registration-of-new-suits-against-places-of-worship-stops-courts-from-passing-effectivefinalsurvey-orders-in-pending-suits-278147", publisher: "LiveLaw", type: reputable-media }
   - { title: "Places of Worship Act 1991 overview (introduction, debate and passage)", url: "https://blog.ipleaders.in/place-of-worship-act-1991/", publisher: "iPleaders", type: reputable-media }
   - { title: "Explainer: Ashwini Kumar Upadhyay v. Union of India, a challenge to the Places of Worship Act, 1991", url: "https://lawandotherthings.com/explainer-ashwini-kumar-upadhyay-v-union-of-india-a-challenge-to-the-places-of-worship-act-1991/", publisher: "Law and Other Things", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Efforts to convert religious institutions corrupt the environment of the community, and the Bill would help restore communal amity.", madeBy: "Home Minister S. B. Chavan (INC), 1991, as reported", source: 3 }
+    - { point: "The 1947 cut-off date is defensible by reference to independence: 'We don't want to go into history'.", madeBy: "Ram Vilas Paswan (MP), 1991, quoted in an advocate's column", source: 1 }
+    - { point: "The Act is a legislative instrument designed to protect the secular features of the Indian polity, a basic feature of the Constitution (obiter, not a decision on constitutionality).", madeBy: "Supreme Court of India, Constitution Bench, M. Siddiq v. Mahant Suresh Das (2019), as quoted in later filings", source: 1 }
+    - { point: "The Act should be enforced; its supporters argue it protects secularism and public order.", madeBy: "Jamiat Ulama-i-Hind and other parties seeking its enforcement or intervening in the Supreme Court", source: 2 }
+  change:
+    - { point: "Ayodhya should not be the only exempted site: the Gyanvapi and Mathura sites should be excluded along with Ayodhya, and the Bill was outside the Lok Sabha's legislative competence.", madeBy: "BJP members of the Lok Sabha, 1991, as reported", source: 3 }
+    - { point: "The bar on remedies denies access to justice and exempting only Ayodhya discriminates among sites (Articles 14, 15, 21, 25, 26, 29).", madeBy: "Petitioners and an advocate's column in Bar and Bench", source: 1 }
+    - { point: "While petitions are pending, no new suits are to be registered and courts are not to pass effective interim or final orders, including survey orders, in pending suits.", madeBy: "Supreme Court of India (CJI Sanjiv Khanna, Justices Sanjay Kumar and K. V. Viswanathan), interim order of 12 December 2024", source: 2 }
+  repeal:
+    - { point: "The 1947 cut-off is arbitrary and the Act should be struck down.", madeBy: "Ashwini Kumar Upadhyay and other petitioners, Supreme Court", source: 4 }
 scoring:
   era_baseline: "In 1991 disputes over religious sites, notably Ayodhya, were the subject of mass mobilisation and litigation; no general statutory freeze on the character of sites existed."
   lag_years: 5

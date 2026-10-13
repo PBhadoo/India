@@ -37,6 +37,16 @@ sources:
   - { title: "National Policy on Education", url: "https://en.wikipedia.org/wiki/National_Policy_on_Education", publisher: Wikipedia, type: reputable-media }
   - { title: "National Policy on Education 1986: Programme of Action (PDF copy)", url: "https://dbuniversity.ac.in/pdfs/ncte/14-poa1986.pdf", publisher: Ministry of Human Resource Development (copy hosted by DBU), type: primary }
   - { title: "Development since National Policy of Education, 1986 and its Programme of Action", url: "https://educationforallinindia.com/page65.html", publisher: Education for All in India, type: reputable-media }
+  - { title: "Acharya Ramamurti Committee Report: Towards an Enlightened and Humane Society (Committee for Review of NPE 1986)", url: "https://cprindia.org/wp-content/uploads/2022/12/Acharya-Ramamurti-Committee-Report-Towards-an-Enlightened-and-Humane-Society.-A-Perspective-Paper-on-Education.-Committee-for-Review-of-National-Policy-on-Education-NPE-1986-.pdf", publisher: "Centre for Policy Research (copy of the committee report)", type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Educational opportunity should be equalised through a 'special emphasis on the removal of disparities', especially for women, Scheduled Tribes and Scheduled Castes.", madeBy: "National Policy on Education, 1986 (Rajiv Gandhi government), policy text", source: 1 }
+    - { point: "Operation Blackboard improves primary schools and Jawahar Navodaya Vidyalayas serve talented rural children.", madeBy: "National Policy on Education, 1986 (Rajiv Gandhi government), as described", source: 3 }
+    - { point: "The open university system was expanded through the Indira Gandhi National Open University, created in 1985.", madeBy: "National Policy on Education, 1986, policy text", source: 1 }
+  change:
+    - { point: "The 1986 policy should be reviewed and modified; a review committee was set up in May 1990 (report titled 'Towards an Enlightened and Humane Society').", madeBy: "Committee for Review of NPE 1986 chaired by Acharya Ramamurti (set up 1990)", source: 4 }
+    - { point: "The policy was modified in May 1992 on the recommendation of a committee of the Central Advisory Board of Education, with a revised Programme of Action in August 1992.", madeBy: "Central Advisory Board of Education and the P. V. Narasimha Rao government, 1992", source: 2 }
 scoring:
   era_baseline: "In the mid-1980s India had a national education policy framework and expanding enrolment, with open and distance learning only beginning (IGNOU was created in 1985)."
   lag_years: 6

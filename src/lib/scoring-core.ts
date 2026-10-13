@@ -1,6 +1,6 @@
 import { CRITERIA } from './types.ts';
 import type { CriterionId, Government, ScorableAction, ScorerEntry } from './types.ts';
-import { partyYears, todayISO } from './tenure.ts';
+import { partyYears, todayISO, yearsInOffice } from './tenure.ts';
 
 export const IMPLEMENTER_CREDIT = 1.0;
 export const ORIGINATOR_CREDIT = 0.25;
@@ -152,6 +152,8 @@ export interface PartyResult {
 
 export interface ScoringResult {
   parties: PartyResult[];
+  /** Same credits rolled up into INC-led, BJP-led and Other governments (Addendum v3). */
+  blocs: BlocResult[];
   /** Scored actions that carry party credit (credit 'party'). */
   scoredActionCount: number;
   /** Scored actions with credit 'none': shown, never added to a party total. */
@@ -263,6 +265,126 @@ export function clipGovernments<T extends GovLite>(govs: T[], yearFrom?: number,
   return out;
 }
 
+// ---------------------------------------------------------------------------------------------
+// Blocs (Addendum v3): a Centre government's bloc comes from its lead party. Coalition partners'
+// credit and years roll up into the lead bloc (UPA = INC-led, NDA = BJP-led).
+// ---------------------------------------------------------------------------------------------
+export const BLOC_IDS = ['inc', 'bjp', 'other'] as const;
+export type BlocId = (typeof BLOC_IDS)[number];
+/** Blocs shown in the headline table and the side-by-side page, in this fixed order (not ranked). */
+export const HEADLINE_BLOCS: BlocId[] = ['inc', 'bjp'];
+export const BLOC_LABEL: Record<BlocId, string> = { inc: 'INC-led', bjp: 'BJP-led', other: 'Other governments' };
+export const BLOC_NOTE: Record<BlocId, string> = {
+  inc: 'Governments led by the Indian National Congress, with their coalition partners (for example UPA).',
+  bjp: 'Governments led by the Bharatiya Janata Party, with their coalition partners (for example NDA).',
+  other: 'Governments led by any other party (Janata Party, Janata Dal, National Front, United Front, Samajwadi Janata and similar).',
+};
+const LEAD_TO_BLOC: Record<string, BlocId> = { inc: 'inc', bjp: 'bjp' };
+
+/** `inc` -> INC-led, `bjp` -> BJP-led, anything else (including no lead party) -> Other. */
+export function blocOf(government: { leadParty?: string | null } | null | undefined): BlocId {
+  return LEAD_TO_BLOC[government?.leadParty ?? ''] ?? 'other';
+}
+
+export interface BlocCell extends CategoryCell {
+  /** Weighted points / (bloc years in power + PRIOR_YEARS). null when the cell has no scored actions. */
+  shrunkPerYear: number | null;
+  /** Unweighted mean credited points per scored action in this category. null when none. */
+  avgPerAction: number | null;
+}
+
+export interface BlocResult extends PartyResult {
+  /** Equal to partyId; kept so callers read naturally. */
+  blocId: BlocId;
+  label: string;
+  /** Governments of this bloc with time in office inside the period (all of them: nothing is dropped). */
+  governmentIds: string[];
+  categories: Record<string, BlocCell>;
+}
+
+/** Bloc totals from credits and governments (already clipped to the period if needed). */
+export function aggregateBlocs(
+  credits: Credit[],
+  governments: GovLite[],
+  opts: AggregateOptions & { asOf?: string } = {},
+): BlocResult[] {
+  const asOf = opts.asOf ?? todayISO();
+  const blocOfGov = new Map<string, BlocId>(governments.map((g) => [g.id, blocOf(g)]));
+  const years: Record<string, { weighted: number; led: number }> = Object.fromEntries(BLOC_IDS.map((b) => [b, { weighted: 0, led: 0 }]));
+  const govIds: Record<BlocId, string[]> = { inc: [], bjp: [], other: [] };
+  for (const g of governments) {
+    const y = yearsInOffice(g, asOf);
+    if (y <= 0) continue;
+    const b = blocOf(g);
+    years[b].weighted += y;
+    years[b].led += y;
+    govIds[b].push(g.id);
+  }
+  const rolled = credits
+    .filter((c) => blocOfGov.has(c.governmentId))
+    .map((c) => ({ ...c, partyId: blocOfGov.get(c.governmentId)! }));
+  const base = aggregateParties(rolled, years, opts);
+  const out: BlocResult[] = [];
+  for (const id of BLOC_IDS) {
+    const r = base.find((p) => p.partyId === id);
+    if (!r) continue;
+    const div = r.yearsInPower + PRIOR_YEARS;
+    const categories: Record<string, BlocCell> = {};
+    for (const [cat, c] of Object.entries(r.categories)) {
+      categories[cat] = {
+        ...c,
+        shrunkPerYear: c.scoredActions > 0 ? (c.points * c.weight) / div : null,
+        avgPerAction: c.scoredActions > 0 ? c.points / c.scoredActions : null,
+      };
+    }
+    out.push({ ...r, blocId: id, label: BLOC_LABEL[id], governmentIds: govIds[id], categories });
+  }
+  return out;
+}
+
+export interface BlocPointsInput extends Omit<PointsInput, 'governments'> {
+  governments: GovLite[];
+}
+
+/** Browser-side recompute for blocs: same period clipping as computePoints, then aggregateBlocs. */
+export function computeBlocPoints(input: BlocPointsInput): BlocResult[] {
+  const asOf = input.asOf ?? todayISO();
+  const { yearFrom, yearTo } = input;
+  const credits = input.credits.filter(
+    (c) => c.year == null || ((yearFrom == null || c.year >= yearFrom) && (yearTo == null || c.year <= yearTo)),
+  );
+  const govs = clipGovernments(input.governments, yearFrom, yearTo, asOf);
+  return aggregateBlocs(credits, govs, {
+    asOf,
+    categoryIds: input.categoryIds,
+    weights: input.weights,
+    lowDataMin: input.lowDataMin,
+    flaggedSlugs: new Set(credits.filter((c) => c.flagged).map((c) => c.slug)),
+  });
+}
+
+export interface ActionSummary {
+  /** Actions listed. */
+  count: number;
+  /** Of those, scored. */
+  scored: number;
+  /** Plain mean of the scored actions' own points (not credit-weighted); null when none. */
+  avg: number | null;
+  avgLow: number | null;
+  avgHigh: number | null;
+  lowData: boolean;
+}
+
+/** Summary row for a list of actions: count, mean points with the mean of the scorers' low and high totals. */
+export function summarizeActions(
+  items: { points: number; low: number; high: number; scored: boolean }[],
+  lowDataMin = LOW_DATA_MIN_ACTIONS,
+): ActionSummary {
+  const s = items.filter((i) => i.scored);
+  const m = (f: (i: (typeof s)[number]) => number) => (s.length ? s.reduce((n, i) => n + f(i), 0) / s.length : null);
+  return { count: items.length, scored: s.length, avg: m((i) => i.points), avgLow: m((i) => i.low), avgHigh: m((i) => i.high), lowData: isLowData(s.length, lowDataMin) };
+}
+
 export interface PointsInput {
   credits: (Credit & { year?: number; flagged?: boolean })[];
   governments: GovLite[];
@@ -324,8 +446,17 @@ export function computeScoring(
     flaggedSlugs: new Set(flagged.map((f) => f.slug)),
   });
 
+  const blocs = aggregateBlocs(credits, govs, {
+    asOf,
+    categoryIds: opts.categoryIds,
+    weights: opts.weights,
+    lowDataMin: opts.lowDataMin,
+    flaggedSlugs: new Set(flagged.map((f) => f.slug)),
+  });
+
   return {
     parties,
+    blocs,
     credits,
     scoredActionCount: scoredCount,
     noCreditScoredCount: noCreditCount,

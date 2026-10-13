@@ -1,0 +1,92 @@
+---
+import { indicatorBars, BLOC_LABEL, BLOC_SLOT, type Indicator, type Period } from '../lib/datasets.ts';
+import { SOURCE_TYPE_LABEL, MINUS } from '../lib/format.ts';
+interface Props { indicator: Indicator; periods: Period[] }
+const { indicator: ind, periods } = Astro.props;
+const { rows, zero } = indicatorBars(ind, periods);
+const fmt = (v: number) => {
+  const s = Math.abs(v).toLocaleString('en-IN', { maximumFractionDigits: 2 });
+  return (v < 0 ? MINUS : '') + s;
+};
+const shown = rows.filter((r) => r.value !== null).length;
+const hasNeg = rows.some((r) => (r.value ?? 0) < 0);
+---
+<article class="ind" id={`ind-${ind.id}`} data-domain={ind.domain} aria-labelledby={`h-${ind.id}`}>
+  <header>
+    <h3 id={`h-${ind.id}`}>{ind.name}</h3>
+    <p class="ind-unit"><span class="unit">{ind.unit}</span> <span class="basis">{ind.basis}</span></p>
+  </header>
+  <figure class="ind-fig">
+    <figcaption class="vh">{ind.name}, {ind.unit}, by period. {shown} of {rows.length} periods have a comparable value. The same data is in the table below.</figcaption>
+    <ul class="bars">
+      {rows.map((r) => (
+        <li class={`brow${r.value === null ? ' none' : ''}`}>
+          <span class="plabel">{r.period.label}<span class="pbloc">{BLOC_LABEL[r.bloc]}</span></span>
+          <span class="plot">
+            {hasNeg && r.value !== null && <span class="zero" style={`left:${zero}%`} aria-hidden="true"></span>}
+            {r.value === null ? (
+              <span class="nov">No comparable value</span>
+            ) : (
+              <>
+                <span class={`bar p${BLOC_SLOT[r.bloc]} pat${BLOC_SLOT[r.bloc]}`} style={`left:${r.left}%;width:${r.width}%`} aria-hidden="true"></span>
+                <span class="val" style={r.value < 0 ? `right:calc(${100 - r.left}% + 5px)` : `left:calc(${r.left + r.width}% + 5px)`}>{fmt(r.value)}</span>
+              </>
+            )}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </figure>
+  <details class="tv">
+    <summary>Table view</summary>
+    <div class="table-wrap" tabindex="0" role="region" aria-label={`${ind.name}, table view`}>
+      <table class="data">
+        <caption>{ind.name}<span class="small">{ind.unit}. {ind.basis}</span></caption>
+        <thead><tr><th scope="col">Period</th><th scope="col">Group</th><th scope="col" class="num">Value</th><th scope="col">Note</th></tr></thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr>
+              <th scope="row">{r.period.label}</th>
+              <td>{BLOC_LABEL[r.bloc]}</td>
+              <td class="num">{r.value === null ? <span class="muted">none</span> : fmt(r.value)}</td>
+              <td>{r.note ?? (r.value === null ? <span class="muted">No comparable series</span> : '')}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </details>
+  <div class="ind-meta">
+    <h4>Source</h4>
+    <p class="small"><a href={ind.source.url} rel="noopener">{ind.source.title}</a>{ind.source.publisher && <>, {ind.source.publisher}</>} {ind.source.type && <span class="badge">{SOURCE_TYPE_LABEL[ind.source.type] ?? ind.source.type}</span>}</p>
+    <h4>Caveats</h4>
+    <ul class="caveats">
+      {ind.caveats.map((c) => <li>{c}</li>)}
+    </ul>
+  </div>
+</article>
+<style is:global>
+  .ind { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.1rem 1.2rem; min-width: 0; }
+  .ind h3 { margin: 0 0 0.2rem; font-size: 1.15rem; }
+  .ind-unit { margin: 0 0 0.8rem; font-size: 0.9rem; color: var(--ink-2); }
+  .ind-unit .unit { font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-right: 0.4rem; }
+  .ind-fig { margin: 0; }
+  .bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+  .brow { display: grid; grid-template-columns: minmax(6.2rem, 8.6rem) minmax(0, 1fr); gap: 0.6rem; align-items: center; margin: 0; }
+  .plabel { font-size: 0.86rem; line-height: 1.25; color: var(--ink); font-weight: 600; }
+  .pbloc { display: block; font-size: 0.72rem; font-weight: 500; color: var(--muted); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.03em; }
+  .plot { position: relative; height: 1.75rem; border-left: 1px solid var(--rule-strong); }
+  .plot .bar { position: absolute; top: 0.2rem; height: 1.35rem; border-radius: 0 4px 4px 0; border: 1px solid var(--rule-strong); border-left: 0; }
+  .plot .zero { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--ink-2); }
+  .plot .val { position: absolute; top: 50%; transform: translateY(-50%); font-size: 0.92rem; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+  .plot .nov { position: absolute; left: 0.5rem; top: 50%; transform: translateY(-50%); font-size: 0.8rem; color: var(--muted); font-style: italic; white-space: nowrap; }
+  .brow.none .plabel { color: var(--muted); font-weight: 500; }
+  details.tv { margin: 0.8rem 0 0; }
+  details.tv summary { cursor: pointer; font-weight: 600; font-size: 0.92rem; color: var(--accent); padding: 0.25rem 0; }
+  details.tv .table-wrap { margin-top: 0.5rem; }
+  .ind-meta { margin-top: 0.9rem; border-top: 1px solid var(--rule); padding-top: 0.7rem; }
+  .ind-meta h4 { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0.5rem 0 0.2rem; }
+  .ind-meta p { margin: 0; }
+  .caveats { margin: 0; padding-left: 1.1rem; font-size: 0.9rem; color: var(--ink-2); }
+  .caveats li { margin-bottom: 0.25rem; max-width: var(--measure); }
+</style>

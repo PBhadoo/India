@@ -1,6 +1,6 @@
-import type { PartyResult } from './scoring-core.ts';
+import type { PartyResult, BlocResult, BlocId } from './scoring-core.ts';
 import { esc, fmtNum, fmtSigned } from './format.ts';
-import { LOW_DATA_MIN_ACTIONS } from './scoring-core.ts';
+import { LOW_DATA_MIN_ACTIONS, HEADLINE_BLOCS, BLOC_LABEL, BLOC_NOTE } from './scoring-core.ts';
 
 export interface PointsCtx {
   parties: Record<string, { name: string; short: string; slot: number }>;
@@ -136,5 +136,100 @@ export function heatGridHtml(rows: PartyResult[], ctx: PointsCtx, base = '/'): s
 /** Min and max of heat cells, for the legend. */
 export function heatRange(rows: PartyResult[], ctx: PointsCtx): [number, number] | null {
   const v = rows.filter((r) => r.yearsInPower >= MIN_YEARS_FOR_RATE).flatMap((r) => ctx.categories.map((c) => r.categories[c.id]).filter((x) => x && x.scoredActions > 0 && x.pointsPerYear != null).map((x) => x!.pointsPerYear as number));
+  return v.length ? [Math.min(...v), Math.max(...v)] : null;
+}
+
+// ---------------------------------------------------------------------------------------------
+// Bloc view (Addendum v3). Same columns as the party table; INC-led then BJP-led in a fixed order
+// (never sorted by a figure), Other governments in a collapsed group with their governments listed.
+// ---------------------------------------------------------------------------------------------
+export interface BlocCtx {
+  governments: Record<string, { leader: string; start: string; end: string | null; lead: string }>;
+}
+
+export const blocSwatch = (b: BlocId) => `<span class="sw b-${b} pat-b-${b}" aria-hidden="true"></span>`;
+
+const yr = (iso: string) => iso.slice(0, 4);
+function govSpan(g: { start: string; end: string | null }): string {
+  const a = yr(g.start), b = g.end ? yr(g.end) : 'present';
+  return a === b ? a : `${a} to ${b}`;
+}
+
+export function blocRowsHtml(allBlocs: BlocResult[], ctx: PointsCtx, bctx: BlocCtx, metric: Metric = 'avg', base = '/'): string {
+  const byId = new Map(allBlocs.map((b) => [b.blocId, b]));
+  const head = HEADLINE_BLOCS.map((id) => byId.get(id)).filter((b): b is BlocResult => !!b);
+  const other = byId.get('other');
+  const showOther = !!other && (other.yearsInPower > 0 || other.scoredActions > 0);
+  const vals = head.flatMap((r) => { const f = figOf(r, metric); return f.v == null ? [] : [f.lo ?? 0, f.hi ?? 0, f.v]; });
+  const lo = Math.min(0, ...vals), hi = Math.max(0, ...vals);
+  const span = hi - lo || 1;
+  const pos = (v: number) => (((v - lo) / span) * 100).toFixed(1);
+  const whiskerOf = (f: Fig) =>
+    `<span class="whisk" aria-hidden="true"><i class="z" style="left:${pos(0)}%"></i><i class="r" style="left:${pos(f.lo ?? 0)}%;width:${(Number(pos(f.hi ?? 0)) - Number(pos(f.lo ?? 0))).toFixed(1)}%"></i><i class="d" style="left:${pos(f.v!)}%"></i></span>`;
+  const cell = (r: BlocResult, m: Metric, withWhisker: boolean, extra = '') => {
+    const f = figOf(r, m);
+    const has = f.v != null;
+    return `<td class="num${m === metric ? ' strong' : ''}"><span class="fig">${has ? fmtSigned(f.v) : '\u2013'}</span>${has ? `<span class="sub">range ${fmtSigned(f.lo)} to ${fmtSigned(f.hi)}</span>` : ''}${extra}${m === metric && has && withWhisker ? whiskerOf(f) : ''}</td>`;
+  };
+  const row = (r: BlocResult, withWhisker: boolean, cls = '') => {
+    const id = r.blocId;
+    const badge = r.scoredActions < LOW_DATA_MIN_ACTIONS ? ` <span class="badge badge-low" title="Fewer than ${LOW_DATA_MIN_ACTIONS} scored actions">Low data</span>` : '';
+    const covered = Object.values(r.categories).filter((c) => !c.lowData).length;
+    const n = r.avgActions === 0
+      ? `<span class="sub">No scored actions yet${badge}</span>`
+      : `<span class="sub">${r.avgActions} scored ${r.avgActions === 1 ? 'action' : 'actions'}${badge}</span><span class="sub">${covered} of ${ctx.categories.length} categories with ${LOW_DATA_MIN_ACTIONS}+</span>`;
+    const gl = r.governmentIds
+      .map((gid) => bctx.governments[gid])
+      .filter(Boolean);
+    const detail = id === 'other'
+      ? `<span class="sub">${esc(BLOC_NOTE.other)}</span><ul class="gov-list">${r.governmentIds.map((gid) => { const g = bctx.governments[gid]; return g ? `<li><a href="${base}governments/${esc(gid)}/">${esc(g.leader)}</a> <span class="mono">${govSpan(g)}</span></li>` : ''; }).join('')}</ul>`
+      : `<span class="sub">${gl.length} ${gl.length === 1 ? 'government' : 'governments'}, partners included</span>`;
+    return `<tr${cls ? ` class="${cls}"` : ''}>
+<th scope="row"><span class="chip bloc-chip" title="${esc(BLOC_NOTE[id])}">${blocSwatch(id)}<span>${esc(BLOC_LABEL[id])}</span></span>${detail}</th>
+${cell(r, 'avg', withWhisker, n)}
+${cell(r, 'shrunk', withWhisker)}
+<td class="num">${r.scoredActions ? fmtSigned(r.points) : '\u2013'}${r.scoredActions ? `<span class="sub">range ${fmtSigned(r.low)} to ${fmtSigned(r.high)}</span>` : ''}</td>
+<td class="num">${fmtNum(r.yearsInPower)}<span class="sub">all years kept</span></td>
+</tr>`;
+  };
+  let html = head.map((r) => row(r, true)).join('\n');
+  if (showOther && other) {
+    html += `\n<tr class="grp short-row"><th scope="colgroup" colspan="5">Other governments. Led by other parties, so listed apart and drawn without a scale. Their years are included in every tenure total.</th></tr>\n`;
+    html += row(other, false, 'short-row');
+  }
+  return html;
+}
+
+/** Heat grid for blocs: categories as rows, INC-led and BJP-led as columns, shrunk points per year. */
+export function blocHeatHtml(blocs: BlocResult[], ctx: PointsCtx, base = '/'): string {
+  const cols = HEADLINE_BLOCS.map((id) => blocs.find((b) => b.blocId === id)).filter((b): b is BlocResult => !!b);
+  const cells = cols.flatMap((r) => ctx.categories.map((c) => r.categories[c.id]).filter((x) => x && x.scoredActions > 0 && x.shrunkPerYear != null).map((x) => x!.shrunkPerYear as number));
+  if (cells.length === 0) return `<tbody><tr><td class="nodata-row">No scored actions in this period yet, so the grid is empty.</td></tr></tbody>`;
+  const min = Math.min(...cells), max = Math.max(...cells);
+  const span = max - min || 1;
+  const head = `<tr><td class="corner"><span class="vh">Category</span></td>${cols.map((r) => `<th scope="col" class="colh"><span class="chip bloc-chip" title="${esc(BLOC_NOTE[r.blocId])}">${blocSwatch(r.blocId)}<span>${esc(r.label)}</span></span></th>`).join('')}</tr>`;
+  const body = ctx.categories
+    .map((c) => {
+      const tds = cols
+        .map((r) => {
+          const cell = r.categories[c.id];
+          const label = `${r.label}, ${c.name}`;
+          if (!cell || cell.shrunkPerYear == null || cell.scoredActions === 0) {
+            return `<td class="hm hm-none" data-tip="${esc(label)}: no scored actions"><span class="vh">No scored actions</span></td>`;
+          }
+          const t = (cell.shrunkPerYear - min) / span;
+          const cls = ['hm', t > 0.64 ? 'hl' : '', t > 0.57 ? 'hd' : '', cell.lowData ? 'hm-low' : ''].filter(Boolean).join(' ');
+          const tip = `${label}: ${fmtSigned(cell.shrunkPerYear, 2)} points per year (shrunk), ${cell.scoredActions} scored ${cell.scoredActions === 1 ? 'action' : 'actions'}, average ${fmtSigned(cell.avgPerAction)} per action, range ${fmtSigned(cell.low * cell.weight)} to ${fmtSigned(cell.high * cell.weight)} in total${cell.lowData ? ' (low data)' : ''}`;
+          return `<td class="${cls}" style="--t:${t.toFixed(3)}" data-tip="${esc(tip)}">${fmtSigned(cell.shrunkPerYear, 2)}${cell.lowData ? '<span class="vh"> low data</span>' : ''}</td>`;
+        })
+        .join('');
+      return `<tr><th scope="row" class="rowh"><a href="${base}categories/${esc(c.id)}/">${esc(c.name)}</a></th>${tds}</tr>`;
+    })
+    .join('\n');
+  return `<thead>${head}</thead><tbody>${body}</tbody>`;
+}
+
+export function blocHeatRange(blocs: BlocResult[], ctx: PointsCtx): [number, number] | null {
+  const v = blocs.filter((b) => HEADLINE_BLOCS.includes(b.blocId)).flatMap((b) => ctx.categories.map((c) => b.categories[c.id]).filter((x) => x && x.scoredActions > 0 && x.shrunkPerYear != null).map((x) => x!.shrunkPerYear as number));
   return v.length ? [Math.min(...v), Math.max(...v)] : null;
 }

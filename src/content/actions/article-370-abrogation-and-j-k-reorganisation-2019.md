@@ -42,6 +42,17 @@ sources:
   - { title: "Terror incidents in J&K declining since 2018, lowest in 2023, Parliament told", url: "https://www.deccanherald.com/india/jammu-and-kashmir/terror-incidents-in-jk-declining-since-2018-lowest-in-2023-parliament-told-2799645", publisher: "Deccan Herald", type: reputable-media }
   - { title: "SC to hear petitions on statehood today (10 October 2025)", url: "https://kashmirreader.com/2025/10/10/sc-to-hear-petitions-on-statehood-today/", publisher: "Kashmir Reader", type: reputable-media }
   - { title: "Supreme Court internet shutdown guidelines: Anuradha Bhasin judgment", url: "https://www.livelaw.in/amp/top-stories/supreme-court-internet-shutdown-guidelines-anuradha-bhasin-243961", publisher: "LiveLaw", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Article 370 was a temporary provision that had prevented full integration of the state, and development benefits had not reached ordinary people.", madeBy: "Home Minister Amit Shah (BJP), Rajya Sabha, 5 August 2019", source: 3 }
+    - { point: "A Constitution Bench unanimously upheld the abrogation, holding Article 370 temporary, that Jammu and Kashmir had no internal sovereignty, and that the President could act under Article 370(3) without the state government's concurrence.", madeBy: "Supreme Court of India, Constitution Bench, 11 December 2023", source: 2 }
+    - { point: "Terrorist-initiated incidents fell from 228 in 2018 (erstwhile state) to 46 in 2023 (Union Territory); the two figures cover different administrative units and attribution to the 2019 change is contested.", madeBy: "Ministry of Home Affairs, reply in Lok Sabha, July 2024", source: 4 }
+  change:
+    - { point: "Statehood should be restored 'as soon as possible' and Assembly elections held by 30 September 2024.", madeBy: "Supreme Court of India, Constitution Bench, 11 December 2023", source: 2 }
+    - { point: "Indefinite suspension of internet services is impermissible, and suspension orders must be proportionate, temporary and open to judicial review.", madeBy: "Supreme Court of India, Anuradha Bhasin v. Union of India (January 2020)", source: 6 }
+    - { point: "A truth and reconciliation commission could be set up to examine past violations (suggested in the opinion).", madeBy: "Justice Sanjay Kishan Kaul, concurring opinion, Supreme Court (2023)", source: 2 }
+    - { point: "Continued delay in restoring statehood conflicts with federalism and with the Court's 2023 direction.", madeBy: "Petitioners seeking restoration of statehood, Supreme Court hearings (2025)", source: 5 }
 scoring:
   era_baseline: "Until 2019 Jammu and Kashmir operated under Article 370 and the 1954 Presidential order, with a constitutional status different from other states; the state also recorded high militancy-related fatalities in 2018."
   lag_years: 5

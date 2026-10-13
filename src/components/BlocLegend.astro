@@ -1,0 +1,15 @@
+---
+import { BLOC_LABEL, BLOC_SLOT, type BlocKey } from '../lib/datasets.ts';
+interface Props { blocs?: BlocKey[]; label?: string }
+const { blocs = ['inc', 'bjp', 'other'], label = 'Colour and pattern key' } = Astro.props;
+---
+<ul class="bloc-legend" aria-label={label}>
+  {blocs.map((b) => (
+    <li><span class={`sw p${BLOC_SLOT[b]} pat${BLOC_SLOT[b]}`} aria-hidden="true"></span><span>{BLOC_LABEL[b]}</span></li>
+  ))}
+</ul>
+<style is:global>
+  .bloc-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; padding: 0; margin: 0 0 1rem; font-size: 0.92rem; font-weight: 600; color: var(--ink); }
+  .bloc-legend li { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0; }
+  .bloc-legend .sw { width: 1.3rem; height: 0.9rem; border: 1px solid var(--rule-strong); }
+</style>

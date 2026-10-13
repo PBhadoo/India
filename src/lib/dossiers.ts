@@ -41,6 +41,7 @@ export const KIND_LABEL: Record<string, string> = {
   organisation: 'Organisation',
   party: 'Party',
   'company-group': 'Company group',
+  debate: 'Debate',
 };
 
 export const DOSSIER_STATUS_LABEL: Record<string, string> = { ongoing: 'Ongoing', settled: 'Settled' };

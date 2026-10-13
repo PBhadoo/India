@@ -50,6 +50,19 @@ sources:
   - { title: "PMLA action picked momentum after 2014; conviction rate over 93 pc: ED Director (1 May 2025)", url: "https://www.theweek.in/wire-updates/national/2025/05/01/del53-ed-day-director.html", publisher: The Week / PTI, type: reputable-media }
   - { title: "Focus on quality prosecution and evidence, SC tells ED", url: "https://m.thewire.in/article/law/focus-on-quality-prosecution-and-evidence-sc-tells-ed-on-low-conviction-rate-in-pmla-cases", publisher: The Wire, type: reputable-media }
   - { title: "ED lodged 132 money laundering cases against politicians since 2019 (Rajya Sabha reply, 6 Aug 2024)", url: "https://m.thewire.in/article/government/ed-lodged-132-money-laundering-cases-against-politicians-since-2019-conviction-in-only-1-instance", publisher: The Wire, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act's provisions on attachment, arrest and summons (ss.5, 19, 24, 44, 50) and the 2018 form of s.45 are valid, and the 2019 Explanation to s.3 is clarificatory.", madeBy: "Supreme Court of India (Khanwilkar, Maheshwari and Ravikumar JJ.), Vijay Madanlal Choudhary v. Union of India, 27 July 2022", source: 1 }
+    - { point: "Before 2014 the law was largely ineffective with fewer than 200 cases a year, and completed trials show a 93.6% conviction rate (of 47 decided cases).", madeBy: "ED Director, 1 May 2025, as reported", source: 9 }
+    - { point: "The ED's powers are needed to trace and attach proceeds of crime and review should be limited to two issues.", madeBy: "Union of India, submissions to the Supreme Court (2022 and 2025)", source: 2 }
+  change:
+    - { point: "Written grounds of arrest must be furnished to the arrested person.", madeBy: "Supreme Court of India, Pankaj Bansal v. Union of India, 3 October 2023", source: 6 }
+    - { point: "Where delay is coupled with long incarceration, the right to bail has to be read into s.45.", madeBy: "Supreme Court of India, Manish Sisodia bail order, 9 August 2024", source: 7 }
+    - { point: "The ED should focus on the quality of prosecution and evidence, after the low conviction count was cited.", madeBy: "Supreme Court bench, August 2024, as reported by The Wire", source: 10 }
+    - { point: "Non-supply of the ECIR and the reversal of the burden of proof need reconsideration.", madeBy: "Supreme Court of India, order accepting review petition, August 2022", source: 3 }
+  repeal:
+    - { point: "The amendments were passed through a Finance Act as money bills, the ECIR is withheld from the accused and the burden of proof is reversed.", madeBy: "Karti P. Chidambaram and other review petitioners, Supreme Court", source: 2 }
 scoring:
   era_baseline: "Before 2014 the ED registered fewer than 200 PMLA cases a year, and the 2002 Act's first conviction came years after commencement (ED Director's statement, 2025); the 2022 reply showed 23 convictions in 17 years."
   lag_years: 5

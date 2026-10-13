@@ -1,0 +1,37 @@
+---
+import { PROMISE_STATUS_LABEL, type PromiseStatus } from '../lib/datasets.ts';
+interface Props { status: PromiseStatus; swatchOnly?: boolean }
+const { status, swatchOnly = false } = Astro.props;
+const icons: Record<PromiseStatus, string> = {
+  delivered: '<path d="m3.5 8.5 3 3 6-7" />',
+  'partly-delivered': '<circle cx="8" cy="8" r="4.8" /><path d="M8 3.2v9.6" /><path d="M8 3.2a4.8 4.8 0 0 0 0 9.6z" fill="currentColor" />',
+  'not-delivered': '<path d="m4 4 8 8M12 4l-8 8" />',
+  abandoned: '<circle cx="8" cy="8" r="4.8" /><path d="M4.6 11.4l6.8-6.8" />',
+  ongoing: '<path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5v3h-3" />',
+  unclear: '<path d="M6.2 6.2a1.9 1.9 0 1 1 2.7 1.7c-.6.3-.9.7-.9 1.4M8 12v.1" />',
+};
+---
+{swatchOnly
+  ? <span class={`st-sw st-${status}`} aria-hidden="true"></span>
+  : <span class={`pill st-pill st-pill-${status}`}>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icons[status]} />
+      {PROMISE_STATUS_LABEL[status]}
+    </span>}
+<style is:global>
+  /* status fills: colour plus a distinct pattern, so status never depends on colour alone */
+  :root { --st-ink-d: var(--pos); --st-ink-n: var(--neg); }
+  .st-sw { --seg-ink: var(--ink-2); display: inline-block; width: 1.3rem; height: 0.9rem; border-radius: 3px; flex: none; box-shadow: inset 0 0 0 1px var(--seg-ink); vertical-align: -0.1rem; }
+  .st-delivered { --seg-ink: var(--pos); background: var(--pos); }
+  .st-partly-delivered { --seg-ink: var(--pos); background: repeating-linear-gradient(45deg, var(--pos) 0 3px, var(--pos-wash) 3px 6px); }
+  .st-not-delivered { --seg-ink: var(--neg); background: var(--neg); }
+  .st-abandoned { --seg-ink: var(--neg); background: repeating-linear-gradient(135deg, var(--neg) 0 1.5px, transparent 1.5px 5px), repeating-linear-gradient(45deg, var(--neg) 0 1.5px, var(--neg-wash) 1.5px 5px); }
+  .st-ongoing { --seg-ink: var(--accent); background: radial-gradient(var(--accent) 1.3px, transparent 1.7px) 0 0 / 6px 6px, var(--accent-wash); }
+  .st-unclear { --seg-ink: var(--ink-2); background: repeating-linear-gradient(90deg, var(--ink-2) 0 1px, transparent 1px 5px), repeating-linear-gradient(0deg, var(--ink-2) 0 1px, var(--surface-2) 1px 5px); }
+  .st-pill-delivered { border-color: var(--pos); }
+  .st-pill-partly-delivered { border-color: var(--pos); border-style: dashed; }
+  .st-pill-not-delivered { border-color: var(--neg); }
+  .st-pill-abandoned { border-color: var(--neg); border-style: dashed; }
+  .st-pill-ongoing { border-color: var(--accent); border-style: dotted; border-width: 2px; padding-block: 0.1rem; }
+  .st-pill-unclear { border-color: var(--ink-2); border-style: dotted; }
+  @media (forced-colors: active) { .st-sw { forced-color-adjust: none; } }
+</style>

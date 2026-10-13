@@ -53,6 +53,16 @@ sources:
     url: https://english.punjabkesari.com/india/2025/03/19/nityanand-rai-in-rajya-sabha-zero-tolerance-for-terrorism
     publisher: Punjab Kesari
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "After the Mumbai attacks the country needed a national agency with powers across India and Special Courts for scheduled offences; he said people were watching whether Parliament was an appropriate sentinel to guard liberty.", madeBy: "Home Minister P. Chidambaram (INC), Rajya Sabha, December 2008, as reported by The Wire", source: 3 }
+    - { point: "The Act provides a national-level agency with powers across India and Special Courts for scheduled offences.", madeBy: "PRS Legislative Research (summary of the Act)", source: 2 }
+    - { point: "The NIA registered 652 cases, charge-sheeted 516 and secured 625 convictions; 150 convictions in 157 decided cases (95.54%) as of 12 March 2025.", madeBy: "Ministry of Home Affairs, Rajya Sabha reply (Nityanand Rai), 12 March 2025, as reported", source: 4 }
+  change:
+    - { point: "Making association of State Governments mandatory, citing the erosion of federalism.", madeBy: "Sitaram Yechury (CPI-M), Rajya Sabha, December 2008, as reported by The Wire", source: 3 }
+    - { point: "Of 133 NIA cases analysed, 54 (more than 40%) ended in guilty pleas, and the accused in 49 of those 54 were Muslim; coercive detentions are driving guilty pleas.", madeBy: "The Wire (publication's own analysis)", source: 3 }
+    - { point: "Only 157 of 652 registered cases (about 24%) had been decided as of 12 March 2025, so the conviction rate rests on a small decided base.", madeBy: "Rajya Sabha reply, 12 March 2025, as reported", source: 4 }
 scoring:
   era_baseline: Before 2008, terror investigations were conducted by State police and the CBI; the Mumbai attacks of November 2008 prompted several security reforms.
   lag_years: 5

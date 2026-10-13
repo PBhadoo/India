@@ -4,7 +4,10 @@ import {
   ACTIONS_DIR, DEVELOPING_DIR, DOSSIERS_DIR, CRITERIA, listMd, loadEntry, loadTaxonomy, loadGovernments,
   loadLoadedWords, isoDate, daysSince,
 } from './lib.mjs';
-import { nonStringTextFields, hasPrimarySource, checkDossier } from './audit-lib.mjs';
+import { nonStringTextFields, hasPrimarySource, checkDossier, checkIndicators, checkPromises } from './audit-lib.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import { DATA } from './lib.mjs';
 
 const STATUSES = ['proposed', 'passed', 'implemented', 'stalled', 'repealed', 'struck-down'];
 const SOURCE_TYPES = ['primary', 'official-data', 'court', 'reputable-media', 'academic'];
@@ -181,7 +184,21 @@ developing.forEach((e) => validateDeveloping(e, actionSlugs));
 const dossiers = listMd(DOSSIERS_DIR).map(loadEntry);
 dossiers.forEach((e) => validateDossier(e));
 
+// Optional data files (Addendum v3): absent files are fine, present files must be valid.
+function validateDataFile(file, label, check) {
+  const full = path.join(DATA, file);
+  if (!fs.existsSync(full)) return 'absent';
+  let doc;
+  try { doc = JSON.parse(fs.readFileSync(full, 'utf8')); } catch (e) { errors.push(`${label}: invalid JSON: ${e.message}`); return 'invalid'; }
+  const r = check(doc, { words });
+  r.errors.forEach((m) => errors.push(`${label}: ${m}`));
+  r.warnings.forEach((m) => warnings.push(`${label}: ${m}`));
+  return 'checked';
+}
+const indicatorsState = validateDataFile('indicators.json', 'indicators.json', checkIndicators);
+const promisesState = validateDataFile('promises.json', 'promises.json', checkPromises);
+
 for (const w of warnings) console.warn(`WARN  ${w}`);
 for (const x of errors) console.error(`ERROR ${x}`);
-console.log(`\nChecked ${actions.length} actions, ${developing.length} developing items, ${dossiers.length} dossiers: ${errors.length} errors, ${warnings.length} warnings.`);
+console.log(`\nChecked ${actions.length} actions, ${developing.length} developing items, ${dossiers.length} dossiers; indicators.json ${indicatorsState}, promises.json ${promisesState}: ${errors.length} errors, ${warnings.length} warnings.`);
 process.exit(errors.length ? 1 : 0);

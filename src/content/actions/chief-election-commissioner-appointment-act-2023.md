@@ -72,6 +72,18 @@ sources:
     url: https://www.tribuneindia.com/news/india/unhappy-with-ministers-reply-opposition-parties-walk-out-of-rajya-sabha-over-bill-to-appoint-cec-ecs-571317
     publisher: The Tribune
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Bill is in consonance with the Supreme Court ruling; the Court's committee was a stop-gap, and appointments to the Commission fall within the executive's domain with the Prime Minister part of the process.", madeBy: "Law Minister Arjun Ram Meghwal (BJP), Rajya Sabha, December 2023", source: 7 }
+    - { point: "Article 324(2) makes appointments subject to a law made by Parliament, and the Court's committee would hold only until such a law was made.", madeBy: "Supreme Court of India, Anoop Baranwal v. Union of India (2 March 2023)", source: 3 }
+    - { point: "The Court dismissed stay applications against section 7 after the 2024 appointments, calling its observations tentative.", madeBy: "Supreme Court of India (Justices Sanjiv Khanna and Dipankar Datta), Dr. Jaya Thakur v. Union of India, 22 March 2024", source: 4 }
+  change:
+    - { point: "Two of the three Selection Committee members are from the government side, a vacancy in the Leader of Opposition post could leave only ruling-party members, and the Search Committee's list is not binding.", madeBy: "PRS Legislative Research", source: 2 }
+    - { point: "The Chief Justice of India was replaced by a Union minister on the panel; opposition members walked out after the Minister's reply.", madeBy: "Tiruchi Siva (DMK) and other Opposition members, Rajya Sabha, 12 December 2023", source: 7 }
+    - { point: "Selections should be made with full details of candidates circulated to all Selection Committee members, and section 6 appears to contemplate five names per post.", madeBy: "Supreme Court of India, order of 22 March 2024", source: 4 }
+  repeal:
+    - { point: "Section 7 conflicts with the Anoop Baranwal judgment and with free and fair elections.", madeBy: "Petitioners in Dr. Jaya Thakur v. Union of India, as recorded by the Supreme Court (2024)", source: 4 }
 scoring:
   era_baseline: Before 2023 there was no parliamentary law on the appointment process; since 1950 appointments were made by the President on the Union government's advice, and from 1991 service conditions were set by the Election Commission (Conditions of Service) Act, 1991.
   lag_years: 3

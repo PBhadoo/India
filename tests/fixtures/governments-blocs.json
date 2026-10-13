@@ -1,0 +1,12 @@
+{
+  "centre": [
+    { "id": "g-inc-a", "pm": "PM Inc A", "label": "INC government", "leadParty": "inc", "type": "majority",
+      "start": "2000-01-01", "end": "2004-01-01", "partners": [{ "party": "inc", "share": 1.0 }] },
+    { "id": "g-oth", "pm": "PM Other", "label": "Janata government", "leadParty": "janata", "type": "coalition",
+      "start": "2004-01-01", "end": "2005-01-01", "partners": [{ "party": "janata", "share": 0.6 }, { "party": "bjp", "share": 0.4 }] },
+    { "id": "g-bjp-nda", "pm": "PM Bjp", "label": "NDA", "leadParty": "bjp", "type": "coalition",
+      "start": "2005-01-01", "end": "2009-01-01", "partners": [{ "party": "bjp", "share": 0.7 }, { "party": "xyz", "share": 0.3 }] },
+    { "id": "g-inc-upa", "pm": "PM Inc B", "label": "UPA", "leadParty": "inc", "type": "coalition",
+      "start": "2009-01-01", "end": null, "partners": [{ "party": "inc", "share": 0.6 }, { "party": "abc", "share": 0.4 }] }
+  ]
+}

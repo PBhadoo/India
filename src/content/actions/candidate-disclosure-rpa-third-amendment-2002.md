@@ -52,6 +52,16 @@ sources:
     url: https://www.tribuneindia.com/2002/20020708/main4.htm
     publisher: The Tribune
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Section 33A places disclosure of pending charged cases and convictions on a statutory footing by sworn affidavit, and Section 125A penalises false affidavits.", madeBy: "Supreme Court of India, judgment of 1 October 2019 reciting the 2002 Act", source: 1 }
+    - { point: "Returning officers would not have the expertise or mechanism to check the authenticity of candidates' information.", madeBy: "Government of India (Deputy Prime Minister L. K. Advani and Law Minister Jana Krishnamurthi, NDA), July 2002", source: 4 }
+    - { point: "The Supreme Court had not directed that failure to furnish details should lead to disqualification of a candidate.", madeBy: "Political parties at the all-party meeting, July 2002", source: 4 }
+  change:
+    - { point: "Section 33B, by overriding court and Election Commission disclosure requirements, froze the right to information and violated Article 19(1)(a).", madeBy: "Supreme Court of India, People's Union for Civil Liberties v. Union of India (13 March 2003)", source: 2 }
+    - { point: "Section 33A omitted cases where cognizance had been taken but no charge framed, despite the Court's earlier direction that they be furnished.", madeBy: "Supreme Court of India, judgment of 1 October 2019", source: 1 }
+    - { point: "Voters have a right to know candidates' criminal cases, assets, liabilities and education under Article 19(1)(a).", madeBy: "Supreme Court of India, Union of India v. Association for Democratic Reforms (2 May 2002)", source: 2 }
 scoring:
   era_baseline: Before the Supreme Court order of May 2002, there was no requirement for candidates to file affidavits on criminal cases, assets or education; disclosure was introduced by court order rather than statute.
   lag_years: 1

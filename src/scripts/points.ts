@@ -1,7 +1,7 @@
 // Live recompute for the Evidence points table: weights, period filter, sorting.
 // Uses the same pure functions as the build (src/lib/scoring-core.ts).
-import { computePoints } from '../lib/scoring-core.ts';
-import { heatGridHtml, heatRange, noDataHtml, pointsRowsHtml, sortParties, type Metric, type PointsCtx, type SortKey } from '../lib/render-points.ts';
+import { computePoints, computeBlocPoints } from '../lib/scoring-core.ts';
+import { heatGridHtml, heatRange, noDataHtml, pointsRowsHtml, sortParties, blocRowsHtml, blocHeatHtml, blocHeatRange, type BlocCtx, type Metric, type PointsCtx, type SortKey } from '../lib/render-points.ts';
 import { fmtSigned } from '../lib/format.ts';
 
 const dataEl = document.getElementById('points-data');
@@ -23,6 +23,10 @@ if (dataEl) {
   const metricBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('#metric-toggle button[data-metric]'));
   const metricToggle = $('metric-toggle');
   const caption = $('pts-caption');
+  const bctx: BlocCtx = data.blocCtx;
+  const viewBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('#view-toggle button[data-view]'));
+  const viewToggle = $('view-toggle');
+  let view: 'blocs' | 'parties' = 'blocs';
   let metric: Metric = 'avg';
   let sortKey: SortKey = 'avg';
   let dir: 1 | -1 = -1;
@@ -50,42 +54,60 @@ if (dataEl) {
       const out = document.getElementById(`wo-${s.dataset.cat}`);
       if (out) out.textContent = s.value;
     });
-    const rows = sortParties(
-      computePoints({
-        credits: data.credits,
-        governments: data.governments,
-        asOf: data.asOf,
-        weights,
-        categoryIds: data.categoryIds,
-        yearFrom: p.from,
-        yearTo: p.to,
-        lowDataMin: data.lowDataMin,
-      }),
-      ctx,
-      sortKey,
-      dir,
-    );
-    tbody.innerHTML = pointsRowsHtml(rows, ctx, '/', metric);
+    const input = {
+      credits: data.credits,
+      governments: data.governments,
+      asOf: data.asOf,
+      weights,
+      categoryIds: data.categoryIds,
+      yearFrom: p.from,
+      yearTo: p.to,
+      lowDataMin: data.lowDataMin,
+    };
+    const blocView = view === 'blocs';
+    const blocs = computeBlocPoints(input);
+    const rows = sortParties(computePoints(input), ctx, sortKey, dir);
+    tbody.innerHTML = blocView ? blocRowsHtml(blocs, ctx, bctx, metric) : pointsRowsHtml(rows, ctx, '/', metric);
     const nShort = tbody.querySelectorAll('tr.short-row').length;
     const wrap = $('pts-short-wrap');
     const tgl = $<HTMLButtonElement>('pts-short-toggle');
     if (wrap && tgl) {
-      wrap.hidden = nShort === 0;
+      const hasGroup = blocView ? blocs.some((b) => b.blocId === 'other' && (b.yearsInPower > 0 || b.scoredActions > 0)) : nShort > 0;
+      wrap.hidden = !hasGroup;
       const open = table.hasAttribute('data-short-open');
-      tgl.textContent = open ? 'Hide short-tenure parties' : `Show ${nShort} short-tenure ${nShort === 1 ? 'party' : 'parties'}`;
+      tgl.textContent = blocView
+        ? (open ? 'Hide Other governments' : 'Show Other governments and the governments in them')
+        : (open ? 'Hide short-tenure parties' : `Show ${nShort} short-tenure ${nShort === 1 ? 'party' : 'parties'}`);
       tgl.setAttribute('aria-expanded', String(open));
     }
     const nd = $('pts-nodata');
     if (nd) {
-      const h = noDataHtml(rows, ctx);
+      const h = blocView ? '' : noDataHtml(rows, ctx);
       nd.innerHTML = h;
       nd.hidden = !h;
     }
-    // Heat grid columns are ordered by years in power, independent of the headline metric.
-    heat.innerHTML = heatGridHtml(sortParties(rows, ctx, 'years', -1), ctx);
-    const hr = heatRange(rows, ctx);
-    const hrEl = $('heat-range');
-    if (hrEl) hrEl.textContent = hr ? `${fmtSigned(hr[0])} to ${fmtSigned(hr[1])} points per year` : '';
+    const title = $('pts-title');
+    if (title) title.textContent = blocView ? 'Evidence points by bloc' : 'Evidence points by party';
+    const first = table.tHead?.querySelector<HTMLElement>('th[data-key="party"] .sort-btn');
+    if (first) first.textContent = blocView ? 'Bloc' : 'Party';
+    const hdesc = $('heat-desc');
+    const htitle = $('heat-title');
+    if (blocView) {
+      if (htitle) htitle.textContent = 'Points per year (shrunk) by category';
+      if (hdesc) hdesc.textContent = `Each cell is one bloc's points in one category divided by (the bloc's years in power + ${data.priorYears}), so it depends on how many entries are included for that cell. Cells are shaded from lowest to highest across the grid; shading shows the relative size of a figure, not quality. Numbers are always shown; hatched cells have fewer than ${data.lowDataMin} scored actions, dashed cells have none. Other governments are left out of the grid; their rows are in the table above.`;
+      heat.innerHTML = blocHeatHtml(blocs, ctx);
+      const br = blocHeatRange(blocs, ctx);
+      const hrEl = $('heat-range');
+      if (hrEl) hrEl.textContent = br ? `${fmtSigned(br[0], 2)} to ${fmtSigned(br[1], 2)} points per year` : '';
+    } else {
+      if (htitle) htitle.textContent = 'Points per year by category';
+      if (hdesc) hdesc.textContent = `Each cell is one party's raw points per year in one category (no shrinkage), so it depends on how many entries are included for that cell. Cells are shaded from lowest to highest across the grid. Columns are ordered by years in power. Shading shows the relative size of a figure, not quality. Numbers are always shown; hatched cells have fewer than ${data.lowDataMin} scored actions, dashed cells have none. Only parties with at least 2 years in power and a scored action are shown as columns.`;
+      // Heat grid columns are ordered by years in power, independent of the headline metric.
+      heat.innerHTML = heatGridHtml(sortParties(rows, ctx, 'years', -1), ctx);
+      const hr = heatRange(rows, ctx);
+      const hrEl = $('heat-range');
+      if (hrEl) hrEl.textContent = hr ? `${fmtSigned(hr[0])} to ${fmtSigned(hr[1])} points per year` : '';
+    }
     const slugs = new Set(
       (data.credits as { slug: string; year?: number }[])
         .filter((c) => c.year == null || ((p.from == null || c.year >= p.from) && (p.to == null || c.year <= p.to)))
@@ -96,9 +118,13 @@ if (dataEl) {
     metricBtns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.metric === metric)));
     if (caption) {
       const names: Record<string, string> = { avg: 'average points per action', shrunk: 'points per year (shrunk)', total: 'total points', years: 'years in power', party: 'party name' };
-      caption.textContent = `Sorted by ${names[sortKey] ?? sortKey}, ${dir === -1 ? 'highest' : 'lowest'} first. The order reflects a figure, not a verdict, and ranges overlap. Dot: ${metric === 'avg' ? 'average points per action' : 'points per year (shrunk)'}; line: low to high from the two scorers.`;
+      const dot = `Dot: ${metric === 'avg' ? 'average points per action' : 'points per year (shrunk)'}; line: low to high from the two scorers.`;
+      caption.textContent = blocView
+        ? `INC-led and BJP-led are always listed in this fixed order; the order is not a ranking. ${dot} Ranges overlap.`
+        : `Sorted by ${names[sortKey] ?? sortKey}, ${dir === -1 ? 'highest' : 'lowest'} first. The order reflects a figure, not a verdict, and ranges overlap. ${dot}`;
     }
-    heads.forEach((th) => th.setAttribute('aria-sort', th.dataset.key === sortKey ? (dir === 1 ? 'ascending' : 'descending') : 'none'));
+    viewBtns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === view)));
+    heads.forEach((th) => th.setAttribute('aria-sort', blocView ? 'none' : th.dataset.key === sortKey ? (dir === 1 ? 'ascending' : 'descending') : 'none'));
   }
 
   heads.forEach((th) => {
@@ -110,12 +136,26 @@ if (dataEl) {
     th.appendChild(btn);
     btn.addEventListener('click', () => {
       const key = th.dataset.key as SortKey;
+      if (view === 'blocs') {
+        // Blocs keep a fixed order; only the highlighted figure changes.
+        if (key === 'avg' || key === 'shrunk') metric = key;
+        update();
+        return;
+      }
       if (key === sortKey) dir = (dir === 1 ? -1 : 1);
       else { sortKey = key; dir = key === 'party' ? 1 : -1; }
       if (key === 'avg' || key === 'shrunk') metric = key;
       update();
     });
   });
+  if (viewToggle) {
+    viewToggle.hidden = false;
+    viewBtns.forEach((b) => b.addEventListener('click', () => {
+      view = b.dataset.view as 'blocs' | 'parties';
+      table.removeAttribute('data-short-open');
+      update();
+    }));
+  }
   if (metricToggle) {
     metricToggle.hidden = false;
     metricBtns.forEach((b) => b.addEventListener('click', () => {

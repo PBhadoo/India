@@ -60,6 +60,16 @@ sources:
     url: https://en.wikipedia.org/wiki/Bharatiya_Nyaya_Sanhita
     publisher: Wikipedia
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Sanhitas are laws 'framed by Indians, for Indians', and the procedure code takes a 'victim-centric' approach with tighter timelines for completing trials.", madeBy: "Home Minister Amit Shah (BJP), during passage, December 2023", source: 3 }
+    - { point: "Community service as a punishment can keep first-time and minor offenders out of prison, in a system where three-fourths of the prison population are undertrials (the BNS does not define it).", madeBy: "The Indian Express (explainer)", source: 3 }
+    - { point: "Section 152 criminalises treason (deshdroh) rather than sedition (rajdroh), and criticising the government is no longer an offence.", madeBy: "Union government position, as reported in The Wire", source: 4 }
+  change:
+    - { point: "The BNS does not consider the Justice Verma Committee recommendations on marital rape and gender-neutral rape, and several offences overlap with special laws that carry different penalties.", madeBy: "PRS Legislative Research", source: 2 }
+    - { point: "Clause 187(3) of the companion procedure code allows police custody of up to 90 days, against a 15-day limit under the CrPC that was meant to curtail custodial torture and forced confessions.", madeBy: "The Indian Express (explainer)", source: 3 }
+    - { point: "The BNS retains offences with colonial roots, expands police powers and creates vaguely defined offences; Section 152 is unclear compared with Section 124A.", madeBy: "Authors in The Wire", source: 4 }
 scoring:
   era_baseline: The IPC of 1860 had been in force for over 160 years with piecemeal amendments, and courts had decriminalised some offences such as adultery and consensual same-sex intercourse.
   lag_years: 3

@@ -1,0 +1,114 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import StatusPill from '../../components/StatusPill.astro';
+import { getSite, centreGovernments } from '../../lib/site.ts';
+import { categories } from '../../lib/taxonomy.ts';
+import { blocOf, BLOC_LABEL, BLOC_NOTE, HEADLINE_BLOCS, LOW_DATA_MIN_ACTIONS, PRELIMINARY_MIN_SCORED, summarizeActions, type BlocId } from '../../lib/scoring-core.ts';
+import { fmtDate, fmtNum, fmtSigned, CONFIDENCE_LABEL, isoDate, yearOf } from '../../lib/format.ts';
+import { jsonForScript } from '../../lib/site.ts';
+
+const site = await getSite();
+const cats = categories();
+const centre = centreGovernments();
+const sc = site.scoring;
+const yearMin = centre.length ? Math.min(...centre.map((g) => yearOf(g.start))) : 1947;
+const yearMax = yearOf(site.asOf);
+const blocResult = Object.fromEntries(sc.blocs.map((b) => [b.blocId, b]));
+
+const reformCounts = (d: any) => (d.reform ? { keep: d.reform.keep?.length ?? 0, change: d.reform.change?.length ?? 0, repeal: d.reform.repeal?.length ?? 0 } : null);
+// Centre actions with party credit, implemented under an INC-led or BJP-led government. Same rule for both columns.
+const listed = site.actions
+  .filter((a) => a.data.level === 'centre' && !a.noCredit && a.gov && HEADLINE_BLOCS.includes(blocOf(a.gov)))
+  .sort((a, b) => +new Date(a.data.date) - +new Date(b.data.date) || a.slug.localeCompare(b.slug));
+const other = site.actions.filter((a) => a.data.level === 'centre' && !a.noCredit && a.gov && blocOf(a.gov) === 'other').length;
+const items = (cat: string, bloc: BlocId) => listed.filter((a) => a.data.category === cat && blocOf(a.gov) === bloc);
+const sumLine = (list: typeof listed) => summarizeActions(list.map((a) => ({ points: a.score.points, low: a.score.low, high: a.score.high, scored: a.score.scored })));
+const payload = {
+  asOf: site.asOf,
+  yearMin,
+  yearMax,
+  lowDataMin: LOW_DATA_MIN_ACTIONS,
+  governments: centre.map((g) => ({ id: g.id, leadParty: g.leadParty, start: g.start, end: g.end, partners: g.partners })),
+};
+---
+<Base title="INC-led and BJP-led, side by side" path="/compare/blocs/" description="For each of 24 categories, the actions recorded under INC-led and BJP-led governments, in the same format: evidence points with range, confidence, and counts of attributed arguments to keep, change or repeal.">
+  <PageHead title="INC-led and BJP-led, side by side" kicker="Compare" lede="Choose a category and a period. Each column lists what was recorded under the governments of one bloc, in the same format and at the same depth. The page sets out evidence and attributed arguments; it does not say which side is right." crumbs={[['Home', '/'], ['Compare', '/compare/'], ['INC-led and BJP-led']]} />
+  <div class="wrap">
+    {sc.preliminary && (
+      <div class="banner" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg>
+        <p><strong>Preliminary.</strong> Fewer than {PRELIMINARY_MIN_SCORED} Centre actions with party credit are scored so far ({sc.scoredActionCount}). Averages move a lot when one entry is added; read each with its range and its count.</p>
+      </div>
+    )}
+    <div class="note">
+      <p><strong>How to read this.</strong> A government belongs to the bloc of its lead party; coalition partners are inside it (UPA is INC-led, NDA is BJP-led). Each action is listed under the bloc whose government implemented it. The summary row gives the number of actions, the mean of their evidence points with the mean low to high range from the two scorers, and the years the bloc held office in the chosen period (all of its years, in every category). The entries are a selection, so a bloc with more entries in a category can look different for that reason alone. Under each action is the number of attributed arguments recorded to keep, change or repeal it; these are arguments made by named people and bodies, not the site's view. {other} Centre {other === 1 ? 'action was' : 'actions were'} implemented under other governments and {other === 1 ? 'is' : 'are'} not shown here; decisions by independent institutions earn no bloc credit and are on the category pages. <a href="/methodology/#blocs">Read the method</a>.</p>
+    </div>
+
+    <div class="filters cmp-controls" id="bc-controls" hidden>
+      <div class="controls">
+        <label class="field">Category<select id="bc-cat">{cats.map((c) => <option value={c.id}>{c.name}</option>)}</select></label>
+        <label class="field">Period
+          <select id="bc-era">
+            <option value="all">All years ({yearMin} to {yearMax})</option>
+            <option value="pre">Before 1991</option>
+            <option value="post">1991 onward</option>
+            <option value="custom">Custom range</option>
+          </select>
+        </label>
+        <label class="field" data-custom hidden>From year<input id="bc-from" type="number" inputmode="numeric" min={yearMin} max={yearMax} value={yearMin} /></label>
+        <label class="field" data-custom hidden>To year<input id="bc-to" type="number" inputmode="numeric" min={yearMin} max={yearMax} value={yearMax} /></label>
+      </div>
+    </div>
+    <p class="vh" id="bc-live" role="status" aria-live="polite"></p>
+
+    <div class="stack" style="margin-top:1.5rem" id="bc-sections">
+      {cats.map((c) => (
+        <section class="block bloc-cat" data-cat={c.id} id={`bc-${c.id}`} aria-labelledby={`bh-${c.id}`} style="padding-top:1.5rem">
+          <h2 id={`bh-${c.id}`}>{c.name}</h2>
+          <p class="small">{c.blurb} <a href={`/categories/${c.id}/`}>Open {c.name}</a></p>
+          <div class="bloc-cols">
+            {HEADLINE_BLOCS.map((b) => {
+              const list = items(c.id, b);
+              const s = sumLine(list);
+              const r = blocResult[b];
+              return (
+                <div class="bloc-col" data-bloc={b}>
+                  <h3><span class={`sw b-${b} pat-b-${b}`} aria-hidden="true"></span>{BLOC_LABEL[b]}</h3>
+                  <p class="small" style="margin:0 0 .6rem">{BLOC_NOTE[b]}</p>
+                  <div class="bloc-sum" role="group" aria-label={`${BLOC_LABEL[b]} summary for ${c.name}`}>
+                    <div><div class="v" data-f="count">{s.count}</div><div class="l" data-f="count-l">{s.count === 1 ? 'action' : 'actions'}{s.scored !== s.count ? `, ${s.scored} scored` : ''}</div></div>
+                    <div><div class="v" data-f="avg">{s.avg == null ? '–' : fmtSigned(s.avg)}</div><div class="l">average points per action</div><div class="r" data-f="range">{s.avg == null ? '' : `range ${fmtSigned(s.avgLow)} to ${fmtSigned(s.avgHigh)}`}</div><span class="badge badge-low" data-f="low" hidden={!s.lowData}>Low data</span></div>
+                    <div><div class="v" data-f="years">{r ? fmtNum(r.yearsInPower) : '–'}</div><div class="l">years in power, bloc total</div></div>
+                  </div>
+                  <ul class="bloc-list" data-list>
+                    {list.map((a) => {
+                      const rf = reformCounts(a.data);
+                      return (
+                        <li data-year={a.year} data-scored={a.score.scored ? '1' : '0'} data-points={a.score.points} data-low={a.score.low} data-high={a.score.high}>
+                          <div class="meta">
+                            <StatusPill status={a.data.status} />
+                            <time datetime={isoDate(a.data.date)}>{fmtDate(a.data.date)}</time>
+                            <span class="badge" title="Confidence of the scoring evidence">{CONFIDENCE_LABEL[a.data.scoring.confidence]}</span>
+                          </div>
+                          <h4><a href={`/actions/${a.slug}/`}>{a.data.title}</a></h4>
+                          <p class="pts">{a.score.scored ? <>Evidence points {fmtSigned(a.score.points)} (range {fmtSigned(a.score.low)} to {fmtSigned(a.score.high)})</> : 'Not yet scored'}</p>
+                          <p class="stance">{rf ? <>Arguments recorded: <b>Keep {rf.keep}</b> &middot; <b>Change {rf.change}</b> &middot; <b>Repeal {rf.repeal}</b></> : 'Arguments to keep, change or repeal: not yet added'}</p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <p class="bloc-empty" data-empty hidden={list.length > 0}>No actions are recorded for {BLOC_LABEL[b]} in this category and period.</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+    <script type="application/json" id="bc-data" set:html={jsonForScript(payload)}></script>
+  </div>
+</Base>
+<script>
+  import '../../scripts/bloc-compare.ts';
+</script>

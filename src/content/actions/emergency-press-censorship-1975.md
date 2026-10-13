@@ -41,6 +41,18 @@ sources:
   - { title: "Press curbs: Michigan Daily wire digest, 5 April 1977", url: "https://digital.bentley.umich.edu/midaily/mdp.39015071754514/637", publisher: "Michigan Daily archive", type: reputable-media }
   - { title: "Rajya Sabha debate, 9 April 1977: Bill to repeal the Prevention of Publication of Objectionable Matter Act, 1976", url: "https://rsdebate.nic.in/bitstream/123456789/434081/1/PD_100_09041977_9_p122_p166_17.pdf", publisher: "Rajya Sabha Secretariat", type: primary }
   - { title: "PM Modi's remarks on Emergency bring back memories of civil rights suspension", url: "https://www.deccanherald.com/india/pm-modis-remarks-on-emergency-bring-back-memories-of-civil-rights-suspension-3078682", publisher: "Deccan Herald", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Emergency was proclaimed on the ground of internal disturbance.", madeBy: "Proclamation of Emergency under Article 352, 25 June 1975 (Indira Gandhi government)", source: 1 }
+    - { point: "There was a deep and widespread conspiracy against the government.", madeBy: "Prime Minister Indira Gandhi, address on the Emergency, as reported in later accounts", source: 4 }
+    - { point: "Censorship ended with the revocation of the Emergency on 22 March 1977 and the 1976 Act was taken up for repeal within weeks.", madeBy: "Rajya Sabha record, 9 April 1977", source: 3 }
+  change:
+    - { point: "Censorship was used to suppress news unfavourable to the government and its supporters and to play up favourable news; the power cut to Delhi newspaper offices and the categorisation of newspapers lacked formal written orders or statutory basis.", madeBy: "Shah Commission of Inquiry, First Interim Report (11 March 1978)", source: 1 }
+    - { point: "The Bombay and Gujarat High Courts ruled against specific censorship orders (Freedom First, Bhoomiputra) without striking down censorship generally.", madeBy: "Bombay High Court and Gujarat High Court, 1975-76", source: 1 }
+    - { point: "The 1976 Act gave powers to ban reporting on subjects, close journals and seize presses, and was brought up for repeal.", madeBy: "Rajya Sabha debate on repeal bill, 9 April 1977", source: 3 }
+  repeal:
+    - { point: "The Prevention of Publication of Objectionable Matter Act, 1976 should be repealed.", madeBy: "Information Minister L. K. Advani (Janata Party government), repeal bill taken up in Rajya Sabha on 9 April 1977", source: 3 }
 scoring:
   era_baseline: "Before June 1975 newspapers were published without a general system of pre-publication censorship; the Emergency also suspended other civil liberties."
   lag_years: 1

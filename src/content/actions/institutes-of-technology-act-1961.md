@@ -35,6 +35,15 @@ sources:
   - { title: "Indian Institutes of Technology", url: "https://en.wikipedia.org/wiki/Indian_Institutes_of_Technology", publisher: Wikipedia, type: reputable-media }
   - { title: "The Institutes of Technology Act, 1961 (text)", url: "https://www.indiacode.nic.in/bitstream/123456789/1705/1/196159.pdf", publisher: India Code, Ministry of Law and Justice, type: primary }
   - { title: "The Institutes of Technology Act, 1961", url: "https://indiankanoon.org/doc/78925/", publisher: Indian Kanoon, type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Institutes modelled on MIT should be established across India.", madeBy: "Nalini Ranjan Sarkar Committee (1940s)", source: 1 }
+    - { point: "The former detention-camp site at Kharagpur represented 'India's future in the making'.", madeBy: "Prime Minister Jawaharlal Nehru, IIT Kharagpur convocation, 1956", source: 1 }
+    - { point: "The institutes are institutions of national importance, as the Act's long title states, each a body corporate with degree-granting powers.", madeBy: "Parliament, Institutes of Technology Act, 1961", source: 2 }
+  change:
+    - { point: "The newer IITs missed targets for research, faculty and student recruitment and retention, and had infrastructure delays.", madeBy: "Comptroller and Auditor General of India, 2021 report, as listed on Wikipedia", source: 1 }
+    - { point: "36% of the top 1,000 JEE scorers emigrated, rising to 62% of the top 100, so some of the return on public spending accrues abroad (defenders point to remittances).", madeBy: "Authors of a 2023 NBER study, as cited on Wikipedia", source: 1 }
 scoring:
   era_baseline: "In the late 1940s and 1950s India had few degree-granting technical institutions, and the plan was to build an engineering base for industrialisation."
   lag_years: 10

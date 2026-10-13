@@ -5,6 +5,7 @@ import { layoutLabels } from '../lib/viz.ts';
 import PartyChip from './PartyChip.astro';
 import { pm, type Site } from '../lib/site.ts';
 import type { Government } from '../lib/types.ts';
+import { blocOf, BLOC_IDS, BLOC_LABEL, BLOC_NOTE, type BlocId } from '../lib/scoring-core.ts';
 
 interface Props {
   governments: Government[];
@@ -17,9 +18,15 @@ interface Props {
   legend?: boolean;
   highlight?: string;
   id?: string;
+  /** 'bloc': three lanes (INC-led, BJP-led, Other governments) coloured by bloc. Default colours by lead party. */
+  by?: 'party' | 'bloc';
 }
-const { governments, site, compact = false, heading, range, legend = true, highlight, id } = Astro.props;
+const { governments, site, compact = false, heading, range, legend = true, highlight, id, by = 'party' } = Astro.props;
+const bloc = by === 'bloc';
+const blocById = new Map(governments.map((g) => [g.id, blocOf(g)]));
+const blocBy = (gid: string): BlocId => blocById.get(gid) ?? 'other';
 const segs = timelineSegments(governments, site.asOf, range);
+const lanes_ids: (BlocId | null)[] = bloc ? BLOC_IDS.filter((b) => segs.some((s) => blocBy(s.governmentId) === b)) : [null];
 const byId = new Map(governments.map((g) => [g.id, g]));
 const t0 = segs.length ? toTime(range?.start ?? segs[0].start) : 0;
 const t1 = toTime(range?.end ?? site.asOf);
@@ -34,6 +41,8 @@ for (let y = Math.ceil(y0 / step) * step; y <= y1; y += step) {
 const nameOf = (s: (typeof segs)[number]) => byId.get(s.governmentId)?.leader || byId.get(s.governmentId)?.label || '';
 const labelOf = (s: (typeof segs)[number]) => (byId.get(s.governmentId)?.leader ? shortLeader(s.leader) : nameOf(s));
 const ledBy = (s: (typeof segs)[number], p: { name: string }) => (s.leadParty ? `${p.name}-led` : 'No lead party');
+const cls = (gid: string, p: { slot: number }) => (bloc ? `b-${blocBy(gid)} pat-b-${blocBy(gid)}` : `p${p.slot} pat${p.slot}`);
+const blocLine = (gid: string) => (bloc ? `${BLOC_LABEL[blocBy(gid)]} bloc\n` : '');
 const placements = compact ? [] : layoutLabels(segs.map((s) => ({ id: s.governmentId, startPct: s.startPct, widthPct: s.widthPct, text: labelOf(s), priority: s.days })));
 const placeById = new Map(placements.map((p) => [p.id, p]));
 const LANE = 18;
@@ -49,27 +58,33 @@ const uid = id ?? 'tl';
       {heading ?? 'Timeline of governments'}
     </figcaption>
     <div class="tl-scroll" tabindex="0" role="region" aria-label={`${heading ?? 'Timeline'}, scrolls sideways on narrow screens`}>
-      <div class="tl-inner">
-        <ol class="tl-bar" style={compact ? 'height:2.2rem' : undefined}>
-          {segs.map((s) => {
-            const g = byId.get(s.governmentId)!;
-            const p = pm(site, s.leadParty);
-            const when = `${fmtDate(s.start)} to ${s.ongoing ? 'present' : fmtDate(s.end)}`;
-            const tip = `${nameOf(s)}\n${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type] ?? s.type}\n${when}\n${fmtDuration(s.days)} (${s.days.toLocaleString('en-IN')} days)`;
-            return (
-              <li style={`left:${s.startPct.toFixed(3)}%;width:${s.widthPct.toFixed(3)}%`}>
-                <a
-                  class={`seg p${p.slot} pat${p.slot}${s.ongoing ? ' ongoing' : ''}${s.type === 'caretaker' ? ' caretaker' : ''}`}
-                  href={`/governments/${s.governmentId}/`}
-                  data-tip={tip}
-                  aria-label={`${nameOf(s)}, ${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type]?.toLowerCase() ?? s.type}, ${when}, ${fmtDuration(s.days)}`}
-                  aria-current={highlight === s.governmentId ? 'true' : undefined}
-                  style={highlight && highlight !== s.governmentId ? 'opacity:.45' : undefined}
-                ></a>
-              </li>
-            );
-          })}
-        </ol>
+      <div class={`tl-inner${bloc ? ' has-lanes' : ''}`}>
+        <div class={bloc ? 'tl-lanes' : undefined}>
+          {lanes_ids.map((lane) => (
+            <div class={lane ? 'tl-lane' : undefined}>
+              {lane && <span class="lane-name" title={BLOC_NOTE[lane]}><span class={`sw b-${lane} pat-b-${lane}`} aria-hidden="true"></span>{BLOC_LABEL[lane]}</span>}
+              <ol class="tl-bar" style={compact ? 'height:2.2rem' : undefined} aria-label={lane ? `${BLOC_LABEL[lane]} governments` : undefined}>
+                {segs.filter((s) => !lane || blocBy(s.governmentId) === lane).map((s) => {
+                  const p = pm(site, s.leadParty);
+                  const when = `${fmtDate(s.start)} to ${s.ongoing ? 'present' : fmtDate(s.end)}`;
+                  const tip = `${nameOf(s)}\n${blocLine(s.governmentId)}${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type] ?? s.type}\n${when}\n${fmtDuration(s.days)} (${s.days.toLocaleString('en-IN')} days)`;
+                  return (
+                    <li style={`left:${s.startPct.toFixed(3)}%;width:${s.widthPct.toFixed(3)}%`}>
+                      <a
+                        class={`seg ${cls(s.governmentId, p)}${s.ongoing ? ' ongoing' : ''}${s.type === 'caretaker' ? ' caretaker' : ''}`}
+                        href={`/governments/${s.governmentId}/`}
+                        data-tip={tip}
+                        aria-label={`${nameOf(s)}, ${bloc ? BLOC_LABEL[blocBy(s.governmentId)] + ', ' : ''}${ledBy(s, p)}, ${GOV_TYPE_LABEL[s.type]?.toLowerCase() ?? s.type}, ${when}, ${fmtDuration(s.days)}`}
+                        aria-current={highlight === s.governmentId ? 'true' : undefined}
+                        style={highlight && highlight !== s.governmentId ? 'opacity:.45' : undefined}
+                      ></a>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          ))}
+        </div>
         <div class="tl-axis" aria-hidden="true">
           {ticks.map((t) => <span style={`left:${t.pct.toFixed(2)}%`}>{t.y}</span>)}
         </div>
@@ -88,7 +103,7 @@ const uid = id ?? 'tl';
                   aria-hidden="true"
                   style={`top:${pl.lane * LANE}px;${right ? `right:${(100 - s.startPct).toFixed(3)}%;border-left:0;border-right:1px solid var(--rule-strong);padding:0 .3rem 0 0` : `left:${s.startPct.toFixed(3)}%`}`}
                 >
-                  <span class={`sw p${p.slot} pat${p.slot}`}></span>{labelOf(s)}
+                  <span class={`sw ${cls(s.governmentId, p)}`}></span>{labelOf(s)}
                 </a>
               );
             })}
@@ -97,8 +112,15 @@ const uid = id ?? 'tl';
       </div>
     </div>
     <p class="tl-scrollhint">Scroll sideways to see all years.</p>
-    {!compact && <p class="tl-hint">Each block is one government, coloured and patterned by its lead party or coalition. Hover, focus or open a block for leader, dates and length. Labels are left out where there is no room; every government is in the table below.</p>}
-    {legend && (
+    {!compact && bloc && <p class="tl-hint">Each block is one government, placed in the row of its bloc: INC-led (with partners, for example UPA), BJP-led (with partners, for example NDA) or Other governments, and coloured and patterned to match. Hover, focus or open a block for leader, lead party, dates and length. Labels are left out where there is no room; every government is in the table below.</p>}
+    {!compact && !bloc && <p class="tl-hint">Each block is one government, coloured and patterned by its lead party or coalition. Hover, focus or open a block for leader, dates and length. Labels are left out where there is no room; every government is in the table below.</p>}
+    {legend && bloc && (
+      <ul class="legend" aria-label="Bloc key">
+        {lanes_ids.map((b) => b && <li><span class="chip bloc-chip" title={BLOC_NOTE[b]}><span class={`sw b-${b} pat-b-${b}`} aria-hidden="true"></span><span>{BLOC_LABEL[b]}</span></span></li>)}
+        <li class="small muted">Lead party decides the bloc; coalition partners are inside it.</li>
+      </ul>
+    )}
+    {legend && !bloc && (
       <ul class="legend" aria-label="Lead party key">
         {used.map((p) => (
           <li><PartyChip party={p} link={p.id !== 'none'} /></li>

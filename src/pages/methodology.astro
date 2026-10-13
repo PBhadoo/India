@@ -8,10 +8,11 @@ import { categories } from '../lib/taxonomy.ts';
 import { getSite, centreGovernments } from '../lib/site.ts';
 import { fmtSigned, fmtNum } from '../lib/format.ts';
 import { CLAIM_TYPE_INFO, CLAIM_TYPE_ORDER } from '../lib/dossiers.ts';
+import { PROMISE_STATUSES, PROMISE_STATUS_RULES, PROMISE_SELECTION_RULE } from '../lib/datasets.ts';
 import ClaimBadge from '../components/ClaimBadge.astro';
 const crit = rubric.criteria as { id: string; name: string; question: string; anchors: Record<string, string> }[];
 const order = ['-5', '-3', '-1', '0', '1', '3', '5'];
-const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['sources', 'Sources and data quality'], ['attribution', 'Who gets the credit'], ['institutions', 'Independent institutions'], ['dossiers', 'Dossiers and claim types'], ['coalition', 'Coalitions'], ['headline', 'Why the headline figure changed'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
+const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['sources', 'Sources and data quality'], ['attribution', 'Who gets the credit'], ['institutions', 'Independent institutions'], ['dossiers', 'Dossiers and claim types'], ['indicators', 'Indicators and what they can show'], ['promises', 'Promise tracker rules'], ['debates', 'Debates'], ['coalition', 'Coalitions'], ['headline', 'Why the headline figure changed'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
 const pct = (n: number) => `${Math.round(n * 100)}%`;
 const site = await getSite();
 const thinLeaders = new Set(centreGovernments().map((g) => g.leadParty)).size;
@@ -102,6 +103,38 @@ const nm = (id: string) => ({ inc: 'INC', bjp: 'BJP' } as Record<string, string>
           <li><strong>Sources.</strong> At least five, of which at least two are primary, official-data or court sources. Facts are dated "as of" a day, and an ongoing dossier is flagged for re-checking after 45 days.</li>
           <li><strong>What these facts do not show.</strong> Every dossier ends its facts with a short list of what they do not establish.</li>
         </ul>
+      </section>
+
+      <section id="indicators" aria-labelledby="h-indicators">
+        <h2 id="h-indicators">Indicators and what they can show</h2>
+        <p>The <a href="/indicators/">indicators page</a> shows official measures, such as growth, inflation, jobs, deficits, poverty, health, schooling and infrastructure, for each period in office. Each indicator uses one series with one definition across all periods; where an official or well-sourced series does not cover a period on the same basis, that period is left blank and never spliced from a different series. Each chart states its unit, how a period's figure was formed (for example the average of annual figures), its source and its caveats, and has a table view of the same values.</p>
+        <p>Periods are grouped by who led the Union government, with the same colours and patterns as elsewhere on the site: INC-led, BJP-led, and Other for governments led by other parties. Periods differ in length and begin from different conditions.</p>
+        <h3>What a period comparison can and cannot show</h3>
+        <ul>
+          <li><strong>It shows</strong> what a measure was, on average, while a government was in office.</li>
+          <li><strong>It does not show</strong> which government caused the difference. Global conditions (oil price shocks, the 2008 financial crisis, COVID-19), earlier policies with long lags, monsoons, state governments and data revisions all affect these figures. Each indicator lists the global-context caveats that apply to it, and they are always visible on the page.</li>
+          <li>There is no total, rank, score or &ldquo;best&rdquo; and &ldquo;worst&rdquo; on that page, and no indicator is chosen because of how it comes out. Series are revised; the as-of date and basis show which vintage is used.</li>
+        </ul>
+        <p class="note">Differences between periods do not show which government caused them; global conditions, earlier policies and data revisions all matter.</p>
+      </section>
+
+      <section id="promises" aria-labelledby="h-promises">
+        <h2 id="h-promises">Promise tracker rules</h2>
+        <p>The <a href="/promises/">promise tracker</a> records the headline promises in the manifestos of the INC and the BJP at each general election (1998, 1999, 2004, 2009, 2014, 2019 and 2024). The rules are the same for both parties. {PROMISE_SELECTION_RULE}</p>
+        <dl class="dl">
+          {PROMISE_STATUSES.map((s) => <><dt><code>{s}</code></dt><dd>{PROMISE_STATUS_RULES[s]}</dd></>)}
+        </dl>
+        <ul>
+          <li>Each promise is a short neutral paraphrase with a link to the manifesto and a link to the source of the evidence, and the date the evidence was checked.</li>
+          <li>Counts are shown for each party with the same layout and the same denominator. They are not added into a total, and a status is not a score of the party or a judgement of whether the promise was a good one.</li>
+          <li>A status can change as events continue; the as-of date on each row shows when it was last checked.</li>
+        </ul>
+      </section>
+
+      <section id="debates" aria-labelledby="h-debates">
+        <h2 id="h-debates">Debates</h2>
+        <p>A <a href="/debates/">debate</a> is a dossier of kind &ldquo;debate&rdquo; on a live reform question. Its positions are the options: each card names the camp or the bodies that hold it and gives the strongest documented case for it, in the same format and at the same length for every option. Contested facts are listed as claims with their status, and the page ends with what the evidence cannot settle.</p>
+        <p><strong>This page lays out the cases made. It does not recommend an option.</strong> Options are not ranked or ordered by merit, debates carry no score and no party points, and the same checks for wording and sources apply as for every other dossier.</p>
       </section>
 
       <section id="coalition" aria-labelledby="h-coal">

@@ -23,13 +23,15 @@ const nav = [
   ['/categories/', 'Categories'],
   ['/actions/', 'Actions'],
   ['/dossiers/', 'Dossiers'],
+  ['/debates/', 'Debates'],
   ['/governments/', 'Governments'],
   ['/parties/', 'Parties'],
   ['/compare/', 'Compare'],
+  ['/compare/blocs/', 'Blocs'],
   ['/developing/', 'Developing'],
   ['/methodology/', 'Methodology'],
 ] as const;
-const current = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const current = (href: string) => (href === '/' ? path === '/' : href === '/compare/' ? path === '/compare/' : path.startsWith(href));
 ---
 <!doctype html>
 <html lang="en">
@@ -119,6 +121,9 @@ const current = (href: string) => (href === '/' ? path === '/' : path.startsWith
           <div>
             <h2>Read</h2>
             <ul>
+              <li><a href="/debates/">Debates</a></li>
+              <li><a href="/indicators/">Indicators by period</a></li>
+              <li><a href="/promises/">Promise tracker</a></li>
               <li><a href="/methodology/">Methodology</a></li>
               <li><a href="/corrections/">Corrections</a></li>
               <li><a href="/about/">About</a></li>

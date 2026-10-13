@@ -1,0 +1,168 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import PromiseStatus from '../components/PromiseStatus.astro';
+import PromiseSummary from '../components/PromiseSummary.astro';
+import {
+  loadPromises, promiseSummary, PROMISE_PARTIES, PROMISE_ELECTIONS, PROMISE_STATUSES, PROMISE_STATUS_LABEL,
+  PROMISE_STATUS_RULES, PROMISE_SELECTION_RULE, titleCase,
+} from '../lib/datasets.ts';
+import { getSite, pm } from '../lib/site.ts';
+import { getCategory } from '../lib/taxonomy.ts';
+import { fmtDate, SOURCE_TYPE_LABEL } from '../lib/format.ts';
+
+const site = await getSite();
+const { data, present, issues } = loadPromises();
+for (const m of issues) console.warn(`promises.json: ${m}`);
+const partyLabel = (id: string) => pm(site, id);
+const summary = promiseSummary(data);
+const sorted = [...data].sort((a, b) => b.election - a.election || a.party.localeCompare(b.party) || a.id.localeCompare(b.id));
+const elections = [...new Set(data.map((p) => p.election))].sort((a, b) => b - a);
+const domains = [...new Set(data.map((p) => p.domain))].sort();
+const domainName = (d: string) => getCategory(d)?.name ?? titleCase(d);
+const statusesUsed = PROMISE_STATUSES.filter((s) => data.some((p) => p.status === s));
+const empty = data.length === 0;
+---
+<Base title="Manifesto promise tracker" path="/promises/" description="Headline manifesto promises of the INC and the BJP at each general election since 1998, with the same status rules, evidence and sources for both. A record of what happened, not a score.">
+  <PageHead title="Manifesto promise tracker" kicker="Promises and the record" lede="The headline promises in each party's manifesto at each general election since 1998, and what the record shows. Both parties are tracked with the same number of promises, the same status rules and the same layout." crumbs={[['Home', '/'], ['Promises']]} />
+  <div class="wrap">
+    <section class="block" id="rules" aria-labelledby="h-rules" style="padding-top:0;border-top:0">
+      <h2 id="h-rules">How a status is decided</h2>
+      <p class="small">The rules are identical for both parties. {PROMISE_SELECTION_RULE}</p>
+      <dl class="rules">
+        {PROMISE_STATUSES.map((s) => (
+          <div class="rule">
+            <dt><PromiseStatus status={s} /></dt>
+            <dd><code class="rule-key">{s}</code> = {PROMISE_STATUS_RULES[s]}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="note" role="note">A status describes what the record shows about one promise. It is not a score of the party, and counts are not added into a total. Whether a promise was a good idea is a separate question this page does not answer. <a href="/methodology/#promises">Promise tracker rules</a>.</p>
+    </section>
+
+    {empty ? (
+      <div class="empty">
+        <p><strong>No promises are published yet.</strong></p>
+        <p>The tracker appears here once the same number of headline promises is recorded for each party at each election, each with its manifesto source and an evidence source. Meanwhile, see <a href="/governments/">who governed and for how long</a>.</p>
+      </div>
+    ) : (
+      <>
+        <section class="block" id="summary" aria-labelledby="h-sum">
+          <h2 id="h-sum">Summary by party and election</h2>
+          <p class="small">Counts of promises by status, for every election. Each party has the same layout and the same denominator per election. Status is shown by fill pattern and a printed count, not by colour alone. This summary always shows all promises; the filters below apply to the table.</p>
+          <div class="psum-grid">
+            {PROMISE_PARTIES.map((p) => {
+              const meta = partyLabel(p);
+              return <PromiseSummary partyName={meta.name} partyShort={meta.short} rows={[...summary[p]].reverse()} />;
+            })}
+          </div>
+          <details class="tv" style="margin-top:1rem">
+            <summary>Table view of the counts</summary>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Counts by party, election and status, scrolls sideways on narrow screens">
+              <table class="data">
+                <caption>Promises by status<span class="small">Number of promises in each status, per party and election.</span></caption>
+                <thead><tr><th scope="col">Party</th><th scope="col">Election</th><th scope="col" class="num">Promises</th>{PROMISE_STATUSES.map((s) => <th scope="col" class="num">{PROMISE_STATUS_LABEL[s]}</th>)}</tr></thead>
+                <tbody>
+                  {PROMISE_PARTIES.flatMap((p) => [...summary[p]].reverse().map(([year, c]) => (
+                    <tr>
+                      <th scope="row">{partyLabel(p).short}</th>
+                      <td>{year}</td>
+                      <td class="num">{c.total}</td>
+                      {PROMISE_STATUSES.map((s) => <td class="num">{c.byStatus[s]}</td>)}
+                    </tr>
+                  )))}
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section class="block" id="table" aria-labelledby="h-table">
+          <h2 id="h-table">All promises</h2>
+          <form class="filters" id="filters" role="search" aria-label="Filter promises" onsubmit="return false">
+            <div class="controls">
+              <label class="field">Party<select id="f-party"><option value="">Both parties</option>{PROMISE_PARTIES.map((p) => <option value={p}>{partyLabel(p).short}</option>)}</select></label>
+              <label class="field">Election<select id="f-election"><option value="">All elections</option>{elections.map((e) => <option value={String(e)}>{e}</option>)}</select></label>
+              <label class="field">Domain<select id="f-domain"><option value="">All domains</option>{domains.map((d) => <option value={d}>{domainName(d)}</option>)}</select></label>
+              <label class="field">Status<select id="f-status"><option value="">All statuses</option>{statusesUsed.map((s) => <option value={s}>{PROMISE_STATUS_LABEL[s]}</option>)}</select></label>
+              <button type="reset" class="btn" id="f-reset">Clear filters</button>
+            </div>
+          </form>
+          <p class="result-count" role="status" aria-live="polite" id="f-count">{sorted.length} {sorted.length === 1 ? 'promise' : 'promises'}</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Promises, scrolls sideways on narrow screens">
+            <table class="data promises stackable" id="ptable">
+              <caption>Promises, newest election first<span class="small">Evidence is as of the date shown; later events may change a status.</span></caption>
+              <thead><tr><th scope="col">Promise</th><th scope="col">Party and election</th><th scope="col">Domain</th><th scope="col">Status</th><th scope="col">Evidence</th><th scope="col">Sources</th><th scope="col">As of</th></tr></thead>
+              <tbody>
+                {sorted.map((p) => (
+                  <tr data-party={p.party} data-election={p.election} data-domain={p.domain} data-status={p.status}>
+                    <th scope="row" class="ptext">{p.text}</th>
+                    <td data-label="Party and election">{partyLabel(p.party).short} {p.election}</td>
+                    <td data-label="Domain">{domainName(p.domain)}</td>
+                    <td data-label="Status"><PromiseStatus status={p.status} /></td>
+                    <td data-label="Evidence" class="pev">{p.evidence}</td>
+                    <td data-label="Sources" class="psrc">
+                      <a href={p.manifestoSource.url} rel="noopener">Manifesto: {p.manifestoSource.title}</a>
+                      <a href={p.evidenceSource.url} rel="noopener">Evidence: {p.evidenceSource.title}</a>
+                      <span class="small muted">{[p.evidenceSource.publisher, p.evidenceSource.type && (SOURCE_TYPE_LABEL[p.evidenceSource.type] ?? p.evidenceSource.type)].filter(Boolean).join(', ')}</span>
+                    </td>
+                    <td data-label="As of"><time datetime={p.asOf}>{fmtDate(p.asOf)}</time></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div class="empty" id="f-none" hidden><p>No promises match these filters. Clear a filter to widen the list.</p></div>
+        </section>
+      </>
+    )}
+  </div>
+</Base>
+<style is:global>
+  .rules { display: grid; gap: 0.5rem; margin: 1rem 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+  .rule { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0.6rem; align-items: start; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 0.6rem 0.8rem; }
+  .rule dt, .rule dd { margin: 0; }
+  .rule dd { font-size: 0.95rem; color: var(--ink-2); }
+  .rule-key { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink); }
+  .psum-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 900px) { .psum-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+  table.promises .ptext { min-width: 14rem; max-width: 22rem; font-weight: 600; }
+  table.promises .pev { min-width: 16rem; max-width: 26rem; font-size: 0.92rem; }
+  table.promises .psrc a { display: block; font-size: 0.88rem; overflow-wrap: anywhere; }
+  table.promises td { white-space: normal; }
+  @media (max-width: 599px) {
+    .rule { grid-template-columns: minmax(0, 1fr); }
+    table.promises .ptext, table.promises .pev { min-width: 0; max-width: none; }
+    table.promises.stackable tr { padding: 0.8rem 0; }
+    table.promises.stackable tr[hidden] { display: none; }
+  }
+</style>
+<script>
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('#ptable tbody tr'));
+  const form = document.getElementById('filters');
+  if (form && rows.length) {
+    const val = (id: string) => (document.getElementById(id) as HTMLSelectElement | null)?.value ?? '';
+    try {
+      const sp = new URLSearchParams(location.search);
+      for (const [param, id] of [['party', 'f-party'], ['election', 'f-election'], ['domain', 'f-domain'], ['status', 'f-status']] as const) {
+        const v = sp.get(param), node = document.getElementById(id) as HTMLSelectElement | null;
+        if (v && node && Array.from(node.options).some((o) => o.value === v)) node.value = v;
+      }
+    } catch {}
+    const apply = () => {
+      const f = { party: val('f-party'), election: val('f-election'), domain: val('f-domain'), status: val('f-status') };
+      let n = 0;
+      rows.forEach((tr) => {
+        const d = tr.dataset;
+        const ok = (!f.party || d.party === f.party) && (!f.election || d.election === f.election) && (!f.domain || d.domain === f.domain) && (!f.status || d.status === f.status);
+        tr.hidden = !ok;
+        if (ok) n++;
+      });
+      document.getElementById('f-count')!.textContent = `${n} ${n === 1 ? 'promise' : 'promises'}${n === rows.length ? '' : ` of ${rows.length}`}`;
+      document.getElementById('f-none')!.hidden = n !== 0;
+    };
+    form.addEventListener('change', apply);
+    form.addEventListener('reset', () => setTimeout(apply));
+    apply();
+  }
+</script>

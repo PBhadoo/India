@@ -14,6 +14,20 @@ const point = z.object({
   evidence: z.string().optional(),
 });
 
+// Reform arguments (Addendum v3): attributed points under keep / change / repeal. `source` is an index
+// (1-based) into the action's own `sources` list; scripts/validate-content.mjs checks that it exists.
+const reformPoint = z.object({
+  point: z.string().min(1),
+  madeBy: z.string().min(1),
+  source: z.number().int().min(1),
+});
+export const reformSchema = z.object({
+  asOf: z.coerce.date(),
+  keep: z.array(reformPoint).default([]),
+  change: z.array(reformPoint).default([]),
+  repeal: z.array(reformPoint).default([]),
+});
+
 const criterion = z.number().int().min(-5).max(5);
 
 export const scorerSchema = z.object({
@@ -52,6 +66,7 @@ const actions = defineCollection({
     benefits: z.array(point),
     concerns: z.array(point),
     sources: z.array(source).min(2),
+    reform: reformSchema.optional(),
     scoring: z.object({
       era_baseline: z.string(),
       lag_years: z.number().min(0),
@@ -81,7 +96,7 @@ const developing = defineCollection({
 });
 
 export const CLAIM_TYPES = ['finding', 'official-statement', 'allegation', 'data', 'event'] as const;
-export const DOSSIER_KINDS = ['topic', 'institution', 'organisation', 'party', 'company-group'] as const;
+export const DOSSIER_KINDS = ['topic', 'institution', 'organisation', 'party', 'company-group', 'debate'] as const;
 
 // Dossiers are unscored reference files (Addendum v2). The schema is deliberately tolerant of optional
 // fields; scripts/validate-content.mjs enforces the editorial rules (source counts, allegation fields...).

@@ -49,6 +49,18 @@ sources:
     url: https://en.wikipedia.org/wiki/Armed_Forces_(Special_Powers)_Act
     publisher: Wikipedia
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Army requires authority for entry and search without warrant, seizure of weapons and use of force, with safeguards against spurious and motivated accusations, and the Act provides these.", madeBy: "Army Headquarters, in evidence to the Committee to Review AFSPA (2005)", source: 1 }
+    - { point: "Central forces would be progressively withdrawn from the north-east once State armed police reach the required standard, and until then need the Act's authority and the power to declare disturbed areas.", madeBy: "Ministry of Home Affairs, in evidence to the Committee to Review AFSPA (2005)", source: 1 }
+    - { point: "The Supreme Court upheld the Act's constitutional validity and added safeguards, including the Army's 'Dos and Don'ts'.", madeBy: "Supreme Court of India, Naga People's Movement of Human Rights v. Union of India (1998)", source: 1 }
+  change:
+    - { point: "The Act is 'too sketchy, too bald and quite inadequate in several particulars'.", madeBy: "Committee to Review AFSPA, 1958 (Justice B. P. Jeevan Reddy), 2005", source: 1 }
+    - { point: "Armed forces do not have blanket immunity from prosecution for alleged excesses in AFSPA areas; immunity under the Act is not absolute.", madeBy: "Supreme Court of India, Extra Judicial Execution Victim Families Association v. Union of India (8 July 2016)", source: 3 }
+    - { point: "The Act operates through notification of disturbed areas, so coverage can be narrowed; the Reddy report records that in Meghalaya only a 20 km border belt had been notified.", madeBy: "Committee to Review AFSPA, 1958 (Justice B. P. Jeevan Reddy), 2005", source: 1 }
+  repeal:
+    - { point: "The Act has become 'a symbol of oppression, an object of hate and an instrument of discrimination and high-handedness'; the Committee recommended repeal, with suitable provisions inserted in the Unlawful Activities (Prevention) Act, 1967.", madeBy: "Committee to Review AFSPA, 1958 (Justice B. P. Jeevan Reddy), 2005", source: 1 }
 scoring:
   era_baseline: In the 1950s the Naga insurgency had led Assam to enact the Assam Disturbed Areas Act, 1955 and deploy the Assam Rifles; colonial-era disturbed-area ordinances were the model.
   lag_years: 10

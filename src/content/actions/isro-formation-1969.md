@@ -37,6 +37,18 @@ sources:
   - { title: "Department of Space (secondary summary)", url: "https://en.wikipedia.org/wiki/Department_of_Space", publisher: Wikipedia, type: reputable-media }
   - { title: "ISRO revised budget stood at Rs 12,448.60 crore in FY 2025-26", url: "https://indiacsr.in/isro-revises-budget-stood-at-rs-12448-60-crore-in-fy-2025-26/", publisher: India CSR, type: reputable-media }
   - { title: "Parliament question: Space startups (PIB, 12 August 2026)", url: "https://www.globalsecurity.org/space/library/news/2026/space-260812-india-pib01.htm", publisher: PIB via GlobalSecurity, type: official-data }
+  - { title: "Parliamentary panel flags undervalued transfer of ISRO technologies to private firms (28 March 2026)", url: "https://www.etvbharat.com/en/bharat/parliamentary-panel-flags-undervalued-transfer-of-isro-technologies-to-private-firms-enn26032804230", publisher: "ETV Bharat", type: reputable-media }
+  - { title: "Parliamentary Standing Committee on Science and Technology on Department of Space budget (PTI, 26 March 2025)", url: "https://www.taxtmi.com/news?id=38725", publisher: "TaxTMI (PTI report)", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "NSIL had signed 118 technology transfer agreements covering 83 technologies, and about 440 space startups are registered.", madeBy: "Department of Space, Lok Sabha reply, August 2026", source: 4 }
+    - { point: "The department is moving to a more structured, market-based technology transfer system, with a Standing Committee in IN-SPACe assessing fees.", madeBy: "Department of Space, response to the Parliamentary Standing Committee on Science and Technology, reported 28 March 2026", source: 5 }
+    - { point: "The adjustments in the revised budget reflected realistic expenditure patterns and major milestones remained on track.", madeBy: "Department of Space, response to the Parliamentary Standing Committee on Science and Technology, reported 26 March 2025", source: 6 }
+  change:
+    - { point: "Technologies are often transferred to private players at undervalued rates, and a more competitive, market-aligned pricing framework with periodic third-party audits is needed.", madeBy: "Parliamentary Standing Committee on Science and Technology, reported 28 March 2026", source: 5 }
+    - { point: "The Department projected Rs 15,983 crore for 2025-26 but received Rs 13,416 crore, which raises concerns about its ability to execute all planned projects.", madeBy: "Parliamentary Standing Committee on Science and Technology, reported 26 March 2025", source: 6 }
+    - { point: "Actual spending in 2024-25 was only 71% of the revised estimate by December 2024, and the Gaganyaan allocation was cut at the revised stage from Rs 1,200 crore to Rs 847.35 crore.", madeBy: "Parliamentary Standing Committee on Science and Technology, reported 26 March 2025", source: 6 }
 scoring:
   era_baseline: "In the 1960s only the United States and the Soviet Union had substantial space programmes, and India's per-capita income was among the lowest of major economies."
   lag_years: 6

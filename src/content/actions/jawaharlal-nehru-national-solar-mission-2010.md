@@ -37,6 +37,16 @@ sources:
   - { title: "Physical Progress (Achievements), installed renewable energy capacity", url: "https://mnre.gov.in/en/physical-progress/", publisher: Ministry of New and Renewable Energy, type: official-data }
   - { title: "Jawaharlal Nehru National Solar Mission", url: "https://en.wikipedia.org/wiki/Jawaharlal_Nehru_National_Solar_Mission", publisher: Wikipedia, type: reputable-media }
   - { title: "Solar power in India", url: "https://en.wikipedia.org/wiki/Solar_power_in_India", publisher: Wikipedia (citing MNRE data), type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "India's installed solar capacity reached 171,051 MW by 30 September 2026.", madeBy: "Ministry of New and Renewable Energy, physical progress data", source: 1 }
+    - { point: "The 100 GW solar milestone was reached on 31 January 2025, with capacity rising from 11 MW in 2010 to about 105,646 MW by March 2025.", madeBy: "Central Electricity Authority installed capacity reports, as cited on Wikipedia", source: 2 }
+    - { point: "Reverse bidding with bundled power brought tariffs down across successive Phase 1 batches.", madeBy: "Wikipedia summary of the Mission's Phase 1 design", source: 2 }
+  change:
+    - { point: "Domestic content requirements for crystalline silicon cells and modules caused vigorous controversy between developers, who favoured the global market, and manufacturers, and developers procured thin-film modules from international players.", madeBy: "Wikipedia summary of developer and manufacturer positions", source: 2 }
+    - { point: "Phase II domestic content requirements discriminate against US exports and are prohibited under WTO rules; India replied that the policy builds local capacity and reduces import dependence.", madeBy: "United States Trade Representative (WTO complaint) and Government of India (reply)", source: 2 }
+    - { point: "The 100 GW target was reached after the 2022 deadline, with rooftop solar below its 40 GW target.", madeBy: "Wikipedia summary of Solar power in India", source: 3 }
 scoring:
   era_baseline: "In 2010 grid-connected solar was negligible in India's power supply (cumulative capacity of between 11 MW and 161 MW depending on source), and solar module costs were far higher than coal-fired generation."
   lag_years: 5

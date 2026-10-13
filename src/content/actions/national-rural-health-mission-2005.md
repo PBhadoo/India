@@ -58,6 +58,15 @@ sources:
   url: https://dhsprogram.com/pubs/pdf/FRIND3/FRIND3-Vol1AndVol2.pdf
   publisher: International Institute for Population Sciences / Ministry of Health and Family Welfare
   type: official-data
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Institutional deliveries rose from 39% in 2005-06 to 79% in 2015-16 and 89% in 2019-21.", madeBy: "National Family Health Surveys NFHS-3, NFHS-4 and NFHS-5 (IIPS and Ministry of Health and Family Welfare)", source: 5 }
+    - { point: "About 8.6 lakh ASHAs were in place across the country by January 2013, eight years after launch.", madeBy: "National Health Systems Resource Centre, Update on the ASHA Programme, January 2013", source: 3 }
+  change:
+    - { point: "There was a 24%-38% shortfall in sub-centres, PHCs and CHCs in 28 States/UTs, and a 77%-87% average shortfall of specialists in selected CHCs in 27 States.", madeBy: "Comptroller and Auditor General, audit of Reproductive and Child Health under NRHM, tabled 21 July 2017", source: 1 }
+    - { point: "Unspent balances with State Health Societies rose from Rs 7,375 crore to Rs 9,509 crore.", madeBy: "Comptroller and Auditor General, tabled 21 July 2017", source: 1 }
+    - { point: "The infant mortality rate was 39 against a Millennium Development Goal target of 27, and the maternal mortality ratio was 167 against 109.", madeBy: "PRS Legislative Research, summary of the CAG audit report, July 2017", source: 1 }
 scoring:
   era_baseline: '2005-06 (NFHS-3): 39% of births in a health facility; public health spending on rural facilities was low and many sub-centres and PHCs lacked staff and supplies.'
   lag_years: 5

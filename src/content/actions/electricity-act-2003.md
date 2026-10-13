@@ -40,6 +40,16 @@ sources:
   - { title: "Electricity Act, 2003", url: "https://en.wikipedia.org/wiki/Electricity_Act,_2003", publisher: Wikipedia, type: reputable-media }
   - { title: "Discussion Paper: Power distribution sector", url: "https://prsindia.org/billtrack/prs-products/discussion-paper-power-distribution-sector", publisher: PRS Legislative Research, type: reputable-media }
   - { title: "Electricity sector in India", url: "https://en.wikipedia.org/wiki/Electricity_sector_in_India", publisher: Wikipedia (citing CEA and PFC), type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act delicensed thermal generation, removed permission for captive plants and provided for open access, trading and multiple distribution licences to increase competition.", madeBy: "Prayas Energy Group, 'Know the Electricity Act 2003'", source: 1 }
+    - { point: "The Act permits rural distribution through panchayats, user associations, cooperatives or franchisees without a licence, and requires State Regulatory Commissions and an Appellate Tribunal.", madeBy: "Prayas Energy Group, 'Know the Electricity Act 2003'", source: 1 }
+    - { point: "Private participation in Delhi distribution cut AT&C losses from 45% to 9% between 2001-02 and 2018-19.", madeBy: "PRS Legislative Research, discussion paper on power distribution", source: 3 }
+  change:
+    - { point: "Open access would let bulk consumers leave state-owned distribution utilities, leading to financial deterioration of utilities that increasingly serve only small and rural consumers.", madeBy: "Prayas Energy Group, 'Know the Electricity Act 2003'", source: 1 }
+    - { point: "Open access adoption has been below potential because of high cross-subsidy surcharges and operational barriers, and discoms accumulated losses of about Rs 3 lakh crore over 2017-18 to 2020-21.", madeBy: "PRS Legislative Research, discussion paper on power distribution", source: 3 }
+    - { point: "Renewable purchase obligations were met at 10.8% against a 17.5% target in 2019-20, with only six states meeting them.", madeBy: "PRS Legislative Research, discussion paper on power distribution", source: 3 }
 scoring:
   era_baseline: "By 2002-03 state electricity boards were financially stressed (a central bailout package was agreed in 2002), and a decade of independent power producer policy had added only about 3% of national generation."
   lag_years: 5

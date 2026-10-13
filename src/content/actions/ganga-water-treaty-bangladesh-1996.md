@@ -37,6 +37,16 @@ sources:
   - { title: "Flow with the times: The Farakka water treaty", url: "https://www.orfonline.org/index.php/research/flow-with-the-times-the-farakka-water-treaty", publisher: Observer Research Foundation, type: academic }
   - { title: "Revisiting India-Bangladesh Ganga Water Treaty (1996)", url: "https://www.impriindia.com/?p=74559", publisher: IMPRI, type: academic }
   - { title: "Farakka Barrage (secondary summary of treaty table)", url: "https://en.wikipedia.org/wiki/Farakka_Barrage", publisher: Wikipedia, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The treaty replaced expired temporary arrangements with a 30-year framework for dry-season sharing and gives a continuing institutional channel through the Joint Committee.", madeBy: "Ninchen Tamang, IMPRI Policy Update, citing Ministry of Jal Shakti (2023)", source: 3 }
+    - { point: "India generally adhered to the treaty between 1997 and 2016, releasing more water on average than the indicative schedule required.", madeBy: "Thomas (2017), as summarised by IMPRI", source: 3 }
+    - { point: "The treaty guarantees 35,000 cusecs to each country in alternate 10-day periods from 11 March to 10 May and replaced fixed flow figures with a sharing formula.", madeBy: "Anamitra Anurag Danda, Observer Research Foundation", source: 2 }
+  change:
+    - { point: "Bangladesh received less than the guaranteed share at Hardinge Bridge in 43% of critical periods and 65% of guaranteed periods, and India did not provide the stipulated minimum in 15 of 27 low-flow instances from 2008 to 2016.", madeBy: "Rahman et al. (2019) and Thomas (2017), as summarised by IMPRI", source: 3 }
+    - { point: "The formula relies on 1949-1988 average flows, and the treaty lacks real-time data sharing, a drought-sharing mechanism and environmental flow provisions.", madeBy: "IMPRI policy analysis (Ninchen Tamang)", source: 3 }
+    - { point: "The current arrangement should be allowed to expire and replaced by a basin-wide agreement that makes biodiversity and the Sundarbans central.", madeBy: "Anamitra Anurag Danda, Observer Research Foundation", source: 2 }
 scoring:
   era_baseline: "The 1977 agreement and the 1982 and 1985 memoranda had lapsed by 1988, and there was no agreed sharing framework for the following eight years."
   lag_years: 3

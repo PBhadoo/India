@@ -40,6 +40,17 @@ sources:
   - { title: "Parliamentary panel recommends intensification in recruitment of Agniveers", url: "https://www.etvbharat.com/english/bharat/par-panel-recommends-intensification-in-recruitment-of-agniveers/na20231220213621696696640", publisher: ETV Bharat, type: reputable-media }
   - { title: "Demand for Grants 2023-24 analysis: Defence", url: "https://prsindia.org/budgets/parliament/demand-for-grants-2023-24-analysis-defence", publisher: PRS Legislative Research, type: reputable-media }
   - { title: "Agniveer scheme brought after lot of thought: Rajnath Singh to Rahul", url: "https://www.siasat.com/agniveer-scheme-brought-after-lot-of-thought-rajnath-singh-to-rahul-3054416/", publisher: Siasat, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The scheme was made in national interest and is not arbitrary or mala fide.", madeBy: "Delhi High Court, judgment of 27 February 2023", source: 3 }
+    - { point: "The scheme was brought in after a lot of thought, drawing on input from 158 organisations, and similar short-service schemes exist in countries such as the US and UK.", madeBy: "Rajnath Singh, Defence Minister (BJP), Lok Sabha, 1 July 2024", source: 6 }
+    - { point: "Recruitment of Agniveers should continue at a stepped-up pace, following a roadmap of about 40,000, 45,000 and 50,000 recruits in successive years.", madeBy: "Parliamentary Standing Committee on Defence, December 2023", source: 4 }
+  change:
+    - { point: "The shorter tenure of Agnipath recruits compared with regular cadres is a concern for the defence manpower budget.", madeBy: "PRS Legislative Research, Demand for Grants 2023-24 analysis (Defence)", source: 5 }
+    - { point: "Pandemic-period recruitment shortfalls should be made up by intensifying Agniveer recruitment.", madeBy: "Parliamentary Standing Committee on Defence, December 2023", source: 4 }
+  repeal:
+    - { point: "A Congress government would scrap the scheme because it is 'against jawans, the armed forces and deshbhakts', and Agniveers should receive martyr status.", madeBy: "Rahul Gandhi, Leader of Opposition (INC), Lok Sabha, 1 July 2024", source: 6 }
 scoring:
   era_baseline: "Before 2022 the services recruited soldiers for long careers with pensions; defence pension spending was about a quarter of the defence budget."
   lag_years: 8

@@ -38,6 +38,14 @@ sources:
   - { title: "Asian Games 1982 and India", url: "https://olympics.com/en/news/asian-games-1982-india", publisher: Olympics.com, type: reputable-media }
   - { title: "People's Union for Democratic Rights v. Union of India (1982), Supreme Court", url: "https://digiscr.sci.gov.in/admin/judgement_file/judgement_pdf/1983/volume%201/Part%20I/People%60s%20Union%20For%20Democratic%20Rights%20And%20Others%20_%20Union%20Of%20India%20%26%20Others_1701148826.pdf", publisher: Supreme Court of India, type: court }
   - { title: "Olympic dreams (editorial)", url: "https://www.dtnext.in/amp/story/edit/olympic-dreams-744601", publisher: DT Next, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "India won 13 gold, 19 silver and 25 bronze medals, 57 in total, its best performance since 1951.", madeBy: "Olympics.com (International Olympic Committee news service)", source: 3 }
+    - { point: "The Games brought colour television to India after a Union Cabinet decision, with Doordarshan buying outside broadcasting vans.", madeBy: "The Bridge, sports journalism report", source: 1 }
+  change:
+    - { point: "Workers on the Asiad construction projects were not being paid the minimum wage, and that non-payment of the minimum wage amounts to forced labour under Article 23.", madeBy: "Supreme Court of India (Justice P. N. Bhagwati), People's Union for Democratic Rights v. Union of India, 18 September 1982", source: 4 }
+    - { point: "Large stadiums built for the Games, such as the Nehru Stadium, stood shuttered for years afterwards, raising the question of post-event use of venues.", madeBy: "DT Next editorial, 'Olympic dreams'", source: 5 }
 scoring:
   era_baseline: "In 1982 India had hosted the first Asian Games in 1951, but colour television did not exist in India and sports infrastructure in Delhi was limited."
   lag_years: 3

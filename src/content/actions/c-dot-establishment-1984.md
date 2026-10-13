@@ -38,6 +38,18 @@ sources:
   - { title: "Journey (C-DOT timeline)", url: "https://www.cdot.in/cdotweb/web/view_timeline.php?lang=en", publisher: Centre for Development of Telematics, type: primary }
   - { title: "Centre for Development of Telematics celebrates its 42nd Foundation Day", url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2160640", publisher: Press Information Bureau, type: official-data }
   - { title: "HISTORY - C-DOT - The early days", url: "https://www.voicendata.com/history-c-dot-the-early-days", publisher: Voice&Data, type: reputable-media }
+  - { title: "The C-DoT Story - Recollections of the early days", url: "https://www.voicendata.com/the-c-dot-story-recollections-of-the-early-days", publisher: "Voice&Data (article by S. Ramakrishnan, formerly Founder Director of ERNET and DG of C-DAC)", type: reputable-media }
+  - { title: "C-DOT exchange report on delays and Alcatel-based factories (18 April 1990)", url: "https://techmonitor.ai/?p=226734", publisher: "Tech Monitor (reporting the Financial Times)", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "C-DOT held close to 60% of exchange lines in India's network by the mid-to-late 1980s, and its early rural exchange was licensed to tens of manufacturers.", madeBy: "S. Ramakrishnan, former Founder Director of ERNET and DG of C-DAC, who worked with Sam Pitroda", source: 5 }
+    - { point: "The Kittur rural automatic exchange of 22 July 1986 was the first indigenous digital exchange, built at about one-tenth of the cost abroad, with technology transferred to eight local manufacturers.", madeBy: "Ravinder Ambardar, C-DOT representative, in Voice&Data", source: 4 }
+    - { point: "C-DOT's original aim of a family of digital switches within 36 months and Rs 36 crore led to the first rural digital exchange in 1986.", madeBy: "C-DOT, official timeline", source: 2 }
+  change:
+    - { point: "The initial target of Rs 36 crore, 36 months and 10,000-line exchanges was not fully met, with urban exchanges delayed by software complexity and network integration.", madeBy: "S. Ramakrishnan, former DG of C-DAC, who worked with Sam Pitroda", source: 5 }
+    - { point: "A leaked government committee report found that Pitroda had underestimated the complexity and magnitude of the task, and proposed two 500,000-line factories using Alcatel technology.", madeBy: "Government committee report, as reported by the Financial Times via Tech Monitor, 18 April 1990", source: 6 }
+    - { point: "C-DOT suffered its first major setback after Sam Pitroda's departure, and some officers in government initially opposed it.", madeBy: "S. Ramakrishnan, former DG of C-DAC", source: 5 }
 scoring:
   era_baseline: "In 1984 India depended largely on imported electromechanical and early electronic exchanges, and telephone density was among the lowest of large economies."
   lag_years: 5

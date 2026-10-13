@@ -63,6 +63,16 @@ sources:
   url: https://www.pmindia.gov.in/en/news_updates/free-foodgrains-for-81-35-crore-beneficiaries-for-five-years-cabinet-decision/
   publisher: Prime Minister's Office, Government of India
   type: primary
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "PDS leakage fell from an estimated 41.7% in 2011-12 to 24.1% in 2022-23 and 8.8% in 2023-24, a decline attributed to the Act scaling up state reforms.", madeBy: "Puri and Pingali, Ideas for India", source: 4 }
+    - { point: "The Act gives up to 75% of the rural and 50% of the urban population 5 kg of foodgrain per person per month, names the eldest woman as household head, and provides maternity benefit of not less than Rs 6,000.", madeBy: "Department of Food and Public Distribution, NFSA portal", source: 2 }
+    - { point: "Free foodgrains should continue for about 81.35 crore beneficiaries under the Act for five years from 1 January 2024.", madeBy: "Union Cabinet, decision of 29 November 2023", source: 7 }
+  change:
+    - { point: "Coverage should be cut from 67% to 40% of the population, subsidised prices linked to MSP and cash transfers introduced in the PDS.", madeBy: "High Level Committee on restructuring the FCI (chair Shanta Kumar, BJP), January 2015", source: 5 }
+    - { point: "Coverage should not be limited by the 2011 Census, since this may do injustice to needy people, and the right to food is a fundamental right under Article 21.", madeBy: "Supreme Court of India, bench of Justice M. R. Shah, 21 July 2022", source: 6 }
+    - { point: "Cross-database checks flagged 8.51 crore records and States removed over 2.12 crore ineligible beneficiaries.", madeBy: "Economic Survey 2025-26, Ministry of Finance", source: 3 }
 scoring:
   era_baseline: In 2011-12 the TPDS covered BPL and APL households and an estimated 41.7% of PDS grain leaked (Drèze and Khera).
   lag_years: 4

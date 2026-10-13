@@ -45,6 +45,15 @@ sources:
   url: https://en.wikipedia.org/wiki/Midday_Meal_Scheme
   publisher: Wikipedia
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The objectives are nutrition for economically disadvantaged children, combating malnutrition, and encouraging enrolment and reducing dropouts.", madeBy: "Government of Tamil Nadu, Pudukkottai district page", source: 1 }
+    - { point: "Field studies of school meal programmes observed a positive effect on enrolment.", madeBy: "Motkuri Venkatanarayana, Centre for Economic and Social Studies, citing Rajan and Jayakumar (1992) and Dreze and Kingdon (2001)", source: 2 }
+    - { point: "Tamil Nadu's 1982 universalisation of meals for primary-class children in government schools was followed by other states and, after a Supreme Court direction of 28 November 2001, by cooked meals across India.", madeBy: "Motkuri Venkatanarayana, Centre for Economic and Social Studies (2009)", source: 2 }
+  change:
+    - { point: "Most impact studies of school meal programmes are restricted to a locality and cannot give a state or national picture of beneficiaries.", madeBy: "Motkuri Venkatanarayana, Centre for Economic and Social Studies (2009)", source: 2 }
+    - { point: "Only 20.7% of children aged 5-14 nationally had at least one school meal in the previous 30 days in 2004-05, and the programme is limited to public schools.", madeBy: "Motkuri Venkatanarayana, using NSS 61st round (2004-05)", source: 2 }
 scoring:
   era_baseline: In the early 1980s India had no national school meal programme; the national cooked-meal scheme began in 1995 and Supreme Court-directed universal coverage in 2001 [2].
   lag_years: 3

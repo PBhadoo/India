@@ -59,6 +59,16 @@ sources:
   url: https://www.downtoearth.org.in/environment/reduce-food-security-benefits-from-67-to-40-population-says-panel-on-restructuring-fci--48344
   publisher: Down To Earth (Centre for Science and Environment)
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The system focused subsidy on the poor by dividing households into BPL and APL categories in 1997, and the Antyodaya Anna Yojana for the poorest households was added in 2000.", madeBy: "Economic Survey 2025-26, Ministry of Finance", source: 1 }
+    - { point: "PDS leakage fell from 54% in 2004-05 to 41.7% in 2011-12.", madeBy: "Jean Dreze and Reetika Khera, as cited by Puri and Pingali", source: 4 }
+    - { point: "Public distribution of foodgrains rose from 17.8 million tonnes in 1997 to 47.9 million tonnes in 2011.", madeBy: "Economic Survey 2014-15, Statistical Appendix", source: 3 }
+  change:
+    - { point: "About 58% of subsidised foodgrains issued from the Central Pool did not reach BPL families, owing to identification errors and other leakages.", madeBy: "Programme Evaluation Organisation, Planning Commission, March 2005", source: 2 }
+    - { point: "Leakage was 58.6% in 2004-05 and 43.1% in 2011-12 on a different estimate.", madeBy: "Bhattacharya et al., as cited by Puri and Pingali", source: 4 }
+    - { point: "Around 40-50% of PDS grain leaks, so beneficiary coverage should be cut and cash transfers introduced.", madeBy: "High Level Committee on restructuring the FCI (chair Shanta Kumar), January 2015", source: 6 }
 scoring:
   era_baseline: Before 1997 the Economic Survey describes the PDS as a universal system; public distribution of foodgrains was 17.8 Mt in 1997.
   lag_years: 5

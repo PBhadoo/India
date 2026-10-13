@@ -41,6 +41,15 @@ sources:
   - { title: "Coal ministry optimistic about achieving production target of over 170 MT in FY25", url: "https://www.theweek.in/wire-updates/business/2024/11/09/dcm17-biz-coal-production.html", publisher: The Week (PTI), type: reputable-media }
   - { title: "India's Coal Production Likely To Be 997 MT In FY24", url: "https://www.outlookbusiness.com/news/india-s-coal-production-likely-to-be-997-mt-in-fy24--news-249925", publisher: Outlook Business (PTI), type: reputable-media }
   - { title: "Order of the Supreme Court of India regarding allocation of coal blocks, 24/09/2014", url: "https://indiaenvironmentportal.org.in/in-court/order-of-the-supreme-court-of-india-regarding-allocation-of-coal-blocks-24092014", publisher: India Environment Portal (Supreme Court order), type: court }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Private owners had not provided adequate capital for the country's energy needs, and some used unscientific mining practices and kept poor working conditions, which led to nationalisation.", madeBy: "Ministry of Coal, Government of India, history page", source: 1 }
+    - { point: "Coal India's production rose from 79 million tonnes in 1975 to 781 million tonnes in FY 2024-25, and it accounts for about 75% of national output.", madeBy: "Coal India Limited official statement, reported by IANS", source: 3 }
+  change:
+    - { point: "The Court held that coal blocks were allocated by the inter-ministerial screening committee in a non-transparent, ad hoc manner and that allocations to government companies for commercial use were illegal, cancelling 214 of 218 blocks.", madeBy: "Supreme Court of India, judgment of 24 September 2014", source: 4 }
+    - { point: "Private firms should be allowed into commercial coal mining.", madeBy: "Cabinet Committee on Economic Affairs (Union Government), decision of 20 February 2018", source: 5 }
+    - { point: "Captive and commercial mines produced 100.08 million tonnes between 1 April and 8 November 2024, up 33% year on year, as evidence of output from mines outside Coal India.", madeBy: "Ministry of Coal statement, reported by PTI, November 2024", source: 6 }
 scoring:
   era_baseline: "Coal output had grown slowly from about 30 million tonnes in 1946 to about 33 million tonnes at the start of the First Plan, with mining in private hands and the steel and power sectors expanding."
   lag_years: 5

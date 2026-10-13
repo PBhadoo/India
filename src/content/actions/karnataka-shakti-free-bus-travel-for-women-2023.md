@@ -46,6 +46,24 @@ sources:
   url: https://thesouthfirst.com/karnataka/karnatakas-five-guarantee-schemes-continue-with-₹51034-crore-in-2025-budget/
   publisher: The South First
   type: reputable-media
+- title: "Gender, Welfare, and Mobility: Impact of Shakti Scheme on BMTC Transport Transformation (Azim Premji University study, November 2025; PTI report)"
+  url: "https://www.theweek.in/wire-updates/national/2025/11/06/mds9-ka-shakti-scheme-study.html"
+  publisher: "The Week (PTI)"
+  type: reputable-media
+- title: "IndiaSpend features JJN Phase 1 study on Shakti scheme's impact on women's urban mobility"
+  url: "https://justjobsnetwork.org/news/indiaspend-features-jjn-phase-1-study-on-shakti-schemes-impact-on-womens-urban-mobility/"
+  publisher: "JustJobs Network"
+  type: academic
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Women's ridership on BMTC buses rose about 2.5 times after launch and has stabilised at about 60:40 women to men, a structural shift in access to public transport.", madeBy: "Tamoghna Halder and Arjun Jayadev, Azim Premji University, November 2025", source: 4 }
+    - { point: "Women's mobility, savings and confidence rose quickly, with salaried and self-employed women reporting savings of over Rs 1,000 a month on average.", madeBy: "JustJobs Network, Phase 1 study with the Fiscal Policy Institute and the Government of Karnataka (2024)", source: 5 }
+    - { point: "The scheme continues in the budget, with Rs 5,300 crore allotted to Shakti in 2026-27.", madeBy: "Government of Karnataka, Budget 2026-27, as analysed by PRS Legislative Research", source: 2 }
+  change:
+    - { point: "The guarantee schemes increased revenue expenditure and the revenue deficit, and higher allocations to them in 2023-24 reduced infrastructure spending by Rs 5,229 crore compared with the previous year.", madeBy: "Comptroller and Auditor General (2025), as reported by PRS Legislative Research", source: 2 }
+    - { point: "BMTC's fleet, frequency and metro integration should be expanded, and migrant women who remain excluded should receive the benefit.", madeBy: "Tamoghna Halder and Arjun Jayadev, Azim Premji University, November 2025", source: 4 }
+    - { point: "Higher ridership led to overcrowding and longer waits, so bus capacity should expand alongside free fares and services be planned with gender in mind.", madeBy: "JustJobs Network, Phase 1 study (2024)", source: 5 }
 scoring:
   era_baseline: Karnataka's fiscal deficit stood at 2.14% of GSDP in 2022-23, the year before the guarantees began [2]; the sources opened do not compare Shakti with other states' schemes.
   lag_years: 2

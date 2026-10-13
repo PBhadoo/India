@@ -54,6 +54,15 @@ sources:
   url: https://dhsprogram.com/pubs/pdf/FR375/FR375.pdf
   publisher: International Institute for Population Sciences / Ministry of Health and Family Welfare
   type: official-data
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "42.78 crore Ayushman Bharat cards had been generated and 10.98 crore hospital admissions recorded by 31 December 2025, with 6 crore senior citizens covered.", madeBy: "Economic Survey 2025-26, Ministry of Finance", source: 4 }
+    - { point: "Cover of Rs 5 lakh a year was extended in October 2024 to all citizens aged 70 and above regardless of socio-economic status.", madeBy: "Ministry of Health and Family Welfare, Rajya Sabha reply, 4 February 2025", source: 3 }
+    - { point: "Reports of claims for dead patients were misleading, since pre-authorisation can be started up to three days before admission, and the National Health Authority filed an Action Taken Note.", madeBy: "Union Health Ministry, response to the CAG audit", source: 2 }
+  change:
+    - { point: "The audit found 2,14,923 claims shown as paid for 'fresh treatments' to patients recorded as dead,.", madeBy: "Comptroller and Auditor General, Performance Audit Report No. 11 of 2023", source: 1 }
+    - { point: "About 7.5 lakh beneficiaries were linked to a single mobile number (9999999999), indicating weak beneficiary data validation.", madeBy: "Comptroller and Auditor General, Performance Audit Report No. 11 of 2023", source: 1 }
 scoring:
   era_baseline: In 2019-21 (NFHS-5) a minority of households (41.0%) had any member covered by a health insurance or financing scheme.
   lag_years: 4

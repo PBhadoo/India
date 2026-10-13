@@ -47,6 +47,16 @@ sources:
   url: https://www.gconnect.in/orders-in-brief/reservation/obc-vacancies-in-central-government.html
   publisher: Gconnect (compilation of government orders)
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The 1990 memorandum reserving 27% of central civil vacancies for backward classes is valid.", madeBy: "Supreme Court of India, nine-judge bench, Indra Sawhney v. Union of India, 16 November 1992", source: 1 }
+    - { point: "OBC representation in central government posts rose from 16.55% on 1 January 2012 to 20.46% on 1 January 2019.", madeBy: "Department of Personnel and Training data, reported by Madhyamam", source: 2 }
+    - { point: "Other Backward Classes were about 52% of the population excluding Scheduled Castes and Tribes.", madeBy: "Backward Classes Commission (Mandal Commission), report of 31 December 1980", source: 1 }
+  change:
+    - { point: "The 'creamy layer' must be excluded, reservations should not exceed 50% save in extraordinary situations, and reservation in promotion is not permitted.", madeBy: "Supreme Court of India, Indra Sawhney v. Union of India, 16 November 1992", source: 1 }
+    - { point: "Permanent bodies should be set up by the Centre and States to hear requests for inclusion in, and complaints of over- or under-inclusion in, OBC lists.", madeBy: "Supreme Court of India, Indra Sawhney v. Union of India, 16 November 1992", source: 1 }
+    - { point: "OBC representation was 19.63% on 1 January 2014 across 65 departments, below the 27% reserved.", madeBy: "Government of India, Lok Sabha reply reproduced by GConnect", source: 3 }
 scoring:
   era_baseline: In 1990 central services had no reservation for OBCs (reservations existed only for SCs and STs); the Mandal Commission estimated OBCs at about 52% of the population.
   lag_years: 10

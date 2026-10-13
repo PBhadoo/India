@@ -37,6 +37,17 @@ sources:
   - { title: "Pradhan Mantri Gram Sadak Yojana", url: "https://en.wikipedia.org/wiki/Pradhan_Mantri_Gram_Sadak_Yojana", publisher: Wikipedia, type: reputable-media }
   - { title: "Celebrating 25th Anniversary: Pradhan Mantri Gram Sadak Yojana (PMGSY)", url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2208381&reg=3&lang=1", publisher: Press Information Bureau, type: official-data }
   - { title: "Pradhan Mantri Gram Sadak Yojana (NRIDA)", url: "https://pmgsy.nic.in/nrida/pmgsy.html", publisher: Ministry of Rural Development, type: primary }
+  - { title: "Report Summary: Audit of Pradhan Mantri Gram Sadak Yojana (CAG report of 12 August 2016)", url: "https://prsindia.org/files/policy/policy_committee_reports/1472706270_Report%20Summary-%20CAG%20on%20PMGSY.pdf", publisher: "PRS Legislative Research", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Of 1,63,339 habitations sanctioned under PMGSY-I, 1,62,818 (99.7%) had been constructed by 31 July 2025.", madeBy: "Ministry of Rural Development, PIB release on PMGSY's 25th anniversary", source: 2 }
+    - { point: "7,87,520 km of the 8,25,114 km sanctioned had been completed by December 2025.", madeBy: "Ministry of Rural Development, PIB release", source: 2 }
+    - { point: "New feeder roads helped workers move out of agriculture.", madeBy: "Sam Asher and Paul Novosad (2020), as cited on Wikipedia", source: 1 }
+  change:
+    - { point: "Discrepancies in District Rural Road Plans were found in 19 states, and 372 projects were abandoned in 11 states after spending Rs 280 crore.", madeBy: "Comptroller and Auditor General, Performance Audit of PMGSY, 12 August 2016", source: 4 }
+    - { point: "Quality-control irregularities such as missing field laboratories and untrained manpower were found in 12 states, and social audit of road quality should be adopted.", madeBy: "Comptroller and Auditor General, Performance Audit of PMGSY, 12 August 2016", source: 4 }
+    - { point: "The new roads brought no major changes in agricultural outcomes, income or assets.", madeBy: "Sam Asher and Paul Novosad (2020), as cited on Wikipedia", source: 1 }
 scoring:
   era_baseline: "In 2000 a large share of rural habitations had no all-weather road, and rural roads were mainly a state subject funded through state budgets."
   lag_years: 10

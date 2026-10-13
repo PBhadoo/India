@@ -37,6 +37,18 @@ sources:
   - { title: "PIB document on Khelo India (June 2025)", url: "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jun/doc2025610567401.pdf", publisher: Press Information Bureau, type: official-data }
   - { title: "Cabinet Approves Rs 29,000 Crore Five-Year Outlay For Khelo India", url: "https://www.outlookindia.com/sports/khelo-india-scheme-investment-budget-union-ministry-sports-federations", publisher: Outlook India, type: reputable-media }
   - { title: "25% of Indian contingent at Paris Summer Olympics 2024 are Khelo India athletes: Govt", url: "https://www.newsonair.gov.in/25-of-indian-contingent-at-paris-summer-olympics-2024-are-khelo-india-athletes-govt", publisher: All India Radio, type: official-data }
+  - { title: "Standing Committee on Human Resource Development report on Khelo India (December 2019), summary", url: "https://prsindia.org/policy/report-summaries/khelo-india-scheme", publisher: "PRS Legislative Research", type: reputable-media }
+  - { title: "Review of functioning and performance of Sports Authority of India and Khelo India (Standing Committee, August 2025), summary", url: "https://prsindia.org/policy/report-summaries/review-of-functioning-and-performance-of-sports-authority-of-india-and-khelo-india", publisher: "PRS Legislative Research", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "28 of the 117 athletes approved for the Paris 2024 Olympics were Khelo India athletes.", madeBy: "Ministry of Youth Affairs and Sports, reply to Lok Sabha, July 2024", source: 4 }
+    - { point: "A combined outlay of Rs 36,441 crore for 2026-27 to 2030-31, of which Rs 29,054 crore is for Khelo India, was approved with an 'Emerging Khelo India Athletes' category.", madeBy: "Union Cabinet, 2026", source: 3 }
+    - { point: "The Khelo India scheme should be brought into Sports Authority of India's organisational structure and the FIT India Mission continued with dedicated staff.", madeBy: "Standing Committee on Education, Women, Children, Youth and Sports (chair Digvijaya Singh), 20 August 2025", source: 6 }
+  change:
+    - { point: "Only 13 states received infrastructure grants, with Bihar, Jharkhand and Odisha receiving none, and of 1,518 players selected in 2018-19 only 625 joined academies because of lack of integrated education.", madeBy: "Standing Committee on Human Resource Development (chair Satyanarayan Jatiya), 10 December 2019", source: 5 }
+    - { point: "About 45% of sanctioned SAI posts are vacant and some National Centres of Excellence are non-operational, so vacancies should be filled within six months and SAI's low budget revised.", madeBy: "Standing Committee on Education, Women, Children, Youth and Sports (chair Digvijaya Singh), 20 August 2025", source: 6 }
+    - { point: "Efforts should target sports with real medal potential, identify talent aged 10 to 15, and introduce a sports index ranking states.", madeBy: "Standing Committee on Education, Women, Children, Youth and Sports, 20 August 2025", source: 6 }
 scoring:
   era_baseline: "India placed 48th in the Tokyo 2020 medal table; the Khelo India School Games began only in 2018."
   lag_years: 6

@@ -39,6 +39,17 @@ sources:
   - { title: "Aadhaar authentication crosses the landmark 150 bn transactions (media coverage compilation of MeitY statement)", url: "https://uidai.gov.in/images/Media_Coverage_April-1.pdf", publisher: UIDAI (Ministry of Electronics and IT statement), type: official-data }
   - { title: "Justice K.S. Puttaswamy (Retd.) and another versus Union of India and others (judgment summary)", url: "https://ruralindiaonline.org/en/library/resource/justice-ks-puttaswamy-retd-and-another-versus-union-of-india-and-others/", publisher: People's Archive of Rural India, type: court }
   - { title: "Aadhaar-enabled DBT savings estimated over Rs 90,000 crore (The Economic Times)", url: "https://uidai.gov.in/images/news/Aadhaar-enable-DBT-savings-estimated-over-Rs90000crore-The-Economic-Times.pdf", publisher: UIDAI (hosting a PTI/Economic Times report), type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Supreme Court upheld the Act's validity by majority in 2018, while striking down Section 57 and Section 33(2).", madeBy: "Supreme Court of India, five-judge bench, Puttaswamy (Aadhaar) judgment, 26 September 2018", source: 3 }
+    - { point: "Aadhaar-enabled direct benefit transfers were claimed to have saved over Rs 90,000 crore by 31 March 2018, mainly through the public distribution system.", madeBy: "Chairman of UIDAI, as reported in 2018 (a government claim)", source: 4 }
+    - { point: "Enrolment of about 138.3 crore holders and over 150 billion authentications by April 2025 show use as a common identity verification layer.", madeBy: "Ministry of Electronics and IT statement, 2025, via UIDAI", source: 2 }
+  change:
+    - { point: "Mandatory linking of Aadhaar with bank accounts, mobile numbers and school admissions is unconstitutional, and private-body use under Section 57 should not continue.", madeBy: "Supreme Court of India, majority opinion, 26 September 2018", source: 3 }
+    - { point: "The Act is unconstitutional on procedural grounds and for violating privacy.", madeBy: "Justice D. Y. Chandrachud, dissenting opinion, 26 September 2018", source: 3 }
+    - { point: "About 135 million Aadhaar records may have leaked.", madeBy: "Centre for Internet and Society (estimate cited in 2018)", source: 1 }
+    - { point: "Passing the Bill as a Money Bill limited the Rajya Sabha's role.", madeBy: "Opposition parties in Parliament, March 2016", source: 1 }
 scoring:
   era_baseline: "In 2009 India had no single universal identity credential; welfare programmes relied on multiple ration, voter and local documents, and the same year the Planning Commission began the UIDAI project."
   lag_years: 3

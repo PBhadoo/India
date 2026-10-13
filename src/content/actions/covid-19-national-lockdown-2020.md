@@ -45,6 +45,20 @@ sources:
   url: https://mospi.gov.in/sites/default/files/press_release/Press%20Note_31-05-2021.pdf
   publisher: Ministry of Statistics and Programme Implementation (NSO)
   type: official-data
+- title: "How lockdown prevented lakhs of corona cases, asks Anand Sharma (16 September 2020)"
+  url: "https://madhyamamonline.com/india/how-lockdown-prevented-lakhs-of-corona-cases-asks-anand-sharma-570969"
+  publisher: "Madhyamam"
+  type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The early, stringent lockdown flattened the curve and gave time to build health and testing capacity, and is estimated to have restricted spread by 37 lakh cases and saved over 1 lakh lives.", madeBy: "Economic Survey 2020-21, Ministry of Finance", source: 2 }
+    - { point: "The first priority at declaration was to contain the spread of the virus and prevent movement of people, and migrant movement was allowed from 29 April 2020 after reassessment.", madeBy: "Solicitor General of India, submission recorded by the Supreme Court, order of 9 June 2020", source: 1 }
+    - { point: "The decision prevented 14-29 lakh cases and 37,000 to 78,000 deaths.", madeBy: "Harsh Vardhan, Union Health Minister (BJP), Lok Sabha, 14 September 2020", source: 4 }
+  change:
+    - { point: "States and Union Territories must transport all stranded workers within 15 days, registration should be decentralised, and States should consider withdrawing Section 51 Disaster Management Act prosecutions for movement.", madeBy: "Supreme Court of India, suo motu order of 9 June 2020", source: 1 }
+    - { point: "Lapses and short-comings in implementing schemes for migrant workers were highlighted by intervenors, and strict vigilance and supervision are needed.", madeBy: "Supreme Court of India, order of 9 June 2020", source: 1 }
+    - { point: "The Government should disclose the scientific basis of its estimates of lives saved and data on assistance to, and deaths among, migrant workers.", madeBy: "Anand Sharma, Congress, Rajya Sabha, 16 September 2020", source: 4 }
 scoring:
   era_baseline: Before 2020 India had not imposed a nationwide lockdown; GDP growth was 4.0% in 2019-20 and the Government described public health infrastructure as stretched.
   lag_years: 1

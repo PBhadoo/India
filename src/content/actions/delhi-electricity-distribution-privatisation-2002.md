@@ -49,6 +49,20 @@ sources:
   url: https://power.delhi.gov.in/power/about-us
   publisher: Government of NCT of Delhi
   type: primary
+- title: "Discussion Paper: Power distribution sector"
+  url: "https://prsindia.org/billtrack/prs-products/discussion-paper-power-distribution-sector"
+  publisher: "PRS Legislative Research"
+  type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Aggregate technical and commercial losses fell to under 6.5% from 45-60% at privatisation, against an all-India average of about 15%, a 'remarkable achievement'.", madeBy: "Centre for Social and Economic Progress (CSEP), 6 February 2025", source: 1 }
+    - { point: "Losses fell from 55 per cent in 2002 to 7 per cent, and uninterrupted supply replaced six to seven hours of outages before privatisation.", madeBy: "Lalit Jalan, former BSES chairman, Power Line, 23 September 2021", source: 2 }
+    - { point: "Delhi's privatisation cut AT&C losses from 45% to 9% between 2001-02 and 2018-19.", madeBy: "PRS Legislative Research, discussion paper on power distribution", source: 4 }
+  change:
+    - { point: "Regulatory assets are large and mostly unrecognised (about Rs 27,200 crore approved against claims of about Rs 91,516 crore), and tariff-order litigation should be resolved before the licences expire in March 2029.", madeBy: "Centre for Social and Economic Progress (CSEP), 6 February 2025", source: 1 }
+    - { point: "A change of ownership alone is insufficient for a financial turnaround, and a credible and transparent regulatory process is a necessary condition.", madeBy: "Centre for Social and Economic Progress (CSEP), 6 February 2025", source: 1 }
+    - { point: "Power purchase costs rose about 300% while retail tariffs rose about 90%, and the resulting revenue gap exceeding Rs 500 billion needs a prudent recovery timeline.", madeBy: "Lalit Jalan, former BSES chairman, Power Line, 23 September 2021", source: 2 }
 scoring:
   era_baseline: At privatisation Delhi's AT&C losses were roughly 45-60%, compared with an all-India average of about 15% cited by CSEP for the present day [1].
   lag_years: 5

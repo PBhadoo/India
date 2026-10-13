@@ -38,6 +38,15 @@ sources:
   - { title: "Highway to Success: The Impact of the Golden Quadrilateral Project for the Location and Performance of Indian Manufacturing (NBER Working Paper 18524)", url: "https://www.nber.org/papers/w18524", publisher: National Bureau of Economic Research, type: academic }
   - { title: "Report No. 7 of 2005 (Commercial), chapter on National Highways Authority of India", url: "https://cag.gov.in/uploads/old_reports/union/union_performance/2004_2005/Commercial/Report_no_7/3-NHAI-Report.pdf", publisher: Comptroller and Auditor General of India, type: primary }
   - { title: "Lok Sabha parliamentary library document on NHDP status (eparlib item 38344)", url: "https://eparlib.sansad.in/bitstream/123456789/538219/1/38344.pdf", publisher: Parliament of India (Lok Sabha), type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Districts within 0-10 km of the Golden Quadrilateral had higher business entry rates and plant productivity gains, while the delayed comparison corridor showed no comparable effect.", madeBy: "Ejaz Ghani, Arti Grover Goswami and William R. Kerr, NBER Working Paper 18524 (2012), published in The Economic Journal", source: 2 }
+    - { point: "The upgrades helped spread economic activity to moderate-density districts and intermediate cities, with some land-intensive industries relocating from nodal districts.", madeBy: "Ghani, Goswami and Kerr, NBER Working Paper 18524", source: 2 }
+    - { point: "5,829 km of 5,846 km (99.7%) had been four- or six-laned, with the whole network expected by December 2012.", madeBy: "Lok Sabha parliamentary library document on NHDP status", source: 4 }
+  change:
+    - { point: "Phase I was about 29% complete at its scheduled date of June 2004 (1,846 km against a target of 6,359 km), owing to deficient planning and contract management.", madeBy: "Comptroller and Auditor General, Report No. 7 of 2005 (Commercial), chapter on NHAI", source: 3 }
+    - { point: "As of July 2005 about 4,944 km had been four-laned and the completion target had moved from December 2004 to December 2006.", madeBy: "National Highways Authority of India targets, as reported on Wikipedia", source: 1 }
 scoring:
   era_baseline: "The GQ was presented as the first large-scale four-laning of the national highway network; the late-1990s economy was growing but inter-city freight and passenger traffic relied largely on existing, mostly narrower national highways."
   lag_years: 5

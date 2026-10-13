@@ -47,6 +47,15 @@ sources:
   url: https://indiankanoon.org/doc/1363234/
   publisher: Supreme Court of India
   type: court
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Reservation on economic criteria alone does not violate the basic structure, excluding SC, ST and OBC classes is permissible, and the 50% ceiling is not inflexible.", madeBy: "Justices Dinesh Maheshwari, Bela M. Trivedi and J. B. Pardiwala, majority, Janhit Abhiyan v. Union of India, 7 November 2022", source: 1 }
+    - { point: "EWS reservation is independent of existing quotas and the Amendment does not violate equality.", madeBy: "K. K. Venugopal, Attorney General, and Tushar Mehta, Solicitor General, for the Union, 2022", source: 2 }
+  change:
+    - { point: "The Amendment violates the equality code and basic structure because excluding the poorest among SC, ST and backward classes is discriminatory.", madeBy: "Chief Justice U. U. Lalit and Justice S. Ravindra Bhat, minority, 7 November 2022", source: 1 }
+    - { point: "Economic criteria are permissible under Article 15 but not under Article 16.", madeBy: "Justice S. Ravindra Bhat, 7 November 2022", source: 1 }
+    - { point: "Reservations cannot rest solely on economic criteria given Indra Sawhney, excluded classes face unequal treatment, and the Amendment breaches the 50% ceiling.", madeBy: "Petitioners (counsel Rajeev Dhawan, Gopal Sankaranarayanan, Meenakshi Arora), Supreme Court, 2022", source: 2 }
 scoring:
   era_baseline: Before 2019, existing reservations totalled about 49.5%, within the 50% limit from Indra Sawhney, and the 10% economic category in the 1991 memorandum had been struck down in 1992.
   lag_years: 3

@@ -48,6 +48,16 @@ sources:
   url: https://mayday.leftword.com/catalog/product/view/id/22319
   publisher: Leftword Books
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The campaign achieved each of its six stated goals to a large degree.", madeBy: "Elamon, Franke and Ekbal, International Journal of Health Services 34(4), 2004", source: 1 }
+    - { point: "Local projects basically followed the priorities among health problems identified by people in village assemblies.", madeBy: "Elamon, Franke and Ekbal, International Journal of Health Services, 2004", source: 1 }
+    - { point: "Fears of critics that inordinate amounts would go to hospitals did not materialise, as village panchayats put health resources into drinking water ahead of PHC and hospital spending.", madeBy: "Elamon, Franke and Ekbal, International Journal of Health Services, 2004", source: 1 }
+  change:
+    - { point: "Many local communities were inexperienced in drafting effective projects, and medical and health projects needed technical expertise that was missing where doctors held back.", madeBy: "Elamon, Franke and Ekbal, International Journal of Health Services, 2004", source: 1 }
+    - { point: "Some sections of the health bureaucracy could not be decentralised, so local planners could not control staff absences, transfers or medicine supply.", madeBy: "Elamon, Franke and Ekbal, International Journal of Health Services, 2004", source: 1 }
+    - { point: "Priorities such as medicines, staff and beds in primary health centres were not matched by mechanisms or resources for local communities to address them, a major weakness yet to be overcome.", madeBy: "Elamon, Franke and Ekbal, International Journal of Health Services, 2004", source: 1 }
 scoring:
   era_baseline: In 2000 Kerala's literacy (91%) and infant mortality (16 per 1,000) were far better than the rest of India, so gains from decentralised planning start from a high baseline [1].
   lag_years: 4

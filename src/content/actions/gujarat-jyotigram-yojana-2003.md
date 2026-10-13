@@ -47,6 +47,24 @@ sources:
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6381650
   publisher: National University of Singapore / PubMed Central
   type: academic
+- title: "Groundwater governance through electricity supply management: assessing an innovative intervention in Gujarat, western India (Shah, Bhatt, Shah and Talati), Agricultural Water Management 95, 2008"
+  url: "https://cgspace.cgiar.org/items/e6fb8bf4-decc-4fb8-8a2f-aca90553e4ac"
+  publisher: "International Water Management Institute (CGSpace record)"
+  type: academic
+- title: "India's depleting groundwater: when science meets policy (Chindarkar and Grafton), Crawford School working paper 201907"
+  url: "https://ideas.repec.org/p/een/appswp/201907.html"
+  publisher: "Crawford School of Public Policy, Australian National University"
+  type: academic
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Exposure to the scheme raised electricity availability at primary health centres by 12.7 percentage points and cut the need for a generator by 21.5 points.", madeBy: "Chen, Chindarkar and Xiao (2019), Journal of Health, Population and Nutrition", source: 3 }
+    - { point: "The scheme roughly halved the agricultural power subsidy, reduced groundwater overdraft, improved village life and grew non-farm enterprises.", madeBy: "Tushaar Shah, S. Bhatt, R. K. Shah and J. Talati, Agricultural Water Management (2008)", source: 4 }
+    - { point: "The scheme covered nearly 95% of the state's 18,000 villages by 2006 and was adopted by the Government of India as a flagship scheme for the Twelfth Five-Year Plan.", madeBy: "Government of India (Planning Commission), as reported on Wikipedia", source: 1 }
+  change:
+    - { point: "The 2003-08 rollout had no statistically significant overall effect on electricity consumption, with effects rising in some districts and falling in others.", madeBy: "Chindarkar and Goyal, Energy Policy 183 (2023)", source: 2 }
+    - { point: "Groundwater storage kept declining under the scheme in Gujarat district data from 1996 to 2011.", madeBy: "Namrata Chindarkar and R. Quentin Grafton, Crawford School (2019)", source: 5 }
+    - { point: "Marginal farmers and the landless were hurt because water markets shrank and tubewell owners raised water prices by roughly 30-50%.", madeBy: "Tushaar Shah, S. Bhatt, R. K. Shah and J. Talati, Agricultural Water Management (2008)", source: 4 }
 scoring:
   era_baseline: In the early 2000s many Indian states rationed farm power on shared rural feeders and had high distribution losses; Gujarat's reported losses of about 35% in 2004 compare with a national average of 26% in 2014 cited in [1].
   lag_years: 3

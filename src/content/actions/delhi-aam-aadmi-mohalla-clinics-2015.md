@@ -51,6 +51,16 @@ sources:
   url: https://www.orfonline.org/expert-speak/delhis-mohalla-clinics-the-first-line-of-defence
   publisher: Observer Research Foundation
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Clinics grew from 106 in 2016 to 519 in 2022, offering free consultations, drugs and diagnostics in underprivileged communities.", madeBy: "Observer Research Foundation (ORF), Young Voices, 29 September 2022", source: 3 }
+    - { point: "The clinics served as key examination and testing points during the 2016 dengue and chikungunya outbreaks and stayed open for outpatient care and COVID-19 testing during the first wave.", madeBy: "Observer Research Foundation (ORF), 29 September 2022", source: 3 }
+    - { point: "The clinics expanded physician availability about fivefold, and 31 percent of surveyed respondents reported a household visit within five years.", madeBy: "Observer Research Foundation (ORF), 29 September 2022", source: 3 }
+  change:
+    - { point: "The plan of 1,000 clinics was not met, with 523 established by March 2023, and planning and implementation of the project were deficient.", madeBy: "Comptroller and Auditor General, performance audit tabled in the Delhi Assembly, February 2025", source: 2 }
+    - { point: "In four districts 41 of 218 clinics were closed for periods of 15 days to 23 months, and of 74 clinics checked 21 had no toilet and 31 lacked adequate drug storage.", madeBy: "Comptroller and Auditor General, as reported by The Tribune, 28 February 2025", source: 2 }
+    - { point: "Telemedicine and mental healthcare should be added, doctor turnover addressed and services tailored to local needs.", madeBy: "Observer Research Foundation (ORF), 29 September 2022", source: 3 }
 scoring:
   era_baseline: Delhi's primary health system in 2015 relied on government dispensaries and large hospitals; the sources opened do not give baseline utilisation figures.
   lag_years: 3

@@ -38,6 +38,16 @@ sources:
   - { title: "India prepared for 'no 1st use' pact with Pakistan (Kyodo, 27 May 1998)", url: "https://www.hiroshimapeacemedia.jp/abom/98abom/98English/India/i_188.html", publisher: Hiroshima Peace Media Center, type: reputable-media }
   - { title: "India and Pakistan on the Brink: The 1998 Nuclear Tests", url: "https://adst.org/2014/07/india-and-pakistan-on-the-brink-the-1998-nuclear-tests/", publisher: Association for Diplomatic Studies and Training, type: academic }
   - { title: "Bush Waives Nuclear-Related Sanctions on India, Pakistan", url: "https://www.armscontrol.org/act/2001-10/press-releases/bush-waives-nuclear-related-sanctions-india-pakistan", publisher: Arms Control Association, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "India announced a voluntary moratorium on further underground tests and said it would not be the first to use nuclear weapons.", madeBy: "A. B. Vajpayee, Prime Minister, statement to Parliament, 27 May 1998", source: 1 }
+    - { point: "India was prepared for a no-first-use agreement with Pakistan.", madeBy: "Indian government position, reported by Kyodo, 27 May 1998", source: 2 }
+    - { point: "The crisis shaped how both countries managed nuclear power, as they learned to manage deterrence after Kargil and the 2001-02 standoff.", madeBy: "Thomas Simons, former US Ambassador to Pakistan, ADST oral history", source: 3 }
+  change:
+    - { point: "India has done the wrong thing and is on the wrong side of history.", madeBy: "President Bill Clinton, as quoted by Dean Rust of the State Department's Nuclear Proliferation Bureau (ADST)", source: 3 }
+    - { point: "India cited a threat from China, but most analysts saw the tests as being about prestige and a seat at the table.", madeBy: "Dean Rust, Nuclear Proliferation Bureau, US State Department (ADST)", source: 3 }
+    - { point: "The lack of warning was a policy failure, and the US imposed sanctions under the Glenn Amendment, with the UN Security Council condemning the tests.", madeBy: "Karl Inderfurth, former US Assistant Secretary of State, and Dean Rust (ADST)", source: 3 }
 scoring:
   era_baseline: "India had conducted a single test in 1974, had remained outside the NPT, and the CTBT had been opened for signature in 1996 without India."
   lag_years: 3

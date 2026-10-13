@@ -52,6 +52,16 @@ sources:
   url: https://en.wikipedia.org/wiki/Operation_Barga
   publisher: Wikipedia
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "A 2000 state-wide survey found that 85.6% of registered bargadars still held their land and 74% felt secure in their tenancy rights.", madeBy: "Survey for the State Institute of Panchayats and Rural Development (2000), summarised by Anirban Dasgupta", source: 1 }
+    - { point: "About 1,514,457 sharecroppers were recorded in total, 1,164,612 of them after September 1978, giving them legal protection against eviction and a larger crop share.", madeBy: "Anirban Dasgupta, paper using West Bengal Economic Review data to 2003", source: 1 }
+    - { point: "The programme accounted for roughly a fourth of West Bengal's productivity gains after 1979.", madeBy: "Abhijit Banerjee, Paul Gertler and Maitreesh Ghatak, as cited by Abhishek Kumar in Swarajya", source: 2 }
+  change:
+    - { point: "Barga rights are heritable and hard to surrender, so entries persist after the recorded cultivator dies, migrates or stops farming, and there is no published count of how many still farm.", madeBy: "Abhishek Kumar, Swarajya", source: 2 }
+    - { point: "The effect on productivity was much smaller, about 5 per cent.", madeBy: "Pranab Bardhan and Dilip Mookherjee, as cited by Abhishek Kumar in Swarajya", source: 2 }
+    - { point: "Tenanted plots earned less revenue, received less fertiliser and were less likely to see land improvements.", madeBy: "Klaus Deininger, Songqing Jin and Vandana Yadav, as cited by Abhishek Kumar in Swarajya", source: 2 }
 scoring:
   era_baseline: In 1976, before the programme, tenancy contracts in rural West Bengal ran one year or less and two-thirds involved input cost-sharing with landowners [1].
   lag_years: 5

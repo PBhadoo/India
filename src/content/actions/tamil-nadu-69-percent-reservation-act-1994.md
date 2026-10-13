@@ -48,6 +48,16 @@ sources:
   url: https://www.thenewsminute.com/article/how-tamil-nadu-s-reservation-stands-69-despite-50-quota-cap-146116
   publisher: The News Minute (29 March 2021)
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The state should keep its reservation policy for the welfare and advancement of backward classes, and the Constitution should be amended for it.", madeBy: "Tamil Nadu Legislative Assembly, unanimous resolution, November 1993", source: 3 }
+    - { point: "The state's Act should be placed in the Ninth Schedule so that it remains in force notwithstanding any court judgment under Article 31B.", madeBy: "J. Jayalalithaa, Chief Minister (AIADMK), 1993-94", source: 3 }
+    - { point: "The quota was expanded under both DMK's M. Karunanidhi and AIADMK's M. G. Ramachandran, and the Most Backward Classes category was created in 1989.", madeBy: "The News Minute, summary of the policy's cross-party history", source: 3 }
+  change:
+    - { point: "Total reservations under Article 16(4) should not exceed 50% save in extraordinary situations.", madeBy: "Supreme Court of India, Indra Sawhney v. Union of India, 16 November 1992", source: 1 }
+    - { point: "The 69% policy was allowed for 1993-94 but reduced to 50% from 1994-95, and the Supreme Court's interim order reiterated a 50% limit for educational admissions.", madeBy: "Madras High Court and Supreme Court (interim order), 1993-94", source: 3 }
+    - { point: "Placing the Act in the Ninth Schedule is unconstitutional and violates Article 14, a challenge the Supreme Court said it would decide after the Constitution Bench on Mandal-related questions.", madeBy: "Petitioners before the Supreme Court, as reported in March 2021", source: 3 }
 scoring:
   era_baseline: Before 1992 the Supreme Court's earlier cases (Balaji 1963, Devadasan 1964) applied a roughly 50% limit on reservations, which Tamil Nadu's 68-69% already exceeded.
   lag_years: 5

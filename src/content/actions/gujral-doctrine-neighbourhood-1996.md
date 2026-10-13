@@ -38,6 +38,15 @@ sources:
   - { title: "What is the Gujral Doctrine?", url: "https://idsa.in/?p=38188", publisher: Institute for Defence Studies and Analyses, type: academic }
   - { title: "Ganges Water Sharing Treaty 1996 (treaty text)", url: "https://lpr.adb.org/sites/default/files/resource/1610/ganges-water-sharing-treaty-1996.pdf", publisher: Asian Development Bank legal portal, type: primary }
   - { title: "Gujral Doctrine of Foreign Policy", url: "https://www.drishtiias.com/daily-updates/daily-news-analysis/gujral-doctrine-of-foreign-policy/print_manually", publisher: Drishti IAS, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "India should not ask for reciprocity from smaller neighbours and should give what it can in good faith.", madeBy: "I. K. Gujral, External Affairs Minister, Chatham House, London, September 1996", source: 2 }
+    - { point: "The approach was linked to the 30-year Ganga water-sharing treaty with Bangladesh of December 1996, Bhutan's consent for a canal and a revision of the Mahakali treaty with Nepal that Nepal received well.", madeBy: "Institute for Defence Studies and Analyses (IDSA)", source: 2 }
+    - { point: "The NDA (1998-2004) and UPA (2004 onward) governments kept the emphasis on a peaceful, stable neighbourhood.", madeBy: "Institute for Defence Studies and Analyses (IDSA)", source: 2 }
+  change:
+    - { point: "The measures were 'cosmetic' and 'deceptive', and excluding Pakistan from non-reciprocal treatment meant the doctrine was not a full effort to build trust.", madeBy: "Analyst identified on the IDSA page as A. G. Noorani", source: 2 }
+    - { point: "Gujral could not reorient a foreign-policy bureaucracy focused on security, national interest and great-power status.", madeBy: "Unnamed analysts cited by IDSA", source: 2 }
 scoring:
   era_baseline: "In the 1990s India's ties with several neighbours were strained after the 1980s Sri Lanka and Nepal episodes, and the Kashmir insurgency dominated relations with Pakistan."
   lag_years: 3

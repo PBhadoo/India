@@ -39,6 +39,17 @@ sources:
   - { title: "Press release on CTBT Article XIV and entry into force", url: "https://cpim.org/?p=1194", publisher: CPI(M), type: reputable-media }
   - { title: "Statement on Nuclear Tests in Pokhran, Lok Sabha, 27 May 1998", url: "https://eparlib.nic.in/bitstream/123456789/800809/1/pms_12_02_27-05-1998.pdf", publisher: Lok Sabha, type: primary }
   - { title: "Bush Waives Nuclear-Related Sanctions on India, Pakistan", url: "https://www.armscontrol.org/act/2001-10/press-releases/bush-waives-nuclear-related-sanctions-india-pakistan", publisher: Arms Control Association, type: reputable-media }
+  - { title: "Time to Decide (Outlook India, article by Ramananda Sengupta on the 1996 CTBT debate)", url: "https://www.outlookindia.com/making-a-difference/time-to-decide-news-201593", publisher: "Outlook India", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The entry-into-force provision (Article XIV) seeks to impose obligations on India despite its stated position that it would not subscribe to the text, which is unprecedented for a sovereign state.", madeBy: "Arundhati Ghose, India's delegate to the Conference on Disarmament, statement of 20 August 1996", source: 2 }
+    - { point: "A test ban should be linked to time-bound nuclear disarmament.", madeBy: "I. K. Gujral, External Affairs Minister, remarks of 31 July 1996 read out by Arundhati Ghose on 8 August 1996", source: 1 }
+    - { point: "India should walk out of the negotiations because 'the time for negotiations is over', the treaty mainly targets India and Pakistan, and signing is irrevocable.", madeBy: "K. Subrahmanyam, defence analyst, 1996", source: 7 }
+    - { point: "The reasons for not signing in 1996 still apply, and India should not sign unless nuclear-armed states agree a timeframe for complete disarmament.", madeBy: "CPI(M), press release of 10 August 2009", source: 4 }
+  change:
+    - { point: "Not signing could give nuclear hawks grounds to upgrade their arsenals and spark an arms race, while signing would cap India's and Pakistan's programmes.", madeBy: "Kanti Bajpai, Jawaharlal Nehru University, 1996", source: 7 }
+    - { point: "Signing should be accepted only if the treaty is tied to a time-bound disarmament plan and includes effective verification.", madeBy: "Jasjit Singh, Director, Institute for Defence Studies and Analyses, 1996", source: 7 }
 scoring:
   era_baseline: "India had conducted one test in 1974, had not signed the NPT, and had long supported a test ban only as part of a time-bound disarmament framework."
   lag_years: 2

@@ -36,6 +36,16 @@ sources:
   - { title: "Rajya Sabha question on India-China trade (Ministry of Commerce, DGCI&S data)", url: "https://rsdebate.nic.in/bitstream/123456789/751787/1/PQ_266_06122024_U1316_p193_p194.pdf", publisher: Rajya Sabha, type: official-data }
   - { title: "Regional Comprehensive Economic Partnership (secondary summary)", url: "https://en.wikipedia.org/wiki/Regional_Comprehensive_Economic_Partnership", publisher: Wikipedia, type: reputable-media }
   - { title: "The RCEP minus India: Reasons and Implications", url: "https://saisreview.sais.jhu.edu/the-rcep-minus-india-reasons-and-implications/", publisher: SAIS Review, type: academic }
+  - { title: "By opting out of RCEP, India missed another bus (Bhim Bhurtel, 16 November 2020)", url: "https://asiatimes.com/2020/11/by-opting-out-of-rcep-india-missed-another-bus/", publisher: "Asia Times", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "India could not join because the agreement did not fully reflect its guiding principles or satisfactorily address its outstanding issues.", madeBy: "Narendra Modi, Prime Minister (BJP), RCEP summit, Bangkok, 4 November 2019", source: 1 }
+    - { point: "India sought a level playing field and raised serious concerns over non-tariff barriers and opaque subsidy regimes in some RCEP countries.", madeBy: "Narendra Modi, Prime Minister, interview to The Economic Times, as cited by Asia Times", source: 5 }
+    - { point: "India's goods trade deficit with China was about $48.6 billion in 2019-20, supporting the concern about imports.", madeBy: "Ministry of Commerce (DGCI&S data), Rajya Sabha reply of 6 December 2024", source: 2 }
+  change:
+    - { point: "By staying out India closed its doors to future economic growth, foreign capital and technology, and was isolated after Japan and Australia joined.", madeBy: "Bhim Bhurtel, Asia Times opinion piece, 16 November 2020", source: 5 }
+    - { point: "India could join the agreement at any time.", madeBy: "RCEP leaders' statement, November 2020", source: 3 }
 scoring:
   era_baseline: "India had joined negotiations in 2012 and had existing free trade agreements with ASEAN, Japan and South Korea; India's goods deficit with China was large and widely discussed."
   lag_years: 5

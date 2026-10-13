@@ -38,6 +38,16 @@ sources:
   - { title: "DH Deciphers: It's time for a relook at the Indus Water Treaty", url: "https://www.deccanherald.com/national/dh-deciphers-its-time-for-a-relook-at-the-indus-water-treaty-1185824.html", publisher: Deccan Herald, type: reputable-media }
   - { title: "India rejects Hague tribunal's arbitration award, says Indus Waters Treaty is in abeyance", url: "https://www.theweek.in/wire-updates/national/2026/05/16/india-rejects-hague-tribunals-arbitration-award-says-indus-waters-treaty-is-in-abeyance.html", publisher: The Week (wire), type: reputable-media }
   - { title: "Indus Waters Treaty (secondary summary)", url: "https://en.wikipedia.org/wiki/Indus_Waters_Treaty", publisher: Wikipedia, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "India received the three eastern rivers (about 33 MAF) and may use the western rivers for domestic use, limited irrigation, run-of-river hydropower and limited storage.", madeBy: "Deccan Herald explainer 'DH Deciphers', summarising the treaty's allocation", source: 2 }
+    - { point: "The treaty provides a Permanent Indus Commission, a neutral expert and a Court of Arbitration, which handled the Baglihar and Kishanganga disputes.", madeBy: "Indus Waters Treaty 1960, as summarised on Wikipedia", source: 4 }
+  change:
+    - { point: "The treaty should be modified, and India sent Pakistan a notice seeking modification.", madeBy: "Government of India, notice to Pakistan, January 2023", source: 4 }
+    - { point: "It is time for a relook at the Indus Waters Treaty.", madeBy: "Deccan Herald explainer 'DH Deciphers'", source: 2 }
+  repeal:
+    - { point: "India holds the treaty in abeyance, and rejects the tribunal's award on maximum pondage as the output of a body it never recognised.", madeBy: "Randhir Jaiswal, Ministry of External Affairs spokesperson, 16 May 2026", source: 3 }
 scoring:
   era_baseline: "After partition in 1947 there was no permanent India-Pakistan agreement on the Indus system, and the World Bank began mediating in the 1950s."
   lag_years: 5

@@ -37,6 +37,17 @@ sources:
   - { title: "Historic reforms initiated in the Space sector", url: "https://www.narendramodi.in/ma/historic-reforms-initiated-in-the-space-sector", publisher: narendramodi.in (reproducing Government release), type: primary }
   - { title: "Parliament question: Space startups (Lok Sabha, 12 August 2026)", url: "https://www.globalsecurity.org/space/library/news/2026/space-260812-india-pib01.htm", publisher: PIB via GlobalSecurity, type: official-data }
   - { title: "Private Sector Participation in Space", url: "https://www.drishtiias.com/daily-updates/daily-news-analysis/private-sector-participation-in-space/print_manually", publisher: Drishti IAS, type: reputable-media }
+  - { title: "Parliamentary panel flags undervalued transfer of ISRO technologies to private firms (28 March 2026)", url: "https://www.etvbharat.com/en/bharat/parliamentary-panel-flags-undervalued-transfer-of-isro-technologies-to-private-firms-enn26032804230", publisher: "ETV Bharat", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "IN-SPACe will provide a level playing field for private companies to use Indian space infrastructure, and ISRO can focus on new technologies, exploration and human spaceflight.", madeBy: "Union Cabinet reforms of 24 June 2020, as summarised by Drishti IAS", source: 4 }
+    - { point: "About 440 space startups are registered and IN-SPACe has granted 113 authorisations to 52 non-government entities, 18 of them startups.", madeBy: "Department of Space, Lok Sabha reply, 12 August 2026", source: 3 }
+    - { point: "NSIL has signed 100 agreements covering 61 technologies, and the Department is moving toward a more structured, market-based transfer system.", madeBy: "Department of Space, response to the Parliamentary Standing Committee on Science and Technology, reported 28 March 2026", source: 5 }
+  change:
+    - { point: "Technologies are often transferred to private players at undervalued rates, with nearly 70 of 100 NSIL agreements below Rs 10 lakh and some at Rs 6,000.", madeBy: "Parliamentary Standing Committee on Science and Technology, reported 28 March 2026", source: 5 }
+    - { point: "A more competitive, market-aligned pricing framework and periodic third-party audits of all technology transfer agreements are needed.", madeBy: "Parliamentary Standing Committee on Science and Technology, reported 28 March 2026", source: 5 }
+    - { point: "There is no reliable way to verify whether low-cost transfers benefit the intended users.", madeBy: "Parliamentary Standing Committee on Science and Technology, reported 28 March 2026", source: 5 }
 scoring:
   era_baseline: "Before 2020 private firms in India mainly acted as suppliers to ISRO, while globally commercial launch and satellite markets were growing."
   lag_years: 5

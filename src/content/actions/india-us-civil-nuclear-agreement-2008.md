@@ -39,6 +39,18 @@ sources:
   - { title: "Left Parties Statement on the Indo-US bilateral nuclear cooperation agreement", url: "https://cpim.org/indo-us-bilateral-nuclear-cooperation-agreement/", publisher: CPI(M), type: reputable-media }
   - { title: "Parliament question: Electricity generation capacity through nuclear energy (PIB, December 2025)", url: "https://www.globalsecurity.org/wmd/library/news/india/2025/india-251210-india-pib03.htm", publisher: PIB via GlobalSecurity, type: official-data }
   - { title: "Bush, Singh Advance Nuclear Deal", url: "https://www.armscontrol.org/node/2011", publisher: Arms Control Association, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The IAEA Board approved the India-specific safeguards agreement in August 2008 after India placed 14 of 22 thermal reactors under safeguards.", madeBy: "International Atomic Energy Agency Board of Governors, August 2008", source: 1 }
+    - { point: "The Nuclear Suppliers Group granted India a waiver on 6 September 2008.", madeBy: "Nuclear Suppliers Group, 6 September 2008", source: 1 }
+    - { point: "The government won a confidence vote on 22 July 2008 by 275 to 256 with 10 abstentions.", madeBy: "Lok Sabha, 22 July 2008", source: 1 }
+  change:
+    - { point: "The Hyde Act's conditions on foreign policy could be used to terminate the 123 agreement, the agreement denies access to enrichment and reprocessing technologies, and fuel supply assurances are weak.", madeBy: "Left Parties (CPI(M), CPI, Forward Bloc, RSP), statement signed by Prakash Karat, A. B. Bardhan and others", source: 2 }
+    - { point: "International treaties should require parliamentary approval, through a constitutional amendment, and strategic Indo-US relations should be reviewed by Parliament.", madeBy: "Left Parties (CPI(M), CPI, Forward Bloc, RSP)", source: 2 }
+    - { point: "The deal undermines India's traditional push for nuclear disarmament and its direction on the Fissile Material Cut-off Treaty is unacceptable.", madeBy: "Left Parties (CPI(M), CPI, Forward Bloc, RSP)", source: 2 }
+  repeal:
+    - { point: "The government should not proceed further with operationalising the agreement.", madeBy: "Left Parties (CPI(M), CPI, Forward Bloc, RSP), statement published on cpim.org", source: 2 }
 scoring:
   era_baseline: "India had been outside the NPT and subject to international nuclear trade restrictions since its 1974 test and had tested again in 1998."
   lag_years: 8

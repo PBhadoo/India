@@ -37,6 +37,17 @@ sources:
   - { title: "India's top court gives telcos ten years to clear AGR dues", url: "https://www.lightreading.com/services/indias-top-court-gives-telcos-ten-years-to-clear-agr-dues/d/d-id/763574", publisher: Light Reading, type: reputable-media }
   - { title: "Reserve Price For 2G Spectrum Licences (Supreme Court Observer)", url: "https://www.scobserver.in/supreme-court-observer-law-reports-scolr/union-of-india-v-sistema-shyam-teleservices-reservation-price-for-grant-of-2g-licences/", publisher: Supreme Court Observer, type: reputable-media }
   - { title: "The Telecom Regulatory Authority of India Act, 1997 (India Code)", url: "https://www.indiacode.nic.in/bitstream/123456789/1929/1/a199724.pdf", publisher: India Code, Ministry of Law and Justice, type: primary }
+  - { title: "Telecom Regulatory Authority of India Act, 1997 (explanatory note)", url: "https://cis-india.org/telecom/resources/trai-act-1997", publisher: "Centre for Internet and Society", type: academic }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Telephone subscribers reached 1,330.58 million and teledensity 93.26% at the end of March 2026, up from 1,200.80 million and 85.04% a year earlier.", madeBy: "Telecom Regulatory Authority of India, Yearly Performance Indicators 2025-26, 5 October 2026", source: 2 }
+    - { point: "Average revenue per GB of wireless data fell 10.59% to Rs 8.02 in 2025-26.", madeBy: "Telecom Regulatory Authority of India, Yearly Performance Indicators 2025-26", source: 2 }
+    - { point: "TRAI took over regulation of telecom services, including tariff fixation and revision, from the Central Government.", madeBy: "Telecom Regulatory Authority of India, 'History'", source: 1 }
+  change:
+    - { point: "The adjudicatory and dispute-settlement functions of TRAI should be moved to a Telecom Disputes Settlement and Appellate Tribunal (TDSAT).", madeBy: "Union Government, ordinance effective 24 January 2000 amending the TRAI Act", source: 1 }
+    - { point: "TRAI is not a completely independent regulator: its recommendations are not binding on the Central Government, which can issue binding directions under section 25 and make rules binding on it under section 35.", madeBy: "Centre for Internet and Society, note on the TRAI Act, 1997", source: 6 }
+    - { point: "TDSAT has no jurisdiction over anti-competitive trade practices or individual consumer complaints.", madeBy: "Centre for Internet and Society, note on the TRAI Act, 1997", source: 6 }
 scoring:
   era_baseline: "In 1997 telecom tariffs were set by the Central Government and the sector was moving from a government-owned monopoly towards a multi-operator market, according to TRAI."
   lag_years: 5

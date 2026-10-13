@@ -39,6 +39,15 @@ sources:
   - { title: "Konkan Railway (zone and line)", url: "https://en.wikipedia.org/wiki/Konkan_Railway", publisher: Wikipedia, type: reputable-media }
   - { title: "Konkan Railway Corporation", url: "https://en.wikipedia.org/wiki/Konkan_Railway_Corporation", publisher: Wikipedia, type: reputable-media }
   - { title: "Konkan Railway Corporation Limited (case study)", url: "https://cases.iima.ac.in/index.php/konkan-railway-corporation-limited.html", publisher: Indian Institute of Management Ahmedabad, type: academic }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "A Southern Railway traffic survey 'proved the need for a new railway line in an expanding economy', and re-survey of the alignment aimed to increase hauling capacity and speed.", madeBy: "Konkan Railway Corporation Limited, 'The Beginning'", source: 1 }
+    - { point: "The Corporation reported its first profit in FY 2009-10 and a net profit of about Rs 301 crore for FY 2023-24.", madeBy: "Konkan Railway Corporation, as reported on Wikipedia", source: 3 }
+  change:
+    - { point: "The project cost Rs 3,375 crore, leaving a debt of Rs 2,575 crore to be repaid from passenger earnings.", madeBy: "Bibek Banerjee, G. Raghuram and Narayan Rangaraj, IIM Ahmedabad case study (1999)", source: 4 }
+    - { point: "Early business projections did not materialise, and after nine months of operation only 94 rakes had moved over the Konkan segment.", madeBy: "Bibek Banerjee, G. Raghuram and Narayan Rangaraj, IIM Ahmedabad case study (1999)", source: 4 }
+    - { point: "The initial construction schedule of about five years was unrealistic, and there was no survey data for the full Maharashtra stretch, about half the line.", madeBy: "Konkan Railway Corporation Limited, 'The Beginning'", source: 1 }
 scoring:
   era_baseline: "In 1990 the Roha-Mangalore coastal strip had no railway line, an earlier proposal had been surveyed in 1920, and Indian Railways faced a funding shortfall that the corporate structure with state co-funding was meant to address."
   lag_years: 8

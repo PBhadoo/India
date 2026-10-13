@@ -39,6 +39,16 @@ sources:
   - { title: "Forest Conservation Act, 1980", url: "https://en.wikipedia.org/wiki/Forest_Conservation_Act,_1980", publisher: Wikipedia, type: reputable-media }
   - { title: "3 lakh hectares of forest land diverted for non-forest use over 15 years; compensatory afforestation programme a showpiece", url: "https://sabrangindia.in/3-lakh-hectares-of-forest-land-diverted-for-non-forest-use-over-15-years-compensatory-afforestation-programme-a-showpiece/", publisher: Sabrang India, type: reputable-media }
   - { title: "Forest Conservation Amendment Act 2023: States, UTs must act as per definition in T.N. Godavarman judgement, says SC", url: "https://www.downtoearth.org.in/amp/story/forests/forest-conservation-amendment-act-2023-states-uts-must-act-as-per-definition-in-tn-godavarman-judgement-says-sc-94543", publisher: Down To Earth, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act applies to all forests irrespective of ownership or classification, using the dictionary meaning of 'forest', to check deforestation that disrupts ecological balance.", madeBy: "Supreme Court of India, T. N. Godavarman Thirumulpad judgment, 1996", source: 1 }
+    - { point: "States and Union Territories must apply the Godavarman definition of forest while land records are consolidated.", madeBy: "Supreme Court of India, order of 19 February 2024", source: 4 }
+    - { point: "India's total forest cover rose by a net 38,251 sq km between 2001 and 2021.", madeBy: "Forest Survey of India, India State of Forest Report 2001 and 2021, as tabulated by PRS Legislative Research", source: 1 }
+  change:
+    - { point: "The Act should cover land notified as forest or recorded as forest on or after 25 October 1980, exempt land converted before 12 December 1996, and exempt border-area strategic projects within 100 km, zoos and eco-tourism facilities.", madeBy: "Union Government (Ministry of Environment, Forest and Climate Change), Forest (Conservation) Amendment Bill, introduced 29 March 2023", source: 1 }
+    - { point: "The Bill's exclusions may go against the 1996 Supreme Court judgment, and exempting land within 100 km of borders may hasten forest loss in north-eastern states.", madeBy: "PRS Legislative Research, Legislative Brief, 28 June 2023", source: 1 }
+    - { point: "Forest cover with canopy density above 40% fell by 10,140 sq km between 2001 and 2021, and compensatory afforestation fails to replace loss of biodiversity.", madeBy: "PRS Legislative Research, citing India State of Forest Reports, 28 June 2023", source: 1 }
 scoring:
   era_baseline: "Before the Act, forest diversion for non-forest uses was decided by state governments, and about 4.1 million hectares were diverted between 1951-52 and 1975-76 without mitigation measures."
   lag_years: 10

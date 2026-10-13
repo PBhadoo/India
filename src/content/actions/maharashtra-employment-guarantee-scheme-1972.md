@@ -56,6 +56,16 @@ sources:
   url: https://hummedia.manchester.ac.uk/schools/soss/economics/discussionpapers/EDP-0513.pdf
   publisher: University of Manchester Economics Discussion Papers
   type: academic
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The scheme continues to confer significant transfer and stabilisation benefits in some of the poorer regions.", madeBy: "Raghav Gaiha and Katsushi Imai, University of Delhi and University of Manchester, EDP-0513 (2005)", source: 6 }
+    - { point: "Panel data show a strong positive effect of the scheme on agricultural wages and of scheme assets on agricultural productivity.", madeBy: "Raghav Gaiha and Katsushi Imai, EDP-0513 (2005)", source: 6 }
+    - { point: "A household survey in Ahmadnagar found high direct transfer benefits to the poor and substantial income-stabilising benefits.", madeBy: "Raghav Gaiha and Katsushi Imai, EDP-0513 (2005)", source: 6 }
+  change:
+    - { point: "Participation fell sharply over 1980-97, with person-days of employment falling from 20.55 crore to 9.01 crore.", madeBy: "Raghav Gaiha and Katsushi Imai, EDP-0513 (2005)", source: 6 }
+    - { point: "Targeting of the scheme deteriorated markedly over 1979-89.", madeBy: "Raghav Gaiha and Katsushi Imai, EDP-0513 (2005)", source: 6 }
+    - { point: "The indirect benefit through agricultural wages was not so strong in the Ahmadnagar survey, which found mild disincentive effects on job-search.", madeBy: "Raghav Gaiha and Katsushi Imai, EDP-0513 (2005)", source: 6 }
 scoring:
   era_baseline: In the early 1970s India had no national rural employment guarantee; central rural works programmes were limited, and Maharashtra faced a severe drought.
   lag_years: 3

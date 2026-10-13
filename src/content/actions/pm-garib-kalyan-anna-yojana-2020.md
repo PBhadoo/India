@@ -56,6 +56,20 @@ sources:
   url: https://www.livelaw.in/amp/top-stories/supreme-court-migrant-labourers-problem-miseries-ration-cards-nfsa-204445
   publisher: LiveLaw
   type: reputable-media
+- title: "Fiscal Prudence: Free Food And Election Promises (Ajit Ranade, 13 November 2023)"
+  url: "https://www.freepressjournal.in/amp/analysis/fiscal-prudence-free-food-and-election-promises"
+  publisher: "Free Press Journal"
+  type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "80.96 crore beneficiaries received free additional foodgrain until November 2020, over 200 lakh tonnes at an outgo of over Rs 75,000 crore.", madeBy: "Economic Survey 2020-21, Ministry of Finance", source: 2 }
+    - { point: "Free foodgrains should continue for about 81.35 crore beneficiaries for five years from 1 January 2024.", madeBy: "Union Cabinet, 29 November 2023", source: 3 }
+    - { point: "Free grain protects families from high food inflation in a way a fixed cash transfer would not, and the incremental fiscal burden was less because grain was already highly subsidised.", madeBy: "Ajit Ranade, economist, Free Press Journal, 13 November 2023", source: 7 }
+  change:
+    - { point: "Cross-database checks flagged 8.51 crore records and States removed over 2.12 crore ineligible beneficiaries.", madeBy: "Economic Survey 2025-26, Ministry of Finance", source: 4 }
+    - { point: "NFSA benefits should not be limited by 2011 Census numbers, since this may do injustice to needy persons.", madeBy: "Supreme Court of India, bench of Justice M. R. Shah, 21 July 2022", source: 6 }
+    - { point: "The decision commits at least 11 trillion rupees of future revenues, raising questions of fiscal sustainability, targeting and market distortion from procurement.", madeBy: "Ajit Ranade, economist, Free Press Journal, 13 November 2023", source: 7 }
 scoring:
   era_baseline: Before April 2020 NFSA grain was sold at subsidised central issue prices, and the NFSA coverage base was already fixed to 2011 data.
   lag_years: 1

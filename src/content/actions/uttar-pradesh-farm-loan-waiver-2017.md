@@ -50,6 +50,16 @@ sources:
   url: https://cwv.yourstory.com/2017/04/yogi-adityanath-farm-loans-waived
   publisher: YourStory
   type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The waiver can be justified on humanitarian grounds, as farmers repay better than large industrial defaulters, so the moral hazard concern is overstated.", madeBy: "Observer Research Foundation (ORF), expert speak piece", source: 1 }
+    - { point: "The waiver of crop loans up to Rs 1 lakh per farmer covers about 1.5 crore small and marginal farmers at Rs 36,359 crore, the biggest ever for a state.", madeBy: "Observer Research Foundation (ORF)", source: 1 }
+    - { point: "The state would fund it through 'Kisan Rahat' bonds to keep the deficit within the 3% limit, at interest of about Rs 2,727 crore a year.", madeBy: "Observer Research Foundation (ORF)", source: 1 }
+  change:
+    - { point: "Loan waivers undermine an 'honest credit culture', add to inflation risk, remove repayment incentives for future borrowers and can raise government bond yields.", madeBy: "Urjit Patel, Governor of the Reserve Bank of India, 6 April 2017", source: 2 }
+    - { point: "The waiver can only bring temporary relief, benefits may skew to larger farmers (28% of farmers with under one acre borrowed from banks against 67% of those with one to five acres), and deeper problems of irrigation, credit and non-farm jobs remain.", madeBy: "Observer Research Foundation (ORF)", source: 1 }
+    - { point: "State-owned banks already face a mounting debt problem that the waiver could worsen, and Uttar Pradesh's debt of Rs 3,27,470 crore implies a bigger budget deficit.", madeBy: "Observer Research Foundation (ORF), citing the RBI Governor and SBI chairman's dissatisfaction", source: 1 }
 scoring:
   era_baseline: In April 2017 the RBI Governor was publicly arguing against the practice of farm loan waivers, indicating that waivers were under national debate [2]; the sources opened give no comparison with other states.
   lag_years: 3

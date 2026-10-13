@@ -156,3 +156,52 @@ Add `credit: none` to the front-matter of an Action whose decision-maker is an i
 ## New categories (added to taxonomy.yaml)
 - `business-power`: Business & Public Power (subs: big-business-groups, regulators-markets, competition-concentration, business-political-funding, state-contracts-privatisation)
 - `parties-movements`: Parties, Movements & Civil Society (subs: new-parties, ngos-civil-society, protests-movements, arrests-prosecutions)
+
+---
+
+# Addendum v3: INC-led vs BJP-led view, reform cases, indicators, promises, debates
+
+## Blocs
+`bloc` is derived from a Centre government's `leadParty`: `inc` -> **INC-led**, `bjp` -> **BJP-led**, anything else (Janata Party, Janata Dal, National Front, United Front, Samajwadi Janata, caretakers) -> **Other**. Coalition partners' credit and years roll up into the lead bloc (UPA = INC-led, NDA = BJP-led). The partner-by-partner split remains available as a toggle. Other-bloc governments are shown in a collapsed group, never deleted, and tenure totals keep every year.
+
+## `reform` block on Actions (front-matter, optional until all actions have it)
+```yaml
+reform:
+  asOf: 2026-10-13
+  keep:                       # documented reasons to retain it as it is, including achievements
+    - { point: "...", madeBy: "named person/body", source: 3 }
+  change:                     # documented reasons to amend, fix or extend it
+    - { point: "...", madeBy: "...", source: 4 }
+  repeal:                     # documented calls to withdraw it (omit if no credible voice has called for it)
+    - { point: "...", madeBy: "...", source: 5 }
+```
+- `madeBy` names a person or body (court, CAG, RBI, a parliamentary committee, an economist, a party). `source` is an index into the entry's `sources` list; append new sources at the END of the list so existing indices stay valid.
+- Quotas per action: at least 2 `keep` and 2 `change` points, `repeal` only where a credible voice has called for repeal. At least one point in each stance from a body or person with no party affiliation (court, regulator, audit body, committee, academic) where one exists. Points are attributed arguments, not the site's own judgement. No verdict language.
+- Parity across blocs: the average number of points per stance must be about equal for INC-led and BJP-led entries, and critics from both sides of politics appear for both.
+
+## Indicators: `src/data/indicators.json`
+```json
+{
+  "periods": [{ "id": "upa1", "label": "UPA I (2004-09)", "bloc": "INC", "start": "2004-05-22", "end": "2009-05-22" }],
+  "indicators": [{
+    "id": "gdp-growth", "name": "Real GDP growth", "unit": "% a year", "domain": "economy",
+    "basis": "average of annual figures in the period",
+    "source": { "title": "...", "url": "https://...", "publisher": "...", "type": "official-data" },
+    "caveats": ["series revised in 2015 (base year 2011-12)"],
+    "values": [{ "period": "upa1", "value": 8.4, "note": "optional" }]
+  }]
+}
+```
+Use periods: `rao` (1991-96), `nda1` (1998-2004 Vajpayee), `upa1`, `upa2`, `nda2-modi1` (2014-19), `modi2` (2019-24), `modi3` (2024-today), plus `inc-pre-1991` where long series exist. Only include a value where an official or well-sourced series exists, using the same measure for every period; leave a period out rather than splice incompatible series. Each indicator needs global-context notes (oil shocks, 2008, COVID) in `caveats`.
+
+## Promises: `src/data/promises.json`
+```json
+[{ "id": "bjp-2014-001", "party": "bjp", "election": 2014, "text": "short neutral paraphrase", "domain": "economy",
+   "status": "delivered | partly-delivered | not-delivered | abandoned | ongoing | unclear",
+   "evidence": "what the record shows, with figures", "evidenceSource": { "title": "...", "url": "https://...", "publisher": "...", "type": "primary|official-data|court|reputable-media|academic" },
+   "manifestoSource": { "title": "...", "url": "https://..." }, "asOf": "2026-10-13" }]
+```
+Status rules, identical for both parties: `delivered` = enacted/implemented at the scope promised, per official data or law; `partly-delivered` = enacted or implemented in part or at lower scope; `not-delivered` = no enactment/implementation by the party while in office afterwards (or no longer in office); `abandoned` = officially dropped; `ongoing` = within the promised timeline and in progress; `unclear` = evidence insufficient. Elections: 1998, 1999, 2004, 2009, 2014, 2019, 2024. Same number of promises per party per election (8), chosen by prominence in the manifesto (headline pledges), not by outcome.
+
+## Debates: dossiers of `kind: debate`
+Same dossier schema; `positions` hold the options (holder = the camp or named bodies, position = the strongest documented case), `claims` hold contested facts, `notShown` states what the evidence cannot settle. No recommendation.

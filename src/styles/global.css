@@ -656,23 +656,23 @@ figure.dtable table.data th[scope='row'] { min-width: 0; font-weight: 500; }
 }
 
 /* ======================================================= blocs (Addendum v3) */
-/* Two validated categorical hues (blue, orange; CVD-separable) plus a neutral grey for Other. Each also has
+/* Two validated categorical hues (teal, plum; deliberately not any party's colour) plus a neutral grey for Other. Each also has
    its own pattern, so identity never depends on colour alone. */
 :root {
-  --b-inc: #2a78d6; --bi-inc: rgba(255, 255, 255, 0.8);
-  --b-bjp: #eb6834; --bi-bjp: rgba(17, 22, 34, 0.6);
+  --b-inc: #12999b; --bi-inc: rgba(255, 255, 255, 0.8);
+  --b-bjp: #8f44ad; --bi-bjp: rgba(255, 255, 255, 0.8);
   --b-other: #8a93a3; --bi-other: rgba(17, 22, 34, 0.55);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --b-inc: #3987e5; --bi-inc: rgba(8, 11, 18, 0.62);
-    --b-bjp: #d95926; --bi-bjp: rgba(8, 11, 18, 0.62);
+    --b-inc: #1ba3a5; --bi-inc: rgba(8, 11, 18, 0.62);
+    --b-bjp: #9d62c0; --bi-bjp: rgba(8, 11, 18, 0.62);
     --b-other: #7d8697; --bi-other: rgba(8, 11, 18, 0.6);
   }
 }
 :root[data-theme='dark'] {
-  --b-inc: #3987e5; --bi-inc: rgba(8, 11, 18, 0.62);
-  --b-bjp: #d95926; --bi-bjp: rgba(8, 11, 18, 0.62);
+  --b-inc: #1ba3a5; --bi-inc: rgba(8, 11, 18, 0.62);
+  --b-bjp: #9d62c0; --bi-bjp: rgba(8, 11, 18, 0.62);
   --b-other: #7d8697; --bi-other: rgba(8, 11, 18, 0.6);
 }
 .b-inc { background-color: var(--b-inc); } .b-bjp { background-color: var(--b-bjp); } .b-other { background-color: var(--b-other); }

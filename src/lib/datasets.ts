@@ -8,6 +8,17 @@ import { z } from 'astro/zod';
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
 
 export const SOURCE_TYPES = ['primary', 'official-data', 'court', 'reputable-media', 'academic'] as const;
+/** Indicator sources may also be modelled series from an international agency (World Bank, UN, ...). */
+export const INDICATOR_SOURCE_TYPES = [...SOURCE_TYPES, 'international-estimate'] as const;
+export const INDICATOR_SOURCE_LABEL: Record<string, string> = {
+  primary: 'Primary',
+  'official-data': 'Official data',
+  court: 'Court',
+  'reputable-media': 'Media',
+  academic: 'Academic',
+  'international-estimate': 'International estimate',
+};
+export const INTERNATIONAL_ESTIMATE_NOTE = 'Modelled series published by an international agency such as the World Bank or the UN; they can differ from official national statistics.';
 export const BLOCS = ['INC', 'BJP', 'Other'] as const;
 export const PROMISE_PARTIES = ['inc', 'bjp'] as const;
 export const PROMISE_ELECTIONS = [1998, 1999, 2004, 2009, 2014, 2019, 2024] as const;
@@ -33,13 +44,15 @@ export const periodSchema = z.object({
   end: isoDay.nullable().optional(),
 });
 
+const indicatorSourceSchema = sourceSchema.extend({ type: z.enum(INDICATOR_SOURCE_TYPES).optional() });
+
 export const indicatorSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
   unit: z.string().min(1),
   domain: z.string().min(1),
   basis: z.string().min(1),
-  source: sourceSchema,
+  source: indicatorSourceSchema,
   caveats: z.array(z.string().min(1)).min(1),
   values: z.array(z.object({ period: z.string().min(1), value: z.number().finite(), note: z.string().optional() })),
 });

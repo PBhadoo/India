@@ -109,3 +109,16 @@ test('not-in-power: labelled, ruled, and kept apart from delivery counts', () =>
     else assert.equal(c.byStatus['not-in-power'], 8);
   }
 });
+
+test('loader accepts international-estimate sources and 2-value indicators', () => {
+  const doc = JSON.parse(fs.readFileSync(path.join(fixtures, 'indicators.json'), 'utf8'));
+  doc.indicators[0].source.type = 'international-estimate';
+  doc.indicators[1].values = doc.indicators[1].values.slice(0, 2);
+  const d = fs.mkdtempSync(path.join(os.tmpdir(), 'intl-'));
+  fs.writeFileSync(path.join(d, 'indicators.json'), JSON.stringify(doc));
+  const r = loadIndicators(d);
+  assert.equal(r.issues.length, 0);
+  assert.equal(r.data.indicators[0].source.type, 'international-estimate');
+  assert.equal(r.data.indicators[1].values.length, 2);
+  assert.equal(indicatorBars(r.data.indicators[1], r.data.periods).rows.filter((x) => x.value !== null).length, 2);
+});

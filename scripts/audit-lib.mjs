@@ -284,19 +284,22 @@ export const PROMISE_STATUSES = ['delivered', 'partly-delivered', 'not-delivered
 export const GOVERNED_ELECTIONS = { inc: [2004, 2009], bjp: [1998, 1999, 2014, 2019, 2024] };
 export const PROMISES_PER_PARTY_ELECTION = 8;
 export const INDICATOR_BLOCS = ['INC', 'BJP', 'Other'];
-export const INDICATOR_MIN_VALUES = 3;
+export const INDICATOR_MIN_VALUES = 2; // error below this
+export const INDICATOR_WARN_VALUES = 3; // warning below this
+/** Indicator sources may also be modelled series from an international agency; action and dossier sources may not. */
+export const INDICATOR_SOURCE_TYPES = [...SOURCE_TYPES, 'international-estimate'];
 const GLOBAL_CONTEXT_RE = /oil|2008|financial crisis|covid|pandemic|global|world|monsoon|drought|commodity|revis|base year|rebas/i;
 const isHttps = (v) => typeof v === 'string' && /^https:\/\/[^\s/]+/i.test(v);
 const isIsoDay = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !isNaN(new Date(v + 'T00:00:00Z'));
 const KEBAB = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
-function checkSourceObj(s, where, err) {
+function checkSourceObj(s, where, err, types = SOURCE_TYPES) {
   if (!s || typeof s !== 'object') return err(`${where} missing`);
   if (!isStr(s.title)) err(`${where}.title missing`);
   if (!isStr(s.url)) err(`${where}.url missing`);
   else if (!isHttps(s.url)) err(`${where}.url must be https (${s.url})`);
   if (s.publisher !== undefined && !isStr(s.publisher)) err(`${where}.publisher must be a non-empty string`);
-  if (s.type !== undefined && !SOURCE_TYPES.includes(s.type)) err(`${where}.type must be one of ${SOURCE_TYPES.join('|')}`);
+  if (s.type !== undefined && !types.includes(s.type)) err(`${where}.type must be one of ${types.join('|')}`);
 }
 
 /** Checks the parsed src/data/indicators.json. ctx: { words: string[] }. */
@@ -334,7 +337,7 @@ export function checkIndicators(doc, ctx = {}) {
     else if (ids.has(ind.id)) err(`${tag}.id is duplicated`);
     else ids.add(ind.id);
     for (const f of ['name', 'unit', 'domain', 'basis']) if (!isStr(ind[f])) err(`${tag}.${f} missing`);
-    checkSourceObj(ind.source, `${tag}.source`, err);
+    checkSourceObj(ind.source, `${tag}.source`, err, INDICATOR_SOURCE_TYPES);
     if (!Array.isArray(ind.caveats) || ind.caveats.length === 0) err(`${tag}.caveats must be a non-empty list`);
     else {
       ind.caveats.forEach((c, j) => { if (!isStr(c)) err(`${tag}.caveats[${j}] must be a non-empty string`); });
@@ -345,6 +348,7 @@ export function checkIndicators(doc, ctx = {}) {
     const vals = Array.isArray(ind.values) ? ind.values : [];
     if (!Array.isArray(ind.values)) err(`${tag}.values must be a list`);
     else if (vals.length < INDICATOR_MIN_VALUES) err(`${tag} needs at least ${INDICATOR_MIN_VALUES} period values (has ${vals.length})`);
+    else if (vals.length < INDICATOR_WARN_VALUES) warn(`${tag} has only ${vals.length} period values (3 or more preferred); it is shown as "two data points only"`);
     const seen = new Set();
     const blocs = new Set();
     vals.forEach((v, j) => {

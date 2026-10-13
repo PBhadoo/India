@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadLoadedWords } from '../scripts/lib.mjs';
-import { checkIndicators, checkPromises, indicatorCoverage, promiseMatrix, DOSSIER_KINDS } from '../scripts/audit-lib.mjs';
+import { SOURCE_TYPES as audit_types, checkIndicators, checkPromises, indicatorCoverage, promiseMatrix, DOSSIER_KINDS } from '../scripts/audit-lib.mjs';
 
 const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures', 'data');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
@@ -27,10 +27,10 @@ test('indicator rules: periods exist, numeric values, source, caveats, at least 
   i.values[1].value = '8.4';
   i.source.url = 'http://example.org/x';
   i.caveats = [];
-  d.indicators[1].values = d.indicators[1].values.slice(0, 2);
+  d.indicators[1].values = d.indicators[1].values.slice(0, 1);
   delete d.indicators[2].source;
   const r = checkIndicators(d, ctx);
-  for (const re of [/period "nope" is not in periods/, /values\[1\]\.value must be a number/, /source\.url must be https/, /caveats must be a non-empty list/, /needs at least 3 period values \(has 2\)/, /source missing/]) {
+  for (const re of [/period "nope" is not in periods/, /values\[1\]\.value must be a number/, /source\.url must be https/, /caveats must be a non-empty list/, /needs at least 2 period values \(has 1\)/, /source missing/]) {
     assert.ok(has(r.errors, re), `missing ${re}\n${r.errors.join('\n')}`);
   }
 });
@@ -129,4 +129,17 @@ test('not-in-power: valid status; warns when used for a party-election the party
   assert.deepEqual(r.errors, []);
   assert.ok(has(r.warnings, /bjp-2014-001.*not-in-power but bjp governed after 2014/) || has(r.warnings, /not-in-power but bjp governed after 2014/));
   assert.ok(has(r.warnings, /should be not-in-power: inc did not form the Union government after 1998/));
+});
+
+test('indicator source types: international-estimate allowed for indicators only; two values warn, one errors', () => {
+  const d = clone(read('indicators.json'));
+  d.indicators[0].source.type = 'international-estimate';
+  d.indicators[1].values = d.indicators[1].values.filter((v) => ['upa1', 'modi2'].includes(v.period));
+  let r = checkIndicators(d, ctx);
+  assert.deepEqual(r.errors, []);
+  assert.ok(has(r.warnings, /fixture-inflation\) has only 2 period values.*two data points only/));
+  d.indicators[2].source.type = 'blog';
+  r = checkIndicators(d, ctx);
+  assert.ok(has(r.errors, /source\.type must be one of .*international-estimate/));
+  assert.ok(!audit_types.includes('international-estimate'));
 });

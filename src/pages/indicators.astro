@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 import IndicatorChart from '../components/IndicatorChart.astro';
 import BlocLegend from '../components/BlocLegend.astro';
-import { loadIndicators, indicatorDomains, titleCase, BLOC_LABEL, BLOC_KEY } from '../lib/datasets.ts';
+import { loadIndicators, indicatorDomains, titleCase, BLOC_LABEL, BLOC_KEY, INTERNATIONAL_ESTIMATE_NOTE } from '../lib/datasets.ts';
 import { getCategory } from '../lib/taxonomy.ts';
 import { fmtDate } from '../lib/format.ts';
 
@@ -14,6 +14,7 @@ const usable = data.indicators.filter((i) => i.values.length > 0);
 const domains = indicatorDomains(usable);
 const domainName = (d: string) => getCategory(d)?.name ?? titleCase(d);
 const empty = usable.length === 0;
+const anyIntl = usable.some((i) => i.source.type === 'international-estimate');
 const NOTE = 'Differences between periods do not show which government caused them; global conditions, earlier policies and data revisions all matter.';
 ---
 <Base title="Indicators by period" path="/indicators/" description="Official indicators such as growth, inflation, jobs, deficits, health and schooling, shown for each government period with sources and caveats. A description of periods, not a ranking of governments.">
@@ -35,6 +36,7 @@ const NOTE = 'Differences between periods do not show which government caused th
           </div>
           <BlocLegend label="Bar colour and pattern by who led the Union government in the period" />
           <p class="small" style="margin:0">Bar colour and pattern show who led the Union government in each period: INC-led, BJP-led, or Other (governments led by other parties, shown in neutral grey). Every bar also has its value printed beside it.</p>
+          {anyIntl && <p class="small" style="margin:0.5rem 0 0"><strong>International estimate:</strong> {INTERNATIONAL_ESTIMATE_NOTE}</p>}
         </div>
         <p class="result-count" role="status" aria-live="polite" id="f-count">{usable.length} {usable.length === 1 ? 'indicator' : 'indicators'}</p>
 

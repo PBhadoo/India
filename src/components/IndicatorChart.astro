@@ -1,6 +1,6 @@
 ---
-import { indicatorBars, BLOC_LABEL, BLOC_SLOT, type Indicator, type Period } from '../lib/datasets.ts';
-import { SOURCE_TYPE_LABEL, MINUS } from '../lib/format.ts';
+import { indicatorBars, BLOC_LABEL, BLOC_SLOT, INDICATOR_SOURCE_LABEL, INTERNATIONAL_ESTIMATE_NOTE, type Indicator, type Period } from '../lib/datasets.ts';
+import { MINUS } from '../lib/format.ts';
 interface Props { indicator: Indicator; periods: Period[] }
 const { indicator: ind, periods } = Astro.props;
 const { rows, zero } = indicatorBars(ind, periods);
@@ -9,12 +9,15 @@ const fmt = (v: number) => {
   return (v < 0 ? MINUS : '') + s;
 };
 const shown = rows.filter((r) => r.value !== null).length;
+const twoOnly = shown === 2;
+const intl = ind.source.type === 'international-estimate';
 const hasNeg = rows.some((r) => (r.value ?? 0) < 0);
 ---
 <article class="ind" id={`ind-${ind.id}`} data-domain={ind.domain} aria-labelledby={`h-${ind.id}`}>
   <header>
     <h3 id={`h-${ind.id}`}>{ind.name}</h3>
     <p class="ind-unit"><span class="unit">{ind.unit}</span> <span class="basis">{ind.basis}</span></p>
+    {twoOnly && <p class="two-pts"><span class="badge badge-warn">Two data points only</span> <span class="small">Two periods are not a trend; read the comparison with care.</span></p>}
   </header>
   <figure class="ind-fig">
     <figcaption class="vh">{ind.name}, {ind.unit}, by period. {shown} of {rows.length} periods have a comparable value. The same data is in the table below.</figcaption>
@@ -58,7 +61,8 @@ const hasNeg = rows.some((r) => (r.value ?? 0) < 0);
   </details>
   <div class="ind-meta">
     <h4>Source</h4>
-    <p class="small"><a href={ind.source.url} rel="noopener">{ind.source.title}</a>{ind.source.publisher && <>, {ind.source.publisher}</>} {ind.source.type && <span class="badge">{SOURCE_TYPE_LABEL[ind.source.type] ?? ind.source.type}</span>}</p>
+    <p class="small"><a href={ind.source.url} rel="noopener">{ind.source.title}</a>{ind.source.publisher && <>, {ind.source.publisher}</>} {ind.source.type && <span class={`badge${intl ? ' badge-intl' : ''}`}>{INDICATOR_SOURCE_LABEL[ind.source.type] ?? ind.source.type}</span>}</p>
+    {intl && <p class="small intl-note">{INTERNATIONAL_ESTIMATE_NOTE}</p>}
     <h4>Caveats</h4>
     <ul class="caveats">
       {ind.caveats.map((c) => <li>{c}</li>)}
@@ -87,6 +91,9 @@ const hasNeg = rows.some((r) => (r.value ?? 0) < 0);
   .ind-meta { margin-top: 0.9rem; border-top: 1px solid var(--rule); padding-top: 0.7rem; }
   .ind-meta h4 { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0.5rem 0 0.2rem; }
   .ind-meta p { margin: 0; }
+  .two-pts { margin: -0.4rem 0 0.7rem; display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; align-items: center; }
+  .badge-intl { border-style: dashed; border-color: var(--ink-2); background: var(--surface); color: var(--ink); }
+  .intl-note { margin-top: 0.3rem !important; }
   .caveats { margin: 0; padding-left: 1.1rem; font-size: 0.9rem; color: var(--ink-2); }
   .caveats li { margin-bottom: 0.25rem; max-width: var(--measure); }
 </style>

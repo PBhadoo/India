@@ -73,6 +73,7 @@ const NOTE = 'Differences between periods do not show which government caused th
 <style is:global>
   .ind-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr)); align-items: start; }
   .dom[hidden] { display: none; }
+  @media (max-width: 599px) { table.data.stackable caption { display: block; width: 100%; } }
 </style>
 <script>
   const sel = document.getElementById('f-domain') as HTMLSelectElement | null;

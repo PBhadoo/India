@@ -121,7 +121,7 @@ const empty = data.length === 0;
 </Base>
 <style is:global>
   .rules { display: grid; gap: 0.5rem; margin: 1rem 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
-  .rule { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0.6rem; align-items: start; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 0.6rem 0.8rem; }
+  .rule { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.45rem; align-items: start; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 0.6rem 0.8rem; }
   .rule dt, .rule dd { margin: 0; }
   .rule dd { font-size: 0.95rem; color: var(--ink-2); }
   .rule-key { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink); }
@@ -134,6 +134,7 @@ const empty = data.length === 0;
   @media (max-width: 599px) {
     .rule { grid-template-columns: minmax(0, 1fr); }
     table.promises .ptext, table.promises .pev { min-width: 0; max-width: none; }
+    table.promises.stackable caption { display: block; width: 100%; }
     table.promises.stackable tr { padding: 0.8rem 0; }
     table.promises.stackable tr[hidden] { display: none; }
   }

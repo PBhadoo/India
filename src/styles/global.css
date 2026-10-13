@@ -726,3 +726,4 @@ table.data th[scope='row'] .gov-list a { color: var(--accent); }
 .bloc-list .stance b { font-weight: 650; color: var(--ink); }
 .bloc-empty { padding: 0.9rem; border: 1px dashed var(--rule-strong); border-radius: 8px; color: var(--ink-2); font-size: 0.93rem; }
 .js .bloc-cat[hidden] { display: none; }
+.gov-list .mono { white-space: nowrap; }

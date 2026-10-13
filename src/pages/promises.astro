@@ -5,7 +5,7 @@ import PromiseStatus from '../components/PromiseStatus.astro';
 import PromiseSummary from '../components/PromiseSummary.astro';
 import {
   loadPromises, promiseSummary, PROMISE_PARTIES, PROMISE_ELECTIONS, PROMISE_STATUSES, PROMISE_STATUS_LABEL,
-  PROMISE_STATUS_RULES, PROMISE_SELECTION_RULE, titleCase,
+  PROMISE_STATUS_RULES, PROMISE_SELECTION_RULE, GOVERNED_RULE, governedBy, titleCase,
 } from '../lib/datasets.ts';
 import { getSite, pm } from '../lib/site.ts';
 import { getCategory } from '../lib/taxonomy.ts';
@@ -28,7 +28,7 @@ const empty = data.length === 0;
   <div class="wrap">
     <section class="block" id="rules" aria-labelledby="h-rules" style="padding-top:0;border-top:0">
       <h2 id="h-rules">How a status is decided</h2>
-      <p class="small">The rules are identical for both parties. {PROMISE_SELECTION_RULE}</p>
+      <p class="small">The rules are identical for both parties. {PROMISE_SELECTION_RULE} {GOVERNED_RULE}</p>
       <dl class="rules">
         {PROMISE_STATUSES.map((s) => (
           <div class="rule">
@@ -49,11 +49,12 @@ const empty = data.length === 0;
       <>
         <section class="block" id="summary" aria-labelledby="h-sum">
           <h2 id="h-sum">Summary by party and election</h2>
-          <p class="small">Counts of promises by status, for every election. Each party has the same layout and the same denominator per election. Status is shown by fill pattern and a printed count, not by colour alone. This summary always shows all promises; the filters below apply to the table.</p>
+          <p class="small">Counts of promises by status, for every election. Each party has the same layout and the same denominator per election, with the elections after which it governed shown apart from the promises made while out of power. Status is shown by fill pattern and a printed count, not by colour alone. This summary always shows all promises; the filters below apply to the table.</p>
           <div class="psum-grid">
             {PROMISE_PARTIES.map((p) => {
               const meta = partyLabel(p);
-              return <PromiseSummary partyName={meta.name} partyShort={meta.short} rows={[...summary[p]].reverse()} />;
+              const rows = [...summary[p]].reverse();
+              return <PromiseSummary partyName={meta.name} partyShort={meta.short} governed={rows.filter(([y]) => governedBy(p, y))} outOfPower={rows.filter(([y]) => !governedBy(p, y))} />;
             })}
           </div>
           <details class="tv" style="margin-top:1rem">

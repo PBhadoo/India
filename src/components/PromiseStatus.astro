@@ -9,6 +9,7 @@ const icons: Record<PromiseStatus, string> = {
   abandoned: '<circle cx="8" cy="8" r="4.8" /><path d="M4.6 11.4l6.8-6.8" />',
   ongoing: '<path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5v3h-3" />',
   unclear: '<path d="M6.2 6.2a1.9 1.9 0 1 1 2.7 1.7c-.6.3-.9.7-.9 1.4M8 12v.1" />',
+  'not-in-power': '<circle cx="8" cy="8" r="4.8" /><path d="M5.6 8h4.8" />',
 };
 ---
 {swatchOnly
@@ -27,6 +28,8 @@ const icons: Record<PromiseStatus, string> = {
   .st-abandoned { --seg-ink: var(--neg); background: repeating-linear-gradient(135deg, var(--neg) 0 1.5px, transparent 1.5px 5px), repeating-linear-gradient(45deg, var(--neg) 0 1.5px, var(--neg-wash) 1.5px 5px); }
   .st-ongoing { --seg-ink: var(--accent); background: radial-gradient(var(--accent) 1.3px, transparent 1.7px) 0 0 / 6px 6px, var(--accent-wash); }
   .st-unclear { --seg-ink: var(--ink-2); background: repeating-linear-gradient(90deg, var(--ink-2) 0 1px, transparent 1px 5px), repeating-linear-gradient(0deg, var(--ink-2) 0 1px, var(--surface-2) 1px 5px); }
+  .st-not-in-power { --seg-ink: var(--muted); background: repeating-linear-gradient(135deg, var(--muted) 0 2px, var(--surface-2) 2px 7px); }
+  .st-pill-not-in-power { border-color: var(--muted); border-style: dashed; color: var(--ink-2); }
   .st-pill-delivered { border-color: var(--pos); }
   .st-pill-partly-delivered { border-color: var(--pos); border-style: dashed; }
   .st-pill-not-delivered { border-color: var(--neg); }

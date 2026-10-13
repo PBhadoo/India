@@ -1,0 +1,1086 @@
+{
+  "periods": [
+    {
+      "id": "inc-pre-1991",
+      "label": "Before mid-1991 (mixed governments, 1947-91)",
+      "bloc": "Mixed",
+      "start": "1947-08-15",
+      "end": "1991-06-21"
+    },
+    {
+      "id": "rao",
+      "label": "Rao (1991-96)",
+      "bloc": "INC",
+      "start": "1991-06-21",
+      "end": "1996-05-16"
+    },
+    {
+      "id": "nda1",
+      "label": "NDA I / Vajpayee (1998-2004)",
+      "bloc": "BJP",
+      "start": "1998-03-19",
+      "end": "2004-05-22"
+    },
+    {
+      "id": "upa1",
+      "label": "UPA I (2004-09)",
+      "bloc": "INC",
+      "start": "2004-05-22",
+      "end": "2009-05-22"
+    },
+    {
+      "id": "upa2",
+      "label": "UPA II (2009-14)",
+      "bloc": "INC",
+      "start": "2009-05-22",
+      "end": "2014-05-26"
+    },
+    {
+      "id": "nda2-modi1",
+      "label": "Modi I (2014-19)",
+      "bloc": "BJP",
+      "start": "2014-05-26",
+      "end": "2019-05-30"
+    },
+    {
+      "id": "modi2",
+      "label": "Modi II (2019-24)",
+      "bloc": "BJP",
+      "start": "2019-05-30",
+      "end": "2024-06-09"
+    },
+    {
+      "id": "modi3",
+      "label": "Modi III (2024-)",
+      "bloc": "BJP",
+      "start": "2024-06-09",
+      "end": null
+    }
+  ],
+  "indicators": [
+    {
+      "id": "life-expectancy",
+      "name": "Life expectancy at birth (total)",
+      "unit": "years",
+      "domain": "health",
+      "basis": "Modelled estimate for one calendar year at period end (see note on each value)",
+      "source": {
+        "title": "World Bank WDI SP.DYN.LE00.IN (UN World Population Prospects based)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/SP.DYN.LE00.IN?format=json",
+        "publisher": "World Bank / UN Population Division",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Modelled international estimate, not the Sample Registration System (SRS) abridged life tables, which give different levels (SRS is a primary official series but its periods are 3-5-year rolling and were not retrieved here).",
+        "Health is mainly a State subject; the Centre influences outcomes through funding and schemes, so national changes cannot be attributed to the Centre alone.",
+        "COVID-19 reduced estimated life expectancy in 2020-21; the value for modi2 uses 2023 (after the dip)."
+      ],
+      "values": [
+        {
+          "period": "inc-pre-1991",
+          "value": 58.6,
+          "note": "calendar year 1990"
+        },
+        {
+          "period": "rao",
+          "value": 60.6,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 64.1,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 66.2,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 68.5,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 70.4,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 72.0,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 72.2,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "infant-mortality",
+      "name": "Infant mortality rate",
+      "unit": "deaths per 1,000 live births",
+      "domain": "health",
+      "basis": "Modelled estimate for one calendar year at period end",
+      "source": {
+        "title": "World Bank WDI SP.DYN.IMRT.IN (UN IGME based)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/SP.DYN.IMRT.IN?format=json",
+        "publisher": "World Bank / UN Inter-agency Group for Child Mortality Estimation",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "UN IGME modelled estimate; the official SRS reports a lower figure for the same years (SRS is based on a large sample registration survey and is published with a lag of 1-3 years); the two series are not interchangeable.",
+        "Health is mainly a State subject; the Centre funds programmes such as the National Health Mission (from 2005) but delivery is by States."
+      ],
+      "values": [
+        {
+          "period": "inc-pre-1991",
+          "value": 84.4,
+          "note": "calendar year 1990"
+        },
+        {
+          "period": "rao",
+          "value": 75.6,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 60.4,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 50.5,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 40.1,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 31.3,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 24.5,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 23.3,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "maternal-mortality",
+      "name": "Maternal mortality ratio (modelled)",
+      "unit": "deaths per 100,000 live births",
+      "domain": "health",
+      "basis": "Modelled estimate for one calendar year at period end",
+      "source": {
+        "title": "World Bank WDI SH.STA.MMRT (WHO, UNICEF, UNFPA, World Bank, UN Population Division estimates)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/SH.STA.MMRT?format=json",
+        "publisher": "World Bank / WHO-led UN Maternal Mortality Estimation Inter-agency Group",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Modelled estimates are revised with each edition, so earlier values can change; the series shows a one-year spike to 155 in 2021 (2021), not a period-end value used here.",
+        "Official SRS special bulletins on maternal mortality give different (lower) levels and cover 3-year pooled periods; they were not retrieved so the series are not combined.",
+        "Health is mainly a State subject."
+      ],
+      "values": [
+        {
+          "period": "inc-pre-1991",
+          "value": 516,
+          "note": "calendar year 1990"
+        },
+        {
+          "period": "rao",
+          "value": 437,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 313,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 223,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 148,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 107,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 80,
+          "note": "calendar year 2023"
+        }
+      ]
+    },
+    {
+      "id": "literacy-adult",
+      "name": "Adult literacy rate (age 15 and above)",
+      "unit": "% of population 15+",
+      "domain": "education",
+      "basis": "Census years mapped to the period in which the Census reference date falls (1991 Census: March 1991; 2001: March 2001; 2011: March 2011); no Census value after 2011 because the 2021 Census was not held in 2021",
+      "source": {
+        "title": "World Bank WDI SE.ADT.LITR.ZS (UNESCO Institute for Statistics, Census-based)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/SE.ADT.LITR.ZS?format=json",
+        "publisher": "World Bank / UNESCO Institute for Statistics",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Age 15+ measure from UNESCO; the Census headline literacy rate in India uses age 7+ and gives higher figures. Do not compare these values with the Census headline rate.",
+        "Census years are a decade apart; values for the other periods are absent rather than interpolated. Post-2011 values in the World Bank series come from household surveys with a different method and are not spliced here.",
+        "Education is a Concurrent List subject with States running most schools; the Right to Education Act 2009 and Sarva Shiksha Abhiyan are Centre-funded, State-delivered.",
+        "Global context: COVID-19 school closures after 2020 are not reflected in Census-based values."
+      ],
+      "values": [
+        {
+          "period": "inc-pre-1991",
+          "value": 48.2,
+          "note": "Census 1991 (March 1991), falls just before the Rao government took office"
+        },
+        {
+          "period": "nda1",
+          "value": 61.0,
+          "note": "Census 2001"
+        },
+        {
+          "period": "upa2",
+          "value": 69.3,
+          "note": "Census 2011"
+        }
+      ]
+    },
+    {
+      "id": "ger-secondary",
+      "name": "Gross enrolment ratio, secondary school",
+      "unit": "% (gross)",
+      "domain": "education",
+      "basis": "One calendar year at period end",
+      "source": {
+        "title": "World Bank WDI SE.SEC.ENRR (UNESCO Institute for Statistics)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/SE.SEC.ENRR?format=json",
+        "publisher": "World Bank / UNESCO Institute for Statistics",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Gross ratio counts all enrolled students regardless of age over the official-age population, so it can exceed 100 in primary and is sensitive to over-age enrolment and population estimates.",
+        "Official UDISE+ figures (Ministry of Education) use different age bands and population projections and give different numbers; UDISE+ was not retrieved.",
+        "Education is mainly a State responsibility (Concurrent List)."
+      ],
+      "values": [
+        {
+          "period": "rao",
+          "value": 45.0,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 51.4,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 62.2,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 69.5,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 76.0,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 78.9,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 78.1,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "ger-tertiary",
+      "name": "Gross enrolment ratio, tertiary (higher) education",
+      "unit": "% (gross)",
+      "domain": "education",
+      "basis": "One calendar year at period end",
+      "source": {
+        "title": "World Bank WDI SE.TER.ENRR (UNESCO Institute for Statistics)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/SE.TER.ENRR?format=json",
+        "publisher": "World Bank / UNESCO Institute for Statistics",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "The step between 2010 (18.7) and 2011 (23.8) in the World Bank series suggests a data-source or population-denominator change; read changes across 2010-11 with care.",
+        "The Ministry of Education's All India Survey on Higher Education (AISHE) reports GER for ages 18-23 with its own population projections and differs from UNESCO; AISHE was not retrieved.",
+        "Higher education is a Concurrent List subject; States and private providers run most institutions."
+      ],
+      "values": [
+        {
+          "period": "inc-pre-1991",
+          "value": 5.9,
+          "note": "calendar year 1990"
+        },
+        {
+          "period": "rao",
+          "value": 5.5,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 11.1,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 15.6,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 24.4,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 28.5,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 34.2,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 34.4,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "poverty-tendulkar",
+      "name": "Poverty headcount ratio, official Tendulkar line",
+      "unit": "% of population",
+      "domain": "poverty",
+      "basis": "NSS consumption survey year: 2004-05 (NSS 61st round) mapped to UPA I; 2011-12 (NSS 68th round) mapped to UPA II. Not a period-end or average value",
+      "source": {
+        "title": "Planning Commission press note on poverty estimates for 2011-12 (22 July 2013), via NITI Aayog",
+        "url": "https://www.niti.gov.in/sites/default/files/2020-05/press-note-poverty-2011-12-23-08-16.pdf",
+        "publisher": "Planning Commission, Government of India",
+        "type": "official-data"
+      },
+      "caveats": [
+        "The PDF could not be opened (HTTP 403); the figures 37.2% (2004-05) and 21.9% (2011-12) come from news reports of the Planning Commission press note seen in search results, not opened.",
+        "Tendulkar line is a consumption-expenditure threshold; it is not comparable with the earlier Lakdawala-line estimates and not with the Rangarajan line (2011-12: 29.5%, which was reported by a secondary source only and is not included).",
+        "No official consumption-poverty estimate has been published for later years on this line; whether later NSO consumption surveys support an official headcount on this line was not verified.",
+        "Poverty-line surveys are conducted by NSO; measures of anti-poverty effort are shared with States.",
+        "Global context: the 2008-09 crisis and 2008 food price rises fall within the survey interval."
+      ],
+      "values": [
+        {
+          "period": "upa1",
+          "value": 37.2,
+          "note": "2004-05"
+        },
+        {
+          "period": "upa2",
+          "value": 21.9,
+          "note": "2011-12"
+        }
+      ]
+    },
+    {
+      "id": "poverty-mpi",
+      "name": "Multidimensional poverty headcount (National MPI)",
+      "unit": "% of population",
+      "domain": "poverty",
+      "basis": "NFHS survey round: NFHS-4 (2015-16) mapped to Modi I; NFHS-5 (2019-21) mapped to Modi II. Not comparable with the Tendulkar consumption-poverty series",
+      "source": {
+        "title": "National Multidimensional Poverty Index: A Progress Review 2023",
+        "url": "https://www.niti.gov.in/sites/default/files/2023-08/India-National-Multidimentional-Poverty-Index-2023.pdf",
+        "publisher": "NITI Aayog (with OPHI and UNDP)",
+        "type": "official-data"
+      },
+      "caveats": [
+        "Figures 24.85% and 14.96% and the NFHS rounds come from search-result summaries of the report (PDF seen in search results, not opened).",
+        "MPI is a different concept from consumption poverty: it is a headcount of people deprived in at least one-third of weighted indicators (health, education, living standards: 12 indicators in the national version). It must not be spliced with the Tendulkar series.",
+        "NFHS-3 (2005-06) is not included because no national MPI value on the same 12-indicator basis was retrieved; later NITI discussion papers revised the baseline and report different figures for other years.",
+        "NFHS-5 fieldwork (2019-21) was interrupted by COVID-19 and straddles two periods' terms; it is mapped to Modi II as most fieldwork followed the 2019 start.",
+        "Several MPI indicators (sanitation, cooking fuel, housing, electricity, bank accounts) reflect Centre-led schemes (Swachh Bharat, Ujjwala, Saubhagya) while health, education and water are mainly State subjects."
+      ],
+      "values": [
+        {
+          "period": "nda2-modi1",
+          "value": 24.85,
+          "note": "NFHS-4, 2015-16"
+        },
+        {
+          "period": "modi2",
+          "value": 14.96,
+          "note": "NFHS-5, 2019-21"
+        }
+      ]
+    },
+    {
+      "id": "stunting-under5",
+      "name": "Children under 5 who are stunted",
+      "unit": "% of children under 5",
+      "domain": "health",
+      "basis": "NFHS round: NFHS-4 (2015-16) mapped to Modi I; NFHS-5 (2019-21) mapped to Modi II",
+      "source": {
+        "title": "Rajya Sabha answer, Ministry of Health and Family Welfare (10 Dec 2024), citing NFHS-5; Factly summary for NFHS-4",
+        "url": "https://rsdebate.nic.in/bitstream/123456789/752231/1/PQ_266_10122024_U1724_p372_p374.pdf",
+        "publisher": "Ministry of Health and Family Welfare / IIPS (NFHS)",
+        "type": "official-data"
+      },
+      "caveats": [
+        "Values 38.4% (NFHS-4) and 35.5% (NFHS-5) were seen in search-result summaries; the Parliament PDF and the NFHS national fact sheet were not opened (rchiips.org returned HTTP 503).",
+        "NFHS-1 to NFHS-3 under-5 values were not verified (sources found mixed under-3 and under-5 age groups), so earlier periods are omitted rather than spliced; the World Bank stunting series mixes NFHS and other surveys and is not used.",
+        "Only NFHS-4 and NFHS-5 are used; earlier rounds were not verified, and growth-reference standards should be checked before comparing them.",
+        "NFHS-5 fieldwork was paused by COVID-19 and overlaps two years of the Modi II government; nutrition is shared between Centre (POSHAN Abhiyaan, ICDS funding) and States (delivery).",
+        "Survey outcomes lag policy by years."
+      ],
+      "values": [
+        {
+          "period": "nda2-modi1",
+          "value": 38.4,
+          "note": "NFHS-4, 2015-16"
+        },
+        {
+          "period": "modi2",
+          "value": 35.5,
+          "note": "NFHS-5, 2019-21"
+        }
+      ]
+    },
+    {
+      "id": "underweight-under5",
+      "name": "Children under 5 who are underweight",
+      "unit": "% of children under 5",
+      "domain": "health",
+      "basis": "NFHS round: NFHS-4 (2015-16) mapped to Modi I; NFHS-5 (2019-21) mapped to Modi II",
+      "source": {
+        "title": "Rajya Sabha answer, Ministry of Health and Family Welfare (10 Dec 2024), citing NFHS-5; Factly summary for NFHS-4",
+        "url": "https://rsdebate.nic.in/bitstream/123456789/752231/1/PQ_266_10122024_U1724_p372_p374.pdf",
+        "publisher": "Ministry of Health and Family Welfare / IIPS (NFHS)",
+        "type": "official-data"
+      },
+      "caveats": [
+        "Values 35.8% (NFHS-4) and 32.1% (NFHS-5) were seen in search-result summaries; the underlying documents were not opened.",
+        "Earlier NFHS rounds not verified and omitted; see stunting caveats on comparability, COVID-19 interruption and shared Centre-State responsibility."
+      ],
+      "values": [
+        {
+          "period": "nda2-modi1",
+          "value": 35.8,
+          "note": "NFHS-4, 2015-16"
+        },
+        {
+          "period": "modi2",
+          "value": 32.1,
+          "note": "NFHS-5, 2019-21"
+        }
+      ]
+    },
+    {
+      "id": "electricity-access",
+      "name": "Population with access to electricity",
+      "unit": "% of population",
+      "domain": "infrastructure",
+      "basis": "Modelled estimate for one calendar year at period end",
+      "source": {
+        "title": "World Bank WDI EG.ELC.ACCS.ZS (Sustainable Energy for All database)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/EG.ELC.ACCS.ZS?format=json",
+        "publisher": "World Bank",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Definition of access follows the SE4ALL/World Bank multi-tier framework and counts a household as electrified on basic connection; household connection does not measure hours or reliability of supply. The series is smoothed and interpolated between surveys, with year-to-year noise (e.g. 2004 below 2003).",
+        "Electricity is a Concurrent List subject; distribution utilities (DISCOMs) are mostly State-owned, so supply quality is largely a State matter.",
+        "The series is in the World Bank database for 1993 onward, so no value exists for the pre-1991 period."
+      ],
+      "values": [
+        {
+          "period": "rao",
+          "value": 51.4,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 65.4,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 74.1,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 83.1,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 95.7,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 99.5,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 99.9,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "clean-cooking",
+      "name": "Population with access to clean fuels and technologies for cooking",
+      "unit": "% of population",
+      "domain": "infrastructure",
+      "basis": "Modelled estimate for one calendar year at period end",
+      "source": {
+        "title": "World Bank WDI EG.CFT.ACCS.ZS (WHO Global Household Energy Database)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/EG.CFT.ACCS.ZS?format=json",
+        "publisher": "World Bank / World Health Organization",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Series begins in 2000, so Rao and earlier periods are absent.",
+        "Household-survey NFHS values differ: NFHS-4 (2015-16) 43.8% and NFHS-5 (2019-21) 58.6% of households using clean cooking fuel, as seen in Economic Survey 2021-22 search results (not opened); these are household-based and not spliced with the WHO modelled series.",
+        "Ujjwala Yojana (from 2016) expanded LPG connections; use of the fuel after connection (refill rates) is not captured by access measures."
+      ],
+      "values": [
+        {
+          "period": "nda1",
+          "value": 26,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 31,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 42,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 61,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 78,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 81,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "sanitation-safely-managed",
+      "name": "Population using safely managed sanitation services",
+      "unit": "% of population",
+      "domain": "infrastructure",
+      "basis": "Modelled estimate for one calendar year at period end",
+      "source": {
+        "title": "World Bank WDI SH.STA.SMSS.ZS (WHO/UNICEF Joint Monitoring Programme)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/SH.STA.SMSS.ZS?format=json",
+        "publisher": "World Bank / WHO-UNICEF JMP",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Series begins in 2000. 'Safely managed' is a strict JMP standard (toilet not shared, excreta safely disposed or treated) and is lower than 'improved sanitation'; NFHS-5 reports 70.2% of the population in households with an improved facility vs 48.5% in NFHS-4 (Economic Survey 2021-22, seen in search results, not opened). The two measures are not spliced.",
+        "Sanitation and water are State subjects; the Centre's Swachh Bharat Mission (from 2014) funds and promotes toilets, but figures also reflect programmes begun earlier."
+      ],
+      "values": [
+        {
+          "period": "nda1",
+          "value": 14.9,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 26.2,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 37.8,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 49.6,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 60.8,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 62.8,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "nh-length",
+      "name": "National highway length",
+      "unit": "km",
+      "domain": "infrastructure",
+      "basis": "Total length at end of the fiscal year before the period ended (as listed in MoRTH annual reports)",
+      "source": {
+        "title": "Wikipedia: National Highways (India), network-length table citing MoRTH annual reports",
+        "url": "https://en.wikipedia.org/wiki/National_Highways_(India)",
+        "publisher": "Wikipedia, compiling Ministry of Road Transport and Highways data",
+        "type": "reputable-media"
+      },
+      "caveats": [
+        "Secondary compilation of MoRTH data; the MoRTH Basic Road Statistics were not opened. The same page lists 2003-04 and 2004-05 with the same value, and the text gives 161,350 km for March 2022 while the table lists 140,995 km, so values after 2019 should be checked against MoRTH.",
+        "Length increases include roads newly notified or upgraded to national-highway status from State roads (the table shows large jumps in 2012-13 and 2016-18), not only new construction.",
+        "Highways are a Union responsibility for National Highways, but State roads form most of the network.",
+        "No value for Modi III (latest year not retrieved) or Rao."
+      ],
+      "values": [
+        {
+          "period": "nda1",
+          "value": 65569,
+          "note": "31 Mar 2004 (2003-04)"
+        },
+        {
+          "period": "upa1",
+          "value": 70548,
+          "note": "2008-09"
+        },
+        {
+          "period": "upa2",
+          "value": 91287,
+          "note": "2013-14"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 132500,
+          "note": "2018-19"
+        },
+        {
+          "period": "modi2",
+          "value": 151874,
+          "note": "2023-24"
+        }
+      ]
+    },
+    {
+      "id": "nh-net-addition",
+      "name": "Net addition to national highway length per year (derived)",
+      "unit": "km a year",
+      "domain": "infrastructure",
+      "basis": "Derived by the tracker: change in end-of-fiscal-year length across each period divided by the number of years. Not the Ministry's 'km constructed' statistic",
+      "source": {
+        "title": "Derived from Wikipedia: National Highways (India) network-length table (MoRTH data)",
+        "url": "https://en.wikipedia.org/wiki/National_Highways_(India)",
+        "publisher": "Wikipedia, compiling Ministry of Road Transport and Highways data",
+        "type": "reputable-media"
+      },
+      "caveats": [
+        "Not construction pace: changes in length mix new construction with reclassification of State and other roads as National Highways and with changes in how length is measured. Ministry-reported construction (km built a year, which the page gives only as km/day, e.g. 28.3 km/day in 2020-21 cited there) was not verified and is not used.",
+        "Periods are measured from end of one fiscal year to the end of another and do not align exactly with government start dates.",
+        "See national-highway-length caveats on data quality."
+      ],
+      "values": [
+        {
+          "period": "upa1",
+          "value": 996,
+          "note": "(70,548-65,569)/5 yr; March 2004 to March 2009"
+        },
+        {
+          "period": "upa2",
+          "value": 4148,
+          "note": "(91,287-70,548)/5 yr; 2009 to 2014"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 8243,
+          "note": "(132,500-91,287)/5 yr; 2014 to 2019"
+        },
+        {
+          "period": "modi2",
+          "value": 3875,
+          "note": "(151,874-132,500)/5 yr; 2019 to 2024"
+        }
+      ]
+    },
+    {
+      "id": "rail-electrified-route",
+      "name": "Electrified railway route length",
+      "unit": "route km",
+      "domain": "infrastructure",
+      "basis": "Cumulative electrified route km at, or near, the end of each period (dates in notes)",
+      "source": {
+        "title": "PIB factsheet 'Railway Electrification' (May 2023); Wikipedia: Rail transport in India (Year Book data for 1991 and 2025)",
+        "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2023/may/doc202354194601.pdf",
+        "publisher": "Ministry of Railways via Press Information Bureau; Indian Railways Year Book",
+        "type": "official-data"
+      },
+      "caveats": [
+        "Dates differ across periods: 1991 (Year Book, 9,968 km), up to 2014 (PIB, 21,413 km), 58,424 km as of PIB's May 2023 note, and 69,427 km reported Nov 2025 (The Week, seen in search results; also on Wikipedia, which cites the Year Book). Another source (Rajya Sabha reply, Dec 2024) gives 21,801 km before 2014, so the baseline varies by about 400 km between releases.",
+        "Share electrified: 15.98% in 1991 of 62,367 route km; 99.2% of 70,001 km broad gauge in Nov 2025. Denominators changed as gauge conversion and new lines proceeded.",
+        "Missing: 2004, 2009, 2019 and 2024 values were not retrieved, so Rao, NDA I and UPA I have no value.",
+        "Railways are a Union subject; funding for electrification and coal import/oil-price movements both shaped timing."
+      ],
+      "values": [
+        {
+          "period": "inc-pre-1991",
+          "value": 9968,
+          "note": "1991, Indian Railways Year Book"
+        },
+        {
+          "period": "upa2",
+          "value": 21413,
+          "note": "up to 2014, PIB"
+        },
+        {
+          "period": "modi2",
+          "value": 58424,
+          "note": "as of May 2023 factsheet; not at 9 June 2024"
+        },
+        {
+          "period": "modi3",
+          "value": 69427,
+          "note": "reported Nov 2025"
+        }
+      ]
+    },
+    {
+      "id": "installed-power-capacity",
+      "name": "Installed electricity generating capacity (utilities, incl. renewables)",
+      "unit": "GW",
+      "domain": "infrastructure",
+      "basis": "Capacity on 31 March nearest or just before the period ended (31 Mar 2014, 2019, 2024, 2026)",
+      "source": {
+        "title": "Energy Statistics India 2021, Table 2.3(A) (CEA data); Power Sector at a Glance (Ministry of Power) for 31 March 2026",
+        "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/ES/Chapter%202%20Installed%20capacity%20and%20capacity%20utilization.pdf",
+        "publisher": "MoSPI / Central Electricity Authority / Ministry of Power",
+        "type": "official-data"
+      },
+      "caveats": [
+        "2014 (248.554 GW) and 2019 (356.100 GW) are from MoSPI Table 2.3(A), utilities only (excludes captive plants, which add about 75-80 GW). 2024 (442.0 GW) is from the Wikipedia article citing CEA Growth Book 2025 (page opened, CEA original blocked). 2026 (532.74 GW) is from the Ministry of Power's Power Sector at a Glance for 31.03.2026.",
+        "Capacity is nameplate, not output; solar and wind have lower capacity utilisation than coal or hydro. Capacity counted from renewables is much larger in recent years (2026: wind 56 GW, solar 150 GW), which affects comparison of 'GW' across eras.",
+        "Earlier values (e.g. 105.0 GW in 2002, 132.3 GW in 2007, 199.9 GW in 2012) were seen in search-result snippets of CEA reports but do not align with period end dates and are omitted.",
+        "Electricity is a Concurrent List subject; generation is by Centre, State and private firms; private share was 52.3% in 2026."
+      ],
+      "values": [
+        {
+          "period": "upa2",
+          "value": 248.6,
+          "note": "31 Mar 2014"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 356.1,
+          "note": "31 Mar 2019"
+        },
+        {
+          "period": "modi2",
+          "value": 442.0,
+          "note": "31 Mar 2024"
+        },
+        {
+          "period": "modi3",
+          "value": 532.7,
+          "note": "31 Mar 2026"
+        }
+      ]
+    },
+    {
+      "id": "electricity-per-capita",
+      "name": "Electric power consumption per head",
+      "unit": "kWh per person",
+      "domain": "infrastructure",
+      "basis": "One calendar year at period end",
+      "source": {
+        "title": "World Bank WDI EG.USE.ELEC.KH.PC (IEA data)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/EG.USE.ELEC.KH.PC?format=json",
+        "publisher": "World Bank / International Energy Agency",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Measures production plus imports minus losses, by population; differs from the Ministry of Power per capita figure (1,400 kWh in 2023-24 as per CEA via Wikipedia; 1,460 in 2024-25), which is a fiscal-year figure on a different base, so the series are not mixed.",
+        "Consumption includes industrial and agricultural use and depends on economic activity (COVID-19 fall to 901 kWh in 2020)."
+      ],
+      "values": [
+        {
+          "period": "inc-pre-1991",
+          "value": 271.0,
+          "note": "calendar year 1990"
+        },
+        {
+          "period": "rao",
+          "value": 354.0,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 419.0,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 555.0,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 743.0,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 971.0,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 1160.0,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 1223.0,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "mobile-subscribers",
+      "name": "Mobile cellular subscriptions",
+      "unit": "million",
+      "domain": "infrastructure",
+      "basis": "One calendar year at period end",
+      "source": {
+        "title": "World Bank WDI IT.CEL.SETS (ITU)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/IT.CEL.SETS?format=json",
+        "publisher": "World Bank / International Telecommunication Union",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "SIM-based subscriptions, not unique users; multiple SIMs and dormant SIMs inflate counts, and TRAI periodically purges inactive connections (a plateau/fall after 2018 reflects consolidation, not loss of use).",
+        "Telecom policy is a Union subject; growth since the 1990s followed liberalisation and falling tariffs (context, not tested here).",
+        "Pre-1991 period has no mobile service."
+      ],
+      "values": [
+        {
+          "period": "rao",
+          "value": 0.08,
+          "note": "calendar year 1995"
+        },
+        {
+          "period": "nda1",
+          "value": 33.69,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 346.89,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 886.3,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 1176.02,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 1158.55,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 1151.36,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "teledensity",
+      "name": "Overall tele-density (telephones per 100 people)",
+      "unit": "per 100 population",
+      "domain": "infrastructure",
+      "basis": "TRAI figure at 31 March of the year before each period ended (2014, 2019, 2024)",
+      "source": {
+        "title": "TRAI Indian Telecom Services Performance Indicator Reports (Mar 2014; later quarters); TRAI annual report 2023-24",
+        "url": "https://www.trai.gov.in/sites/default/files/Indicator%20Reports%20-%20Mar-14.pdf",
+        "publisher": "Telecom Regulatory Authority of India",
+        "type": "official-data"
+      },
+      "caveats": [
+        "Values 75.23 (Mar 2014), 90.11 (Mar 2019) and 85.69 (Mar 2024) were seen in search-result snippets of TRAI reports and a news report on the TRAI annual report; documents were not opened.",
+        "Tele-density counts connections (wireline + wireless) per 100 population, and so exceeds 100 in some countries and rises with multi-SIM ownership. Population bases and subscriber clean-ups may affect comparability over time (not checked here).",
+        "Earlier March values (2004, 2009) were not verified and are omitted."
+      ],
+      "values": [
+        {
+          "period": "upa2",
+          "value": 75.23,
+          "note": "31 Mar 2014"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 90.11,
+          "note": "31 Mar 2019"
+        },
+        {
+          "period": "modi2",
+          "value": 85.69,
+          "note": "31 Mar 2024"
+        }
+      ]
+    },
+    {
+      "id": "fixed-broadband",
+      "name": "Fixed (wired) broadband subscriptions",
+      "unit": "million",
+      "domain": "infrastructure",
+      "basis": "One calendar year at period end",
+      "source": {
+        "title": "World Bank WDI IT.NET.BBND (ITU)",
+        "url": "https://api.worldbank.org/v2/country/IND/indicator/IT.NET.BBND?format=json",
+        "publisher": "World Bank / International Telecommunication Union",
+        "type": "international-estimate"
+      },
+      "caveats": [
+        "Values are for the last full calendar year before each period ended (modi3: latest available, 2024), not a period average; this is a snapshot of the stock at hand-over, which reflects policy and conditions from earlier years and earlier governments (long lags).",
+        "Global context: 2008-09 financial crisis, 2014-16 oil-price fall and 2020-21 COVID-19 affected many series; COVID-19 disrupted surveys and data collection.",
+        "Fixed broadband only. Most Indian internet use is by mobile broadband: TRAI reports about 1,073 million total broadband subscribers (1,027 million wireless) in April 2026 (Wikipedia citing TRAI), but a consistent mobile series was not retrieved, so it is not included.",
+        "The official minimum speed defining broadband in India has been revised over time (not checked here), so early values may not be strictly comparable.",
+        "Telecom is a Union subject; BharatNet rural fibre programme is a Centre-led project."
+      ],
+      "values": [
+        {
+          "period": "nda1",
+          "value": 0.14,
+          "note": "calendar year 2003"
+        },
+        {
+          "period": "upa1",
+          "value": 5.28,
+          "note": "calendar year 2008"
+        },
+        {
+          "period": "upa2",
+          "value": 14.93,
+          "note": "calendar year 2013"
+        },
+        {
+          "period": "nda2-modi1",
+          "value": 18.17,
+          "note": "calendar year 2018"
+        },
+        {
+          "period": "modi2",
+          "value": 39.48,
+          "note": "calendar year 2023"
+        },
+        {
+          "period": "modi3",
+          "value": 45.71,
+          "note": "calendar year 2024"
+        }
+      ]
+    },
+    {
+      "id": "operational-airports",
+      "name": "Operational airports",
+      "unit": "number",
+      "domain": "infrastructure",
+      "basis": "Ministry of Civil Aviation count of operational airports in the stated year",
+      "source": {
+        "title": "Ministry of Civil Aviation release via PIB (Sept 2024): operational airports rose from 74 in 2014 to 157 in 2024",
+        "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/sep/doc2024915394601.pdf",
+        "publisher": "Ministry of Civil Aviation / Press Information Bureau",
+        "type": "official-data"
+      },
+      "caveats": [
+        "PDF seen in search results (not opened); figures taken from search summaries. The Ministry's definition of 'operational airport' includes civil enclaves and may include heliports and water aerodromes; a count for 2004 and 2009 on the same basis was not found.",
+        "Another source (Indiainfrahub citing PIB) gives 148 for 2023, consistent with growth.",
+        "UDAN regional connectivity (from 2016) accounts for part of the increase: 71 airports, 13 heliports and 2 water aerodromes had been operationalised by Oct 2024 (search-result summary).",
+        "Airports are a Union and shared-with-State subject (land acquisition by States)."
+      ],
+      "values": [
+        {
+          "period": "upa2",
+          "value": 74,
+          "note": "2014"
+        },
+        {
+          "period": "modi2",
+          "value": 157,
+          "note": "2024"
+        }
+      ]
+    }
+  ]
+}

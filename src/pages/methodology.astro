@@ -8,7 +8,7 @@ import { categories } from '../lib/taxonomy.ts';
 import { getSite, centreGovernments } from '../lib/site.ts';
 import { fmtSigned, fmtNum } from '../lib/format.ts';
 import { CLAIM_TYPE_INFO, CLAIM_TYPE_ORDER } from '../lib/dossiers.ts';
-import { PROMISE_STATUSES, PROMISE_STATUS_RULES, PROMISE_SELECTION_RULE } from '../lib/datasets.ts';
+import { PROMISE_STATUSES, PROMISE_STATUS_RULES, PROMISE_SELECTION_RULE, GOVERNED_RULE } from '../lib/datasets.ts';
 import ClaimBadge from '../components/ClaimBadge.astro';
 const crit = rubric.criteria as { id: string; name: string; question: string; anchors: Record<string, string> }[];
 const order = ['-5', '-3', '-1', '0', '1', '3', '5'];
@@ -127,6 +127,7 @@ const nm = (id: string) => ({ inc: 'INC', bjp: 'BJP' } as Record<string, string>
           {PROMISE_STATUSES.map((s) => <><dt><code>{s}</code></dt><dd>{PROMISE_STATUS_RULES[s]}</dd></>)}
         </dl>
         <ul>
+          <li>{GOVERNED_RULE} The other party-elections are shown as promises made while out of power: they are labelled &ldquo;Not in power: untested&rdquo; and are never counted as delivered or not delivered.</li>
           <li>Each promise is a short neutral paraphrase with a link to the manifesto and a link to the source of the evidence, and the date the evidence was checked.</li>
           <li>Counts are shown for each party with the same layout and the same denominator. They are not added into a total, and a status is not a score of the party or a judgement of whether the promise was a good one.</li>
           <li>A status can change as events continue; the as-of date on each row shows when it was last checked.</li>

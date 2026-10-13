@@ -87,7 +87,7 @@ test('promise rules: unique ids, party, election, status, https evidence source,
   list[8].asOf = '13/10/2026';
   delete list[9].evidenceSource;
   const r = checkPromises(list, ctx);
-  for (const re of [/id is duplicated/, /party must be one of inc\|bjp/, /election must be one of/, /status must be one of delivered\|partly-delivered/, /evidenceSource\.url must be https/, /manifestoSource\.url must be https/, /evidence missing/, /asOf must be YYYY-MM-DD/, /evidenceSource missing/]) {
+  for (const re of [/id is duplicated/, /party must be one of inc\|bjp/, /election must be one of/, /status must be one of delivered\|partly-delivered.*not-in-power/, /evidenceSource\.url must be https/, /manifestoSource\.url must be https/, /evidence missing/, /asOf must be YYYY-MM-DD/, /evidenceSource missing/]) {
     assert.ok(has(r.errors, re), `missing ${re}\n${r.errors.join('\n')}`);
   }
 });
@@ -115,4 +115,18 @@ test('promise wording: loaded words warn; id prefix mismatch warns', () => {
 
 test('absent data is the caller\'s case: a non-list promises file is an error', () => {
   assert.ok(has(checkPromises({}).errors, /must be a list/));
+});
+
+test('not-in-power: valid status; warns when used for a party-election the party governed, or missing for one it did not', () => {
+  const list = clone(read('promises.json'));
+  assert.ok(list.some((p) => p.status === 'not-in-power' && p.party === 'inc' && p.election === 2014));
+  assert.ok(!list.some((p) => p.status === 'not-in-power' && p.party === 'bjp' && p.election === 2014));
+  const a = list.find((p) => p.party === 'bjp' && p.election === 2014);
+  a.status = 'not-in-power';
+  const b = list.find((p) => p.party === 'inc' && p.election === 1998);
+  b.status = 'delivered';
+  const r = checkPromises(list, ctx);
+  assert.deepEqual(r.errors, []);
+  assert.ok(has(r.warnings, /bjp-2014-001.*not-in-power but bjp governed after 2014/) || has(r.warnings, /not-in-power but bjp governed after 2014/));
+  assert.ok(has(r.warnings, /should be not-in-power: inc did not form the Union government after 1998/));
 });

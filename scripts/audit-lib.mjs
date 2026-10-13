@@ -280,7 +280,8 @@ export function checkDossier(entry, ctx) {
 // ---------------------------------------------------------------------------------------------
 export const PROMISE_PARTIES = ['inc', 'bjp'];
 export const PROMISE_ELECTIONS = [1998, 1999, 2004, 2009, 2014, 2019, 2024];
-export const PROMISE_STATUSES = ['delivered', 'partly-delivered', 'not-delivered', 'abandoned', 'ongoing', 'unclear'];
+export const PROMISE_STATUSES = ['delivered', 'partly-delivered', 'not-delivered', 'abandoned', 'ongoing', 'unclear', 'not-in-power'];
+export const GOVERNED_ELECTIONS = { inc: [2004, 2009], bjp: [1998, 1999, 2014, 2019, 2024] };
 export const PROMISES_PER_PARTY_ELECTION = 8;
 export const INDICATOR_BLOCS = ['INC', 'BJP', 'Other'];
 export const INDICATOR_MIN_VALUES = 3;
@@ -423,6 +424,11 @@ export function checkPromises(list, ctx = {}) {
     }
     checkSourceObj(p.manifestoSource, `${tag}.manifestoSource`, err);
     if (!isIsoDay(p.asOf)) err(`${tag}.asOf must be YYYY-MM-DD`);
+    if (PROMISE_PARTIES.includes(p.party) && PROMISE_STATUSES.includes(p.status)) {
+      const governed = GOVERNED_ELECTIONS[p.party].includes(p.election);
+      if (p.status === 'not-in-power' && governed) warn(`${tag}.status is not-in-power but ${p.party} governed after ${p.election}; assess it on the record`);
+      if (p.status !== 'not-in-power' && !governed && PROMISE_ELECTIONS.includes(p.election)) warn(`${tag}.status should be not-in-power: ${p.party} did not form the Union government after ${p.election}`);
+    }
     if (isStr(p.text) && p.text.length > 280) warn(`${tag}.text is ${p.text.length} chars; keep it a short paraphrase`);
     for (const t of [p.text, p.evidence]) {
       if (typeof t === 'string') for (const w of loadedHits(t, ctx.words ?? [])) warn(`${tag}: loaded word "${w}" in: "${t.slice(0, 70)}"`);

@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {
   loadIndicators, loadPromises, promiseSummary, indicatorBars, indicatorDomains, PROMISE_STATUSES, PROMISE_STATUS_RULES,
-  PROMISE_ELECTIONS, PROMISE_PARTIES, BLOC_SLOT,
+  PROMISE_ELECTIONS, PROMISE_PARTIES, BLOC_SLOT, GOVERNED_ELECTIONS, GOVERNED_RULE, governedBy, PROMISE_STATUS_LABEL,
 } from '../src/lib/datasets.ts';
 import * as audit from '../scripts/audit-lib.mjs';
 
@@ -72,6 +72,7 @@ test('page constants agree with the validator constants', () => {
   assert.deepEqual([...PROMISE_STATUSES], audit.PROMISE_STATUSES);
   assert.deepEqual([...PROMISE_ELECTIONS], audit.PROMISE_ELECTIONS);
   assert.deepEqual([...PROMISE_PARTIES], audit.PROMISE_PARTIES);
+  assert.deepEqual(GOVERNED_ELECTIONS, audit.GOVERNED_ELECTIONS);
 });
 
 test('bars: chronological, missing periods are null (not zero), scale includes zero, negatives go left', () => {
@@ -94,4 +95,17 @@ test('bars: chronological, missing periods are null (not zero), scale includes z
 
 test('bloc colours reuse the site slots: INC slot 1, BJP slot 6, Other neutral 0', () => {
   assert.deepEqual(BLOC_SLOT, { inc: 1, bjp: 6, other: 0 });
+});
+
+test('not-in-power: labelled, ruled, and kept apart from delivery counts', () => {
+  assert.equal(PROMISE_STATUS_LABEL['not-in-power'], 'Not in power: untested');
+  assert.match(PROMISE_STATUS_RULES['not-in-power'], /did not form \(or lead\) the Union government after that election/);
+  assert.match(GOVERNED_RULE, /INC-led 2004 and 2009; BJP-led 1998, 1999, 2014, 2019 and 2024/);
+  assert.ok(governedBy('inc', 2004) && governedBy('inc', 2009) && !governedBy('inc', 2014));
+  assert.ok(governedBy('bjp', 1998) && governedBy('bjp', 2024) && !governedBy('bjp', 2004));
+  const s = promiseSummary(loadPromises(fixtures).data);
+  for (const party of PROMISE_PARTIES) for (const [year, c] of s[party]) {
+    if (governedBy(party, year)) assert.equal(c.byStatus['not-in-power'], 0);
+    else assert.equal(c.byStatus['not-in-power'], 8);
+  }
 });

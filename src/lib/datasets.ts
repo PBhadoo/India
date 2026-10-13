@@ -11,7 +11,7 @@ export const SOURCE_TYPES = ['primary', 'official-data', 'court', 'reputable-med
 export const BLOCS = ['INC', 'BJP', 'Other'] as const;
 export const PROMISE_PARTIES = ['inc', 'bjp'] as const;
 export const PROMISE_ELECTIONS = [1998, 1999, 2004, 2009, 2014, 2019, 2024] as const;
-export const PROMISE_STATUSES = ['delivered', 'partly-delivered', 'not-delivered', 'abandoned', 'ongoing', 'unclear'] as const;
+export const PROMISE_STATUSES = ['delivered', 'partly-delivered', 'not-delivered', 'abandoned', 'ongoing', 'unclear', 'not-in-power'] as const;
 export type PromiseStatus = (typeof PROMISE_STATUSES)[number];
 export type PromiseParty = (typeof PROMISE_PARTIES)[number];
 
@@ -136,6 +136,7 @@ export const PROMISE_STATUS_LABEL: Record<PromiseStatus, string> = {
   abandoned: 'Abandoned',
   ongoing: 'Ongoing',
   unclear: 'Unclear',
+  'not-in-power': 'Not in power: untested',
 };
 
 /** Addendum v3 wording, shown verbatim on /promises/ and the methodology page. */
@@ -146,7 +147,18 @@ export const PROMISE_STATUS_RULES: Record<PromiseStatus, string> = {
   abandoned: 'officially dropped',
   ongoing: 'within the promised timeline and in progress',
   unclear: 'evidence insufficient',
+  'not-in-power':
+    'the party did not form (or lead) the Union government after that election, so the promise could not be tested at the Centre (used for every promise of that party-election; not counted as delivered or not delivered)',
 };
+
+/** Elections after which each party formed or led the Union government (Addendum v3). Delivery is compared only for these. */
+export const GOVERNED_ELECTIONS: Record<PromiseParty, readonly number[]> = {
+  inc: [2004, 2009],
+  bjp: [1998, 1999, 2014, 2019, 2024],
+};
+export const GOVERNED_RULE =
+  'The tracker compares delivery only for elections after which each party governed: INC-led 2004 and 2009; BJP-led 1998, 1999, 2014, 2019 and 2024.';
+export const governedBy = (party: PromiseParty, election: number) => GOVERNED_ELECTIONS[party].includes(election);
 
 export const PROMISE_SELECTION_RULE =
   'Same number of promises per party per election (8), chosen by prominence in the manifesto (headline pledges), not by outcome.';

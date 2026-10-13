@@ -65,6 +65,18 @@ sources:
     url: https://en.wikipedia.org/wiki/Right_of_Children_to_Free_and_Compulsory_Education_Act,_2009
     publisher: Wikipedia
     type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act, including the 25% entry-level seat requirement in non-minority private unaided schools, is constitutionally valid as enabling law for Article 21A.", madeBy: "Supreme Court of India, Society for Unaided Private Schools of Rajasthan v. Union of India (12 April 2012)", source: 2 }
+    - { point: "Only 2.8% of rural children aged 6-14 were out of school in 2018, below 3% for the first time.", madeBy: "ASER 2018 (Pratham), 13th Annual Status of Education Report", source: 3 }
+    - { point: "Section 12(1)(c) seat fill rose from 21.5% in 2012-13 to 29% in 2013-14, making a route for disadvantaged children into private schools.", madeBy: "A. Dongre and A. Sarin, using DISE data", source: 4 }
+  change:
+    - { point: "Learning levels remain low relative to enrolment: 50.3% of Std V children could read a Std II text in 2018.", madeBy: "ASER 2018 (Pratham)", source: 3 }
+    - { point: "Implementation of the private-school quota is uneven, with seat fill below 1% in Uttar Pradesh and below 5% in Andhra Pradesh, unclear state rules, document costs and reimbursement delays.", madeBy: "A. Dongre and A. Sarin, 'Reservation under RTE: status of implementation and way forward'", source: 4 }
+    - { point: "The Act does not ensure uniform quality standards and is 'a fraud on our children'.", madeBy: "Anil Sadgopal (educationist), as summarised", source: 6 }
+  repeal:
+    - { point: "The 25% requirement is an unreasonable restriction on the right to carry on an occupation under Article 19(1)(g) and should not apply to private unaided schools.", madeBy: "Society for Unaided Private Schools of Rajasthan and other private school associations, Supreme Court (2012)", source: 2 }
 scoring:
   era_baseline: Rural enrolment of children aged 6-14 had already been above 95% since 2007 (ASER 2018), three years before the Act took effect, so the main change was legal entitlement and school norms rather than access alone.
   lag_years: 5

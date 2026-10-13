@@ -42,6 +42,19 @@ sources:
   - { title: "Waqf (Amendment) Bill 2025 passed in Rajya Sabha with 128-95 majority", url: "https://www.businesstoday.in/amp/india/story/waqf-amendment-bill-2025-passed-in-rajya-sabha-with-128-95-majority-headed-for-presidential-assent-details-here-470629-2025-04-04", publisher: "Business Today", type: reputable-media }
   - { title: "After passage in Lok Sabha, Rijiju tables Waqf Bill in Rajya Sabha", url: "https://www.tribuneindia.com/news/india/after-passage-in-lok-sabha-rijiju-tables-waqf-bill-in-rajya-sabha", publisher: "The Tribune", type: reputable-media }
   - { title: "Constitutionality of the Waqf (Amendment) Act, 2025: Interim Judgement Matrix", url: "https://www.scobserver.in/?p=17196", publisher: "Supreme Court Observer", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Bill aims at effective management of waqf property so that its revenue is distributed fairly for the welfare of Muslims, does not interfere with religious affairs, and omits waqf by user only going forward.", madeBy: "Union ministers Kiren Rijiju and Amit Shah (BJP), Lok Sabha, April 2025", source: 3 }
+    - { point: "About 50% of 8.72 lakh registered waqf properties have unknown status and 7% are encroached (September 2024); the number rose from 4.9 lakh in 2004 to 8.72 lakh.", madeBy: "PRS Legislative Research; Minister Kiren Rijiju, Rajya Sabha", source: 1 }
+    - { point: "The Court refused to stay the whole Act and did not stay the registration requirement or the prospective omission of waqf by user.", madeBy: "Supreme Court of India (CJI B. R. Gavai and Justice A. G. Masih), interim order, September 2025", source: 2 }
+  change:
+    - { point: "Possible conflict with Article 26, Article 14 on the five-year practice condition, and the balance of power in Collector-led ownership decisions; Hindu and Sikh endowment laws generally require board members to share the religion.", madeBy: "PRS Legislative Research", source: 1 }
+    - { point: "Section 3(1)(r) (five years' practice of Islam) and Sections 3C(3) and 3C(4) are stayed, non-Muslim members limited to 4 of 22 (Council) and 3 of 11 (State Boards), and no dispossession until the Tribunal decides title.", madeBy: "Supreme Court of India (CJI B. R. Gavai and Justice A. G. Masih), interim order, September 2025", source: 2 }
+    - { point: "The Joint Parliamentary Committee did not hold a clause-by-clause discussion.", madeBy: "Dr. Mohammad Jawed, member of the Joint Parliamentary Committee, as reported", source: 3 }
+    - { point: "The Act reduces reserved seats for women compared with the 1995 Act.", madeBy: "Gaurav Gogoi (INC), Lok Sabha, April 2025, as reported", source: 3 }
+  repeal:
+    - { point: "The Bill violates Article 25 (Owaisi); petitioners rely on Articles 25 and 26 in challenging the Act.", madeBy: "Asaduddin Owaisi (AIMIM) and petitioners in Writ Petition (Civil) No. 276 of 2025, Supreme Court", source: 3 }
 scoring:
   era_baseline: "The Waqf Act, 1995 (amended 2013) governed Boards and Tribunals; the Sachar Committee (2006) had flagged poor records and encroachment."
   lag_years: 3

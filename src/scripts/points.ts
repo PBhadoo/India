@@ -120,7 +120,7 @@ if (dataEl) {
       const names: Record<string, string> = { avg: 'average points per action', shrunk: 'points per year (shrunk)', total: 'total points', years: 'years in power', party: 'party name' };
       const dot = `Dot: ${metric === 'avg' ? 'average points per action' : 'points per year (shrunk)'}; line: low to high from the two scorers.`;
       caption.textContent = blocView
-        ? `INC-led and BJP-led are always listed in this fixed order; the order is not a ranking. ${dot} Ranges overlap.`
+        ? `INC-led and BJP-led are always listed in this fixed order; the order does not follow any figure. ${dot} Ranges overlap.`
         : `Sorted by ${names[sortKey] ?? sortKey}, ${dir === -1 ? 'highest' : 'lowest'} first. The order reflects a figure, not a verdict, and ranges overlap. ${dot}`;
     }
     viewBtns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === view)));

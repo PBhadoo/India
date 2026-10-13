@@ -37,6 +37,16 @@ sources:
   - { title: "Update on the Women's Reservation Bill", url: "https://prsindia.org/theprsblog/update-on-the-women%E2%80%99s-reservation-bill", publisher: PRS Legislative Research, type: official-data }
   - { title: "Report of the Joint Committee on the Constitution (81st Amendment) Bill, 1996", url: "https://prsindia.org/files/bills_acts/bills_parliament/1996/Joint_Committee_on_Constitution_(81st_Amendment)_Bill_1996.pdf", publisher: Parliament of India via PRS, type: primary }
   - { title: "Women's Reservation Bill", url: "https://en.wikipedia.org/wiki/Women%27s_Reservation_Bill", publisher: Wikipedia, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Reservation for women in legislatures should be pursued through a constitutional bill; the Committee made seven recommendations and rejected a mandatory party nomination quota and dual-member constituencies.", madeBy: "Joint Committee on the Constitution (81st Amendment) Bill, 1996, chaired by Geeta Mukherjee", source: 3 }
+    - { point: "Five of the seven Joint Committee recommendations, including a 15-year duration, were included in the 2008 bill.", madeBy: "PRS Legislative Research", source: 2 }
+    - { point: "The majority recommended passing the 2008 bill and acting on it without further delay.", madeBy: "Standing Committee that examined the 2008 bill, as reported by PRS", source: 2 }
+  change:
+    - { point: "Each party should give 20% of tickets to women, reservation should be capped at 20% of seats, and a quota should be provided for OBC and minority women.", madeBy: "Samajwadi Party dissenters Virender Bhatia and Shailendra Kumar, Joint Committee (1996)", source: 3 }
+    - { point: "The bill should not be passed as drafted.", madeBy: "Samajwadi Party, RJD and JD(U), as reported by PRS", source: 2 }
+    - { point: "Reservation in the Rajya Sabha and Legislative Councils and sub-reservation for OBC women were left out of the 2008 bill.", madeBy: "PRS Legislative Research", source: 2 }
 scoring:
   era_baseline: "In 1996 Parliament had a small share of women members and a minority coalition government held office, as the first Lok Sabha after the 1996 election was unstable."
   lag_years: 27

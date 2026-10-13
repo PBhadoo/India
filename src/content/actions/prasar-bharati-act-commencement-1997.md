@@ -41,6 +41,16 @@ sources:
   - { title: "Prasar Bharati (Broadcasting Corporation of India) Act, 1990: an overview", url: "https://blog.ipleaders.in/prasar-bharati-broadcasting-corporation-of-india-act-1990-an-overview/", publisher: "iPleaders", type: reputable-media }
   - { title: "Prasar Bharati", url: "https://en.wikipedia.org/wiki/Prasar_Bharati", publisher: "Wikipedia", type: reputable-media }
   - { title: "An Act Too Late", url: "https://www.outlookindia.com/business/an-act-too-late-news-203965", publisher: "Outlook", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Public broadcasting should be organised by a statutory corporation to inform, educate and entertain, with objectives including national unity, balanced information and coverage of education, agriculture, health and regional languages.", madeBy: "Parliament, Prasar Bharati (Broadcasting Corporation of India) Act, 1990, as summarised by WIPO Lex", source: 2 }
+    - { point: "The Act grants autonomy to All India Radio and Doordarshan, which were under direct government control, and provides a Broadcasting Council for complaints, CAG audit, and laying of government directions before Parliament.", madeBy: "Parliament, Prasar Bharati Act, 1990 (National Front government), as summarised", source: 2 }
+    - { point: "Broadcasting autonomy was a priority; the Verghese Committee was appointed to study it in 1977 and its report was studied when the 1990 Bill was drafted.", madeBy: "Janata government, Verghese Committee on broadcasting autonomy (1977), per accounts", source: 3 }
+  change:
+    - { point: "The Act is a dilution of the Verghese Committee's proposals on broadcasting autonomy.", madeBy: "Observers cited in the iPleaders overview", source: 3 }
+    - { point: "The Act needed urgent changes, which is why its notification was delayed until 1997.", madeBy: "Government of the day, as described in an Outlook press report ('An Act Too Late')", source: 5 }
+    - { point: "The Board includes government representatives and the Centre holds power of directions; the I&B Ministry withheld funds from December 2017 and Prasar Bharati used contingency funds to pay salaries in 2018.", madeBy: "Wikipedia article on Prasar Bharati (compiled account)", source: 4 }
 scoring:
   era_baseline: "Until 1997 All India Radio and Doordarshan functioned as departments under the Ministry of Information and Broadcasting."
   lag_years: 5

@@ -38,6 +38,16 @@ sources:
   - { title: "The Implementation of Sarva Shiksha Abhiyan and Mid-Day Meal Scheme", url: "https://prsindia.org/policy/report-summaries/the-implementation-of-sarva-shiksha-abhiyan-and-mid-day-meal-scheme", publisher: PRS Legislative Research, type: official-data }
   - { title: "CAG audit report on civil departments, chapter 3 (West Bengal, 2006)", url: "https://cag.gov.in/uploads/old_reports/state/West_Bengal/2006/Civil/civil_chap_3.pdf", publisher: Comptroller and Auditor General of India, type: primary }
   - { title: "Sarva Shiksha Abhiyan (summary of search results on the SSA goal and baseline)", url: "https://indiatogether.org/ssaaudit-education", publisher: India Together, type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Enrolment at elementary level is near universal.", madeBy: "Parliamentary committee report on the implementation of SSA and the Mid-Day Meal Scheme (2016)", source: 2 }
+    - { point: "Annual average primary dropout fell from 9.11% in 2009-10 to 4.13% in 2015-16, and SSA served as the vehicle for the RTE Act.", madeBy: "Ministry of Human Resource Development data, via Press Information Bureau", source: 1 }
+    - { point: "SSA lets state and district plans be framed within a national framework.", madeBy: "Government of India, Implementation of Sarva Shiksha Abhiyan (PIB)", source: 1 }
+  change:
+    - { point: "Learning outcomes remain unsatisfactory despite near-universal enrolment.", madeBy: "Parliamentary committee report (2016)", source: 2 }
+    - { point: "The programme brought children to school but failed to retain them.", madeBy: "Academic paper (2010), as summarised by India Together", source: 4 }
+    - { point: "8.97 lakh children were out of school in West Bengal as of April 2005, showing the enrolment target was not met in that state.", madeBy: "Comptroller and Auditor General of India, West Bengal civil audit report (2006)", source: 3 }
 scoring:
   era_baseline: "In 2001 millions of children aged 6 to 14 were out of school, and the District Primary Education Programme (1993-94) had been the main earlier elementary programme."
   lag_years: 10

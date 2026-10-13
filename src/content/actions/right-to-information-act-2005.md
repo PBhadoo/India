@@ -43,6 +43,16 @@ sources:
   - { title: "CPIO, Supreme Court of India v. Subhash Chandra Agarwal (case summary)", url: "https://globalfreedomofexpression.columbia.edu/cases/central-public-information-officer-supreme-court-of-india-v-subhash-chandra-agarwal", publisher: "Columbia Global Freedom of Expression", type: reputable-media }
   - { title: "Over 12.33 lakh RTI pleas received (CIC annual report 2017-18)", url: "https://sentinelassam.com/news/over-12-33-lakh-right-to-information-rti-pleas-received", publisher: "Sentinel Assam / IANS", type: reputable-media }
   - { title: "SC sends notice to the Centre on a plea challenging the RTI Amendment Act and RTI Rules 2019", url: "https://theleaflet.in/sc-sends-notice-to-the-centre-on-a-plea-challenging-the-rti-amendment-act-and-rti-rules-2019-altering-the-stature-and-tenure-of-information-commissioners", publisher: "The Leaflet", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Democracy requires an informed citizenry and transparency of information to contain corruption and hold governments and their instrumentalities accountable.", madeBy: "Parliament, preamble of the Right to Information Act, 2005 (Manmohan Singh government), as summarised in the official text", source: 1 }
+    - { point: "The office of the Chief Justice of India is a public authority under the Act, with personal information subject to a proportionality test between privacy and public interest.", madeBy: "Supreme Court of India, Constitution Bench, CPIO, Supreme Court of India v. Subhash Chandra Agarwal (13 November 2019)", source: 4 }
+    - { point: "Central public authorities received over 12.33 lakh RTI applications in 2017-18.", madeBy: "Central Information Commission, annual report 2017-18, as reported by IANS", source: 5 }
+  change:
+    - { point: "The right is weakened in practice by commission vacancies, backlog and low use of penalties; commissions did not impose penalties in 98% of cases where penalties were potentially imposable in 2024-25.", madeBy: "Satark Nagrik Sangathan (civil society group), Report Card on Information Commissions 2024-25", source: 2 }
+    - { point: "Letting the Centre set commissioners' tenure and service conditions, as the 2019 amendment does, affects their independence.", madeBy: "Jairam Ramesh (INC), petition before the Supreme Court, as reported by The Leaflet", source: 6 }
+    - { point: "4,13,972 appeals and complaints were pending in 29 commissions on 30 June 2025, and 20 of 29 commissions did not publish a 2023-24 annual report as Section 25 requires.", madeBy: "Satark Nagrik Sangathan, Report Cards 2024-25 and 2023-24", source: 3 }
 scoring:
   era_baseline: "Before October 2005 there was no general enforceable statutory right of access to central government records; the Act applied to the whole of India except Jammu and Kashmir at the time (context drawn from government RTI pages, not independently re-verified)."
   lag_years: 5

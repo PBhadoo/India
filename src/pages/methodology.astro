@@ -12,7 +12,7 @@ import { PROMISE_STATUSES, PROMISE_STATUS_RULES, PROMISE_SELECTION_RULE } from '
 import ClaimBadge from '../components/ClaimBadge.astro';
 const crit = rubric.criteria as { id: string; name: string; question: string; anchors: Record<string, string> }[];
 const order = ['-5', '-3', '-1', '0', '1', '3', '5'];
-const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['sources', 'Sources and data quality'], ['attribution', 'Who gets the credit'], ['institutions', 'Independent institutions'], ['dossiers', 'Dossiers and claim types'], ['indicators', 'Indicators and what they can show'], ['promises', 'Promise tracker rules'], ['debates', 'Debates'], ['coalition', 'Coalitions'], ['headline', 'Why the headline figure changed'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
+const toc = [['rubric', 'The rubric'], ['blind', 'Blind double scoring'], ['sources', 'Sources and data quality'], ['attribution', 'Who gets the credit'], ['institutions', 'Independent institutions'], ['dossiers', 'Dossiers and claim types'], ['indicators', 'Indicators and what they can show'], ['promises', 'Promise tracker rules'], ['debates', 'Debates'], ['coalition', 'Coalitions'], ['blocs', 'Blocs, and how other governments are shown'], ['reform', 'Reform arguments and the parity rule'], ['headline', 'Why the headline figure changed'], ['per-year', 'Points per year'], ['baselines', 'Era baselines'], ['lag', 'Lag'], ['uncertainty', 'Uncertainty'], ['coverage', 'Coverage rule'], ['weights', 'Your weights'], ['limits', 'Limitations'], ['challenge', 'How to challenge a score']];
 const pct = (n: number) => `${Math.round(n * 100)}%`;
 const site = await getSite();
 const thinLeaders = new Set(centreGovernments().map((g) => g.leadParty)).size;
@@ -20,6 +20,8 @@ const thinParties = [...new Set(centreGovernments().map((g) => g.leadParty))].fi
 const noCreditCount = site.actions.filter((a) => a.noCredit).length;
 const byId = new Map(site.scoring.parties.map((p) => [p.partyId, p]));
 const ex = ['inc', 'bjp'].map((id) => byId.get(id)).filter((p): p is NonNullable<typeof p> => !!p && p.scoredActions > 0 && p.yearsInPower > 0 && p.avgPerAction != null);
+import { BLOC_LABEL, HEADLINE_BLOCS } from '../lib/scoring-core.ts';
+const blocEx = site.scoring.blocs.filter((b) => HEADLINE_BLOCS.includes(b.blocId) && b.scoredActions > 0 && b.avgPerAction != null);
 const nm = (id: string) => ({ inc: 'INC', bjp: 'BJP' } as Record<string, string>)[id] ?? id.toUpperCase();
 ---
 <Base title="Methodology" path="/methodology/" description="How actions are chosen, scored on a public rubric by two blind scorers, credited to governments and coalition partners, and shown with their uncertainty.">
@@ -143,19 +145,54 @@ const nm = (id: string) => ({ inc: 'INC', bjp: 'BJP' } as Record<string, string>
         <p>Caretaker governments are included and counted by days in office, like any other.</p>
       </section>
 
+      <section id="blocs" aria-labelledby="h-blocs">
+        <h2 id="h-blocs">Blocs, and how other governments are shown</h2>
+        <p>The home table opens on two <strong>blocs</strong>. A Union government belongs to the bloc of its <em>lead party</em>: governments led by the Indian National Congress are <strong>INC-led</strong>, governments led by the Bharatiya Janata Party are <strong>BJP-led</strong>, and a government led by any other party is in <strong>Other governments</strong>. The rule is applied the same way to every government, by the lead party recorded for it, and not by a judgement of its policies.</p>
+        <ul>
+          <li><strong>Partners roll up into the lead bloc.</strong> The credit and the years that a coalition's partners would receive are added to the bloc of the lead party, so a UPA government counts as INC-led and an NDA government as BJP-led. A partner's own share is still visible in the Parties view, where the partner-by-partner split is unchanged.</li>
+          <li><strong>Years in power.</strong> A bloc's years are the days in office of its governments, divided by 365.25 and added up. Every government is in exactly one bloc, so the blocs' years add up to the total years of all governments.</li>
+          <li><strong>Other governments are collapsed, never deleted.</strong> They include the Janata Party, Janata Dal, National Front, United Front and Samajwadi Janata governments, listed by leader and dates in the collapsed row. They keep all their years in the tenure totals, they are drawn in grey with a cross-hatch pattern on the timeline, and the Parties view shows their parties as before. Their actions are scored and credited in the same way.</li>
+          <li><strong>One caveat.</strong> A bloc is a grouping of governments by lead party. A caretaker government is placed by its lead party like any other. Action credit follows the government that implemented an action, or the government that originated it (at 25%), so an action can credit two blocs. Decisions by independent institutions earn no bloc credit.</li>
+          <li><strong>Same figures, same checks.</strong> A bloc's headline is the average points per action with its range and the number of scored actions; points per year (shrunk) sits beside it. A bloc with fewer than {LOW_DATA_MIN_ACTIONS} scored actions in a category is marked low data, and the Preliminary banner applies while fewer than {PRELIMINARY_MIN_SCORED} Centre actions are scored. INC-led and BJP-led are listed in a fixed order, not sorted by a figure, and no figure is used to order them.</li>
+        </ul>
+        <p>The page <a href="/compare/blocs/">INC-led and BJP-led, side by side</a> lists each bloc's actions for one category and period in two equal columns, with the same fields for each action: status, year, evidence points with range, confidence, and the number of recorded arguments to keep, change or repeal. Its summary row shows the count of actions, the plain mean of their points (not weighted by credit share) with the mean low to high range, and the bloc's years in power in the chosen period.</p>
+      </section>
+
+      <section id="reform" aria-labelledby="h-reform">
+        <h2 id="h-reform">Reform arguments and the parity rule</h2>
+        <p>Many action pages carry a section called <strong>Arguments for keeping, changing or repealing</strong>. It lists documented arguments in three equal columns: reasons to keep the measure as it is (including what it achieved), reasons to amend, fix or extend it, and calls to withdraw it. Each point names <em>who</em> made it (a court, the CAG, the RBI, a parliamentary committee, an economist, a party or one of its members) and links to a source in the entry's own source list.</p>
+        <ul>
+          <li><strong>They are arguments, not findings.</strong> These are attributed arguments made by the named people and bodies, not the site's view. The scores on the page do not use them, and a count of points in a column does not mean that column is stronger.</li>
+          <li><strong>Quotas.</strong> Every action should have at least 2 keep points and at least 2 change points. A repeal column is filled only where a credible voice has called for repeal; otherwise it says none is recorded. Where one exists, each column should include a voice with no party affiliation, such as a court, regulator, audit body, committee or academic. Until the rollout is complete some actions have no block yet; the page then shows nothing, and the check script reports how many are missing.</li>
+          <li><strong>The parity rule.</strong> The average number of points per column must be about equal for INC-led and BJP-led entries, and critics and defenders from both sides of politics must appear for both. The audit prints the average keep, change and repeal points per action for each bloc, and flags a gap of more than half a point, so a gap prompts adding or reviewing entries rather than being explained away.</li>
+          <li><strong>Checks.</strong> The validator rejects a block with a missing speaker, an empty point, or a source number that does not exist, and warns when a quota is not yet met. The wording is checked for loaded terms like every other entry; verdict language is not allowed.</li>
+        </ul>
+        <p>The site says nothing about which side is right. It sets out the case each named party makes, so that readers can weigh the arguments and the evidence themselves.</p>
+      </section>
+
       <section id="headline" aria-labelledby="h-head">
         <h2 id="h-head">Why the headline figure changed</h2>
         <p>The table used to lead with <strong>points per year in power</strong>. That figure is the product of two things: how many actions were entered per year, and how many points each action earned. The first is a choice made by the maintainers about which actions to include, not a fact about a party's record. A party in a period with many entries shows more points per year than one in a period with few, even if each entry scored the same. In the data at the time of the change, BJP had about 2.7 times as many entries per year in power as INC, and half the points per entry; its higher points-per-year figure came from the entry count, not from higher-scoring entries.</p>
-        <p>So the headline is now the <strong>average points per action</strong>, which does not depend on how many entries there are per year. Two further figures sit beside it: <strong>points per year (shrunk)</strong>, which keeps the idea of a rate but is pulled toward zero for short tenures, and the plain total. A small control above the table switches the sort and the highlighted figure between the first two. The raw points-per-year figure is still used in the category grid and on party pages, where each is labelled as depending on how many entries are included.</p>
+        <p>So the headline is now the <strong>average points per action</strong>, which does not depend on how many entries there are per year, and the home table shows it by <strong>bloc</strong> by default (INC-led and BJP-led, with other governments collapsed; see the section above), with a switch to the partner-by-partner Parties view. Two further figures sit beside it: <strong>points per year (shrunk)</strong>, which keeps the idea of a rate but is pulled toward zero for short tenures, and the plain total. A small control above the table switches the sort and the highlighted figure between the first two. The raw points-per-year figure is still used in the category grid and on party pages, where each is labelled as depending on how many entries are included.</p>
         <h3>The formulas, in words</h3>
         <ul>
-          <li><strong>Average points per action</strong> = a party's total credited points, after your category weights, divided by the number of different scored actions credited to it (actions in categories you weight at 0 are left out of the count). The range uses the lower and the higher of the two scorers' totals in the same way. A party with no scored actions has no figure.</li>
+          <li><strong>Average points per action</strong> = a bloc's (or party's) total credited points, after your category weights, divided by the number of different scored actions credited to it (actions in categories you weight at 0 are left out of the count). The range uses the lower and the higher of the two scorers' totals in the same way. A party with no scored actions has no figure.</li>
           <li><strong>Points per year (shrunk)</strong> = total credited points divided by (years in power + {PRIOR_YEARS}). Adding {PRIOR_YEARS} years to the divisor means a tenure of a few months cannot produce a huge rate from one entry, while a tenure of fifty years is barely changed. The range is divided the same way. A party with no scored actions has no figure.</li>
           <li><strong>Points per year (raw)</strong> = total credited points divided by years in power, as described below.</li>
         </ul>
+        {blocEx.length > 0 && (
+          <>
+            <h3>Worked example with the current data, by bloc</h3>
+            <ul>
+              {blocEx.map((p) => (
+                <li><strong>{BLOC_LABEL[p.blocId]}</strong>: {fmtNum(p.points)} credited points (partners included) from {p.avgActions} scored actions over {fmtNum(p.yearsInPower, 2)} years in power. Average per action = {fmtNum(p.points)} ÷ {p.avgActions} = <strong>{fmtSigned(p.avgPerAction, 2)}</strong> (range {fmtSigned(p.avgLow, 2)} to {fmtSigned(p.avgHigh, 2)}). Shrunk per year = {fmtNum(p.points)} ÷ ({fmtNum(p.yearsInPower, 2)} + {PRIOR_YEARS}) = <strong>{fmtSigned(p.shrunkPerYear, 2)}</strong>.</li>
+              ))}
+            </ul>
+          </>
+        )}
         {ex.length > 0 && (
           <>
-            <h3>Worked example with the current data</h3>
+            <h3>Worked example with the current data, by party</h3>
             <ul>
               {ex.map((p) => (
                 <li><strong>{nm(p.partyId)}</strong>: {fmtNum(p.points)} credited points from {p.avgActions} scored actions over {fmtNum(p.yearsInPower, 2)} years in power. Average per action = {fmtNum(p.points)} ÷ {p.avgActions} = <strong>{fmtSigned(p.avgPerAction, 2)}</strong> (range {fmtSigned(p.avgLow, 2)} to {fmtSigned(p.avgHigh, 2)}). Shrunk per year = {fmtNum(p.points)} ÷ ({fmtNum(p.yearsInPower, 2)} + {PRIOR_YEARS}) = <strong>{fmtSigned(p.shrunkPerYear, 2)}</strong> (range {fmtSigned(p.shrunkLow, 2)} to {fmtSigned(p.shrunkHigh, 2)}). Raw per year = {fmtNum(p.points)} ÷ {fmtNum(p.yearsInPower, 2)} = {fmtSigned(p.pointsPerYear, 2)}; entries per year in power = {p.avgActions} ÷ {fmtNum(p.yearsInPower, 2)} = {fmtNum(p.avgActions / p.yearsInPower, 2)}.</li>

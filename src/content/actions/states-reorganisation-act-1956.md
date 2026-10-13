@@ -37,6 +37,15 @@ sources:
   - { title: "States Reorganisation Act, 1956", url: "https://en.wikipedia.org/wiki/States_Reorganisation_Act,_1956", publisher: Wikipedia, type: reputable-media }
   - { title: "The States Reorganisation Act, 1956 (text)", url: "https://www.indiacode.nic.in/bitstream/123456789/1680/1/a1956-37.pdf", publisher: India Code, Ministry of Law and Justice, type: primary }
   - { title: "The States Reorganisation Act, 1956", url: "https://indiankanoon.org/doc/1211891/", publisher: Indian Kanoon, type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Reorganisation of states should follow an examined, commission-based process, resulting in a report on 30 September 1955.", madeBy: "States Reorganisation Commission (Fazl Ali, H. N. Kunzru, K. M. Panikkar)", source: 1 }
+    - { point: "A linguistic state should be formed for Telugu speakers; he died in 1952 after a 56-day hunger strike and Andhra State was created in 1953.", madeBy: "Potti Sreeramulu, as recorded on Wikipedia", source: 1 }
+    - { point: "The Act and the Seventh Amendment replaced the Part A to D classification with two categories, states and union territories.", madeBy: "Parliament, States Reorganisation Act, 1956 (Nehru government)", source: 2 }
+  change:
+    - { point: "Language should not be the criterion for reorganising states.", madeBy: "Linguistic Provinces (Dhar) Commission, 1948", source: 1 }
+    - { point: "The Commission proposed 16 states and three centrally administered areas, whereas the government adopted 14 states and 6 union territories.", madeBy: "States Reorganisation Commission, as reported in an explainer cited on Wikipedia", source: 1 }
 scoring:
   era_baseline: "After 1947 states were grouped into Part A to D classes inherited from provinces and princely states, and linguistic claims had already produced Andhra State in 1953."
   lag_years: 5

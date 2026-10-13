@@ -435,3 +435,94 @@ export function checkPromises(list, ctx = {}) {
   }
   return { errors, warnings };
 }
+
+// ---------------------------------------------------------------------------------------------
+// Reform arguments (Addendum v3): optional `reform` block on actions. Pure checks and coverage.
+// ---------------------------------------------------------------------------------------------
+export const REFORM_STANCES = ['keep', 'change', 'repeal'];
+/** Quotas once a reform block is present. Missing quota is a warning while the rollout is in progress. */
+export const REFORM_MIN = { keep: 2, change: 2 };
+export const BLOC_IDS = ['inc', 'bjp', 'other'];
+/** Keep in sync with blocOf in src/lib/scoring-core.ts. */
+export const blocOfLead = (leadParty) => (leadParty === 'inc' ? 'inc' : leadParty === 'bjp' ? 'bjp' : 'other');
+
+/** All text fields of a reform block as [path, value] pairs (strings only, for the neutrality lint). */
+export function reformTexts(d) {
+  const out = [];
+  const r = d?.reform;
+  if (!r || typeof r !== 'object') return out;
+  for (const k of REFORM_STANCES) {
+    if (!Array.isArray(r[k])) continue;
+    r[k].forEach((p, i) => {
+      if (p && typeof p === 'object') for (const f of ['point', 'madeBy']) if (typeof p[f] === 'string') out.push([`reform.${k}[${i}].${f}`, p[f]]);
+    });
+  }
+  return out;
+}
+
+/**
+ * Checks the optional `reform` block of an action's front-matter. Returns { errors, warnings } (no slug prefix).
+ * Errors: structure, source index outside the action's sources, empty or non-string point or madeBy.
+ * Warnings: fewer than 2 keep or 2 change points (rollout in progress), unknown keys.
+ */
+export function checkReform(d) {
+  const errors = [];
+  const warnings = [];
+  const r = d?.reform;
+  if (r === undefined || r === null) return { errors, warnings };
+  if (typeof r !== 'object' || Array.isArray(r)) {
+    errors.push('reform must be an object with asOf, keep, change and (optionally) repeal');
+    return { errors, warnings };
+  }
+  const nSources = Array.isArray(d.sources) ? d.sources.length : 0;
+  if (!isIso(r.asOf)) errors.push('reform.asOf must be YYYY-MM-DD');
+  for (const k of Object.keys(r)) if (k !== 'asOf' && !REFORM_STANCES.includes(k)) warnings.push(`reform.${k} is not a known key (asOf, keep, change, repeal)`);
+  for (const k of REFORM_STANCES) {
+    const arr = r[k];
+    if (arr === undefined) continue;
+    if (!Array.isArray(arr)) { errors.push(`reform.${k} must be a list`); continue; }
+    arr.forEach((p, i) => {
+      const at = `reform.${k}[${i}]`;
+      if (p === null || typeof p !== 'object' || Array.isArray(p)) { errors.push(`${at} must be an object with point, madeBy and source (quote lines that contain a colon)`); return; }
+      if (typeof p.point !== 'string') errors.push(`${at}.point is not a string (quote lines that contain a colon)`);
+      else if (!p.point.trim()) errors.push(`${at}.point is empty`);
+      if (typeof p.madeBy !== 'string') errors.push(`${at}.madeBy is not a string`);
+      else if (!p.madeBy.trim()) errors.push(`${at}.madeBy is empty (name the person or body)`);
+      if (!Number.isInteger(p.source) || p.source < 1 || p.source > nSources) errors.push(`${at}.source ${JSON.stringify(p.source)} is not a source index (1 to ${nSources})`);
+    });
+  }
+  for (const k of ['keep', 'change']) {
+    const n = Array.isArray(r[k]) ? r[k].length : 0;
+    if (n < REFORM_MIN[k]) warnings.push(`reform has ${n} ${k} ${n === 1 ? 'point' : 'points'} (at least ${REFORM_MIN[k]} expected; rollout in progress)`);
+  }
+  return { errors, warnings };
+}
+
+const countOf = (e, k) => (Array.isArray(e?.reform?.[k]) ? e.reform[k].length : 0);
+
+/**
+ * Reform coverage and per-bloc average points per stance.
+ * entries: [{ slug, governmentId, credit?, reform? }]; govs: Map id -> { leadParty }.
+ * Averages are over actions that have a reform block; actions without one are counted separately.
+ */
+export function reformCoverage(entries, govs) {
+  const blank = () => ({ actions: 0, withReform: 0, keep: 0, change: 0, repeal: 0 });
+  const by = { inc: blank(), bjp: blank(), other: blank(), institution: blank() };
+  for (const e of entries) {
+    const key = e.credit === 'none' ? 'institution' : blocOfLead(govs.get(e.governmentId)?.leadParty);
+    const b = by[key];
+    b.actions++;
+    if (e.reform && typeof e.reform === 'object') {
+      b.withReform++;
+      for (const k of REFORM_STANCES) b[k] += countOf(e, k);
+    }
+  }
+  const out = {};
+  for (const [k, b] of Object.entries(by)) {
+    const n = b.withReform;
+    out[k] = { ...b, avgKeep: n ? round(b.keep / n) : null, avgChange: n ? round(b.change / n) : null, avgRepeal: n ? round(b.repeal / n) : null };
+  }
+  const total = entries.length;
+  const withReform = Object.values(by).reduce((n, b) => n + b.withReform, 0);
+  return { total, withReform, blocs: out };
+}

@@ -37,6 +37,16 @@ sources:
   - { title: "Shah Commission", url: "https://en.wikipedia.org/wiki/Shah_Commission", publisher: Wikipedia, type: reputable-media }
   - { title: "The Special Courts Act, 1979", url: "https://indiankanoon.org/doc/701797/", publisher: Indian Kanoon, type: primary }
   - { title: "In Re: The Special Courts Bill, 1978 (1 December 1978)", url: "https://indiankanoon.org/doc/1306191/", publisher: Supreme Court of India via Indian Kanoon, type: court }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "No economic or law-and-order crisis justified the Emergency, and MISA and the Defence of India Rules were misused.", madeBy: "Shah Commission of Inquiry (Justice J. C. Shah), final report of 6 August 1978", source: 1 }
+    - { point: "Parliament is competent to create special courts for trials of offences during the Emergency (Clauses 2, 6 and 10(1) of the Special Courts Bill, 1978).", madeBy: "Supreme Court of India, seven-judge bench, In re Special Courts Bill, 1978 (1 December 1978)", source: 3 }
+    - { point: "The Emergency period was one of criminal abuse of power by persons holding high public or political office.", madeBy: "Preamble of the Special Courts Bill, 1978 (Janata Party government)", source: 3 }
+  change:
+    - { point: "The Commission confused investigation with inquiry and issued notices requiring sworn testimony without specifying the case to be answered.", madeBy: "Critics of the Commission, as summarised on Wikipedia", source: 1 }
+    - { point: "She disputed the Commission's legality, called it biased and refused to depose on oath.", madeBy: "Indira Gandhi (INC), as summarised on Wikipedia", source: 1 }
+    - { point: "The special courts were not legally constituted after January 1980, and no trials followed.", madeBy: "Supreme Court of India (1980), as summarised", source: 1 }
 scoring:
   era_baseline: "After the Emergency of 1975-77, the 1977 general election brought the first non-Congress government at the Centre, which had campaigned on accountability."
   lag_years: 2

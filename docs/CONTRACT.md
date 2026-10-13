@@ -197,11 +197,11 @@ Use periods: `rao` (1991-96), `nda1` (1998-2004 Vajpayee), `upa1`, `upa2`, `nda2
 ## Promises: `src/data/promises.json`
 ```json
 [{ "id": "bjp-2014-001", "party": "bjp", "election": 2014, "text": "short neutral paraphrase", "domain": "economy",
-   "status": "delivered | partly-delivered | not-delivered | abandoned | ongoing | unclear",
+   "status": "delivered | partly-delivered | not-delivered | abandoned | ongoing | unclear | not-in-power",
    "evidence": "what the record shows, with figures", "evidenceSource": { "title": "...", "url": "https://...", "publisher": "...", "type": "primary|official-data|court|reputable-media|academic" },
    "manifestoSource": { "title": "...", "url": "https://..." }, "asOf": "2026-10-13" }]
 ```
-Status rules, identical for both parties: `delivered` = enacted/implemented at the scope promised, per official data or law; `partly-delivered` = enacted or implemented in part or at lower scope; `not-delivered` = no enactment/implementation by the party while in office afterwards (or no longer in office); `abandoned` = officially dropped; `ongoing` = within the promised timeline and in progress; `unclear` = evidence insufficient. Elections: 1998, 1999, 2004, 2009, 2014, 2019, 2024. Same number of promises per party per election (8), chosen by prominence in the manifesto (headline pledges), not by outcome.
+Status rules, identical for both parties: `delivered` = enacted/implemented at the scope promised, per official data or law; `partly-delivered` = enacted or implemented in part or at lower scope; `not-delivered` = no enactment/implementation by the party while in office afterwards (or no longer in office); `abandoned` = officially dropped; `ongoing` = within the promised timeline and in progress; `unclear` = evidence insufficient; `not-in-power` = the party did not form (or lead) the Union government after that election, so the promise could not be tested at the Centre (use it for every promise of that party-election; do not count it as delivered or not delivered). The tracker therefore compares delivery only for elections after which each party governed: INC-led 2004 and 2009; BJP-led 1998, 1999, 2014, 2019 and 2024. Elections: 1998, 1999, 2004, 2009, 2014, 2019, 2024. Same number of promises per party per election (8), chosen by prominence in the manifesto (headline pledges), not by outcome.
 
 ## Debates: dossiers of `kind: debate`
 Same dossier schema; `positions` hold the options (holder = the camp or named bodies, position = the strongest documented case), `claims` hold contested facts, `notShown` states what the evidence cannot settle. No recommendation.

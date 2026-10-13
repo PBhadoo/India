@@ -4,7 +4,7 @@ import {
   ACTIONS_DIR, DEVELOPING_DIR, DOSSIERS_DIR, CRITERIA, listMd, loadEntry, loadTaxonomy, loadGovernments,
   loadLoadedWords, isoDate, daysSince,
 } from './lib.mjs';
-import { nonStringTextFields, hasPrimarySource, checkDossier, checkIndicators, checkPromises } from './audit-lib.mjs';
+import { nonStringTextFields, hasPrimarySource, checkDossier, checkIndicators, checkPromises, checkReform, reformTexts } from './audit-lib.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { DATA } from './lib.mjs';
@@ -67,6 +67,7 @@ function checkGov(e, field, id, level, state) {
   }
 }
 
+const reformMissing = [];
 const slugs = new Map();
 function trackSlug(e, kind) {
   const prev = slugs.get(`${kind}:${e.slug}`);
@@ -146,7 +147,12 @@ function validateAction(e) {
     }
   }
 
-  lint(e, [d.title, d.summary, ...(d.facts ?? []), ...(d.why?.stated ?? []), ...(d.why?.criticism ?? []),
+  const rf = checkReform(d);
+  rf.errors.forEach((m) => err(e, m));
+  rf.warnings.forEach((m) => warn(e, m));
+  if (d.reform === undefined) reformMissing.push(e.slug);
+
+  lint(e, [...reformTexts(d).map(([, t]) => t), d.title, d.summary, ...(d.facts ?? []), ...(d.why?.stated ?? []), ...(d.why?.criticism ?? []),
     ...(d.benefits ?? []).flatMap((p) => [p?.point, p?.evidence]).filter(Boolean),
     ...(d.concerns ?? []).flatMap((p) => [p?.point, p?.evidence]).filter(Boolean), e.content]);
 }
@@ -179,6 +185,7 @@ function validateDossier(e) {
 const actions = listMd(ACTIONS_DIR).map(loadEntry);
 const developing = listMd(DEVELOPING_DIR).map(loadEntry);
 actions.forEach(validateAction);
+if (reformMissing.length) warnings.push(`(global): ${reformMissing.length} of ${actions.length} actions have no reform block yet (keep/change/repeal arguments; rollout in progress)`);
 const actionSlugs = new Set(actions.map((a) => a.slug));
 developing.forEach((e) => validateDeveloping(e, actionSlugs));
 const dossiers = listMd(DOSSIERS_DIR).map(loadEntry);

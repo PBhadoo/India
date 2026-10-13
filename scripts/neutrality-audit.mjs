@@ -5,7 +5,7 @@ import path from 'node:path';
 import { ROOT, ACTIONS_DIR, DOSSIERS_DIR, listMd, loadEntry, loadTaxonomy, loadGovernments, loadLoadedWords, readJson, isoDate, daysSince, LOW_DATA_MIN_ACTIONS } from './lib.mjs';
 import {
   promiseMatrix, indicatorCoverage, PROMISE_PARTIES, PROMISE_STATUSES, PROMISES_PER_PARTY_ELECTION,
-  countBy, DOSSIER_STALE_DAYS, eraOf, hasPrimarySource, loadedHits, scorerDisagreements, asymmetry, partiesOf, mean, round,
+  countBy, DOSSIER_STALE_DAYS, eraOf, hasPrimarySource, loadedHits, scorerDisagreements, asymmetry, partiesOf, mean, round, reformCoverage, REFORM_MIN,
 } from './audit-lib.mjs';
 
 const MIN_PER_PARTY = 3;
@@ -162,6 +162,25 @@ else {
   out();
   table(['Period', 'Group', 'Indicators with a value'], indicatorCoverage(indicatorsDoc).map((c) => [c.label, c.bloc, `${c.n} of ${c.of}`]));
 }
+out();
+
+out('## Reform arguments (keep / change / repeal) by bloc');
+out('Attributed arguments, counted per action that has a `reform` block. Parity rule: average points per stance should be about equal for INC-led and BJP-led entries. Counts show coverage, not merit.');
+out();
+const rc = reformCoverage(entries, govs);
+out(`Actions with a reform block: ${rc.withReform} of ${rc.total} (${pct(rc.withReform, rc.total)}).`);
+out();
+const BL = { inc: 'INC-led', bjp: 'BJP-led', other: 'Other governments', institution: 'Independent institutions (no credit)' };
+table(['Bloc', 'Actions', 'With reform block', 'Avg keep points', 'Avg change points', 'Avg repeal points'],
+  Object.entries(rc.blocs).map(([k, b]) => [BL[k], b.actions, `${b.withReform} (${pct(b.withReform, b.actions)})`, b.avgKeep ?? '-', b.avgChange ?? '-', b.avgRepeal ?? '-']));
+const ib = rc.blocs.inc, bb = rc.blocs.bjp;
+for (const k of ['Keep', 'Change', 'Repeal']) {
+  const a = ib[`avg${k}`], b = bb[`avg${k}`];
+  if (a != null && b != null && Math.abs(a - b) > 0.5) out(`- Parity check: average ${k.toLowerCase()} points differ between INC-led (${a}) and BJP-led (${b}) by more than 0.5; add or review entries.`);
+}
+if (ib.withReform < ib.actions || bb.withReform < bb.actions) out(`- Rollout: ${ib.actions - ib.withReform} INC-led and ${bb.actions - bb.withReform} BJP-led actions still lack a reform block.`);
+const thin = entries.filter((e) => e.reform && ((e.reform.keep?.length ?? 0) < REFORM_MIN.keep || (e.reform.change?.length ?? 0) < REFORM_MIN.change));
+out(`- Reform blocks below the quota of ${REFORM_MIN.keep} keep and ${REFORM_MIN.change} change points (${thin.length}): ${thin.length ? thin.map((e) => e.slug).join(', ') : 'none'}.`);
 out();
 
 const report = lines.join('\n');

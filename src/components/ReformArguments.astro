@@ -1,0 +1,40 @@
+---
+import { fmtDate } from '../lib/format.ts';
+interface Pt { point: string; madeBy: string; source: number }
+interface Props { reform?: { asOf: Date | string; keep?: Pt[]; change?: Pt[]; repeal?: Pt[] }; sources: { title: string; url: string; publisher?: string }[] }
+const { reform, sources } = Astro.props;
+const cols: [string, string, Pt[], string][] = reform
+  ? [
+      ['keep', 'Keep it as it is', reform.keep ?? [], 'No documented argument to keep it is recorded yet.'],
+      ['change', 'Change it', reform.change ?? [], 'No documented argument to change it is recorded yet.'],
+      ['repeal', 'Repeal it', reform.repeal ?? [], 'No documented call for repeal is recorded.'],
+    ]
+  : [];
+---
+{reform && (
+  <section class="block" id="reform" aria-labelledby="h-reform">
+    <h2 id="h-reform">Arguments for keeping, changing or repealing</h2>
+    <p class="note" style="margin-bottom:1rem"><strong>These are attributed arguments made by the named people and bodies, not the site's view.</strong> Each point names who made it and links to its source. The three columns carry equal weight; the number of points in a column says how many are recorded, not which is stronger. As of {fmtDate(reform.asOf)}.</p>
+    <div class="cols-3">
+      {cols.map(([id, label, pts, none]) => (
+        <div class="col-box" data-stance={id}>
+          <h3>{label} ({pts.length})</h3>
+          {pts.length ? (
+            <ul>
+              {pts.map((p) => {
+                const src = sources[p.source - 1];
+                return (
+                  <li>
+                    {p.point}
+                    <span class="who">{p.madeBy}</span>
+                    {src && <span class="srcl"><a href={src.url} rel="noopener">[{p.source}] {src.title}</a></span>}
+                  </li>
+                );
+              })}
+            </ul>
+          ) : <p class="none">{none}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
+)}

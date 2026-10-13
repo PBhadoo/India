@@ -57,6 +57,20 @@ sources:
   - { title: "Mamata slams SIR as 'chaotic, coercive' (PTI, 20 Nov 2025)", url: "https://www.theweek.in/wire-updates/national/2025/11/20/cal55-wb-sir-2nd-ld-mamata.html", publisher: The Week (PTI), type: reputable-media }
   - { title: "Judgment of 27 May 2026, 2026 INSC 564, ADR v. Election Commission of India (opened; para 186 read)", url: "https://api.sci.gov.in/supremecourt/2025/35785/35785_2025_1_1501_71617_Judgement_27-May-2026.pdf", publisher: Supreme Court of India, type: court }
   - { title: "Order of 8 September 2025, ADR v. Election Commission of India (Aadhaar) (opened)", url: "https://api.sci.gov.in/supremecourt/2025/35785/35785_2025_2_26_63969_Order_08-Sep-2025.pdf", publisher: Supreme Court of India, type: court }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The revision aims to include the names of all eligible citizens and exclude ineligible entries, and draft-roll publication, claims, objections and appeals protect eligible voters.", madeBy: "Election Commission of India, press statements and submission to the Supreme Court (2025)", source: 4 }
+    - { point: "The SIR is valid under Article 324 and section 21(3) of the Representation of the People Act, 1950, distinguished from ordinary revision.", madeBy: "Supreme Court of India, ADR v. Election Commission of India, 27 May 2026", source: 18 }
+    - { point: "The SIR is needed to remove infiltrators from the rolls ('detect, delete and deport infiltrators').", madeBy: "Union Home Minister Amit Shah (BJP), Lok Sabha, 10 December 2025", source: 12 }
+    - { point: "The SIR followed due process of law without prejudice to any group or community.", madeBy: "Union Government, reply in the Rajya Sabha (30 July), as reported", source: 13 }
+  change:
+    - { point: "Aadhaar should be accepted as proof of identity, not of citizenship, in the Bihar SIR.", madeBy: "Supreme Court of India, orders of 14 August and 8 September 2025", source: 19 }
+    - { point: "The SIR should state that it is not related to citizenship verification and allow more lead time.", madeBy: "Telugu Desam Party (NDA constituent), letter to the ECI, 15 July 2025", source: 14 }
+    - { point: "The process is a 'Tughlaqi farman' (personal view).", madeBy: "Giridhari Yadav, JD(U) MP (NDA constituent)", source: 15 }
+    - { point: "The inclusion of deleted West Bengal voters should be given priority.", madeBy: "Supreme Court of India, hearing of 9 October 2026, as reported", source: 7 }
+  repeal:
+    - { point: "The document requirements and timing risk excluding eligible voters and the ECI cannot decide citizenship.", madeBy: "Petitioners including ADR, PUCL and MPs from the INC, RJD and AITC, Supreme Court", source: 1 }
 scoring:
   era_baseline: "Before 2025 the last intensive revision in Bihar was in 2003; rolls were otherwise updated by annual summary revisions, with the ECI's 2003 order listing four indicative documents."
   lag_years: 1

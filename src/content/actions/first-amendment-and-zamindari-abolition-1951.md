@@ -37,6 +37,17 @@ sources:
   - { title: "First Amendment of the Constitution of India", url: "https://en.wikipedia.org/wiki/First_Amendment_of_the_Constitution_of_India", publisher: Wikipedia, type: reputable-media }
   - { title: "The State Of Bihar vs Maharajadhiraja Sir Kameshwar Singh, 1952", url: "https://indiankanoon.org/doc/49043/", publisher: Supreme Court of India via Indian Kanoon, type: court }
   - { title: "Land reform in India", url: "https://en.wikipedia.org/wiki/Land_reform_in_India", publisher: Wikipedia, type: reputable-media }
+  - { title: "I. R. Coelho v. State of Tamil Nadu (2007): case analysis", url: "https://blog.ipleaders.in/ir-coelho-case-analysis/", publisher: "iPleaders (law blog)", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Articles 31A and 31B shield land reform laws from challenge on Part III fundamental-rights grounds while leaving open challenges on legislative competence, and the Bihar land reform Act was largely upheld.", madeBy: "Supreme Court of India, State of Bihar v. Kameshwar Singh (1952), opinion of Chief Justice Patanjali Sastri", source: 2 }
+    - { point: "Article 31B was needed to validate zamindari abolition enactments that were facing court challenge, such as in the Bihar litigation.", madeBy: "Jawaharlal Nehru's government, as described in the First Amendment record", source: 1 }
+    - { point: "Abolition of the zamindari system was perhaps independent India's most revolutionary land policy.", madeBy: "Land reform in India (reference entry summarising scholarship)", source: 3 }
+  change:
+    - { point: "The new limits on freedom of speech and expression could be abused by the state.", madeBy: "Syama Prasad Mookerjee, Lok Sabha, 1951 (he accepted that Parliament had the power to enact the amendment)", source: 1 }
+    - { point: "India enacted perhaps more land reform legislation than any other country without changing power patterns in essentials, and ceiling reforms succeeded only in pockets.", madeBy: "Ernest Feder, economist, as quoted in the reference entry on land reform in India", source: 3 }
+    - { point: "Laws placed in the Ninth Schedule after 24 April 1973 are open to judicial review if they violate the basic structure.", madeBy: "Supreme Court of India, I. R. Coelho v. State of Tamil Nadu, 11 January 2007", source: 4 }
 scoring:
   era_baseline: "In 1951 intermediary landholding systems such as the zamindari were still widespread in several states, and state laws abolishing them faced court challenges."
   lag_years: 10

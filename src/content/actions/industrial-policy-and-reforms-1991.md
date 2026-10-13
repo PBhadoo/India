@@ -41,6 +41,15 @@ sources:
   - { title: "Looking back on the 1991 reforms in 2021", url: "https://www.orfonline.org/expert-speak/looking-back-on-the-1991-reforms-in-2021", publisher: "Observer Research Foundation", type: reputable-media }
   - { title: "India's Economic Reforms: What Has Been Accomplished? What Remains to Be Done?", url: "https://www.adb.org/publications/indias-economic-reforms-what-has-been-accomplished-what-remains-be-done", publisher: "Asian Development Bank (A. Panagariya, 2001)", type: academic }
   - { title: "India's Economic Reforms, 1991-2001", url: "https://academic.oup.com/book/4917", publisher: "Oxford University Press (Bhagwati and Panagariya)", type: academic }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The growth rate accelerated in the 1990s relative to the 1980s.", madeBy: "Jagdish Bhagwati and Arvind Panagariya, India's Economic Reforms, 1991-2001 (Oxford University Press)", source: 6 }
+    - { point: "Foreign-exchange reserves rose from US$5.8 billion at end-March 1991 to US$19.3 billion at end-March 1994.", madeBy: "Reserve Bank of India, RBI Bulletin table", source: 3 }
+    - { point: "The reforms contributed to growth and poverty reduction between 1991 and 2011.", madeBy: "Puja Mehra, author, Observer Research Foundation, 2021", source: 4 }
+  change:
+    - { point: "The reforms did not generate sustainable livelihoods, and the pandemic shows the model is not delivering for all Indians.", madeBy: "Puja Mehra, author, Observer Research Foundation, 2021", source: 4 }
+    - { point: "Reforms continued in a 'stop-go' fashion after the initial package, leaving a long way to go.", madeBy: "Arvind Panagariya, Asian Development Bank paper (2001)", source: 5 }
 scoring:
   era_baseline: "Before 1991 India operated a licence-and-quota system; reserves were US$5.8 billion at end-March 1991 amid a balance-of-payments crisis."
   lag_years: 5

@@ -59,6 +59,22 @@ sources:
   url: https://econweb.ucsd.edu/~kamuralidharan/papers/Published%20Articles/NREGS_GE%20(Final).pdf
   publisher: Muralidharan, Niehaus, Sukhtankar (UC San Diego / J-PAL)
   type: academic
+- title: "MGNREGA saviour for millions during COVID, PM didn't acknowledge it: Rahul Gandhi (2 July 2022)"
+  url: https://www.business-standard.com/article/politics/mgnrega-saviour-for-millions-during-covid-pm-didn-t-acknowledge-it-rahul-122070200562_1.html
+  publisher: "Business Standard"
+  type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "An implementation reform in Andhra Pradesh raised beneficiary households' earnings by 14% and reduced poverty by 26%, with most of the income gain from higher non-programme earnings; the study evaluates a payment reform, not the Act as a whole.", madeBy: "Muralidharan, Niehaus and Sukhtankar, UC San Diego / J-PAL (2022 version)", source: 6 }
+    - { point: "The 2025 Act converts a demand-driven right into a supply-driven scheme, shifts cost to States and removes Mahatma Gandhi's name, so the 2005 demand-driven guarantee should have been kept.", madeBy: "Mahua Moitra (All India Trinamool Congress) and Jai Prakash Agarwal (Indian National Congress), Lok Sabha, December 2025, as reported by The Wire", source: 5 }
+    - { point: "The scheme was a saviour for millions during COVID.", madeBy: "Rahul Gandhi (Indian National Congress), 2 July 2022", source: 7 }
+  change:
+    - { point: "The guarantee should rise from 100 to 150 days, wages should be unified nationally and indexed, and delays in wage payment and delay compensation addressed.", madeBy: "Standing Committee on Rural Development and Panchayati Raj (Chair: Prataprao Jadhav), report of 8 February 2022", source: 1 }
+    - { point: "Mandatory Aadhaar compliance should be avoided until the mechanism is foolproof, wage rates used a 2010-11 base, and the guarantee should be raised to 150 days.", madeBy: "Standing Committee on Rural Development and Panchayati Raj, report of 8 February 2024", source: 2 }
+    - { point: "The scheme had scattered categories of works, unpredictable funding and no statutory pause window in peak farm seasons.", madeBy: "Economic Survey 2025-26, Box XIII.1, Ministry of Finance", source: 3 }
+  repeal:
+    - { point: "MGNREGA should be replaced by the VB-G RAM G Act, which provides 125 days, State-wise normative allocations and a seasonal pause window, to strengthen livelihood security and rural infrastructure.", madeBy: "Union Government, VB-G RAM G Act, 2025 (in force 1 July 2026)", source: 4 }
 scoring:
   era_baseline: Before 2005 rural public works were budget-limited schemes without a statutory right to work; rural poverty and wage levels in the mid-2000s were the policy context.
   lag_years: 3

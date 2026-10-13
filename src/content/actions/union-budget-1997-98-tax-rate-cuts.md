@@ -40,6 +40,16 @@ sources:
   - { title: "Union Budget 1997-98 by H. P. Ranina (appraisal)", url: "https://indianliberals.in/primary-works/union-budget-1997-98-by-hp-ranina-march-15-1997/", publisher: "Indian Liberals archive", type: academic }
   - { title: "The pinch of waking to reality", url: "https://outlookindia.com/business/pinch-waking-to-reality-news-205163", publisher: "Outlook India", type: reputable-media }
   - { title: "Budget 1997-98: Speech of Shri P. Chidambaram, Minister of Finance (28 February 1997)", url: "https://www.indiabudget.gov.in/doc/bspeech/bs199798.pdf", publisher: "Ministry of Finance, Government of India (Union Budget archive)", type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The 30% cap on personal income tax is an unprecedented low, and abolishing tax on shareholders' dividends should revive the primary equity market.", madeBy: "H. P. Ranina, appraisal of the Union Budget 1997-98, 15 March 1997 (the archive page notes its summary is awaiting editorial review)", source: 3 }
+    - { point: "The Budget was a success on taxpayer numbers, since it aimed to double taxpayers to 25 million.", madeBy: "Jairam Ramesh, former aide to Finance Minister P. Chidambaram, Outlook India", source: 4 }
+    - { point: "The rise in tax collection as a share of GDP from 8.2% (1998-99) to over 10% (as of 2011) reflects lower rates improving compliance.", madeBy: "Business Today, year-1997 round-up (the outlet's attribution, not a controlled estimate)", source: 2 }
+  change:
+    - { point: "Real growth was slower than assumed and customs, excise, States' sales tax and octroi were weak, so radical reforms such as 51% divestment of PSUs, indirect tax reform and an end to licensing were needed.", madeBy: "Amit Mitra, Secretary-General, FICCI, Outlook India", source: 4 }
+    - { point: "Public sector units should be privatised to make them efficient, not sold to fill budget gaps.", madeBy: "Shubhasis Gangopadhyay, professor, Indian Statistical Institute, Outlook India", source: 4 }
+    - { point: "The Budget's assumptions of 7% GDP growth and 8% industrial growth were not met.", madeBy: "Jairam Ramesh, former aide to Finance Minister P. Chidambaram, Outlook India", source: 4 }
 scoring:
   era_baseline: "Before the Budget, India's top personal rate was 40% and peak customs duty 50%; 1996-97 growth was strong but the fiscal position was under strain."
   lag_years: 3

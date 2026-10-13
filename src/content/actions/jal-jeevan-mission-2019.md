@@ -39,6 +39,18 @@ sources:
   - { title: "Audit flags 26% villages without water, Centre freezes Jal Jeevan Mission funds", url: "https://madhyamamonline.com/amp/india/audit-flags-26-villages-without-water-centre-freezes-jal-jeevan-mission-funds-1471603", publisher: Madhyamam, type: reputable-media }
   - { title: "Lok Sabha unstarred question reply on Jal Jeevan Mission (AU515)", url: "https://eparlib.sansad.in/bitstream/123456789/2987755/1/AU515_KxESCY.pdf", publisher: Parliament of India (Lok Sabha), type: primary }
   - { title: "Jal Jeevan Mission extended to 2028: challenges and way forward", url: "https://www.iasgyan.in/daily-current-affairs/jal-jeevan-mission-extended-to-2028-challenges-and-way-forward", publisher: IAS Gyan, type: reputable-media }
+  - { title: "Jal Jeevan Mission: CAG audit finds 50% households face water shortfall in Tamil Nadu", url: "https://theprint.in/india/jal-jeevan-mission-50-pc-households-face-water-shortfall-in-tn-says-cag-report/3037036/", publisher: "ThePrint (PTI)", type: reputable-media }
+  - { title: "Money was squandered in the name of water: Congress's Sachin Pilot slams Rajasthan government over unspent Jal Jeevan Mission funds (31 August 2026)", url: "https://www.devdiscourse.com/article/headlines/3969825-money-was-squandered-in-the-name-of-water-congress-sachin-pilot-slams-rajasthan-govt-over-unspent-jal-jeevan-mission-funds", publisher: "Devdiscourse", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Tap connections in rural households rose from 3.23 crore (17%) in August 2019 to more than 15.07 crore (77.98%) in August 2024.", madeBy: "Government of India, Jal Shakti Ministry backgrounder (Press Information Bureau), August 2024", source: 1 }
+    - { point: "Tap water supply reached 9,27,421 schools and 9,63,955 Anganwadi centres by 14 August 2024.", madeBy: "Government of India, Press Information Bureau backgrounder, August 2024", source: 1 }
+    - { point: "Coverage reached 15.45 crore of 19.37 crore rural households (79.75%) by February 2025.", madeBy: "Union Government, reply in the Lok Sabha, February 2025", source: 3 }
+  change:
+    - { point: "In selected Tamil Nadu districts 50% of targeted households did not receive the mandated 55 litres per capita per day, and about 96% of surveyed connections were placed outside homes.", madeBy: "Comptroller and Auditor General of India, performance audit tabled in the Tamil Nadu Assembly, September 2026", source: 5 }
+    - { point: "More than Rs 29,145 crore of an allocation exceeding Rs 41,414 crore was not spent in Rajasthan, and the audit pointed to irregular payments and weak quality checks.", madeBy: "Sachin Pilot (Indian National Congress), citing a CAG report on Rajasthan, 31 August 2026 (the state government's response was not reported)", source: 6 }
+    - { point: "Reported connections do not always mean regular supply; after ground checks the Centre penalised seven states Rs 129.27 crore and froze fresh funds until corrective action.", madeBy: "Union Government (Department of Drinking Water and Sanitation), November 2025, as reported by Madhyamam", source: 2 }
 scoring:
   era_baseline: "In 2019 about 17% of rural households (3.23 crore of roughly 19 crore) had tap water connections; drinking water supply had previously been delivered through earlier rural schemes with a lower service level."
   lag_years: 3

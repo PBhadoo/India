@@ -43,6 +43,20 @@ sources:
   - { title: "GST couldn't achieve its full potential: CAG", url: "https://www.pressreader.com/india/hindustan-times-delhi/20190731/282110638217209", publisher: "Hindustan Times (reporting CAG Report 11 of 2019)", type: reputable-media }
   - { title: "Message of Finance Minister on 4 years of GST (30 June 2021)", url: "https://taxguru.in/goods-and-service-tax/message-fm-4-years-gst.html", publisher: "Ministry of Finance statement (TaxGuru copy)", type: primary }
   - { title: "GST Council begins work to rejig tax rates; opposition states seek revenue protection", url: "https://www.tribuneindia.com/news/business/gst-council-begins-work-to-rejig-tax-rates-opposition-states-seek-revenue-protection", publisher: "The Tribune", type: reputable-media }
+  - { title: "Rahul mocks Modi, calls GST 'Gabbar Singh Tax'", url: "https://gulfnews.com/world/asia/india/rahul-mocks-modi-calls-gst-gabbar-singh-tax-1.2111468", publisher: "Gulf News", type: reputable-media }
+  - { title: "Jaitley hits back at Rahul's 'Gabbar Singh Tax' comment (24 October 2017)", url: "https://outlookindia.com/national/jaitley-hits-back-at-rahuls-gabbar-singh-tax-comment-says-congress-has-objection-news-303413", publisher: "Outlook India", type: reputable-media }
+  - { title: "Possibility of three instead of four GST rates, a useful debate: Arvind Subramanian (12 July 2018)", url: "https://ncaer.org/publication/possibility-of-three-instead-of-four-gst-rates-a-useful-debate-arvind-subramanian/", publisher: "NCAER", type: academic }
+  - { title: "Economic Survey 2018 highlights: 50% surge in indirect taxpayers due to GST", url: "https://www.business-standard.com/amp/budget/article/economic-survey-2018-highlights-50-surge-in-indirect-taxpayers-due-to-gst-118012900422_1.html", publisher: "Business Standard", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "GST created a unified market, removed cascading taxes, improved competitiveness and eased compliance.", madeBy: "Nirmala Sitharaman, Union Finance Minister, message of 30 June 2021", source: 6 }
+    - { point: "GST is a legitimate tax, and objections to it came from people accustomed to the 2G and coal-allocation controversies.", madeBy: "Arun Jaitley, Union Finance Minister (BJP), 24 October 2017", source: 9 }
+    - { point: "The number of indirect taxpayers rose by about 50% after GST.", madeBy: "Economic Survey 2017-18, Ministry of Finance, as reported by Business Standard", source: 11 }
+  change:
+    - { point: "The CAG found that invoice matching for input tax credit was not in place two years after rollout, and that GST could not achieve its full potential because of technical glitches and the complexity of the return mechanism.", madeBy: "Comptroller and Auditor General of India, Report 11 of 2019", source: 5 }
+    - { point: "GST should have a single rate capped at 18% and fewer slabs, and the government should have gone slow on rollout.", madeBy: "Rahul Gandhi (Indian National Congress), Gujarat rally, 23 October 2017", source: 8 }
+    - { point: "A single uniform GST rate is not feasible for India; the structure could move from four rates to three, the 28% rate could be re-evaluated once revenues stabilise, and cesses could be relooked.", madeBy: "Arvind Subramanian, then Chief Economic Adviser, India Policy Forum, 12 July 2018", source: 10 }
 scoring:
   era_baseline: "Before 2017 India had overlapping central and State indirect taxes (excise, service tax, VAT, entry taxes) with tax-on-tax effects across State borders."
   lag_years: 4

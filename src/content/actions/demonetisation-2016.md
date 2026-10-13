@@ -43,6 +43,17 @@ sources:
   - { title: "Challenge to Union's 2016 Demonetisation Scheme: Judgement Summary (Vivek Narayan Sharma v. Union of India, 2 January 2023)", url: "https://www.scobserver.in/reports/challenge-to-unions-2016-demonetisation-scheme-judgement-summary/", publisher: "Supreme Court Observer (summary of Supreme Court judgment)", type: reputable-media }
   - { title: "India recorded 965 Mn digital transactions in October: RBI", url: "https://inc42.com/buzz/digital-transactions-rbi-payments/", publisher: "Inc42", type: reputable-media }
   - { title: "Demonetisation hit growth but may not have been captured in official data, says new study", url: "https://thewire.in/economy/demonetisation-hit-growth-but-may-not-have-been-captured-in-official-data-says-new-study", publisher: "The Wire", type: reputable-media }
+  - { title: "Demonetisation is organised loot, legalised plunder: Manmohan Singh (Rajya Sabha, 24 November 2016)", url: "https://www.businesstoday.in/amp/latest/economy-politics/story/demonetisation-is-organised-loot-legalised-plunder-manmohan-singh-66408-2016-11-24", publisher: "Business Today", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The measure had a rational connection to the aims of curbing black money, counterfeit currency and terror financing.", madeBy: "Supreme Court of India, majority opinion (Justice B. R. Gavai), 2 January 2023", source: 7 }
+    - { point: "The withdrawal was announced as a step against black money, corruption and counterfeit currency.", madeBy: "Narendra Modi, Prime Minister, address of 8 November 2016", source: 1 }
+    - { point: "Aggregate official output data showed only a modest dip in the quarter after the announcement (about 7% growth in October-December 2016 against 7.3% in the previous quarter).", madeBy: "Central Statistics Office estimate, as reported by Business Insider India", source: 6 }
+  change:
+    - { point: "Section 26(2) of the RBI Act allows demonetisation of particular series only, so demonetising all notes of a denomination needed a law or ordinance, and the RBI did not independently apply its mind.", madeBy: "Justice B. V. Nagarathna, dissenting opinion, Supreme Court of India, 2 January 2023", source: 7 }
+    - { point: "The implementation was a management failure and GDP growth could fall by about two percentage points, which he called an under-estimate; he said he agreed with the objectives.", madeBy: "Manmohan Singh, former Prime Minister (Indian National Congress), Rajya Sabha, 24 November 2016", source: 10 }
+    - { point: "Employment, output and bank credit contracted by roughly 2 percentage points in 2016Q4 in cash-intensive districts, which the authors describe as a lower bound.", madeBy: "Chodorow-Reich, Gopinath, Mishra and Narayanan, NBER / Quarterly Journal of Economics (2020)", source: 4 }
 scoring:
   era_baseline: "Cash was the dominant retail payment mode; earlier legislated demonetisations of high-value notes occurred in 1946 and 1978."
   lag_years: 2

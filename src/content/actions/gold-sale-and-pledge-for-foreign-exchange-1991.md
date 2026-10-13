@@ -36,6 +36,16 @@ sources:
   - { title: "1991 Indian economic crisis", url: "https://en.wikipedia.org/wiki/1991_Indian_economic_crisis", publisher: Wikipedia, type: reputable-media }
   - { title: "RBI Working Paper (Department of Economic and Policy Research), September 2011", url: "https://rbidocs.rbi.org.in/rdocs/Publications/PDFs/14WPS071011F.PDF", publisher: Reserve Bank of India, type: official-data }
   - { title: "Management and Resolution of the 1991 Crisis (RBI history, chapter 12)", url: "https://rbidocs.rbi.org.in/rdocs/content/PDFs/Chapter12_04122018.pdf", publisher: Reserve Bank of India, type: official-data }
+  - { title: "Lok Sabha statement on gold sent abroad for safe custody, 18 July 1991", url: "https://eparlib.sansad.in/bitstream/123456789/7941/1/10_I_18071991_p152_p153_t141.pdf", publisher: "Lok Sabha, Parliament of India", type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The April 1991 sale and July 1991 pledge raised US$200 million and US$405 million, allowing external payments to be met when reserves were close to exhaustion.", madeBy: "Reserve Bank of India, Working Paper (Department of Economic and Policy Research), September 2011", source: 2 }
+    - { point: "The April transaction was structured as a sale with a repurchase option and the gold was repurchased by the State Bank of India in late 1991.", madeBy: "Reserve Bank of India, Working Paper, September 2011", source: 2 }
+    - { point: "The RBI's plan to send gold abroad had been concurred in by the previous government and he did not consider it wise to countermand that decision.", madeBy: "Manmohan Singh, Finance Minister (Indian National Congress), Lok Sabha statement of 18 July 1991, as summarised from the record", source: 4 }
+  change:
+    - { point: "A member pressed for a clarification during the Finance Minister's statement on the transfer of 46.91 tonnes, which the statement said was completed without public announcement for security reasons.", madeBy: "Nirmal Kanti Chatterjee, Member of Parliament for Dum Dum, Lok Sabha, 18 July 1991", source: 4 }
+    - { point: "News of the airlift caused public outrage; critics saw it as putting the balance of payments ahead of public welfare.", madeBy: "Contemporary public and press reaction, as summarised in the Wikipedia entry on the 1991 crisis", source: 1 }
 scoring:
   era_baseline: "In early 1991 India faced a current account deficit, a fiscal deficit, oil price pressure from the Gulf War and a political transition."
   lag_years: 1

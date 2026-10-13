@@ -38,6 +38,19 @@ sources:
   - { title: "Urban Land Ceiling Act, 1976: A Critical Analysis of Impact on Housing (CCS Working Paper 170)", url: "https://old.ccs.in/internship_papers/2006/Urban%20Land%20Ceiling%20Act%20-%20Nipun.pdf", publisher: "Centre for Civil Society", type: academic }
   - { title: "Urban Land (Ceiling and Regulation) Act, 1976", url: "https://en.wikipedia.org/wiki/Urban_Land_(Ceiling_and_Regulation)_Act,_1976", publisher: "Wikipedia", type: reputable-media }
   - { title: "Urban Land Ceiling Act repeal will not affect proceedings if possession had been taken: Supreme Court", url: "https://verdictum.in/court-updates/supreme-court/urban-land-ceiling-act-repeal-act-of-1999-will-not-affect-proceedings-if-possession-of-land-had-been-taken-supreme-court-1341207", publisher: "Verdictum (report on Supreme Court ruling)", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act's aim is equitable distribution of land in urban agglomerations to subserve the common good and prevention of speculation and concentration of urban land.", madeBy: "Parliament of India, Urban Land (Ceiling and Regulation) Act, 1976", source: 1 }
+    - { point: "About 10,909.85 ha of roughly 19,000 ha taken into possession were used for dwelling units.", madeBy: "Government account of the Act's operation, as compiled in the Centre for Civil Society working paper", source: 3 }
+    - { point: "Repeal does not affect proceedings where possession of the land had been taken before repeal.", madeBy: "Supreme Court of India, ruling reported by Verdictum", source: 5 }
+  change:
+    - { point: "Compensation of Re 1 to Rs 10 per square metre was confiscatory in effect, discouraged declaration of excess land, and hurt small and marginal holders on the urban periphery.", madeBy: "Centre for Civil Society working paper 170 (Nipun), 2006", source: 3 }
+    - { point: "Discretionary exemptions under sections 20 and 21 allowed most land to be exempted and institutionalised corruption.", madeBy: "Centre for Civil Society working paper 170 (Nipun), 2006", source: 3 }
+    - { point: "The shelter needs of the urban poor can be served by other means such as a special law for shelter, a shelter fund, taxes on vacant land, higher capital gains tax and higher stamp duty.", madeBy: "Centre for Civil Society working paper 170 (Nipun), 2006", source: 3 }
+  repeal:
+    - { point: "The Act failed to achieve its objectives (physical possession of only 19,020 ha of 2,20,675 ha of estimated excess land) and its repeal would raise the supply and affordability of urban land.", madeBy: "Minister of Urban Affairs and Employment, Rajya Sabha, 1998-99, as quoted in the CCS working paper; Repeal Act, 1999", source: 2 }
+    - { point: "The Act should be repealed in all States that had not done so.", madeBy: "Tenth Five-Year Plan (2002-07), Planning Commission, as recorded in the CCS working paper", source: 3 }
 scoring:
   era_baseline: "Before 1976 town and country planning laws existed in many States (per CCS), but there was no national limit on holdings of vacant urban land."
   lag_years: 10

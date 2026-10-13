@@ -44,6 +44,19 @@ sources:
   - { title: "R.C. Cooper v. Union of India (1970) - case summary", url: "https://lawfullegal.in/rustom-cavasjee-cooper-v-union-of-india1970/", publisher: "Lawful Legal (summary of Supreme Court judgment)", type: reputable-media }
   - { title: "Did Nationalisation Achieve its Objectives?", url: "https://www.cenfa.org/?p=29279", publisher: "Centre for Financial Accountability (opinion by T. Franco)", type: reputable-media }
   - { title: "Bank GNPAs slumped to a multi-decade low in March: RBI report", url: "https://www.outlookmoney.com/banking/bank-gnpas-slumped-to-a-multi-decade-low-in-march-rbi-report", publisher: "Outlook Money", type: reputable-media }
+  - { title: "Report of the Committee to Review Governance of Boards of Banks in India (P. J. Nayak Committee), 13 May 2014", url: "https://www.rbi.org.in/scripts/PublicationReportDetails.aspx?ID=784", publisher: "Reserve Bank of India", type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Public ownership of the 14 banks would reduce control by a few, give credit to agriculture, small industry and exports, and encourage new entrepreneurs.", madeBy: "Indira Gandhi, Prime Minister, radio address of 7 August 1969", source: 2 }
+    - { point: "Rural bank offices grew from 1,833 in June 1969 to 35,206 in March 1991, an expansion that supporters cite as an achievement of the policy.", madeBy: "Reserve Bank of India, published table of commercial banking progress", source: 3 }
+    - { point: "The stated objectives (rural branch expansion, credit to agriculture and small industry, and small-borrower accounts) were achieved and could not have been left to market forces.", madeBy: "T. Franco, Centre for Financial Accountability (opinion article)", source: 5 }
+  change:
+    - { point: "The measure failed, or was never meant, to deliver its stated radical promise of reducing poverty and inequality, especially in rural India.", madeBy: "Suhit K. Sen, researcher, paper on bank nationalisation 1969-76 (cited by The Quint)", source: 1 }
+    - { point: "Agricultural lending went disproportionately to better-off farmers, and nationalised banks' bad loans exceeded 10% of assets in 2017.", madeBy: "The Quint, explainer article", source: 1 }
+    - { point: "Government ownership of public sector banks should be reduced below 50% through a Bank Investment Company, which would free the banks from Central Vigilance Commission and Right to Information coverage and government pay limits.", madeBy: "P. J. Nayak Committee (appointed by the Reserve Bank of India), report of 13 May 2014, Recommendation 4.10", source: 7 }
+  repeal:
+    - { point: "The Bank Nationalisation Acts of 1970 and 1980 and the SBI Acts should be repealed and all banks incorporated under the Companies Act, with the government's holdings moved to a Bank Investment Company.", madeBy: "P. J. Nayak Committee (appointed by the Reserve Bank of India), report of 13 May 2014", source: 7 }
 scoring:
   era_baseline: "Before 1969 private banks directed about 2% of loans to agriculture and concentrated branches in cities; 361 private banks had failed in 1947-55."
   lag_years: 10

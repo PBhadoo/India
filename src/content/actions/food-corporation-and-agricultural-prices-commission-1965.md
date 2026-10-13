@@ -54,6 +54,20 @@ sources:
   url: https://www.downtoearth.org.in/environment/is-the-joyride-over--18486
   publisher: Down To Earth (Centre for Science and Environment)
   type: reputable-media
+- title: "Regular surveys are must to locate genuine poor, says Sidhu (Tribune; date not shown on page)"
+  url: https://www.tribuneindia.com/news/punjab/regular-surveys-are-must-to-locate-genuine-poor-says-sidhu-219083/amp
+  publisher: "The Tribune"
+  type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The FCI played a commendable role in wheat-growing areas of Punjab and Haryana from 1967-68 to 1971-72 by procuring wheat and providing effective price support.", madeBy: "High Level Committee on restructuring the FCI (Chair: Shanta Kumar), 2015", source: 1 }
+    - { point: "Procurement of foodgrains rose from 4.0 million tonnes in 1965 to 59.8 million tonnes in 2014 and public distribution from 10.1 to 43.5 million tonnes.", madeBy: "Ministry of Finance, Economic Survey 2014-15 Statistical Appendix", source: 2 }
+    - { point: "The Shanta Kumar committee's proposal to cut food-security coverage from 67% to 40% rests on an out-of-date 2011 survey and its validity is doubtful.", madeBy: "Navjot Singh Sidhu (Indian National Congress), as reported by The Tribune (report date not shown)", source: 6 }
+  change:
+    - { point: "Procurement benefits not more than 6% of 90.2 million agricultural households directly, so well-performing states such as Punjab, Haryana and Madhya Pradesh should run procurement themselves and cash transfers should be introduced gradually in public distribution.", madeBy: "High Level Committee on restructuring the FCI (Chair: Shanta Kumar, BJP MP), January 2015", source: 1 }
+    - { point: "Stocks held above norms have caused thousands of crores of unproductive expenditure, and the 1972 takeover of wholesale wheat trade was a major miscalculation that was abandoned in 1975.", madeBy: "High Level Committee on restructuring the FCI (Chair: Shanta Kumar), 2015", source: 1 }
+    - { point: "Linking subsidised grain prices to MSP and streamlining the subsidy system could save about Rs 4,000 crore and help contain the fiscal deficit.", madeBy: "Ashok Gulati, economist and member of the High Level Committee, 2015", source: 3 }
 scoring:
   era_baseline: 'Early 1960s: food shortage, wheat imports equal to about 54% of domestic wheat output in 1964-65, and no standing system of announced support prices or public grain procurement.'
   lag_years: 5

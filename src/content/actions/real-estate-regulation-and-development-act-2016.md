@@ -42,6 +42,22 @@ sources:
   - { title: "Supreme Court upholds retrospective applicability of RERA Act on the real estate projects", url: "https://theindianlawyer.in/supreme-court-upholds-retrospective-applicability-of-rera-act-on-the-real-estate-projects/", publisher: "The Indian Lawyer", type: reputable-media }
   - { title: "Minutes of the 5th Central Advisory Council meeting under RERA", url: "https://mohua.gov.in/upload/whatsnew/690051fd238fbMinutes-of-5th-CAC-Meeting-English.pdf", publisher: "Ministry of Housing and Urban Affairs", type: official-data }
   - { title: "Five years of RERA: What does the data show?", url: "https://citizenmatters.in/rera-real-estate-regulation-mohua-data/", publisher: "Citizen Matters (analysis of MoHUA data)", type: reputable-media }
+  - { title: "Better to abolish RERA, it only helps builders: Supreme Court (12 February 2026)", url: "https://www.barandbench.com/news/better-to-abolish-rera-it-only-helps-builders-supreme-court", publisher: "Bar and Bench", type: reputable-media }
+  - { title: "Twenty-first Report, Committee on Subordinate Legislation (16th Lok Sabha), on rules under the RERA Act", url: "https://eparlib.nic.in/bitstream/123456789/763712/1/16_Subordinate_Legislation_29.pdf", publisher: "Lok Sabha, Parliament of India", type: primary }
+  - { title: "Minutes of the 3rd meeting of the Central Advisory Council under RERA, 12 April 2022", url: "https://mohua.gov.in/upload/uploadfiles/files/Minutes-of-3rd-Meeting-of-CAC-held-on-12-04-2022.pdf", publisher: "Ministry of Housing and Urban Affairs", type: official-data }
+  - { title: "After Supreme Court observation, Niranjan Hiranandani urges 're-examination' of RERA (13 February 2026)", url: "https://www.businesstoday.in/amp/india/story/after-supreme-court-observation-niranjan-hiranandani-urges-re-examination-of-rera-516126-2026-02-13", publisher: "Business Today", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The Act applies to ongoing projects, the pre-deposit condition for promoters' appeals is not onerous, and the Regulatory Authority is competent to decide refund and interest complaints.", madeBy: "Supreme Court of India, Newtech Promoters and Developers v. State of U.P., 11 November 2021", source: 3 }
+    - { point: "More than 1.51 lakh projects and 1.06 lakh agents were registered and more than 1.47 lakh complaints disposed by 1 September 2025.", madeBy: "Ministry of Housing and Urban Affairs, Central Advisory Council minutes", source: 5 }
+    - { point: "About 90% of States have done a good job under RERA, while about 10% have given it a bad name.", madeBy: "Niranjan Hiranandani, real estate developer, 13 February 2026 (who also called for a re-examination of RERA)", source: 10 }
+  change:
+    - { point: "Several States diluted the Act in their rules, and the Ministry accepted the committee's recommendations on this in principle.", madeBy: "Committee on Subordinate Legislation, 21st Report (16th Lok Sabha)", source: 8 }
+    - { point: "Some States have diluted RERA in the rules framed under it, and homebuyer representatives raised deviations from the Act.", madeBy: "Chairperson, Central Advisory Council under RERA, Ministry of Housing and Urban Affairs, meeting of 12 April 2022", source: 9 }
+    - { point: "Parliament's competence could be questioned because land is a State subject, and the requirement to hold 70% of buyers' money in a separate account may leave funds unused and raise financing costs.", madeBy: "PRS Legislative Research, comments on the 2013 Bill", source: 1 }
+  repeal:
+    - { point: "It would be better to abolish the institution if, apart from helping defaulting builders, it does nothing else; this was an oral observation during a hearing and not a holding.", madeBy: "Chief Justice Surya Kant, bench with Justice Joymalya Bagchi, Supreme Court of India, 12 February 2026", source: 7 }
 scoring:
   era_baseline: "Before 2016 real estate was governed by differing State laws and consumer courts; PRS notes the Bill overrides conflicting State provisions."
   lag_years: 4

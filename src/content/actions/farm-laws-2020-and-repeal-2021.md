@@ -52,6 +52,27 @@ sources:
   url: https://www.businesstoday.in/latest/trends/story/supreme-court-appointed-panel-was-against-repealing-three-farm-laws-326722-2022-03-21
   publisher: Business Today
   type: reputable-media
+- title: "Rahul accuses government of bullying farmers, says repealing new farm laws only solution (29 January 2021)"
+  url: https://www.businessworld.in/article/Rahul-accuses-government-of-bullying-farmers-says-repealing-new-farm-laws-only-solution-/29-01-2021-371450
+  publisher: "Business World"
+  type: reputable-media
+- title: "Modi announces repeal of farm laws, protests to continue till they are revoked in Parliament"
+  url: https://scroll.in/latest/1010920/scroll_in
+  publisher: "Scroll.in"
+  type: reputable-media
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Allowing trade without licence or stock limit would increase the number of buyers, and competition among buyers would give farmers better prices.", madeBy: "Government of India, aim as summarised by PRS Legislative Research (Legislative Brief, 2020)", source: 1 }
+    - { point: "APMC laws were not implemented in their true sense and many APMCs have few traders, which leads to cartelisation, so reform of the marketing framework was needed.", madeBy: "Standing Committee on Agriculture (2018-19), as cited by PRS Legislative Research", source: 1 }
+    - { point: "61 of the 73 farmer organisations that gave views to the Court-appointed committee, representing 3.3 crore farmers, backed the laws.", madeBy: "Anil Ghanwat, member of the Supreme Court-appointed committee, March 2022 (his own account, not independently verified)", source: 4 }
+  change:
+    - { point: "Deregulation alone may not attract more buyers; Bihar, which repealed its APMC Act in 2006, later saw market infrastructure erode and higher transaction charges for farmers.", madeBy: "PRS Legislative Research, Legislative Brief on the Agriculture Ordinances, 2020", source: 1 }
+    - { point: "Complete deregulation of markets did not attract private investment in marketing infrastructure.", madeBy: "Committee of State Ministers (2010), as cited by PRS Legislative Research", source: 1 }
+    - { point: "The laws could be retained with changes such as a legal basis for MSP.", madeBy: "Supreme Court-appointed committee report (submitted 19 March 2021, made public March 2022), as reported by Business Today", source: 4 }
+  repeal:
+    - { point: "The three laws should be repealed; the union rejected a proposal to suspend them for 18 months and said protests would continue until repeal was completed in Parliament.", madeBy: "Samyukt Kisan Morcha (farmer union umbrella body), as reported by Scroll.in, November 2021", source: 6 }
+    - { point: "Repealing the three farm laws is the only solution.", madeBy: "Rahul Gandhi (Indian National Congress), 29 January 2021", source: 5 }
 scoring:
   era_baseline: Agricultural marketing was governed by state APMC laws; in 2018-19 a parliamentary committee found them under-implemented, and 2017-18 model central Acts had not been widely adopted by States.
   lag_years: 3

@@ -36,6 +36,19 @@ sources:
   - { title: "Securities and Exchange Board of India", url: "https://en.wikipedia.org/wiki/Securities_and_Exchange_Board_of_India", publisher: Wikipedia, type: reputable-media }
   - { title: "SEBI home page, functions of departments", url: "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&search=about", publisher: Securities and Exchange Board of India, type: official-data }
   - { title: "The Securities and Exchange Board of India Act, 1992 (No. 15 of 1992)", url: "https://www.sebi.gov.in/acts/act15ac.pdf", publisher: Securities and Exchange Board of India, type: primary }
+  - { title: "Supreme Court refuses SIT/CBI probe in Adani-Hindenburg case; endorses SEBI investigation, regulations (3 January 2024)", url: "https://www.livelaw.in/amp/top-stories/supreme-court-adani-hindenburg-endorses-sebi-probe-regulations-245712", publisher: "LiveLaw", type: reputable-media }
+  - { title: "Opposition demands JPC probe; BJP says bid to create financial chaos (August 2024)", url: "https://www.tribuneindia.com/news/business/oppn-demands-jpc-probe-bid-to-create-financial-chaos-bjp", publisher: "The Tribune", type: reputable-media }
+  - { title: "Hindenburg report: Opposition demands SEBI chief's resignation, JPC probe; BJP calls it 'conspiracy to create chaos'", url: "https://www.deccanherald.com/amp/story/india%2Fhindenburg-report-oppn-demands-sebi-chiefs-resignation-jpc-probe-bjp-calls-it-conspiracy-to-create-chaos-3146639", publisher: "Deccan Herald", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "There was no reason to discredit SEBI's investigation, and media reports are not conclusive proof of its inadequacy, so the case was not transferred to an SIT or the CBI.", madeBy: "Supreme Court of India, Adani-Hindenburg judgment, 3 January 2024, as reported by LiveLaw", source: 4 }
+    - { point: "The claims against the SEBI chairperson were rejected and the opposition's demand for a Joint Parliamentary Committee probe and her resignation was described as a conspiracy to create financial instability.", madeBy: "Bharatiya Janata Party, response of August 2024 (the chairperson also denied the allegations)", source: 5 }
+    - { point: "SEBI's functions include regulating issuance and listing, supervising intermediaries and exchanges, surveillance, enforcement and investor complaints through the SCORES portal.", madeBy: "Securities and Exchange Board of India, home page on functions", source: 2 }
+  change:
+    - { point: "A Joint Parliamentary Committee should examine the regulator's functioning after allegations against its chairperson, who denied them.", madeBy: "Indian National Congress (Rahul Gandhi, Jairam Ramesh, Mallikarjun Kharge), August 2024", source: 6 }
+    - { point: "The Centre should constructively consider the suggestions made by the court-appointed expert committee on the regulatory framework.", madeBy: "Supreme Court of India, Adani-Hindenburg judgment, 3 January 2024, as reported by LiveLaw", source: 4 }
+    - { point: "SEBI did not monitor or act early in cases such as Satyam, IL&FS, the PNB fraud and the NSE co-location case.", madeBy: "Critics cited in the Wikipedia entry on SEBI", source: 1 }
 scoring:
   era_baseline: "In 1991-92 the securities market was moving from administered capital issue control towards a market-based system as part of broader economic reforms."
   lag_years: 5

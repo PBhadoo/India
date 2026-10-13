@@ -40,6 +40,18 @@ sources:
   - { title: "Social security in unorganised sector with e-Shram", url: "https://ksandk.com/newsletter/social-security-in-unorganized-sector/", publisher: "K&S Partners", type: reputable-media }
   - { title: "Periodic Labour Force Survey (PLFS) Annual Report: July 2023-June 2024", url: "https://ruralindiaonline.org/en/library/resource/periodic-labour-force-survey-plfs-annual-report-july-2023-june-2024/", publisher: "MoSPI report (hosted by People's Archive of Rural India)", type: official-data }
   - { title: "The Unorganised Sector Workers' Social Security Bill, 2007 (bill track)", url: "https://prsindia.org/billtrack/the-unorganised-sector-workers-social-security-bill-2007", publisher: "PRS Legislative Research", type: reputable-media }
+  - { title: "Rajya Sabha debate on the Unorganised Workers' Social Security Bill, 23 October 2008", url: "https://rsdebate.nic.in/bitstream/123456789/228362/2/PD_214_23102008_p186_p204_33.pdf", publisher: "Rajya Sabha, Parliament of India", type: primary }
+  - { title: "Standing Committee on Labour, 25th Report (14th Lok Sabha) on the Unorganised Sector Workers' Social Security Bill, 2007", url: "https://eparlib.nic.in/bitstream/123456789/63070/1/14_Labour_25.pdf", publisher: "Lok Sabha, Parliament of India", type: primary }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Enacting the law moves scheme-making out of executive discretion because each scheme sits in a Schedule, and the government's Aam Aadmi Bima Yojana offered accident cover of Rs 75,000 against the NCEUS figure of Rs 25,000.", madeBy: "Oscar Fernandes, Minister of State for Labour and Employment (Indian National Congress), Rajya Sabha, 23 October 2008 (as summarised from the debate record)", source: 7 }
+    - { point: "The Act is an enabling framework under which the Centre may set up schemes for life and disability cover, health, maternity and old-age protection, and States for provident fund, housing and education.", madeBy: "PRS Legislative Research, summary of the Bill", source: 6 }
+    - { point: "More than 30.43 crore unorganised workers had registered on the e-Shram portal as of 1 December 2024.", madeBy: "Ministry of Labour and Employment, Rajya Sabha reply of 5 December 2024", source: 3 }
+  change:
+    - { point: "The Bill needed amendments and an alternative draft to address shortcomings revealed during consultations with stakeholders.", madeBy: "Standing Committee on Labour (Chair: Suravaram Sudhakar Reddy), 25th Report", source: 8 }
+    - { point: "Scheme-wise and State-wise beneficiaries of schemes under the Act are not centrally maintained.", madeBy: "Ministry of Labour and Employment, Lok Sabha reply AU3581", source: 2 }
+    - { point: "Earlier initiatives under social security legislation produced few outcomes, enforcement is uneven, and e-Shram has no separate legal basis.", madeBy: "K&S Partners, commentary on social security in the unorganised sector", source: 4 }
 scoring:
   era_baseline: "Before 2008 unorganised workers were registered under scattered welfare boards or not at all, with no general national framework."
   lag_years: 5

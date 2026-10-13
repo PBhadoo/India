@@ -37,6 +37,17 @@ sources:
   - { title: "Standing Committee Report Summary: LARR Act, 2013 - Implementation and effectiveness", url: "https://prsindia.org/policy/report-summaries/land-acquisition-rehabilitation-and-resettlement-act-2013-implementation-and-effectiveness", publisher: PRS Legislative Research, type: reputable-media }
   - { title: "The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Amendment) Bill, 2015", url: "https://prsindia.org/billtrack/the-right-to-fair-compensation-and-transparency-in-land-acquisition-rehabilitation-and-resettlement-amendment-bill-2015", publisher: PRS Legislative Research, type: reputable-media }
   - { title: "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013", url: "https://en.wikipedia.org/wiki/Right_to_Fair_Compensation_and_Transparency_in_Land_Acquisition,_Rehabilitation_and_Resettlement_Act,_2013", publisher: Wikipedia, type: reputable-media }
+  - { title: "Arun Jaitley: blog post on the Land Acquisition Act and the Ordinance (1 September 2015)", url: "https://www.arunjaitley.com/?p=1484", publisher: "Arun Jaitley (personal website)", type: primary }
+  - { title: "Changes to land acquisition law through Jaitley ordinance (6 January 2015)", url: "https://indiatogether.org/changes-to-land-acquisition-law-through-jaitley-ordinance-laws", publisher: "India Together", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The December 2014 Ordinance diluted the consent and social impact assessment protections of the 2013 Act; several social movements had welcomed its social impact assessment, consent and higher compensation provisions.", madeBy: "Kanchi Kohli, India Together, 6 January 2015", source: 5 }
+    - { point: "The Centre notified the bringing of the 13 exempted laws under the Act's compensation and rehabilitation provisions.", madeBy: "Arun Jaitley, Union Finance Minister (BJP), blog post of 1 September 2015", source: 4 }
+  change:
+    - { point: "Gram Sabha consent is often a mere formality; social impact assessment findings should be binding, circle rates updated by independent valuers, and resettlement colonies provided with basic services.", madeBy: "Standing Committee on Rural Development and Panchayati Raj (Chair: Saptagiri Sankar Ulaka), report of 18 December 2025", source: 1 }
+    - { point: "The Act is badly drafted: the word 'also' in section 2(2) creates an ambiguity on consent, social impact assessment timelines could run to several years, and the five-year utilisation rule is unworkable for townships.", madeBy: "Arun Jaitley, Union Finance Minister (BJP), 1 September 2015", source: 4 }
+    - { point: "Nineteen amendments to the Act were proposed to States and Union Territories in June 2014.", madeBy: "Ministry of Rural Development (Minister Nitin Gadkari), as reported by India Together", source: 5 }
 scoring:
   era_baseline: "Land acquisition was governed by the Land Acquisition Act, 1894, which did not require owner consent or a social impact assessment, and acquisition for public purposes was a state power exercised under that law."
   lag_years: 5

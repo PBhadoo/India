@@ -42,6 +42,18 @@ sources:
   - { title: "Trade unions hit out at labour codes", url: "https://www.deccanherald.com/india/war-on-working-people-trade-unions-hit-out-at-labour-codes-urges-workers-to-rise-in-rage-3806101", publisher: "Deccan Herald", type: reputable-media }
   - { title: "Government announces implementation of Four Labour Codes with effect from 21st November 2025", url: "https://leatherindia.org/government-announces-implementation-of-four-labour-codes-with-effect-from-21st-november-2025/", publisher: "Council for Leather Exports (reproducing the PIB release)", type: reputable-media }
   - { title: "Periodic Labour Force Survey (PLFS) Annual Report: July 2023-June 2024", url: "https://ruralindiaonline.org/en/library/resource/periodic-labour-force-survey-plfs-annual-report-july-2023-june-2024/", publisher: "MoSPI report (hosted by People's Archive of Rural India)", type: official-data }
+  - { title: "Jairam Ramesh slams new labour codes, says they ignore core worker demands", url: "https://morungexpress.com/jairam-ramesh-slams-new-labour-codes-says-they-ignore-core-worker-demands", publisher: "Morung Express (IANS)", type: reputable-media }
+  - { title: "New labour codes row: Opposition attacks reform ahead of Nov 26 nationwide protest", url: "https://www.theweek.in/news/biz-tech/2025/11/22/new-labour-codes-row-opposition-attacks-reform-ahead-of-nov-26-nationwide-protest-here-is-why.amp.html", publisher: "The Week", type: reputable-media }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "Consolidating 29 laws into four codes gives consistent definitions, simpler compliance and ease of doing business.", madeBy: "Ministry of Labour and Employment, press release of 21 November 2025", source: 5 }
+    - { point: "The Codes extend statutory social security to gig and platform workers and the right to strike is intact.", madeBy: "Ministry of Labour and Employment, as reported by iPleaders", source: 3 }
+    - { point: "The Codes aim at clarity and consistency across labour regulation.", madeBy: "EY India, client alert of 21 November 2025 (which also notes some ambiguities remain)", source: 2 }
+  change:
+    - { point: "The Codes repackage 29 existing laws, their rules were not yet notified, and they do not deliver workers' five basic demands (a Rs 400 daily national minimum wage, a Right to Health law, an urban employment guarantee, full social security for unorganised workers and an end to contractual employment in core government functions).", madeBy: "Jairam Ramesh, general secretary, Indian National Congress, 22 November 2025", source: 8 }
+    - { point: "The Codes negate the right to strike, make union registration problematic and give employers easier layoff powers; the threshold for retrenchment permission rose from 100 to 300 workers.", madeBy: "Central trade unions (INTUC, AITUC, HMS, CITU, AIUTUC and others), November 2025", source: 4 }
+    - { point: "Some provisions leave ambiguities that need clarification, and most States had only draft rules at notification.", madeBy: "EY India, 21 November 2025", source: 2 }
 scoring:
   era_baseline: "In 2023-24, 58.4% of workers were self-employed and only 21.7% earned regular wages (PLFS); most workers sat outside the coverage of the older labour laws."
   lag_years: 4

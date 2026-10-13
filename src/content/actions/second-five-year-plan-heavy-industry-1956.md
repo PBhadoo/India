@@ -38,6 +38,17 @@ sources:
   - { title: "Second Five Year Plan summary (digital library entry)", url: "https://digitallibrary.niti.gov.in/items/d9540016-ad7e-4a6f-94e6-a85203f82061", publisher: "NITI Aayog Library (Planning Commission)", type: primary }
   - { title: "Five-Year Plans of India (Second Plan section, citing L. N. Dash 2000)", url: "https://en.wikipedia.org/wiki/Five-Year_Plans_of_India", publisher: "Wikipedia", type: reputable-media }
   - { title: "Parliamentary address, 10 February 1958", url: "https://eparlib.sansad.in/bitstream/123456789/4008/1/prasad_10_02_1958.pdf", publisher: "Parliament of India digital library", type: primary }
+  - { title: "Friedman on India (1955 memorandum and 1963 essay)", url: "https://indianliberals.in/primary-works/friedman-on-india/", publisher: "Indian Liberals archive", type: academic }
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The rate of investment had to rise from about 7% to about 12% of national income, with a public-sector outlay of Rs 4,800 crore, to support the Plan.", madeBy: "C. D. Deshmukh, Finance Minister, budget speech 1956-57", source: 1 }
+    - { point: "Industrialisation and an expanded public sector were needed to raise national income by about 25% over five years and to raise employment.", madeBy: "Planning Commission, summary of the Second Five Year Plan", source: 2 }
+    - { point: "Good progress had been made in building the steel plants at Bhilai, Durgapur and Rourkela.", madeBy: "Parliamentary address of 10 February 1958", source: 4 }
+  change:
+    - { point: "Financing heavy industrialisation through deficit financing was 'a recipe for trouble' and state control could undermine a young democracy.", madeBy: "B. R. Shenoy, economist, dissent to the Plan (as summarised in the Wikipedia entry on Five-Year Plans)", source: 3 }
+    - { point: "Heavy public-sector industry, rigid investment and foreign-exchange controls, high input taxation and deficit financing should be reconsidered because planning cannot supply the information a price system supplies.", madeBy: "Milton Friedman, memorandum to the Government of India, November 1955", source: 5 }
+    - { point: "Growth fell slightly short of the 4.5% target (about 4.27%) while foreign-exchange and price pressures emerged.", madeBy: "L. N. Dash (2000), as cited in the Wikipedia entry on Five-Year Plans of India", source: 3 }
 scoring:
   era_baseline: "The First Plan (1951-56) reported 3.6% growth, and the economy was largely agrarian with little domestic capital-goods capacity."
   lag_years: 5

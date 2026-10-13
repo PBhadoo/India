@@ -48,6 +48,20 @@ sources:
   url: https://www.downtoearth.org.in/environment/is-the-joyride-over--18486
   publisher: Down To Earth (Centre for Science and Environment)
   type: reputable-media
+- title: "Dr MS Swaminathan to be awarded Bharat Ratna: PM (9 February 2024)"
+  url: https://www.pmindia.gov.in/en/news_updates/dr-ms-swaminathan-to-be-awarded-bharat-ratna-pm/
+  publisher: "Prime Minister's Office, Government of India"
+  type: primary
+reform:
+  asOf: 2026-10-13
+  keep:
+    - { point: "The combination of new technology (high-yielding seed) and a positive price policy raised domestic grain output and reduced reliance on imports.", madeBy: "High Level Committee on restructuring the FCI (Chair: Shanta Kumar), 2015", source: 1 }
+    - { point: "Swaminathan's leadership in the Green Revolution transformed Indian agriculture and helped secure the nation's food security.", madeBy: "Narendra Modi, Prime Minister, announcement of Bharat Ratna for M. S. Swaminathan, 9 February 2024", source: 4 }
+    - { point: "The Green Revolution was essential because India held only about a week of food stocks during the drought.", madeBy: "Davinder Sharma, agriculture analyst, quoted by Down To Earth", source: 3 }
+  change:
+    - { point: "Irrigation without drainage would turn soils alkaline or saline; he called for an 'evergreen revolution' rooted in ecology and for each region to become self-sufficient.", madeBy: "M. S. Swaminathan, 1968 warning and later statements, quoted by Down To Earth", source: 3 }
+    - { point: "Sustainability was not a criterion when the strategy was adopted; rice acreage should fall, leguminous crops should be subsidised and cultivation should extend beyond Punjab and Haryana.", madeBy: "Abhijit Sen, Chairperson of the Commission for Agricultural Costs and Prices, quoted by Down To Earth", source: 3 }
+    - { point: "India was expanding agriculture by depleting groundwater reserves.", madeBy: "David Seckler, International Irrigation Management Institute, quoted by Down To Earth", source: 3 }
 scoring:
   era_baseline: 'Mid-1960s: repeated shortfalls in wheat, imports of about 6-8 million tonnes a year under PL 480, and foreign-exchange reserves of about US$524 million in 1964-65 (per the committee summary).'
   lag_years: 5
